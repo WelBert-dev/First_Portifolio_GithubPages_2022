@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/firstPortifolioGithubPages-2022/static/css/main.be29f68a.css",
+    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.040d7b6a.js",
+    "static/media/NetFlixCloneWeb.gif": "/firstPortifolioGithubPages-2022/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
+    "static/media/restauranteIfspAmostra.png": "/firstPortifolioGithubPages-2022/static/media/restauranteIfspAmostra.03eae3aa8e7b8b0e62ac.png",
+    "static/media/amazona.jpg": "/firstPortifolioGithubPages-2022/static/media/amazona.b448ccd7966c0efe9adc.jpg",
+    "static/media/auauMiauNoFramework.png": "/firstPortifolioGithubPages-2022/static/media/auauMiauNoFramework.42a6d9cacaf38ed93a9b.png",
+    "static/media/wellisonPerfil.jpg": "/firstPortifolioGithubPages-2022/static/media/wellisonPerfil.5ad3be0ec95d8bb0cc3d.jpg",
+    "index.html": "/firstPortifolioGithubPages-2022/index.html",
+    "main.be29f68a.css.map": "/firstPortifolioGithubPages-2022/static/css/main.be29f68a.css.map",
+    "main.040d7b6a.js.map": "/firstPortifolioGithubPages-2022/static/js/main.040d7b6a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.be29f68a.css",
+    "static/js/main.040d7b6a.js"
+  ]
+}
