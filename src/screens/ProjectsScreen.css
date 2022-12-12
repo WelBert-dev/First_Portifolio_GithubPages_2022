@@ -1,0 +1,214 @@
+#main-projects--container {
+    width: 100%;
+}
+
+.projects-single {
+    display: flex;
+    gap: .2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: .5rem;
+    padding-bottom: .5rem;;
+    align-items: flex-start;
+}
+
+.projects-logo {
+    flex-grow: 1fr;
+    border-radius: 10px;
+    border: 4px double black;
+    height: 100%;
+    flex-grow: 1fr;
+    max-width: 49%;
+    width: 100%;
+}
+
+.projects-right {
+    flex-grow: 1fr;
+    border: 4px double black;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#fff 0,6%,rgb(223 105 105 / 72%),rgba(221, 75, 75, 0.72) 75%);
+    flex-grow: 1fr;
+    max-width: 50%;
+
+}
+
+.projects-title--container {
+    background-color: #b54141;
+    border: 4px double #2f0000;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: .5rem;
+    cursor: default;
+}
+
+.projects-title--container > div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.projects-title--container > span {
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 1px 1px black;
+    font-size: .7rem;
+}
+
+.projects-title {
+    padding: 1rem 1rem .2rem 1rem;
+    font-size: .9rem;
+    font-weight: bold;
+    font-family: 'press start 2p';
+    text-align: center;
+    color: #040404;
+    text-shadow: .5px .5px white;
+    margin: 0 auto;
+    line-height: 1rem;
+    
+}
+
+.projects-title--container div a {
+    color: black;
+    padding: .2rem;
+    font-size: 1.5rem;
+    height: fit-content;
+    width: fit-content;
+    transition: all ease-in .3s;
+}
+
+.projects-title--container div a i svg path, .projects-title--container div a i svg, .projects-title--container div a i{
+    height: fit-content;
+    width: fit-content;
+}
+
+.projects-title--container div a:hover {
+    color: wheat;
+    transform: scale(1.1);
+}
+
+.projects-title--container p {
+    font-family: var(--main-fontFamily);
+    text-align: center;
+    font-size: .9rem;
+    color: white;
+    text-decoration: underline;
+    padding: 0 0 .2rem 0;
+}
+
+.projects-subtitle {
+    font-family: 'press start 2p';
+    color: #c81515;
+    font-size: .8rem;
+    text-shadow: 1px 1px black;
+    padding: 1rem 1rem 1rem 0;
+}
+
+.projects-description--container {
+    margin: 0 1rem 0 1rem;
+    font-family: var(--main-fontFamily);
+    color: black;
+    font-weight: bold;
+    list-style-type: none;
+}
+
+.projects-description--container ul {
+    list-style-type: square;
+    list-style-position: inside;
+    font-size: .8rem;
+}
+
+.projects-description--container ul li::marker{
+    color: #a80000;
+}
+
+.projects-description--container ul li{
+    margin-bottom: .2rem;
+}
+
+.projects-subdescription--container {
+    margin: 0 1rem 1rem 1rem;
+}
+
+.projects-subdescription--container p {
+    font-size: .9rem;
+    font-weight: bold;
+    text-align: justify;
+    max-width: 90%;
+    font-family: var(--main-fontFamily);
+    line-height: 1.2rem;
+}
+
+@media (max-width: 800px)
+{
+    .projects-title {
+        font-size: .8rem;     
+    }
+    .projects-title--container p {
+        font-size: .7rem;
+    }
+    
+    .projects-subtitle {
+        font-size: .8rem;
+    }
+    
+    .projects-description--container {
+        font-size: .7rem;
+    }
+
+    .projects-subdescription--container p {
+        font-size: .8rem;
+        max-width: 90%;
+    }
+
+    .projects-single {
+        flex-direction: column;
+    }
+    .projects-single {
+        flex-direction: column;
+    }
+    .projects-logo {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+    .projects-right {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    
+}
+
+@media (max-width: 425px)
+{
+    #main-projects--container .main-title {
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .projects-title {
+        font-size: .7rem;     
+    }
+    .projects-title--container div a {
+        font-size: 1.3rem;
+    }
+    .projects-title--container p {
+        font-size: .7rem;
+    }
+    
+    .projects-subtitle {
+        font-size: .7rem;
+    }
+    
+    .projects-description--container {
+        font-size: .6rem;
+    }
+
+    .projects-subdescription--container p {
+        font-size: .7rem;
+        max-width: 90%;
+    }
+}

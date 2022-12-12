@@ -1,0 +1,1037 @@
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <link rel="icon" href="/favicon.ico">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500&amp;family=Press+Start+2P&amp;display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="theme-color" content="#000000">
+      <meta name="description" content="Web site created using create-react-app">
+      <link rel="apple-touch-icon" href="/logo192.png">
+      <!--
+         manifest.json provides metadata used when your web app is installed on a
+         user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+         -->
+      <link rel="manifest" href="/manifest.json">
+      <!--
+         Notice the use of  in the tags above.
+         It will be replaced with the URL of the `public` folder during the build.
+         Only files inside the `public` folder can be referenced from the HTML.
+         
+         Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+         work correctly both with client-side routing and a non-root public URL.
+         Learn how to configure a non-root public URL by running `npm run build`.
+         -->
+      <title>React App</title>
+      <script defer="" src="/static/js/bundle.js"></script>
+      <style>.wrapper-products {
+         display: flex;
+         flex-wrap: wrap;
+         padding-top: 6rem;
+         justify-content: space-evenly;
+         cursor: pointer;
+         width: 100%;
+         height: 100%;
+         gap: .3rem;
+         }
+         .main-cardProduct {
+         width: 300px;
+         height: 300px;
+         max-height: 300px;
+         border: 4px double #289b10;
+         transition: all ease-in .3s;
+         background-color: white;
+         margin-bottom: .3rem;
+         font-weight: bold;
+         border-radius: 5px;
+         }
+         .main-cardProduct:hover {
+         transform: scale(1.03);
+         box-shadow: .6rem .1rem .2rem rgb(27, 27, 27);
+         border: 4px double #ee0000;
+         }
+         /* .main-cardProduct:hover .burger-price{
+         color: white;
+         } */
+         .img--mediumSize {
+         width: 100%;
+         height: 100%;
+         min-height: 200px;
+         max-height: 200px;
+         }
+         .card-rating span {
+         color: #ee0000;
+         margin: 0.1rem;
+         }
+         .card-rating span:last-child {
+         color: #ee0000;
+         text-decoration: underline;
+         text-decoration-color: #ee0000;
+         }
+         .card-rating {
+         width: max-content;
+         margin: 0 auto;
+         padding: .5rem;
+         }
+         .wrapperImage {
+         display: flex;
+         align-items: center;
+         flex-direction: column;
+         justify-content: start;
+         }
+         .wrapperImage  > span {
+         position: relative;
+         width: max-content;
+         height: max-content;
+         z-index: 2;
+         }
+         .wrapperImage > span > i > svg {
+         color: white;
+         font-size: 2rem;
+         }
+         .wrapperImage > span > i {
+         position: absolute;
+         top: -200px;
+         left: 115px;
+         }
+         .wrapperImage > span > i > svg:hover {
+         color: #ee0000;
+         transform: scale(1.03);
+         }
+         .burger-title {
+         font-family: cursive;
+         font-size: 1.5rem;
+         font-weight: bold;
+         color: black;
+         text-align: center;
+         border-radius: 5px;
+         padding: .2rem;
+         text-decoration: none !important;
+         }
+         .burger-price {
+         font-family: cursive;
+         font-size: 1rem;
+         font-weight: bold;
+         color: black;
+         text-align: center;
+         /* background: linear-gradient(to right,rgb(255, 208, 0) 15%,#ff0000 85%); */
+         }
+         .burger-price  p {
+         width: max-content;
+         margin: 0 auto;
+         border-radius: 5px;
+         padding: .2rem;
+         }
+         /* Modal do produto clicado pelo Icon */
+         .modalSingleProductClick {
+         position: absolute;
+         z-index: 5;
+         width: 80%;
+         height: max-content;
+         min-height: 70%;
+         border: 4px double #ee0000;
+         background-color: #000;
+         background-size: 100%;
+         border-radius: 5px;
+         display: none;
+         align-items: center;
+         margin: 0 auto;
+         cursor: initial;
+         min-width: 50%;
+         min-height: 50%;
+         }
+         .modalSingleProductClick > img{
+         flex-grow: 1;
+         max-width: 50vw;
+         max-height: 50vh;
+         }
+         .modalSingleProductClick > div{
+         background-color: #000;
+         width: 100%;
+         height: 100%;
+         padding: 0;
+         margin: 0;
+         }
+         .descriptionOfSingleProduct {
+         font-size: 1.1rem;
+         font-family: cursive;
+         background-color: rgb(27, 27, 27);
+         line-height: 1.3rem;
+         text-align: center;
+         color: white;
+         margin: 0 auto;
+         padding: 1rem;
+         max-width: 80%;
+         }
+         .burger-title.colorGreen {
+         color: #289b10;
+         text-align: center;
+         margin: 0 auto;
+         padding: 1rem;
+         text-decoration: underline;
+         }
+         .containerQuantidadeProduto {
+         text-align: center;
+         padding: 1rem;
+         font-weight: bold;
+         }
+         .containerQuantidadeProduto > label{
+         color: #289b10;
+         margin-right: .5rem;
+         }
+         .containerButtonsModalSingleProduct{
+         padding: 0 1rem 1rem 1rem;
+         text-align: center;
+         }
+         .btnModalSingleProduct {
+         font-size: 1rem;
+         font-weight: bold;
+         font-family: cursive;
+         border: 4px double #ee0000;
+         border-radius: 10%;
+         padding: 0.5rem;
+         box-shadow: 0.1rem 0.1rem 0.2rem black;
+         background-color: #000;
+         text-shadow: 0.15rem 0.09rem 0.009rem black;
+         transition: all ease .3s;
+         color: white;
+         cursor: pointer;
+         text-align: center;
+         margin-right: .5rem;
+         }
+         .btnModalSingleProduct.-danger {
+         background: linear-gradient(to right, #9e1717e0 15%, #cf1212ed 70%);
+         color: black;
+         text-shadow: none;
+         border: 4px double black;
+         }
+         .btnModalSingleProduct:hover {
+         text-shadow: none;
+         transform: scale(1.05);
+         background: #ee0000;
+         border-color: black;
+         color: black;
+         }
+         .btnModalSingleProduct.-danger:hover {
+         color: #FFF;
+         }
+         /* container blur */
+         .containerBlur {
+         position: absolute;
+         width: 100%;
+         min-height: 70vh;
+         transition: 0.5s;
+         background-color: gray;
+         display: none;
+         z-index: 4;
+         cursor: initial;
+         margin-top: -2rem;
+         }
+         /* ativação do modal */
+         .containerBlur.isActive {
+         display: inherit;
+         }
+         .modalSingleProductClick.isActive {
+         display: flex;
+         border-color: #289b10;
+         }
+         /* Icon quantidade de produto selecionado */
+         .wrapperImage > span > i > span {
+         border-radius: 50%;
+         padding: 0.1rem 0.3rem;
+         background-color: red;
+         font-weight: 800;
+         color: black;
+         position: absolute;
+         left: 9px;
+         bottom: 27px;
+         z-index: -1;
+         }
+         /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL01haW5DYXJkUHJvZHVjdC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxhQUFhO0lBQ2IsZUFBZTtJQUNmLGlCQUFpQjtJQUNqQiw2QkFBNkI7SUFDN0IsZUFBZTtJQUNmLFdBQVc7SUFDWCxZQUFZO0lBQ1osVUFBVTtBQUNkOztBQUVBO0lBQ0ksWUFBWTtJQUNaLGFBQWE7SUFDYixpQkFBaUI7SUFDakIsMEJBQTBCO0lBQzFCLDJCQUEyQjtJQUMzQix1QkFBdUI7SUFDdkIsb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQixrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxzQkFBc0I7SUFDdEIsNkNBQTZDO0lBQzdDLDBCQUEwQjtBQUM5Qjs7QUFFQTs7R0FFRzs7O0FBR0g7SUFDSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLGlCQUFpQjtJQUNqQixpQkFBaUI7QUFDckI7O0FBRUE7RUFDRSxjQUFjO0VBQ2QsY0FBYztBQUNoQjs7QUFFQTtJQUNJLGNBQWM7SUFDZCwwQkFBMEI7SUFDMUIsOEJBQThCOztBQUVsQzs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixjQUFjO0lBQ2QsY0FBYztBQUNsQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsc0JBQXNCO0lBQ3RCLHNCQUFzQjtBQUMxQjs7QUFFQTtJQUNJLGtCQUFrQjtJQUNsQixrQkFBa0I7SUFDbEIsbUJBQW1CO0lBQ25CLFVBQVU7QUFDZDs7QUFFQTtJQUNJLFlBQVk7SUFDWixlQUFlO0FBQ25COztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLFdBQVc7SUFDWCxXQUFXO0FBQ2Y7O0FBRUE7SUFDSSxjQUFjO0lBQ2Qsc0JBQXNCO0FBQzFCOztBQUVBO0lBQ0ksb0JBQW9CO0lBQ3BCLGlCQUFpQjtJQUNqQixpQkFBaUI7SUFDakIsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixrQkFBa0I7SUFDbEIsY0FBYztJQUNkLGdDQUFnQzs7QUFFcEM7O0FBRUE7SUFDSSxvQkFBb0I7SUFDcEIsZUFBZTtJQUNmLGlCQUFpQjtJQUNqQixZQUFZO0lBQ1osa0JBQWtCOztJQUVsQiw0RUFBNEU7QUFDaEY7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsY0FBYztJQUNkLGtCQUFrQjtJQUNsQixjQUFjO0FBQ2xCOztBQUVBLHVDQUF1Qzs7QUFFdkM7SUFDSSxrQkFBa0I7SUFDbEIsVUFBVTtJQUNWLFVBQVU7SUFDVixtQkFBbUI7SUFDbkIsZUFBZTtJQUNmLDBCQUEwQjtJQUMxQixzQkFBc0I7SUFDdEIscUJBQXFCO0lBQ3JCLGtCQUFrQjtJQUNsQixhQUFhO0lBQ2IsbUJBQW1CO0lBQ25CLGNBQWM7SUFDZCxlQUFlO0lBQ2YsY0FBYztJQUNkLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxZQUFZO0lBQ1osZUFBZTtJQUNmLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLHNCQUFzQjtJQUN0QixXQUFXO0lBQ1gsWUFBWTtJQUNaLFVBQVU7SUFDVixTQUFTO0FBQ2I7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsb0JBQW9CO0lBQ3BCLGlDQUFpQztJQUNqQyxtQkFBbUI7SUFDbkIsa0JBQWtCO0lBQ2xCLFlBQVk7SUFDWixjQUFjO0lBQ2QsYUFBYTtJQUNiLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxjQUFjO0lBQ2Qsa0JBQWtCO0lBQ2xCLGNBQWM7SUFDZCxhQUFhO0lBQ2IsMEJBQTBCO0FBQzlCOztBQUVBO0lBQ0ksa0JBQWtCO0lBQ2xCLGFBQWE7SUFDYixpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSxjQUFjO0lBQ2QsbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0kseUJBQXlCO0lBQ3pCLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLGVBQWU7SUFDZixpQkFBaUI7SUFDakIsb0JBQW9CO0lBQ3BCLDBCQUEwQjtJQUMxQixrQkFBa0I7SUFDbEIsZUFBZTtJQUNmLHNDQUFzQztJQUN0QyxzQkFBc0I7SUFDdEIsMkNBQTJDO0lBQzNDLHdCQUF3QjtJQUN4QixZQUFZO0lBQ1osZUFBZTtJQUNmLGtCQUFrQjtJQUNsQixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxtRUFBbUU7SUFDbkUsWUFBWTtJQUNaLGlCQUFpQjtJQUNqQix3QkFBd0I7QUFDNUI7O0FBRUE7SUFDSSxpQkFBaUI7SUFDakIsc0JBQXNCO0lBQ3RCLG1CQUFtQjtJQUNuQixtQkFBbUI7SUFDbkIsWUFBWTs7QUFFaEI7O0FBRUE7SUFDSSxXQUFXO0FBQ2Y7O0FBRUEsbUJBQW1COztBQUVuQjtJQUNJLGtCQUFrQjtJQUNsQixXQUFXO0lBQ1gsZ0JBQWdCO0lBQ2hCLGdCQUFnQjtJQUNoQixzQkFBc0I7SUFDdEIsYUFBYTtJQUNiLFVBQVU7SUFDVixlQUFlO0lBQ2YsaUJBQWlCO0FBQ3JCOztBQUVBLHNCQUFzQjs7QUFFdEI7SUFDSSxnQkFBZ0I7QUFDcEI7O0FBRUE7SUFDSSxhQUFhO0lBQ2IscUJBQXFCO0FBQ3pCOztBQUVBLDJDQUEyQzs7QUFFM0M7SUFDSSxrQkFBa0I7SUFDbEIsc0JBQXNCO0lBQ3RCLHFCQUFxQjtJQUNyQixnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixTQUFTO0lBQ1QsWUFBWTtJQUNaLFdBQVc7QUFDZiIsInNvdXJjZXNDb250ZW50IjpbIi53cmFwcGVyLXByb2R1Y3RzIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGZsZXgtd3JhcDogd3JhcDtcbiAgICBwYWRkaW5nLXRvcDogNnJlbTtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWV2ZW5seTtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIGdhcDogLjNyZW07XG59XG5cbi5tYWluLWNhcmRQcm9kdWN0IHtcbiAgICB3aWR0aDogMzAwcHg7XG4gICAgaGVpZ2h0OiAzMDBweDtcbiAgICBtYXgtaGVpZ2h0OiAzMDBweDtcbiAgICBib3JkZXI6IDRweCBkb3VibGUgIzI4OWIxMDtcbiAgICB0cmFuc2l0aW9uOiBhbGwgZWFzZS1pbiAuM3M7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgbWFyZ2luLWJvdHRvbTogLjNyZW07XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xufVxuXG4ubWFpbi1jYXJkUHJvZHVjdDpob3ZlciB7XG4gICAgdHJhbnNmb3JtOiBzY2FsZSgxLjAzKTtcbiAgICBib3gtc2hhZG93OiAuNnJlbSAuMXJlbSAuMnJlbSByZ2IoMjcsIDI3LCAyNyk7XG4gICAgYm9yZGVyOiA0cHggZG91YmxlICNlZTAwMDA7XG59XG5cbi8qIC5tYWluLWNhcmRQcm9kdWN0OmhvdmVyIC5idXJnZXItcHJpY2V7XG4gICAgY29sb3I6IHdoaXRlO1xufSAqL1xuXG5cbi5pbWctLW1lZGl1bVNpemUge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGhlaWdodDogMTAwJTtcbiAgICBtaW4taGVpZ2h0OiAyMDBweDtcbiAgICBtYXgtaGVpZ2h0OiAyMDBweDtcbn1cblxuLmNhcmQtcmF0aW5nIHNwYW4ge1xuICBjb2xvcjogI2VlMDAwMDtcbiAgbWFyZ2luOiAwLjFyZW07XG59XG5cbi5jYXJkLXJhdGluZyBzcGFuOmxhc3QtY2hpbGQge1xuICAgIGNvbG9yOiAjZWUwMDAwO1xuICAgIHRleHQtZGVjb3JhdGlvbjogdW5kZXJsaW5lO1xuICAgIHRleHQtZGVjb3JhdGlvbi1jb2xvcjogI2VlMDAwMDtcblxufVxuXG4uY2FyZC1yYXRpbmcge1xuICAgIHdpZHRoOiBtYXgtY29udGVudDtcbiAgICBtYXJnaW46IDAgYXV0bztcbiAgICBwYWRkaW5nOiAuNXJlbTtcbn1cblxuLndyYXBwZXJJbWFnZSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gICAganVzdGlmeS1jb250ZW50OiBzdGFydDtcbn1cblxuLndyYXBwZXJJbWFnZSAgPiBzcGFuIHtcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgd2lkdGg6IG1heC1jb250ZW50O1xuICAgIGhlaWdodDogbWF4LWNvbnRlbnQ7XG4gICAgei1pbmRleDogMjtcbn1cblxuLndyYXBwZXJJbWFnZSA+IHNwYW4gPiBpID4gc3ZnIHtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgZm9udC1zaXplOiAycmVtO1xufVxuXG4ud3JhcHBlckltYWdlID4gc3BhbiA+IGkge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB0b3A6IC0yMDBweDtcbiAgICBsZWZ0OiAxMTVweDtcbn1cblxuLndyYXBwZXJJbWFnZSA+IHNwYW4gPiBpID4gc3ZnOmhvdmVyIHtcbiAgICBjb2xvcjogI2VlMDAwMDtcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMDMpO1xufVxuXG4uYnVyZ2VyLXRpdGxlIHtcbiAgICBmb250LWZhbWlseTogY3Vyc2l2ZTtcbiAgICBmb250LXNpemU6IDEuNXJlbTtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBwYWRkaW5nOiAuMnJlbTtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmUgIWltcG9ydGFudDtcblxufVxuXG4uYnVyZ2VyLXByaWNlIHtcbiAgICBmb250LWZhbWlseTogY3Vyc2l2ZTtcbiAgICBmb250LXNpemU6IDFyZW07XG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XG4gICAgY29sb3I6IGJsYWNrO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcblxuICAgIC8qIGJhY2tncm91bmQ6IGxpbmVhci1ncmFkaWVudCh0byByaWdodCxyZ2IoMjU1LCAyMDgsIDApIDE1JSwjZmYwMDAwIDg1JSk7ICovXG59XG5cbi5idXJnZXItcHJpY2UgIHAge1xuICAgIHdpZHRoOiBtYXgtY29udGVudDtcbiAgICBtYXJnaW46IDAgYXV0bztcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgcGFkZGluZzogLjJyZW07XG59XG5cbi8qIE1vZGFsIGRvIHByb2R1dG8gY2xpY2FkbyBwZWxvIEljb24gKi9cblxuLm1vZGFsU2luZ2xlUHJvZHVjdENsaWNrIHtcbiAgICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gICAgei1pbmRleDogNTtcbiAgICB3aWR0aDogODAlO1xuICAgIGhlaWdodDogbWF4LWNvbnRlbnQ7XG4gICAgbWluLWhlaWdodDogNzAlO1xuICAgIGJvcmRlcjogNHB4IGRvdWJsZSAjZWUwMDAwO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDA7XG4gICAgYmFja2dyb3VuZC1zaXplOiAxMDAlO1xuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcbiAgICBkaXNwbGF5OiBub25lO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgY3Vyc29yOiBpbml0aWFsO1xuICAgIG1pbi13aWR0aDogNTAlO1xuICAgIG1pbi1oZWlnaHQ6IDUwJTtcbn1cblxuLm1vZGFsU2luZ2xlUHJvZHVjdENsaWNrID4gaW1ne1xuICAgIGZsZXgtZ3JvdzogMTtcbiAgICBtYXgtd2lkdGg6IDUwdnc7XG4gICAgbWF4LWhlaWdodDogNTB2aDtcbn1cblxuLm1vZGFsU2luZ2xlUHJvZHVjdENsaWNrID4gZGl2e1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDA7XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHBhZGRpbmc6IDA7XG4gICAgbWFyZ2luOiAwO1xufVxuXG4uZGVzY3JpcHRpb25PZlNpbmdsZVByb2R1Y3Qge1xuICAgIGZvbnQtc2l6ZTogMS4xcmVtO1xuICAgIGZvbnQtZmFtaWx5OiBjdXJzaXZlO1xuICAgIGJhY2tncm91bmQtY29sb3I6IHJnYigyNywgMjcsIDI3KTtcbiAgICBsaW5lLWhlaWdodDogMS4zcmVtO1xuICAgIHRleHQtYWxpZ246IGNlbnRlcjtcbiAgICBjb2xvcjogd2hpdGU7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgcGFkZGluZzogMXJlbTtcbiAgICBtYXgtd2lkdGg6IDgwJTtcbn1cblxuLmJ1cmdlci10aXRsZS5jb2xvckdyZWVuIHtcbiAgICBjb2xvcjogIzI4OWIxMDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgbWFyZ2luOiAwIGF1dG87XG4gICAgcGFkZGluZzogMXJlbTtcbiAgICB0ZXh0LWRlY29yYXRpb246IHVuZGVybGluZTtcbn1cblxuLmNvbnRhaW5lclF1YW50aWRhZGVQcm9kdXRvIHtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgcGFkZGluZzogMXJlbTtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbn1cblxuLmNvbnRhaW5lclF1YW50aWRhZGVQcm9kdXRvID4gbGFiZWx7XG4gICAgY29sb3I6ICMyODliMTA7XG4gICAgbWFyZ2luLXJpZ2h0OiAuNXJlbTtcbn1cblxuLmNvbnRhaW5lckJ1dHRvbnNNb2RhbFNpbmdsZVByb2R1Y3R7XG4gICAgcGFkZGluZzogMCAxcmVtIDFyZW0gMXJlbTtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG59XG5cbi5idG5Nb2RhbFNpbmdsZVByb2R1Y3Qge1xuICAgIGZvbnQtc2l6ZTogMXJlbTtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICBmb250LWZhbWlseTogY3Vyc2l2ZTtcbiAgICBib3JkZXI6IDRweCBkb3VibGUgI2VlMDAwMDtcbiAgICBib3JkZXItcmFkaXVzOiAxMCU7XG4gICAgcGFkZGluZzogMC41cmVtO1xuICAgIGJveC1zaGFkb3c6IDAuMXJlbSAwLjFyZW0gMC4ycmVtIGJsYWNrO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMwMDA7XG4gICAgdGV4dC1zaGFkb3c6IDAuMTVyZW0gMC4wOXJlbSAwLjAwOXJlbSBibGFjaztcbiAgICB0cmFuc2l0aW9uOiBhbGwgZWFzZSAuM3M7XG4gICAgY29sb3I6IHdoaXRlO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgbWFyZ2luLXJpZ2h0OiAuNXJlbTtcbn1cblxuLmJ0bk1vZGFsU2luZ2xlUHJvZHVjdC4tZGFuZ2VyIHtcbiAgICBiYWNrZ3JvdW5kOiBsaW5lYXItZ3JhZGllbnQodG8gcmlnaHQsICM5ZTE3MTdlMCAxNSUsICNjZjEyMTJlZCA3MCUpO1xuICAgIGNvbG9yOiBibGFjaztcbiAgICB0ZXh0LXNoYWRvdzogbm9uZTtcbiAgICBib3JkZXI6IDRweCBkb3VibGUgYmxhY2s7XG59XG5cbi5idG5Nb2RhbFNpbmdsZVByb2R1Y3Q6aG92ZXIge1xuICAgIHRleHQtc2hhZG93OiBub25lO1xuICAgIHRyYW5zZm9ybTogc2NhbGUoMS4wNSk7XG4gICAgYmFja2dyb3VuZDogI2VlMDAwMDtcbiAgICBib3JkZXItY29sb3I6IGJsYWNrO1xuICAgIGNvbG9yOiBibGFjaztcbiAgICBcbn1cblxuLmJ0bk1vZGFsU2luZ2xlUHJvZHVjdC4tZGFuZ2VyOmhvdmVyIHtcbiAgICBjb2xvcjogI0ZGRjtcbn1cblxuLyogY29udGFpbmVyIGJsdXIgKi9cblxuLmNvbnRhaW5lckJsdXIge1xuICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtaW4taGVpZ2h0OiA3MHZoO1xuICAgIHRyYW5zaXRpb246IDAuNXM7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogZ3JheTtcbiAgICBkaXNwbGF5OiBub25lO1xuICAgIHotaW5kZXg6IDQ7XG4gICAgY3Vyc29yOiBpbml0aWFsO1xuICAgIG1hcmdpbi10b3A6IC0ycmVtO1xufVxuXG4vKiBhdGl2YcOnw6NvIGRvIG1vZGFsICovXG5cbi5jb250YWluZXJCbHVyLmlzQWN0aXZlIHtcbiAgICBkaXNwbGF5OiBpbmhlcml0O1xufVxuXG4ubW9kYWxTaW5nbGVQcm9kdWN0Q2xpY2suaXNBY3RpdmUge1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgYm9yZGVyLWNvbG9yOiAjMjg5YjEwO1xufVxuXG4vKiBJY29uIHF1YW50aWRhZGUgZGUgcHJvZHV0byBzZWxlY2lvbmFkbyAqL1xuXG4ud3JhcHBlckltYWdlID4gc3BhbiA+IGkgPiBzcGFuIHtcbiAgICBib3JkZXItcmFkaXVzOiA1MCU7XG4gICAgcGFkZGluZzogMC4xcmVtIDAuM3JlbTtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiByZWQ7XG4gICAgZm9udC13ZWlnaHQ6IDgwMDtcbiAgICBjb2xvcjogYmxhY2s7XG4gICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgIGxlZnQ6IDlweDtcbiAgICBib3R0b206IDI3cHg7XG4gICAgei1pbmRleDogLTE7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */
+      </style>
+      <style>
+         /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsInNvdXJjZVJvb3QiOiIifQ== */
+      </style>
+      <style>.main-signin--container {
+         width: 100%;
+         width: 100%;
+         contain: 100%;
+         height: 100%;
+         min-height: 100vh;
+         padding-top: 2rem;
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         align-items: center;
+         }
+         .main-signin--container > #login {
+         width: max-content;
+         margin: 0 auto;
+         font-size: 1rem;
+         color: #289b10;
+         font-weight: 800;
+         font-family: cursive;
+         padding: 2rem;
+         background-color: black;
+         border: 4px double #289b10;
+         margin-top: 4rem;
+         }
+         .main-signin--container > #login > form > h1 {
+         border-bottom: 4px double #289b10;
+         text-align: center;
+         }
+         .main-signin--container > #login > form > p {
+         margin-bottom: .5rem;
+         }
+         .main-signin--container > #login > form > p:nth-child(2) {
+         margin-top: .5rem;
+         }
+         .main-signin--container > #login > form > p > label{
+         display: block;
+         }
+         .main-signin--container > #login > form > p > input[type=text], .main-signin--container > #login > form > p > input[type=password]{
+         width: 100%;
+         height: 1.1rem;
+         }
+         .main-signin--container > #login > form > p > input:focus {
+         border: 2px double #289b10;
+         outline-color: #289b10;
+         }
+         .main-signin--container > #login > form > p > input[type=checkbox]{
+         margin-right: .5rem;
+         display: inline-block;
+         }
+         .main-signin--container > #login > form > p:nth-child(4) > label{
+         display: inline-block;
+         }
+         .main-signin--container > #login > form > p:nth-child(6) > a{
+         color: #FFF;
+         margin-left: .5rem;
+         }
+         .main-signin--container > #login > form > p > input[type=submit]{
+         width: 100%;
+         cursor: pointer;
+         font-family: cursive;
+         font-size: 1rem;
+         background-color: black;
+         color: #ee0000;
+         border: 4px double #ee0000;
+         border-radius: 5px;
+         transition: all ease .3s;
+         padding: .3rem;
+         }
+         .main-signin--container > #login > form > p > input[type=submit]:hover{
+         transform: scale(1.05);
+         background-color: #ee0000;
+         color: #FFF;
+         border-color: black;
+         }
+         /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zY3JlZW5zL1NpZ25pblNjcmVlbi5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7SUFDSSxXQUFXO0lBQ1gsV0FBVztJQUNYLGFBQWE7SUFDYixZQUFZO0lBQ1osaUJBQWlCO0lBQ2pCLGlCQUFpQjtJQUNqQixhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLDJCQUEyQjtJQUMzQixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsY0FBYztJQUNkLGVBQWU7SUFDZixjQUFjO0lBQ2QsZ0JBQWdCO0lBQ2hCLG9CQUFvQjtJQUNwQixhQUFhO0lBQ2IsdUJBQXVCO0lBQ3ZCLDBCQUEwQjtJQUMxQixnQkFBZ0I7O0FBRXBCOztBQUVBO0lBQ0ksaUNBQWlDO0lBQ2pDLGtCQUFrQjtBQUN0Qjs7QUFFQTtJQUNJLG9CQUFvQjtBQUN4Qjs7QUFFQTtJQUNJLGlCQUFpQjtBQUNyQjs7QUFFQTtJQUNJLGNBQWM7QUFDbEI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsY0FBYztBQUNsQjs7QUFFQTtJQUNJLDBCQUEwQjtJQUMxQixzQkFBc0I7QUFDMUI7OztBQUdBO0lBQ0ksbUJBQW1CO0lBQ25CLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLFdBQVc7SUFDWCxrQkFBa0I7QUFDdEI7O0FBRUE7SUFDSSxXQUFXO0lBQ1gsZUFBZTtJQUNmLG9CQUFvQjtJQUNwQixlQUFlO0lBQ2YsdUJBQXVCO0lBQ3ZCLGNBQWM7SUFDZCwwQkFBMEI7SUFDMUIsa0JBQWtCO0lBQ2xCLHdCQUF3QjtJQUN4QixjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksc0JBQXNCO0lBQ3RCLHlCQUF5QjtJQUN6QixXQUFXO0lBQ1gsbUJBQW1CO0FBQ3ZCIiwic291cmNlc0NvbnRlbnQiOlsiLm1haW4tc2lnbmluLS1jb250YWluZXIge1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGNvbnRhaW46IDEwMCU7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIG1pbi1oZWlnaHQ6IDEwMHZoO1xuICAgIHBhZGRpbmctdG9wOiAycmVtO1xuICAgIGRpc3BsYXk6IGZsZXg7XG4gICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGZsZXgtc3RhcnQ7XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbn1cblxuLm1haW4tc2lnbmluLS1jb250YWluZXIgPiAjbG9naW4ge1xuICAgIHdpZHRoOiBtYXgtY29udGVudDtcbiAgICBtYXJnaW46IDAgYXV0bztcbiAgICBmb250LXNpemU6IDFyZW07XG4gICAgY29sb3I6ICMyODliMTA7XG4gICAgZm9udC13ZWlnaHQ6IDgwMDtcbiAgICBmb250LWZhbWlseTogY3Vyc2l2ZTtcbiAgICBwYWRkaW5nOiAycmVtO1xuICAgIGJhY2tncm91bmQtY29sb3I6IGJsYWNrO1xuICAgIGJvcmRlcjogNHB4IGRvdWJsZSAjMjg5YjEwO1xuICAgIG1hcmdpbi10b3A6IDRyZW07XG4gICAgXG59XG5cbi5tYWluLXNpZ25pbi0tY29udGFpbmVyID4gI2xvZ2luID4gZm9ybSA+IGgxIHtcbiAgICBib3JkZXItYm90dG9tOiA0cHggZG91YmxlICMyODliMTA7XG4gICAgdGV4dC1hbGlnbjogY2VudGVyO1xufVxuXG4ubWFpbi1zaWduaW4tLWNvbnRhaW5lciA+ICNsb2dpbiA+IGZvcm0gPiBwIHtcbiAgICBtYXJnaW4tYm90dG9tOiAuNXJlbTtcbn1cblxuLm1haW4tc2lnbmluLS1jb250YWluZXIgPiAjbG9naW4gPiBmb3JtID4gcDpudGgtY2hpbGQoMikge1xuICAgIG1hcmdpbi10b3A6IC41cmVtO1xufVxuXG4ubWFpbi1zaWduaW4tLWNvbnRhaW5lciA+ICNsb2dpbiA+IGZvcm0gPiBwID4gbGFiZWx7XG4gICAgZGlzcGxheTogYmxvY2s7XG59XG5cbi5tYWluLXNpZ25pbi0tY29udGFpbmVyID4gI2xvZ2luID4gZm9ybSA+IHAgPiBpbnB1dFt0eXBlPXRleHRdLCAubWFpbi1zaWduaW4tLWNvbnRhaW5lciA+ICNsb2dpbiA+IGZvcm0gPiBwID4gaW5wdXRbdHlwZT1wYXNzd29yZF17XG4gICAgd2lkdGg6IDEwMCU7XG4gICAgaGVpZ2h0OiAxLjFyZW07XG59XG5cbi5tYWluLXNpZ25pbi0tY29udGFpbmVyID4gI2xvZ2luID4gZm9ybSA+IHAgPiBpbnB1dDpmb2N1cyB7XG4gICAgYm9yZGVyOiAycHggZG91YmxlICMyODliMTA7XG4gICAgb3V0bGluZS1jb2xvcjogIzI4OWIxMDtcbn1cblxuXG4ubWFpbi1zaWduaW4tLWNvbnRhaW5lciA+ICNsb2dpbiA+IGZvcm0gPiBwID4gaW5wdXRbdHlwZT1jaGVja2JveF17XG4gICAgbWFyZ2luLXJpZ2h0OiAuNXJlbTtcbiAgICBkaXNwbGF5OiBpbmxpbmUtYmxvY2s7XG59XG5cbi5tYWluLXNpZ25pbi0tY29udGFpbmVyID4gI2xvZ2luID4gZm9ybSA+IHA6bnRoLWNoaWxkKDQpID4gbGFiZWx7XG4gICAgZGlzcGxheTogaW5saW5lLWJsb2NrO1xufVxuXG4ubWFpbi1zaWduaW4tLWNvbnRhaW5lciA+ICNsb2dpbiA+IGZvcm0gPiBwOm50aC1jaGlsZCg2KSA+IGF7XG4gICAgY29sb3I6ICNGRkY7XG4gICAgbWFyZ2luLWxlZnQ6IC41cmVtO1xufVxuXG4ubWFpbi1zaWduaW4tLWNvbnRhaW5lciA+ICNsb2dpbiA+IGZvcm0gPiBwID4gaW5wdXRbdHlwZT1zdWJtaXRde1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbiAgICBmb250LWZhbWlseTogY3Vyc2l2ZTtcbiAgICBmb250LXNpemU6IDFyZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogYmxhY2s7XG4gICAgY29sb3I6ICNlZTAwMDA7XG4gICAgYm9yZGVyOiA0cHggZG91YmxlICNlZTAwMDA7XG4gICAgYm9yZGVyLXJhZGl1czogNXB4O1xuICAgIHRyYW5zaXRpb246IGFsbCBlYXNlIC4zcztcbiAgICBwYWRkaW5nOiAuM3JlbTtcbn1cblxuLm1haW4tc2lnbmluLS1jb250YWluZXIgPiAjbG9naW4gPiBmb3JtID4gcCA+IGlucHV0W3R5cGU9c3VibWl0XTpob3ZlcntcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMDUpO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICNlZTAwMDA7XG4gICAgY29sb3I6ICNGRkY7XG4gICAgYm9yZGVyLWNvbG9yOiBibGFjaztcbn1cblxuXG4iXSwic291cmNlUm9vdCI6IiJ9 */
+      </style>
+      <style>* {
+         margin: 0;
+         padding: 0;
+         }
+         body {
+         margin: 0;
+         padding: 0;
+         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+         sans-serif;
+         -webkit-font-smoothing: antialiased;
+         -moz-osx-font-smoothing: grayscale;
+         background-color: rgb(109, 109, 109);
+         overflow-x: hidden;
+         }
+         a:link {
+         text-decoration: none;
+         }
+         header, main, footer {
+         width: 100vw;
+         }
+         main {
+         min-height: 70vh;
+         overflow-y: scroll;
+         max-height: calc(73vh + 4px);
+         }
+         footer {
+         min-width: 20vh;
+         }
+         /* commom area */
+         .isActiveWhiteTransparent{
+         background-color: rgba(255, 255, 255, 0.603);
+         }
+         .isActiveWhiteTransparentFooter {
+         position: fixed;
+         top: 75vh;
+         }
+         .isActiveWhiteTransparentMain {
+         }
+         /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1QsVUFBVTtBQUNaOztBQUVBO0VBQ0UsU0FBUztFQUNULFVBQVU7RUFDVjs7Y0FFWTtFQUNaLG1DQUFtQztFQUNuQyxrQ0FBa0M7RUFDbEMsb0NBQW9DO0VBQ3BDLGtCQUFrQjs7QUFFcEI7O0FBRUE7RUFDRSxxQkFBcUI7QUFDdkI7O0FBRUE7RUFDRSxZQUFZO0FBQ2Q7O0FBRUE7RUFDRSxnQkFBZ0I7RUFDaEIsa0JBQWtCO0VBQ2xCLDRCQUE0QjtBQUM5Qjs7QUFFQTtFQUNFLGVBQWU7QUFDakI7O0FBRUEsZ0JBQWdCOztBQUVoQjtFQUNFLDRDQUE0QztBQUM5Qzs7QUFFQTtFQUNFLGVBQWU7RUFDZixTQUFTO0FBQ1g7O0FBRUE7O0FBRUEiLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcbiAgbWFyZ2luOiAwO1xuICBwYWRkaW5nOiAwO1xufVxuXG5ib2R5IHtcbiAgbWFyZ2luOiAwO1xuICBwYWRkaW5nOiAwO1xuICBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAnU2Vnb2UgVUknLCAnUm9ib3RvJywgJ094eWdlbicsXG4gICAgJ1VidW50dScsICdDYW50YXJlbGwnLCAnRmlyYSBTYW5zJywgJ0Ryb2lkIFNhbnMnLCAnSGVsdmV0aWNhIE5ldWUnLFxuICAgIHNhbnMtc2VyaWY7XG4gIC13ZWJraXQtZm9udC1zbW9vdGhpbmc6IGFudGlhbGlhc2VkO1xuICAtbW96LW9zeC1mb250LXNtb290aGluZzogZ3JheXNjYWxlO1xuICBiYWNrZ3JvdW5kLWNvbG9yOiByZ2IoMTA5LCAxMDksIDEwOSk7XG4gIG92ZXJmbG93LXg6IGhpZGRlbjtcblxufVxuXG5hOmxpbmsge1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG59XG5cbmhlYWRlciwgbWFpbiwgZm9vdGVyIHtcbiAgd2lkdGg6IDEwMHZ3O1xufVxuXG5tYWluIHtcbiAgbWluLWhlaWdodDogNzB2aDtcbiAgb3ZlcmZsb3cteTogc2Nyb2xsO1xuICBtYXgtaGVpZ2h0OiBjYWxjKDczdmggKyA0cHgpO1xufVxuXG5mb290ZXIge1xuICBtaW4td2lkdGg6IDIwdmg7XG59XG5cbi8qIGNvbW1vbSBhcmVhICovXG5cbi5pc0FjdGl2ZVdoaXRlVHJhbnNwYXJlbnR7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC42MDMpO1xufVxuXG4uaXNBY3RpdmVXaGl0ZVRyYW5zcGFyZW50Rm9vdGVyIHtcbiAgcG9zaXRpb246IGZpeGVkO1xuICB0b3A6IDc1dmg7XG59XG5cbi5pc0FjdGl2ZVdoaXRlVHJhbnNwYXJlbnRNYWluIHtcblxufVxuXG5cbiJdLCJzb3VyY2VSb290IjoiIn0= */
+      </style>
+      <style>.App {
+         width: 100%;
+         }
+         /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsV0FBVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiLkFwcCB7XG4gIHdpZHRoOiAxMDAlO1xufVxuIl0sInNvdXJjZVJvb3QiOiIifQ== */
+      </style>
+      <style>footer {
+         border: 4px double black;
+         width: calc(100% - 24px);
+         border-radius: 5px;
+         font-size: .9rem;
+         color: #000;
+         font-family: Serif, Times New Roman;
+         font-weight: bold;
+         text-align: center;
+         line-height: 1rem;
+         min-height: 22vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: .5rem;
+         background-color: #FFF;
+         z-index: 10;
+         position: fixed;
+         }
+         footer > div {
+         display: flex;
+         flex-direction: column;
+         gap: .5rem;
+         }
+         footer svg {
+         font-size: 3rem;
+         color: black;
+         }
+         footer span {
+         font-size: 1rem;
+         }
+         footer h3 {
+         font-size: .8rem;
+         color: #ee0000;
+         }
+         .footer-icons {
+         display: flex;
+         justify-content: space-evenly;
+         gap: .5rem;
+         min-width: -moz-fit-content;
+         min-width: fit-content;
+         flex-wrap: wrap;
+         }
+         .footer-icons--click {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         gap: 1rem;
+         }
+         .footer-icons--click svg {
+         box-shadow: 3px 3px 3px black, -1px -1px 3px black;
+         cursor: pointer;
+         transition: all ease-in-out .3s;
+         }
+         .footer-icons--click svg:hover {
+         box-shadow: none;
+         cursor: pointer;
+         }
+         .footer-icons--noClick {
+         display: flex;
+         justify-content: center;
+         flex-direction: column;
+         }
+         .footer-icons--noClick div {
+         display: flex;
+         align-items: center;
+         }
+         .footer-icons--noClick div svg{
+         font-size: 2rem;
+         }
+         .footer-icons--noClick div p {
+         font-size: .8rem;
+         }
+         @media (max-width: 800px)
+         {
+         .footer-icons--click svg {
+         font-size: 2rem;
+         }
+         .footer-icons--noClick div svg {
+         font-size: 1.5rem;
+         }
+         footer span {
+         font-size: 1.2rem;
+         }
+         footer h3 {
+         font-size: .7rem;
+         color: #ee0000;
+         }
+         }
+         @media (max-width: 400px)
+         {
+         .footer-icons {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         }
+         .footer-icons--noClick {
+         align-items: center;
+         }
+         }
+         /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL01haW5Gb290ZXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksd0JBQXdCO0lBQ3hCLHdCQUF3QjtJQUN4QixrQkFBa0I7SUFDbEIsZ0JBQWdCO0lBQ2hCLFdBQVc7SUFDWCxtQ0FBbUM7SUFDbkMsaUJBQWlCO0lBQ2pCLGtCQUFrQjtJQUNsQixpQkFBaUI7SUFDakIsZ0JBQWdCO0lBQ2hCLGFBQWE7SUFDYixtQkFBbUI7SUFDbkIsdUJBQXVCO0lBQ3ZCLGNBQWM7SUFDZCxzQkFBc0I7SUFDdEIsV0FBVztJQUNYLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxhQUFhO0lBQ2Isc0JBQXNCO0lBQ3RCLFVBQVU7QUFDZDs7QUFFQTtJQUNJLGVBQWU7SUFDZixZQUFZO0FBQ2hCOztBQUVBO0lBQ0ksZUFBZTtBQUNuQjs7QUFFQTtJQUNJLGdCQUFnQjtJQUNoQixjQUFjO0FBQ2xCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLDZCQUE2QjtJQUM3QixVQUFVO0lBQ1YsMkJBQXNCO0lBQXRCLHNCQUFzQjtJQUN0QixlQUFlO0FBQ25COztBQUVBO0lBQ0ksYUFBYTtJQUNiLHVCQUF1QjtJQUN2QixtQkFBbUI7SUFDbkIsU0FBUztBQUNiOztBQUVBO0lBQ0ksa0RBQWtEO0lBQ2xELGVBQWU7SUFDZiwrQkFBK0I7QUFDbkM7O0FBRUE7SUFDSSxnQkFBZ0I7SUFDaEIsZUFBZTtBQUNuQjs7QUFFQTtJQUNJLGFBQWE7SUFDYix1QkFBdUI7SUFDdkIsc0JBQXNCO0FBQzFCOztBQUVBO0lBQ0ksYUFBYTtJQUNiLG1CQUFtQjtBQUN2Qjs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxnQkFBZ0I7QUFDcEI7OztBQUdBOztJQUVJO1FBQ0ksZUFBZTtJQUNuQjs7SUFFQTtRQUNJLGlCQUFpQjtJQUNyQjs7SUFFQTtRQUNJLGlCQUFpQjtJQUNyQjs7SUFFQTtRQUNJLGdCQUFnQjtRQUNoQixjQUFjO0lBQ2xCO0FBQ0o7OztBQUdBOztJQUVJO1FBQ0ksc0JBQXNCO1FBQ3RCLHVCQUF1QjtRQUN2QixtQkFBbUI7SUFDdkI7O0lBRUE7UUFDSSxtQkFBbUI7SUFDdkI7QUFDSiIsInNvdXJjZXNDb250ZW50IjpbImZvb3RlciB7XG4gICAgYm9yZGVyOiA0cHggZG91YmxlIGJsYWNrO1xuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAyNHB4KTtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG4gICAgZm9udC1zaXplOiAuOXJlbTtcbiAgICBjb2xvcjogIzAwMDtcbiAgICBmb250LWZhbWlseTogU2VyaWYsIFRpbWVzIE5ldyBSb21hbjtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgbGluZS1oZWlnaHQ6IDFyZW07XG4gICAgbWluLWhlaWdodDogMjJ2aDtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgcGFkZGluZzogLjVyZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI0ZGRjtcbiAgICB6LWluZGV4OiAxMDtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG59XG5cbmZvb3RlciA+IGRpdiB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgIGdhcDogLjVyZW07XG59XG5cbmZvb3RlciBzdmcge1xuICAgIGZvbnQtc2l6ZTogM3JlbTtcbiAgICBjb2xvcjogYmxhY2s7XG59XG5cbmZvb3RlciBzcGFuIHtcbiAgICBmb250LXNpemU6IDFyZW07XG59XG5cbmZvb3RlciBoMyB7XG4gICAgZm9udC1zaXplOiAuOHJlbTtcbiAgICBjb2xvcjogI2VlMDAwMDtcbn1cblxuLmZvb3Rlci1pY29ucyB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWV2ZW5seTtcbiAgICBnYXA6IC41cmVtO1xuICAgIG1pbi13aWR0aDogZml0LWNvbnRlbnQ7XG4gICAgZmxleC13cmFwOiB3cmFwO1xufVxuXG4uZm9vdGVyLWljb25zLS1jbGljayB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgIGdhcDogMXJlbTtcbn1cblxuLmZvb3Rlci1pY29ucy0tY2xpY2sgc3ZnIHtcbiAgICBib3gtc2hhZG93OiAzcHggM3B4IDNweCBibGFjaywgLTFweCAtMXB4IDNweCBibGFjaztcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgdHJhbnNpdGlvbjogYWxsIGVhc2UtaW4tb3V0IC4zcztcbn1cblxuLmZvb3Rlci1pY29ucy0tY2xpY2sgc3ZnOmhvdmVyIHtcbiAgICBib3gtc2hhZG93OiBub25lO1xuICAgIGN1cnNvcjogcG9pbnRlcjtcbn1cblxuLmZvb3Rlci1pY29ucy0tbm9DbGljayB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xufVxuXG4uZm9vdGVyLWljb25zLS1ub0NsaWNrIGRpdiB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuXG4uZm9vdGVyLWljb25zLS1ub0NsaWNrIGRpdiBzdmd7XG4gICAgZm9udC1zaXplOiAycmVtO1xufVxuXG4uZm9vdGVyLWljb25zLS1ub0NsaWNrIGRpdiBwIHtcbiAgICBmb250LXNpemU6IC44cmVtO1xufVxuXG5cbkBtZWRpYSAobWF4LXdpZHRoOiA4MDBweClcbntcbiAgICAuZm9vdGVyLWljb25zLS1jbGljayBzdmcge1xuICAgICAgICBmb250LXNpemU6IDJyZW07XG4gICAgfVxuXG4gICAgLmZvb3Rlci1pY29ucy0tbm9DbGljayBkaXYgc3ZnIHtcbiAgICAgICAgZm9udC1zaXplOiAxLjVyZW07XG4gICAgfVxuXG4gICAgZm9vdGVyIHNwYW4ge1xuICAgICAgICBmb250LXNpemU6IDEuMnJlbTtcbiAgICB9XG4gICAgXG4gICAgZm9vdGVyIGgzIHtcbiAgICAgICAgZm9udC1zaXplOiAuN3JlbTtcbiAgICAgICAgY29sb3I6ICNlZTAwMDA7XG4gICAgfVxufVxuXG5cbkBtZWRpYSAobWF4LXdpZHRoOiA0MDBweClcbntcbiAgICAuZm9vdGVyLWljb25zIHtcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgICAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgfVxuXG4gICAgLmZvb3Rlci1pY29ucy0tbm9DbGljayB7XG4gICAgICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gICAgfVxufSJdLCJzb3VyY2VSb290IjoiIn0= */
+      </style>
+      <style>header nav {
+         width: calc(100% - 24px);
+         padding: .5rem;
+         position: fixed;
+         z-index: 10;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         opacity: 1;
+         gap: .8rem;
+         /* background: linear-gradient(to right, white 15%, #6a6767 85%); */
+         border: 4px double #000;
+         background-color: #FFF;
+         }
+         header nav a {
+         font-size: 1rem;
+         font-weight: bold;
+         font-family: cursive;
+         border: 4px double #ee0000;
+         border-radius: 10%;
+         padding: .5rem;
+         transition: all ease .3s;
+         color: #ee0000;
+         text-decoration: none;
+         }
+         header nav a:nth-child(1) {
+         padding: .36rem;
+         }
+         header nav a:hover > i > span {
+         background-color: white;
+         color: red;
+         }
+         header nav a:visited {
+         color: #ee0000;
+         }
+         header nav a:hover {
+         text-shadow: none;
+         transform: scale(1.05);
+         background: #ee0000;
+         color: white;
+         }
+         /* Mobile area */
+         .nav-btn {
+         padding: 5px;
+         cursor: pointer;
+         background: transparent;
+         border: none;
+         outline: none;
+         color: black;
+         display: none;
+         opacity: 0;
+         font-size: 2rem;
+         position: fixed;
+         z-index: 2;
+         width: 100vw;
+         text-align: left;
+         }
+         #navbar-container > div {
+         display: flex;
+         gap: .5rem;
+         align-items: center;
+         }
+         .icon-mainCart > svg{
+         color: #000000;
+         font-size: 1.1rem;
+         padding-left: .5rem;
+         }
+         .icon-mainCart > span {
+         border-radius: 50%;
+         padding: 0.1rem 0.3rem;
+         background-color: #ee0000;
+         font-weight: 800;
+         color: black;
+         position: relative;
+         left: 6px;
+         font-size: .8rem;
+         bottom: 8px;
+         text-shadow: none;
+         }
+         .main-search--container {
+         border: 4px double #289b10;
+         border-radius: 5px;
+         }
+         .main-search--container.-gapNone{
+         gap: 0 !important;
+         }
+         .main-search--container > div > input {
+         font-size: 1.4rem;
+         border: none;
+         padding: .2rem;
+         margin-right: 2px;
+         }
+         .main-search--container > div > input:focus {
+         outline-color: #ee0000;
+         }
+         .main-search--container > div:nth-child(2) {
+         display: flex;
+         }
+         .main-search--container > div > svg {
+         font-size: 2rem;
+         border-left: 4px double #289b10;
+         background-color: #289b10;
+         }
+         .main-search--container > div > svg:hover {
+         cursor: pointer;
+         background-color: #2bbb0e;
+         border-left-color: #2bbb0e;
+         transform: scale(1.02);
+         }
+         @media (max-width: 800px)
+         {
+         #navbar-container > div {
+         display: flex;
+         flex-direction: column;
+         gap: .5rem;
+         width: 100%;
+         }
+         #navbar-container > div > a {
+         width: 100%;
+         }
+         .nav-btn {
+         display: block;
+         opacity: 1;
+         }
+         #btn-hamburguer {
+         background-color: #FFF;
+         border: 4px double black;
+         border-radius: 10px;
+         padding: .4rem .4rem 0 .4rem;
+         top: 0;
+         left: 0;
+         }
+         /*#btn-hamburguer::after {
+         content: '';
+         background-color: white;
+         border: 4px double black;
+         border-radius: 10px;
+         width: 100%;
+         position: absolute;
+         width: 95vw;
+         height: 100%;
+         }*/
+         .nav-btn.nav-close-btn {
+         position: relative;
+         width: -moz-fit-content;
+         width: fit-content;
+         margin-left: auto;
+         transform: translateX(1rem);
+         margin-top: -.9rem;
+         margin-bottom: -.9rem;
+         }
+         .nav-btn.nav-close-btn > svg  {
+         background-color: #ff3030;
+         border-radius: 50%;
+         border: 2px solid black;
+         }
+         header nav {
+         position: fixed;
+         top: 0;
+         left: 0;
+         flex-direction: column;    
+         gap: .5rem;
+         transition: all ease 1s;
+         transform: translateX(-150vw);
+         background-color: #000;
+         border: 4px double black;
+         width: 50vw;
+         z-index: 3;
+         padding: 1rem;
+         }
+         header nav a {
+         width: 100%;
+         text-align: center;
+         margin: 0 auto;
+         padding: .5rem 0;
+         }
+         .ajustaTop-responsive{
+         margin-top: -1rem;
+         }
+         header .responsive_nav {
+         transform: none;
+         }
+         .responsive_nav-opacityUm {
+         opacity: 1;
+         }
+         .responsive_nav-opacityZero {
+         opacity: 0;
+         }
+         #mainSearchId.main-search--container {
+         position: absolute;
+         flex-direction: row;
+         top: 5px;
+         width: 84%;
+         left: 15px;
+         }
+         #mainSearchId.main-search--container > div:nth-child(1){
+         width: 100%;
+         }
+         #mainSearchId.main-search--container > div:nth-child(1) > input{
+         width: 100%;
+         }
+         header nav a:nth-child(1) {
+         padding: .5rem 0;
+         }
+         }
+         /*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9jb21wb25lbnRzL01haW5OYXZiYXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksd0JBQXdCO0lBQ3hCLGNBQWM7SUFDZCxlQUFlO0lBQ2YsV0FBVztJQUNYLGFBQWE7SUFDYiw4QkFBOEI7SUFDOUIsbUJBQW1CO0lBQ25CLFVBQVU7SUFDVixVQUFVO0lBQ1YsbUVBQW1FO0lBQ25FLHVCQUF1QjtJQUN2QixzQkFBc0I7QUFDMUI7O0FBRUE7SUFDSSxlQUFlO0lBQ2YsaUJBQWlCO0lBQ2pCLG9CQUFvQjtJQUNwQiwwQkFBMEI7SUFDMUIsa0JBQWtCO0lBQ2xCLGNBQWM7SUFDZCx3QkFBd0I7SUFDeEIsY0FBYztJQUNkLHFCQUFxQjtBQUN6Qjs7QUFFQTtJQUNJLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSx1QkFBdUI7SUFDdkIsVUFBVTtBQUNkOztBQUVBO0lBQ0ksY0FBYztBQUNsQjs7QUFFQTtJQUNJLGlCQUFpQjtJQUNqQixzQkFBc0I7SUFDdEIsbUJBQW1CO0lBQ25CLFlBQVk7QUFDaEI7O0FBRUEsZ0JBQWdCOztBQUVoQjtJQUNJLFlBQVk7SUFDWixlQUFlO0lBQ2YsdUJBQXVCO0lBQ3ZCLFlBQVk7SUFDWixhQUFhO0lBQ2IsWUFBWTtJQUNaLGFBQWE7SUFDYixVQUFVO0lBQ1YsZUFBZTtJQUNmLGVBQWU7SUFDZixVQUFVO0lBQ1YsWUFBWTtJQUNaLGdCQUFnQjtBQUNwQjs7QUFFQTtJQUNJLGFBQWE7SUFDYixVQUFVO0lBQ1YsbUJBQW1CO0FBQ3ZCOztBQUVBO0lBQ0ksY0FBYztJQUNkLGlCQUFpQjtJQUNqQixtQkFBbUI7QUFDdkI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsc0JBQXNCO0lBQ3RCLHlCQUF5QjtJQUN6QixnQkFBZ0I7SUFDaEIsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixTQUFTO0lBQ1QsZ0JBQWdCO0lBQ2hCLFdBQVc7SUFDWCxpQkFBaUI7QUFDckI7O0FBRUE7SUFDSSwwQkFBMEI7SUFDMUIsa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksaUJBQWlCO0lBQ2pCLFlBQVk7SUFDWixjQUFjO0lBQ2QsaUJBQWlCO0FBQ3JCOztBQUVBO0lBQ0ksc0JBQXNCO0FBQzFCOztBQUVBO0lBQ0ksYUFBYTtBQUNqQjs7QUFFQTtJQUNJLGVBQWU7SUFDZiwrQkFBK0I7SUFDL0IseUJBQXlCO0FBQzdCOztBQUVBO0lBQ0ksZUFBZTtJQUNmLHlCQUF5QjtJQUN6QiwwQkFBMEI7SUFDMUIsc0JBQXNCO0FBQzFCOztBQUVBOztJQUVJO1FBQ0ksYUFBYTtRQUNiLHNCQUFzQjtRQUN0QixVQUFVO1FBQ1YsV0FBVztJQUNmOztJQUVBO1FBQ0ksV0FBVztJQUNmOztJQUVBO1FBQ0ksY0FBYztRQUNkLFVBQVU7SUFDZDs7SUFFQTtRQUNJLHNCQUFzQjtRQUN0Qix3QkFBd0I7UUFDeEIsbUJBQW1CO1FBQ25CLDRCQUE0QjtRQUM1QixNQUFNO1FBQ04sT0FBTztJQUNYOztJQUVBOzs7Ozs7Ozs7TUFTRTs7SUFFRjtRQUNJLGtCQUFrQjtRQUNsQix1QkFBa0I7UUFBbEIsa0JBQWtCO1FBQ2xCLGlCQUFpQjtRQUNqQiwyQkFBMkI7UUFDM0Isa0JBQWtCO1FBQ2xCLHFCQUFxQjtJQUN6Qjs7SUFFQTtRQUNJLHlCQUF5QjtRQUN6QixrQkFBa0I7UUFDbEIsdUJBQXVCO0lBQzNCOztJQUVBO1FBQ0ksZUFBZTtRQUNmLE1BQU07UUFDTixPQUFPO1FBQ1Asc0JBQXNCO1FBQ3RCLFVBQVU7UUFDVix1QkFBdUI7UUFDdkIsNkJBQTZCO1FBQzdCLHNCQUFzQjtRQUN0Qix3QkFBd0I7UUFDeEIsV0FBVztRQUNYLFVBQVU7UUFDVixhQUFhO0lBQ2pCOztJQUVBO1FBQ0ksV0FBVztRQUNYLGtCQUFrQjtRQUNsQixjQUFjO1FBQ2QsZ0JBQWdCO0lBQ3BCOztJQUVBO1FBQ0ksaUJBQWlCO0lBQ3JCOztJQUVBO1FBQ0ksZUFBZTtJQUNuQjs7SUFFQTtRQUNJLFVBQVU7SUFDZDs7SUFFQTtRQUNJLFVBQVU7SUFDZDs7SUFFQTtRQUNJLGtCQUFrQjtRQUNsQixtQkFBbUI7UUFDbkIsUUFBUTtRQUNSLFVBQVU7UUFDVixVQUFVO0lBQ2Q7O0lBRUE7UUFDSSxXQUFXO0lBQ2Y7O0lBRUE7UUFDSSxXQUFXO0lBQ2Y7O0lBRUE7UUFDSSxnQkFBZ0I7SUFDcEI7QUFDSiIsInNvdXJjZXNDb250ZW50IjpbImhlYWRlciBuYXYge1xuICAgIHdpZHRoOiBjYWxjKDEwMCUgLSAyNHB4KTtcbiAgICBwYWRkaW5nOiAuNXJlbTtcbiAgICBwb3NpdGlvbjogZml4ZWQ7XG4gICAgei1pbmRleDogMTA7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgICBvcGFjaXR5OiAxO1xuICAgIGdhcDogLjhyZW07XG4gICAgLyogYmFja2dyb3VuZDogbGluZWFyLWdyYWRpZW50KHRvIHJpZ2h0LCB3aGl0ZSAxNSUsICM2YTY3NjcgODUlKTsgKi9cbiAgICBib3JkZXI6IDRweCBkb3VibGUgIzAwMDtcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjRkZGO1xufVxuXG5oZWFkZXIgbmF2IGEge1xuICAgIGZvbnQtc2l6ZTogMXJlbTtcbiAgICBmb250LXdlaWdodDogYm9sZDtcbiAgICBmb250LWZhbWlseTogY3Vyc2l2ZTtcbiAgICBib3JkZXI6IDRweCBkb3VibGUgI2VlMDAwMDtcbiAgICBib3JkZXItcmFkaXVzOiAxMCU7XG4gICAgcGFkZGluZzogLjVyZW07XG4gICAgdHJhbnNpdGlvbjogYWxsIGVhc2UgLjNzO1xuICAgIGNvbG9yOiAjZWUwMDAwO1xuICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbn1cblxuaGVhZGVyIG5hdiBhOm50aC1jaGlsZCgxKSB7XG4gICAgcGFkZGluZzogLjM2cmVtO1xufVxuXG5oZWFkZXIgbmF2IGE6aG92ZXIgPiBpID4gc3BhbiB7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogd2hpdGU7XG4gICAgY29sb3I6IHJlZDtcbn1cblxuaGVhZGVyIG5hdiBhOnZpc2l0ZWQge1xuICAgIGNvbG9yOiAjZWUwMDAwO1xufVxuXG5oZWFkZXIgbmF2IGE6aG92ZXIge1xuICAgIHRleHQtc2hhZG93OiBub25lO1xuICAgIHRyYW5zZm9ybTogc2NhbGUoMS4wNSk7XG4gICAgYmFja2dyb3VuZDogI2VlMDAwMDtcbiAgICBjb2xvcjogd2hpdGU7XG59XG5cbi8qIE1vYmlsZSBhcmVhICovXG5cbi5uYXYtYnRuIHtcbiAgICBwYWRkaW5nOiA1cHg7XG4gICAgY3Vyc29yOiBwb2ludGVyO1xuICAgIGJhY2tncm91bmQ6IHRyYW5zcGFyZW50O1xuICAgIGJvcmRlcjogbm9uZTtcbiAgICBvdXRsaW5lOiBub25lO1xuICAgIGNvbG9yOiBibGFjaztcbiAgICBkaXNwbGF5OiBub25lO1xuICAgIG9wYWNpdHk6IDA7XG4gICAgZm9udC1zaXplOiAycmVtO1xuICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICB6LWluZGV4OiAyO1xuICAgIHdpZHRoOiAxMDB2dztcbiAgICB0ZXh0LWFsaWduOiBsZWZ0O1xufVxuXG4jbmF2YmFyLWNvbnRhaW5lciA+IGRpdiB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBnYXA6IC41cmVtO1xuICAgIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG59XG5cbi5pY29uLW1haW5DYXJ0ID4gc3Zne1xuICAgIGNvbG9yOiAjMDAwMDAwO1xuICAgIGZvbnQtc2l6ZTogMS4xcmVtO1xuICAgIHBhZGRpbmctbGVmdDogLjVyZW07XG59XG5cbi5pY29uLW1haW5DYXJ0ID4gc3BhbiB7XG4gICAgYm9yZGVyLXJhZGl1czogNTAlO1xuICAgIHBhZGRpbmc6IDAuMXJlbSAwLjNyZW07XG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2VlMDAwMDtcbiAgICBmb250LXdlaWdodDogODAwO1xuICAgIGNvbG9yOiBibGFjaztcbiAgICBwb3NpdGlvbjogcmVsYXRpdmU7XG4gICAgbGVmdDogNnB4O1xuICAgIGZvbnQtc2l6ZTogLjhyZW07XG4gICAgYm90dG9tOiA4cHg7XG4gICAgdGV4dC1zaGFkb3c6IG5vbmU7XG59XG5cbi5tYWluLXNlYXJjaC0tY29udGFpbmVyIHtcbiAgICBib3JkZXI6IDRweCBkb3VibGUgIzI4OWIxMDtcbiAgICBib3JkZXItcmFkaXVzOiA1cHg7XG59XG5cbi5tYWluLXNlYXJjaC0tY29udGFpbmVyLi1nYXBOb25le1xuICAgIGdhcDogMCAhaW1wb3J0YW50O1xufVxuXG4ubWFpbi1zZWFyY2gtLWNvbnRhaW5lciA+IGRpdiA+IGlucHV0IHtcbiAgICBmb250LXNpemU6IDEuNHJlbTtcbiAgICBib3JkZXI6IG5vbmU7XG4gICAgcGFkZGluZzogLjJyZW07XG4gICAgbWFyZ2luLXJpZ2h0OiAycHg7XG59XG5cbi5tYWluLXNlYXJjaC0tY29udGFpbmVyID4gZGl2ID4gaW5wdXQ6Zm9jdXMge1xuICAgIG91dGxpbmUtY29sb3I6ICNlZTAwMDA7XG59XG5cbi5tYWluLXNlYXJjaC0tY29udGFpbmVyID4gZGl2Om50aC1jaGlsZCgyKSB7XG4gICAgZGlzcGxheTogZmxleDtcbn1cblxuLm1haW4tc2VhcmNoLS1jb250YWluZXIgPiBkaXYgPiBzdmcge1xuICAgIGZvbnQtc2l6ZTogMnJlbTtcbiAgICBib3JkZXItbGVmdDogNHB4IGRvdWJsZSAjMjg5YjEwO1xuICAgIGJhY2tncm91bmQtY29sb3I6ICMyODliMTA7XG59XG5cbi5tYWluLXNlYXJjaC0tY29udGFpbmVyID4gZGl2ID4gc3ZnOmhvdmVyIHtcbiAgICBjdXJzb3I6IHBvaW50ZXI7XG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzJiYmIwZTtcbiAgICBib3JkZXItbGVmdC1jb2xvcjogIzJiYmIwZTtcbiAgICB0cmFuc2Zvcm06IHNjYWxlKDEuMDIpO1xufVxuXG5AbWVkaWEgKG1heC13aWR0aDogODAwcHgpXG57XG4gICAgI25hdmJhci1jb250YWluZXIgPiBkaXYge1xuICAgICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICAgICAgICBnYXA6IC41cmVtO1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG5cbiAgICAjbmF2YmFyLWNvbnRhaW5lciA+IGRpdiA+IGEge1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG5cbiAgICAubmF2LWJ0biB7XG4gICAgICAgIGRpc3BsYXk6IGJsb2NrO1xuICAgICAgICBvcGFjaXR5OiAxO1xuICAgIH1cblxuICAgICNidG4taGFtYnVyZ3VlciB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNGRkY7XG4gICAgICAgIGJvcmRlcjogNHB4IGRvdWJsZSBibGFjaztcbiAgICAgICAgYm9yZGVyLXJhZGl1czogMTBweDtcbiAgICAgICAgcGFkZGluZzogLjRyZW0gLjRyZW0gMCAuNHJlbTtcbiAgICAgICAgdG9wOiAwO1xuICAgICAgICBsZWZ0OiAwO1xuICAgIH1cblxuICAgIC8qI2J0bi1oYW1idXJndWVyOjphZnRlciB7XG4gICAgICAgIGNvbnRlbnQ6ICcnO1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiB3aGl0ZTtcbiAgICAgICAgYm9yZGVyOiA0cHggZG91YmxlIGJsYWNrO1xuICAgICAgICBib3JkZXItcmFkaXVzOiAxMHB4O1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICAgICAgcG9zaXRpb246IGFic29sdXRlO1xuICAgICAgICB3aWR0aDogOTV2dztcbiAgICAgICAgaGVpZ2h0OiAxMDAlO1xuICAgIH0qL1xuXG4gICAgLm5hdi1idG4ubmF2LWNsb3NlLWJ0biB7XG4gICAgICAgIHBvc2l0aW9uOiByZWxhdGl2ZTtcbiAgICAgICAgd2lkdGg6IGZpdC1jb250ZW50O1xuICAgICAgICBtYXJnaW4tbGVmdDogYXV0bztcbiAgICAgICAgdHJhbnNmb3JtOiB0cmFuc2xhdGVYKDFyZW0pO1xuICAgICAgICBtYXJnaW4tdG9wOiAtLjlyZW07XG4gICAgICAgIG1hcmdpbi1ib3R0b206IC0uOXJlbTtcbiAgICB9XG5cbiAgICAubmF2LWJ0bi5uYXYtY2xvc2UtYnRuID4gc3ZnICB7XG4gICAgICAgIGJhY2tncm91bmQtY29sb3I6ICNmZjMwMzA7XG4gICAgICAgIGJvcmRlci1yYWRpdXM6IDUwJTtcbiAgICAgICAgYm9yZGVyOiAycHggc29saWQgYmxhY2s7XG4gICAgfVxuXG4gICAgaGVhZGVyIG5hdiB7XG4gICAgICAgIHBvc2l0aW9uOiBmaXhlZDtcbiAgICAgICAgdG9wOiAwO1xuICAgICAgICBsZWZ0OiAwO1xuICAgICAgICBmbGV4LWRpcmVjdGlvbjogY29sdW1uOyAgICBcbiAgICAgICAgZ2FwOiAuNXJlbTtcbiAgICAgICAgdHJhbnNpdGlvbjogYWxsIGVhc2UgMXM7XG4gICAgICAgIHRyYW5zZm9ybTogdHJhbnNsYXRlWCgtMTUwdncpO1xuICAgICAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDAwO1xuICAgICAgICBib3JkZXI6IDRweCBkb3VibGUgYmxhY2s7XG4gICAgICAgIHdpZHRoOiA1MHZ3O1xuICAgICAgICB6LWluZGV4OiAzO1xuICAgICAgICBwYWRkaW5nOiAxcmVtO1xuICAgIH1cblxuICAgIGhlYWRlciBuYXYgYSB7XG4gICAgICAgIHdpZHRoOiAxMDAlO1xuICAgICAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XG4gICAgICAgIG1hcmdpbjogMCBhdXRvO1xuICAgICAgICBwYWRkaW5nOiAuNXJlbSAwO1xuICAgIH1cblxuICAgIC5hanVzdGFUb3AtcmVzcG9uc2l2ZXtcbiAgICAgICAgbWFyZ2luLXRvcDogLTFyZW07XG4gICAgfVxuXG4gICAgaGVhZGVyIC5yZXNwb25zaXZlX25hdiB7XG4gICAgICAgIHRyYW5zZm9ybTogbm9uZTtcbiAgICB9XG5cbiAgICAucmVzcG9uc2l2ZV9uYXYtb3BhY2l0eVVtIHtcbiAgICAgICAgb3BhY2l0eTogMTtcbiAgICB9XG5cbiAgICAucmVzcG9uc2l2ZV9uYXYtb3BhY2l0eVplcm8ge1xuICAgICAgICBvcGFjaXR5OiAwO1xuICAgIH1cblxuICAgICNtYWluU2VhcmNoSWQubWFpbi1zZWFyY2gtLWNvbnRhaW5lciB7XG4gICAgICAgIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgICAgICAgZmxleC1kaXJlY3Rpb246IHJvdztcbiAgICAgICAgdG9wOiA1cHg7XG4gICAgICAgIHdpZHRoOiA4NCU7XG4gICAgICAgIGxlZnQ6IDE1cHg7XG4gICAgfVxuXG4gICAgI21haW5TZWFyY2hJZC5tYWluLXNlYXJjaC0tY29udGFpbmVyID4gZGl2Om50aC1jaGlsZCgxKXtcbiAgICAgICAgd2lkdGg6IDEwMCU7XG4gICAgfVxuXG4gICAgI21haW5TZWFyY2hJZC5tYWluLXNlYXJjaC0tY29udGFpbmVyID4gZGl2Om50aC1jaGlsZCgxKSA+IGlucHV0e1xuICAgICAgICB3aWR0aDogMTAwJTtcbiAgICB9XG5cbiAgICBoZWFkZXIgbmF2IGE6bnRoLWNoaWxkKDEpIHtcbiAgICAgICAgcGFkZGluZzogLjVyZW0gMDtcbiAgICB9XG59Il0sInNvdXJjZVJvb3QiOiIifQ== */
+      </style>
+   </head>
+   <body>
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div id="root">
+         <header>
+            <nav id="navbar-container">
+               <button id="nav-close-btn" class="nav-btn nav-close-btn">
+                  <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 352 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                     <path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path>
+                  </svg>
+               </button>
+               <a href="/">Home</a>
+               <div id="mainSearchId" class="main-search--container -gapNone">
+                  <div><input type="text"></div>
+                  <div>
+                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1" viewBox="0 0 48 48" enable-background="new 0 0 48 48" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                        <g fill="#616161">
+                           <rect x="34.6" y="28.1" transform="matrix(.707 -.707 .707 .707 -15.154 36.586)" width="4" height="17"></rect>
+                           <circle cx="20" cy="20" r="16"></circle>
+                        </g>
+                        <rect x="36.2" y="32.1" transform="matrix(.707 -.707 .707 .707 -15.839 38.239)" fill="#37474F" width="4" height="12.3"></rect>
+                        <circle fill="#64B5F6" cx="20" cy="20" r="13"></circle>
+                        <path fill="#BBDEFB" d="M26.9,14.2c-1.7-2-4.2-3.2-6.9-3.2s-5.2,1.2-6.9,3.2c-0.4,0.4-0.3,1.1,0.1,1.4c0.4,0.4,1.1,0.3,1.4-0.1 C16,13.9,17.9,13,20,13s4,0.9,5.4,2.5c0.2,0.2,0.5,0.4,0.8,0.4c0.2,0,0.5-0.1,0.6-0.2C27.2,15.3,27.2,14.6,26.9,14.2z"></path>
+                     </svg>
+                  </div>
+               </div>
+               <div>
+                  <a href="/cart">
+                     Carrinho
+                     <i class="icon-mainCart">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                        </svg>
+                     </i>
+                  </a>
+                  <a href="/signin">Logar</a>
+               </div>
+            </nav>
+            <button id="btn-hamburguer" class="nav-btn">
+               <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"></path>
+               </svg>
+            </button>
+         </header>
+         <main>
+            <div class="main-header--container">
+               <div class="wrapper-products">
+                  <div class="main-cardProduct">
+                     <a href="/">
+                        <div class="wrapperImage">
+                           <img class="img--mediumSize" src="/images/grelhadinhu.jpeg" alt="X-Grelhadinho: Alface, 2 hambúrgueres, queijo e picles">
+                           <span class="iconId-1">
+                              <i>
+                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                                 </svg>
+                              </i>
+                           </span>
+                           <div class="card-rating cardRatingId-1"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star-half-o"></i></span><span><i class="fa fa-star-o"></i></span><span>1058 reviews</span></div>
+                           <div class="burger-title--container">
+                              <h1 class="burger-title">X-Grelhadinho</h1>
+                              <span class="burger-price">
+                                 <p>$120.50</p>
+                              </span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="containerBlur containerBlur-ByProductId-1"></div>
+                  <div class="modalSingleProductClick cardId-1">
+                     <img src="./images/grelhadinhu.jpeg">
+                     <div>
+                        <h1 class="burger-title colorGreen">
+                           X-Grelhadinho 
+                           <div class="card-rating cardRatingId-1"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star-half-o"></i></span><span><i class="fa fa-star-o"></i></span><span></span></div>
+                        </h1>
+                        <p class="descriptionOfSingleProduct">X-Grelhadinho: Alface, 2 hambúrgueres, queijo e picles</p>
+                        <div class="containerQuantidadeProduto"><label>Vai querê quantu?</label><input id="productSingleQtdOfId-1" type="number" min="0" max="100"></div>
+                        <div class="containerButtonsModalSingleProduct"><button class="btnModalSingleProduct">Confirmar</button><button class="btnModalSingleProduct -danger">Cancelar</button></div>
+                     </div>
+                  </div>
+                  <div class="main-cardProduct">
+                     <a href="/">
+                        <div class="wrapperImage">
+                           <img class="img--mediumSize" src="/images/anabolizadu.png" alt="X-Burgue: Alface, 2 hambúrgueres, queijo e picles">
+                           <span class="iconId-2">
+                              <i>
+                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                                 </svg>
+                              </i>
+                           </span>
+                           <div class="card-rating cardRatingId-2"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star-half-o"></i></span><span>11 reviews</span></div>
+                           <div class="burger-title--container">
+                              <h1 class="burger-title">X-Burgue</h1>
+                              <span class="burger-price">
+                                 <p>$1,000.25</p>
+                              </span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="containerBlur containerBlur-ByProductId-2"></div>
+                  <div class="modalSingleProductClick cardId-2">
+                     <img src="/images/anabolizadu.png">
+                     <div>
+                        <h1 class="burger-title colorGreen">
+                           X-Burgue 
+                           <div class="card-rating cardRatingId-2"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star-half-o"></i></span><span></span></div>
+                        </h1>
+                        <p class="descriptionOfSingleProduct">X-Burgue: Alface, 2 hambúrgueres, queijo e picles</p>
+                        <div class="containerQuantidadeProduto"><label>Vai querê quantu?</label><input id="productSingleQtdOfId-2" type="number" min="0" max="100"></div>
+                        <div class="containerButtonsModalSingleProduct"><button class="btnModalSingleProduct">Confirmar</button><button class="btnModalSingleProduct -danger">Cancelar</button></div>
+                     </div>
+                  </div>
+                  <div class="main-cardProduct">
+                     <a href="/">
+                        <div class="wrapperImage">
+                           <img class="img--mediumSize" src="/images/heroinadao.jpg" alt="X-Tomate: Alface, 2 hambúrgueres, queijo e picles">
+                           <span class="iconId-3">
+                              <i>
+                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                                 </svg>
+                              </i>
+                           </span>
+                           <div class="card-rating cardRatingId-3"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span>10 reviews</span></div>
+                           <div class="burger-title--container">
+                              <h1 class="burger-title">X-Tomate</h1>
+                              <span class="burger-price">
+                                 <p>$1,001.25</p>
+                              </span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="containerBlur containerBlur-ByProductId-3"></div>
+                  <div class="modalSingleProductClick cardId-3">
+                     <img src="/images/heroinadao.jpg">
+                     <div>
+                        <h1 class="burger-title colorGreen">
+                           X-Tomate 
+                           <div class="card-rating cardRatingId-3"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span></span></div>
+                        </h1>
+                        <p class="descriptionOfSingleProduct">X-Tomate: Alface, 2 hambúrgueres, queijo e picles</p>
+                        <div class="containerQuantidadeProduto"><label>Vai querê quantu?</label><input id="productSingleQtdOfId-3" type="number" min="0" max="100"></div>
+                        <div class="containerButtonsModalSingleProduct"><button class="btnModalSingleProduct">Confirmar</button><button class="btnModalSingleProduct -danger">Cancelar</button></div>
+                     </div>
+                  </div>
+                  <div class="main-cardProduct">
+                     <a href="/">
+                        <div class="wrapperImage">
+                           <img class="img--mediumSize" src="/images/mordido.jpg" alt="X-Cebola: Alface, 2 hambúrgueres, queijo e picles">
+                           <span class="iconId-4">
+                              <i>
+                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                                 </svg>
+                              </i>
+                           </span>
+                           <div class="card-rating cardRatingId-4"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span>10255 reviews</span></div>
+                           <div class="burger-title--container">
+                              <h1 class="burger-title">X-Cebola</h1>
+                              <span class="burger-price">
+                                 <p>$2,500.25</p>
+                              </span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="containerBlur containerBlur-ByProductId-4"></div>
+                  <div class="modalSingleProductClick cardId-4">
+                     <img src="/images/mordido.jpg">
+                     <div>
+                        <h1 class="burger-title colorGreen">
+                           X-Cebola 
+                           <div class="card-rating cardRatingId-4"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span></span></div>
+                        </h1>
+                        <p class="descriptionOfSingleProduct">X-Cebola: Alface, 2 hambúrgueres, queijo e picles</p>
+                        <div class="containerQuantidadeProduto"><label>Vai querê quantu?</label><input id="productSingleQtdOfId-4" type="number" min="0" max="100"></div>
+                        <div class="containerButtonsModalSingleProduct"><button class="btnModalSingleProduct">Confirmar</button><button class="btnModalSingleProduct -danger">Cancelar</button></div>
+                     </div>
+                  </div>
+                  <div class="main-cardProduct">
+                     <a href="/">
+                        <div class="wrapperImage">
+                           <img class="img--mediumSize" src="/images/linguinha.jpg" alt="X-Galinha: Alface, 2 hambúrgueres, queijo e picles">
+                           <span class="iconId-5">
+                              <i>
+                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                                 </svg>
+                              </i>
+                           </span>
+                           <div class="card-rating cardRatingId-5"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span>10 reviews</span></div>
+                           <div class="burger-title--container">
+                              <h1 class="burger-title">X-Galinha</h1>
+                              <span class="burger-price">
+                                 <p>$20.00</p>
+                              </span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="containerBlur containerBlur-ByProductId-5"></div>
+                  <div class="modalSingleProductClick cardId-5">
+                     <img src="/images/linguinha.jpg">
+                     <div>
+                        <h1 class="burger-title colorGreen">
+                           X-Galinha 
+                           <div class="card-rating cardRatingId-5"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span></span></div>
+                        </h1>
+                        <p class="descriptionOfSingleProduct">X-Galinha: Alface, 2 hambúrgueres, queijo e picles</p>
+                        <div class="containerQuantidadeProduto"><label>Vai querê quantu?</label><input id="productSingleQtdOfId-5" type="number" min="0" max="100"></div>
+                        <div class="containerButtonsModalSingleProduct"><button class="btnModalSingleProduct">Confirmar</button><button class="btnModalSingleProduct -danger">Cancelar</button></div>
+                     </div>
+                  </div>
+                  <div class="main-cardProduct">
+                     <a href="/">
+                        <div class="wrapperImage">
+                           <img class="img--mediumSize" src="/images/entupiuMinhaCarotida.png" alt="X-Simples">
+                           <span class="iconId-6">
+                              <i>
+                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                                 </svg>
+                              </i>
+                           </span>
+                           <div class="card-rating cardRatingId-6"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star-half-o"></i></span><span><i class="fa fa-star-o"></i></span><span>13 reviews</span></div>
+                           <div class="burger-title--container">
+                              <h1 class="burger-title">X-Simples</h1>
+                              <span class="burger-price">
+                                 <p>$22.00</p>
+                              </span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="containerBlur containerBlur-ByProductId-6"></div>
+                  <div class="modalSingleProductClick cardId-6">
+                     <img src="/images/entupiuMinhaCarotida.png">
+                     <div>
+                        <h1 class="burger-title colorGreen">
+                           X-Simples 
+                           <div class="card-rating cardRatingId-6"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star-half-o"></i></span><span><i class="fa fa-star-o"></i></span><span></span></div>
+                        </h1>
+                        <p class="descriptionOfSingleProduct">X-Simples</p>
+                        <div class="containerQuantidadeProduto"><label>Vai querê quantu?</label><input id="productSingleQtdOfId-6" type="number" min="0" max="100"></div>
+                        <div class="containerButtonsModalSingleProduct"><button class="btnModalSingleProduct">Confirmar</button><button class="btnModalSingleProduct -danger">Cancelar</button></div>
+                     </div>
+                  </div>
+                  <div class="main-cardProduct">
+                     <a href="/">
+                        <div class="wrapperImage">
+                           <img class="img--mediumSize" src="/images/vegetta.jpg" alt="X-Grandão: Alface, 2 hambúrgueres, queijo e picles">
+                           <span class="iconId-7">
+                              <i>
+                                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 576 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M504.717 320H211.572l6.545 32h268.418c15.401 0 26.816 14.301 23.403 29.319l-5.517 24.276C523.112 414.668 536 433.828 536 456c0 31.202-25.519 56.444-56.824 55.994-29.823-.429-54.35-24.631-55.155-54.447-.44-16.287 6.085-31.049 16.803-41.548H231.176C241.553 426.165 248 440.326 248 456c0 31.813-26.528 57.431-58.67 55.938-28.54-1.325-51.751-24.385-53.251-52.917-1.158-22.034 10.436-41.455 28.051-51.586L93.883 64H24C10.745 64 0 53.255 0 40V24C0 10.745 10.745 0 24 0h102.529c11.401 0 21.228 8.021 23.513 19.19L159.208 64H551.99c15.401 0 26.816 14.301 23.403 29.319l-47.273 208C525.637 312.246 515.923 320 504.717 320zM403.029 192H360v-60c0-6.627-5.373-12-12-12h-24c-6.627 0-12 5.373-12 12v60h-43.029c-10.691 0-16.045 12.926-8.485 20.485l67.029 67.029c4.686 4.686 12.284 4.686 16.971 0l67.029-67.029c7.559-7.559 2.205-20.485-8.486-20.485z"></path>
+                                 </svg>
+                              </i>
+                           </span>
+                           <div class="card-rating cardRatingId-7"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span>133 reviews</span></div>
+                           <div class="burger-title--container">
+                              <h1 class="burger-title">X-Grandão</h1>
+                              <span class="burger-price">
+                                 <p>$22.00</p>
+                              </span>
+                           </div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="containerBlur containerBlur-ByProductId-7"></div>
+                  <div class="modalSingleProductClick cardId-7">
+                     <img src="/images/vegetta.jpg">
+                     <div>
+                        <h1 class="burger-title colorGreen">
+                           X-Grandão 
+                           <div class="card-rating cardRatingId-7"><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span><i class="fa fa-star"></i></span><span></span></div>
+                        </h1>
+                        <p class="descriptionOfSingleProduct">X-Grandão: Alface, 2 hambúrgueres, queijo e picles</p>
+                        <div class="containerQuantidadeProduto"><label>Vai querê quantu?</label><input id="productSingleQtdOfId-7" type="number" min="0" max="100"></div>
+                        <div class="containerButtonsModalSingleProduct"><button class="btnModalSingleProduct">Confirmar</button><button class="btnModalSingleProduct -danger">Cancelar</button></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </main>
+         <footer>
+            <div>
+               <div class="footer-description">
+                  <p>Código open source completo no github! ;D</p>
+                  <p>Redes sociais abaixo, apenas clique no Icon <span>✓</span></p>
+               </div>
+               <div class="footer-icons">
+                  <div class="footer-icons--click">
+                     <a href="https://www.github.com/WelBert-dev" target="_blank">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M511.6 76.3C264.3 76.2 64 276.4 64 523.5 64 718.9 189.3 885 363.8 946c23.5 5.9 19.9-10.8 19.9-22.2v-77.5c-135.7 15.9-141.2-73.9-150.3-88.9C215 726 171.5 718 184.5 703c30.9-15.9 62.4 4 98.9 57.9 26.4 39.1 77.9 32.5 104 26 5.7-23.5 17.9-44.5 34.7-60.8-140.6-25.2-199.2-111-199.2-213 0-49.5 16.3-95 48.3-131.7-20.4-60.5 1.9-112.3 4.9-120 58.1-5.2 118.5 41.6 123.2 45.3 33-8.9 70.7-13.6 112.9-13.6 42.4 0 80.2 4.9 113.5 13.9 11.3-8.6 67.3-48.8 121.3-43.9 2.9 7.7 24.7 58.3 5.5 118 32.4 36.8 48.9 82.7 48.9 132.3 0 102.2-59 188.1-200 212.9a127.5 127.5 0 0 1 38.1 91v112.5c.8 9 0 17.9 15 17.9 177.1-59.7 304.6-227 304.6-424.1 0-247.2-200.4-447.3-447.5-447.3z"></path>
+                        </svg>
+                     </a>
+                     <a href="https://web.facebook.com/wellison.bertelli.7" target="_blank">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zm-92.4 233.5h-63.9c-50.1 0-59.8 23.8-59.8 58.8v77.1h119.6l-15.6 120.7h-104V912H539.2V602.2H434.9V481.4h104.3v-89c0-103.3 63.1-159.6 155.3-159.6 44.2 0 82.1 3.3 93.2 4.8v107.9z"></path>
+                        </svg>
+                     </a>
+                     <a href="https://www.linkedin.com/in/wellison-bertelli-2191ba204" target="_blank">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z"></path>
+                        </svg>
+                     </a>
+                     <a href="https://www.instagram.com/lunatic_bertelli/" target="_blank">
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M512 378.7c-73.4 0-133.3 59.9-133.3 133.3S438.6 645.3 512 645.3 645.3 585.4 645.3 512 585.4 378.7 512 378.7zM911.8 512c0-55.2.5-109.9-2.6-165-3.1-64-17.7-120.8-64.5-167.6-46.9-46.9-103.6-61.4-167.6-64.5-55.2-3.1-109.9-2.6-165-2.6-55.2 0-109.9-.5-165 2.6-64 3.1-120.8 17.7-167.6 64.5C132.6 226.3 118.1 283 115 347c-3.1 55.2-2.6 109.9-2.6 165s-.5 109.9 2.6 165c3.1 64 17.7 120.8 64.5 167.6 46.9 46.9 103.6 61.4 167.6 64.5 55.2 3.1 109.9 2.6 165 2.6 55.2 0 109.9.5 165-2.6 64-3.1 120.8-17.7 167.6-64.5 46.9-46.9 61.4-103.6 64.5-167.6 3.2-55.1 2.6-109.8 2.6-165zM512 717.1c-113.5 0-205.1-91.6-205.1-205.1S398.5 306.9 512 306.9 717.1 398.5 717.1 512 625.5 717.1 512 717.1zm213.5-370.7c-26.5 0-47.9-21.4-47.9-47.9s21.4-47.9 47.9-47.9 47.9 21.4 47.9 47.9a47.84 47.84 0 0 1-47.9 47.9z"></path>
+                        </svg>
+                     </a>
+                  </div>
+                  <div class="footer-icons--noClick">
+                     <div>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                           <path d="M260.062 32C138.605 32 40.134 129.701 40.134 250.232c0 41.23 11.532 79.79 31.559 112.687L32 480l121.764-38.682c31.508 17.285 67.745 27.146 106.298 27.146C381.535 468.464 480 370.749 480 250.232 480 129.701 381.535 32 260.062 32zm109.362 301.11c-5.174 12.827-28.574 24.533-38.899 25.072-10.314.547-10.608 7.994-66.84-16.434-56.225-24.434-90.052-83.844-92.719-87.67-2.669-3.812-21.78-31.047-20.749-58.455 1.038-27.413 16.047-40.346 21.404-45.725 5.351-5.387 11.486-6.352 15.232-6.413 4.428-.072 7.296-.132 10.573-.011 3.274.124 8.192-.685 12.45 10.639 4.256 11.323 14.443 39.153 15.746 41.989 1.302 2.839 2.108 6.126.102 9.771-2.012 3.653-3.042 5.935-5.961 9.083-2.935 3.148-6.174 7.042-8.792 9.449-2.92 2.665-5.97 5.572-2.9 11.269 3.068 5.693 13.653 24.356 29.779 39.736 20.725 19.771 38.598 26.329 44.098 29.317 5.515 3.004 8.806 2.67 12.226-.929 3.404-3.599 14.639-15.746 18.596-21.169 3.955-5.438 7.661-4.373 12.742-2.329 5.078 2.052 32.157 16.556 37.673 19.551 5.51 2.989 9.193 4.529 10.51 6.9 1.317 2.38.901 13.531-4.271 26.359z"></path>
+                        </svg>
+                        <p>(11) 9 4298-9935</p>
+                     </div>
+                     <div>
+                        <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                           <path fill="none" d="M0 0h24v24H0z"></path>
+                           <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10h5v-2h-5c-4.34 0-8-3.66-8-8s3.66-8 8-8 8 3.66 8 8v1.43c0 .79-.71 1.57-1.5 1.57s-1.5-.78-1.5-1.57V12c0-2.76-2.24-5-5-5s-5 2.24-5 5 2.24 5 5 5c1.38 0 2.64-.56 3.54-1.47.65.89 1.77 1.47 2.96 1.47 1.97 0 3.5-1.6 3.5-3.57V12c0-5.52-4.48-10-10-10zm0 13c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3z"></path>
+                        </svg>
+                        <p>raverterelli@hotmail.com</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="footer-copyright">
+                  <h3>Copyright ©2022</h3>
+                  <h3>Licença: GPL v3.0</h3>
+               </div>
+            </div>
+         </footer>
+      </div>
+      <!--
+         This HTML file is a template.
+         If you open it directly in the browser, you will see an empty page.
+         
+         You can add webfonts, meta tags, or analytics to this file.
+         The build step will place the bundled scripts into the <body> tag.
+         
+         To begin the development, run `npm start` or `yarn start`.
+         To create a production bundle, use `npm run build` or `yarn build`.
+         -->
+   </body>
+</html>

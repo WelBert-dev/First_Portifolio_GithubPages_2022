@@ -1,0 +1,157 @@
+Referencia de portifolio: https://www.jonathasguerra.com.br/
+Referencia de portifolio designer bem legal: https://edrodrigues.com.br/
+Referencia envio de email automático ReactJs simples: https://www.youtube.com/watch?v=Zbg1BHOVzRg
+
+fonte do curriculo: Bitter,"Noto Serif SC","Noto Serif JP";
+
+font do github gostosa de olhar: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; <-- alterar tudo para esta fonte
+
+
+cor azul claro bonita: #2aceff;
+
+- Common entre todos contextos:
+  - Ajustar a disposição do eixo Y centralizando (deixando o mesmo espaçamento entre a navbar e a main) do titulo geral de todas as Screens ".main-title".
+    *Obs: Melhorar também para contextos de telas menores (Mobile/Tablets).
+    
+  //Alterar as fontes gerais para melhor experiência de usuário, utilizar: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji; - ✓ OK (26/11/2022)
+    
+- Novas features:
+  - Adicionar possíbilidade de entrar em contato pelo proprio site,
+    Com campos textos que seram enviados para algum log do servidor, assim eu entro em contato. (Contrame meus serviços).
+    
+  - Adicionar funcionalidade no onHover dos Icons do footer, para que quando acontecer sair um rato de "baixo" deles.
+  
+  - Modificar layout geral para simular uma Tv tubo retro com as informações atuais do site dentro dela.
+    - E para contextos Mobile (telas menores ou iguais a 800px) simular um gameboy retro, ao invés de uma Tv.
+  
+- HomeScreen:
+  //Ajustar a disposição do eixo Y centralizando a logo "Desenvolvedor FullStack...". - ✓ OK (26/11/2022)
+  
+  - Modificar a navBar deixando ela em 3D ao lado da logo "Desenvolvedor FullStack...". (Apenas para essa Screen).
+  
+  //Adicionar funcionalidade onClick no Icon "Whatsapp" para poder adicionar automaticamente o meu número. - ✓ OK (26/11/2022)
+  
+  - Adicionar funcionalidade onClick no Icon "Email" para poder enviar um email automaticamente.
+  
+  - Modificar a logo "Desenvolvedor FullStack..." adicionando uma animação nela.
+
+
+- AboutMeScreen:
+  
+  //Modificar layout do terminal: além da fonte, trocar a cor do usuário logado no shell. - ✓ OK (26/11/2022)
+  - Remover a ul com o endereço, ta meio perdido na tela.
+  - Alterar o fundo/voltas com códigos, ou com algo relacionado a tecnologia/T.I.
+  
+
+  - Adicionar funcionalidade onClick no Icon "[+]" do terminal shell, 
+    abrindo assim uma nova janela e nela alguns comandos:
+      * Mensagem: Digite algum dos comando a baixo para modificar ou animar o site ;D
+      > darkMode -off: Desativa o modo escuro do site.
+      > galaxyTheme -on: Ativa o modo galáxia do site, deixando ele nessa temática.
+      
+      > gravity -off: Desativa a gravidade, e os componentes começam a cair.
+      > gravity -navBar -off: Desativa a gravidade apenas da navBar.
+      
+      > game -on: Ativa o modo game e é possível jogar nessa tela (Plano bem ousado).
+      > gun -on: Ativa o modo arma, e a seta/cursor vira um minigun, sendo possível atirar nos componentes do site.
+        - Para cada componente atingido marcas de bala ou começam a quebrar.
+      > marionBross -on: Site vira cenário do mário, sendo possível andar com ele na tela e colisão com componentes do site.
+      
+      > search -google <Flag>: Realiza a busca no google (_Blank) ou abre uma nova janela no terminal com o html da busca.
+      > play -youtube -URL=<Link>: Mesma lógica do search.
+      
+  - Adicionar funcionalidade onClick no Icon "Pesquisar" do terminal shell,
+    Abrirá um modal, com os buscadores (Duckduck go, google, youtube...), (_Blank) ou abre uma nova janela no terminal com o html da busca.
+    
+  - Adicionar funcionalidade onClick no Icon "Minimizar" do terminal shell,
+    Animando e fazendo ele minimizar até o footer, e assim ficando um icone de terminal.
+    * Ao clicar nesse Icon terminal, ele é expandido e retorna para a posição inicial.
+  
+  - Adicionar funcionalidade onClick no Icon "Maximizar" do terminal shell,
+    Animando e fazendo ele maximizar e ocupar a seção main por completo (Deixando visivel apenas a navbar), 
+    fazendo os outros componentes desta mesma seção ficarem escondidos.
+    * Ao máximizar o Icon "Maximizar" é alterado para "dois quadradinhos" igual é no navegador e etc...
+      * E ao clicar nele, o terminal retorna para a posição/dimensionamento anterior/default.
+        * Outros componentes da tela voltam a ficar visíveis aos usuários.
+  
+  - Adicionar funcionalidade onClick no icon "Fechar" do terminal shell animando e minimizando até a navbar na ultima posição,
+    (Mesma lógica do Icon "Minimizar", com essa diferença de ir para cima.
+    * Segue a mesma lógica também sobre, ao clicar sobre o Icon terminal na navbar, animação do terminal retornando para a posição inicial.
+  
+  - Adicionar animação no texto do terminal, como se estivesse sendo digitado, cada palavra vai surgindo e barulho "tec tec tec".
+    - Ao terminar, exibe mensagem:
+      > Digite "clean" para limpar o terminal, e assim digitar comandos nele, esses comandos alteram o comportamento do site,
+        ou adicionam animações nele ;D
+      > Para saber os comandos disponíveis digite "help", e basta escolher um e digita-lo para ver a mágica acontecer! rsrs.
+      
+    - Ao digitar "help" mensagem das funcionalidades ditas anteriormente é exibido. (As mesmas disponíveis quando aberto uma nova janela do terminal "[+]")
+  
+
+- SkillsScreen:
+    
+	- Ideia: Fazer uma animação no onHover dos cards, virando eles e mostrando um exemplo de código ou algo do tipo.
+  
+   //Modificar as Skills mais antigas (2021) que eu não estudo mais adicionando o período que eu estudei elas. "(01/2021 até 06/2021)".
+    - Obs: Colocar uma tag <spam> com uma font-size menor ou redimencionar, pois ta quebrando com a mesma font-size do nome da skill. - ✓ OK (26/11/2022)
+  
+  - Modificar a porcentagem de instrução e cor nas progressbar das Skills de acordo com ./skillsPercents23-11-2022.txt. 
+    * Aonde as Skills novas (com maior porcentagem de instrução) ficam gold.
+    * As Skills mais antigas (com menor porcentagem de instrução) ficam green claro.
+    * Outras Skills com nível de instrução intermediário continuam da mesma cor que é hoje.
+  
+  - Adicionar funcionalidade onClick nos Icons das Skills, 
+    Ou para redirecionar para os respectivos repositórios no github, ou pesquisar suas definições em sites confiáveis.
+    
+  - Melhorar o dimensionamento dos Icons, deixando todos do mesmo tamanho (width e height).
+  
+  //Adicionar novas Skills (Git, Scrum, Shell Script Bash), já aplicando as novas lógicas ditas a cima. - ✓ OK (26/11/2022)
+  
+  
+- ProjectsScreen:
+  //Sobre o linear gradiente do card descritivo dos projetos: - ✓ OK (26/11/2022)
+        background: linear-gradient(270deg,#444 15%,#131313 85%);
+
+        background: linear-gradient(90deg,#fff 0,6%,rgba(209,35,35,.72),rgba(209,35,35,.72) 75%);
+
+        background: linear-gradient(90deg,#fff 0,6%,rgb(223 105 105 / 72%),rgb(221 68 68 / 72%) 75%) <--- brabo
+
+        background: linear-gradient(90deg,#fff 2%,rgb(183 64 64 / 72%) 75%);
+
+        - .wrapper-projects: padding-right: 1rem; <- em desktop e em mobile: .3rem;
+
+  - Modificar as imagens demonstrativas dos projetos, substituindo todas por Gifs animados (Igual ao clone da netflix).
+  
+  - Adicionar um vídeo explicativo sobre cada projeto, dispondo eles abaixo das imagens/gifs deles.
+  
+  - Adicionar funcionalidade onClick sobre as Gifs/Imagens dos projetos para que quando clicado (_Blank) é redirecionado ou para o repositório do código,
+    ou melhorar os projetos e fazer deploy no heroku.
+  
+  - Adicionar Icon "Download" no container do título principal dos projetos, ao lado do icone de redirecionamento para o repositório git,
+    disponibilizando assim o código completo do projeto (Para os curiosos rsrs),
+    * Junto com o código mandar um manual de como dar start na aplicação, com todos os passos a passos e dependências nele.
+  
+  - Modificar a label "Código do projeto clicando no botão a cima" para "Código do projeto (Open source) disponível para download ou para vizualizar no navegador clicando em algum dos ícones a cima.".
+  
+  - Ajustar o tamanho da font-size do título principal dos projetos (em telas maiores ou igual a 800px), está muito grande (diminuir para .8rem).
+  
+  
+- CurriculumVitaeScreen:
+  - Modificar a banda/seção "Habilidades" na coluna a esquerda, pois faltam adicionar novas Skills e colocar a data de estudos correspondentes,
+    (seguindo a mesma lógica da adição dessas informações em SkillScreens). Para dar o entendimento de que eu não estudo essas tec mais. 
+    (Essa informação será apenas para Skills "obsoletas").
+    
+ 
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
