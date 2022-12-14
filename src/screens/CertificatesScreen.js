@@ -14,7 +14,7 @@ export default function CertificatesScreen() {
                 <div>
                     <article className="certificate-single">
                         <div>
-                        <div className="projects-title--container">
+                        <div className="projects-title--container -certificateTitleContainer">
                             <div>
                                 <h3 className="projects-title">IFSP CEIC - Aluno representante do curso</h3>
                                 <a href="https://github.com/WelBert-dev/backupLg3Ecommerce-Springboot" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
