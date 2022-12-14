@@ -10,6 +10,7 @@ import AboutMeScreen from './screens/AboutMeScreen';
 import SkillsScreen from './screens/SkillsScreen';
 import ProjectsScreen from './screens/ProjectsScreen';
 import CurriculumVitaeScreen from './screens/CurriculumVitaeScreen';
+import CertificatesScreen from './screens/CertificatesScreen';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
             <Route path="skills" element={<SkillsScreen />} />
             <Route path="projects" element={<ProjectsScreen />} />
             <Route path="curriculumVitae" element={<CurriculumVitaeScreen />} />
+            <Route path="certificates" element={<CertificatesScreen />} />
             {/*<Route path="interests" element={<InterestsScreen />} /> */}
           </Route>
         </Routes>
