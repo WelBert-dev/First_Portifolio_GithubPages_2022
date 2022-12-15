@@ -141,7 +141,15 @@ cor azul claro bonita: #2aceff;
     (Essa informação será apenas para Skills "obsoletas").
     
  
-    
+- CertificatesScreen:
+  - Estudar mais sobre como inserir html dentro de html
+  - Ou Pesquisar por sites igual ao PDF2HTML pois preciso gerar html com id único.
+  - Pesquisar por portifólios e verificar os layouts adotados para este contexto
+  - Escrever descrições sobre cada um dos certificados
+  - Talvez separar em seções de acordo com categorias (workshops, palestras, cursos, e etc)
+  - Estudar como inserir PDFs em HTML caso não encontre sistemas que geram PDF2HTML pois aparentemente todos utilizam a mesma lib que gera.
+
+
     
   
 
