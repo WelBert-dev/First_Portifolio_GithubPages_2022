@@ -2,6 +2,9 @@ import React from 'react';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
+import bolsaEnsinoAmostra from '../resources/amostraBolsaEnsino.png';
+import bolsaEnsinoP02Amostra from '../resources/bolsaEnsinoP02.png';
+import bolsaEnsinoP03Amostra from '../resources/bolsaEnsinoP03.png';
 
 import './CertificatesScreen.css';
 
@@ -12,7 +15,7 @@ export default function CertificatesScreen() {
             <div>
                 <h1 className="main-title">&lsaquo;Hall de Certificados&rsaquo;</h1>
                 <div>
-                    <article className="certificate-single">
+                    <article className="certificate-single -ceic">
                         <div>
                         <div className="projects-title--container -certificateTitleContainer">
                             <div>
@@ -127,7 +130,25 @@ export default function CertificatesScreen() {
                         </div>
                         </div>                   
                     </article>
-                    <hr />    
+                    <hr />
+                    <article className="certificate-single -bolsaEnsinoCertficate">
+                        <div>
+                            <div className="projects-title--container -certificateTitleContainer">
+                                <div>
+                                    <h3 className="projects-title">IFSP Bolsa Ensino - Programação</h3>
+                                    <a href="https://github.com/WelBert-dev/backupLg3Ecommerce-Springboot" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
+                                </div>
+                                <p>Documento oficial clicando no botão a cima</p>
+                                <span>Edital 002/2022 - DRG/SLT</span>
+                            </div>
+                            <div>
+                                <img src={bolsaEnsinoAmostra}></img>
+                                <img src={bolsaEnsinoP02Amostra}></img>
+                                <img src={bolsaEnsinoP03Amostra}></img>
+                            </div>
+                        </div>
+                       
+                    </article>    
                 </div>             
             </div>
         </section>

@@ -3,14 +3,14 @@
 
 #page-container {
 	position: relative;
-	max-height: 100vh;
+	max-height: 70vh;
 }
 
 #page-container > div.pf.w0.h0 {
 	margin: 0 auto;
 }
 
-.certificate-single > div:nth-child(1){
+.certificate-single.-ceic > div:nth-child(1){
 	max-width: max-content;
 	margin: 0 auto;
 	background-color: #226015;
@@ -22,4 +22,30 @@
 	background-color: #2f9919;
 }
 
-/*  */
+#main-certificate--container hr {
+	margin: 2rem;
+}
+
+/*  ÀREA DA BOLSA ENSINO */
+
+.certificate-single.-bolsaEnsinoCertficate > div {
+	max-width: 90vw;
+	margin: 0 auto;
+	background-color: #226015;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+.certificate-single.-bolsaEnsinoCertficate img {
+	background-color: white;
+	max-width: 90%;
+	position: relative;
+}
+
+.certificate-single.-bolsaEnsinoCertficate > div > div:nth-child(2) {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: auto;
+	max-height: 70vh;
+}
