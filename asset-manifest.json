@@ -1,18 +1,42 @@
 {
   "files": {
-    "main.css": "/firstPortifolioGithubPages-2022/static/css/main.be29f68a.css",
-    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.040d7b6a.js",
+    "main.css": "/firstPortifolioGithubPages-2022/static/css/main.86bf7157.css",
+    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.4601845b.js",
     "static/media/NetFlixCloneWeb.gif": "/firstPortifolioGithubPages-2022/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
+    "static/media/relatorioNodeRed2021-parte04.png": "/firstPortifolioGithubPages-2022/static/media/relatorioNodeRed2021-parte04.c732c0b49e41f666f35f.png",
     "static/media/restauranteIfspAmostra.png": "/firstPortifolioGithubPages-2022/static/media/restauranteIfspAmostra.03eae3aa8e7b8b0e62ac.png",
+    "static/media/bolsaDeValores-ifciencia2021-29-10-2021.png": "/firstPortifolioGithubPages-2022/static/media/bolsaDeValores-ifciencia2021-29-10-2021.35091864f636a476f1c4.png",
+    "static/media/nodeRed-IoT-ifciencia2021-28-10-2021.png": "/firstPortifolioGithubPages-2022/static/media/nodeRed-IoT-ifciencia2021-28-10-2021.b0eaaa93ca59ada1d76b.png",
+    "static/media/flisolTVBox.png": "/firstPortifolioGithubPages-2022/static/media/flisolTVBox.796529c4450e45bad940.png",
+    "static/media/flisolLinguagemC.png": "/firstPortifolioGithubPages-2022/static/media/flisolLinguagemC.1d28ec434c625f9bef76.png",
     "static/media/amazona.jpg": "/firstPortifolioGithubPages-2022/static/media/amazona.b448ccd7966c0efe9adc.jpg",
+    "static/media/workshopAutomacaoIndustrial-IFCiencia.png": "/firstPortifolioGithubPages-2022/static/media/workshopAutomacaoIndustrial-IFCiencia.6be503625ef2ccfab267.png",
+    "static/media/workshopAutomacaoIndustrial-IFCiencia-parte02.png": "/firstPortifolioGithubPages-2022/static/media/workshopAutomacaoIndustrial-IFCiencia-parte02.e0293d2db389333d828c.png",
+    "static/media/relatorioMensal02-parte01.png": "/firstPortifolioGithubPages-2022/static/media/relatorioMensal02-parte01.4da855855d7252bc049c.png",
+    "static/media/relatorioMensal01-parte01.png": "/firstPortifolioGithubPages-2022/static/media/relatorioMensal01-parte01.b5ae8e19e76e12fb05a8.png",
+    "static/media/Python3Mundo1-40-Horas-Certificado-Curso-em-Video.png": "/firstPortifolioGithubPages-2022/static/media/Python3Mundo1-40-Horas-Certificado-Curso-em-Video.9fb8dfafd841ec02802e.png",
+    "static/media/relatorioMensal03-parte01.png": "/firstPortifolioGithubPages-2022/static/media/relatorioMensal03-parte01.56a5fb44ca15c862c7ea.png",
+    "static/media/relatorioNodeRed2021-parte01.png": "/firstPortifolioGithubPages-2022/static/media/relatorioNodeRed2021-parte01.5cee9a0c955b7c4f882d.png",
+    "static/media/relatorioMensal01-parte02.png": "/firstPortifolioGithubPages-2022/static/media/relatorioMensal01-parte02.3645c161de3a925b0793.png",
+    "static/media/bolsaEnsinoP03.png": "/firstPortifolioGithubPages-2022/static/media/bolsaEnsinoP03.1b59c2857aafa663e194.png",
+    "static/media/relatorioMensal02-parte03.png": "/firstPortifolioGithubPages-2022/static/media/relatorioMensal02-parte03.8227433c55d47e0bb138.png",
+    "static/media/relatorioMensal03-parte02.png": "/firstPortifolioGithubPages-2022/static/media/relatorioMensal03-parte02.7056053632d75a01db75.png",
+    "static/media/relatorioNodeRed2021-parte02.png": "/firstPortifolioGithubPages-2022/static/media/relatorioNodeRed2021-parte02.f9610147b5a5906eda58.png",
+    "static/media/amostraBolsaEnsino.png": "/firstPortifolioGithubPages-2022/static/media/amostraBolsaEnsino.e3b801db59e7280fbef1.png",
     "static/media/auauMiauNoFramework.png": "/firstPortifolioGithubPages-2022/static/media/auauMiauNoFramework.42a6d9cacaf38ed93a9b.png",
+    "static/media/bolsaEnsinoP02.png": "/firstPortifolioGithubPages-2022/static/media/bolsaEnsinoP02.496099689918026cc564.png",
+    "static/media/relatorioNodeRed2021-parte03.png": "/firstPortifolioGithubPages-2022/static/media/relatorioNodeRed2021-parte03.6f01d9260dcb4579c6a7.png",
+    "static/media/portariaNormativaCeic-parte01.png": "/firstPortifolioGithubPages-2022/static/media/portariaNormativaCeic-parte01.509d58570009fb84ef14.png",
+    "static/media/ciscoModule02Amostra.png": "/firstPortifolioGithubPages-2022/static/media/ciscoModule02Amostra.c5b2997a7c6541666828.png",
+    "static/media/ciscoModule01Amostra.png": "/firstPortifolioGithubPages-2022/static/media/ciscoModule01Amostra.8a335ef13e07ca84b306.png",
     "static/media/wellisonPerfil.jpg": "/firstPortifolioGithubPages-2022/static/media/wellisonPerfil.5ad3be0ec95d8bb0cc3d.jpg",
     "index.html": "/firstPortifolioGithubPages-2022/index.html",
-    "main.be29f68a.css.map": "/firstPortifolioGithubPages-2022/static/css/main.be29f68a.css.map",
-    "main.040d7b6a.js.map": "/firstPortifolioGithubPages-2022/static/js/main.040d7b6a.js.map"
+    "static/media/portariaNormativaCeic-parte02.png": "/firstPortifolioGithubPages-2022/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
+    "main.86bf7157.css.map": "/firstPortifolioGithubPages-2022/static/css/main.86bf7157.css.map",
+    "main.4601845b.js.map": "/firstPortifolioGithubPages-2022/static/js/main.4601845b.js.map"
   },
   "entrypoints": [
-    "static/css/main.be29f68a.css",
-    "static/js/main.040d7b6a.js"
+    "static/css/main.86bf7157.css",
+    "static/js/main.4601845b.js"
   ]
 }
