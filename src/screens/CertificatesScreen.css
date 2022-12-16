@@ -20,16 +20,19 @@
 
 .projects-title--container.-certificateTitleContainer {
 	background-color: #2f9919;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	padding: 0;
 }
 
 #main-certificate--container hr {
-	margin: 2rem;
+	margin: 1rem;
 }
 
 /*  ÀREA DA BOLSA ENSINO */
 
 .certificate-single.-bolsaEnsinoCertficate > div {
-	max-width: 90vw;
+	max-width: 800px;
 	margin: 0 auto;
 	background-color: #226015;
 	border-top-left-radius: 10px;
@@ -38,14 +41,60 @@
 
 .certificate-single.-bolsaEnsinoCertficate img {
 	background-color: white;
-	max-width: 90%;
+	max-width: 98%;
 	position: relative;
+	border: 4px double black;
+	margin-bottom: 2px;
 }
 
 .certificate-single.-bolsaEnsinoCertficate > div > div:nth-child(2) {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+
+.projects-subdescription--container.-bolsaEnsinoCertficate {
+	margin: 0;
+	border: 4px double;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	padding-bottom: 1.5rem;
+	background-color: #4bc133;
+}
+
+.bolsaEnsinoImageWrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-height: 80vh;
 	overflow: auto;
-	max-height: 70vh;
+}
+
+.projects-title--container.-certificateTitleContainer > p {
+	font-size: .7rem;
+	font-weight: 600;
+	margin-top: .3rem;
+}
+
+.-maxHeigthNone {
+	max-height: none;
+}
+
+Article.-certificateLastChildArticle{
+	margin-bottom: 1rem;
+}
+
+@media (max-width: 800px)
+{
+	.certificate-single.-bolsaEnsinoCertficate > div {
+		max-width: none;
+	}
+	.certificate-single.-bolsaEnsinoCertficate img {
+		max-width: 99%;
+	}
+}
+
+@media (max-width: 425px)
+{
+ 
 }
