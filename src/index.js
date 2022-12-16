@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
@@ -15,7 +15,7 @@ import CertificatesScreen from './screens/CertificatesScreen';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
         <Routes>
           <Route element={<App />} >
             <Route path="/" element={<HomeScreen />} exact/>
@@ -27,7 +27,7 @@ root.render(
             {/*<Route path="interests" element={<InterestsScreen />} /> */}
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
   </React.StrictMode>
 );
 

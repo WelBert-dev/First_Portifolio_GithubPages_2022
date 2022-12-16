@@ -82,5 +82,7 @@ Article.-certificateLastChildArticle{
 
 @media (max-width: 425px)
 {
- 
+	.bolsaEnsinoImageWrapper {
+		max-height: 70vh;
+	}
 }

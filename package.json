@@ -14,7 +14,6 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "stack": "heroku-20",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",

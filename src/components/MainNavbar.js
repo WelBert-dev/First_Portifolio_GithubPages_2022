@@ -30,12 +30,12 @@ export default function MainNavbar() {
         <>
             <nav id="navbar-container" ref={navRef} >
                 <button id="nav-close-btn" className="nav-btn nav-close-btn" onClick={showNavbar}><FaTimes /></button>
-                <a href="/">Home</a>
-                <a href="/aboutMe">Sobre</a>
-                <a href="/skills" rel="Link Linguagens">Skills</a>     
-                <a href="/projects" rel="Link Projetos">Projetos</a>
-                <a href="/curriculumVitae" rel="Link Curriculo">Curriculo</a>        
-                <a href="/certificates" rel="Link Certificados">Certificados</a>   
+                <a href="/firstPortifolioGithubPages-2022">Home</a>
+                <a href="/firstPortifolioGithubPages-2022/#/aboutMe">Sobre</a>
+                <a href="/firstPortifolioGithubPages-2022/#/skills" rel="Link Linguagens">Skills</a>     
+                <a href="/firstPortifolioGithubPages-2022/#/projects" rel="Link Projetos">Projetos</a>
+                <a href="/firstPortifolioGithubPages-2022/#/curriculumVitae" rel="Link Curriculo">Curriculo</a>        
+                <a href="/firstPortifolioGithubPages-2022/#/certificates" rel="Link Certificados">Certificados</a>   
             </nav>
             <button id="btn-hamburguer" className="nav-btn" onClick={showNavbar}><FaBars /></button>
         </>
