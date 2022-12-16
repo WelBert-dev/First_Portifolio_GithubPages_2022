@@ -66,6 +66,10 @@ Article.-certificateLastChildArticle{
 	margin-bottom: 1rem;
 }
 
+.projects-subtitle.-certificateSubtitle {
+	padding: .5rem;
+}
+
 @media (max-width: 800px)
 {
 	.certificate-single.-bolsaEnsinoCertficate > div {

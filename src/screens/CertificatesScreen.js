@@ -54,7 +54,7 @@ export default function CertificatesScreen() {
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 class="projects-subtitle">Contextualizando</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     A CEIC (Comissão de Elaboração e Implementação de Projetos Pedagógicos do Curso Técnico em Informática) é uma comissão interna do IFSP 
                                     responsável por discutir e definir a grade curricular do curso como um todo dentre outras atribuições, e para isto é necessário
@@ -83,7 +83,7 @@ export default function CertificatesScreen() {
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 class="projects-subtitle">Contextualizando</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Mais uma das ações que eu participei durante meu curso Tecnico em informática no IFSP (Instituto Federal de Educação, Ciências e Tecnologias de São Paulo) aonde eu me encontrava desempregado e focado 100% nos estudos, e resolvi participar pois é uma ajuda de custo com um valor simbólico de R$400,00 por mês para estudar (No caso eu optei pela grade de programação com a stack frontend (HTML5, CSS3 e JavaScript) pois eram as tecnologias que eu estava estudando naquele contexto/época). Descobri essa ação/bolsa pelo meu professor pois o mesmo se inscreveu com a proposta do projeto no qual eu me inscrevi e fui contemplado. Foram 20 horas semanais durante 3 meses, (80 horas mensais) e o total foi de 240 horas. (Obs: Não gerou certificado mas devido a carga horaria pode ser considerado.. rsrs)
                                 </p>
@@ -114,7 +114,7 @@ export default function CertificatesScreen() {
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 class="projects-subtitle">Contextualizando</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Curso da Cisco realizado na plataforma Netacad devido a disciplina GSG (Gerenciamento e Segurança de Dados) do IFSP, aonde o professor tomou a abordagem de instruir os alunos e utilizar como material base pois a Cisco tem um grande reconhecimento no mercado de segurança da informação, e por gerar o certificado com reconhecimento Oficial ele deduziu que seria bom para a carreira dos alunos. Esse certificado é referênte ao primeiro módulo (de dois) aonde ele introduziu as boas práticas de segurança, o pilar da segurança da informação (confidencialidade, integridade e disponibilidade), tipos de atacantes (white hat, gray hat e black hat), tipos de ataque, mercado de trabalho e de penteste, tipos de criptografias e seus devidos usos (hash's), e também alguns termos e ferramentas utilizados pelos hackers.
                                 </p>
@@ -137,7 +137,7 @@ export default function CertificatesScreen() {
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 class="projects-subtitle">Contextualizando</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Continuação do curso da Cisco realizado na plataforma Netacad devido a disciplina GSG (Gerenciamento e Segurança de Dados) do IFSP,
                                     neste módulo foi reforçado o conhecimento obtido no primeiro e também o aprofundamento do mesmo, re-lembrando e reforçando alguns termos e ferramentas, e técnicas de ataques e de mitigação, reforçou também o pilar da segurança da informação (confidencialidade, integridade e disponibilidade), as leis em volto da cybersegurança (LGPD) dentre outras.
@@ -161,7 +161,7 @@ export default function CertificatesScreen() {
                                 <p>Validação oficial do certificado clicando no botão a cima</p>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 class="projects-subtitle">Contextualizando</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Curso realizado quando eu estava aprendendo lógica de programação, escolhi python3 pois foi a linguagem adotada pelo professor no incio do meu curso técnico, e resolvi reforçar o conhecimento com as videos aulas do Gustavo Guanabara (Youtuber e CEO da plataforma "Curso em Video", muito reconhecido pela didática simples para quem esta iniciando) pois ele não utiliza muito jargão técnico, fiz o curso até a metade pelo Youtube e descobri que o mesmo possuía uma plataforma dedicada e por ela era possivel gerar um certificado de conclusão ao final de cada módulo (mundo), e por segurança e integridade do certificado, não é possível realizar a prova final em casos de não assistido todos os vídeos, e não obtido a nota superior a 70%. Além deste módulo (mundo) também estudei o segundo módulo e fiz a prova final, porém a geração do certificado é um serviço pago, valor simbólico de R$25,00 na época devido ao curso ser gratuito para ajudar a mante-lo e promover suporte aos usuários (é aquele ditado "Não existe cerveja grátis".. rsrs). Não gerei ainda pois estou desempregado e não é mais o meu contexto (Estou estudando outras tecnologias, no caso atual é Java) além disto o mesmo serviço hoje custa R$45,00.
                                 </p>
@@ -186,13 +186,13 @@ export default function CertificatesScreen() {
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 class="projects-subtitle">Contextualizando o FLISoL</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando o FLISoL</h3>
                                 <p>
                                     Mais uma das ações que eu participei no IFSP, desde o incio entrei com a mentalidade de absorver ao máximo possível do conhecimento, então participei de todas atividades que estavam passíveis ao meu alcance. FLISoL (Festival Latino-Americano de Instalação de Software Livre), para quem é entusiasta GNU sabe bem o que é esse evento (Mundial) com objetivo de promover e propagar o ideal de Software Livre realizado no quarto (4o) sábado de abril de cada ano desde 2008 (com iniciativas em 2005), não devemos confundir "Livre" com "Free beer" ou seja "Cerveja grátis", essa ideia esta co-relacionada ao código fonte dos Softwares, e não a precificação deles.. Não confundir também "Software Livre" com "Open Source", ambos são bem parecidos porém com focos diferentes, sendo um relacionado a qualidade do software (Open source) e o outro relacionado a liberdade do usuário (Software Livre), o assunto é um pouco mais profundo. 
                                     Um dos exemplos de licença que prega esses ideias é a GPL (General Public License).
                                     <ul className="projects-description--container">
                                         <li>
-                                            <h3 class="projects-subtitle">Liberdades da GPL</h3>
+                                            <h3 class="projects-subtitle -certificateSubtitle">Liberdades da GPL</h3>
                                             <ul>
                                                 <li>0 - A liberdade de executar o programa, para qualquer propósito.</li>
                                                 <li>1 - A liberdade de estudar como o programa funciona e adaptá-lo para as suas necessidades. O acesso ao código-fonte é um pré-requisito para esta liberdade.</li>
@@ -201,7 +201,7 @@ export default function CertificatesScreen() {
                                             </ul>
                                         </li>
                                         <li>
-                                            <h3 class="projects-subtitle">Fontes interessantes</h3>
+                                            <h3 class="projects-subtitle -certificateSubtitle">Fontes interessantes</h3>
                                             <ul>
                                                 <li><a target="_blank" href="https://www.youtube.com/watch?v=N0NNnq0Wyww&t=250s">Clique aqui para mais informações (Open Source X Software Livre).</a></li>
                                                 <li><a target="_blank" href="https://www.youtube.com/watch?v=JbXGpDlu3l4">Clique aqui para mais informações (FLISOL) Largue de uma vez o Ruindows e vem para o Lindux.</a></li>
@@ -213,7 +213,7 @@ export default function CertificatesScreen() {
                                     </ul>
                                 </p>
 
-                                <h3 class="projects-subtitle">Contextualizando o Projeto TV Box</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando o Projeto TV Box</h3>
                                 <p>
                                     Sem mais delongas, o projeto referênte a este certificado de participação foi a realização de uma descaracterização de equipamentos piratas fruto de contrabando apreendidos pela PF (Policia Federal), esses equipamentos eram hardwares simples (estilo Raspberry Pi) com S.O personalizado (possivelmente uma distribuição GNU/Linux) no qual realizava uma burlação e promovia acesso gratuíto a canais e serviços de streaming pagos (Telecine, HBO, dentre outros), a descaracterização se deu pela remoção deste S.O e substituição por uma distro GNU/Linux Leve sem interface gráfica e também por um Android. Anteriormente, esses equipamentos iriam ser destruídos e descartados, porém resolveram doá-los para as instituições públicas utiliza-los como material de estudos.
                                 </p>
@@ -236,7 +236,7 @@ export default function CertificatesScreen() {
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 class="projects-subtitle">Contextualizando</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Introdução e noções básicas da linguagem C (Pode ser considerada "Pai" de muitas outras linguagens modernas as quais parseiam e transformam o seu código fonte em C "por debaixo dos panos"), muitos dos sistemas operacionais em sí são escritos em C.. me fez despertar um grande interesse por ela, porém atualmente estou focado em Java e não quero me sobrecarregar e acabar não aprendendo nada da maneira correta, foi definido uma meta e até eu não atingi-lá não irei descansar rsrs.. a meta é tirar a certificação Java da oracle antes do final do ano que vem (2023).
                                 </p>
@@ -261,7 +261,7 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 class="projects-subtitle">Contextualizando</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Optei por participar deste workshop pois era o único mais próximo do meu contexto (desenvolvimento) se comparado as outras opções, foi necessário participar pois a professora de uma das disciplinas considerou uma fração da nota dedicada a um dos projetos do IFCiência, então tivemos que escolher "obrigatóriamente" alguma coisa rsrs..
                                 </p>
@@ -286,7 +286,7 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 class="projects-subtitle">Contextualizando</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Mais uma das ações promovidas pelo IFSP, o primeiro IFCiência que eu participei em 2021 no qual me despertou interesse por "Internet das coisas" na época, mas é por que eu estava me encontrando ainda.. o mundo de Tecnologia é imenso e cheio de ramos/oportunidades mas com toda certeza é aqui o meu lugar...
                                     Foi explicado e introduzido como é a interação entre micro-controladores e a programação (No caso ele utilizou o NodeRed) que é basicamente uma abstração gráfica (Like windows) estilo KNIME aonde temos componentes e por meio deles podemos realizar as lógicas porém de uma maneira mais visual e automaticamente mais simples de se programar.
@@ -316,7 +316,7 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 class="projects-subtitle">Contextualizando</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Resolvi participar deste workshop pois eu tenho interesses em investimentos antes mesmo de conhecer minha paixão no T.I
                                     porém só via alguns poucos vídeos sobre.. então resolvi participar para entender como é o contexto, 
