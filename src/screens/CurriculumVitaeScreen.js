@@ -51,13 +51,16 @@ export default function CurriculumVitaeScreen() {
                                      <div className="template__section__container">
                                          <ul className="padding-1rem">
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>C#</p>
+                                             <p>Java (Estudando atualmente)</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>C# (06/2021 até 12/2021)</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="1">
                                              <p>JavaScript</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
-                                             <p>Python</p>
+                                             <p>Python (01/2021 até 06/2021)</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="3">
                                              <p>MySQL</p>
@@ -72,7 +75,7 @@ export default function CurriculumVitaeScreen() {
                                              <p>ReactJs</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="7">
-                                             <p>Asp.NetCoreMVC</p>
+                                             <p>Asp.NetCoreMVC (08/2021 até 12/2021)</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
                                              <p>GNU/Linux</p>

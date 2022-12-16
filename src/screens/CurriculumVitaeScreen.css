@@ -1,3 +1,6 @@
+#template-preview-full {
+    font-weight: 600;
+}
 
 article, aside, footer, header, nav, section {
     display: block;
@@ -80,13 +83,13 @@ position: absolute;
 top: 1095px;
 left: 5px;
 padding: 10px;
-font-size: 10px;
+font-size: 12px;
 height: 30px;
 background-color: rgb(34, 152, 233);
 transform: translate(-100%, -50%);
 border-radius: 3px 0px 0px 3px;
 text-transform: uppercase;
-font-family: "Roboto", sans;
+font-family: var(--main-fontFamily);
 letter-spacing: 3px;
 font-weight: bold;
 color: rgb(255, 255, 255);
@@ -124,7 +127,7 @@ padding-bottom: 8px;
 page-break-after: avoid;
 }
 .template__professional .template__section__title {
-font-size: 12px;
+font-size: 14px;
 margin-bottom: 16px;
 }
 .template__section__subtitle, .template__section__position, .template__section__degree, .template__occupation {
@@ -174,7 +177,7 @@ margin-right: .4em;
 }
 .template__professional .template__name {
 text-transform: uppercase;
-font-size: 16px;
+font-size: 18px;
 line-height: 17px;
 }
 
@@ -183,14 +186,14 @@ min-width: calc(100% - 75px - 16px);
 max-width: 100%;
 }
 .template__occupation {
-font-size: 11.5px;
+font-size: 13.5px;
 margin-bottom: 5px;
 }
 .line-spacing--100.template__newyork .template__section__simple:not(.template__section__languages):not(.template__section__simple--fixed-line-spacing), .line-spacing--100.template__newyork .template__section__description:not(.template__section__languages):not(.template__section__simple--fixed-line-spacing) {
 line-height: 17px;
 }
 .font-size--medium.template__newyork .template__section__simple:not(.template__section__simple--fixed-font-size):not(.template__section__languages), .font-size--medium.template__newyork .template__section__description:not(.template__section__simple--fixed-font-size):not(.template__section__languages) {
-font-size: 11.5px;
+font-size: 13.5px;
 }
 .template__newyork__main .template__header .template__section__simple {
 padding-left: 0;
@@ -236,7 +239,7 @@ background-color: white;
 font-family: 'Icons Templates';
 position: absolute;
 content: '.';
-font-size: 8px;
+font-size: 10px;
 line-height: 8px;
 color: #D0021B;
 top: -4px;
@@ -245,13 +248,13 @@ width: 8px;
 height: 10px;
 }
 .template__professional .template__section__startDate, .template__professional .template__section__endDate, .template__professional .template__section__location {
-font-size: 10.5px;
+font-size: 12.5px;
 }
 .template__professional .template__section__startDate, .template__professional .template__section__endDate {
 font-style: italic;
 }
 .template__professional .template__section__startDate, .template__professional .template__section__endDate, .template__professional .template__section__location {
-font-size: 10.5px;
+font-size: 12.5px;
 }
 .template__section__experience .template__section__startDate, .template__section__experience .template__section__endDate, .template__section__education .template__section__startDate, .template__section__education .template__section__endDate {
 display: inline;
@@ -273,7 +276,7 @@ margin: -5.5px 0 5.5px;
 color: white;
 }
 .template__newyork .template__section__position, .template__newyork .template__section__degree {
-font-size: 12px;
+font-size: 14px;
 color: #D0021B;
 }
 .template__newyork .template__section__company, .template__newyork .template__section__college {
@@ -283,7 +286,7 @@ font-style: normal;
 line-height: 17px;
 }
 .font-size--medium.template__newyork .template__section__simple:not(.template__section__simple--fixed-font-size):not(.template__section__languages), .font-size--medium.template__newyork .template__section__description:not(.template__section__simple--fixed-font-size):not(.template__section__languages) {
-font-size: 11.5px;
+font-size: 13.5px;
 }
 
 .template__section__description {
@@ -299,18 +302,18 @@ box-sizing: border-box;
 }
 .font-family--professional.template__newyork {
 
-font-family: "Bitter","Noto Serif SC","Noto Serif JP";
+font-family: var(--main-fontFamily);
 
 }
 .template__newyork {
 
 color: white;
-font-family: "Bitter",sans-serif;
+font-family: var(--main-fontFamily);
 
 }
 .template__professional {
 
-font-size: 11.5px;
+font-size: 13.5px;
 line-height: 1.5em;
 border-spacing: 0;
 word-wrap: break-word;
@@ -318,7 +321,7 @@ word-wrap: break-word;
 }
 
 .font-family--professional.template__newyork {
-font-family: "Bitter","Noto Serif SC","Noto Serif JP";
+font-family: var(--main-fontFamily);
 }
 
 .template__professional .template__header {
@@ -347,7 +350,7 @@ display: flex;
 }
 
 .font-family--professional.template__newyork {
-font-family: "Bitter","Noto Serif SC","Noto Serif JP";
+font-family: var(--main-fontFamily);
 }
 
 
@@ -433,7 +436,7 @@ padding: .5rem 1rem 0 1rem;
     .template__section__position::before {
         background-color: white;
         color: white;
-        font-size: 8px;
+        font-size: 10px;
         content: '.';
         font-family: 'Icons Templates';
         position: absolute;
@@ -447,7 +450,7 @@ padding: .5rem 1rem 0 1rem;
     .template__section__degree::before {
         background-color: white;
         color: white;
-        font-size: 8px;
+        font-size: 10px;
         content: '.';
         font-family: 'Icons Templates';
         position: absolute;
@@ -485,7 +488,7 @@ padding: .5rem 1rem 0 1rem;
         display: block;
         color: #9f9f9f;
         line-height: 1rem;
-        font-size: 8px;
+        font-size: 10px;
     }
 
     #education .template__section__title::after {
@@ -494,7 +497,7 @@ padding: .5rem 1rem 0 1rem;
         display: block;
         color: #9f9f9f;
         line-height: .8rem;
-        font-size: 8px;
+        font-size: 10px;
         padding: 0 .5rem;
     }
 
@@ -512,7 +515,7 @@ padding: .5rem 1rem 0 1rem;
         display: block;
         color: #9f9f9f;
         line-height: 1rem;
-        font-size: 8px;
+        font-size: 10px;
     }
 
     #work-experience .template__section__title::after {
@@ -521,7 +524,7 @@ padding: .5rem 1rem 0 1rem;
         display: block;
         color: #9f9f9f;
         line-height: .8rem;
-        font-size: 8px;
+        font-size: 10px;
         padding: 0 .5rem;
     }
 
