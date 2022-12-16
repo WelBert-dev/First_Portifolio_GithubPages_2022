@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/firstPortifolioGithubPages-2022/static/css/main.86bf7157.css",
+    "main.css": "/firstPortifolioGithubPages-2022/static/css/main.39fbc226.css",
     "main.js": "/firstPortifolioGithubPages-2022/static/js/main.28f03f1c.js",
     "static/media/NetFlixCloneWeb.gif": "/firstPortifolioGithubPages-2022/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/relatorioNodeRed2021-parte04.png": "/firstPortifolioGithubPages-2022/static/media/relatorioNodeRed2021-parte04.c732c0b49e41f666f35f.png",
@@ -32,11 +32,11 @@
     "static/media/wellisonPerfil.jpg": "/firstPortifolioGithubPages-2022/static/media/wellisonPerfil.5ad3be0ec95d8bb0cc3d.jpg",
     "index.html": "/firstPortifolioGithubPages-2022/index.html",
     "static/media/portariaNormativaCeic-parte02.png": "/firstPortifolioGithubPages-2022/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
-    "main.86bf7157.css.map": "/firstPortifolioGithubPages-2022/static/css/main.86bf7157.css.map",
+    "main.39fbc226.css.map": "/firstPortifolioGithubPages-2022/static/css/main.39fbc226.css.map",
     "main.28f03f1c.js.map": "/firstPortifolioGithubPages-2022/static/js/main.28f03f1c.js.map"
   },
   "entrypoints": [
-    "static/css/main.86bf7157.css",
+    "static/css/main.39fbc226.css",
     "static/js/main.28f03f1c.js"
   ]
 }
