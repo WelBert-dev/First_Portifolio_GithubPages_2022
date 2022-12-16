@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/firstPortifolioGithubPages-2022/static/css/main.86bf7157.css",
-    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.e591b00b.js",
+    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.5b046c22.js",
     "static/media/NetFlixCloneWeb.gif": "/firstPortifolioGithubPages-2022/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/relatorioNodeRed2021-parte04.png": "/firstPortifolioGithubPages-2022/static/media/relatorioNodeRed2021-parte04.c732c0b49e41f666f35f.png",
     "static/media/restauranteIfspAmostra.png": "/firstPortifolioGithubPages-2022/static/media/restauranteIfspAmostra.03eae3aa8e7b8b0e62ac.png",
@@ -33,10 +33,10 @@
     "index.html": "/firstPortifolioGithubPages-2022/index.html",
     "static/media/portariaNormativaCeic-parte02.png": "/firstPortifolioGithubPages-2022/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
     "main.86bf7157.css.map": "/firstPortifolioGithubPages-2022/static/css/main.86bf7157.css.map",
-    "main.e591b00b.js.map": "/firstPortifolioGithubPages-2022/static/js/main.e591b00b.js.map"
+    "main.5b046c22.js.map": "/firstPortifolioGithubPages-2022/static/js/main.5b046c22.js.map"
   },
   "entrypoints": [
     "static/css/main.86bf7157.css",
-    "static/js/main.e591b00b.js"
+    "static/js/main.5b046c22.js"
   ]
 }
