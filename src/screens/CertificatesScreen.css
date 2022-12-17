@@ -17,8 +17,7 @@
 	max-width: 800px;
 	margin: 0 auto;
 	background-color: #226015;
-	border-top-left-radius: 10px;
-	border-top-right-radius: 10px;
+	border-radius: 10px;
 }
 
 .certificate-single.-bolsaEnsinoCertficate img {
@@ -29,7 +28,7 @@
 	margin-bottom: 2px;
 }
 
-.certificate-single.-bolsaEnsinoCertficate > div > div:nth-child(2) {
+.projects-subdescription--container.-bolsaEnsinoCertficate {
 	display: flex;
 	flex-direction: column;
 	align-items: center;

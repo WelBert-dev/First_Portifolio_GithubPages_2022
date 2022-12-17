@@ -53,6 +53,10 @@ export default function CertificatesScreen() {
                                 <span>Portaria Normativa SLT nº0045/IFSP (18/05/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
+                            <div className="bolsaEnsinoImageWrapper">
+                                <img src={portariaNormativaCeicP01}></img>
+                                <img src={portariaNormativaCeicP02}></img>
+                            </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
                                 <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
@@ -63,10 +67,6 @@ export default function CertificatesScreen() {
                                     Portanto a decisão foi repaginar a grade curricular e diminuir a carga horária do curso para os próximos anos, mudando assim de "Técnico em informática" para "Informática para a Internet" 
                                     e reduzindo assim de 4 semestres (2 anos) para 3 semestres (1 ano e meio) com início de vigência apartir de 2023.
                                 </p>
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper">
-                                <img src={portariaNormativaCeicP01}></img>
-                                <img src={portariaNormativaCeicP02}></img>
                             </div>
                         </div>
                        
@@ -82,12 +82,6 @@ export default function CertificatesScreen() {
                                 <span>Edital 002/2022 - DRG/SLT (04/2022 até 06/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
-                            <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
-                                <p>
-                                    Mais uma das ações que eu participei durante meu curso Tecnico em informática no IFSP (Instituto Federal de Educação, Ciências e Tecnologias de São Paulo) aonde eu me encontrava desempregado e focado 100% nos estudos, e resolvi participar pois é uma ajuda de custo com um valor simbólico de R$400,00 por mês para estudar (No caso eu optei pela grade de programação com a stack frontend (HTML5, CSS3 e JavaScript) pois eram as tecnologias que eu estava estudando naquele contexto/época). Descobri essa ação/bolsa pelo meu professor pois o mesmo se inscreveu com a proposta do projeto no qual eu me inscrevi e fui contemplado. Foram 20 horas semanais durante 3 meses, (80 horas mensais) e o total foi de 240 horas. (Obs: Não gerou certificado mas devido a carga horaria pode ser considerado.. rsrs)
-                                </p>
-                            </div>
                             <div className="bolsaEnsinoImageWrapper">
                                 <img src={bolsaEnsinoAmostra}></img>
                                 <img src={bolsaEnsinoP02Amostra}></img>
@@ -98,6 +92,12 @@ export default function CertificatesScreen() {
                                 <img src={bolsaEnsinoRelatorioP02P03}></img>
                                 <img src={bolsaEnsinoRelatorioP03P01}></img>
                                 <img src={bolsaEnsinoRelatorioP03P02}></img>
+                            </div>
+                            <div className="projects-subdescription--container -bolsaEnsinoCertficate">
+                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
+                                <p>
+                                    Mais uma das ações que eu participei durante meu curso Tecnico em informática no IFSP (Instituto Federal de Educação, Ciências e Tecnologias de São Paulo) aonde eu me encontrava desempregado e focado 100% nos estudos, e resolvi participar pois é uma ajuda de custo com um valor simbólico de R$400,00 por mês para estudar (No caso eu optei pela grade de programação com a stack frontend (HTML5, CSS3 e JavaScript) pois eram as tecnologias que eu estava estudando naquele contexto/época). Descobri essa ação/bolsa pelo meu professor pois o mesmo se inscreveu com a proposta do projeto no qual eu me inscrevi e fui contemplado. Foram 20 horas semanais durante 3 meses, (80 horas mensais) e o total foi de 240 horas. (Obs: Não gerou certificado mas devido a carga horaria pode ser considerado.. rsrs)
+                                </p>
                             </div>
                         </div>
                        
@@ -113,14 +113,14 @@ export default function CertificatesScreen() {
                                 <span>Plataforma NetAcad (07/2022 até 10/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                                <img src={ciscoModule01Amostra}></img>
+                            </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
                                 <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Curso da Cisco realizado na plataforma Netacad devido a disciplina GSG (Gerenciamento e Segurança de Dados) do IFSP, aonde o professor tomou a abordagem de instruir os alunos e utilizar como material base pois a Cisco tem um grande reconhecimento no mercado de segurança da informação, e por gerar o certificado com reconhecimento Oficial ele deduziu que seria bom para a carreira dos alunos. Esse certificado é referênte ao primeiro módulo (de dois) aonde ele introduziu as boas práticas de segurança, o pilar da segurança da informação (confidencialidade, integridade e disponibilidade), tipos de atacantes (white hat, gray hat e black hat), tipos de ataque, mercado de trabalho e de penteste, tipos de criptografias e seus devidos usos (hash's), e também alguns termos e ferramentas utilizados pelos hackers.
                                 </p>
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
-                                <img src={ciscoModule01Amostra}></img>
                             </div>
                         </div>
                    
@@ -136,15 +136,15 @@ export default function CertificatesScreen() {
                                 <span>Plataforma NetAcad (10/2022 até 12/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                                <img src={ciscoModule02Amostra}></img>
+                            </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
                                 <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Continuação do curso da Cisco realizado na plataforma Netacad devido a disciplina GSG (Gerenciamento e Segurança de Dados) do IFSP,
                                     neste módulo foi reforçado o conhecimento obtido no primeiro e também o aprofundamento do mesmo, re-lembrando e reforçando alguns termos e ferramentas, e técnicas de ataques e de mitigação, reforçou também o pilar da segurança da informação (confidencialidade, integridade e disponibilidade), as leis em volto da cybersegurança (LGPD) dentre outras.
                                 </p>
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
-                                <img src={ciscoModule02Amostra}></img>
                             </div>
                         </div>
                    
@@ -160,14 +160,14 @@ export default function CertificatesScreen() {
                                 <span>Plataforma Curso Em Video (05/2021)</span>
                                 <p>Validação oficial do certificado clicando no botão a cima</p>
                             </div>
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                                <img src={cursoEmVideoPython3Mundo01}></img>
+                            </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
                                 <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Curso realizado quando eu estava aprendendo lógica de programação, escolhi python3 pois foi a linguagem adotada pelo professor no incio do meu curso técnico, e resolvi reforçar o conhecimento com as videos aulas do Gustavo Guanabara (Youtuber e CEO da plataforma "Curso em Video", muito reconhecido pela didática simples para quem esta iniciando) pois ele não utiliza muito jargão técnico, fiz o curso até a metade pelo Youtube e descobri que o mesmo possuía uma plataforma dedicada e por ela era possivel gerar um certificado de conclusão ao final de cada módulo (mundo), e por segurança e integridade do certificado, não é possível realizar a prova final em casos de não assistido todos os vídeos, e não obtido a nota superior a 70%. Além deste módulo (mundo) também estudei o segundo módulo e fiz a prova final, porém a geração do certificado é um serviço pago, valor simbólico de R$25,00 na época devido ao curso ser gratuito para ajudar a mante-lo e promover suporte aos usuários (é aquele ditado "Não existe cerveja grátis".. rsrs). Não gerei ainda pois estou desempregado e não é mais o meu contexto (Estou estudando outras tecnologias, no caso atual é Java) além disto o mesmo serviço hoje custa R$45,00.
                                 </p>
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
-                                <img src={cursoEmVideoPython3Mundo01}></img>
                             </div>
                         </div>
                    
@@ -184,6 +184,9 @@ export default function CertificatesScreen() {
                                 </div>
                                 <span>Palestra e Oficina (23/04/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
+                            </div>
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                                <img src={workshopTvBoxFlisol}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
                                 <h3 class="projects-subtitle -certificateSubtitle">Contextualizando o FLISoL</h3>
@@ -218,9 +221,6 @@ export default function CertificatesScreen() {
                                     Sem mais delongas, o projeto referênte a este certificado de participação foi a realização de uma descaracterização de equipamentos piratas fruto de contrabando apreendidos pela PF (Policia Federal), esses equipamentos eram hardwares simples (estilo Raspberry Pi) com S.O personalizado (possivelmente uma distribuição GNU/Linux) no qual realizava uma burlação e promovia acesso gratuíto a canais e serviços de streaming pagos (Telecine, HBO, dentre outros), a descaracterização se deu pela remoção deste S.O e substituição por uma distro GNU/Linux Leve sem interface gráfica e também por um Android. Anteriormente, esses equipamentos iriam ser destruídos e descartados, porém resolveram doá-los para as instituições públicas utiliza-los como material de estudos.
                                 </p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
-                                <img src={workshopTvBoxFlisol}></img>
-                            </div>
                         </div>
                    
                     </article>  
@@ -235,15 +235,15 @@ export default function CertificatesScreen() {
                                 <span>Palestra e Oficina (23/04/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                                <img src={workshopLinguagemC}></img>
+                            </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
                                 <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Introdução e noções básicas da linguagem C (Pode ser considerada "Pai" de muitas outras linguagens modernas as quais parseiam e transformam o seu código fonte em C "por debaixo dos panos"), muitos dos sistemas operacionais em sí são escritos em C.. me fez despertar um grande interesse por ela, porém atualmente estou focado em Java e não quero me sobrecarregar e acabar não aprendendo nada da maneira correta, foi definido uma meta e até eu não atingi-lá não irei descansar rsrs.. a meta é tirar a certificação Java da oracle antes do final do ano que vem (2023).
                                 </p>
 
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
-                                <img src={workshopLinguagemC}></img>
                             </div>
                         </div>
                    
@@ -260,16 +260,16 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 <span>Palestra (27/10/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
+                            <div className="bolsaEnsinoImageWrapper">
+                                <img src={workshopAutomacaoIndustrialP01}></img>
+                                <img src={workshopAutomacaoIndustrialP02}></img>
+                            </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
                                 <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     Optei por participar deste workshop pois era o único mais próximo do meu contexto (desenvolvimento) se comparado as outras opções, foi necessário participar pois a professora de uma das disciplinas considerou uma fração da nota dedicada a um dos projetos do IFCiência, então tivemos que escolher "obrigatóriamente" alguma coisa rsrs..
                                 </p>
 
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper">
-                                <img src={workshopAutomacaoIndustrialP01}></img>
-                                <img src={workshopAutomacaoIndustrialP02}></img>
                             </div>
                         </div>
                    
@@ -285,6 +285,13 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 <span>Palestra (28/10/2021)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
+                            <div className="bolsaEnsinoImageWrapper">
+                                <img src={workshopNodeRed}></img>
+                                <img src={relatorioNodeRedP01}></img>
+                                <img src={relatorioNodeRedP02}></img>
+                                <img src={relatorioNodeRedP03}></img>
+                                <img src={relatorioNodeRedP04}></img>
+                            </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
                                 <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
@@ -293,13 +300,6 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                     Este workshop também foi considerado uma fração da nota na disciplina por alguns professores, abaixo do certificado se encontra o relatório que eu fiz.  
                                 </p>
 
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper">
-                                <img src={workshopNodeRed}></img>
-                                <img src={relatorioNodeRedP01}></img>
-                                <img src={relatorioNodeRedP02}></img>
-                                <img src={relatorioNodeRedP03}></img>
-                                <img src={relatorioNodeRedP04}></img>
                             </div>
                         </div>
                    
@@ -315,6 +315,9 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 <span>Palestra (29/10/2021)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                                <img src={workshopBolsaValores}></img>
+                            </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
                                 <h3 class="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
@@ -323,9 +326,6 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                     me fez abrir a mente sobre e um dia pretendo aprender ao menos o básico, porém é um jogo para quem possuí uma boa verba não sendo o meu caso atual.. rsrs então fica pra próxima. e.e
                                 </p>
 
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
-                                <img src={workshopBolsaValores}></img>
                             </div>
                         </div>
                    
