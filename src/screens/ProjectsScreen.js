@@ -14,7 +14,6 @@ export default function ProjectsScreen() {
         <section id="main-projects--container">
             <div>
                 <h1 className="main-title">&lsaquo;Projetos&rsaquo;</h1>
-                <hr />
                 <div className="wrapper-projects">     
                     <article className="projects-single">
                         <div className="projects-right">

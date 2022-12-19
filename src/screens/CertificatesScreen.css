@@ -8,7 +8,7 @@
 }
 
 #main-certificate--container hr {
-	margin: 1rem;
+	margin: .5rem 0;
 }
 
 /*  ÀREA DA BOLSA ENSINO */
@@ -27,7 +27,6 @@
 	width: 100%;
 	position: relative;
 	border: 4px double black;
-	margin-bottom: 2px;
 }
 
 .projects-subdescription--container.-bolsaEnsinoCertficate {
