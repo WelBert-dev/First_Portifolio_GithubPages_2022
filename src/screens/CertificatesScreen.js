@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
@@ -38,6 +38,20 @@ import './CertificatesScreen.css';
 
 export default function CertificatesScreen() {
 
+    const [flagCeicBug, setFlagCeicBug] = useState(false);
+    useEffect(()=>{
+        if (window.screen.width > 800) {
+            const ceicImageContainer = document.getElementById("ceicInitScroll");
+            Number(ceicImageContainer.scrollTop) == Number(0) ? ceicImageContainer.scrollTop = Number(135.285720825195)
+            : console.log("Bugou o scroll inicial da CEIC ;-;", ceicImageContainer.scrollTop);
+            console.log("Executou", ceicImageContainer.scrollTop.toString());
+            if(ceicImageContainer.scrollTop.toString() === '0'){
+                ceicImageContainer.scrollTop = Number(135.285720825195);
+                setFlagCeicBug(true);
+            }
+        }
+    }, [flagCeicBug])
+
     return (
         <section id="main-certificate--container">
             <div>
@@ -53,7 +67,7 @@ export default function CertificatesScreen() {
                                 <span>Portaria Normativa SLT nº0045/IFSP (18/05/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper">
+                            <div id="ceicInitScroll" className="bolsaEnsinoImageWrapper">
                                 <img src={portariaNormativaCeicP01}></img>
                                 <img src={portariaNormativaCeicP02}></img>
                             </div>
@@ -69,7 +83,6 @@ export default function CertificatesScreen() {
                                 </p>
                             </div>
                         </div>
-                       
                     </article>  
                     <hr />
                     <article className="certificate-single -bolsaEnsinoCertficate">

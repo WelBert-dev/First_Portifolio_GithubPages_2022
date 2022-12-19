@@ -4,7 +4,6 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import './MainNavbar.css';
 
 export default function MainNavbar() {
-
     const navRef = useRef();
 
     const showNavbar = () => {
