@@ -34,8 +34,8 @@ export default function MainNavbar() {
                 <a href="/firstPortifolioGithubPages-2022/#/aboutMe">Sobre</a>
                 <a href="/firstPortifolioGithubPages-2022/#/skills" rel="Link Linguagens">Skills</a>     
                 <a href="/firstPortifolioGithubPages-2022/#/projects" rel="Link Projetos">Projetos</a>
-                <a href="/firstPortifolioGithubPages-2022/#/curriculumVitae" rel="Link Curriculo">Currículo</a>        
                 <a href="/firstPortifolioGithubPages-2022/#/certificates" rel="Link Certificados">Certificados</a>   
+                <a href="/firstPortifolioGithubPages-2022/#/curriculumVitae" rel="Link Curriculo">Currículo</a>        
             </nav>
             <button id="btn-hamburguer" className="nav-btn" onClick={showNavbar}><FaBars /></button>
         </>

@@ -229,9 +229,7 @@ export default function ProjectsScreen() {
                                     </p>
                                 </div>
                             </div>
-                           
-                        </div>
-                        
+                        </div>             
                     </article>
                 </div>
             </div>

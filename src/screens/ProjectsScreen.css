@@ -7,8 +7,6 @@
     gap: .2rem;
     flex-wrap: wrap;
     justify-content: center;
-    padding-top: .5rem;
-    padding-bottom: .5rem;;
     align-items: flex-start;
 }
 
@@ -16,7 +14,7 @@
     border: 4px double black;
     height: 100%;
     width: 100%;
-    margin-bottom: -4px;
+    margin-bottom: -4px !important;
 }
 
 .projects-right {
@@ -137,6 +135,10 @@
     line-height: 1.2rem;
 }
 
+.wrapper-projects hr {
+    margin: 1rem;
+}
+
 .subContainer-bottom {
     border: 4px double black;
     border-bottom-right-radius: 10px;
@@ -164,7 +166,7 @@
         font-size: .8rem;
         max-width: 90%;
     }
-    
+
     .projects-logo {
         max-width: 100%;
         margin: 0 auto;
@@ -179,12 +181,6 @@
 
 @media (max-width: 425px)
 {
-    #main-projects--container .main-title {
-        margin-top: 3rem;
-        margin-bottom: 1rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
     .projects-title {
         font-size: .7rem;     
     }
