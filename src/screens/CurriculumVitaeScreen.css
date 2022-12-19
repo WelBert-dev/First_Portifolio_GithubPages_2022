@@ -483,7 +483,7 @@ padding: .5rem 1rem 0 1rem;
     }
 
     #education span::after {
-        content: 'Salto - SP';
+        content: 'Salto - SP, Brasil';
         position: relative;
         display: block;
         color: #9f9f9f;
@@ -492,7 +492,7 @@ padding: .5rem 1rem 0 1rem;
     }
 
     #education .template__section__title::after {
-        content: 'Fev 2021 - Atualmente';
+        content: 'Fev 2021 - Dez 2022';
         position: relative;
         display: block;
         color: #9f9f9f;
@@ -510,7 +510,7 @@ padding: .5rem 1rem 0 1rem;
     }
 
     #work-experience span::after {
-        content: 'São Paulo, Brasil';
+        content: 'Salto - SP, Brasil';
         position: relative;
         display: block;
         color: #9f9f9f;

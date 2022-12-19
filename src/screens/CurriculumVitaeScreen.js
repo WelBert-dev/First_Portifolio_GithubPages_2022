@@ -120,9 +120,9 @@ export default function CurriculumVitaeScreen() {
                                          <div className="template__section__container">
                                          <div data-subsection-position="0" className="template__section template__section__experience template__section--border template__section--twoColumns">
                                              <div className="template__section__left">
-                                                 <p className="template__section__location">São Paulo, Brasil</p>
+                                                 <p className="template__section__location">Salto - SP, Brasil</p>
                                                  <p className="template__section__startDate">Nov 2018</p>
-                                                 <p className="template__section__endDate">Nov 2020</p>
+                                                 <p className="template__section__endDate">Nov 2020 <br/>(2 anos)</p>
                                              </div>
                                              <div className="template__section__right">
                                                  <p className="template__section__position">Almoxarife</p>
@@ -146,10 +146,10 @@ export default function CurriculumVitaeScreen() {
                                          <div className="template__section__container">
                                          <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
                                              <div className="template__section__left">
-                                                 <p className="template__section__location">Salto - SP </p>
+                                                 <p className="template__section__location">Salto - SP, Brasil </p>
                                                  <div className="template__section__date">
                                                      <p className="template__section__startDate">Fev 2021</p>
-                                                     <p className="template__section__endDate">Atualmente</p>
+                                                     <p className="template__section__endDate">Dez 2022 <br/>(2 anos)</p>
                                                  </div>
  
                                              </div>
@@ -159,18 +159,6 @@ export default function CurriculumVitaeScreen() {
                                                  <p className="template__section__description">Curso voltado para programação e desenvolvimento web, sendo no primeiro ano voltado na stack backend e no segundo ano voltado nas tecnologias frontend, desde a parte de levantamento de requisitos (história de usuário), análise (modelagem caso de uso), Prototipação (baixa, média e alta fidelidade), Projeto (tecnologias), até a parte de desenvolvimento em sí, fora os estudos pessoais e também participo das ações da instituição, para agregar ainda mais conhecimento/valor.</p>
                                              </div>
                                          </div>
-                                         </div>
-                                     </section>
-                                     <section data-section="projects" data-section-id="c0983838-e0f6-4756-b290-4779e384451c" id="projects" className="template__section__simple--border">
-                                         <p className="template__section__title"><span>Projetos</span></p>
-                                         <div className="template__section__container">
-                                             <div className="template__section__simple">
-                                                 <div>Clone da Amazon web E2E (Ponta a ponta com responsividade)</div>
-                                                 <div>+ Backend: API Asp.NetCore Microservices MVC , 80% REST, EntityFrameworkCore, Migrations, Mapeamento/parsing Entidade &lt;=&gt; DTO's (AutoMapper).</div>
-                                                 <div>+ Frontend: ReactJs, Redux, Hooks, Flexbox, Grid, HTML semântico.</div>             
-                                                 <div>- Dentre outros no Github...</div>
-                                                 <div>- Link: https://www.github.com/WelBert-dev</div>
-                                             </div>
                                          </div>
                                      </section>
                                  </div>
