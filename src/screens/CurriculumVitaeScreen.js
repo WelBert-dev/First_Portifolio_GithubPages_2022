@@ -108,7 +108,7 @@ export default function CurriculumVitaeScreen() {
                                          <section data-section="objective" data-section-id="fb6610c3-3c39-4b91-aa96-291f25c8331d" data-subsection-position="0" id="objective" className="">
                                          <div className="template__section__container">
                                              <div className="template__section__simple">
-                                                 <div>Desenvolvedor e entusiasta do mundo da programação e tecnologia, estudando todos os dias de segunda a segunda, e fazendo curso tecnico em informatica voltado na programação e na stack web2, com objetivo de após o termino do curso corrente, ingressar em B.C.C no IFSP, continuar a estudar as tecnologias (springboot, reactJS, MySQL Avançado, CSS Avançado (Animações)) e um dia pretendo ser FULLSTACK na programação Web (Desktop e Mobile) e também pretendo estudar mais sobre distro GNU/Linux, e após senioridade na web2, pretendo estudar Web3 e BlockChain. Planos para 2023: Tirar certificação java da Oracle.</div>
+                                                 <div>Desenvolvedor e entusiasta do mundo da programação e tecnologia, estudando todos os dias de segunda a segunda, e fazendo curso técnico em informática voltado na programação e na stack web2, com objetivo de após o termino do curso corrente, ingressar em B.C.C no IFSP, continuar a estudar as tecnologias (Java, ReactJS, MySQL, CSS Avançado (Animações)) e um dia pretendo ser FULLSTACK na programação Web (Desktop e Mobile) e também pretendo estudar mais sobre distro GNU/Linux, e após senioridade na web2, pretendo estudar Web3 e BlockChain. Planos para 2023: Tirar certificação java da Oracle.</div>
                                              </div>
                                          </div>
                                          </section>
@@ -154,7 +154,7 @@ export default function CurriculumVitaeScreen() {
  
                                              </div>
                                              <div className="template__section__right">
-                                                 <p className="template__section__degree">Tecnico em Informática</p>
+                                                 <p className="template__section__degree">Técnico em Informática</p>
                                                  <p className="template__section__college">Instituto Federal de Educação Ciências e Tecnologias de São Paulo</p>
                                                  <p className="template__section__description">Curso voltado para programação e desenvolvimento web, sendo no primeiro ano voltado na stack backend e no segundo ano voltado nas tecnologias frontend, desde a parte de levantamento de requisitos (história de usuário), análise (modelagem caso de uso), Prototipação (baixa, média e alta fidelidade), Projeto (tecnologias), até a parte de desenvolvimento em sí, fora os estudos pessoais e também participo das ações da instituição, para agregar ainda mais conhecimento/valor.</p>
                                              </div>

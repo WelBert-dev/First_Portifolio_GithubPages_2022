@@ -5,9 +5,9 @@
 }
 
 :root {
-  --main-color: rgb(13 159 13);
-  --second-color: black;
-  --main-fontFamily: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  --main-color: rgb(13 159 13) !important;
+  --second-color: black !important;
+  --main-fontFamily: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji" !important;
 }
 
 a {
