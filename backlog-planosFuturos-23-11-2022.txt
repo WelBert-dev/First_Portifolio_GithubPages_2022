@@ -17,7 +17,7 @@ cor azul claro bonita: #2aceff;
     
 - Novas features:
   - Adicionar possíbilidade de entrar em contato pelo proprio site,
-    Com campos textos que seram enviados para algum log do servidor, assim eu entro em contato. (Contrame meus serviços).
+    Com campos textos que seram enviados para algum log do servidor, assim eu entro em contato. (Contrate meus serviços).
     
   - Adicionar funcionalidade no onHover dos Icons do footer, para que quando acontecer sair um rato de "baixo" deles.
   
@@ -39,7 +39,8 @@ cor azul claro bonita: #2aceff;
 - AboutMeScreen:
   
   //Modificar layout do terminal: além da fonte, trocar a cor do usuário logado no shell. - ✓ OK (26/11/2022)
-  - Remover a ul com o endereço, ta meio perdido na tela.
+  //Remover a ul com o endereço, ta meio perdido na tela. ✓ OK
+  
   - Alterar o fundo/voltas com códigos, ou com algo relacionado a tecnologia/T.I.
   
 
@@ -136,16 +137,18 @@ cor azul claro bonita: #2aceff;
   
   
 - CurriculumVitaeScreen:
-  - Modificar a banda/seção "Habilidades" na coluna a esquerda, pois faltam adicionar novas Skills e colocar a data de estudos correspondentes,
+  //Modificar a banda/seção "Habilidades" na coluna a esquerda, pois faltam adicionar novas Skills e colocar a data de estudos correspondentes,
     (seguindo a mesma lógica da adição dessas informações em SkillScreens). Para dar o entendimento de que eu não estudo essas tec mais. 
-    (Essa informação será apenas para Skills "obsoletas").
+    (Essa informação será apenas para Skills "obsoletas"). ✓ OK
+  
     
  
 - CertificatesScreen:
   - Estudar mais sobre como inserir html dentro de html
   - Ou Pesquisar por sites igual ao PDF2HTML pois preciso gerar html com id único.
   - Pesquisar por portifólios e verificar os layouts adotados para este contexto
-  - Escrever descrições sobre cada um dos certificados
+  //Escrever descrições sobre cada um dos certificados. ✓ OK
+  
   - Talvez separar em seções de acordo com categorias (workshops, palestras, cursos, e etc)
   - Estudar como inserir PDFs em HTML caso não encontre sistemas que geram PDF2HTML pois aparentemente todos utilizam a mesma lib que gera.
 
