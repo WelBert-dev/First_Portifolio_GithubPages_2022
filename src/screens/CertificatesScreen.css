@@ -16,13 +16,15 @@
 .certificate-single.-bolsaEnsinoCertficate > div {
 	max-width: 800px;
 	margin: 0 auto;
-	background-color: #226015;
+	background: linear-gradient(90deg,#fff 0,6%,#2f9919,#267b15);
 	border-radius: 10px;
+	border-right: 4px double black;
+    border-left: 4px double black;
 }
 
 .certificate-single.-bolsaEnsinoCertficate img {
 	background-color: white;
-	max-width: 98%;
+	width: 100%;
 	position: relative;
 	border: 4px double black;
 	margin-bottom: 2px;
