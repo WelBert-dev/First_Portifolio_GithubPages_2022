@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 import './MainNavbar.css';
@@ -25,16 +25,35 @@ export default function MainNavbar() {
         }  
     };
 
+    const [navBarEmColumn, setNavBarEmColumn] = useState(false);
+    console.log(navBarEmColumn);
+
+    useEffect(()=>{
+        if(window.location.href.substring(1).split("/")[5] == 'projects'){
+            const navBarElement = document.getElementById("navbar-container");
+            navBarElement.style.flexDirection = "column";
+            navBarElement.style.width = "inherit"; 
+    
+            const sectionElement = document.getElementById("main-projects--container");
+            sectionElement.style.padding = "2rem 0 1rem 15%";
+            console.log("CARAIo entrou", window.location.href.substring(1).split("/")[5]);
+        }else {
+            const navBarElement = document.getElementById("navbar-container");
+            navBarElement.style.flexDirection = "row";
+            navBarElement.style.width = "100%"; 
+        }
+    }, [navBarEmColumn]);
+
     return (
         <>
             <nav id="navbar-container" ref={navRef} >
                 <button id="nav-close-btn" className="nav-btn nav-close-btn" onClick={showNavbar}><FaTimes /></button>
                 <a href="/firstPortifolioGithubPages-2022">Home</a>
-                <a href="/firstPortifolioGithubPages-2022/#/aboutMe">Sobre</a>
-                <a href="/firstPortifolioGithubPages-2022/#/skills" rel="Link Linguagens">Skills</a>     
-                <a href="/firstPortifolioGithubPages-2022/#/projects" rel="Link Projetos">Projetos</a>
-                <a href="/firstPortifolioGithubPages-2022/#/certificates" rel="Link Certificados">Certificados</a>   
-                <a href="/firstPortifolioGithubPages-2022/#/curriculumVitae" rel="Link Curriculo">Currículo</a>        
+                <a href="/firstPortifolioGithubPages-2022/#/aboutMe" onClick={() => setNavBarEmColumn(false)}>Sobre</a>
+                <a href="/firstPortifolioGithubPages-2022/#/skills" rel="Link Linguagens" onClick={() => setNavBarEmColumn(false)}>Skills</a>     
+                <a href="/firstPortifolioGithubPages-2022/#/projects" rel="Link Projetos" onClick={() => setNavBarEmColumn(true)}>Projetos</a>
+                <a href="/firstPortifolioGithubPages-2022/#/certificates" rel="Link Certificados" onClick={() => setNavBarEmColumn(true)}>Certificados</a>   
+                <a href="/firstPortifolioGithubPages-2022/#/curriculumVitae" rel="Link Curriculo" onClick={() => setNavBarEmColumn(false)}>Currículo</a>        
             </nav>
             <button id="btn-hamburguer" className="nav-btn" onClick={showNavbar}><FaBars /></button>
         </>

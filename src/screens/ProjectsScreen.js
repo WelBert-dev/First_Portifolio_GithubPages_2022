@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import './ProjectsScreen.css';
 
@@ -10,6 +10,18 @@ import auauMiauNoFrameworkAmostra from '../resources/auauMiauNoFramework.png';
 import restauranteIfspAmostra from '../resources/restauranteIfspAmostra.png';
 
 export default function ProjectsScreen() {
+    useEffect(()=>{
+        if(window.location.href.substring(1).split("/")[5] == 'projects'){
+            const navBarElement = document.getElementById("navbar-container");
+            navBarElement.style.flexDirection = "column";
+            navBarElement.style.width = "inherit"; 
+    
+            const sectionElement = document.getElementById("main-projects--container");
+            sectionElement.style.padding = "2rem 0 1rem 15%";
+            console.log("CARAIo");
+        }
+    });
+
     return (
         <section id="main-projects--container">
             <div>
