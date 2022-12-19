@@ -233,7 +233,6 @@ export default function ProjectsScreen() {
                         </div>
                         
                     </article>
-                    <hr />
                 </div>
             </div>
         </section>

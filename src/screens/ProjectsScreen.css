@@ -22,7 +22,6 @@
 .projects-right {
     border-radius: 10px;
     background: linear-gradient(90deg,#fff 0,6%,#2f9919,#267b15);
-    flex-grow: 1fr;
     max-width: 800px;
     border-left: 4px double black;
     border-right: 4px double black;
@@ -165,13 +164,7 @@
         font-size: .8rem;
         max-width: 90%;
     }
-
-    .projects-single {
-        flex-direction: column;
-    }
-    .projects-single {
-        flex-direction: column;
-    }
+    
     .projects-logo {
         max-width: 100%;
         margin: 0 auto;

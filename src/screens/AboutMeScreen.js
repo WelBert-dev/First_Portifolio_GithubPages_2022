@@ -30,11 +30,11 @@ export default function AboutMeScreen() {
                         </div>
                         <p>
                         <span className="main-sobre--shellUser">root@r2d2</span>:<span className="main-sobre--shellDir">/home/welbert/aboutMe</span># \ <br/>> Desenvolvedor e entusiasta do mundo da programação e tecnologia, focado na web2.0 de ponta a ponta 
-                        com boa base na stack Frontend (ReactJs) e atualmente estudando Backend (Springboot), buscando experiência
+                        com boa base na stack Frontend (ReactJs) e atualmente estudando Backend (Java), buscando experiência
                         em projetos reais e/ou em produção, vivendo e estudando programação todos os dias de segunda a segunda a 2 anos,
-                        pois alguém uma vez me disse "Obsessão vence do talento natural", e esta frase vem fazendo mais sentido cada dia!
+                        pois alguém uma vez me disse "Obsessão vence do talento natural", e esta frase vem fazendo mais sentido a cada dia!
                         Sonhador e de uma familia humilde, um dia com certeza irei proporcionar melhoria aos meus..
-                        "Um leão por dia", acredito que um dia chego la!"
+                        "Um leão por dia", acredito que um dia chego la!
                         Obs: Trabalhando como freelancer nos dias atuais.
                         </p>
                     </div>
