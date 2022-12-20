@@ -40,13 +40,13 @@ export default function CertificatesScreen() {
 
     const [flagCeicBug, setFlagCeicBug] = useState(false);
     useEffect(()=>{
-        if (window.screen.width > 800) {
+        if (window.screen.width >= 810) {
             const ceicImageContainer = document.getElementById("ceicInitScroll");
-            Number(ceicImageContainer.scrollTop) == Number(0) ? ceicImageContainer.scrollTop = Number(135.285720825195)
+            Number(ceicImageContainer.scrollTop) == Number(0) ? ceicImageContainer.scrollTop = Number(155.285720825195)
             : console.log("Bugou o scroll inicial da CEIC ;-;", ceicImageContainer.scrollTop);
             console.log("Executou", ceicImageContainer.scrollTop.toString());
             if(ceicImageContainer.scrollTop.toString() === '0'){
-                ceicImageContainer.scrollTop = Number(135.285720825195);
+                ceicImageContainer.scrollTop = Number(155.285720825195);
                 setFlagCeicBug(true);
             }
         }
@@ -126,7 +126,7 @@ export default function CertificatesScreen() {
                                 <span>Plataforma NetAcad (07/2022 até 10/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                            <div className="bolsaEnsinoImageWrapper">
                                 <img src={ciscoModule01Amostra}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -149,7 +149,7 @@ export default function CertificatesScreen() {
                                 <span>Plataforma NetAcad (10/2022 até 12/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                            <div className="bolsaEnsinoImageWrapper">
                                 <img src={ciscoModule02Amostra}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -173,7 +173,7 @@ export default function CertificatesScreen() {
                                 <span>Plataforma Curso Em Video (05/2021)</span>
                                 <p>Validação oficial do certificado clicando no botão a cima</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                            <div className="bolsaEnsinoImageWrapper">
                                 <img src={cursoEmVideoPython3Mundo01}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -198,7 +198,7 @@ export default function CertificatesScreen() {
                                 <span>Palestra e Oficina (23/04/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                            <div className="bolsaEnsinoImageWrapper">
                                 <img src={workshopTvBoxFlisol}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">

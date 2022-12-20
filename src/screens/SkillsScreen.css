@@ -301,7 +301,7 @@ p[data-value] {
   /* THE END */
 
 
-  @media (max-width: 800px)
+  @media (max-width: 810px)
 {
     .wrapper-skills {
         max-width: fit-content;

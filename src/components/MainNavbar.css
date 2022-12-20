@@ -58,7 +58,7 @@ header nav a:hover {
     text-align: left;
 }
 
-@media (max-width: 800px)
+@media (max-width: 810px)
 {
     .nav-btn {
         display: block;
@@ -72,6 +72,10 @@ header nav a:hover {
         padding: .4rem .4rem 0 .4rem;
         top: 0;
         left: 0;
+    }
+
+    #main-projects--container, #main-certificate--container {
+        padding-left: 0 !important;
     }
 
     /*#btn-hamburguer::after {

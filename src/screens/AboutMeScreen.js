@@ -29,7 +29,7 @@ export default function AboutMeScreen() {
 
                         </div>
                         <p>
-                        <span className="main-sobre--shellUser">root@r2d2</span>:<span className="main-sobre--shellDir">/home/welbert/aboutMe</span># \ <br/>> Desenvolvedor e entusiasta do mundo da programação e tecnologia, focado na web2.0 de ponta a ponta 
+                        <span className="main-sobre--shellUser">root@r2d2</span>:<span className="main-sobre--shellDir">/home/welbert/aboutMe</span># \ <br/>&rsaquo;Desenvolvedor e entusiasta do mundo da programação e tecnologia, focado na web2.0 de ponta a ponta 
                         com boa base na stack Frontend (ReactJs) e atualmente estudando Backend (Java), buscando experiência
                         em projetos reais e/ou em produção, vivendo e estudando programação todos os dias de segunda a segunda a 2 anos,
                         pois alguém uma vez me disse "Obsessão vence do talento natural", e esta frase vem fazendo mais sentido a cada dia!
