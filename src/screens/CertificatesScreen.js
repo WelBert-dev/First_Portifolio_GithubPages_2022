@@ -39,18 +39,31 @@ import './CertificatesScreen.css';
 export default function CertificatesScreen() {
 
     const [flagCeicBug, setFlagCeicBug] = useState(false);
+    const [flagCursoEmVideoBug, setFlagCursoEmVideoBug] = useState(false);
+
     useEffect(()=>{
         if (window.screen.width >= 810) {
+            // seta o scroll da CEIC
             const ceicImageContainer = document.getElementById("ceicInitScroll");
-            Number(ceicImageContainer.scrollTop) == Number(0) ? ceicImageContainer.scrollTop = Number(155.285720825195)
+            Number(ceicImageContainer.scrollTop) == Number(0) ? ceicImageContainer.scrollTop = Number(170.285720825195)
             : console.log("Bugou o scroll inicial da CEIC ;-;", ceicImageContainer.scrollTop);
             console.log("Executou", ceicImageContainer.scrollTop.toString());
             if(ceicImageContainer.scrollTop.toString() === '0'){
-                ceicImageContainer.scrollTop = Number(155.285720825195);
+                ceicImageContainer.scrollTop = Number(170.285720825195);
                 setFlagCeicBug(true);
             }
+
+            // seta o scroll do curso em video
+            const cursoEmVideoImageContainer = document.getElementById("cursoEmVideoInitScroll");
+            Number(cursoEmVideoImageContainer.scrollTop) == Number(0) ? cursoEmVideoImageContainer.scrollTop = Number(130.285720825195)
+            : console.log("Bugou o scroll inicial do Curso Em Video ;-;", cursoEmVideoImageContainer.scrollTop);
+            console.log("Executou", cursoEmVideoImageContainer.scrollTop.toString());
+            if(cursoEmVideoImageContainer.scrollTop.toString() === '0'){
+                cursoEmVideoImageContainer.scrollTop = Number(130.285720825195);
+                setFlagCursoEmVideoBug(true);
+            }
         }
-    }, [flagCeicBug])
+    }, [flagCeicBug, flagCursoEmVideoBug])
 
     return (
         <section id="main-certificate--container">
@@ -173,7 +186,7 @@ export default function CertificatesScreen() {
                                 <span>Plataforma Curso Em Video (05/2021)</span>
                                 <p>Validação oficial do certificado clicando no botão a cima</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper">
+                            <div id="cursoEmVideoInitScroll" className="bolsaEnsinoImageWrapper">
                                 <img src={cursoEmVideoPython3Mundo01}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -229,7 +242,7 @@ export default function CertificatesScreen() {
                                     </ul>
                                 </p>
 
-                                <h3 class="projects-subtitle -certificateSubtitle">Contextualizando o Projeto TV Box</h3>
+                                <h3 class="projects-subtitle -certificateSubtitle -minimalFont">Contextualizando o Projeto TV Box</h3>
                                 <p>
                                     Sem mais delongas, o projeto referênte a este certificado de participação foi a realização de uma descaracterização de equipamentos piratas fruto de contrabando apreendidos pela PF (Policia Federal), esses equipamentos eram hardwares simples (estilo Raspberry Pi) com S.O personalizado (possivelmente uma distribuição GNU/Linux) no qual realizava uma burlação e promovia acesso gratuíto a canais e serviços de streaming pagos (Telecine, HBO, dentre outros), a descaracterização se deu pela remoção deste S.O e substituição por uma distro GNU/Linux Leve sem interface gráfica e também por um Android. Anteriormente, esses equipamentos iriam ser destruídos e descartados, porém resolveram doá-los para as instituições públicas utiliza-los como material de estudos.
                                 </p>
@@ -248,7 +261,7 @@ export default function CertificatesScreen() {
                                 <span>Palestra e Oficina (23/04/2022)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                            <div className="bolsaEnsinoImageWrapper">
                                 <img src={workshopLinguagemC}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -328,7 +341,7 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 <span>Palestra (29/10/2021)</span>
                                 <p>Documento oficial clicando no botão a cima</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                            <div className="bolsaEnsinoImageWrapper">
                                 <img src={workshopBolsaValores}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">

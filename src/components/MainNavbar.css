@@ -113,7 +113,7 @@ header nav a:hover {
         transform: translateX(-150vw);
         background-color: #464f43;
         border: 4px double black;
-        width: 50vw;
+        width: inherit;
         padding: 0 1rem 1rem 1rem;
         z-index: 3;
     }

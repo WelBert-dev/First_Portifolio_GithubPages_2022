@@ -48,7 +48,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-height: 50vh;
+	max-height: 60vh;
 	overflow: auto;
 }
 
@@ -81,5 +81,9 @@ Article.-certificateLastChildArticle{
 {
 	.bolsaEnsinoImageWrapper {
 		max-height: 70vh;
+	}
+
+	.projects-subtitle.-certificateSubtitle.-minimalFont {
+		font-size: .6rem;
 	}
 }
