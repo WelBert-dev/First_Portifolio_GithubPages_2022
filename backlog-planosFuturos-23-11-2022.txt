@@ -24,6 +24,8 @@ cor azul claro bonita: #2aceff;
   - Modificar layout geral para simular uma Tv tubo retro com as informações atuais do site dentro dela.
     - E para contextos Mobile (telas menores ou iguais a 800px) simular um gameboy retro, ao invés de uma Tv.
   
+  - Buscar mais referência sobre futurism no Pinterest para colocar de fundo.
+  
 - HomeScreen:
   //Ajustar a disposição do eixo Y centralizando a logo "Desenvolvedor FullStack...". - ✓ OK (26/11/2022)
   
