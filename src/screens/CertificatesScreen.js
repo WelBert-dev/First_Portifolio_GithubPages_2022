@@ -84,7 +84,7 @@ export default function CertificatesScreen() {
                                 <span>Portaria Normativa SLT nº0045/IFSP (18/05/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Verificar autenticidade manualmente: </span>
-                                    <span className="certificates-autenticCode--span">www.suap.ifsp.edu.br/autenticar-documento/</span>
+                                    <span className="certificates-autenticCode--span">suap.ifsp.edu.br/autenticar-documento/</span>
                                     <span className="certificates-autenticCode--span certificates-autenticCode--spanBorderTopRadius">Código Verificador: </span>
                                     <span className="certificates-autenticCode--span">347883</span>
                                     <hr className="certificates-autenticCode--spanSeparator -widthSpanSeparator" />
@@ -209,7 +209,7 @@ export default function CertificatesScreen() {
                                 <span>Plataforma Curso Em Video (05/2021)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Verificar autenticidade manualmente: </span>
-                                    <span className="certificates-autenticCode--span">www.cursoemvideo.com/validacao-de-certificado/</span>
+                                    <span className="certificates-autenticCode--span">cursoemvideo.com/validacao-de-certificado/</span>
                                     <span className="certificates-autenticCode--span certificates-autenticCode--spanBorderTopRadius -curoEmVideo">Código de Autenticidade: </span>
                                     <span className="certificates-autenticCode--span">38645-66E2-9</span>
                                 </div>

@@ -107,7 +107,7 @@ hr.certificates-autenticCode--spanSeparator {
 }
 
 span.certificates-autenticCode--spanBorderTopRadius {
-	padding: 0px 29%;
+	padding: 0px 27%;
 	width: max-content;
 	border-top: 3px double black;
 	border-top-left-radius: 10px;
@@ -115,7 +115,7 @@ span.certificates-autenticCode--spanBorderTopRadius {
 }
 
 span.certificates-autenticCode--spanBorderTopRadius.-curoEmVideo {
-	padding: 0px 25%;
+	padding: 0px 23%;
 }
 
 hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
