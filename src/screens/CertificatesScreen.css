@@ -70,6 +70,59 @@ Article.-certificateLastChildArticle{
 	padding: .5rem;
 }
 
+span.certificates-autenticCode--span {
+	color: yellow;
+	font-weight: bold;
+    text-shadow: 1px 1px black;
+    font-size: .7rem;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
+	/* font-family: var(--main-fontFamily); */
+}
+
+h1.main-title.-complementaryActivities {
+	font-size: 1rem;
+}
+
+div.certificates-autenticCode--container {
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 3px double #000;
+	margin: 4px 0 1px 0;
+	margin-left: 4px;
+	max-width: max-content;
+	padding: 1px 3px;
+	border-radius: 5px;
+	background-color: #255325;
+}
+
+hr.certificates-autenticCode--spanSeparator {
+	margin: 0 !important;
+	width: 100%;
+	border: 1px double #000;
+	height: 3px;
+}
+
+span.certificates-autenticCode--spanBorderTopRadius {
+	padding: 0px 29%;
+	width: max-content;
+	border-top: 3px double black;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+
+span.certificates-autenticCode--spanBorderTopRadius.-curoEmVideo {
+	padding: 0px 25%;
+}
+
+hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
+	width: 102%;
+}
+
+
 @media (max-width: 810px)
 {
 	.certificate-single.-bolsaEnsinoCertficate > div {
