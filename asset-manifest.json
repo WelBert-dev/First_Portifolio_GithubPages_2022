@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/firstPortifolioGithubPages-2022/static/css/main.359efc86.css",
-    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.b483b661.js",
+    "main.css": "/firstPortifolioGithubPages-2022/static/css/main.75fcf27e.css",
+    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.52b6bece.js",
     "static/media/NetFlixCloneWeb.gif": "/firstPortifolioGithubPages-2022/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/diploma-tecnicoInformatica-ifsp.png": "/firstPortifolioGithubPages-2022/static/media/diploma-tecnicoInformatica-ifsp.815cb1c23452e39aa7ec.png",
     "static/media/relatorioNodeRed2021-parte04.png": "/firstPortifolioGithubPages-2022/static/media/relatorioNodeRed2021-parte04.c732c0b49e41f666f35f.png",
@@ -36,11 +36,11 @@
     "static/media/wellisonPerfil.jpg": "/firstPortifolioGithubPages-2022/static/media/wellisonPerfil.5ad3be0ec95d8bb0cc3d.jpg",
     "index.html": "/firstPortifolioGithubPages-2022/index.html",
     "static/media/portariaNormativaCeic-parte02.png": "/firstPortifolioGithubPages-2022/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
-    "main.359efc86.css.map": "/firstPortifolioGithubPages-2022/static/css/main.359efc86.css.map",
-    "main.b483b661.js.map": "/firstPortifolioGithubPages-2022/static/js/main.b483b661.js.map"
+    "main.75fcf27e.css.map": "/firstPortifolioGithubPages-2022/static/css/main.75fcf27e.css.map",
+    "main.52b6bece.js.map": "/firstPortifolioGithubPages-2022/static/js/main.52b6bece.js.map"
   },
   "entrypoints": [
-    "static/css/main.359efc86.css",
-    "static/js/main.b483b661.js"
+    "static/css/main.75fcf27e.css",
+    "static/js/main.52b6bece.js"
   ]
 }
