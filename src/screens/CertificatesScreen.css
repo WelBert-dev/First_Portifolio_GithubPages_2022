@@ -74,7 +74,7 @@ span.certificates-autenticCode--span {
 	color: yellow;
 	font-weight: bold;
     text-shadow: 1px 1px black;
-    font-size: .7rem;
+    font-size: .9rem;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
@@ -97,6 +97,7 @@ div.certificates-autenticCode--container {
 	padding: 1px 3px;
 	border-radius: 5px;
 	background-color: #255325;
+	line-height: 1.3rem;
 }
 
 hr.certificates-autenticCode--spanSeparator {
@@ -126,6 +127,19 @@ hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
 	width: 102%;
 }
 
+.projects-title.-certificate--title {
+	margin-bottom: 3px;
+} 
+
+.projects-title--container > span.-certificate--span{
+	font-size: 1rem;
+	background-color: #000;
+	border-radius: 5px;
+	padding: 2px;
+	text-align: center;
+	margin-bottom: 3px;
+}
+
 
 @media (max-width: 810px)
 {
@@ -143,4 +157,10 @@ hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
 	.projects-subtitle.-certificateSubtitle.-minimalFont {
 		font-size: .6rem;
 	}
+
+	.projects-title--container > span.-certificate--span{
+		font-size: .8rem;
+	}
+
+	
 }

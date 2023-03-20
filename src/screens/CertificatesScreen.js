@@ -75,18 +75,18 @@ export default function CertificatesScreen() {
         <section id="main-certificate--container">
             <div>
                 
-                <h1 className="main-title">&lsaquo;Formação Acadêmica Nível Técnico&rsaquo;</h1>
+                <h1 className="main-title -complementaryActivities">&lsaquo;Formação Acadêmica Nível Técnico&rsaquo;</h1>
             
                 <div>
                 <article className="certificate-single -bolsaEnsinoCertficate">
                     <div>
                         <div className="projects-title--container -certificateTitleContainer">
                             <div>
-                                <h3 className="projects-title">Técnico em Informática - Diploma</h3>
+                                <h3 className="projects-title -certificate--title">Técnico em Informática</h3>
                                 <a href="https://sistec.mec.gov.br/validadenacional" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                             </div>
-                            <span>Instituto Federal de Educação, Ciências e Tecnologias de São Paulo - Campús Salto (IFSP)</span>
-                            <span>C/H: 1234 horas (01/02/2021 - 31/12/2022)</span>
+                            <span className="-certificate--span">Instituto Federal de Educação, Ciências e Tecnologias de São Paulo - Campús Salto (IFSP)</span>
+                            <span className="-certificate--span">C/H: 1234 horas (01/02/2021 - 31/12/2022)</span>
                             <div className="certificates-autenticCode--container">
                                 <span className="certificates-autenticCode--span">Verificar autenticidade SISTEC: </span>
                                 <span className="certificates-autenticCode--span">sistec.mec.gov.br/validadenacional</span>
@@ -125,10 +125,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">IFSP CEIC - Aluno representante do curso</h3>
+                                    <h3 className="projects-title -certificate--title">IFSP CEIC - Aluno representante do curso</h3>
                                     <a href="https://suap.ifsp.edu.br/documento_eletronico/imprimir_documento_pdf/347883/carta/?hash=c70a71e451bbec4c4f11e9f0daf5df06ae0c02eb2d637901ffd435e78f4600a375e066ffb8b2d0ccbd9f11dd47ff6df6e763c69f0d94f82ec0bd3f48af1ce164" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>Portaria Normativa SLT nº0045/IFSP (18/05/2022)</span>
+                                <span className="-certificate--span">Portaria Normativa SLT nº0045/IFSP (18/05/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Verificar autenticidade manualmente: </span>
                                     <span className="certificates-autenticCode--span">suap.ifsp.edu.br/autenticar-documento/</span>
@@ -163,10 +163,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">IFSP Bolsa Ensino - Programação</h3>
+                                    <h3 className="projects-title -certificate--title">IFSP Bolsa Ensino - Programação</h3>
                                     <a href="https://drive.ifsp.edu.br/s/OjG9YuCEPhF3LJt" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>Edital 002/2022 - DRG/SLT (04/2022 até 06/2022)</span>
+                                <span className="-certificate--span">Edital 002/2022 - DRG/SLT (04/2022 até 06/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
                                 </div>
@@ -201,10 +201,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">Java Avançado - Fundação Bradesco</h3>
+                                    <h3 className="projects-title -certificate--title">Java Avançado - Fundação Bradesco</h3>
                                     <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>C/H: 16 horas - CEUNSP (06/03/2023)</span>
+                                <span className="-certificate--span">C/H: 16 horas - CEUNSP (06/03/2023)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
                                     <span className="certificates-autenticCode--span">5E4882C8-BA82-455F-BACB-4C2BFB14BE94</span>
@@ -239,10 +239,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">HTML5 Avançado - Fundação Bradesco</h3>
+                                    <h3 className="projects-title -certificate--title">HTML5 Avançado - Fundação Bradesco</h3>
                                     <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>C/H: 6 horas - CEUNSP (07/03/2023)</span>
+                                <span className="-certificate--span">C/H: 6 horas - CEUNSP (07/03/2023)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
                                     <span className="certificates-autenticCode--span">DA64D586-173B-4AB9-B837-B0DE372802C3</span>
@@ -259,10 +259,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">Inovando com CSS - Fundação Bradesco</h3>
+                                    <h3 className="projects-title -certificate--title">Inovando com CSS - Fundação Bradesco</h3>
                                     <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>C/H: 26 horas - CEUNSP (08 até 10/03/2023)</span>
+                                <span className="-certificate--span">C/H: 26 horas - CEUNSP (08 até 10/03/2023)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
                                     <span className="certificates-autenticCode--span">BB8AD7E2-7F03-4898-A5A1-61DE77B5E688</span>
@@ -283,10 +283,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">Cybersecurity Essentials Módulo 01 - Cisco</h3>
+                                    <h3 className="projects-title -certificate--title">Cybersecurity Essentials Módulo 01 - Cisco</h3>
                                     <a href="https://www.netacad.com/portal/user/1040281088/learning-transcript" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>Plataforma NetAcad (07/2022 até 10/2022)</span>
+                                <span className="-certificate--span">Plataforma NetAcad (07/2022 até 10/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, DOWNLOAD do doc. oficial no botão a cima</span>
                                 </div>
@@ -309,10 +309,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">Cybersecurity Essentials Módulo 02 - Cisco</h3>
+                                    <h3 className="projects-title -certificate--title">Cybersecurity Essentials Módulo 02 - Cisco</h3>
                                     <a href="https://www.netacad.com/portal/user/1040281088/learning-transcript" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>Plataforma NetAcad (10/2022 até 12/2022)</span>
+                                <span className="-certificate--span">Plataforma NetAcad (10/2022 até 12/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, DOWNLOAD do doc. oficial a cima</span>
                                 </div>
@@ -336,10 +336,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">Python3 Mundo01 (Módulo 01) - Curso Em Video</h3>
+                                    <h3 className="projects-title -certificate--title">Python3 Mundo01 (Módulo 01) - Curso Em Video</h3>
                                     <a href="https://www.cursoemvideo.com/validacao-de-certificado/?codigo=38645-66E2-9" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>Plataforma Curso Em Video (05/2021)</span>
+                                <span className="-certificate--span">Plataforma Curso Em Video (05/2021)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Verificar autenticidade manualmente: </span>
                                     <span className="certificates-autenticCode--span">cursoemvideo.com/validacao-de-certificado/</span>
@@ -369,10 +369,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">Descaracterização TVBOX - IFSP FLISoL 2022</h3>
+                                    <h3 className="projects-title -certificate--title">Descaracterização TVBOX - IFSP FLISoL 2022</h3>
                                     <a href="https://sistemas.slt.ifsp.edu.br/certificado/?cod=d79ccad1" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>Palestra e Oficina (23/04/2022)</span>
+                                <span className="-certificate--span">Palestra e Oficina (23/04/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
                                 </div>
@@ -422,10 +422,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">Introdução á Linguagem C - IFSP FLISoL 2022</h3>
+                                    <h3 className="projects-title -certificate--title">Introdução á Linguagem C - IFSP FLISoL 2022</h3>
                                     <a href="https://sistemas.slt.ifsp.edu.br/certificado/?cod=6ddf3b8b14" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>Palestra e Oficina (23/04/2022)</span>
+                                <span className="-certificate--span">Palestra e Oficina (23/04/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
                                 </div>
@@ -449,11 +449,11 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">Automação industrial (Processos e Programação) - IFSP IFCiência 2022</h3>
+                                    <h3 className="projects-title -certificate--title">Automação industrial (Processos e Programação) - IFSP IFCiência 2022</h3>
                                     <a href="https://suap.ifsp.edu.br/eventos/baixar_certificad
 o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>Palestra (27/10/2022)</span>
+                                <span className="-certificate--span">Palestra (27/10/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, DOWNLOAD do doc. oficial no botão a cima</span>
                                 </div>
@@ -478,10 +478,10 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">NodeRed: Uma Jornada IoT - IFSP IFCiência 2021</h3>
+                                    <h3 className="projects-title -certificate--title">NodeRed: Uma Jornada IoT - IFSP IFCiência 2021</h3>
                                     <a href="https://drive.google.com/file/d/154osECaHFdjOHc3wWM4VbnbU4lUDbdhq/view?usp=sharing" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>Palestra (28/10/2021)</span>
+                                <span className="-certificate--span">Palestra (28/10/2021)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
                                 </div>
@@ -511,10 +511,10 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">Bolsa de Valores B3 - IFSP IFCiência 2021</h3>
+                                    <h3 className="projects-title -certificate--title">Bolsa de Valores B3 - IFSP IFCiência 2021</h3>
                                     <a href="https://drive.google.com/file/d/1sLqKc5vPhkTZzXWYyWarRrH2yg9lnsRh/view?usp=sharing" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <span>Palestra (29/10/2021)</span>
+                                <span className="-certificate--span">Palestra (29/10/2021)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
                                 </div>
