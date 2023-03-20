@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/firstPortifolioGithubPages-2022/static/css/main.53ca9c65.css",
-    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.267b9894.js",
+    "main.css": "/firstPortifolioGithubPages-2022/static/css/main.2b16abf5.css",
+    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.c8c5fc4f.js",
     "static/media/NetFlixCloneWeb.gif": "/firstPortifolioGithubPages-2022/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
+    "static/media/diploma-tecnicoInformatica-ifsp.png": "/firstPortifolioGithubPages-2022/static/media/diploma-tecnicoInformatica-ifsp.815cb1c23452e39aa7ec.png",
     "static/media/relatorioNodeRed2021-parte04.png": "/firstPortifolioGithubPages-2022/static/media/relatorioNodeRed2021-parte04.c732c0b49e41f666f35f.png",
     "static/media/restauranteIfspAmostra.png": "/firstPortifolioGithubPages-2022/static/media/restauranteIfspAmostra.03eae3aa8e7b8b0e62ac.png",
     "static/media/bolsaDeValores-ifciencia2021-29-10-2021.png": "/firstPortifolioGithubPages-2022/static/media/bolsaDeValores-ifciencia2021-29-10-2021.35091864f636a476f1c4.png",
@@ -35,11 +36,11 @@
     "static/media/wellisonPerfil.jpg": "/firstPortifolioGithubPages-2022/static/media/wellisonPerfil.5ad3be0ec95d8bb0cc3d.jpg",
     "index.html": "/firstPortifolioGithubPages-2022/index.html",
     "static/media/portariaNormativaCeic-parte02.png": "/firstPortifolioGithubPages-2022/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
-    "main.53ca9c65.css.map": "/firstPortifolioGithubPages-2022/static/css/main.53ca9c65.css.map",
-    "main.267b9894.js.map": "/firstPortifolioGithubPages-2022/static/js/main.267b9894.js.map"
+    "main.2b16abf5.css.map": "/firstPortifolioGithubPages-2022/static/css/main.2b16abf5.css.map",
+    "main.c8c5fc4f.js.map": "/firstPortifolioGithubPages-2022/static/js/main.c8c5fc4f.js.map"
   },
   "entrypoints": [
-    "static/css/main.53ca9c65.css",
-    "static/js/main.267b9894.js"
+    "static/css/main.2b16abf5.css",
+    "static/js/main.c8c5fc4f.js"
   ]
 }
