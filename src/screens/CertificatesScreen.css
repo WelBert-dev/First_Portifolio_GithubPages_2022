@@ -114,6 +114,10 @@ span.certificates-autenticCode--spanBorderTopRadius {
 	border-top-right-radius: 10px;
 }
 
+span.certificates-autenticCode--spanBorderTopRadius.-diplomaTecInformatica{
+	padding: 0px 18%;
+}
+
 span.certificates-autenticCode--spanBorderTopRadius.-curoEmVideo {
 	padding: 0px 23%;
 }

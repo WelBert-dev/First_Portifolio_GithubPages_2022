@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
+import diplomaTecnicoInformaticaIFSP from '../resources/diploma-tecnicoInformatica-ifsp.png';
+
 import portariaNormativaCeicP01 from '../resources/portariaNormativaCeic-parte01.png';
 import portariaNormativaCeicP02 from '../resources/portariaNormativaCeic-parte02.png';
 
@@ -72,8 +74,53 @@ export default function CertificatesScreen() {
     return (
         <section id="main-certificate--container">
             <div>
-                <h1 className="main-title">&lsaquo;Certificados&rsaquo;</h1>
+                
+                <h1 className="main-title">&lsaquo;Formação Acadêmica Nível Técnico&rsaquo;</h1>
+            
                 <div>
+                <article className="certificate-single -bolsaEnsinoCertficate">
+                    <div>
+                        <div className="projects-title--container -certificateTitleContainer">
+                            <div>
+                                <h3 className="projects-title">Técnico em Informática - Diploma</h3>
+                                <a href="https://sistec.mec.gov.br/validadenacional" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
+                            </div>
+                            <span>Instituto Federal de Educação, Ciências e Tecnologias de São Paulo - Campús Salto (IFSP)</span>
+                            <span>C/H: 1234 horas (01/02/2021 - 31/12/2022)</span>
+                            <div className="certificates-autenticCode--container">
+                                <span className="certificates-autenticCode--span">Verificar autenticidade SISTEC: </span>
+                                <span className="certificates-autenticCode--span">sistec.mec.gov.br/validadenacional</span>
+                                <span className="certificates-autenticCode--span certificates-autenticCode--spanBorderTopRadius -diplomaTecInformatica">Código de Autenticação:</span>
+                                <span className="certificates-autenticCode--span">40901/99502610CM</span>
+                            </div>
+                            <p>Validação automática clicando no botão a cima.</p>
+                        </div>
+                        <div id="ceicInitScroll" className="bolsaEnsinoImageWrapper">
+                            <img src={diplomaTecnicoInformaticaIFSP}></img>
+                        </div>
+                        <div className="projects-subdescription--container -bolsaEnsinoCertficate">
+                            <h3 className="projects-subtitle -certificateSubtitle">Contextualizando</h3>
+                            <p>
+                                Formação acadêmica "Técnico em Informática" no Instituto Federal de Educação, Ciências e Tecnologias de São Paulo
+                                Campús Salto. Foram dois anos de muito esforço e dedicação na melhor instituição de ensino técnico federal de São Paulo.
+                                Ótimos professores docentes e servidores, foi a melhor experiência da minha vida! Entrei com a mentalidade de 
+                                absorver ao máximo do conhecimento e por isso participei de todas ações que estavam passíveis ao meu alcanse.
+                                Apesar da qualidade de ensino ser bem superior, é um curso de alta desistência aonde iniciaram +40 Alunos e apenas 7 concluíram,
+                                isso pois as pessoas entram achando que a proposta é aprender o pacote Office (Word, Excel, PowerPoint e etc...),
+                                mas na verdade a stack de tecnologias ensinada é mais superior a isso, como programação e etc.. Portanto ano
+                                passado foi tomada uma importante decisão pelo time da CEIC (dentre outros) e aprovado pelo MEC na qual a proposta inicial é tornar 
+                                os cursos mais atrativos, repaginando a grade currícular e diminuindo a carga horária.. Mudando assim o nome do curso
+                                de "Técnico em Informática" para "Informática para Internet", diminuindo assim a carga horária de 4 Semestres (2 anos), 
+                                para 3 Semestres (1 ano e meio) com inicio de vigência apartir de 2023. Fui o aluno do curso que representou os dicentes no time da CEIC,
+                                mais informações logo abaixo.  
+                            </p>
+                        </div>
+                    </div>
+                </article>  
+                <hr/>
+
+                <h1 className="main-title">&lsaquo;Certificados&rsaquo;</h1>
+
                 <article className="certificate-single -bolsaEnsinoCertficate">
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
@@ -102,10 +149,10 @@ export default function CertificatesScreen() {
                                 <h3 className="projects-subtitle -certificateSubtitle">Contextualizando</h3>
                                 <p>
                                     A CEIC (Comissão de Elaboração e Implementação de Projetos Pedagógicos do Curso Técnico em Informática) é uma comissão interna do IFSP 
-                                    responsável por discutir e definir a grade curricular do curso como um todo dentre outras atribuições, e para isto é necessário
+                                    responsável por discutir e definir a grade currícular do curso como um todo dentre outras atribuições, e para isto é necessário
                                     a opinião de um aluno para  ajudar nas tomadas de decisões. Esse ano foi bem importante pois foi tomada uma importante decisão e aprovada pelo MEC
                                     aonde a proposta é tornar os cursos mais atrativos devido a grande desistência em geral (No meu contexto de informática, iniciaram +40 alunos e apenas 7 concluíram).
-                                    Portanto a decisão foi repaginar a grade curricular e diminuir a carga horária do curso para os próximos anos, mudando assim de "Técnico em informática" para "Informática para a Internet" 
+                                    Portanto a decisão foi repaginar a grade currícular e diminuir a carga horária do curso para os próximos anos, mudando assim de "Técnico em informática" para "Informática para a Internet" 
                                     e reduzindo assim de 4 semestres (2 anos) para 3 semestres (1 ano e meio) com início de vigência apartir de 2023.
                                 </p>
                             </div>
@@ -145,7 +192,93 @@ export default function CertificatesScreen() {
                         </div>
                        
                     </article>  
+                    <hr/>
+
+
+                    <h1 className="main-title -complementaryActivities">&lsaquo;Atividades Complementares para Superior ADS&rsaquo;</h1>
+
+                    <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
+                        <div>
+                            <div className="projects-title--container -certificateTitleContainer">
+                                <div>
+                                    <h3 className="projects-title">Java Avançado - Fundação Bradesco</h3>
+                                    <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
+                                </div>
+                                <span>C/H: 16 horas - CEUNSP (06/03/2023)</span>
+                                <div className="certificates-autenticCode--container">
+                                    <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
+                                    <span className="certificates-autenticCode--span">5E4882C8-BA82-455F-BACB-4C2BFB14BE94</span>
+                                </div>
+                                <p>Valide o código de autenticidade clicando no botão a cima</p>
+                            </div>
+                            <div className="bolsaEnsinoImageWrapper">
+                                <img src={cursoFundacBradescJavaDesktop}></img>
+                            </div>
+                            <div className="projects-subdescription--container -bolsaEnsinoCertficate">
+                                <h3 className="projects-subtitle -certificateSubtitle">Contextualizando</h3>
+                                <p>
+                                    Curso realizado para o Superior em "Análise e Desenvolvimento de Sistemas",
+                                    pois faz parte de uma fração da carga horária necessária para a conclusão do curso.
+                                    Optei pelos cursos da "Fundação Bradesco" pois além de gratuíto é bem reconhecido 
+                                    no mercado de T.I devido a qualidade e integridade do certificado de conclusão gerado.
+                                    Confesso não ter sentido dificuldades na execução das atividades pois já estudo Java e 
+                                    Orientação a Objetos a muito tempo então foi "sem novidades" no aprendizado. 
+                                    Não desconsiderando a qualidade do curso, que realmente é otima MÁS faltou contextualizar 
+                                    melhor a descrição e nome para o curso, pois o conteúdo não é de nível avançado,
+                                    e poderiam informar melhor na introdução dizendo que o conteúdo abordado é sobre "Java Desktop",
+                                    não sendo generalista mas talvez quem está procurando por "Java Avançado" espera-se aprender
+                                    sobre os utilitários da API NATIVA do Java (serialização, io, new io, colections, paralelismo...) 
+                                    pois é oque da a entender para "Java Avançado", o mais ideal seria "Java Desktop - Intermediário".
+                                </p>
+
+                            </div>
+                        </div>
+                    </article>
+                    <hr/>
+                    <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
+                        <div>
+                            <div className="projects-title--container -certificateTitleContainer">
+                                <div>
+                                    <h3 className="projects-title">HTML5 Avançado - Fundação Bradesco</h3>
+                                    <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
+                                </div>
+                                <span>C/H: 6 horas - CEUNSP (07/03/2023)</span>
+                                <div className="certificates-autenticCode--container">
+                                    <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
+                                    <span className="certificates-autenticCode--span">DA64D586-173B-4AB9-B837-B0DE372802C3</span>
+                                </div>
+                                <p>Valide o código de autenticidade clicando no botão a cima</p>
+                            </div>
+                            <div className="bolsaEnsinoImageWrapper">
+                                <img src={cursoFundacBradescHTMLAvanc}></img>
+                            </div>
+                        </div>
+                    </article>
+                    <hr/>
+                    <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
+                        <div>
+                            <div className="projects-title--container -certificateTitleContainer">
+                                <div>
+                                    <h3 className="projects-title">Inovando com CSS - Fundação Bradesco</h3>
+                                    <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
+                                </div>
+                                <span>C/H: 26 horas - CEUNSP (08 até 10/03/2023)</span>
+                                <div className="certificates-autenticCode--container">
+                                    <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
+                                    <span className="certificates-autenticCode--span">BB8AD7E2-7F03-4898-A5A1-61DE77B5E688</span>
+                                </div>
+                                <p>Valide o código de autenticidade clicando no botão a cima</p>
+                            </div>
+                            <div className="bolsaEnsinoImageWrapper">
+                                <img src={cursoFundacBradescCSS}></img>
+                            </div>
+                        </div>
+                    </article>
                     <hr />
+
+
+                    <h1 className="main-title -complementaryActivities">&lsaquo;Atividades Complementares para Técnico em Informática&rsaquo;</h1>
+
                     <article className="certificate-single -bolsaEnsinoCertficate">
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
@@ -228,6 +361,8 @@ export default function CertificatesScreen() {
                    
                     </article>  
                     <hr />
+
+
                     <h1 className="main-title">&lsaquo;WorkShops&rsaquo;</h1>
 
                     <article className="certificate-single -bolsaEnsinoCertficate">
@@ -400,88 +535,6 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                         </div>
                    
                     </article> 
-                    <hr/>
-
-
-                    <h1 className="main-title -complementaryActivities">&lsaquo;Atividades Complementares para Superior ADS&rsaquo;</h1>
-                    
-                    <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
-                        <div>
-                            <div className="projects-title--container -certificateTitleContainer">
-                                <div>
-                                    <h3 className="projects-title">Java Avançado - Fundação Bradesco</h3>
-                                    <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
-                                </div>
-                                <span>C/H: 16 horas - CEUNSP (06/03/2023)</span>
-                                <div className="certificates-autenticCode--container">
-                                    <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
-                                    <span className="certificates-autenticCode--span">5E4882C8-BA82-455F-BACB-4C2BFB14BE94</span>
-                                </div>
-                                <p>Valide o código de autenticidade clicando no botão a cima</p>
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper">
-                                <img src={cursoFundacBradescJavaDesktop}></img>
-                            </div>
-                            <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 className="projects-subtitle -certificateSubtitle">Contextualizando</h3>
-                                <p>
-                                    Curso realizado para o Superior em "Análise e Desenvolvimento de Sistemas",
-                                    pois faz parte de uma fração da carga horária necessária para a conclusão do curso.
-                                    Optei pelos cursos da "Fundação Bradesco" pois além de gratuíto é bem reconhecido 
-                                    no mercado de T.I devido a qualidade e integridade do certificado de conclusão gerado.
-                                    Confesso não ter sentido dificuldades na execução das atividades pois já estudo Java e 
-                                    Orientação a Objetos a muito tempo então foi "sem novidades" no aprendizado. 
-                                    Não desconsiderando a qualidade do curso, que realmente é otima MÁS faltou contextualizar 
-                                    melhor a descrição e nome para o curso, pois o conteúdo não é de nível avançado,
-                                    e poderiam informar melhor na introdução dizendo que o conteúdo abordado é sobre "Java Desktop",
-                                    não sendo generalista mas talvez quem está procurando por "Java Avançado" espera-se aprender
-                                    sobre os utilitários da API NATIVA do Java (serialização, io, new io, colections, paralelismo...) 
-                                    pois é oque da a entender para "Java Avançado", o mais ideal seria "Java Desktop - Intermediário".
-                                </p>
-
-                            </div>
-                        </div>
-                    </article>
-                    <hr/>
-                    <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
-                        <div>
-                            <div className="projects-title--container -certificateTitleContainer">
-                                <div>
-                                    <h3 className="projects-title">HTML5 Avançado - Fundação Bradesco</h3>
-                                    <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
-                                </div>
-                                <span>C/H: 6 horas - CEUNSP (07/03/2023)</span>
-                                <div className="certificates-autenticCode--container">
-                                    <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
-                                    <span className="certificates-autenticCode--span">DA64D586-173B-4AB9-B837-B0DE372802C3</span>
-                                </div>
-                                <p>Valide o código de autenticidade clicando no botão a cima</p>
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper">
-                                <img src={cursoFundacBradescHTMLAvanc}></img>
-                            </div>
-                        </div>
-                    </article>
-                    <hr/>
-                    <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
-                        <div>
-                            <div className="projects-title--container -certificateTitleContainer">
-                                <div>
-                                    <h3 className="projects-title">Inovando com CSS - Fundação Bradesco</h3>
-                                    <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
-                                </div>
-                                <span>C/H: 26 horas - CEUNSP (08 até 10/03/2023)</span>
-                                <div className="certificates-autenticCode--container">
-                                    <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
-                                    <span className="certificates-autenticCode--span">BB8AD7E2-7F03-4898-A5A1-61DE77B5E688</span>
-                                </div>
-                                <p>Valide o código de autenticidade clicando no botão a cima</p>
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper">
-                                <img src={cursoFundacBradescCSS}></img>
-                            </div>
-                        </div>
-                    </article>
                 </div>             
             </div>
         </section>
