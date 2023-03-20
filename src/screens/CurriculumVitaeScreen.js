@@ -12,7 +12,7 @@ export default function CurriculumVitaeScreen() {
                      <table className="tableCurriculoVitae template__newyork template__professional dataqa-document-properties color--blue font-size--medium font-family--professional font-language--pt-BR line-spacing--100 numPages-2 A4 sc-jojyft-0 jbCKSz">
                          <tbody>
                              <tr>
-                             <td className="template__professional__column template__newyork__column" width="220">
+                             <td className="template__professional__column template__newyork__column" width="250">
                                  <section data-section="contact-information" data-section-id="b27ba813-72d3-4b67-b0c7-5159e7c805b0" data-subsection-position="0" id="contact-information" className="padding-1rem">
                                      <p className="template__section__title template__section__title--right">Informação de contato</p>
                                      <div className="template__header__info__container">
@@ -108,7 +108,7 @@ export default function CurriculumVitaeScreen() {
                                          <section data-section="objective" data-section-id="fb6610c3-3c39-4b91-aa96-291f25c8331d" data-subsection-position="0" id="objective" className="">
                                          <div className="template__section__container">
                                              <div className="template__section__simple">
-                                                 <div>Desenvolvedor e entusiasta do mundo da programação e tecnologia, estudando todos os dias de segunda a segunda, e fazendo curso técnico em informática voltado na programação e na stack web2, com objetivo de após o termino do curso corrente, ingressar em B.C.C no IFSP, continuar a estudar as tecnologias (Java, ReactJS, MySQL, CSS Avançado (Animações)) e um dia pretendo ser FULLSTACK na programação Web (Desktop e Mobile) e também pretendo estudar mais sobre distro GNU/Linux, e após senioridade na web2, pretendo estudar Web3 e BlockChain. Planos para 2023: Tirar certificação java da Oracle.</div>
+                                                 <div>Desenvolvedor e entusiasta do mundo da programação e tecnologia, estudando todos os dias de segunda a segunda, formado em "Técnico em Informática" pelo Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (IFSP - Salto) no final de 2022 e cursando atualmente superior em "Análise e Desenvolvimento de Sistemas" no CEUNSP - Salto, com objetivo de após o termino do curso corrente, fazer Mestrado e Doutorado. Continuar a estudar as tecnologias (Java avançado, ReactJS, MySQL) e um dia pretendo ser FULLSTACK na programação Web (com responsividade) e também pretendo conhecer mais sobre distro GNU/Linux pois é o Sistema Operacional que ganhou meu coração e eu utilizo no meu dia-a-dia (Fiz o curso do Paulo Kretcheu de 36 vídeos, e me apaixonei pelo Sistema devido as 3 Liberdades GPL que garantem as liberdades do usuário, assim eu consigo personalizar e configurar o ambiente sem dificuldades ou problemas diferente do ruindows que é uma caixa preta ditadora cujas regras não garantem as liberdades do usuário), e após senioridade na web2, pretendo estudar Web3 e BlockChain. Planos para essa ano: Tirar certificação Java da Oracle.</div>
                                              </div>
                                          </div>
                                          </section>
@@ -144,21 +144,37 @@ export default function CurriculumVitaeScreen() {
                                      <section data-section="education" data-section-id="3eaaf201-7b4e-4ff4-a6eb-370f9ecfc0f4" id="education" className="">
                                          <p className="template__section__title"><span>Educação<hr /></span></p>
                                          <div className="template__section__container">
-                                         <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
-                                             <div className="template__section__left">
-                                                 <p className="template__section__location">Salto - SP, Brasil </p>
-                                                 <div className="template__section__date">
-                                                     <p className="template__section__startDate">Fev 2021</p>
-                                                     <p className="template__section__endDate">Dez 2022 <br/>(2 anos)</p>
-                                                 </div>
- 
-                                             </div>
-                                             <div className="template__section__right">
-                                                 <p className="template__section__degree">Técnico em Informática</p>
-                                                 <p className="template__section__college">Instituto Federal de Educação Ciências e Tecnologias de São Paulo</p>
-                                                 <p className="template__section__description">Curso voltado para programação e desenvolvimento web, sendo no primeiro ano voltado na stack backend e no segundo ano voltado nas tecnologias frontend, desde a parte de levantamento de requisitos (história de usuário), análise (modelagem caso de uso), Prototipação (baixa, média e alta fidelidade), Projeto (tecnologias), até a parte de desenvolvimento em sí, fora os estudos pessoais e também participo das ações da instituição, para agregar ainda mais conhecimento/valor.</p>
-                                             </div>
-                                         </div>
+                                         <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns -superiorADS">
+                                                <div className="template__section__left">
+                                                    <p className="template__section__location">Salto - SP, Brasil </p>
+                                                    <div className="template__section__date">
+                                                        <p className="template__section__startDate">Fev 2023</p>
+                                                        <p className="template__section__endDate">Atualmente</p>
+                                                    </div>
+    
+                                                </div>
+                                                <div className="template__section__right">
+                                                    <p className="template__section__degree">Superior em Análise e Desenvolvimento de Sistemas</p>
+                                                    <p className="template__section__college">Centro Universitário Nossa Senhora do Patrocínio (CEUNSP)</p>
+                                                    <p className="template__section__description">Curso superior técnólogo ADS especializado em desenvolvimento/programação de sistemas, estive em dúvidas entre esse curso ou o Bacharel em Ciências da Cumputação que é mais genérico e extenso, e foi esse critério que me fez optar pelo superior tecnólogo pois é mais especifico e próximo do meu contexto, devido ao meu nível de instrução genérico que já obtive no curso técnico.. Além disto também é mais rápido para concluir e alcansar meu objetivo de um dia me tornar Doutor em Tecnologia!</p>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
+                                                <div className="template__section__left">
+                                                    <p className="template__section__location">Salto - SP, Brasil </p>
+                                                    <div className="template__section__date">
+                                                        <p className="template__section__startDate">Fev 2021</p>
+                                                        <p className="template__section__endDate">Dez 2022 <br/>(2 anos)</p>
+                                                    </div>
+    
+                                                </div>
+                                                <div className="template__section__right">
+                                                    <p className="template__section__degree">Técnico em Informática</p>
+                                                    <p className="template__section__college">Instituto Federal de Educação Ciências e Tecnologias de São Paulo</p>
+                                                    <p className="template__section__description">Curso voltado para programação e desenvolvimento web, sendo no primeiro ano voltado na stack backend e no segundo ano voltado nas tecnologias frontend, desde a parte de levantamento de requisitos (história de usuário), análise (modelagem caso de uso), Prototipação (baixa, média e alta fidelidade), Projeto (tecnologias), até a parte de desenvolvimento em sí, fora os estudos pessoais e também participo das ações da instituição, para agregar ainda mais conhecimento/valor.</p>
+                                                </div>
+                                            </div>
                                          </div>
                                      </section>
                                  </div>
