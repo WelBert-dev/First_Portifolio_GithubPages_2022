@@ -32,9 +32,11 @@ export default function AboutMeScreen() {
                         <span className="main-sobre--shellUser">root@r2d2</span>:<span className="main-sobre--shellDir">/home/welbert/aboutMe</span># \ <br/>&rsaquo;
                         Como desenvolvedor e entusiasta da programação e tecnologia, tenho forte base na stack Frontend 
                         (ReactJs) e estou atualmente aprofundando meus estudos em Backend com Java, buscando experiência 
-                        em projetos reais e/ou em produção. Vivo e respiro programação todos os dias, desde que decidi 
+                        em projetos reais e/ou em produção. <br/><br/>
+
+                        Vivo e respiro programação todos os dias, desde que decidi 
                         seguir minha paixão há dois(2) anos atrás. Acredito que a obsessão é mais importante do que o 
-                        talento natural e essa mentalidade me impulsiona a crescer cada dia mais.<br />
+                        talento natural e essa mentalidade me impulsiona a crescer cada dia mais.<br/><br/>
 
                         Sou de uma família humilde, sonhador e determinado. Tenho certeza que no futuro conseguirei 
                         proporcionar melhorias para aqueles que amo. Sigo a filosofia de "um leão por dia", acreditando 
