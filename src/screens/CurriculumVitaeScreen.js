@@ -12,7 +12,7 @@ export default function CurriculumVitaeScreen() {
                      <table className="tableCurriculoVitae template__newyork template__professional dataqa-document-properties color--blue font-size--medium font-family--professional font-language--pt-BR line-spacing--100 numPages-2 A4 sc-jojyft-0 jbCKSz">
                          <tbody>
                              <tr>
-                             <td className="template__professional__column template__newyork__column" width="250">
+                             <td className="template__professional__column template__newyork__column" width="310">
                                  <section data-section="contact-information" data-section-id="b27ba813-72d3-4b67-b0c7-5159e7c805b0" data-subsection-position="0" id="contact-information" className="padding-1rem">
                                      <p className="template__section__title template__section__title--right">Informação de contato</p>
                                      <div className="template__header__info__container">
@@ -108,7 +108,32 @@ export default function CurriculumVitaeScreen() {
                                          <section data-section="objective" data-section-id="fb6610c3-3c39-4b91-aa96-291f25c8331d" data-subsection-position="0" id="objective" className="">
                                          <div className="template__section__container">
                                              <div className="template__section__simple">
-                                                 <div>Desenvolvedor e entusiasta do mundo da programação e tecnologia, estudando todos os dias de segunda a segunda, formado em "Técnico em Informática" pelo Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (IFSP - Salto) no final de 2022 e cursando atualmente superior em "Análise e Desenvolvimento de Sistemas" no CEUNSP - Salto, com objetivo de após o termino do curso corrente, fazer Mestrado e Doutorado. Continuar a estudar as tecnologias (Java avançado, ReactJS, MySQL) e um dia pretendo ser FULLSTACK na programação Web (com responsividade) e também pretendo conhecer mais sobre distro GNU/Linux pois é o Sistema Operacional que ganhou meu coração e eu utilizo no meu dia-a-dia (Fiz o curso do Paulo Kretcheu de 36 vídeos, e me apaixonei pelo Sistema devido as 3 Liberdades GPL que garantem as liberdades do usuário, assim eu consigo personalizar e configurar o ambiente sem dificuldades ou problemas diferente do ruindows que é uma caixa preta ditadora cujas regras não garantem as liberdades do usuário), e após senioridade na web2, pretendo estudar Web3 e BlockChain. Planos para essa ano: Tirar certificação Java da Oracle.</div>
+                                                <div>
+                                                Como desenvolvedor e entusiasta do mundo da programação e tecnologia, 
+                                                tenho me dedicado intensamente aos estudos, buscando aprimorar minhas 
+                                                habilidades em diferentes áreas. 
+                                                Sou formado em "Técnico em Informática" pelo Instituto Federal de Educação, 
+                                                Ciência e Tecnologia de São Paulo (IFSP - Salto) desde o final de 2022 
+                                                e atualmente curso CST em "Análise e Desenvolvimento de Sistemas" no CEUNSP - Salto, 
+                                                com o objetivo de, após a conclusão do curso, fazer Mestrado e Doutorado. <br/><br/>
+
+                                                Tenho me dedicado atualmente especialmente em Java avançado, e possuo 
+                                                fortes conhecimentos em ReactJS e MySQL porém não estou mais focado nessas 
+                                                tecnologias pois por agora pretendo me aprofundar em backend com o Java, 
+                                                portanto tenho objetivos futuros de me tornar um desenvolvedor Fullstack 
+                                                na programação Web 2.0, com responsividade. <br/><br/>
+                                                
+                                                Também sou entusiasta do sistema operacional GNU/Linux, que utilizo em meu dia a dia. 
+                                                Após fazer o curso do Paulo Kretcheu de 36 vídeos, me apaixonei pelas 3 Liberdades GPL 
+                                                que garantem as liberdades do usuário, o que me permite personalizar e configurar o 
+                                                ambiente sem dificuldades ou problemas, diferente do ruindows que é uma caixa preta 
+                                                ditadora de regras. <br/><br/>
+
+                                                Além disso, este ano pretendo obter a certificação Java da Oracle e continuar estudando 
+                                                para aprimorar minhas habilidades em programação web. 
+                                                Com senioridade na Web 2.0, pretendo explorar novas áreas, como Web 3.0 e Blockchain, 
+                                                e sempre buscar novas oportunidades para desenvolver meu potencial como desenvolvedor.
+                                                </div>
                                              </div>
                                          </div>
                                          </section>

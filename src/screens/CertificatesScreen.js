@@ -201,9 +201,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title -certificate--title">Java Avançado - Fundação Bradesco</h3>
+                                    <h3 className="projects-title -certificate--title">Java Avançado</h3>
                                     <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
+                                <span className="-certificate--span">Fundação Bradesco</span>
                                 <span className="-certificate--span">C/H: 16 horas - CEUNSP (06/03/2023)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
@@ -239,9 +240,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title -certificate--title">HTML5 Avançado - Fundação Bradesco</h3>
+                                    <h3 className="projects-title -certificate--title">HTML5 Avançado</h3>
                                     <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
+                                <span className="-certificate--span">Fundação Bradesco</span>
                                 <span className="-certificate--span">C/H: 6 horas - CEUNSP (07/03/2023)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
@@ -259,9 +261,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title -certificate--title">Inovando com CSS - Fundação Bradesco</h3>
+                                    <h3 className="projects-title -certificate--title">Inovando com CSS</h3>
                                     <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
+                                <span className="-certificate--span">Fundação Bradesco</span>
                                 <span className="-certificate--span">C/H: 26 horas - CEUNSP (08 até 10/03/2023)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
