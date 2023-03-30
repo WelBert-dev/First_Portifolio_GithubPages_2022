@@ -286,9 +286,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title -certificate--title">Cybersecurity Essentials Módulo 01 - Cisco</h3>
+                                    <h3 className="projects-title -certificate--title">Cybersecurity Essentials Módulo 01</h3>
                                     <a href="https://www.netacad.com/portal/user/1040281088/learning-transcript" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
+                                <span className="-certificate--span">Cisco Systems</span>
                                 <span className="-certificate--span">Plataforma NetAcad (07/2022 até 10/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, DOWNLOAD do doc. oficial no botão a cima</span>
@@ -312,9 +313,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title -certificate--title">Cybersecurity Essentials Módulo 02 - Cisco</h3>
+                                    <h3 className="projects-title -certificate--title">Cybersecurity Essentials Módulo 02</h3>
                                     <a href="https://www.netacad.com/portal/user/1040281088/learning-transcript" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
+                                <span className="-certificate--span">Cisco Systems</span>
                                 <span className="-certificate--span">Plataforma NetAcad (10/2022 até 12/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, DOWNLOAD do doc. oficial a cima</span>
@@ -339,9 +341,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title -certificate--title">Python3 Mundo01 (Módulo 01) - Curso Em Video</h3>
+                                    <h3 className="projects-title -certificate--title">Python3 Mundo01 (Módulo 01)</h3>
                                     <a href="https://www.cursoemvideo.com/validacao-de-certificado/?codigo=38645-66E2-9" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
+                                <span className="-certificate--span">Curso em Vídeo - Gustavo Guanabara</span>
                                 <span className="-certificate--span">Plataforma Curso Em Video (05/2021)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Verificar autenticidade manualmente: </span>
@@ -372,9 +375,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title -certificate--title">Descaracterização TVBOX - IFSP FLISoL 2022</h3>
+                                    <h3 className="projects-title -certificate--title">Descaracterização TVBOX</h3>
                                     <a href="https://sistemas.slt.ifsp.edu.br/certificado/?cod=d79ccad1" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
+                                <span className="-certificate--span">IFSP FLISoL 2022</span>
                                 <span className="-certificate--span">Palestra e Oficina (23/04/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
@@ -425,9 +429,10 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title -certificate--title">Introdução á Linguagem C - IFSP FLISoL 2022</h3>
+                                    <h3 className="projects-title -certificate--title">Introdução á Linguagem C</h3>
                                     <a href="https://sistemas.slt.ifsp.edu.br/certificado/?cod=6ddf3b8b14" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
+                                <span className="-certificate--span">IFSP FLISoL 2022</span>
                                 <span className="-certificate--span">Palestra e Oficina (23/04/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
@@ -452,10 +457,11 @@ export default function CertificatesScreen() {
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title -certificate--title">Automação industrial (Processos e Programação) - IFSP IFCiência 2022</h3>
+                                    <h3 className="projects-title -certificate--title">Automação industrial (Processos e Programação)</h3>
                                     <a href="https://suap.ifsp.edu.br/eventos/baixar_certificad
 o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
+                                <span className="-certificate--span">IFSP IFCiência 2022</span>
                                 <span className="-certificate--span">Palestra (27/10/2022)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, DOWNLOAD do doc. oficial no botão a cima</span>
@@ -481,9 +487,10 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title -certificate--title">NodeRed: Uma Jornada IoT - IFSP IFCiência 2021</h3>
+                                    <h3 className="projects-title -certificate--title">NodeRed: Uma Jornada IoT</h3>
                                     <a href="https://drive.google.com/file/d/154osECaHFdjOHc3wWM4VbnbU4lUDbdhq/view?usp=sharing" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
+                                <span className="-certificate--span">IFSP IFCiência 2021</span>
                                 <span className="-certificate--span">Palestra (28/10/2021)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
@@ -514,9 +521,10 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                         <div>
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title -certificate--title">Bolsa de Valores B3 - IFSP IFCiência 2021</h3>
+                                    <h3 className="projects-title -certificate--title">Bolsa de Valores B3</h3>
                                     <a href="https://drive.google.com/file/d/1sLqKc5vPhkTZzXWYyWarRrH2yg9lnsRh/view?usp=sharing" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
+                                <span className="-certificate--span">IFSP IFCiência 2021</span>
                                 <span className="-certificate--span">Palestra (29/10/2021)</span>
                                 <div className="certificates-autenticCode--container">
                                     <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
