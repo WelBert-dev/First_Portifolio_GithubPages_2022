@@ -249,13 +249,13 @@ width: 8px;
 height: 10px;
 }
 .template__professional .template__section__startDate, .template__professional .template__section__endDate, .template__professional .template__section__location {
-font-size: 15.5px;
+font-size: 13.5px;
 }
 .template__professional .template__section__startDate, .template__professional .template__section__endDate {
 font-style: italic;
 }
 .template__professional .template__section__startDate, .template__professional .template__section__endDate, .template__professional .template__section__location {
-font-size: 15.5px;
+font-size: 13.5px;
 }
 .template__section__experience .template__section__startDate, .template__section__experience .template__section__endDate, .template__section__education .template__section__startDate, .template__section__education .template__section__endDate {
 display: inline;
