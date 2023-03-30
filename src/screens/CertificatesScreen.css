@@ -14,7 +14,7 @@
 /*  ÀREA DA BOLSA ENSINO */
 
 .certificate-single.-bolsaEnsinoCertficate > div {
-	max-width: 98%;
+	max-width: 80%;
 	margin: 0 auto;
 	background: linear-gradient(90deg,#fff 0,6%,#2f9919,#267b15);
 	border-radius: 10px;
