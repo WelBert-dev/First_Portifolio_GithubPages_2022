@@ -167,7 +167,7 @@ export default function CurriculumVitaeScreen() {
                                          </div>
                                      </section>
                                      <section data-section="education" data-section-id="3eaaf201-7b4e-4ff4-a6eb-370f9ecfc0f4" id="education" className="">
-                                         <p className="template__section__title"><span>Educação<hr /></span></p>
+                                         <p className="template__section__title -spanFormacaoAcad--superior"><span className="-spanFormacaoAcad--superior">Formação Superior<hr /></span></p>
                                          <div className="template__section__container">
                                          <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns -superiorADS">
                                                 <div className="template__section__left">
@@ -185,6 +185,7 @@ export default function CurriculumVitaeScreen() {
                                                 </div>
                                             </div>
                                             <br/>
+                                            <p className="template__section__title -spanFormacaoAcad--tecnico"><span className="-spanFormacaoAcad--tecnico">Formação Técnica<hr /></span></p>
                                             <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
                                                 <div className="template__section__left">
                                                     <p className="template__section__location">Salto - SP, Brasil </p>
