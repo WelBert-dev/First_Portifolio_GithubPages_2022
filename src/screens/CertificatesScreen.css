@@ -132,7 +132,7 @@ hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
 } 
 
 .projects-title--container > span.-certificate--span{
-	font-size: 1rem;
+	font-size: .9rem;
 	background-color: #000;
 	border-radius: 5px;
 	padding: 2px;
@@ -159,8 +159,11 @@ hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
 	}
 
 	.projects-title--container > span.-certificate--span{
-		font-size: .8rem;
+		font-size: .7rem;
 	}
 
+	span.certificates-autenticCode--span {
+		font-size: .8rem;
+	}
 	
 }

@@ -95,7 +95,7 @@ export default function CertificatesScreen() {
                             </div>
                             <p>Validação automática clicando no botão a cima.</p>
                         </div>
-                        <div id="ceicInitScroll" className="bolsaEnsinoImageWrapper">
+                        <div id="ceicInitScroll" className="bolsaEnsinoImageWrapper -maxHeigthNone">
                             <img src={diplomaTecnicoInformaticaIFSP}></img>
                         </div>
                         <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -212,7 +212,7 @@ export default function CertificatesScreen() {
                                 </div>
                                 <p>Valide o código de autenticidade clicando no botão a cima</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper">
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                                 <img src={cursoFundacBradescJavaDesktop}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -251,7 +251,7 @@ export default function CertificatesScreen() {
                                 </div>
                                 <p>Valide o código de autenticidade clicando no botão a cima</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper">
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                                 <img src={cursoFundacBradescHTMLAvanc}></img>
                             </div>
                         </div>
@@ -272,7 +272,7 @@ export default function CertificatesScreen() {
                                 </div>
                                 <p>Valide o código de autenticidade clicando no botão a cima</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper">
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                                 <img src={cursoFundacBradescCSS}></img>
                             </div>
                         </div>
@@ -295,7 +295,7 @@ export default function CertificatesScreen() {
                                 </div>
                                 <p>DOWNLOAD da declaração oficial clicando no botão a cima.</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper">
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                                 <img src={ciscoModule01Amostra}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -321,7 +321,7 @@ export default function CertificatesScreen() {
                                 </div>
                                 <p>DOWNLOAD da declaração oficial clicando no botão a cima.</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper">
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                                 <img src={ciscoModule02Amostra}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -351,7 +351,7 @@ export default function CertificatesScreen() {
                                 </div>
                                 <p>Validação automática clicando no botão a cima.</p>
                             </div>
-                            <div id="cursoEmVideoInitScroll" className="bolsaEnsinoImageWrapper">
+                            <div id="cursoEmVideoInitScroll" className="bolsaEnsinoImageWrapper -maxHeigthNone">
                                 <img src={cursoEmVideoPython3Mundo01}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -381,7 +381,7 @@ export default function CertificatesScreen() {
                                 </div>
                                 <p>Documento oficial clicando no botão a cima.</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper">
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                                 <img src={workshopTvBoxFlisol}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -434,7 +434,7 @@ export default function CertificatesScreen() {
                                 </div>
                                 <p>Documento oficial clicando no botão a cima.</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper">
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                                 <img src={workshopLinguagemC}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
@@ -523,7 +523,7 @@ o/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
                                 <p>Documento oficial clicando no botão a cima.</p>
                             </div>
-                            <div className="bolsaEnsinoImageWrapper">
+                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                                 <img src={workshopBolsaValores}></img>
                             </div>
                             <div className="projects-subdescription--container -bolsaEnsinoCertficate">
