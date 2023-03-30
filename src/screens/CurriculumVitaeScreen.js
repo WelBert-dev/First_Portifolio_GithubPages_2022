@@ -179,7 +179,7 @@ export default function CurriculumVitaeScreen() {
     
                                                 </div>
                                                 <div className="template__section__right">
-                                                    <p className="template__section__degree">Superior em Análise e Desenvolvimento de Sistemas</p>
+                                                    <p className="template__section__degree">Análise e Desenvolvimento de Sistemas</p>
                                                     <p className="template__section__college">Centro Universitário Nossa Senhora do Patrocínio (CEUNSP)</p>
                                                     <p className="template__section__description">Curso superior técnólogo ADS especializado em desenvolvimento/programação de sistemas, estive em dúvidas entre esse curso ou o Bacharel em Ciências da Cumputação que é mais genérico e extenso, e foi esse critério que me fez optar pelo superior tecnólogo pois é mais especifico e próximo do meu contexto, devido ao meu nível de instrução genérico que já obtive no curso técnico.. Além disto também é mais rápido para concluir e alcansar meu objetivo de um dia me tornar Doutor em Tecnologia!</p>
                                                 </div>
@@ -197,7 +197,7 @@ export default function CurriculumVitaeScreen() {
                                                 </div>
                                                 <div className="template__section__right">
                                                     <p className="template__section__degree">Técnico em Informática</p>
-                                                    <p className="template__section__college">Instituto Federal de Educação Ciências e Tecnologias de São Paulo</p>
+                                                    <p className="template__section__college">Instituto Federal de Educação Ciências e Tecnologias de São Paulo (IFSP)</p>
                                                     <p className="template__section__description">Curso voltado para programação e desenvolvimento web, sendo no primeiro ano voltado na stack backend e no segundo ano voltado nas tecnologias frontend, desde a parte de levantamento de requisitos (história de usuário), análise (modelagem caso de uso), Prototipação (baixa, média e alta fidelidade), Projeto (tecnologias), até a parte de desenvolvimento em sí, fora os estudos pessoais e também participo das ações da instituição, para agregar ainda mais conhecimento/valor.</p>
                                                 </div>
                                             </div>
