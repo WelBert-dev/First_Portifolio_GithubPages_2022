@@ -8,6 +8,7 @@ import amazonAmostra from '../resources/amazona.jpg';
 import netflixAmostra from '../resources/NetFlixCloneWeb.gif';
 import auauMiauNoFrameworkAmostra from '../resources/auauMiauNoFramework.png';
 import restauranteIfspAmostra from '../resources/restauranteIfspAmostra.png';
+import logoQrCodeGenerator from '../resources/logo-qrcodeGeneratorInC.png';
 
 export default function ProjectsScreen() {
 
@@ -16,6 +17,73 @@ export default function ProjectsScreen() {
             <div>
                 <h1 className="main-title">&lsaquo;Projetos&rsaquo;</h1>
                 <div className="wrapper-projects">     
+                    <article className="projects-single">
+                        <div className="projects-right">
+                            <div className="projects-title--container -certificateTitleContainer">
+                                <div>
+                                    <h3 className="projects-title">QR Code Generator (Linguagem C) + Scanner WEB (Reactjs)</h3>
+                                    <a href="https://github.com/WelBert-dev/QRCodeReader_SummarizingInvoiceNotes" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
+                                </div>
+                                <p>Código do projeto clicando no botão a cima</p>
+                                <span>WEB E2E + Módulo QR Code Generator em linguagem C</span>
+                            </div>
+                            <div>
+                                <img className="projects-logo" src={logoQrCodeGenerator} alt="Amostra Amazon" ></img>
+                            </div>
+                            <div className="subContainer-bottom">
+                                <ul className="projects-description--container">
+                                    <li>
+                                        <h3 class="projects-subtitle">BackEnd (API Rest em linguagem C)</h3>
+                                        <ul>
+                                            <li>Mongoose em linguagem C: <a href="https://mongoose.ws/">Clique AQUI!</a></li>
+                                            <li>API Rest (Apenas o método POST).</li>
+                                            <li>API Funcional porém desligado do projeto devido ao aumento de complexidade do trabalho!</li>
+                                            <li>Escolher a linguagem C não é recomendável para implementar API's pois não existe muito material sobre.</li>
+                                            <li>Mas era regras do trabalho implementar algo em C.</li>
+                                            <li>Motivo maior: Pouco desenvolvimento útil e maior parte Configurações de ambiente.</li>
+                                            <li>Problema de CORS: A Lib Mongoose não possuí documentações boas sobre, mas acabei resolvendo o problema.</li>
+                                            <li>Contribuição no Github: O Problema de cima foi desafiador e eu acabei contribuindo com a solução para a comunidade.</li>
+                                            <li>Contribuição com a solução do problema de CORS no Mongoose: <a href="https://github.com/cesanta/mongoose/discussions/1860?fbclid=IwAR1M02dj-ifnabqFVUfR9T_RjOS4A73W980kaGBfjPVXDRJsI45HgNZhZjQ#discussioncomment-4156317">Clique AQUI!</a></li>
+                                            <li>Publicação no Facebook sobre: <a href="https://www.facebook.com/photo?fbid=1285811385351916&set=a.323462608253470">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">FrontEnd (ReactJS)</h3>
+                                        <ul className="projects-frontend--container">
+                                            <li>Lib para escanear QR Code: react-qr-reader <a href="https://www.npmjs.com/package/react-qr-reader">Clique AQUI!</a></li>
+                                            <li>HTML5 e CSS3: Elementos semânticos, CSS Grid, Flexbox.</li>
+                                            <li>ReactJs: Componentes, Props, Eventos, Hooks, Router, Axios.</li>
+                                            <li>Apesar de utilizar react, grande parte da lógica esta em JS Vanilla.</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">QR Code Generator em linguagem C</h3>
+                                        <ul>
+                                            <li>Libqrencode-dev em linguagem C (Via apt no repositório Ubuntu): <a href="https://packages.ubuntu.com/search?keywords=libqrencode-dev">Clique AQUI!</a></li>
+                                            <li>Utilitário em linha de comando qrencode (Porém não utilizado, desenvolvi a solução "na unha" mesmo): <a href="https://manpages.ubuntu.com/manpages/jammy/man1/qrencode.1.html">Clique AQUI!</a></li>
+                                            <li>Obs: O Utilitário a cima só é utilizado para testar a camada de apresentação (escanear) pois a solução desenvolvida a nível didático não gera PNG.</li>
+                                            <li>Documentação base (em Japonês) para entendimento das camadas do QR Code em relação a Lib mencionada: <a href="https://coolshell.cn/articles/10590.html">Clique AQUI!</a></li>
+                                            <li>Repositório Github Oficial da Lib: <a href="https://github.com/fukuchi/libqrencode">Clique AQUI!</a></li>
+                                            <li>Documentação ABNT do trabalho: <a href="https://github.com/WelBert-dev/QRCodeReader_SummarizingInvoiceNotes/blob/main/generatedQRCodeWithLibqrencode/apresentacaoFinalDocs/docs/avaliacaoA2-programacao_de_computadores-15-05-2023.pdf?fbclid=IwAR0uV6sGIkihLfhk1kvJxP5B7EsFLLkQFYu2jfAe4UB8rzMgAsDm_EsnlfM">Clique AQUI!</a></li>
+                                            <li>Apresentação em PowerPoint: <a href="https://github.com/WelBert-dev/QRCodeReader_SummarizingInvoiceNotes/blob/main/generatedQRCodeWithLibqrencode/apresentacaoFinalDocs/docs/ceunsp_programacao_de_computadores_QRCode_generator_em_C.pptx">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div className="projects-subdescription--container">
+                                    <h3 class="projects-subtitle">Descrição</h3>
+                                    <p>
+                                        Trabalho final do primeiro semestre da disciplina Programação de Computadores (CEUNSP) do meu curso CST ADS que iniciei esse ano, 
+                                        o professor optou por começar pela linguagem C e não deixou quem já estudava outras tecnologias utilizar elas (No meu caso eu queria 
+                                        desenvolver com Java), trabalho de tema livre com apenas uma regra: Utilizar a linguagem C na implementação. Estou em busca de desafios
+                                        e então escolhi por desenvolver um algoritmo capaz de gerar QR Codes e após isso escanea-los em outro projeto WEB (ReactJs) 
+                                        afim de verificar visualmente a consistência dos resultados. Todo o processo está documentado no padrão ABNT e também fiz uma apresentação em Power Point.
+                                        Adorei a escolha e acabei aprendendo bastante sobre as camadas do QR Code e a sua implementação Low Level.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    <hr />  
                     <article className="projects-single">
                         <div className="projects-right">
                             <div className="projects-title--container -certificateTitleContainer">
