@@ -145,6 +145,16 @@
     border-bottom-left-radius: 10px;
 }
 
+.-spanOfLinkAkitaDesbAlgTwitter {
+    display: block;
+    font-size: .8rem;
+    font-family: var(--main-fontFamily);
+    color: #ffd700;
+    margin: 3px 0;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+}
+
 @media (max-width: 810px)
 {
     .projects-title {
