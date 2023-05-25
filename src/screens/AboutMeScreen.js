@@ -36,7 +36,10 @@ export default function AboutMeScreen() {
 
                         Vivo e respiro programação todos os dias, desde que decidi 
                         seguir minha paixão há dois(2) anos e meio atrás. Acredito que a obsessão é mais importante do que o 
-                        talento natural e essa mentalidade me impulsiona a crescer cada dia mais.<br/><br/>
+                        talento natural e essa mentalidade me impulsiona a crescer cada dia mais.
+                        Formado em "Técnico em Informática" pelo Instituto Federal de Educação, Ciência e Tecnologia de São Paulo 
+                        (IFSP - Salto) desde o final de 2022 e atualmente curso CST em "Análise e Desenvolvimento de Sistemas" no CEUNSP - Salto, 
+                        com o objetivo de, após a conclusão do curso, fazer Mestrado e Doutorado.<br/><br/>
 
                         Sou de uma família humilde, sonhador e determinado. Tenho certeza que no futuro conseguirei 
                         proporcionar melhorias para aqueles que amo. Sigo a filosofia de "um leão por dia", acreditando 
