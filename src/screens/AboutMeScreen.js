@@ -35,7 +35,7 @@ export default function AboutMeScreen() {
                         em projetos reais e/ou em produção. <br/><br/>
 
                         Vivo e respiro programação todos os dias, desde que decidi 
-                        seguir minha paixão há dois(2) anos atrás. Acredito que a obsessão é mais importante do que o 
+                        seguir minha paixão há dois(2) anos e meio atrás. Acredito que a obsessão é mais importante do que o 
                         talento natural e essa mentalidade me impulsiona a crescer cada dia mais.<br/><br/>
 
                         Sou de uma família humilde, sonhador e determinado. Tenho certeza que no futuro conseguirei 
