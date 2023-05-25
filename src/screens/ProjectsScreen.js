@@ -36,7 +36,7 @@ export default function ProjectsScreen() {
                                         <h3 class="projects-subtitle">BackEnd</h3>
                                         <ul>
                                             <li>Mongoose em linguagem C: <a href="https://mongoose.ws/">Clique AQUI!</a></li>
-                                            <li>API Rest em Linguagem C(Apenas o método POST).</li>
+                                            <li>API Rest em Linguagem C (Apenas o método POST).</li>
                                             <li>API Funcional porém desligado do projeto devido ao aumento de complexidade do trabalho!</li>
                                             <li>Escolher a linguagem C não é recomendável para implementar API's pois não existe muito material sobre.</li>
                                             <li>Mas era regras do trabalho implementar algo em C.</li>
@@ -76,7 +76,7 @@ export default function ProjectsScreen() {
                                         o professor optou por começar pela linguagem C e não deixou quem já estudava outras tecnologias utilizar elas (No meu caso eu queria 
                                         desenvolver com Java), trabalho de tema livre com apenas uma regra: Utilizar a linguagem C na implementação. Estou em busca de desafios
                                         e então escolhi por desenvolver um algoritmo capaz de gerar QR Codes e após isso escanea-los em outro projeto WEB (ReactJs) 
-                                        afim de verificar visualmente a consistência dos resultados. Todo o processo está documentado no padrão ABNT e também fiz uma apresentação em Power Point.
+                                        afim de verificar visualmente a consistência dos resultados. Todo o processo está documentado no padrão ABNT e também fiz uma apresentação em Power Point (Links na seção de cima).
                                         Adorei a escolha e acabei aprendendo bastante sobre as camadas do QR Code e a sua implementação Low Level.
                                     </p>
                                 </div>
