@@ -21,7 +21,7 @@ export default function ProjectsScreen() {
                         <div className="projects-right">
                             <div className="projects-title--container -certificateTitleContainer">
                                 <div>
-                                    <h3 className="projects-title">QR Code Generator (Linguagem C) + Scanner WEB (Reactjs)</h3>
+                                    <h3 className="projects-title">QR Code Generator (C Language) + Scanner WEB (Reactjs)</h3>
                                     <a href="https://github.com/WelBert-dev/QRCodeReader_SummarizingInvoiceNotes" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
                                 <p>Código do projeto clicando no botão a cima</p>
@@ -33,10 +33,10 @@ export default function ProjectsScreen() {
                             <div className="subContainer-bottom">
                                 <ul className="projects-description--container">
                                     <li>
-                                        <h3 class="projects-subtitle">BackEnd (API Rest em linguagem C)</h3>
+                                        <h3 class="projects-subtitle">BackEnd</h3>
                                         <ul>
                                             <li>Mongoose em linguagem C: <a href="https://mongoose.ws/">Clique AQUI!</a></li>
-                                            <li>API Rest (Apenas o método POST).</li>
+                                            <li>API Rest em Linguagem C(Apenas o método POST).</li>
                                             <li>API Funcional porém desligado do projeto devido ao aumento de complexidade do trabalho!</li>
                                             <li>Escolher a linguagem C não é recomendável para implementar API's pois não existe muito material sobre.</li>
                                             <li>Mas era regras do trabalho implementar algo em C.</li>
@@ -48,7 +48,7 @@ export default function ProjectsScreen() {
                                         </ul>
                                     </li>
                                     <li>
-                                        <h3 class="projects-subtitle">FrontEnd (ReactJS)</h3>
+                                        <h3 class="projects-subtitle">FrontEnd</h3>
                                         <ul className="projects-frontend--container">
                                             <li>Lib para escanear QR Code: react-qr-reader <a href="https://www.npmjs.com/package/react-qr-reader">Clique AQUI!</a></li>
                                             <li>HTML5 e CSS3: Elementos semânticos, CSS Grid, Flexbox.</li>
@@ -57,7 +57,7 @@ export default function ProjectsScreen() {
                                         </ul>
                                     </li>
                                     <li>
-                                        <h3 class="projects-subtitle">QR Code Generator em linguagem C</h3>
+                                        <h3 class="projects-subtitle">QR Code Generator</h3>
                                         <ul>
                                             <li>Libqrencode-dev em linguagem C (Via apt no repositório Ubuntu): <a href="https://packages.ubuntu.com/search?keywords=libqrencode-dev">Clique AQUI!</a></li>
                                             <li>Utilitário em linha de comando qrencode (Porém não utilizado, desenvolvi a solução "na unha" mesmo): <a href="https://manpages.ubuntu.com/manpages/jammy/man1/qrencode.1.html">Clique AQUI!</a></li>
