@@ -26,8 +26,8 @@ export default function ProjectsScreen() {
                                     <h3 className="projects-title">Gerador de Resumos de Vídeos com Inteligência Artificial</h3>
                                     <a href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/tree/main" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <p>Código do projeto clicando no botão a cima</p>
                                 <span>Ciência de Dados: Utilizando GPT e Whisper</span>
+                                <p>Código do projeto clicando no botão a cima</p>
                             </div>
                             <div>
                                 <ul className="projects-description--container">
@@ -114,8 +114,8 @@ export default function ProjectsScreen() {
                                     <h3 className="projects-title">QR Code Generator (C Language) + Scanner WEB (Reactjs)</h3>
                                     <a href="https://github.com/WelBert-dev/QRCodeReader_SummarizingInvoiceNotes" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <p>Código do projeto clicando no botão a cima</p>
                                 <span>WEB E2E + Módulo QR Code Generator em linguagem C</span>
+                                <p>Código do projeto clicando no botão a cima</p>
                             </div>
                             <div>
                                 <img className="projects-logo" src={logoQrCodeGenerator} alt="Amostra Amazon" ></img>
@@ -181,8 +181,8 @@ export default function ProjectsScreen() {
                                     <h3 className="projects-title">Restaurante IFSP Springboot e ReactJs</h3>
                                     <a href="https://github.com/WelBert-dev/backupLg3Ecommerce-Springboot" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <p>Código do projeto clicando no botão a cima</p>
                                 <span>WEB E2E</span>
+                                <p>Código do projeto clicando no botão a cima</p>
                             </div>
                             <div>
                                 <img className="projects-logo" src={restauranteIfspAmostra} alt="Amostra Amazon" ></img>
@@ -234,8 +234,8 @@ export default function ProjectsScreen() {
                                     <h3 className="projects-title">Clone Amazon ReactJs e Asp.NetCore</h3>
                                     <a href="https://github.com/welBert-dev/ecommerceWebApi-microServices-dotNetCoreMVC" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <p>Código do projeto clicando no botão a cima</p>
                                 <span>WEB E2E</span>
+                                <p>Código do projeto clicando no botão a cima</p>
                             </div>
                             <div>
                                 <img className="projects-logo" src={amazonAmostra} alt="Amostra Amazon" ></img>
@@ -285,8 +285,8 @@ export default function ProjectsScreen() {
                                     <h3 className="projects-title">Clone Netflix Reactjs consumindo API TMDB</h3>
                                     <a href="https://github.com/WelBert-dev/netflixCloneWeb-NoE2E-react" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <p>Código do projeto clicando no botão a cima</p>
                                 <span>WEB NoE2E</span>
+                                <p>Código do projeto clicando no botão a cima</p>
                             </div>
                             <div>
                                 <img className="projects-logo" src={netflixAmostra} alt="Amostra Netflix" ></img>
@@ -342,8 +342,8 @@ export default function ProjectsScreen() {
                                     <h3 className="projects-title">Interface Clínica AuauMiau sem frameworks (Frontend) Vanilla</h3>
                                     <a href="https://github.com/WelBert-dev/auauMiauWeb-NoFramework" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
-                                <p>Código do projeto clicando no botão a cima</p>
                                 <span>WEB NoE2E (HTML5 + CSS3 + Js PURO)</span>
+                                <p>Código do projeto clicando no botão a cima</p>
                             </div>
                             <div>
                                 <img className="projects-logo" src={auauMiauNoFrameworkAmostra} alt="Amostra AuauMiau NoFamework" ></img>
