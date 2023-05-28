@@ -406,10 +406,10 @@ export default function CertificatesScreen() {
                                         <li>
                                             <h3 className="projects-subtitle -certificateSubtitle">Fontes interessantes</h3>
                                             <ul>
-                                                <li><a target="_blank" href="https://www.youtube.com/watch?v=N0NNnq0Wyww&t=250s">Clique aqui para mais informações (Open Source X Software Livre).</a></li>
-                                                <li><a target="_blank" href="https://www.youtube.com/watch?v=JbXGpDlu3l4">Clique aqui para mais informações (FLISOL) Largue de uma vez o Ruindows e vem para o Lindux.</a></li>
-                                                <li><a target="_blank" href="https://www.youtube.com/watch?v=SZMIL87CyVE&list=PLuf64C8sPVT9L452PqdyYCNslctvCMs_n">Curso completo de GNU/Linux.</a></li>
-                                                <li><a target="_blank" href="https://www.youtube.com/watch?v=Hu8ViS9q8QU">Palestra completa do FLISOL2022 do IFSP.</a></li>
+                                                <li><a className="-linkBoldYellow" target="_blank" href="https://www.youtube.com/watch?v=N0NNnq0Wyww&t=250s">Clique aqui para mais informações (Open Source X Software Livre).</a></li>
+                                                <li><a className="-linkBoldYellow" target="_blank" href="https://www.youtube.com/watch?v=JbXGpDlu3l4">Clique aqui para mais informações (FLISOL) Largue de uma vez o Ruindows e vem para o Lindux.</a></li>
+                                                <li><a className="-linkBoldYellow" target="_blank" href="https://www.youtube.com/watch?v=SZMIL87CyVE&list=PLuf64C8sPVT9L452PqdyYCNslctvCMs_n">Curso completo de GNU/Linux.</a></li>
+                                                <li><a className="-linkBoldYellow" target="_blank" href="https://www.youtube.com/watch?v=Hu8ViS9q8QU">Palestra completa do FLISOL2022 do IFSP.</a></li>
                                                 
                                             </ul>
                                         </li>

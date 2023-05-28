@@ -1,7 +1,6 @@
 /* Area commom */
 
 .projects-title--container.-certificateTitleContainer {
-	background-color: #2f9919;
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
 	padding: 0;
@@ -16,17 +15,19 @@
 .certificate-single.-bolsaEnsinoCertficate > div {
 	max-width: 80%;
 	margin: 0 auto;
-	background: linear-gradient(90deg,#fff 0,6%,#2f9919,#267b15);
+    --tw-bg-opacity: .5;
+    background-color: rgba(52,53,65,var(--tw-bg-opacity));
 	border-radius: 10px;
-	border-right: 4px double black;
-    border-left: 4px double black;
+    border-left: 4px ridge #bfbfbf;
+    border-right: 4px ridge #bfbfbf;
+
 }
 
 .certificate-single.-bolsaEnsinoCertficate img {
 	background-color: white;
 	width: 100%;
 	position: relative;
-	border: 4px double black;
+	border: 4px ridge #000;
 }
 
 .projects-subdescription--container.-bolsaEnsinoCertficate {
@@ -37,11 +38,12 @@
 
 .projects-subdescription--container.-bolsaEnsinoCertficate {
 	margin: 0;
-	border: 4px double;
+	border: 4px ridge #000;
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	padding-bottom: 1rem;
-	background-color: #4bc133;
+	--tw-bg-opacity: .5;
+    background-color: rgba(52,53,65,var(--tw-bg-opacity));
 }
 
 .bolsaEnsinoImageWrapper {
