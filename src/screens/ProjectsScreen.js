@@ -32,7 +32,7 @@ export default function ProjectsScreen() {
                             <div>
                                 <ul className="projects-description--container">
                                     <li>
-                                        <span class="-spanOfLinkAkitaDesbAlgTwitter">Vídeo completo do Youtube e já carregando apartir do Capítulo 07 do exemplo em: <a className="-linkBoldWhite" href="https://www.youtube.com/watch?v=uIflMYQnp8A#t=27m50s">Clique AQUI!</a></span>
+                                        <span class="-spanOfLinkAkitaDesbAlgTwitter">Vídeo completo do Youtube e já carregando apartir do Capítulo 07 do exemplo em: <a className="-linkBoldYellow" href="https://www.youtube.com/watch?v=uIflMYQnp8A#t=27m50s">Clique AQUI!</a></span>
                                         <h3 class="projects-subtitle">Vídeo EXEMPLO (CAP07):</h3>
                                     </li>
                                 </ul>

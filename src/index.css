@@ -21,11 +21,6 @@ a.-linkBoldYellow {
   font-weight: bold;
 } 
 
-a.-linkBoldWhite {
-  color: #fff;
-  font-weight: bold;
-} 
-
 body {
   margin: 0;
   padding: 0;
