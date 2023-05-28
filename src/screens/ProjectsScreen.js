@@ -21,7 +21,7 @@ export default function ProjectsScreen() {
                 <div className="wrapper-projects">     
                     <article className="projects-single">
                         <div className="projects-right">
-                            <div className="projects-title--container -certificateTitleContainer">
+                            <div className="projects-title--container">
                                 <div>
                                     <h3 className="projects-title">Gerador de Resumos de Vídeos com Inteligência Artificial</h3>
                                     <a href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/tree/main" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
@@ -32,7 +32,7 @@ export default function ProjectsScreen() {
                             <div>
                                 <ul className="projects-description--container">
                                     <li>
-                                        <span class="-spanOfLinkAkitaDesbAlgTwitter">Vídeo completo do Youtube e já carregando apartir do Capítulo 07 do exemplo em: <a href="https://www.youtube.com/watch?v=uIflMYQnp8A#t=27m50s">Clique AQUI!</a></span>
+                                        <span class="-spanOfLinkAkitaDesbAlgTwitter">Vídeo completo do Youtube e já carregando apartir do Capítulo 07 do exemplo em: <a className="-linkBoldWhite" href="https://www.youtube.com/watch?v=uIflMYQnp8A#t=27m50s">Clique AQUI!</a></span>
                                         <h3 class="projects-subtitle">Vídeo EXEMPLO (CAP07):</h3>
                                     </li>
                                 </ul>
@@ -65,10 +65,10 @@ export default function ProjectsScreen() {
                                             <li>Ou seja, o processo mais demorado na geração dos resumos é a extração dos Transcripts, em melhor cenário optar pela API Whisper.</li>
                                             <li>Além do poder de processamento da API ser considerável, também é possível passar prompts para melhor acurar e identificar palavras técnicas corretamente durante as extrações.</li>
                                             <li>Porém utilizar a API é um serviço pago! então tive que utilizar a versão manual hardcoded mesmo rsrs...</li>
-                                            <li>Arquivo gerado do Google Colab dessas extrações (Basta editar para suas necessidades): <a href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/blob/main/google_colab/audioToTranscription_withWhisperOpenAI.ipynb">Clique AQUI!</a></li>
-                                            <li>Para executar localmente, basta clonar o repositório git e seguir o get started: <a href="https://github.com/openai/whisper/">Clique AQUI!</a></li>
+                                            <li>Arquivo gerado do Google Colab dessas extrações (Basta editar para suas necessidades): <a className="-linkBoldYellow" href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/blob/main/google_colab/audioToTranscription_withWhisperOpenAI.ipynb">Clique AQUI!</a></li>
+                                            <li>Para executar localmente, basta clonar o repositório git e seguir o get started: <a className="-linkBoldYellow" href="https://github.com/openai/whisper/">Clique AQUI!</a></li>
                                             <li>Finalizado o processo, aqui conseguimos extrair o Transcript do áudio localmente ou utilizando processamento em nuvem (Google Colab).</li>
-                                            <li>A nível de curiosidade os transcripts que eu gerei estão em: <a href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/tree/main/transcriptions">Clique AQUI!</a></li>
+                                            <li>A nível de curiosidade os transcripts que eu gerei estão em: <a className="-linkBoldYellow" href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/tree/main/transcriptions">Clique AQUI!</a></li>
                                         
                                         </ul>
                                     </li>
@@ -84,10 +84,10 @@ export default function ProjectsScreen() {
                                             <li>Prompt Engineering: Basicamente especialista em contextualizar perguntas/respostas para Inteligências Artificiais.</li>
                                             <li>Devemos realizar boas perguntas com o maior contexto possível sobre o assunto do vídeo e também contextualizar a resposta desejada do chat. (Isso é o prompt).</li>
                                             <li>Essa é a parte mais difícil do processo, por isso separei em diretórios "prompt01, prompt02..." para realizar melhorias contínuas, ajustando e testando em vários ciclos.</li>
-                                            <li>Os prompts que eu fiz estão em: <a href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/blob/main/promptsList.txt">Clique AQUI!</a></li>
+                                            <li>Os prompts que eu fiz estão em: <a className="-linkBoldYellow" href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/blob/main/promptsList.txt">Clique AQUI!</a></li>
                                             <li>Aonde está "&#x0007B;transcribe&#x0007D;" é aonde colamos o transcript fragmentado.</li>
                                             <li>Pronto, basta integrar o transcript com uma boa pergunta (prompt) para o ChatGPT gerar os resumos desejados! ;D</li>
-                                            <li>A nível de curiosidade os resumos que eu gerei estão separados por prompts em: <a href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/tree/main/summaries_generated">Clique AQUI!</a></li>
+                                            <li>A nível de curiosidade os resumos que eu gerei estão separados por prompts em: <a className="-linkBoldYellow" href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/tree/main/summaries_generated">Clique AQUI!</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -100,7 +100,7 @@ export default function ProjectsScreen() {
                                         Porém como mencionado nas seções a cima, a API do Whisper e do GPT-3 Turbo é um serviço pago, devido a quantidade de entrada de dados exceder o limite Free.
                                         Logo, o sistema que eu desenvolvi é totalmente manual, e devemos executar o passo a passo na mão se queres executar de maneira FREE rsrs, mas como dito nas seções anteriores o fluxograma é até que simples, ja está tudo pronto e basta adaptar pequenos trechos para as suas necessidades.
                                         Seguindo o passo a passo das seções anteriores é possível obter ótimos resultados! Adorei desenvolver essa solução e está sendo bem útil nas pós anotações das vídeos aulas.
-                                        Publicação mais completa no facebook: <a href="https://www.facebook.com/photo/?fbid=1289365691663152&set=a.601406970459031">Clique AQUI!</a>
+                                        Publicação mais completa no facebook: <a className="-linkBoldYellow" href="https://www.facebook.com/photo/?fbid=1289365691663152&set=a.601406970459031">Clique AQUI!</a>
                                     </p>
                                 </div>
                             </div>
@@ -109,7 +109,7 @@ export default function ProjectsScreen() {
                     <hr />  
                     <article className="projects-single">
                         <div className="projects-right">
-                            <div className="projects-title--container -certificateTitleContainer">
+                            <div className="projects-title--container">
                                 <div>
                                     <h3 className="projects-title">QR Code Generator (C Language) + Scanner WEB (Reactjs)</h3>
                                     <a href="https://github.com/WelBert-dev/QRCodeReader_SummarizingInvoiceNotes" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
@@ -125,7 +125,7 @@ export default function ProjectsScreen() {
                                     <li>
                                         <h3 class="projects-subtitle">BackEnd</h3>
                                         <ul>
-                                            <li>Mongoose em linguagem C: <a href="https://mongoose.ws/">Clique AQUI!</a></li>
+                                            <li>Mongoose em linguagem C: <a className="-linkBoldYellow" href="https://mongoose.ws/">Clique AQUI!</a></li>
                                             <li>API Rest em Linguagem C (Apenas o método POST).</li>
                                             <li>API Funcional porém desligado do projeto devido ao aumento de complexidade do trabalho!</li>
                                             <li>Escolher a linguagem C não é recomendável para implementar API's pois não existe muito material sobre.</li>
@@ -133,14 +133,14 @@ export default function ProjectsScreen() {
                                             <li>Motivo maior: Pouco desenvolvimento útil e maior parte Configurações de ambiente.</li>
                                             <li>Problema de CORS: A Lib Mongoose não possuí documentações boas sobre, mas acabei resolvendo o problema.</li>
                                             <li>Contribuição no Github: O Problema de cima foi desafiador e eu acabei contribuindo com a solução para a comunidade.</li>
-                                            <li>Contribuição com a solução do problema de CORS no Mongoose: <a href="https://github.com/cesanta/mongoose/discussions/1860?fbclid=IwAR1M02dj-ifnabqFVUfR9T_RjOS4A73W980kaGBfjPVXDRJsI45HgNZhZjQ#discussioncomment-4156317">Clique AQUI!</a></li>
-                                            <li>Publicação no Facebook sobre: <a href="https://www.facebook.com/photo?fbid=1285811385351916&set=a.323462608253470">Clique AQUI!</a></li>
+                                            <li>Contribuição com a solução do problema de CORS no Mongoose: <a className="-linkBoldYellow" href="https://github.com/cesanta/mongoose/discussions/1860?fbclid=IwAR1M02dj-ifnabqFVUfR9T_RjOS4A73W980kaGBfjPVXDRJsI45HgNZhZjQ#discussioncomment-4156317">Clique AQUI!</a></li>
+                                            <li>Publicação no Facebook sobre: <a className="-linkBoldYellow" href="https://www.facebook.com/photo?fbid=1285811385351916&set=a.323462608253470">Clique AQUI!</a></li>
                                         </ul>
                                     </li>
                                     <li>
                                         <h3 class="projects-subtitle">FrontEnd</h3>
                                         <ul className="projects-frontend--container">
-                                            <li>Lib para escanear QR Code: react-qr-reader <a href="https://www.npmjs.com/package/react-qr-reader">Clique AQUI!</a></li>
+                                            <li>Lib para escanear QR Code: react-qr-reader <a className="-linkBoldYellow" href="https://www.npmjs.com/package/react-qr-reader">Clique AQUI!</a></li>
                                             <li>HTML5 e CSS3: Elementos semânticos, CSS Grid, Flexbox.</li>
                                             <li>ReactJs: Componentes, Props, Eventos, Hooks, Router, Axios.</li>
                                             <li>Apesar de utilizar react, grande parte da lógica esta em JS Vanilla.</li>
@@ -149,13 +149,13 @@ export default function ProjectsScreen() {
                                     <li>
                                         <h3 class="projects-subtitle">QR Code Generator</h3>
                                         <ul>
-                                            <li>Libqrencode-dev em linguagem C (Via apt no repositório Ubuntu): <a href="https://packages.ubuntu.com/search?keywords=libqrencode-dev">Clique AQUI!</a></li>
-                                            <li>Utilitário em linha de comando qrencode (Porém não utilizado, desenvolvi a solução "na unha" mesmo): <a href="https://manpages.ubuntu.com/manpages/jammy/man1/qrencode.1.html">Clique AQUI!</a></li>
+                                            <li>Libqrencode-dev em linguagem C (Via apt no repositório Ubuntu): <a className="-linkBoldYellow" href="https://packages.ubuntu.com/search?keywords=libqrencode-dev">Clique AQUI!</a></li>
+                                            <li>Utilitário em linha de comando qrencode (Porém não utilizado, desenvolvi a solução "na unha" mesmo): <a className="-linkBoldYellow" href="https://manpages.ubuntu.com/manpages/jammy/man1/qrencode.1.html">Clique AQUI!</a></li>
                                             <li>Obs: O Utilitário a cima só é utilizado para testar a camada de apresentação (escanear) pois a solução desenvolvida a nível didático não gera PNG.</li>
-                                            <li>Documentação base (em Japonês) para entendimento das camadas do QR Code em relação a Lib mencionada: <a href="https://coolshell.cn/articles/10590.html">Clique AQUI!</a></li>
-                                            <li>Repositório Github Oficial da Lib: <a href="https://github.com/fukuchi/libqrencode">Clique AQUI!</a></li>
-                                            <li>Documentação ABNT do trabalho: <a href="https://github.com/WelBert-dev/QRCodeReader_SummarizingInvoiceNotes/blob/main/generatedQRCodeWithLibqrencode/apresentacaoFinalDocs/docs/avaliacaoA2-programacao_de_computadores-15-05-2023.pdf?fbclid=IwAR0uV6sGIkihLfhk1kvJxP5B7EsFLLkQFYu2jfAe4UB8rzMgAsDm_EsnlfM">Clique AQUI!</a></li>
-                                            <li>Apresentação em PowerPoint: <a href="https://github.com/WelBert-dev/QRCodeReader_SummarizingInvoiceNotes/blob/main/generatedQRCodeWithLibqrencode/apresentacaoFinalDocs/docs/ceunsp_programacao_de_computadores_QRCode_generator_em_C.pptx">Clique AQUI!</a></li>
+                                            <li>Documentação base (em Japonês) para entendimento das camadas do QR Code em relação a Lib mencionada: <a className="-linkBoldYellow" href="https://coolshell.cn/articles/10590.html">Clique AQUI!</a></li>
+                                            <li>Repositório Github Oficial da Lib: <a className="-linkBoldYellow" href="https://github.com/fukuchi/libqrencode">Clique AQUI!</a></li>
+                                            <li>Documentação ABNT do trabalho: <a className="-linkBoldYellow" href="https://github.com/WelBert-dev/QRCodeReader_SummarizingInvoiceNotes/blob/main/generatedQRCodeWithLibqrencode/apresentacaoFinalDocs/docs/avaliacaoA2-programacao_de_computadores-15-05-2023.pdf?fbclid=IwAR0uV6sGIkihLfhk1kvJxP5B7EsFLLkQFYu2jfAe4UB8rzMgAsDm_EsnlfM">Clique AQUI!</a></li>
+                                            <li>Apresentação em PowerPoint: <a className="-linkBoldYellow" href="https://github.com/WelBert-dev/QRCodeReader_SummarizingInvoiceNotes/blob/main/generatedQRCodeWithLibqrencode/apresentacaoFinalDocs/docs/ceunsp_programacao_de_computadores_QRCode_generator_em_C.pptx">Clique AQUI!</a></li>
                                         </ul>
                                     </li>
                                 </ul>
@@ -176,7 +176,7 @@ export default function ProjectsScreen() {
                     <hr />  
                     <article className="projects-single">
                         <div className="projects-right">
-                            <div className="projects-title--container -certificateTitleContainer">
+                            <div className="projects-title--container">
                                 <div>
                                     <h3 className="projects-title">Restaurante IFSP Springboot e ReactJs</h3>
                                     <a href="https://github.com/WelBert-dev/backupLg3Ecommerce-Springboot" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
@@ -229,7 +229,7 @@ export default function ProjectsScreen() {
                     <hr />    
                     <article className="projects-single">
                         <div className="projects-right">
-                            <div className="projects-title--container -certificateTitleContainer">
+                            <div className="projects-title--container">
                                 <div>
                                     <h3 className="projects-title">Clone Amazon ReactJs e Asp.NetCore</h3>
                                     <a href="https://github.com/welBert-dev/ecommerceWebApi-microServices-dotNetCoreMVC" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
@@ -280,7 +280,7 @@ export default function ProjectsScreen() {
                     <hr />
                     <article className="projects-single">
                         <div className="projects-right">
-                            <div className="projects-title--container -certificateTitleContainer">
+                            <div className="projects-title--container">
                                 <div>
                                     <h3 className="projects-title">Clone Netflix Reactjs consumindo API TMDB</h3>
                                     <a href="https://github.com/WelBert-dev/netflixCloneWeb-NoE2E-react" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
@@ -337,7 +337,7 @@ export default function ProjectsScreen() {
                     <hr />
                     <article className="projects-single">
                         <div className="projects-right">
-                            <div className="projects-title--container -certificateTitleContainer">
+                            <div className="projects-title--container">
                                 <div>
                                     <h3 className="projects-title">Interface Clínica AuauMiau sem frameworks (Frontend) Vanilla</h3>
                                     <a href="https://github.com/WelBert-dev/auauMiauWeb-NoFramework" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
