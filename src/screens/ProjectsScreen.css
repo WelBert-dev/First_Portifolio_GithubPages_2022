@@ -11,7 +11,7 @@
 }
 
 .projects-logo {
-    border: 4px double #000;
+    border: 4px ridge #000;
     height: 100%;
     width: 100%;
     margin-bottom: -4px !important;
@@ -24,14 +24,14 @@
     background-color: rgba(52,53,65,var(--tw-bg-opacity));
 
     max-width: 80%;
-    border-left: 4px ridge #fff;
-    border-right: 4px ridge #fff;
+    border-left: 4px ridge #bfbfbf;
+    border-right: 4px ridge #bfbfbf;
 
 }
 
 .projects-title--container {
     background-color: #0d1117;
-    border: 4px double #000;
+    border: 4px ridge #000;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -144,7 +144,7 @@
 }
 
 .subContainer-bottom {
-    border: 4px double #000;
+    border: 4px ridge #000;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
 }
