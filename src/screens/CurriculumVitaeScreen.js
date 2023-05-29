@@ -46,7 +46,7 @@ export default function CurriculumVitaeScreen() {
                                          </div>
                                      </div>
                                  </section>
-                                 <section data-section="skills" data-section-id="3ed40f89-7a4c-465d-b108-36934d401760" id="skills" className="padding-1rem">
+                                 <section data-section="skills" data-section-id="3ed40f89-7a4c-465d-b108-36934d401760" id="skills" className="-curriculo--textShadow padding-1rem">
                                      <p className="template__section__title"><span>Habilidades</span></p>
                                      <div className="template__section__container">
                                          <ul className="padding-1rem">
@@ -83,7 +83,7 @@ export default function CurriculumVitaeScreen() {
                                          </ul>
                                      </div>
                                  </section>
-                                 <section data-section="languages" data-section-id="eedbf15a-7f81-442c-8a4d-63a1223348b7" id="languages" className="padding-1rem">
+                                 <section data-section="languages" data-section-id="eedbf15a-7f81-442c-8a4d-63a1223348b7" id="languages" className="-curriculo--textShadow padding-1rem">
                                      <p className="template__section__title"><span>Idiomas</span></p>
                                      <div className="template__section__container">
                                          <div data-subsection-position="0" className="template__section__languages template__section__simple template__section__simple--fixed-font-size noValue">

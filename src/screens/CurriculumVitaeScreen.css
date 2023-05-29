@@ -13,7 +13,6 @@ article, aside, footer, header, nav, section {
 .sc-15b5x2p-1.gOzbkZ {
     padding-top: 5rem;
     padding-bottom: .8rem;
-    background-color: black;
 }
 
 tr .template__professional__column, .template__newyork__main.template__professional__main span, .template__nameOccupation > .template__occupation {
@@ -21,7 +20,9 @@ tr .template__professional__column, .template__newyork__main.template__professio
 }
 
 .template__newyork .template__section__college, .template__section__right .template__section__company, .template__nameOccupation > .template__occupation > p{
-    color: #9f9f9f;
+    color: #11e8ff;
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
+
 }
 
 .template__header__title {
@@ -53,6 +54,7 @@ tr .template__professional__column, .template__newyork__main.template__professio
 
 .template__professional__column.template__newyork__column > section > .template__section__title {
     text-align: center;
+    text-shadow: 1px 1px 2px black;
 }
 
 #skills > .template__section__title, #languages > .template__section__title {
@@ -137,6 +139,7 @@ font-size: 1rem;
 .template__newyork .template__section__info__value {
 word-break: break-word;
 word-wrap: break-word;
+text-shadow: 1px 1px 2px black;
 }
 
 .template__professional .template__header__info {
@@ -150,6 +153,7 @@ padding: 40px 50px 50px 0;
 .template__professional__main {
 display: table-cell;
 vertical-align: top;
+text-shadow: 1px 1px 2px black;
 }
 
 .template__header--twoColumns, .template__section--twoColumns {
@@ -195,6 +199,8 @@ line-height: 20px;
 }
 .font-size--medium.template__newyork .template__section__simple:not(.template__section__simple--fixed-font-size):not(.template__section__languages), .font-size--medium.template__newyork .template__section__description:not(.template__section__simple--fixed-font-size):not(.template__section__languages) {
 font-size: 15.5px;
+color: var(--main-textColor);
+font-weight: 400;
 }
 .template__newyork__main .template__header .template__section__simple {
 padding-left: 0;
@@ -250,12 +256,14 @@ height: 10px;
 }
 .template__professional .template__section__startDate, .template__professional .template__section__endDate, .template__professional .template__section__location {
 font-size: 13.5px;
+font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
 }
 .template__professional .template__section__startDate, .template__professional .template__section__endDate {
 font-style: italic;
 }
 .template__professional .template__section__startDate, .template__professional .template__section__endDate, .template__professional .template__section__location {
 font-size: 13.5px;
+font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
 }
 .template__section__experience .template__section__startDate, .template__section__experience .template__section__endDate, .template__section__education .template__section__startDate, .template__section__education .template__section__endDate {
 display: inline;
@@ -288,6 +296,8 @@ line-height: 20px;
 }
 .font-size--medium.template__newyork .template__section__simple:not(.template__section__simple--fixed-font-size):not(.template__section__languages), .font-size--medium.template__newyork .template__section__description:not(.template__section__simple--fixed-font-size):not(.template__section__languages) {
 font-size: 15.5px;
+color: var(--main-textColor);
+font-weight: 400;
 }
 
 .template__section__description {
@@ -356,7 +366,7 @@ font-family: var(--main-fontFamily);
 
 
 .template__newyork {
-color: #58e70e;
+color: yellow;
 font-family: "Bitter",sans-serif;
 }
 
@@ -377,6 +387,9 @@ padding: .5rem 1rem 0 1rem;
     padding-right: 2rem;
 }
 
+.-curriculo--textShadow {
+	text-shadow: 1px 1px 2px black;
+}
 
 
 @media (max-width: 810px)
@@ -497,7 +510,8 @@ padding: .5rem 1rem 0 1rem;
         content: 'Salto - SP, Brasil';
         position: relative;
         display: block;
-        color: #9f9f9f;
+        color: yellow;
+        text-shadow: 1px 1px 2px black;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
@@ -507,7 +521,8 @@ padding: .5rem 1rem 0 1rem;
         content: 'Fev 2023 - Atualmente';
         position: relative;
         display: block;
-        color: #9f9f9f;
+        color: yellow;
+        text-shadow: 1px 1px 2px black;
         line-height: .8rem;
         font-size: 12px;
         padding: 0 .5rem;
@@ -517,7 +532,8 @@ padding: .5rem 1rem 0 1rem;
         content: 'Salto - SP, Brasil';
         position: relative;
         display: block;
-        color: #9f9f9f;
+        color: yellow;
+        text-shadow: 1px 1px 2px black;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
@@ -527,25 +543,32 @@ padding: .5rem 1rem 0 1rem;
         content: 'Fev 2021 - Dez 2022';
         position: relative;
         display: block;
-        color: #9f9f9f;
+        color: yellow;
+        text-shadow: 1px 1px 2px black;
         line-height: .8rem;
         font-size: 12px;
         padding: 0 .5rem;
     }
     
-    #education .template__section__title {
+    .template__section__title {
         width: max-content;
         margin: 0 auto;
-        border: 3px double white;
+        border: 4px double #000;
         padding: .5rem 0;
         margin-bottom: .9rem;
+        background-color: #255325;
+        font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
+    }
+    .template__section__title > span hr {
+        border-color: black;
     }
 
     #work-experience span::after {
         content: 'Salto - SP, Brasil';
         position: relative;
         display: block;
-        color: #9f9f9f;
+        color: yellow;
+        text-shadow: 1px 1px 2px black;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
@@ -555,19 +578,20 @@ padding: .5rem 1rem 0 1rem;
         content: 'Nov 2018 - Nov 2020';
         position: relative;
         display: block;
-        color: #9f9f9f;
+        color: yellow;
+        text-shadow: 1px 1px 2px black;
         line-height: .8rem;
         font-size: 12px;
         padding: 0 .5rem;
     }
 
-    #work-experience .template__section__title {
+    /* #work-experience .template__section__title {
         width: max-content;
         margin: 0 auto;
         border: 3px double white;
         padding: .5rem 0;
         margin-bottom: .9rem;
-    }
+    } */
 }
 
 @media (max-width: 425px)
