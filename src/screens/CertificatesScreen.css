@@ -18,8 +18,8 @@
     --tw-bg-opacity: .5;
     background-color: rgba(52,53,65,var(--tw-bg-opacity));
 	border-radius: 10px;
-    border-left: 4px ridge #bfbfbf;
-    border-right: 4px ridge #bfbfbf;
+    border-left: 4px ridge var(--main-color);
+    border-right: 4px ridge var(--main-color);
 
 }
 
