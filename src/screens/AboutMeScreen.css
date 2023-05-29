@@ -17,10 +17,10 @@
 }
 
 #main-sobre--container > div p{
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: var(--main-fontFamily);
-    color: var(--main-color);
-    text-shadow: 0.05rem 0.05rem 0.00009rem black;
+    color: var(--main-textColor);
+    text-shadow: 1px 1px 2px black;
     background-color: rgb(32, 10, 28);
     text-align: justify;
     padding: .5rem;
@@ -84,14 +84,14 @@
 }
 
 
-.main-sobre--shellUser {
-    color: white;
+.main-sobre--shellDir {
+    color: #11e8ff;
     font-family: var(--main-fontFamily);
     font-weight: 800;
 }
 
-.main-sobre--shellDir {
-    color: white;
+.main-sobre--shellUser {
+    color: #11e8ff;
     font-family: var(--main-fontFamily);
     font-weight: 800;
 }
