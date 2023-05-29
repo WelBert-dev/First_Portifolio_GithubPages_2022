@@ -29,10 +29,6 @@ tr .template__professional__column, .template__newyork__main.template__professio
     height: max-content;
 }
 
-.template__section__title span hr{
-    display: none;
-}
-
 .tableCurriculoVitae
 {
     max-width: 1200px;
@@ -418,15 +414,6 @@ padding: .5rem 1rem 0 1rem;
         padding-top: 4rem;
     }
 
-    .template__section__title span hr{
-        display: block;
-        color: white;
-    }
-
-    .template__section__title > span hr {
-        color: white;
-    }
-
     .template__professional .template__section__right {
         width: 100%;
     }
@@ -515,6 +502,9 @@ padding: .5rem 1rem 0 1rem;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
+        border-top: 3px double #000;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
 
     #education .template__section__title.-spanFormacaoAcad--superior::after {
@@ -537,6 +527,9 @@ padding: .5rem 1rem 0 1rem;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
+        border-top: 3px double #000;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
 
     #education .template__section__title.-spanFormacaoAcad--tecnico::after {
@@ -553,14 +546,12 @@ padding: .5rem 1rem 0 1rem;
     .template__section__title {
         width: max-content;
         margin: 0 auto;
-        border: 4px double #000;
+        border: 3px double #000;
+        border-radius: 5px;
         padding: .5rem 0;
         margin-bottom: .9rem;
         background-color: #255325;
         font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
-    }
-    .template__section__title > span hr {
-        border-color: black;
     }
 
     #work-experience span::after {
@@ -572,6 +563,9 @@ padding: .5rem 1rem 0 1rem;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
+        border-top: 3px double #000;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
 
     #work-experience .template__section__title::after {
