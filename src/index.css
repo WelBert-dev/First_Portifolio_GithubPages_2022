@@ -21,6 +21,11 @@ a.-linkBoldYellow {
   font-weight: bold;
 } 
 
+.-BoldYellow {
+  color: #ffd700;
+  font-weight: bold;
+}
+
 body {
   margin: 0;
   padding: 0;
