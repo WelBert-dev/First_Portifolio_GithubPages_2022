@@ -30,7 +30,7 @@ export default function CurriculumVitaeScreen() {
                                          </div>
                                          <div className="template__header__info template__header__info--birthday">
                                          <p className="template__section__subtitle">Data de nascimento</p>
-                                         <p className="template__section__info__value">22 Dez, 1999 - 22 Anos</p>
+                                         <p className="template__section__info__value">22 Dez, 1999 - 23 Anos</p>
                                          </div>
                                          <div className="template__header__info template__header__info--nationality">
                                          <p className="template__section__subtitle">Nacionalidade</p>
