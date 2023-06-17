@@ -56,7 +56,7 @@
 }
 
 .right {
-    margin-left: 1rem;
+    margin: 0 .5rem;
     font-size: .8rem;
     font-weight: bold;
     font-family: cursive;
@@ -70,6 +70,12 @@
     color: #ffd700;
     font-size: .7rem;
     font-family: ui-monospace,SFMono-Regular,SF Mono,Menlo,Consolas,Liberation Mono,monospace;
+    background-color: black;
+    width: max-content;
+    margin: 0 auto;
+    padding: 1px 3px;
+    border-radius: 5px;
+    margin-bottom: 3px;
 }
 
 progress:not(value) {
@@ -300,6 +306,15 @@ p[data-value] {
     
   /* THE END */
 
+.skill-tec > .right > span.-fav {
+    color: #11e8ff;
+}
+
+.skill-tec > .right > span.-OldStudy {
+    color: red;
+    background-color: #fff;
+    text-shadow: none;
+}
 
   @media (max-width: 810px)
 {
@@ -316,6 +331,7 @@ p[data-value] {
     .right {
         margin-left: .8rem;
         font-size: .8rem;
+        align-items: center;
     }
     
     .skill-tec div progress {
