@@ -36,7 +36,39 @@ export default function SkillsScreen() {
                             <span className="-fav">Entusiasta ❤️</span>
                             <span><a className="-linkBoldYellow" href="https://drive.google.com/drive/folders/1igYf5NuYs8VA5A58EslDKrK9sUr2FHGQ?usp=sharing" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                         </div>
-                    </article>                              
+                    </article> 
+                    <article className="skill-tec">
+                        <img className="icon" src="https://cdn.iconscout.com/icon/free/png-256/mysql-3628940-3030165.png" alt="Logo do MySQL" ></img>
+                        <div className="right">
+                            <h3 className="title-skill">MySQL</h3>
+                            <progress className="progress-bar" max="100" value="70">70%</progress>
+                            <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/MySQL-Study/blob/main/DQL/Agrupamentos/index.sql" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        </div>
+                    </article>
+                    <article className="skill-tec">
+                        <img className="icon" src="https://cdn-icons-png.flaticon.com/512/2452/2452573.png" alt="Logo Redes Internet" ></img>
+                        <div className="right">
+                            <h3 className="title-skill">Redes (Internet)</h3>
+                            <progress className="progress-bar" max="100" value="75">75%</progress>
+                            <span className="-OldStudy">06/2021 até 06/2022</span>
+                            <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/Redes-Study/tree/main/RedesI" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        </div>
+                    </article>
+                    <article className="skill-tec">
+                        <img className="icon" src="https://gitlab.com/uploads/-/system/project/avatar/14519101/react-256.png" alt="Logo do ReacJs" ></img>
+                        <div className="right">
+                            <h3 className="title-skill">ReactJs</h3>
+                            <progress className="progress-bar" max="100" value="75">75%</progress>
+                            <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/backupLg3Ecommerce-Springboot/blob/main/managerPermissionsOfUsers-react.txt" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        </div>
+                    </article>  
+                    <article className="skill-tec">
+                        <img className="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTim1Q8F1L5j-MqUTl_J_dHHHHeSFmTSz102sZye0U3iNEUdvLMPevqIYCkLzrNk2KioG4&usqp=CAU" alt="Logo do Git" ></img>
+                        <div className="right">
+                            <h3 className="title-skill">Git</h3>
+                            <progress className="progress-bar" max="100" value="70">70%</progress>
+                        </div>
+                    </article>                           
                     <article className="skill-tec">
                         <img className="icon" src="https://cdn.iconscout.com/icon/free/png-256/javascript-2038874-1720087.png" alt="Logo do JavaScript" ></img>
                         <div className="right">
@@ -59,48 +91,6 @@ export default function SkillsScreen() {
                             <h3 className="title-skill">CSS3</h3>
                             <progress className="progress-bar" max="100" value="70">70%</progress>
                             <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/auauMiauWeb-NoFramework/tree/main/components" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
-
-                        </div>
-                    </article>
-                    <article className="skill-tec">
-                        <img className="icon" src="https://gitlab.com/uploads/-/system/project/avatar/14519101/react-256.png" alt="Logo do ReacJs" ></img>
-                        <div className="right">
-                            <h3 className="title-skill">ReactJs</h3>
-                            <progress className="progress-bar" max="100" value="75">75%</progress>
-                            <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/backupLg3Ecommerce-Springboot/blob/main/managerPermissionsOfUsers-react.txt" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
-                        </div>
-                    </article>
-                    <article className="skill-tec">
-                        <img className="icon" src="https://cdn.iconscout.com/icon/free/png-256/mysql-3628940-3030165.png" alt="Logo do MySQL" ></img>
-                        <div className="right">
-                            <h3 className="title-skill">MySQL</h3>
-                            <progress className="progress-bar" max="100" value="70">70%</progress>
-                            <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/MySQL-Study/blob/main/DQL/Agrupamentos/index.sql" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
-                        </div>
-                    </article>
-                    <article className="skill-tec">
-                        <img className="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTim1Q8F1L5j-MqUTl_J_dHHHHeSFmTSz102sZye0U3iNEUdvLMPevqIYCkLzrNk2KioG4&usqp=CAU" alt="Logo do Git" ></img>
-                        <div className="right">
-                            <h3 className="title-skill">Git</h3>
-                            <progress className="progress-bar" max="100" value="65">65%</progress>
-                        </div>
-                    </article>
-                    <article className="skill-tec">
-                        <img className="icon" src="https://camo.githubusercontent.com/c5958aac2c6cd8b680061594f9924e2db27abf2acc4717c207c2687bc693de65/68747470733a2f2f63646e2d696d616765732d312e6d656469756d2e636f6d2f6d61782f3235362f312a46454539386957696e6c5a42596b78424147384d76412e706e67" alt="Logo do shell bash" ></img>
-                        <div className="right">
-                            <h3 className="title-skill">ShellScript Bash</h3>
-                            <progress className="progress-bar" max="100" value="30">30%</progress>
-                            <span className="-OldStudy">08/2021 até 10/2021</span>
-                            <span><a className="-linkBoldYellow" href="https://drive.google.com/drive/folders/1xFh1_LFCyq1UGdvT6uGtW5Z7VTF64WL1?usp=sharing" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
-                        </div>
-                    </article>
-                    <article className="skill-tec">
-                        <img className="icon" src="https://cdn.cdnlogo.com/logos/c/27/c.svg" alt="Logo do C#" ></img>
-                        <div className="right">
-                            <h3 className="title-skill">C#</h3>
-                            <progress className="progress-bar" max="100" value="50">50%</progress>
-                            <span className="-OldStudy">06/2021 até 12/2021</span>
-                            <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/auauMiauWindowsForms-dotNetFramework/blob/main/F_Cliente.cs" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                         </div>
                     </article>
                     <article className="skill-tec">
@@ -113,21 +103,21 @@ export default function SkillsScreen() {
                         </div>
                     </article>
                     <article className="skill-tec">
+                        <img className="icon" src="https://cdn.cdnlogo.com/logos/c/27/c.svg" alt="Logo do C#" ></img>
+                        <div className="right">
+                            <h3 className="title-skill">C#</h3>
+                            <progress className="progress-bar" max="100" value="60">60%</progress>
+                            <span className="-OldStudy">06/2021 até 12/2021</span>
+                            <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/auauMiauWindowsForms-dotNetFramework/blob/main/F_Cliente.cs" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        </div>
+                    </article>
+                    <article className="skill-tec">
                         <img className="icon" src="https://cdn.iconscout.com/icon/free/png-256/python-3521655-2945099.png" alt="Logo do Python" ></img>
                         <div className="right">
                             <h3 className="title-skill">Python</h3>
                             <progress className="progress-bar" max="100" value="50">50%</progress>
                             <span className="-OldStudy">01/2021 até 06/2021</span>
                             <span><a className="-linkBoldYellow" href="https://drive.google.com/drive/folders/1T5XoQtEMf5zXosCcIMy2AxAtrCHoGICw?usp=sharing" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
-                        </div>
-                    </article>
-                    <article className="skill-tec">
-                        <img className="icon" src="https://cdn-icons-png.flaticon.com/512/2452/2452573.png" alt="Logo Redes Internet" ></img>
-                        <div className="right">
-                            <h3 className="title-skill">Redes (Internet)</h3>
-                            <progress className="progress-bar" max="100" value="50">70%</progress>
-                            <span className="-OldStudy">06/2021 até 06/2022</span>
-                            <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/Redes-Study/tree/main/RedesI" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                         </div>
                     </article>
                 </div>

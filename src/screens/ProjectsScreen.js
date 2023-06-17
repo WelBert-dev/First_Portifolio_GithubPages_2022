@@ -18,7 +18,7 @@ export default function ProjectsScreen() {
         <section id="main-projects--container">
             <div>
                 <h1 className="main-title">&lsaquo;Projetos&rsaquo;</h1>
-                <div className="wrapper-projects">     
+                <div className="wrapper-projects">
                     <article className="projects-single">
                         <div className="projects-right">
                             <div className="projects-title--container">
@@ -69,7 +69,7 @@ export default function ProjectsScreen() {
                                             <li>Para executar localmente, basta clonar o repositório git e seguir o get started: <a className="-linkBoldYellow" href="https://github.com/openai/whisper/" target="_blank">Clique AQUI!</a></li>
                                             <li>Finalizado o processo, aqui conseguimos extrair o Transcript do áudio localmente ou utilizando processamento em nuvem (Google Colab).</li>
                                             <li>A nível de curiosidade os transcripts que eu gerei estão em: <a className="-linkBoldYellow" href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/tree/main/transcriptions" target="_blank">Clique AQUI!</a></li>
-                                        
+
                                         </ul>
                                     </li>
                                     <li>
@@ -106,7 +106,87 @@ export default function ProjectsScreen() {
                             </div>
                         </div>
                     </article>
-                    <hr />  
+                    <hr />
+                    <article className="projects-single">
+                        <div className="projects-right">
+                            <div className="projects-title--container">
+                                <div>
+                                    <h3 className="projects-title">Maratona Java DevDojo</h3>
+                                    <a href="" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
+                                </div>
+                                <span>Curso RoadMap da API Nativa do Java</span>
+                                <p>Código do projeto clicando no botão a cima</p>
+                            </div>
+                            <div>
+                                <img className="projects-logo" src={auauMiauNoFrameworkAmostra} alt="Amostra AuauMiau NoFamework" ></img>
+                            </div>
+                            <div className="subContainer-bottom">
+                                <ul className="projects-description--container">
+                                    <li>
+                                        <h3 class="projects-subtitle">Cronograma de Estudos: </h3>
+                                        <ul>
+                                            <li>Sequência de inicialização (Ordem de precedência de execução quando usado herança).</li>
+                                            <li>Mais sobre Static (Alocamento único de memória, Compartilhado entre todas instâncias de classe).</li>
+                                            <li>Mais sobre Final (Constante).</li>
+                                            <li>Mais sobre Enum (Enumeradores também são Classes e Objetos).</li>
+                                            <li>Mais sobre Abstract (Generaliza classes, define comportamentos comuns a todos herdeiros).</li>
+                                            <li>Mais sobre Interfaces (Definição de contratos que obrigam comportamentos, ajuda no desacoplamento dos módulos).</li>
+                                            <li>Mais sobre Polimorfismo (Capacidade de se adaptar a mudanças ao longo da implementação).</li>
+                                            <li>Mais sobre Exceptions (Estrutura Hierarquica, Herdeiros de Exception são Checked e Herdeiros de RuntimeException são Uncheched).</li>
+                                            <li>Wrappers dos tipos primitivos (Encapsula os tipos primitivos em Objetos para contextos que esperam eles e para fornecer funcionalidades prontas).</li>
+                                            <li>Wrappers dos tipos primitivos: Unboxing, AutoBoxing, Boxing (Ações em que o java aloca memória e encapsula os primitivos em Objetos).</li>
+                                            <li>Mais sobre Strings (Strings no java são Objetos Imutáveis devido ao Pool de Strings).</li>
+                                            <li>Strings constants pool é uma técnica na computação para otimizar recursos de armazenamento quando trabalhamos com Strings.</li>
+                                            <li>O Java implementa o conceito a cima compartilhando as palavras entre toda aplicação, alocando memória apenas para palavras novas.</li>
+                                            <li>Ou seja, antes dele alocar memória para a palavra, ele verifica no pool se ela já existe evitando assim duplicatas (DISTINCT).</li>
+                                            <li>PORÉM essa implementação acaba atrapalhando alguns cenários em que é realizado muitas Iterações com concatenação.</li>
+                                            <li>StringBuilder e StringBuffer (Chegam para corrigir o problema de cima, e outros cenários que visam performance em Iterações.</li>
+                                            <li>A Diferença é que o StringBuffer é desenhado para cenários de MultiThreads e Concorrência.</li>
+                                            <li>Manipulação de Data e Tempo (Maneira legada pacote util e Maneira nova do pacote especializado time).</li>
+                                            <li>Maneira legada é as classes Date e Calendar do pacote java.util, foram as primeiras classes especializadas neste contexto.</li>
+                                            <li>Na maneira legada as datas eram representadas por um Long que representava os milisegundos de 01/01/1970 até 17/08/292278994 (Valor max representado por Long).</li>
+                                            <li>O Problema delas era a dificuldade de Internacionalização, eis que vem Calendar para suprir.</li>
+                                            <li>Na maneira nova é o pacote completo especializado em manipulações de Datas e Tempo, criado por um Brasileiro, Java adota ela apartir da versão 8.</li>
+                                            <li>Formatação de Data e Tempo em diversos padrões de acordo com o Locale (Internacionalização) ou personalizados por nós.</li>
+                                            <li>Formatação de Números e moedas também com uso de Locale (Internacionalização).</li>
+                                            <li>Principais classes do pacote novo especializado em Data e Tempo (LocalDate, LocalTime, Instant, e LocalDateTime).</li>
+                                            <li>Pegando intervalos com uso de Duration (Para Datas) e Period (Para Tempo).</li>
+                                            <li>ChronoUnit: Unidades do tempo (Tipagens para Dias, Semanas, Meses, Anos).</li>
+                                            <li>TemporalAdjusters: utilitário para Ajustes na Data e Tempo.</li>
+                                            <li>Zone: trabalhando com Zonas podendo assim verificar diferenças em fuso horarios (A diferença entre SP e Tokyo é de +9 Horas em relação a SP).</li>
+                                            
+                                            <li>Continua...</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">FrontEnd</h3>
+                                        <ul className="projects-frontend--container">
+                                            <li>HTML5 e CSS3: Elementos semânticos, CSS Grid, Flexbox.</li>
+                                            <li>Animações CSS: Sucesso e Erro ao registrar clientes.</li>
+                                            <li>Componentização, para ja ir acostumando com ReactJS.</li>
+                                            <li>Herança de classes, utilizado a mesma classe em vários comps "iguais".</li>
+                                            <li>Js Vanilla.</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <div className="projects-subdescription--container">
+                                    <h3 class="projects-subtitle">Descrição</h3>
+                                    <p>
+                                        Trabalho do curso, aonde foi realizado um parsing do semestre anterior, o projeto
+                                        foi desenvolvido inicialmente em windows forms com .NetCore (C#) da Microsoft,
+                                        a lógica/documentação continuaram as mesmas porém desta vez mudando a camada de
+                                        apresentação para a web. Projeto "Puro" sem nenhum framework, utilizando a persistencia
+                                        de dados "client-side" do navegador (LocalStorage).
+                                        Abordagem escolhida pois muitas das vezes é mais interessante utilizar este recurso
+                                        (desde que não exagere), pois o armazenamento não se perde com Re-Loads e nem possuem tempo
+                                        de expiração (diferente de coockies).
+                                        Foi ótimo para treinar e aprender conceitos que muitos dos frameworks abstraem e acaba passando
+                                        despercebido, então foi possível "olhar por de baixo dos panos", colocando a mão no código.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
                     <article className="projects-single">
                         <div className="projects-right">
                             <div className="projects-title--container">
@@ -162,10 +242,10 @@ export default function ProjectsScreen() {
                                 <div className="projects-subdescription--container">
                                     <h3 class="projects-subtitle">Descrição</h3>
                                     <p>
-                                        Trabalho final do primeiro semestre da disciplina Programação de Computadores (CEUNSP) do meu curso CST ADS que iniciei esse ano, 
-                                        o professor optou por começar pela linguagem C e não deixou quem já estudava outras tecnologias utilizar elas (No meu caso eu queria 
+                                        Trabalho final do primeiro semestre da disciplina Programação de Computadores (CEUNSP) do meu curso CST ADS que iniciei esse ano,
+                                        o professor optou por começar pela linguagem C e não deixou quem já estudava outras tecnologias utilizar elas (No meu caso eu queria
                                         desenvolver com Java), trabalho de tema livre com apenas uma regra: Utilizar a linguagem C na implementação. Estou em busca de desafios
-                                        e então escolhi por desenvolver um algoritmo capaz de gerar QR Codes e após isso escanea-los em outro projeto WEB (ReactJs) 
+                                        e então escolhi por desenvolver um algoritmo capaz de gerar QR Codes e após isso escanea-los em outro projeto WEB (ReactJs)
                                         afim de verificar visualmente a consistência dos resultados. Todo o processo está documentado no padrão ABNT e também fiz uma apresentação em Power Point (Links na seção de cima).
                                         Adorei a escolha e acabei aprendendo bastante sobre as camadas do QR Code e a sua implementação Low Level.
                                     </p>
@@ -173,7 +253,7 @@ export default function ProjectsScreen() {
                             </div>
                         </div>
                     </article>
-                    <hr />  
+                    <hr />
                     <article className="projects-single">
                         <div className="projects-right">
                             <div className="projects-title--container">
@@ -219,14 +299,14 @@ export default function ProjectsScreen() {
                                         tecnologias web do core do sistema (API Springboot) diminuindo assim acoplamentos das mesmas, melhorando a manutenção e escalabilidade
                                         e melhorando a possibilidade de expansão dos módulos (Caso queria adotar novas tecnologias na camada de apresentação, como um projeto Mobile por ex),
                                         escolhi dessa vez o Springboot pois estou estudando Java atualmente e essa linguagem ganhou meu coração, pois é uma linguagem bem madura e particularmente mais
-                                        "clean" a sintaxe se comparado com C# que é uma cópia descarada dela (foi inspirada nela), além de eu ser entusiasta GNU e o Java é Multiplataforma, 
+                                        "clean" a sintaxe se comparado com C# que é uma cópia descarada dela (foi inspirada nela), além de eu ser entusiasta GNU e o Java é Multiplataforma,
                                         então é nela que pretendo me especializar e se tudo der certo ano que vem pretendo tirar a certificação da Oracle...
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </article>
-                    <hr />    
+                    <hr />
                     <article className="projects-single">
                         <div className="projects-right">
                             <div className="projects-title--container">
@@ -324,9 +404,9 @@ export default function ProjectsScreen() {
                                     <h3 class="projects-subtitle">Descrição</h3>
                                     <p>
                                         Clone da interface netflix web utilizando as ferramentas a cima, projeto teoricamente simples porém cheio de detalhes
-                                        feito quando eu estava começando a estudar Reactjs com apoio do Bonieky do canal B7Web, foi quando eu me interessei 
+                                        feito quando eu estava começando a estudar Reactjs com apoio do Bonieky do canal B7Web, foi quando eu me interessei
                                         pelo ReactJs pois vi o seu potêncial e achei bem interessante, não é atoa que o facebook criador utiliza nos projetos,
-                                        ótima ferramenta que me fez me interessar bastante pelo FrontEnd, pois até então eu estudava a stack porém, meu forte 
+                                        ótima ferramenta que me fez me interessar bastante pelo FrontEnd, pois até então eu estudava a stack porém, meu forte
                                         sempre foi mais as tecnologias BackEnd, foi ai que eu decidi me tornar FullStack... lógico que é uma escolha bem ousada,
                                         mas acredito que com esforço e dedicação eu consigo cumprir essa meta! "Um leão por dia".
                                     </p>
@@ -375,12 +455,12 @@ export default function ProjectsScreen() {
                                 <div className="projects-subdescription--container">
                                     <h3 class="projects-subtitle">Descrição</h3>
                                     <p>
-                                        Trabalho do curso, aonde foi realizado um parsing do semestre anterior, o projeto 
+                                        Trabalho do curso, aonde foi realizado um parsing do semestre anterior, o projeto
                                         foi desenvolvido inicialmente em windows forms com .NetCore (C#) da Microsoft,
-                                        a lógica/documentação continuaram as mesmas porém desta vez mudando a camada de 
+                                        a lógica/documentação continuaram as mesmas porém desta vez mudando a camada de
                                         apresentação para a web. Projeto "Puro" sem nenhum framework, utilizando a persistencia
                                         de dados "client-side" do navegador (LocalStorage).
-                                        Abordagem escolhida pois muitas das vezes é mais interessante utilizar este recurso 
+                                        Abordagem escolhida pois muitas das vezes é mais interessante utilizar este recurso
                                         (desde que não exagere), pois o armazenamento não se perde com Re-Loads e nem possuem tempo
                                         de expiração (diferente de coockies).
                                         Foi ótimo para treinar e aprender conceitos que muitos dos frameworks abstraem e acaba passando
@@ -388,7 +468,7 @@ export default function ProjectsScreen() {
                                     </p>
                                 </div>
                             </div>
-                        </div>             
+                        </div>
                     </article>
                 </div>
             </div>
