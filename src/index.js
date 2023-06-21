@@ -20,7 +20,7 @@ root.render(
           <Route element={<App />} >
             <Route path="/" element={<HomeScreen />} exact/>
             <Route path="aboutMe" element={<AboutMeScreen />} />
-            {/* <Route path="skills" element={<SkillsScreen />} /> */}
+            <Route path="skills" element={<SkillsScreen />} />
             <Route path="projects" element={<ProjectsScreen />} />
             <Route path="curriculumVitae" element={<CurriculumVitaeScreen />} />
             <Route path="certificates" element={<CertificatesScreen />} />
