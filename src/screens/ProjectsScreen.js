@@ -47,7 +47,7 @@ export default function ProjectsScreen() {
                                 <ul className="projects-description--container">
                                     <li>
                                         {/* <h3 class="projects-subtitle">[Aulas 75 até 94]</h3> */}
-                                        <h3 class="projects-subtitle">OverView geral sobre POO: </h3>
+                                        <h3 class="projects-subtitle">OverView geral sobre POO</h3>
                                         <ul>
                                             <li>[Aula 75] - Sequência de inicialização (Ordem de precedência de execução quando usado herança <code className="token_reservada">extends</code>, e blocos estáticos <code className="token_reservada">static &#123;&#125;</code>): <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula75-sequenciaDeInicializacao.txt" target="_blank">Clique AQUI!</a></li>
                                             <li>[Aula 77] - Mais sobre <code className="token_reservada">static</code> (Alocamento único de memória, Compartilhado entre todas instâncias de classe): <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula77-maisSobreStatic.txt" target="_blank">Clique AQUI!</a></li>
@@ -74,11 +74,11 @@ export default function ProjectsScreen() {
                                     </li>
                                     <li>
                                         {/* <h3 class="projects-subtitle">[Aulas 95 até 105]</h3> */}
-                                        <h3 class="projects-subtitle">Errors, Exceptions, e RuntimeExceptions: </h3>
+                                        <h3 class="projects-subtitle">Errors, Exceptions, e RuntimeExceptions</h3>
                                         <ul className="projects-frontend--container">
                                             <li>Estrutura Hierárquica do fluxo de herança, Herdeiros de <code className="token_reservada">Exception</code> são <code className="token_reservada">Checked</code> e Herdeiros de <code className="token_reservada">RuntimeException</code> são <code className="token_reservada">Unchecked</code>, quando lançar <code className="token_reservada">throws</code> na assinatura e quando tratar em blocos <code className="token_reservada">try-catch</code>.</li>
                                             <li>Estrutura Hierarquica do fluxo de herança pois tudo no java é  <code className="token_reservada">Object</code>, logo, as exceções também possuem superClasses e subClasses (<code className="token_reservada">Checked</code> para herdeiros de <code className="token_reservada">Exception</code> e <code className="token_reservada">Unchecked</code> para herdeiros de <code className="token_reservada">RuntimeException</code>).</li>
-                                            <li>Todos são herdeiros de <code className="token_reservada">Throwable</code> porisso é possível lançar, porém existem diferenças nos tipos de exceções e a forma como é tratado (<code className="token_reservada">Error</code>, <code className="token_reservada">Exception</code> (<code className="token_reservada">Checked</code>) e <code className="token_reservada">RuntimeException</code> (<code className="token_reservada">Unchecked</code>)).</li>
+                                            <li>Todos são herdeiros de <code className="token_reservada">Throwable</code> que é a raiz da hierarquia de exceções, porisso é possível lançar, porém existem diferenças nos tipos de exceções e a forma como é tratado (<code className="token_reservada">Error</code>, <code className="token_reservada">Exception</code> (<code className="token_reservada">Checked</code>) e <code className="token_reservada">RuntimeException</code> (<code className="token_reservada">Unchecked</code>)).</li>
                                             <li><code className="token_reservada">Error</code> não são exceções, esse tipo esta fora de nosso controle, Erros não são possiveis de tratar com lógica, logo, quando ocorrer geralmente o programa finaliza, por exemplo acabar a memória durante a execução (<code className="token_reservada">OutOfMemoryError</code>), ou quando estoura a pilha de chamadas (<code className="token_reservada">StackOverflowError</code>).</li>
                                             <li>Exceções do tipo <code className="token_reservada">Checked</code>: São checadas e filhas da classe <code className="token_reservada">Exception</code> diretamente, se não tratadas o JavaC nem compila. (Exemplo <code className="token_reservada">IOException</code> ao tentar ler arquivos inexistentes, esse se não tratar não irá compilar).</li>
                                             <li>Exceções do tipo <code className="token_reservada">Unchecked</code>: São desconhecidas até que ocorra em tempo de execução (Ou seja, geralmente é causado por falhas de lógica do desenvolvedor), filhas da classe <code className="token_reservada">RuntimeException</code> diretamente ou elá própria, não necessita de tratamentos prévios pois ela só será conhecida em tempo de execução, logo, o Java não obriga tratamentos (Exemplo <code className="token_reservada">IndexOutOfBoundsException</code> ao tentar acessar index inválido/inexistente de um Array).</li>
@@ -108,33 +108,33 @@ export default function ProjectsScreen() {
                                     </li>
                                     <li>
                                         {/* <h3 class="projects-subtitle">[Aulas 106 e 107]</h3> */}
-                                        <h3 class="projects-subtitle">Wrappers dos Tipos Primitivos: </h3>
+                                        <h3 class="projects-subtitle">Wrappers dos Tipos Primitivos</h3>
                                         <ul className="projects-frontend--container">
                                             <li>Encapsula os <code className="token_reservada">Tipos Primitivos</code> em Objetos para contextos que esperam eles alocando memória e tratando eles como se fossem Objetos (Devido a isso, altera o comportamento de <code className="token_reservada">passagem por valor</code> dos Primitivos para <code className="token_reservada">passagem por referência</code> dos Objetos).</li>
                                             <li>Fornece funcionalidades/métodos estáticos prontos especializado para cada tipo primitivo (Utilitário).</li>
                                             <br/>
-                                            <li><code className="token_reservada">Byte</code>: Objeto Wrapper para o Tipo Primitivo int (8bits).</li>
-                                            <li><code className="token_reservada">Short</code>: Objeto Wrapper para o Tipo Primitivo int (16bits).</li>
-                                            <li><code className="token_reservada">Integer</code>: Objeto Wrapper para o Tipo Primitivo int (32bits).</li>
-                                            <li><code className="token_reservada">Long</code>: Objeto Wrapper para o Tipo Primitivo long (64bits).</li>
-                                            <li><code className="token_reservada">Float</code>: Objeto Wrapper para o Tipo Primitivo float (32bits).</li>
-                                            <li><code className="token_reservada">Double</code>Double: Objeto Wrapper para o Tipo Primitivo double (64bits).</li>
-                                            <li><code className="token_reservada">Character</code>: Objeto Wrapper para o Tipo Primitivo char.</li>
-                                            <li><code className="token_reservada">Boolean</code>: Objeto Wrapper para o Tipo Primitivo boolean.</li>
+                                            <li><code className="token_reservada">Byte</code>: Objeto Wrapper para Tipo Primitivo int (8bits).</li>
+                                            <li><code className="token_reservada">Short</code>: Objeto Wrapper para Tipo Primitivo int (16bits).</li>
+                                            <li><code className="token_reservada">Integer</code>: Objeto Wrapper para Tipo Primitivo int (32bits).</li>
+                                            <li><code className="token_reservada">Long</code>: Objeto Wrapper para Tipo Primitivo long (64bits).</li>
+                                            <li><code className="token_reservada">Float</code>: Objeto Wrapper para Tipo Primitivo float (32bits).</li>
+                                            <li><code className="token_reservada">Double</code>: Objeto Wrapper para Tipo Primitivo double (64bits).</li>
+                                            <li><code className="token_reservada">Character</code>: Objeto Wrapper para Tipo Primitivo char.</li>
+                                            <li><code className="token_reservada">Boolean</code>: Objeto Wrapper para Tipo Primitivo boolean.</li>
                                             <br/>
-                                            <li>Muito utilizado com Listas/Coleções pois as mesmas utilizam a referência do Objeto, logo, não é possível criar as mesmas para <code className="token_reservada">Tipos Primitivos</code> (Já que os mesmos não possuem referência), então a solução é criar Listas/Coleções para os <code className="token_reservada">Objetos Wrappers</code>.</li>
+                                            <li>Muito utilizado com <code className="token_reservada">Listas</code> ou <code className="token_reservada">Coleções</code> em geral pois as mesmas utilizam a <code className="token_reservada">referência do Objeto</code>, logo, não é possível criar elas para os <code className="token_reservada">Tipos Primitivos</code> (Já que os mesmos não possuem referência), então a solução é criar <code className="token_reservada">Listas</code> ou <code className="token_reservada">Coleções</code> para os <code className="token_reservada">Objetos Wrappers</code>.</li>
                                             <li>Além das listas, também é bem utilizado em cenários de concorrência <code className="token_reservada">concurrency</code> (MultiThreads) aonde para sincronizar com o token <code className="token_reservada">synchronized</code> só é possível em Objetos, dentre outros contextos.</li>
                                             <li>A regra do polimorfismo também se aplica a eles.</li>
                                             <br/>
                                             <li><code className="token_reservada">Boxing/AutoBoxing</code>: Processo no qual a JVM encapsula o valor do <code className="token_reservada">Tipo Primitivo</code> em um Objeto <code className="token_reservada">Wrapper</code> (Alocando memória, assim temos a referência e o valor em sí) Exemplo: <code className="token_reservada">Integer intW = 10;</code>.</li>
-                                            <li><code className="token_reservada">Unboxing/AutoUnboxing</code>: Processo inverso, no qual JVM desencapsula o <code className="token_reservada">Tipo Primitivo</code> retirando o valor encapsulado no Objeto Wrapper, ou seja, processo INVERSO do anterior (Removendo a referência e re-alocando o valor em uma <code className="token_reservada">variável primitiva</code> comum) Exemplo: <code className="token_reservada">int intP = intW;</code>.</li>
+                                            <li><code className="token_reservada">Unboxing/AutoUnboxing</code>: Processo inverso, no qual a JVM desencapsula o <code className="token_reservada">Tipo Primitivo</code> retirando o valor encapsulado no Objeto <code className="token_reservada">Wrapper</code>, ou seja, processo INVERSO do anterior (Removendo a referência e re-alocando o valor em uma <code className="token_reservada">variável primitiva</code> comum) Exemplo: <code className="token_reservada">int intP = intW;</code>.</li>
                                             <br/>
-                                            <li>É importante conhecer essa ação do Java implementado na JVM sobre os <code className="token_reservada">Wrappers</code>, pois em alguns cenários aonde realizamos operações de múltiplas iterações com somas e etc utilizando os Objetos <code className="token_reservada">Wrappers</code>, esse processo pode ser computacionalmente CUSTOSO em relação ao desempenho pois a cada iteração a JVM aloca e desaloca memória, para encapsular e desencapsular o valor do primitivo, além disto, também devemos considerar o custo computacional de outros processamentos necessários para a construção de Objetos.</li>
+                                            <li>É importante conhecer essa ação do Java implementado na JVM sobre os <code className="token_reservada">Wrappers</code>, pois em alguns cenários aonde realizamos operações de múltiplas iterações com somas e etc utilizando os Objetos <code className="token_reservada">Wrappers</code>, esse processo pode ser computacionalmente CUSTOSO em relação ao desempenho pois a cada iteração a JVM aloca e desaloca memória, para encapsular e desencapsular o valor do primitivo, além disto, também devemos considerar o custo computacional de outros processamentos necessários para a construção de Objetos. Ou seja, utilizar sempre que possível os <code className="token_reservada">Tipos Primitivos</code> comuns em contextos que não exigem Objetos.</li>
                                         </ul>
                                     </li>
                                     <li>
                                         {/* <h3 class="projects-subtitle">[Aulas 108 até 111]</h3> */}
-                                        <h3 class="projects-subtitle">Strings: </h3>
+                                        <h3 class="projects-subtitle">Strings</h3>
                                         <ul className="projects-frontend--container">
                                             <li>Não são consideradas <code className="token_reservada">Wrappers</code> pois elas já são Objetos normalmente e não existe <code className="token_reservada">Tipo Primitivo</code> para elas (Como ocorre em linguagens de mais alto nível como python por exemplo).</li>
                                             <li><code className="token_reservada">Strings literais</code> (<code className="token_reservada">String b = "Wubalubadubdub";</code>) no Java são Objetos Imutáveis devido ao <code className="token_reservada">Pool de Strings constantes</code>.</li>
@@ -145,7 +145,7 @@ export default function ProjectsScreen() {
                                             <li><code className="token_reservada">StringBuilder</code> e <code className="token_reservada">StringBuffer</code> (Chegam para corrigir o problema de cima, e outros cenários que visam performance em Iterações), pois eles manipulam diretamente a memória alocada inicialmente, e não utiliza o <code className="token_reservada">pool de Strings constantes</code> que fica alocando espaço para cada palavra diferente.</li>
                                             <li>A Diferença deles é que o <code className="token_reservada">StringBuffer</code> é desenhado para cenários de <code className="token_reservada">MultiThreads</code> e Concorrência <code className="token_reservada">Concurrency</code>.</li>
                                             <li>Se atentar ao tipo de retorno se utilizado essas classes (<code className="token_reservada">StringBuilder</code> e <code className="token_reservada">StringBuffer</code>) ou outras, quando o tipo de retorno é diferente do Objeto manipulado em memória em sí, quer dizer que a lógica não está alterando o valor real em memória e sim apenas esse retorno em questão.</li>
-                                            <li>Sobre o ponto acima neste contexto, quando utilizamos um <code className="token_reservada">StringBuilder</code> e algum método está retornando uma <code className="token_reservada">String</code> Wrapper comum, isso quer dizer que a lógica só está sendo aplicada no retorno, e não está alterando o valor real em memória do Objeto. (<code className="token_reservada">objBuilderOrBuffer.reverse()</code> retorna um <code className="token_reservada">StringBuilder</code>, logo altera o valor real em memória, já <code className="token_reservada">.subString(startIndex, endIndex)</code> retorna uma <code className="token_reservada">String</code> Wrapper comum, logo NÃO está alterando o valor real em memória, está apenas aplicando a lógica no retorno).</li>
+                                            <li>Sobre o ponto acima neste contexto, quando utilizamos um <code className="token_reservada">StringBuilder</code> e algum método está retornando uma <code className="token_reservada">String</code> comum, isso quer dizer que a lógica só está sendo aplicada no retorno, e não está alterando o valor real em memória do Objeto. (<code className="token_reservada">objBuilderOrBuffer.reverse()</code> retorna um <code className="token_reservada">StringBuilder</code>, logo altera o valor real em memória, já <code className="token_reservada">.subString(startIndex, endIndex)</code> retorna uma <code className="token_reservada">String</code> comum, logo NÃO está alterando o valor real em memória, está apenas aplicando a lógica no retorno).</li>
                                             <li>Métodos utilitários prontos para manipulação de <code className="token_reservada">Strings</code> (<code className="token_reservada">.replace(thisValue, fromThisValue)</code>, <code className="token_reservada">.substring(startIndex, endIndex)</code>, <code className="token_reservada">.trim()</code>, <code className="token_reservada">.charAt()</code>, <code className="token_reservada">.toUpperCase()</code>, e etc).</li>
                                             <br/>
                                             <li>Obs sobre o método <code className="token_reservada">.replace(thisValue, fromThisValue)</code>: Diferente do Javascript que substitui apenas a primeira ocorrência, no Java TODAS as ocorrências são substituidas.</li>
@@ -153,18 +153,19 @@ export default function ProjectsScreen() {
                                     </li>
                                     <li>
                                         {/* <h3 class="projects-subtitle">[Aulas 112 até 129]</h3> */}
-                                        <h3 class="projects-subtitle">Manipulação de Data e Hora: </h3>
+                                        <h3 class="projects-subtitle">Manipulação de Data e Hora</h3>
                                         <ul className="projects-frontend--container">
-                                            <li>Maneira Legada (<code className="token_reservada">Date</code> e <code className="token_reservada">Calendar</code> do pacote <code className="token_reservada">java.util</code>) porém tem problemas de Internacionalização e Limitações nas possibilidades de representações.</li>
+                                            <li>Maneira Legada (<code className="token_reservada">Date</code> e <code className="token_reservada">Calendar</code> do pacote <code className="token_reservada">java.util</code>) porém tem problemas de <code className="token_reservada">Internacionalização</code> e Limitações nas possibilidades de representações, mais informações sobre <code className="token_reservada">Internacionalização</code> na seção logo abaixo desta!</li>
                                             <li>Muitos sistemas ainda utilizam elas! Não é uma boa prática apartir do Java 8.</li>
-                                            <li><code className="token_reservada">Date</code>: Representado em baixo nível por um <code className="token_reservada">long</code> que representa os milissegundos de 01/01/1970 até 17/08/292278994 04:12 (valor máximo de um <code className="token_reservada">long</code>), mais informações sobre <code className="token_reservada">Date</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula112Date.java" target="_blank">Clique AQUI!</a></li>
+                                            <li><code className="token_reservada">Date</code>: Representado em baixo nível por um <code className="token_reservada">long</code> que representa os milissegundos de 01/01/1970 com limitação até 17/08/292278994 04:12 (valor máximo de um <code className="token_reservada">long</code>), mais informações sobre <code className="token_reservada">Date</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula112Date.java" target="_blank">Clique AQUI!</a></li>
                                             <li><code className="token_reservada">Calendar</code>: Devido ao problema inicial de Internacionalização é criado a classe <code className="token_reservada">Calendar</code> (Abstrata, ou seja, é necessário uso do método <code className="token_reservada">builder</code> estático para sua criação, o mesmo faz verificações de origem da JVM para obter datas corretas (Internacionalização), ou podemos alterar esse comportamento padrão passando na <code className="token_reservada">sobrecarga do construtor</code> um Objeto <code className="token_reservada">Locale</code>), mais informações sobre <code className="token_reservada">Calendar</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula113Calendar.java" target="_blank">Clique AQUI!</a></li>
-                                            <li><code className="token_reservada">Calendar</code>: utiliza em baixo nível o mesmo <code className="token_reservada">long</code> do <code className="token_reservada">Date</code> para representar a data (sendo os mesmos milissegundos de 01/01/1970 até 17/08/292278994 04:12).</li>
+                                            <li><code className="token_reservada">Calendar</code>: utiliza em baixo nível o mesmo <code className="token_reservada">long</code> do <code className="token_reservada">Date</code> para representar a data (sendo os mesmos milissegundos de 01/01/1970 com limitação até 17/08/292278994 04:12).</li>
                                             <li><code className="token_reservada">Calendar</code>: é concretizada/implementada por 3 classes no Java 17: <code className="token_reservada">BuddhistCalendar</code>, <code className="token_reservada">GregorianCalendar</code> e <code className="token_reservada">JapaneseImperialCalendar</code>.</li>
                                             <br/>
-                                            <li><code className="token_reservada">DateFormat</code>: Surge devido a este tipo de representação em baixo nível utilizando <code className="token_reservada">long</code> ser inviável na visualização e compreensão humana, uma vez que as representações são números enormes que parecem não fazer sentido para quem não conhece, podemos utilizar a classe <code className="token_reservada">DateFormat</code> para melhorar na visibilidade humana formatando e adicionando uma camada de mais alto nível nesses milissegundos, e representando eles em <code className="token_reservada">Strings</code> com máscaras de Datas "22/12/199" (equivalente do <code className="token_reservada">`-h`</code> do Unix Like), mais informações sobre <code className="token_reservada">DateFormat</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula114DateFormat.java" target="_blank">Clique AQUI!</a></li>
-                                            <li><code className="token_reservada">DateFormat</code>: Para armazenar em <code className="token_reservada">banco de dados</code> podemos utilizar a mesma abordagem de cima, porém no padrão da máscara suportado pelo banco (Para o DB MySQL: "yyyy-mm-dd").</li>
-                                            <li><code className="token_reservada">DateFormat</code>: As conversões do valor <code className="token_reservada">long</code> em baixo nível para Strings em alto nível que converte e adiciona máscara de Datas melhorando na compreensão humana, seguem a mesma convenção sobre <code className="token_reservada">parsings</code> em geral para várias outras classes da <code className="token_reservada">API Nativa do Java</code>: Regra sobre <code className="token_reservada">.format()</code> que recebe um Objeto e retorna/converte em uma <code className="token_reservada">String</code>, e <code className="token_reservada">.parse()</code> que recebe uma <code className="token_reservada">String</code> e retorna/converte em um Objeto (Mais explicações sobre esses <code className="token_reservada">parsings</code> e <code className="token_reservada">formats</code> logo abaixo na classe <code className="token_reservada">DateTimeFormatter</code>).</li>
+                                            <li><code className="token_reservada">DateFormat</code>: Surge devido a este tipo de representação em baixo nível utilizando <code className="token_reservada">long</code> ser inviável na visualização e compreensão humana, uma vez que as representações são números enormes que parecem não fazer sentido para quem não conhece, podemos utilizar a classe <code className="token_reservada">DateFormat</code> para melhorar na visibilidade humana formatando e adicionando uma camada de mais alto nível nesses milissegundos, e representando eles em <code className="token_reservada">Strings</code> com máscaras de Datas simples "22/12/1999" ou também máscaras escrito por extenso "quarta feira, 22 de dezembro de 1999" (equivalente do argumento <code className="token_reservada">`-h`</code> que significa "Human", ou também <code className="token_reservada">`--human-readable`</code> dos programas executados pelo terminal shell de Sistemas Operacionais Unix-Like, ou seja, melhora para a visualização humana tornando os resultados dos processamentos na saída do <code className="token_reservada">stdout</code> mais legível), mais informações sobre <code className="token_reservada">DateFormat</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula114DateFormat.java" target="_blank">Clique AQUI!</a></li>
+                                            <li><code className="token_reservada">DateFormat</code>: Para armazenar em <code className="token_reservada">banco de dados</code> podemos utilizar a mesma abordagem de cima, porém deve-se definir um padrão da máscara suportado pelo banco (Para o DB MySQL: "yyyy-mm-dd").</li>
+                                            <li><code className="token_reservada">DateFormat</code>: As conversões do valor <code className="token_reservada">long</code> em baixo nível para <code className="token_reservada">Strings</code> em alto nível que converte e adiciona máscara de Datas melhorando na compreensão humana, seguem a mesma convenção sobre <code className="token_reservada">parsings</code> em geral para várias outras classes da <code className="token_reservada">API Nativa do Java</code>: Regra sobre <code className="token_reservada">.format()</code> que recebe um Objeto e retorna/converte em uma <code className="token_reservada">String</code>, e <code className="token_reservada">.parse()</code> que recebe uma <code className="token_reservada">String</code> e retorna/converte em um Objeto (Mais explicações sobre esses <code className="token_reservada">parsings</code> e <code className="token_reservada">formats</code> logo abaixo na classe <code className="token_reservada">DateTimeFormatter</code>).</li>
+                                            <li><code className="token_reservada">DateFormat</code> em conjunto com <code className="token_reservada">Locale</code> para <code className="token_reservada">Internacionalização</code>: Podemos também polimorfisar as formatações dos Objetos <code className="token_reservada">Temporal</code> utilizando uma instância do <code className="token_reservada">Locale</code> de acordo com a origem desejada, traduzindo assim as datas no padrão de máscara correspondentes aos formatos adotados pelos diferentes paises, ou também traduzir a máscara escrito por extenso "quarta feira, 22 de dezembro de 1999" para a linguagem equivalente ao <code className="token_reservada">Locale</code> (Exemplo de saída utilizando a formatação para a instância de <code className="token_reservada">Locale.JAPANESE</code>: "1999年12月22日水曜日"). A mesma regra serve para outras Classes que possuem representações de máscaras ou padrões diferentes entre os paises como valores de moedas e etc, mais informações sobre <code className="token_reservada">Internacionalização</code> na seção logo abaixo desta!</li>
                                             <br/>
                                             <li><code className="token_reservada">Locale</code>: é o Objeto que representa a Origem/Localidade da JVM, ou seja, podemos utilizar o polimorfismo aqui para alterar diversos comportamentos de diversas Classes visando a Internacionalização, mais informações sobre <code className="token_reservada">Locale</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula115Locale_Internacionalizacao.java" target="_blank">Clique AQUI!</a></li>
                                             <br/>
@@ -233,15 +234,15 @@ export default function ProjectsScreen() {
                                             <br/>
                                             <li>Em resumo uma representação de uma data completa seria composta por: <code className="token_reservada">Data/THora:Minuto:Segundo.Milissegundos/+OffSet/[Zona]</code> ("2022-12-26T19:45:19.447985416+09:00[Asia/Tokyo]").</li>
                                             <br/>
-                                            <li><code className="token_reservada">DateTimeFormatter</code>: Classe utilitária utilizada como parâmetro nos métodos das classes de Data e Hora para formatar e alterar os padrões de representação delas (Podemos representar com números "dd/mm/yyyy", também podemos representar escrito por extenso "22 de dezembro de 1999", dentre outros...) além de outras formatações mais complexas com <code className="token_reservada">DateTimeFormatterBuilder</code>, mais informações sobre <code className="token_reservada">DateTimeFormatter</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula129DateTimeFormatter_Utils.java" target="_blank">Clique AQUI!</a></li>
+                                            <li><code className="token_reservada">DateTimeFormatter</code>: Classe utilitária com o mesmo contexto da <code className="token_reservada">DateFormat</code> legada (do pacote <code className="token_reservada">java.util</code>) porém a diferença é que ela é mais moderna do novo pacote especializado para manipulação dos objetos <code className="token_reservada">Temporal</code> (<code className="token_reservada">java.time</code>) e <code className="token_reservada">Thread-Safe</code> para ambientes de paralelismo e concorrência <code className="token_reservada">concurrency</code>, diferente da <code className="token_reservada">DateFormat</code> do pacote legado que é <code className="token_reservada">Não Thread-Safe</code>. Utilizada como parâmetro nos métodos das classes de Data e Hora para formatar e alterar os padrões de representação delas (Podemos representar com números "dd/mm/yyyy", também podemos representar escrito por extenso "22 de dezembro de 1999", dentre outros...) além de outras formatações mais complexas com <code className="token_reservada">DateTimeFormatterBuilder</code>, mais informações sobre <code className="token_reservada">DateTimeFormatter</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula129DateTimeFormatter_Utils.java" target="_blank">Clique AQUI!</a></li>
                                             <li><code className="token_reservada">DateTimeFormatter</code>: Convertendo apartir de um Objeto de data ou tempo em uma <code className="token_reservada">String</code>, e convertendo/retornando apartir de uma <code className="token_reservada">String</code> em um Objeto de data ou tempo, e vise versa: Para converter/retornar uma <code className="token_reservada">String</code> apartir de um Objeto de tempo, passamos como argumento no método <code className="token_reservada">nowDate.format(DateTimeFormatter.BASIC_ISO_DATE);</code> aonde <code className="token_reservada">`nowDate`</code> é o objeto que representa a data atual simples "20/06/2023" <code className="token_reservada">LocalDate nowDate = LocalDate.now();</code> para transformar um objeto em uma <code className="token_reservada">String</code> formatada de acordo com esse padrão de máscara definido em <code className="token_reservada">DateTimeFormatter.ALGUM_ISO</code>, e o contrário para o <code className="token_reservada">LocalDate.parse("20221226", DateTimeFormatter.BASIC_ISO_DATE);</code> no qual transforma uma <code className="token_reservada">String</code> em um objeto (se atentar ao padrão de máscara definido anteriormente, pois se utilizar um inválido será lançado um <code className="token_reservada">DateTimeParseException</code>)</li>
-                                            <li><code className="token_reservada">DateTimeFormatter</code>: Também é possível definir um padrão personalizado, utilizando o método estático <code className="token_reservada">DateTimeFormatter.ofPattern("dd/MM/yyyy");</code> e passá-lo no método <code className="token_reservada">.format()</code>.</li>
-                                            <li><code className="token_reservada">DateTimeFormatter</code>: Mesma lógica serve para o <code className="token_reservada">.parse();</code>, para funcionar basta passar essa mesma instância padrão de máscara <code className="token_reservada">Pattern</code> personalizado dito acima como segundo argumento, sendo assim: <code className="token_reservada">nowDate.parse("22/12/1999", DateTimeFormatter.ofPattern("dd/MM/yyyy"));</code>.</li>
+                                            <li><code className="token_reservada">DateTimeFormatter</code>: Também é possível definir um padrão personalizado por nós, utilizando o método estático <code className="token_reservada">DateTimeFormatter.ofPattern("dd/MM/yyyy");</code> e passá-lo no método <code className="token_reservada">.format()</code>.</li>
+                                            <li><code className="token_reservada">DateTimeFormatter</code>: Mesma lógica serve para o <code className="token_reservada">.parse();</code>, para funcionar basta passar essa mesma instância do padrão de máscara <code className="token_reservada">Pattern</code> personalizado dito acima como segundo argumento, sendo assim: <code className="token_reservada">nowDate.parse("22/12/1999", DateTimeFormatter.ofPattern("dd/MM/yyyy"));</code>.</li>
                                         </ul>
                                     </li>
                                     <li>
                                         {/* <h3 class="projects-subtitle">[Aulas 108 até 111]</h3> */}
-                                        <h3 class="projects-subtitle">Internacionalização: </h3>
+                                        <h3 class="projects-subtitle">Internacionalização</h3>
                                         <ul className="projects-frontend--container">
                                             <li>Internacionalizar é polimorfisar o sistema de acordo com o <code className="token_reservada">Locale</code> (Região/Origem), adequando o sistema para diversos paises utilizando a mesma implementação, bastando alterar a instância do objeto <code className="token_reservada">Locale</code> para oferecer suporte a outros paises/origem.</li>
                                             <li><code className="token_reservada">Locale</code>: é o Objeto que representa a Origem/Localidade da JVM, ou seja, podemos utilizar o polimorfismo aqui para alterar diversos comportamentos de diversas Classes visando a Internacionalização, mais informações sobre <code className="token_reservada">Locale</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula115Locale_Internacionalizacao.java" target="_blank">Clique AQUI!</a></li>
@@ -267,7 +268,7 @@ export default function ProjectsScreen() {
                                     </li>
                                     <li>
                                         {/* <h3 class="projects-subtitle">[Aulas 131 até 137]</h3> */}
-                                        <h3 class="projects-subtitle">Regex: </h3>
+                                        <h3 class="projects-subtitle">Regex</h3>
                                         <ul className="projects-frontend--container">
                                             <li><code className="token_reservada">Regex</code> (Expressões regulares) ou <code className="token_reservada">Regexp</code> (Regular Expression) é uma técnica na computação para encontrar padrões em textos, no Java utilizamos basicamente duas classes para essa funcionalidade, sendo elas <code className="token_reservada">Pattern</code> que define o padrão a ser buscado e <code className="token_reservada">Matcher</code> para realizar as comparações/matchs em sí no texto, mais informações sobre <code className="token_reservada">Pattern</code> e <code className="token_reservada">Matcher</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/E_regex/Aula131PatternAndMatcher.java" target="_blank">Clique AQUI!</a></li>
                                             <br/>
@@ -306,13 +307,162 @@ export default function ProjectsScreen() {
                                             <li>Utilizando ele dentro do range <code className="token_reservada">`[^\w]`</code> indicamos que <code className="token_reservada">NÃO</code> queremos esses valores do intervalo,  ou seja, funciona como <code className="token_reservada">negação</code> <code className="token_reservada">`!`</code> dos valores deste intervalo range, sendo assim, vai retornar TUDO que <code className="token_reservada">NÃO</code> fazer match na expressão do range.</li>
                                             <br/> 
                                             <li><code className="token_reservada">Scanner</code>: <code className="token_reservada">NÃO</code> é uma classe relacionada a <code className="token_reservada">regex</code>, mas podemos utilizar ela em conjunto e realizar algumas operações interessantes (Ela vai além de escanear as entradas do usuário pelo console com <code className="token_reservada">Scanner scan = new Scanner(System.in);</code> rsrs), utilizamos ela também para iterar em arquivos textos e etc, podendo assim fragmentar em tokens de acordo com alguma lógica/padrão e receber esses valores dos elementos (tokens) em variáveis corretas a depender de seus <code className="token_reservada">Tipos Primitivos</code> sem precisar fazer <code className="token_reservada">casts</code> explícitos pois o default é considerar todos tokens como <code className="token_reservada">String</code>. Para realizar essa operação basta apenas instânciar um Objeto <code className="token_reservada">Scanner</code> passando no construtor qual será o recurso texto que desejamos iterar e pegar esses valores (<code className="token_reservada">Scanner scann = new Scanner(texto_str);</code>), após instânciado o Objeto <code className="token_reservada">`scann`</code> podemos alterar o <code className="token_reservada">delimitador</code> que faz o <code className="token_reservada">.split()</code> em sí, esse parâmetro dele é uma <code className="token_reservada">regex</code> portanto podemos personalizar a regra que irá fragmentar esse texto em tokens no qual iremos iterar (<code className="token_reservada">scann.useDelimiter(", ");</code>), após isso basta utilizarmos um looping (<code className="token_reservada">while(scanner.hasNext())&#123;&#125;</code>) e neste bloco realizar verificações com <code className="token_reservada">if</code> qual é o <code className="token_reservada">Tipo Primitivo</code> do próximo elemento em iteração (<code className="token_reservada">if(scanner.hasNextInt())&#123;&#125;</code>), assim bastando recebe-los em variáveis correspondentes, mais informações sobre <code className="token_reservada">Scanner</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/E_regex/Aula137Scanner_Utils.java" target="_blank">Clique AQUI!</a></li>
-                                            <br/>   
-                                            <li> AINDA NÃO ACABOU!! Estou atualizando aos poucos... ;D (Material completo no repositório git)</li>
                                         </ul>
                                     </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">I/O</h3>
+                                        <ul className="projects-frontend--container">
+                                            <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                            <br/>
+                                            <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/F_io" target="_blank">Clique AQUI!</a></li>
+                                            <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula138a143-io_oldVersionIO_manipulaArquivos" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">New I/O</h3>
+                                        <ul className="projects-frontend--container">
+                                            <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                            <br/>
+                                            <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/G_nio" target="_blank">Clique AQUI!</a></li>
+                                            <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula144a158-nio_NewVersionIO_manipulaArquivos" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Serialization</h3>
+                                        <ul className="projects-frontend--container">
+                                            <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                            <br/>
+                                            <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/H_serializacao" target="_blank">Clique AQUI!</a></li>
+                                            <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula159e160-serializa%C3%A7%C3%A3o.txt" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Collections (Estrutura de Dados)</h3>
+                                        <ul className="projects-frontend--container">
+                                            <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                            <br/>
+                                            <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/I_collections" target="_blank">Clique AQUI!</a></li>
+                                            <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula161a182-collections.txt" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Generics</h3>
+                                        <ul className="projects-frontend--container">
+                                            <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                            <br/>
+                                            <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/J_generics" target="_blank">Clique AQUI!</a></li>
+                                            <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula183a188-generics.txt" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Nested Inner Class</h3>
+                                        <ul className="projects-frontend--container">
+                                            <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                            <br/>
+                                            <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/K_classesInternas" target="_blank">Clique AQUI!</a></li>
+                                            <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula189e190-innerClass_ClassesInternas.txt" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Parametrizando Comportamentos</h3>
+                                        <ul className="projects-frontend--container">
+                                            <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                            <br/>
+                                            <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/L_parametrizandoComportamentos" target="_blank">Clique AQUI!</a></li>
+                                            <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico (Também contendo sobre o módulo abaixo <code className="token_reservada">Lambdas</code> em conjunto no mesmo arquivo, pois parametrizar comportamentos é basicamente a implementação das Lambdas), resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula193a197-lambdas_parametrizandoComportamentos.txt" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Lambdas</h3>
+                                        <ul className="projects-frontend--container">
+                                            <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                            <br/>
+                                            <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/M_lambdas" target="_blank">Clique AQUI!</a></li>
+                                            <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico (Também contendo sobre o módulo acima <code className="token_reservada">Parametrizando Comportamentos</code> em conjunto no mesmo arquivo, pois parametrizar comportamentos é basicamente a implementação das Lambdas), resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula193a197-lambdas_parametrizandoComportamentos.txt" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Method Reference</h3>
+                                        <ul className="projects-frontend--container">
+                                           <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                           <br/>
+                                           <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/N_methodReference" target="_blank">Clique AQUI!</a></li>
+                                           <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula198a200-methodReference_substituiLambdasParaMaisCoesao.txt" target="_blank">Clique AQUI!</a></li>                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Objeto Optional (Null Pointer Handling)</h3>
+                                        <ul className="projects-frontend--container">
+                                           <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                           <br/>
+                                           <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/O_optional" target="_blank">Clique AQUI!</a></li>
+                                           <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula201e202-Optional_evitaNullPointer.txt" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Streams</h3>
+                                        <ul className="projects-frontend--container">
+                                           <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                           <br/>
+                                           <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/P_streams" target="_blank">Clique AQUI!</a></li>
+                                           <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula203a219-streams_fluxoDeDados.txt" target="_blank">Clique AQUI!</a></li>                                                                                                               <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Threads</h3>
+                                        <ul className="projects-frontend--container">
+                                           <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                           <br/>
+                                           <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/Q_threads" target="_blank">Clique AQUI!</a></li>
+                                           <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico (Também contendo sobre o módulo abaixo <code className="token_reservada">Synchronization</code> em conjunto no mesmo arquivo), resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula220a228-threads_and_synchronized_lowLevel.txt" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Synchronization (MultiThreads)</h3>
+                                        <ul className="projects-frontend--container">
+                                           <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                           <br/>
+                                           <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/Q_threads/sincronismo" target="_blank">Clique AQUI!</a></li>
+                                           <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico (Também contendo sobre o módulo acima <code className="token_reservada">Threads</code> em conjunto no mesmo arquivo), resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula220a228-threads_and_synchronized_lowLevel.txt" target="_blank">Clique AQUI!</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Concurrency (MultiThreads)</h3>
+                                        <ul className="projects-frontend--container">
+                                           <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                           <br/>
+                                           <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/R_concurrent" target="_blank">Clique AQUI!</a></li>
+                                           {/* <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="" target="_blank">Clique AQUI!</a></li> */}
+                                           <li>Faltando documentar os estudos no arquivo <code className="token_reservada">txt</code> de OverView, não o fiz ainda pois eu utilizo a técnica de esperar um tempo, pois assim faz o cérebro consolidar melhor o conhecimento (Ele entende que é algo "símilar" e já possuí memória sobre, assim ele entende que é algo importante e deve ser armazenado em memória de longo prazo. Macetes rsrs)</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">Design Patterns (Gang Of Four GoF)</h3>
+                                        <ul className="projects-frontend--container">
+                                           <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                           <br/>
+                                           <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/S_designPatterns" target="_blank">Clique AQUI!</a></li>
+                                           {/* <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="" target="_blank">Clique AQUI!</a></li> */}
+                                           <li>Faltando documentar os estudos no arquivo <code className="token_reservada">txt</code> de OverView, não o fiz ainda pois eu utilizo a técnica de esperar um tempo, pois assim faz o cérebro consolidar melhor o conhecimento (Ele entende que é algo "símilar" e já possuí memória sobre, assim ele entende que é algo importante e deve ser armazenado em memória de longo prazo. Macetes rsrs)</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <h3 class="projects-subtitle">JDBC</h3>
+                                        <ul className="projects-frontend--container">
+                                           <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
+                                           <br/>
+                                           <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/T_jdbc" target="_blank">Clique AQUI!</a></li>
+                                           {/* <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="" target="_blank">Clique AQUI!</a></li> */}
+                                           <li>Faltando documentar os estudos no arquivo <code className="token_reservada">txt</code> de OverView, não o fiz ainda pois eu utilizo a técnica de esperar um tempo, pois assim faz o cérebro consolidar melhor o conhecimento (Ele entende que é algo "símilar" e já possuí memória sobre, assim ele entende que é algo importante e deve ser armazenado em memória de longo prazo. Macetes rsrs)</li>
+                                        </ul>
+                                    </li>
+
                                 </ul>
                                 <div className="projects-subdescription--container">
-                                    <h3 class="projects-subtitle">Descrição</h3>
+                                    <ul className="projects-description--container">
+                                        <li>
+                                            <h3 class="projects-subtitle">Descrição</h3>
+                                        </li>
+                                    </ul>
                                     <p>
                                         EM DESENVOLVIMENTO... (Material completo no repositório git)
                                     </p>
@@ -394,7 +544,11 @@ export default function ProjectsScreen() {
                                     </li>
                                 </ul>
                                 <div className="projects-subdescription--container">
-                                    <h3 class="projects-subtitle">Descrição</h3>
+                                    <ul className="projects-description--container">
+                                        <li>
+                                            <h3 class="projects-subtitle">Descrição</h3>
+                                        </li>
+                                    </ul>
                                     <p>
                                         A Ideia surgiu com o vídeo da rocketseat, aonde o produtor fala sobre estar criando o projeto e explica o overview do fluxograma, e com base nessas informações eu fui atrás da solução completa.
                                         Para obter um resultado mais preciso é recomendável utilizar a API do Whisper na extração do Transcript pois ela possibilita enviar prompts como parâmetros junto com o áudio, assim
@@ -461,8 +615,12 @@ export default function ProjectsScreen() {
                                         </ul>
                                     </li>
                                 </ul>
-                                <div className="projects-subdescription--container">
-                                    <h3 class="projects-subtitle">Descrição</h3>
+                                <div className="projects-subdescription--container">                                   
+                                    <ul className="projects-description--container">
+                                        <li>
+                                            <h3 class="projects-subtitle">Descrição</h3>
+                                        </li>
+                                    </ul>
                                     <p>
                                         Trabalho final do primeiro semestre da disciplina Programação de Computadores (CEUNSP) do meu curso CST ADS que iniciei esse ano,
                                         o professor optou por começar pela linguagem C e não deixou quem já estudava outras tecnologias utilizar elas (No meu caso eu queria
@@ -515,9 +673,13 @@ export default function ProjectsScreen() {
                                     </li>
                                 </ul>
                                 <div className="projects-subdescription--container">
-                                    <h3 class="projects-subtitle">Descrição</h3>
+                                    <ul className="projects-description--container">
+                                        <li>
+                                            <h3 class="projects-subtitle">Descrição</h3>
+                                        </li>
+                                    </ul>
                                     <p>
-                                        Trabalho final de semestre da disciplina LG3 (Linguagem e Tecnicas de Programação) aonde tomei a abordagem de separar as
+                                        Trabalho final de semestre da disciplina LG3 (Linguagem e Técnicas de Programação) aonde tomei a abordagem de separar as
                                         tecnologias web do core do sistema (API Springboot) diminuindo assim acoplamentos das mesmas, melhorando a manutenção e escalabilidade
                                         e melhorando a possibilidade de expansão dos módulos (Caso queria adotar novas tecnologias na camada de apresentação, como um projeto Mobile por ex),
                                         escolhi dessa vez o Springboot pois estou estudando Java atualmente e essa linguagem ganhou meu coração, pois é uma linguagem bem madura e particularmente mais
@@ -568,7 +730,11 @@ export default function ProjectsScreen() {
                                     </li>
                                 </ul>
                                 <div className="projects-subdescription--container">
-                                    <h3 class="projects-subtitle">Descrição</h3>
+                                    <ul className="projects-description--container">
+                                        <li>
+                                            <h3 class="projects-subtitle">Descrição</h3>
+                                        </li>
+                                    </ul>
                                     <p>
                                         Clone da amazon web utilizando as ferramentas acima, resultado da junção de duas tecnologias distintas
                                         sendo elas o Reactjs do Facebook no frontend e o Asp.NetCore da Microsoft no backend,
@@ -623,7 +789,11 @@ export default function ProjectsScreen() {
                                     </li>
                                 </ul>
                                 <div className="projects-subdescription--container">
-                                    <h3 class="projects-subtitle">Descrição</h3>
+                                    <ul className="projects-description--container">
+                                        <li>
+                                            <h3 class="projects-subtitle">Descrição</h3>
+                                        </li>
+                                    </ul>
                                     <p>
                                         Clone da interface netflix web utilizando as ferramentas acima, projeto teoricamente simples porém cheio de detalhes
                                         feito quando eu estava começando a estudar Reactjs com apoio do Bonieky do canal B7Web, foi quando eu me interessei
@@ -675,7 +845,11 @@ export default function ProjectsScreen() {
                                     </li>
                                 </ul>
                                 <div className="projects-subdescription--container">
-                                    <h3 class="projects-subtitle">Descrição</h3>
+                                    <ul className="projects-description--container">
+                                        <li>
+                                            <h3 class="projects-subtitle">Descrição</h3>
+                                        </li>
+                                    </ul>
                                     <p>
                                         Trabalho do curso, aonde foi realizado um parsing do semestre anterior, o projeto
                                         foi desenvolvido inicialmente em windows forms com .NetCore (C#) da Microsoft,

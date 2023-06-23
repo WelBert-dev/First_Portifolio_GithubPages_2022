@@ -60,7 +60,7 @@
 }
 
 .projects-title {
-    padding: 1rem 0 .2rem 2rem;
+    padding: 1rem 0 .6rem 2rem;
     font-size: .9rem;
     font-family: 'press start 2p';
     text-align: center;
@@ -125,12 +125,12 @@
 }
 
 .projects-description--container ul li{
-    margin-bottom: .2rem;
+    margin-bottom: .5rem;
 }
 
-.projects-subdescription--container {
+/* .projects-subdescription--container {
     margin: 0 1rem 1rem 1rem;
-}
+} */
 
 .projects-subdescription--container p {
     color: var(--main-textColor);
@@ -149,6 +149,7 @@
     border: 4px ridge #000;
     border-bottom-right-radius: 10px;
     border-bottom-left-radius: 10px;
+    padding-bottom: .5rem;
 }
 
 .-spanOfLinkAkitaDesbAlgTwitter {
@@ -162,7 +163,7 @@
 }
 
 code.token_reservada {
-    background-color: #f1f1f1;
+    background-color: #c6c6c6;
     font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
     color: red;
     font-weight: bolder;
@@ -242,6 +243,8 @@ a.-linkBoldYellowProjects {
     }
     code.token_reservada {
         font-size: .6rem;
+        padding: 0 1.5px;
+        border-radius: 4px;
     }
 
     /* .projects-right {
@@ -253,6 +256,7 @@ a.-linkBoldYellowProjects {
         font-weight: bold;
         font-size: .6rem;
     }
+
     #main-projects--container {
         padding-right: 0px;
     }

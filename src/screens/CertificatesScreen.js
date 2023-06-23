@@ -74,6 +74,94 @@ export default function CertificatesScreen() {
     return (
         <section id="main-certificate--container">
             <div>
+
+                <h1 className="main-title -complementaryActivities">&lsaquo;Atividades Complementares para Superior ADS&rsaquo;</h1>
+
+                <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
+                    <div>
+                        <div className="projects-title--container -certificateTitleContainer">
+                            <div>
+                                <h3 className="projects-title -certificate--title">Java Avançado</h3>
+                                <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
+                            </div>
+                            <span className="-certificate--span">Fundação Bradesco</span>
+                            <span className="-certificate--span">C/H: 16 horas - CEUNSP (06/03/2023)</span>
+                            <div className="certificates-autenticCode--container">
+                                <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
+                                <span className="certificates-autenticCode--span">5E4882C8-BA82-455F-BACB-4C2BFB14BE94</span>
+                            </div>
+                            <p>Valide o código de autenticidade clicando no botão a cima</p>
+                        </div>
+                        <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                            <img src={cursoFundacBradescJavaDesktop}></img>
+                        </div>
+                        <div className="projects-subdescription--container -bolsaEnsinoCertficate">
+                            <h3 className="projects-subtitle -certificateSubtitle">Contextualizando</h3>
+                            <p>
+                                Curso realizado para o Superior em "Análise e Desenvolvimento de Sistemas",
+                                pois faz parte de uma fração da carga horária necessária para a conclusão do curso.
+                                Optei pelos cursos da "Fundação Bradesco" pois além de gratuíto é bem reconhecido 
+                                no mercado de T.I devido a qualidade e integridade do certificado de conclusão gerado.
+                                Confesso não ter sentido dificuldades na execução das atividades pois já estudo Java e 
+                                Orientação a Objetos a muito tempo então foi "sem novidades" no aprendizado. 
+                                Não desconsiderando a qualidade do curso, que realmente é otima MÁS faltou contextualizar 
+                                melhor a descrição e nome para o curso, pois o conteúdo não é de nível avançado,
+                                e poderiam informar melhor na introdução dizendo que o conteúdo abordado é sobre "Java Desktop",
+                                não sendo generalista mas talvez quem está procurando por "Java Avançado" espera-se aprender
+                                sobre os utilitários da API NATIVA do Java 
+                                (<code className="token_reservada">Date-Time</code> (Legacy <code className="token_reservada">java.util</code> and New specialized package <code className="token_reservada">java.time</code>), <code className="token_reservada">Serialization</code>, <code className="token_reservada">I/O</code>, <code className="token_reservada">New I/O</code>, <code className="token_reservada">Collections</code>, <code className="token_reservada">Generics</code>, <code className="token_reservada">Nested Inner Class</code>, <code className="token_reservada">Lambdas</code>, <code className="token_reservada">Method Reference</code>, <code className="token_reservada">Optional</code> (Null Pointer Handling), <code className="token_reservada">Streams</code>, <code className="token_reservada">MultiThreads</code>, <code className="token_reservada">Parallelism</code>, <code className="token_reservada">Concurrency</code>, <code className="token_reservada">JDBC</code>, <code className="token_reservada">Reflection</code>...) 
+                                pois é oque da a entender para "Java Avançado", o mais ideal seria "Java Desktop - Intermediário".
+                            </p>
+
+                        </div>
+                    </div>
+                </article>
+                <hr/>
+                <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
+                    <div>
+                        <div className="projects-title--container -certificateTitleContainer">
+                            <div>
+                                <h3 className="projects-title -certificate--title">HTML5 Avançado</h3>
+                                <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
+                            </div>
+                            <span className="-certificate--span">Fundação Bradesco</span>
+                            <span className="-certificate--span">C/H: 6 horas - CEUNSP (07/03/2023)</span>
+                            <div className="certificates-autenticCode--container">
+                                <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
+                                <span className="certificates-autenticCode--span">DA64D586-173B-4AB9-B837-B0DE372802C3</span>
+                            </div>
+                            <p>Valide o código de autenticidade clicando no botão a cima</p>
+                        </div>
+                        <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                            <img src={cursoFundacBradescHTMLAvanc}></img>
+                        </div>
+                    </div>
+                </article>
+                <hr/>
+                <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
+                    <div>
+                        <div className="projects-title--container -certificateTitleContainer">
+                            <div>
+                                <h3 className="projects-title -certificate--title">Inovando com CSS</h3>
+                                <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
+                            </div>
+                            <span className="-certificate--span">Fundação Bradesco</span>
+                            <span className="-certificate--span">C/H: 26 horas - CEUNSP (08 até 10/03/2023)</span>
+                            <div className="certificates-autenticCode--container">
+                                <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
+                                <span className="certificates-autenticCode--span">BB8AD7E2-7F03-4898-A5A1-61DE77B5E688</span>
+                            </div>
+                            <p>Valide o código de autenticidade clicando no botão a cima</p>
+                        </div>
+                        <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
+                            <img src={cursoFundacBradescCSS}></img>
+                        </div>
+                    </div>
+                </article>
+
+
+                <hr />
+
                 
                 <h1 className="main-title -complementaryActivities">&lsaquo;Formação Acadêmica Nível Técnico&rsaquo;</h1>
             
@@ -192,92 +280,9 @@ export default function CertificatesScreen() {
                         </div>
                        
                     </article>  
+
+
                     <hr/>
-
-
-                    <h1 className="main-title -complementaryActivities">&lsaquo;Atividades Complementares para Superior ADS&rsaquo;</h1>
-
-                    <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
-                        <div>
-                            <div className="projects-title--container -certificateTitleContainer">
-                                <div>
-                                    <h3 className="projects-title -certificate--title">Java Avançado</h3>
-                                    <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
-                                </div>
-                                <span className="-certificate--span">Fundação Bradesco</span>
-                                <span className="-certificate--span">C/H: 16 horas - CEUNSP (06/03/2023)</span>
-                                <div className="certificates-autenticCode--container">
-                                    <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
-                                    <span className="certificates-autenticCode--span">5E4882C8-BA82-455F-BACB-4C2BFB14BE94</span>
-                                </div>
-                                <p>Valide o código de autenticidade clicando no botão a cima</p>
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
-                                <img src={cursoFundacBradescJavaDesktop}></img>
-                            </div>
-                            <div className="projects-subdescription--container -bolsaEnsinoCertficate">
-                                <h3 className="projects-subtitle -certificateSubtitle">Contextualizando</h3>
-                                <p>
-                                    Curso realizado para o Superior em "Análise e Desenvolvimento de Sistemas",
-                                    pois faz parte de uma fração da carga horária necessária para a conclusão do curso.
-                                    Optei pelos cursos da "Fundação Bradesco" pois além de gratuíto é bem reconhecido 
-                                    no mercado de T.I devido a qualidade e integridade do certificado de conclusão gerado.
-                                    Confesso não ter sentido dificuldades na execução das atividades pois já estudo Java e 
-                                    Orientação a Objetos a muito tempo então foi "sem novidades" no aprendizado. 
-                                    Não desconsiderando a qualidade do curso, que realmente é otima MÁS faltou contextualizar 
-                                    melhor a descrição e nome para o curso, pois o conteúdo não é de nível avançado,
-                                    e poderiam informar melhor na introdução dizendo que o conteúdo abordado é sobre "Java Desktop",
-                                    não sendo generalista mas talvez quem está procurando por "Java Avançado" espera-se aprender
-                                    sobre os utilitários da API NATIVA do Java (serialização, io, new io, colections, paralelismo...) 
-                                    pois é oque da a entender para "Java Avançado", o mais ideal seria "Java Desktop - Intermediário".
-                                </p>
-
-                            </div>
-                        </div>
-                    </article>
-                    <hr/>
-                    <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
-                        <div>
-                            <div className="projects-title--container -certificateTitleContainer">
-                                <div>
-                                    <h3 className="projects-title -certificate--title">HTML5 Avançado</h3>
-                                    <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
-                                </div>
-                                <span className="-certificate--span">Fundação Bradesco</span>
-                                <span className="-certificate--span">C/H: 6 horas - CEUNSP (07/03/2023)</span>
-                                <div className="certificates-autenticCode--container">
-                                    <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
-                                    <span className="certificates-autenticCode--span">DA64D586-173B-4AB9-B837-B0DE372802C3</span>
-                                </div>
-                                <p>Valide o código de autenticidade clicando no botão a cima</p>
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
-                                <img src={cursoFundacBradescHTMLAvanc}></img>
-                            </div>
-                        </div>
-                    </article>
-                    <hr/>
-                    <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
-                        <div>
-                            <div className="projects-title--container -certificateTitleContainer">
-                                <div>
-                                    <h3 className="projects-title -certificate--title">Inovando com CSS</h3>
-                                    <a href="https://www.ev.org.br/validar-certificado" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
-                                </div>
-                                <span className="-certificate--span">Fundação Bradesco</span>
-                                <span className="-certificate--span">C/H: 26 horas - CEUNSP (08 até 10/03/2023)</span>
-                                <div className="certificates-autenticCode--container">
-                                    <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
-                                    <span className="certificates-autenticCode--span">BB8AD7E2-7F03-4898-A5A1-61DE77B5E688</span>
-                                </div>
-                                <p>Valide o código de autenticidade clicando no botão a cima</p>
-                            </div>
-                            <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
-                                <img src={cursoFundacBradescCSS}></img>
-                            </div>
-                        </div>
-                    </article>
-                    <hr />
 
 
                     <h1 className="main-title -complementaryActivities">&lsaquo;Atividades Complementares para Técnico em Informática&rsaquo;</h1>
