@@ -2,6 +2,8 @@ import React, { useRef, useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { useLocation } from 'react-router-dom';
 
+import { MdFiberNew } from 'react-icons/md';
+
 import './MainNavbar.css';
 
 export default function MainNavbar() {
@@ -76,7 +78,7 @@ export default function MainNavbar() {
                 <a href="/firstPortifolioGithubPages-2022">Home</a>
                 <a href="/firstPortifolioGithubPages-2022/#/aboutMe" onClick={() => setNavBarEmColumn(true)}>Sobre</a>
                 <a href="/firstPortifolioGithubPages-2022/#/skills" rel="Link Linguagens" onClick={() => setNavBarEmColumn(true)}>Skills</a>     
-                <a href="/firstPortifolioGithubPages-2022/#/projects" rel="Link Projetos" onClick={() => setNavBarEmColumn(true)}>Projetos</a>
+                <a className="-btn-ancorToProjectsScreen" href="/firstPortifolioGithubPages-2022/#/projects" rel="Link Projetos" onClick={() => setNavBarEmColumn(true)}>Projetos <MdFiberNew className="animaIconPisca"/></a>
                 <a href="/firstPortifolioGithubPages-2022/#/certificates" rel="Link Certificados" onClick={() => setNavBarEmColumn(true)}>Certificados</a>   
                 <a href="/firstPortifolioGithubPages-2022/#/curriculumVitae" rel="Link Curriculo" onClick={() => setNavBarEmColumn(true)}>Currículo</a>        
             </nav>
