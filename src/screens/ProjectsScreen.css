@@ -178,6 +178,19 @@ a.-linkBoldYellowProjects {
     font-size: .7rem;
 }
 
+ul.-nestedInnerUl {
+    margin: 0 1rem;
+    list-style-type: disc;
+}
+
+ul.-nestedInnerUl li::marker {
+    color: red;
+}
+
+li code.-main-moduleTitleLi {
+    font-size: .9rem;
+}
+
 @media (max-width: 810px)
 {
     .projects-title {
