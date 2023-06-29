@@ -179,7 +179,7 @@ a.-linkBoldYellowProjects {
 }
 
 ul.-nestedInnerUl {
-    margin: 0 1rem;
+    margin: 0.5rem 1rem;
     list-style-type: disc;
 }
 
@@ -276,5 +276,13 @@ li code.-main-moduleTitleLi {
 
     #main-projects--container {
         padding-right: 0px;
+    }
+
+    ul.-nestedInnerUl {
+        margin: 0.5rem 0;
+    }
+    
+    li code.-main-moduleTitleLi {
+        font-size: .7rem;
     }
 }
