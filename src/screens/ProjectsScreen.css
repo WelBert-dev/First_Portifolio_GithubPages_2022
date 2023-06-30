@@ -170,6 +170,7 @@ code.token_reservada {
     border-radius: 5px;
     padding: 0 2px;
     font-size: .8rem;
+    text-shadow: none;
 }
 
 a.-linkBoldYellowProjects {
@@ -190,6 +191,65 @@ ul.-nestedInnerUl li::marker {
 li code.-main-moduleTitleLi {
     font-size: .9rem;
 }
+
+code.outputResult {
+    background-color: #200a1c;
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
+    color: #fff;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding: 0 2px;
+    font-size: .8rem;
+    text-shadow: 1px 1px 3px #000;
+}
+
+code.-nestedInnerCode {
+    margin: 0 1rem;
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
+}
+
+code.-tokenMethod {
+    color: #d2a8ff;
+    font-size: .8rem;
+}
+
+code.-tokenString {
+    color: #a5d6ff;
+    font-size: .8rem;
+}
+
+code.-tokenKeyword {
+    color: #ff7b72;
+    font-size: .8rem;
+}
+
+span.-tokenComment {
+    color: #00d000;
+    font-weight: 400;
+}
+
+ul.main-implementFullBlock--container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+code.implementFullBlock {
+    background-color: #200a1c;
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
+    color: #fff;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding: .5rem;
+    font-size: .9rem;
+    text-shadow: 1px 1px 3px #000;
+    line-height: 1rem;;
+}
+
+
 
 @media (max-width: 810px)
 {
