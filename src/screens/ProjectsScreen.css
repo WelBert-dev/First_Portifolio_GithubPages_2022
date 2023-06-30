@@ -203,9 +203,13 @@ code.outputResult {
     text-shadow: 1px 1px 3px #000;
 }
 
-code.-nestedInnerCode {
+.-nestedInnerCode {
     margin: 0 1rem;
     font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
+}
+
+.-nestedInnerCode.--2Identation {
+    margin: 0 2rem;
 }
 
 code.-tokenMethod {
@@ -220,6 +224,16 @@ code.-tokenString {
 
 code.-tokenKeyword {
     color: #ff7b72;
+    font-size: .8rem;
+}
+
+code.-tokenKeyConstant {
+    color: #79c0ff;
+    font-size: .8rem;
+}
+
+code.-tokenClassEntity {
+    color: #cdcdcd;
     font-size: .8rem;
 }
 
@@ -380,6 +394,14 @@ code.implementFullBlock {
     }
 
     code.outputResult {
+        font-size: .6rem;
+    }
+
+    code.-tokenKeyConstant {
+        font-size: .6rem;
+    }
+    
+    code.-tokenClassEntity {
         font-size: .6rem;
     }
 }

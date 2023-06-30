@@ -304,14 +304,14 @@ export default function ProjectsScreen() {
                                                         <ul className="main-implementFullBlock--container">
                                                             - Exemplo de fluxo bidimensional (que gera Streams aninhados) para a lista:
                                                             <code className="implementFullBlock">
-                                                                List&#60;List&#60;String&#62;&#62; empresa = <code className="-tokenKeyword">new</code> ArrayList&#60;&#62;();<br/><br/>
+                                                                <code className="-tokenClassEntity">List&#60;List&#60;String&#62;&#62;</code> empresa = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>();<br/><br/>
                                                                 
-                                                                empresa.<code className="-tokenMethod">add</code>(<code className="-tokenKeyword">new</code> ArrayList&#60;&#62;(<br/>
-                                                                    <code className="-nestedInnerCode">List.<code className="-tokenMethod">of</code>(<code className="-tokenString">"Wellison"</code>, <code className="-tokenString">"Pedro"</code>, <code className="-tokenString">"Matheus"</code>, <code className="-tokenString">"Rafa"</code>)</code><br/>
+                                                                empresa.<code className="-tokenMethod">add</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>(<br/>
+                                                                    <code className="-nestedInnerCode"><code className="-tokenClassEntity">List</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"Wellison"</code>, <code className="-tokenString">"Pedro"</code>, <code className="-tokenString">"Matheus"</code>, <code className="-tokenString">"Rafa"</code>)</code><br/>
                                                                 ));<br/>
 
-                                                                empresa.<code className="-tokenMethod">add</code>(<code className="-tokenKeyword">new</code> ArrayList&#60;&#62;(<br/>
-                                                                    <code className="-nestedInnerCode">List.<code className="-tokenMethod">of</code>(<code className="-tokenString">"Danielle"</code>, <code className="-tokenString">"Caio"</code>, <code className="-tokenString">"Micael"</code>, <code className="-tokenString">"Tainara"</code>)</code><br/>                                                                 
+                                                                empresa.<code className="-tokenMethod">add</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>(<br/>
+                                                                    <code className="-nestedInnerCode"><code className="-tokenClassEntity">List</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"Danielle"</code>, <code className="-tokenString">"Caio"</code>, <code className="-tokenString">"Micael"</code>, <code className="-tokenString">"Tainara"</code>)</code><br/>                                                                 
                                                                 ));<br/>
                                                             </code>
                                                         </ul>
@@ -321,11 +321,11 @@ export default function ProjectsScreen() {
                                                             
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># Observe o aninhamento de fluxos em `Stream&#60;Stream&#60;String&#62;&#62;`</span><br/>
-                                                                Stream&#60;Stream&#60;String&#62;&#62; streamStream = empresa.<code className="-tokenMethod">stream</code>()<br/>
+                                                                <code className="-tokenClassEntity">Stream&#60;Stream&#60;String&#62;&#62;</code> streamStream = empresa.<code className="-tokenMethod">stream</code>()<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">map</code>(setor -&#62; setor.<code className="-tokenMethod">stream</code>());</code><br/><br/>
 
                                                                 streamStream.<code className="-tokenMethod">forEach</code>(setor -&#62;<br/> 
-                                                                    <code className="-nestedInnerCode">setor.<code className="-tokenMethod">forEach</code>(System.out::println));</code>
+                                                                    <code className="-nestedInnerCode">setor.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>));</code>
                                                             </code>
                                                         </ul>
                                                          <ul className="main-implementFullBlock--container">
@@ -334,21 +334,81 @@ export default function ProjectsScreen() {
                                                             
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># Quando o tipo do Stream é uma List (Ou seja, Objeto) utilizamos `Collection::stream`</span><br/>
-                                                                Stream&#60;String&#62; stringStreamNonNested = empresa.<code className="-tokenMethod">stream</code>()<br/>
-                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">flatMap</code>(Collection::stream);</code><br/><br/>
-                                                                stringStream.<code className="-tokenMethod">forEach</code>(System.out::println)); <br/><br/>
+                                                                <code className="-tokenClassEntity">Stream&#60;String&#62;</code> stringStreamNonNested = empresa.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">flatMap</code>(<code className="-tokenClassEntity">Collection</code>::<code className="-tokenMethod">stream</code>);</code><br/><br/>
+                                                                stringStream.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>));<br/><br/>
                                                                 
                                                                 <span className="-tokenComment"># Quando o tipo do Stream é um array nativo String[] utilizamos `Arrays::stream`</span><br/>
-                                                                Stream&#60;String&#62; stringStreamNonNested = empresa.<code className="-tokenMethod">stream</code>()<br/>
-                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">flatMap</code>(Arrays::stream);</code><br/><br/>
-                                                                stringStream.<code className="-tokenMethod">forEach</code>(System.out::println)); <br/>
+                                                                <code className="-tokenClassEntity">Stream&#60;String&#62;</code> stringStreamNonNested = empresa.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">flatMap</code>(<code className="-tokenClassEntity">Arrays</code>::<code className="-tokenMethod">stream</code>);</code><br/><br/>
+                                                                    stringStream.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>));<br/>
                                                             </code>
                                                         </ul>
                                                     </li>
-                                                                           
-                                                   
-                                                    
+
                                                     <li>Operações de filtragens: `.filter(Predicate predicate)` que retorna todos elementos que corresponderem ao predicado, ou seja, todos elementos que retornar true na comparação da função Lambda;</li>
+                                                    <li>Desafio proposto para o ponto acima: Retrieve the first 3 titles LightNovels with price less than &#60; 4.0 (Retornar os 3 primeiros titulos de LightNovels cujo preço é menor que 4.0):
+                                                        <ul className="main-implementFullBlock--container">
+                                                        
+                                                            <p>- Exemplo de filtragem SEM utilizar Streams, e em seguida UTILIZANDO, ambos para a seguinte lista:</p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <code className="-tokenKeyword">private static</code> <code className="-tokenClassEntity">List&#60;LightNovelModel&#62;</code> listOfLightNovels = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>(<br/>
+                                                                    <code className="-nestedInnerCode"><code className="-tokenClassEntity">List</code>.<code className="-tokenMethod">of</code>(<br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovelModel</code>(<code className="-tokenString">"Tokyo Ghoul"</code>, <code className="-tokenKeyConstant">2.0</code>),</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovelModel</code>(<code className="-tokenString">"KissXSis"</code>, <code className="-tokenKeyConstant">3.2</code>),</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovelModel</code>(<code className="-tokenString">"Dragon Ball"</code>, <code className="-tokenKeyConstant">5.2</code>),</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovelModel</code>(<code className="-tokenString">"Danielle"</code>, <code className="-tokenKeyConstant">3.2</code>),</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovelModel</code>(<code className="-tokenString">"Linus Torvalds"</code>, <code className="-tokenKeyConstant">4.2</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">)</code></code><br/>
+                                                                );
+                                                            </code>
+                                                        </ul>
+
+                                                        <ul className="main-implementFullBlock--container">
+                                                        
+                                                            <p>- SEM utilizar Streams temos que instânciar uma nova lista auxiliar, para ir adicionando elementos:</p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># 1 - Order LightNovels by title</span><br/>
+                                                                listOfLightNovels.<code className="-tokenMethod">sort</code>(<code className="-tokenClassEntity">Comparator</code><br/><code className="-nestedInnerCode">.<code className="-tokenMethod">comparing</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getTitle</code>));</code><br/><br/>
+                                                                
+                                                                <span className="-tokenComment"># 2 - Retrieve the first 3 titles LightNovels with price less than &#60; 4.0</span><br/>
+                                                                <code className="-tokenClassEntity">List&#60;String&#62;</code> titlesList = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>();<br/>
+                                                                <code className="-tokenKeyword">for</code> (<code className="-tokenClassEntity">LightNovelModel</code> novel : listOfLightNovels) &#123;<br/>
+                                                                    <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code> (novel.<code className="-tokenMethod">getPrice</code>() &#60; <code className="-tokenKeyConstant">4</code>) &#123;</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">titlesList.<code className="-tokenMethod">add</code>(novel.<code className="-tokenMethod">getTitle</code>());</code><br/>
+                                                                    <code className="-nestedInnerCode">&#125;</code><br/>
+
+                                                                    <br/>
+                                                                    <span className="-tokenComment -nestedInnerCode"># Se 3 elementos passarem na verificação acima quebra loop</span><br/>
+                                                                    <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code> (titlesList.<code className="-tokenMethod">size</code>() &#60;= <code className="-tokenKeyConstant">3</code>) &#123;</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">break</code>;</code><br/>
+                                                                    <code className="-nestedInnerCode">&#125;</code><br/>
+                                                                &#125;<br/><br/>
+                                                                <span className="-tokenComment"># Output `titlesList`: [Danielle, KissXSis, Tokyo Ghoul]</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <ul className="main-implementFullBlock--container">
+                                                        
+                                                            <p>- UTILIZANDO Streams, muito mais simples e coeso e sem precisar de listas auxiliares:</p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># Equivale a toda operação anterior, porém em uma tacada</span><br/>
+                                                                <code className="-tokenClassEntity">List&#60;String&#62;</code> collectLightNovelsTitlesList = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(novel -&#62; novel.<code className="-tokenMethod">getPrice</code>() &#60; <code className="-tokenKeyConstant">4</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">sorted</code>(<code className="-tokenClassEntity">Comparator</code>.<code className="-tokenMethod">comparing</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getTitle</code>))</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">limit</code>(<code className="-tokenKeyConstant">3</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">map</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getTitle</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod"><code className="-tokenMethod"></code>collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">toList</code>());</code><br/>
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `collectLightNovelsTitlesList`: [Danielle, KissXSis, Tokyo Ghoul]</span>    
+                                                            </code>
+                                                        </ul>
+
+
+                                                    </li>
                                                     <li>Operações de finding e matching (Busca por elementos): `.findFirst()` que retorna o primeiro elemento do fluxo; `.findAny()` que Retorna QUALQUER elemento da sequência; `.anyMatch(Predicate predicate)` Retorna true se PELOMENOS um elemento do fluxo atenda a condição imposta pelo predicado; `.allMatch(Predicate predicate)` Retorna true se TODOS os elementos deste fluxo atenderem a condição imposta pelo predicado; `.noneMatch(Predicate predicate)` Retorna true se NENHUM dos elementos do fluxo atenderem a condição imposta pelo predicado;</li>
                                                     <li>Operações de redução com `.reduce(BinaryOperator&#60;T&#62; accumulator)`: Aplicando regras que transformam o fluxo todo de elementos em apenas um elemento no final, utilizando operação associativa neles, operações associativas na matematica são operações nas quais os resultados devem ser os mesmos independentemente da ordem na qual esses dois elementos (Operandos) são processados, esse conceito é aplicado pelo Interface BinaryOperator&#60;T&#62; que é o parâmetro do método de redução em questão, esse conceito é importante pois a implementação em baixo nível dessa operação aplica as regras no elemento corrente e no elemento anterior, porisso essa ordem dita nas operações associativas é relevante, pois independentemente da ordem dos dois elementos (Operandos) em operação NÃO devem alterar resultado final, eles devem ser o mesmo (Estilo a famosa frase "A ordem dos fatores (Operandos) não altera o produto (Resultado)", NÃO levar ao pé da letra isso pois se aplicar em strings a ordem altera sim o produto rsrs), essas regras são aplicadas somente a operações de somas e multiplicações pois essas operações são associativas;</li>
                                                     <li>Streams especializados para trabalhar com tipos primitivos numéricos, evita problemas de boxing e unboxing dos Wrappers, ganhando mais performance, utilizando a transformação com o método `.mapToDouble()` apartir da Stream genérica: Também abordamos o problema dos Wrappers dos Tipos primitivos sobre encapsular e desencapsular a cada iteração, alocando e re-alocando memória quando utilizado o Stream genérico (Stream&#60;Double&#62;), tornando esse processo computacionalmente custoso, então é utilizado as classes especializadas para trabalhar com fluxos de dados relacionados aos Tipos primitivos e Wrappers deles (Exemplo: DoubleStream) que evitam esse problema, sendo eles: IntStream, DoubleStream, e LongStream;</li>
