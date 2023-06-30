@@ -343,21 +343,21 @@ code.implementFullBlock {
     }
     
     li code.-main-moduleTitleLi {
-        font-size: .7rem;
+        font-size: .6rem;
     }
 
     /* Área da caixa de exemplo de códigos */
 
     code.-tokenMethod {
-        font-size: .7rem;
+        font-size: .6rem;
     }
     
     code.-tokenString {
-        font-size: .7rem;
+        font-size: .6rem;
     }
     
     code.-tokenKeyword {
-        font-size: .7rem;
+        font-size: .6rem;
     }
     
     /* span.-tokenComment {
@@ -374,12 +374,12 @@ code.implementFullBlock {
     } */
     
     code.implementFullBlock {
-        font-size: .8rem;
+        font-size: .7rem;
         text-shadow: 1px 1px 3px #000;
         line-height: 1rem;
     }
 
     code.outputResult {
-        font-size: .7rem;
+        font-size: .6rem;
     }
 }
