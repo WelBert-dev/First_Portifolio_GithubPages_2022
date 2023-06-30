@@ -246,7 +246,7 @@ code.implementFullBlock {
     padding: .5rem;
     font-size: .9rem;
     text-shadow: 1px 1px 3px #000;
-    line-height: 1rem;;
+    line-height: 1rem;
 }
 
 
@@ -343,6 +343,43 @@ code.implementFullBlock {
     }
     
     li code.-main-moduleTitleLi {
+        font-size: .7rem;
+    }
+
+    /* Área da caixa de exemplo de códigos */
+
+    code.-tokenMethod {
+        font-size: .7rem;
+    }
+    
+    code.-tokenString {
+        font-size: .7rem;
+    }
+    
+    code.-tokenKeyword {
+        font-size: .7rem;
+    }
+    
+    /* span.-tokenComment {
+        font-weight: 400;
+    } */
+    
+    /* ul.main-implementFullBlock--container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+    } */
+    
+    code.implementFullBlock {
+        font-size: .8rem;
+        text-shadow: 1px 1px 3px #000;
+        line-height: 1rem;
+    }
+
+    code.outputResult {
         font-size: .7rem;
     }
 }
