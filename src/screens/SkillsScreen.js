@@ -16,7 +16,7 @@ export default function SkillsScreen() {
                             <h3 className="title-skill">Java</h3>
                             <progress className="progress-bar" max="100" value="90">90%</progress>
                             <span className="-fav">Linguagem Fav. ❤️</span>
-                            <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/anotacoes" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                            <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                         </div>
                     </article>
                     <article className="skill-tec">
