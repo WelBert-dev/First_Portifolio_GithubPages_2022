@@ -24,7 +24,7 @@ export default function ProjectsScreen() {
                         <div className="projects-right">
                             <div className="projects-title--container">
                                 <div>
-                                    <h3 className="projects-title">Maratona Java - DevDojo<br/><br/>EM DESENVOLVIMENTO!<br/>(Testando Layouts).</h3>
+                                    <h3 className="projects-title">Bíblia do Java (Avançado)<br/><br/>Maratona Java - DevDojo<br/><br/>EM DESENVOLVIMENTO!<br/>(Testando Layouts).</h3>
                                     <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                                 </div>
                                 <span>Criei esse projeto durante meus estudos para servir como um "Dicionário" de consultas.</span>
@@ -304,6 +304,7 @@ export default function ProjectsScreen() {
                                                         <ul className="main-implementFullBlock--container">
                                                             - Exemplo de fluxo bidimensional (que gera Streams aninhados) para a lista:
                                                             <code className="implementFullBlock">
+                                                            <span className="-tokenComment"># 2 dimensões (Matriz), a lista interna representa os diferentes setores desta empresa</span><br/>
                                                                 <code className="-tokenClassEntity">List&#60;List&#60;String&#62;&#62;</code> empresa = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>();<br/><br/>
                                                                 
                                                                 empresa.<code className="-tokenMethod">add</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>(<br/>
@@ -336,21 +337,21 @@ export default function ProjectsScreen() {
                                                                 <span className="-tokenComment"># Quando o tipo do Stream é uma List (Ou seja, Objeto) utilizamos `Collection::stream`</span><br/>
                                                                 <code className="-tokenClassEntity">Stream&#60;String&#62;</code> stringStreamNonNested = empresa.<code className="-tokenMethod">stream</code>()<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">flatMap</code>(<code className="-tokenClassEntity">Collection</code>::<code className="-tokenMethod">stream</code>);</code><br/><br/>
-                                                                stringStream.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>));<br/><br/>
+                                                                stringStream.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>);<br/><br/>
                                                                 
                                                                 <span className="-tokenComment"># Quando o tipo do Stream é um array nativo String[] utilizamos `Arrays::stream`</span><br/>
                                                                 <code className="-tokenClassEntity">Stream&#60;String&#62;</code> stringStreamNonNested = empresa.<code className="-tokenMethod">stream</code>()<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">flatMap</code>(<code className="-tokenClassEntity">Arrays</code>::<code className="-tokenMethod">stream</code>);</code><br/><br/>
-                                                                    stringStream.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>));<br/>
+                                                                    stringStream.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>);<br/>
                                                             </code>
                                                         </ul>
                                                     </li>
 
-                                                    <li>Operações de filtragens: `.filter(Predicate predicate)` que retorna todos elementos que corresponderem ao predicado, ou seja, todos elementos que retornar true na comparação da função Lambda;</li>
+                                                    <li>Operações de filtragens: <code className="token_reservada">.filter(Predicate predicate)</code> que retorna todos elementos que corresponderem ao predicado, ou seja, todos elementos que retornar true na comparação da função Lambda;</li>
                                                     <li>Desafio proposto para o ponto acima: Retrieve the first 3 titles LightNovels with price less than &#60; 4.0 (Retornar os 3 primeiros titulos de LightNovels cujo preço é menor que 4.0):
                                                         <ul className="main-implementFullBlock--container">
                                                         
-                                                            <p>- Exemplo de filtragem SEM utilizar Streams, e em seguida UTILIZANDO, ambos para a seguinte lista:</p>
+                                                            <p>- Exemplo de filtragem <code className="token_reservada">SEM</code> utilizar Streams, e em seguida <code className="token_reservada">UTILIZANDO</code>, ambos para a seguinte lista:</p>
                                                             
                                                             <code className="implementFullBlock">
                                                                 <code className="-tokenKeyword">private static</code> <code className="-tokenClassEntity">List&#60;LightNovelModel&#62;</code> listOfLightNovels = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>(<br/>
@@ -367,7 +368,7 @@ export default function ProjectsScreen() {
 
                                                         <ul className="main-implementFullBlock--container">
                                                         
-                                                            <p>- SEM utilizar Streams temos que instânciar uma nova lista auxiliar, para ir adicionando elementos:</p>
+                                                            <p>- <code className="token_reservada">SEM</code> utilizar Streams temos que instânciar uma nova lista auxiliar, para ir adicionando elementos:</p>
                                                             
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># 1 - Order LightNovels by title</span><br/>
@@ -392,7 +393,7 @@ export default function ProjectsScreen() {
 
                                                         <ul className="main-implementFullBlock--container">
                                                         
-                                                            <p>- UTILIZANDO Streams, muito mais simples e coeso e sem precisar de listas auxiliares:</p>
+                                                            <p>- <code className="token_reservada">UTILIZANDO</code> Streams, muito mais simples e coeso e sem precisar de listas auxiliares:</p>
                                                             
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># Equivale a toda operação anterior, porém em uma tacada</span><br/>
@@ -406,15 +407,265 @@ export default function ProjectsScreen() {
                                                                 <span className="-tokenComment"># Output `collectLightNovelsTitlesList`: [Danielle, KissXSis, Tokyo Ghoul]</span>    
                                                             </code>
                                                         </ul>
+                                                    </li>
+                                                    <li>Operações de finding e matching (Busca por elementos): <code className="token_reservada">.findFirst()</code> que retorna o primeiro elemento do fluxo, ou seja, o head; <code className="token_reservada">.findAny()</code> que Retorna QUALQUER elemento da sequência (<code className="token_reservada">NÃO Determinístico</code>); <code className="token_reservada">.anyMatch(Predicate predicate)</code> Retorna true se PELOMENOS um elemento do fluxo atenda a condição imposta pelo predicado; <code className="token_reservada">.allMatch(Predicate predicate)</code> Retorna true se TODOS os elementos deste fluxo atenderem a condição imposta pelo predicado; <code className="token_reservada">.noneMatch(Predicate predicate)</code> Retorna true se NENHUM dos elementos do fluxo atenderem a condição imposta pelo predicado;
 
+                                                        <ul className="main-implementFullBlock--container">
+                                                            
+                                                            <p> - Fazendo match no fluxo que passar pela filtragem com retornos Optional (<code className="token_reservada">.findFirst()</code> e <code className="token_reservada">.findAny()</code>):</p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># `findFirst()`: Retornando o primeiro elemento do fluxo (que passar pela filtragem)</span><br/>
+                                                                <code className="-tokenClassEntity">Optional&#60;Integer&#62;</code> firstEvenElement = <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">3</code>, <code className="-tokenKeyConstant">4</code>, <code className="-tokenKeyConstant">5</code>)<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(n -&#62; n % <code className="-tokenKeyConstant">2</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">findFirst</code>();</code><br/>
+                                                                    
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `firstEvenElement`: Optional[2] (Primeiro número par)</span><br/><br/>
+                                                                <span className="-tokenComment"># Obs: Por se tratar de um Objeto Optional, podemos realizar vários tratamentos <br/>se o valor for null (Evitando NullPointerException's)</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># `findAny()`: Retornando QUALQUER elemento (NÃO determinístico) do fluxo (que passar pela filtragem)</span><br/>
+                                                                <code className="-tokenClassEntity">Optional&#60;Integer&#62;</code> anyEvenElement = <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">3</code>, <code className="-tokenKeyConstant">4</code>, <code className="-tokenKeyConstant">5</code>)<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(n -&#62; n % <code className="-tokenKeyConstant">2</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">findAny</code>();</code><br/>
+                                                                    
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `anyEvenElement`: Optional[2 Ou 4 Não Determinístico] (QUALQUER número par)</span><br/><br/>
+                                                                <span className="-tokenComment"># Obs: NÃO Determinístico quer dizer que pode apresentar diferentes resultados, <br/>independentemente da quantidade de execuções com as mesmas entradas de dados</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <br/>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            
+                                                            <p> - Fazendo match no fluxo inteiro (Sem pré-filtragens) e com retornos booleanos (<code className="token_reservada">.anyMatch()</code>, <code className="token_reservada">.allMatch()</code>, e <code className="token_reservada">.noneMatch()</code>):</p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># `anyMatch()`: Retorna true se PELOMENOS UM elemento faz match no predicado</span><br/>
+                                                                <code className="-tokenKeyword">boolean</code> anyMatch_bool = <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"apple"</code>, <code className="-tokenString">"banana"</code>, <code className="-tokenString">"cherry"</code>, <code className="-tokenString">"date"</code>)<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">anyMatch</code>(fruit -&#62; fruit.<code className="-tokenMethod">startsWith</code>(<code className="-tokenString">"b"</code>));</code><br/>
+                                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `anyMatch_bool`: true (Na segunda iteração, banana começa com "b")</span>
+                                                            </code>
+                                                        </ul>
+                                                        <ul className="main-implementFullBlock--container">   
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># `allMatch()`: Retorna true se TODOS elementos faz match no predicado</span><br/>
+                                                                <code className="-tokenKeyword">boolean</code> allMatch_bool = <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"apple"</code>, <code className="-tokenString">"banana"</code>, <code className="-tokenString">"cherry"</code>, <code className="-tokenString">"date"</code>)<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">allMatch</code>(fruit -&#62; fruit.<code className="-tokenMethod">length</code>() &#62; <code className="-tokenKeyConstant">3</code>);</code><br/>
+                                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `allMatch_bool`: true (TODOS tem mais de 3 caracteres)</span>
+                                                            </code>
+                                                        </ul>
+                                                        <ul className="main-implementFullBlock--container">   
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># `noneMatch()`: Retorna true se NENHUM elemento faz match no predicado</span><br/>
+                                                                <code className="-tokenKeyword">boolean</code> noneMatch_bool = <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"apple"</code>, <code className="-tokenString">"banana"</code>, <code className="-tokenString">"cherry"</code>, <code className="-tokenString">"date"</code>)<br/>
+                                                                <code className="-nestedInnerCode">.<code className="-tokenMethod">noneMatch</code>(fruit -&#62; fruit.<code className="-tokenMethod">startsWith</code>(<code className="-tokenString">"z"</code>));</code><br/>
+                                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `noneMatch_bool`: true (NENHUM elemento começa com "z")</span>
+                                                            </code>
+                                                        </ul>
 
                                                     </li>
-                                                    <li>Operações de finding e matching (Busca por elementos): `.findFirst()` que retorna o primeiro elemento do fluxo; `.findAny()` que Retorna QUALQUER elemento da sequência; `.anyMatch(Predicate predicate)` Retorna true se PELOMENOS um elemento do fluxo atenda a condição imposta pelo predicado; `.allMatch(Predicate predicate)` Retorna true se TODOS os elementos deste fluxo atenderem a condição imposta pelo predicado; `.noneMatch(Predicate predicate)` Retorna true se NENHUM dos elementos do fluxo atenderem a condição imposta pelo predicado;</li>
-                                                    <li>Operações de redução com `.reduce(BinaryOperator&#60;T&#62; accumulator)`: Aplicando regras que transformam o fluxo todo de elementos em apenas um elemento no final, utilizando operação associativa neles, operações associativas na matematica são operações nas quais os resultados devem ser os mesmos independentemente da ordem na qual esses dois elementos (Operandos) são processados, esse conceito é aplicado pelo Interface BinaryOperator&#60;T&#62; que é o parâmetro do método de redução em questão, esse conceito é importante pois a implementação em baixo nível dessa operação aplica as regras no elemento corrente e no elemento anterior, porisso essa ordem dita nas operações associativas é relevante, pois independentemente da ordem dos dois elementos (Operandos) em operação NÃO devem alterar resultado final, eles devem ser o mesmo (Estilo a famosa frase "A ordem dos fatores (Operandos) não altera o produto (Resultado)", NÃO levar ao pé da letra isso pois se aplicar em strings a ordem altera sim o produto rsrs), essas regras são aplicadas somente a operações de somas e multiplicações pois essas operações são associativas;</li>
-                                                    <li>Streams especializados para trabalhar com tipos primitivos numéricos, evita problemas de boxing e unboxing dos Wrappers, ganhando mais performance, utilizando a transformação com o método `.mapToDouble()` apartir da Stream genérica: Também abordamos o problema dos Wrappers dos Tipos primitivos sobre encapsular e desencapsular a cada iteração, alocando e re-alocando memória quando utilizado o Stream genérico (Stream&#60;Double&#62;), tornando esse processo computacionalmente custoso, então é utilizado as classes especializadas para trabalhar com fluxos de dados relacionados aos Tipos primitivos e Wrappers deles (Exemplo: DoubleStream) que evitam esse problema, sendo eles: IntStream, DoubleStream, e LongStream;</li>
-                                                    <li>Sobre o ponto anterior, também é possível fazer o processo reverso/inverso e re-encapsular o Stream especializado (DoubleStream) retornando uma Stream genérica do mesmo (Stream&#60;Double&#62;) utilizando o método `.boxed()`;</li>
-                                                    <li>Gerando fluxos Streams apartir das classes Streams especializadas ditas anteriormente: Também é possivel realizar essa operação utilizando os Streams especializados com o método estático `IntStream.range(inicio, final)`; Para gerar o alfabéto com Stream de chars, existe uma macete utilizando mapeamento da tabela ASCII relacionada ao Inteiro gerado apartir do mesmo método anterior, mais detalhes no módulo especifico com maiores detalhes; Para gerar Streams de qualquer outro Objeto `Stream.of("Wellison","wesley", "Irineu", "InemEu")`; Para gerar Streams apartir de arrays nativos `Arrays.stream(new int[]&#123;1, 2, 3, 4, 5, 6&#125;)`; Para gerar Streams apartir de arquivos, lendo linha a linha, ou lendo palavra por palavra `Stream&#60;String&#62; lines = Files.lines(Paths.get("/home"))`;</li>
-                                                    <li>Gerando fluxos Streams infinitos, em exemplo implementamos a sequencia de Fibonacci, com `Stream.iterate(new int[]&#123;0, 1&#125;, n -&#62; new int[]&#123;n[1], n[0] + n[1]&#125;).limit(10)`; Obs: Devemos utilizar o `.limit(10)` pois se não iria ficar eternamente;</li>
+                                                    <li>Operações de redução com <code className="token_reservada">.reduce(BinaryOperator&#60;T&#62; accumulator)</code>: Aplicando regras que transformam o fluxo todo de elementos em apenas um elemento no final, utilizando operação associativa neles, operações associativas na matematica são operações nas quais os resultados devem ser os mesmos independentemente da ordem na qual esses dois elementos (Operandos) são processados, esse conceito é aplicado pelo Interface BinaryOperator&#60;T&#62; que é o parâmetro do método de redução em questão, esse conceito é importante pois a implementação em baixo nível dessa operação aplica as regras no elemento corrente e no elemento anterior, porisso essa ordem dita nas operações associativas é relevante, pois independentemente da ordem dos dois elementos (Operandos) em operação NÃO devem alterar resultado final, eles devem ser o mesmo (Estilo a famosa frase "A ordem dos fatores (Operandos) não altera o produto (Resultado)", NÃO levar ao pé da letra isso pois se aplicar em strings a ordem altera sim o produto rsrs), essas regras são aplicadas somente a operações de somas e multiplicações pois essas operações são associativas;
+                                                        <ul className="main-implementFullBlock--container">
+                                                            
+                                                            <p> - Somando todos elementos entre si (acumulando a soma+=) <code className="-token_reservada">COM</code> a sobrecarga do <code className="token_reservada">identity</code> (Esse parâmetro indica o valor inicial que apartir dele será acumulado) e <code className="token_reservada">SEM</code>, a seguinte lista é utilizado em todas operações:</p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <code className="-tokenClassEntity">List&#60;Integer&#62;</code> numbersList = <code className="-tokenClassEntity">Arrays</code>.<code className="-tokenMethod">asList</code>(<code className="-tokenKeyConstant">1</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">3</code>, <code className="-tokenKeyConstant">4</code>, <code className="-tokenKeyConstant">5</code>);<br/>
+                                                            </code>
+                                                        </ul>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># COM a sobrecarga do identity o retorno será um primitivo comum:</span><br/>
+                                                                <code className="-tokenKeyword">int</code> sum_int = numbersList.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">reduce</code>(<code className="-tokenKeyConstant">0</code>, (x, y) -&#62; x + y);</code><br/>
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `sum_int`: 15</span>
+                                                            </code>     
+                                                        </ul>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># Com method reference e sem a sobrecarga do identity, o retorno será Optional do Wrapper</span><br/>
+                                                                <code className="-tokenClassEntity">Optional&#60;Integer&#62;</code> sum_opt_integer = numbersList.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">reduce</code>(<code className="-tokenClassEntity">Integer</code>::<code className="-tokenMethod">sum</code>);</code><br/>
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `sum_opt_integer`: Optional[15]</span>
+                                                            </code>   
+                                                        </ul>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># Com method reference e COM a sobrecarga do identity, o retorno será Wrapper</span><br/>
+                                                                <code className="-tokenClassEntity">Integer</code> sum_integer = numbersList.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">reduce</code>(<code className="-tokenKeyConstant">0</code>, <code className="-tokenClassEntity">Integer</code>::<code className="-tokenMethod">sum</code>);</code><br/>
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `sum_integer`: Wrapper[15]</span>
+                                                            </code>   
+                                                        </ul>
+                                                    
+                                                    </li>
+                                                    <li>Streams especializados para trabalhar com tipos primitivos numéricos, evita <code className="token_reservada">problemas de boxing e unboxing dos Wrappers</code>, ganhando mais performance, utilizando a transformação com o método <code className="token_reservada">.mapToDouble(ClassEntity::getDoubleAttribute)</code> apartir da Stream genérica: Também abordamos o problema dos Wrappers dos Tipos primitivos sobre encapsular e desencapsular a cada iteração, alocando e re-alocando memória quando utilizado o Stream genérico (<code className="outputResult">Stream&#60;Double&#62;</code>), tornando esse processo computacionalmente custoso, então é utilizado as classes especializadas para trabalhar com fluxos de dados relacionados aos Tipos primitivos e Wrappers deles (Exemplo: <code className="outputResult">DoubleStream</code>) que evitam esse problema, sendo eles: <code className="token_reservada">IntStream</code>, <code className="token_reservada">DoubleStream</code>, e <code className="token_reservada">LongStream</code>;
+                                                         <ul className="main-implementFullBlock--container">
+                                                            
+                                                            <p> - Computacionalmente CUSTOSO: SEM o Stream especializado, que ocorre o problema dos Wrappers sobre boxing e unboxing: </p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># SEM Stream especializado o retorno será um Optional:</span><br/>
+                                                                <code className="-tokenClassEntity">Optional&#60;Double&#62;</code> sum_opt_double = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(novel -&#62; novel.<code className="-tokenMethod">getPrice</code>() &#62; <code className="-tokenKeyConstant">3</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">map</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getPrice</code>)<span className="-tokenComment">// Stream&#60;Double&#62; (Problema)</span></code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">reduce</code>(<code className="-tokenClassEntity">Double</code>::<code className="-tokenMethod">sum</code>);</code><br/>
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `sum_opt_double`: Optional[15.8]</span>
+                                                            </code>
+                                                        </ul>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            
+                                                            <p> - SOLUÇÃO: Stream especializado, evita problema de Boxing e Unboxing dos Wrappers: </p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># COM Stream especializado o retorno será o tipo primitivo comum:</span><br/>
+                                                                <code className="-tokenKeyword">double</code> sum_native_double = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">mapToDouble</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getPrice</code>)<span className="-tokenComment">// DoubleStream (Solução)</span></code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(novel_price -&#62; novel_price &#62; <code className="-tokenKeyConstant">3</code>)<span className="-tokenComment">// descartou o obj, então não executamos .getPrice()</span></code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">sum</code>();<span className="-tokenComment">// já temos apenas o atributo price no fluxo, logo, não precisamos do `.reduce()`</span></code><br/>
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `sum_native_double`: 15.8 (Msm result, porém MAIS performatico)</span>
+                                                            </code>
+                                                        </ul>                                                
+                                                    </li>
+                                                    <li>Sobre o ponto anterior, também é possível fazer o processo <code className="token_reservada">reverso/inverso</code> e re-encapsular o Stream especializado (<code className="outputResult">DoubleStream</code>) retornando uma Stream genérica do mesmo (<code className="outputResult">Stream&#60;Double&#62;</code>) utilizando o método <code className="token_reservada">.boxed()</code>, Util quando as próximas operações (métodos) do fluxo espera no contexto dele Objetos ao invés de primitivos comuns;
+                                                        <ul className="main-implementFullBlock--container">
+                                                            
+                                                            <p> - Convertendo DoubleStream (Streams Especializados) para Stream&#60;Double&#62; (Genérico) quando o contexto seguinte do fluxo espera um Objeto Wrapper ao invés do primitivo, neste caso o passo <code className="token_reservada">.collect(Collector.toList())</code> espera receber Objetos ao invés de primitivos comuns: </p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># Exemplo: Para executar o coletor que retorna uma List (Espera-se objetos):</span><br/>
+                                                                <code className="-tokenClassEntity">List&#60;Double&#62;</code> listOfPricesGreatThan3 = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">mapToDouble</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getPrice</code>)<span className="-tokenComment">// DoubleStream </span></code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(novel_price -&#62; novel_price &#62; <code className="-tokenKeyConstant">3</code>)<span className="-tokenComment">// descartou o obj, então não executamos .getPrice()</span></code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">boxed</code>();<span className="-tokenComment">// encapsula o primitivo em wrapper novamente</span></code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors.<code className="-tokenMethod">toList</code>()</code>);<span className="-tokenComment">// contexto que espera Objetos ao invés de primitivos</span></code><br/>
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `listOfPricesGreatThan3`: [3.2, 5.2, 3.2, 4.2]</span>
+                                                            </code>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Gerando fluxos Streams apartir das classes Streams especializadas ditas anteriormente: Também é possivel realizar essa operação utilizando os Streams especializados com o método estático <code className="token_reservada">IntStream.range(inicio, final)</code>; Para gerar o alfabéto com Stream de chars, existe uma macete utilizando mapeamento da tabela ASCII relacionada ao Inteiro gerado apartir do mesmo método anterior, mais detalhes no módulo especifico com maiores detalhes; Para gerar Streams de qualquer outro Objeto <code className="token_reservada">Stream.of("Wellison","wesley", "Irineu", "InemEu")</code>; Para gerar Streams apartir de arrays nativos <code className="token_reservada">Arrays.stream(new int[]&#123;1, 2, 3, 4, 5&#125;)</code>; Para gerar Streams apartir de arquivos, lendo linha a linha, ou lendo palavra por palavra <code className="token_reservada">Stream&#60;String&#62; lines = Files.lines(Paths.get("/home"))</code>;
+                                                        <ul className="main-implementFullBlock--container">
+                                                            
+                                                            <p> - Gerando Streams de valores Inteiros: </p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment">#`.range()` considera do inicio até final - 1 (Ou seja, não incluí o número final do range):</span><br/>
+                                                                <code className="-tokenClassEntity">IntStream</code>.<code className="-tokenMethod">range</code>(<code className="-tokenKeyConstant">0</code>, <code className="-tokenKeyConstant">21</code>)<span className="-tokenComment">// de 0 a 20 </span><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(n -&#62; n % <code className="-tokenKeyConstant">2</code> == <code className="-tokenKeyConstant">0</code>)<span className="-tokenComment">// pares</span></code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">forEach</code>(n -&#62; <code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">print</code>(n + <code className="-tokenString">", "</code>));</code><br/>   
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20,</span>
+                                                            </code>
+                                                        </ul>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment">#`.rangeClosed()` considera do inicio até final (Incluí o número final do range, ao contrário do anterior):</span><br/>
+                                                                <code className="-tokenClassEntity">IntStream</code>.<code className="-tokenMethod">rangeClosed</code>(<code className="-tokenKeyConstant">0</code>, <code className="-tokenKeyConstant">22</code>)<span className="-tokenComment">// de 0 a 22 </span><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(n -&#62; n % <code className="-tokenKeyConstant">2</code> == <code className="-tokenKeyConstant">0</code>)<span className="-tokenComment">// pares</span></code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">forEach</code>(n -&#62; <code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">print</code>(n + <code className="-tokenString">", "</code>));</code><br/>   
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, &#60;- considerou o range até o final passado no argumento</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <ul className="main-implementFullBlock--container">
+                                                            
+                                                            <p> - Gerando Streams de valores Strings (Ou qualquer outro Objeto): </p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># Gerando Streams de qualquer Objeto</span><br/>
+                                                                <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"Wellison"</code>, <code className="-tokenString">"wesley"</code>, <code className="-tokenString">"Irineu"</code>, <code className="-tokenString">"InemEu"</code>);<br/>
+                                                            </code>
+                                                        </ul>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># Macete: Gerando Streams do alfabeto mapeando os caracteres da tabela ASCII</span><br/>
+                                                                <code className="-tokenClassEntity">IntStream</code>.<code className="-tokenMethod">range</code>(<code className="-tokenString">'a'</code>, <code className="-tokenString">'z'+<code className="-tokenKeyConstant">1</code></code>)<span className="-tokenComment">// z+1 pois o valor final é desconsiderado </span><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">mapToObj</code>(<code className="-tokenClassEntity">Character</code>::<code className="-tokenMethod">toString</code>)<span className="-tokenComment">// Faz o mapeamento da tabela</span></code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">forEach</code>(letra -&#62; <code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">print</code>(letra + <code className="-tokenString">", "</code>));</code><br/>   
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output: a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z,</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <ul className="main-implementFullBlock--container">
+                                                            
+                                                            <p> - Gerando Streams apartir de Arrays nativos: </p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <code className="-tokenKeyword">int</code>[] numbersArrayNativo = &#123;<code className="-tokenKeyConstant">1</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">3</code>, <code className="-tokenKeyConstant">4</code>, <code className="-tokenKeyConstant">5</code>&#125;;<br/>
+                                                                <code className="-tokenClassEntity">Optional&#60;Double&#62;</code> avg_double_opt = <code className="-tokenClassEntity">Arrays</code>.<code className="-tokenMethod">stream</code>(numbersArrayNativo)<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">average</code>();</code><br/>
+                                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `avg_double_opt`: Optional[3.5]</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <ul className="main-implementFullBlock--container">
+                                                            
+                                                            <p> - Gerando Streams apartir de conteúdos de arquivos: </p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                               <code className="-tokenKeyword">try</code>(<code className="-tokenClassEntity">Stream&#60;String&#62;</code> lines = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">lines</code>(<code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/arquivo.txt"</code>))) &#123;<br/>
+                                                                    <code className="-nestedInnerCode">lines.<code className="-tokenMethod">filter</code>(line -&#62; line.<code className="-tokenMethod">startsWith</code>(<code className="-tokenString">"R"</code>))</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>);</code><br/>
+                                                                &#125; <code className="-tokenKeyword">catch</code> (<code className="-tokenClassEntity">IOException</code> ex) &#123;<br/>
+                                                                    <code className="-nestedInnerCode">ex.<code className="-tokenMethod">printStackTrace</code>();</code><br/>
+                                                                &#125;
+                                                                
+                                                                <br/><br/>
+                                                                <span className="-tokenComment"># Output: Rick and Morty S06E10 WEB-DL 1080p DUAL 5.1.mkv</span><br/>
+                                                                <span className="-tokenComment"># Output: Rick.and.Morty.S06E09.1080p.WEB-DL.DUAL.5.1.mkv</span><br/>    
+                                                                <span className="-tokenComment"># Output: Rick.and.Morty.S06E08.1080p.WEB-DL.DUAL.5.1.mkv</span><br/>    
+                                                                <span className="-tokenComment"># Output: Rick.and.Morty.S06E07.1080p.WEB-DL.DUAL.mkv</span><br/>    
+                                                            </code>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Gerando fluxos Streams infinitos, em exemplo implementamos a sequência de Fibonacci, com <code className="token_reservada">Stream.iterate(new int[]&#123;0, 1&#125;, n -&#62; new int[]&#123;n[1], n[0] + n[1]&#125;).limit(10)</code>; Obs: Devemos utilizar o <code className="token_reservada">.limit(10)</code> pois se não iria ficar eternamente;
+                                                        <ul className="main-implementFullBlock--container">
+                                                            
+                                                            <p> - Gerando Streams infinitos, 10 primiros da sequência de Fibonacci: </p>
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">iterate</code>(<code className="-tokenKeyword">new int</code>[]&#123;<code className="-tokenKeyConstant">0</code>, <code className="-tokenKeyConstant">1</code>&#125;, n -&#62; <code className="-tokenKeyword">new int</code>[]&#123;n[<code className="-tokenKeyConstant">1</code>], n[<code className="-tokenKeyConstant">0</code>] + n[<code className="-tokenKeyConstant">1</code>]&#125;)<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">limit</code>(<code className="-tokenKeyConstant">10</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">forEach</code>(element -&#62; <code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">print</code>(<code className="-tokenClassEntity">Arrays</code>.<code className="-tokenMethod">toString</code>(element) + <code className="-tokenString">" "</code>));</code><br/>
+                                                                    
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output: [0, 1] [1, 1] [1, 2] [2, 3] [3, 5] [5, 8] [8, 13] [13, 21] [21, 34] [34, 55]</span>
+                                                            </code>
+                                                        </ul>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># Mesma coisa porém retornando apenas os valores da sequência:</span><br/>
+                                                                <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">iterate</code>(<code className="-tokenKeyword">new int</code>[]&#123;<code className="-tokenKeyConstant">0</code>, <code className="-tokenKeyConstant">1</code>&#125;, n -&#62; <code className="-tokenKeyword">new int</code>[]&#123;n[<code className="-tokenKeyConstant">1</code>], n[<code className="-tokenKeyConstant">0</code>] + n[<code className="-tokenKeyConstant">1</code>]&#125;)<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">limit</code>(<code className="-tokenKeyConstant">10</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">map</code>(element -&#62; element[<code className="-tokenKeyConstant">0</code>])</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">forEach</code>(value -&#62; <code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">print</code>(value + <code className="-tokenString">", "</code>));</code><br/>
+                                                                    
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output: 0, 1, 1, 2, 3, 5, 8, 13, 21, 34,</span>
+                                                            </code>
+                                                        </ul>
+                                                    </li>
                                                     <br/>
                                                     <li>Operações finais com o Framework Collectors que define uma serie de métodos estáticos para coletar os elementos do fluxo Stream retornando eles em coleções, listas, mapas, além disto, ele também fornece métodos de Agrupamentos (Mesma lógica dos agrupamentos em DB SQL GROUP BY), aonde conseguimos agrupar elementos em mapas de acordo com algum critério e realizar também funções de agregação (Min, Max, AVG, Count, Sum) em cima dos grupos gerados, o retorno será um mapa aonde a chave é o critéro do agrupamento e o valor são os elementos que fazem match neste critério:</li>
                                                     <li>Gerando resumos (Sumários) retornando em apenas um Objeto o resultado de todas funções de agregação de uma só vez com o método `listOfLightNovels.stream()<br/>.collect(Collectors.summarizingDouble(LightNovelModel::getPrice));`, neste contexto estamos gerando o resumo do atributo preço dos novels, o retorno será o Objeto `DoubleSummaryStatistics&#123;count=5, sum=17,800000, min=2,000000, average=3,560000, max=5,200000&#125;`, as informações retiradas aqui são: Existem 5 elementos ao total no fluxo; A soma total entre eles é igual a R$17,80; O novel mais barato custa R$2,00; A média entre todos os preços de todos elementos do fluxo é igual a R$3,56; O novel mais caro custa R$5,20;</li>
