@@ -204,12 +204,24 @@ code.outputResult {
 }
 
 .-nestedInnerCode {
-    margin: 0 1rem;
+    margin: 0 0 0 1rem;
     font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
 }
 
 .-nestedInnerCode.--2Identation {
-    margin: 0 2rem;
+    margin: 0 0 0 2rem;
+}
+
+.-nestedInnerCode.--3Identation {
+    margin: 0 0 0 3rem;
+}
+
+.-nestedInnerCode.--4Identation {
+    margin: 0 0 0 4rem;
+}
+
+.-nestedInnerCode.--5Identation {
+    margin: 0 0 0 5rem;
 }
 
 code.-tokenMethod {
@@ -263,6 +275,10 @@ code.implementFullBlock {
     line-height: 1rem;
 }
 
+p.main-title--implementFullBlock {
+    margin-top: .5rem;
+    margin-left: 1rem;
+}
 
 
 @media (max-width: 810px)
@@ -388,7 +404,7 @@ code.implementFullBlock {
     } */
     
     code.implementFullBlock {
-        font-size: .7rem;
+        font-size: .6rem;
         text-shadow: 1px 1px 3px #000;
         line-height: 1rem;
     }
@@ -403,5 +419,13 @@ code.implementFullBlock {
     
     code.-tokenClassEntity {
         font-size: .6rem;
+    }
+
+    span.-tokenComment {
+        font-size: .6rem;
+    }
+
+    p.main-title--implementFullBlock {
+        margin-left: 0;
     }
 }

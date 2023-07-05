@@ -301,46 +301,45 @@ export default function ProjectsScreen() {
                                                     <li>Stremas no Java são as classes meus baixo nível low level pois geralmente elas trabalham com fluxos de bytes e etc e esses fluxos geralmente transitam entre camadas (Por exemplo leituras em HD ou outros periféricos, fluxos de bytes que irão ser trafegados pela rede, dentre outras transferências entre camadas);</li>
                                                     <li>Muitas das operações que podemos fazer com SQL como Agrupamentos, Agrupamentos com funções de agregação (Max, Min, AVG, Count, Sum), Operações de Conjuntos (União, Intereção, e Diferença), Junções (Produto Cartesiano, Junção Interna, e etc), filtragens, Transformações como Map-reduce e etc, limit e offset... podemos fazer com esses fluxos.</li>
                                                     <li>Também explicamos as diferenças entre os métodos de transformação <code className="token_reservada">.map()</code> e <code className="token_reservada">.flatMap()</code> que realizam a mesma função, porém o <code className="token_reservada">.flatMap()</code> é utilizado quando temos coleções multidimensionais aninhadas umas as outras, esse tipo de coleção gera Streams de Streams (<code className="outputResult">`Stream&#60;Stream&#60;Stream&#60;String&#62;&#62;&#62;`</code>) deixando a operação mais complexa então devemos "desachatar" manualmente se utilizado o <code className="token_reservada">.map()</code> comum aumentando o número de operações/passos neste fluxo para esta correção, diferente do <code className="token_reservada">.flatMap()</code> que já o faz para nós, a implementação em baixo nível dele basicamente desaninha combinando assim os Streams em apenas um na saída, já retornando apenas um fluxo contendo todos os elementos que eram aninhados neste mesmo fluxo de saída (<code className="outputResult">Stream&#60;String&#62;</code>); 
+                                                        
+                                                        <p className="main-title--implementFullBlock">- Exemplo de fluxo bidimensional (que gera Streams aninhados) para a lista:</p>
                                                         <ul className="main-implementFullBlock--container">
-                                                            - Exemplo de fluxo bidimensional (que gera Streams aninhados) para a lista:
                                                             <code className="implementFullBlock">
                                                             <span className="-tokenComment"># 2 dimensões (Matriz), a lista interna representa os diferentes setores desta empresa</span><br/>
-                                                                <code className="-tokenClassEntity">List&#60;List&#60;String&#62;&#62;</code> empresa = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>();<br/><br/>
+                                                                <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">String</code>&#62;&#62; empresa = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList</code>&#60;&#62;();<br/><br/>
                                                                 
-                                                                empresa.<code className="-tokenMethod">add</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>(<br/>
+                                                                empresa.<code className="-tokenMethod">add</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList</code>&#60;&#62;(<br/>
                                                                     <code className="-nestedInnerCode"><code className="-tokenClassEntity">List</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"Wellison"</code>, <code className="-tokenString">"Pedro"</code>, <code className="-tokenString">"Matheus"</code>, <code className="-tokenString">"Rafa"</code>)</code><br/>
                                                                 ));<br/>
 
-                                                                empresa.<code className="-tokenMethod">add</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>(<br/>
+                                                                empresa.<code className="-tokenMethod">add</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList</code>&#60;&#62;(<br/>
                                                                     <code className="-nestedInnerCode"><code className="-tokenClassEntity">List</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"Danielle"</code>, <code className="-tokenString">"Caio"</code>, <code className="-tokenString">"Micael"</code>, <code className="-tokenString">"Tainara"</code>)</code><br/>                                                                 
                                                                 ));<br/>
                                                             </code>
                                                         </ul>
-                                                        <ul className="main-implementFullBlock--container">
 
-                                                            <p>- Utilizando transformação com <code className="token_reservada">.map()</code> normal, que não desaninha Streams, logo, devemos realizar mais operações:</p>
-                                                            
+                                                        <p className="main-title--implementFullBlock">- Utilizando transformação com <code className="token_reservada">.map()</code> normal, que não desaninha Streams, logo, devemos realizar mais operações:</p>
+                                                        <ul className="main-implementFullBlock--container">                         
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># Observe o aninhamento de fluxos em `Stream&#60;Stream&#60;String&#62;&#62;`</span><br/>
-                                                                <code className="-tokenClassEntity">Stream&#60;Stream&#60;String&#62;&#62;</code> streamStream = empresa.<code className="-tokenMethod">stream</code>()<br/>
+                                                                <code className="-tokenClassEntity">Stream</code>&#60;<code className="-tokenClassEntity">Stream</code>&#60;<code className="-tokenClassEntity">String</code>&#62;&#62; streamStream = empresa.<code className="-tokenMethod">stream</code>()<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">map</code>(setor -&#62; setor.<code className="-tokenMethod">stream</code>());</code><br/><br/>
 
                                                                 streamStream.<code className="-tokenMethod">forEach</code>(setor -&#62;<br/> 
                                                                     <code className="-nestedInnerCode">setor.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>));</code>
                                                             </code>
                                                         </ul>
-                                                         <ul className="main-implementFullBlock--container">
 
-                                                            <p>- Agora utilizando transformação com <code className="token_reservada">.flatMap()</code>, que "achata" e desaninha Streams, logo, não precisamos realizar mais operações para percorrer as coleções internas aninhadas (que neste caso é os dois(2) <code className="token_reservada">.forEach()</code> utilizados na operação anterior), PORÉM vale lembrar que fazer isto irá unir as listas internas no mesmo fluxo, ou seja, só devemos realizar esse tipo de operação quando queremos tratar todos os dados IGUALMENTE nesta lógica que vamos aplicar, aqui é válido pois vamos tratar todos funcionários igualmente, independentemente do setor dele, então faz sentido aplicar esse "achatamento", se fossemos tratar os funcionários de maneiras diferentes para cada setor, <code className="token_reservada">NÃO</code> deveriamos aplicar esse achatamento que une as listas internas aninhadas em um único fluxo, já que as regras aplicadas seriam diferentes para cada setor, o que não é o nosso caso!</p>
-                                                            
+                                                        <p className="main-title--implementFullBlock">- Agora utilizando transformação com <code className="token_reservada">.flatMap()</code>, que "achata" e desaninha Streams, logo, não precisamos realizar mais operações para percorrer as coleções internas aninhadas (que neste caso é os dois(2) <code className="token_reservada">.forEach()</code> utilizados na operação anterior), PORÉM vale lembrar que fazer isto irá unir as listas internas no mesmo fluxo, ou seja, só devemos realizar esse tipo de operação quando queremos tratar todos os dados IGUALMENTE nesta lógica que vamos aplicar, aqui é válido pois vamos tratar todos funcionários igualmente, independentemente do setor dele, então faz sentido aplicar esse "achatamento", se fossemos tratar os funcionários de maneiras diferentes para cada setor, <code className="token_reservada">NÃO</code> deveriamos aplicar esse achatamento que une as listas internas aninhadas em um único fluxo, já que as regras aplicadas seriam diferentes para cada setor, o que não é o nosso caso!</p>
+                                                         <ul className="main-implementFullBlock--container">
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># Quando o tipo do Stream é uma List (Ou seja, Objeto) utilizamos `Collection::stream`</span><br/>
-                                                                <code className="-tokenClassEntity">Stream&#60;String&#62;</code> stringStreamNonNested = empresa.<code className="-tokenMethod">stream</code>()<br/>
+                                                                <code className="-tokenClassEntity">Stream</code>&#60;<code className="-tokenClassEntity">String</code>&#62; stringStreamNonNested = empresa.<code className="-tokenMethod">stream</code>()<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">flatMap</code>(<code className="-tokenClassEntity">Collection</code>::<code className="-tokenMethod">stream</code>);</code><br/><br/>
                                                                 stringStream.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>);<br/><br/>
                                                                 
                                                                 <span className="-tokenComment"># Quando o tipo do Stream é um array nativo String[] utilizamos `Arrays::stream`</span><br/>
-                                                                <code className="-tokenClassEntity">Stream&#60;String&#62;</code> stringStreamNonNested = empresa.<code className="-tokenMethod">stream</code>()<br/>
+                                                                <code className="-tokenClassEntity">Stream</code>&#60;<code className="-tokenClassEntity">String</code>&#62; stringStreamNonNested = empresa.<code className="-tokenMethod">stream</code>()<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">flatMap</code>(<code className="-tokenClassEntity">Arrays</code>::<code className="-tokenMethod">stream</code>);</code><br/><br/>
                                                                     stringStream.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>);<br/>
                                                             </code>
@@ -349,34 +348,31 @@ export default function ProjectsScreen() {
 
                                                     <li>Operações de filtragens: <code className="token_reservada">.filter(Predicate predicate)</code> que retorna todos elementos que corresponderem ao predicado, ou seja, todos elementos que retornar true na comparação da função Lambda;</li>
                                                     <li>Desafio proposto para o ponto acima: Retrieve the first 3 titles LightNovels with price less than &#60; 4.0 (Retornar os 3 primeiros titulos de LightNovels cujo preço é menor que 4.0):
-                                                        <ul className="main-implementFullBlock--container">
                                                         
-                                                            <p>- Exemplo de filtragem <code className="token_reservada">SEM</code> utilizar Streams, e em seguida <code className="token_reservada">UTILIZANDO</code>, ambos para a seguinte lista:</p>
-                                                            
+                                                        <p className="main-title--implementFullBlock">- Exemplo de filtragem <code className="token_reservada">SEM</code> utilizar Streams, e em seguida <code className="token_reservada">UTILIZANDO</code>, ambos para a seguinte lista:</p>
+                                                        <ul className="main-implementFullBlock--container">
                                                             <code className="implementFullBlock">
-                                                                <code className="-tokenKeyword">private static</code> <code className="-tokenClassEntity">List&#60;LightNovelModel&#62;</code> listOfLightNovels = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>(<br/>
+                                                                <code className="-tokenKeyword">private static</code> <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">LightNovel</code>&#62; listOfLightNovels = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList</code>&#60;&#62;(<br/>
                                                                     <code className="-nestedInnerCode"><code className="-tokenClassEntity">List</code>.<code className="-tokenMethod">of</code>(<br/>
-                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovelModel</code>(<code className="-tokenString">"Tokyo Ghoul"</code>, <code className="-tokenKeyConstant">2.0</code>),</code><br/>
-                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovelModel</code>(<code className="-tokenString">"KissXSis"</code>, <code className="-tokenKeyConstant">3.2</code>),</code><br/>
-                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovelModel</code>(<code className="-tokenString">"Dragon Ball"</code>, <code className="-tokenKeyConstant">5.2</code>),</code><br/>
-                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovelModel</code>(<code className="-tokenString">"Danielle"</code>, <code className="-tokenKeyConstant">3.2</code>),</code><br/>
-                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovelModel</code>(<code className="-tokenString">"Linus Torvalds"</code>, <code className="-tokenKeyConstant">4.2</code>)</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovel</code>(<code className="-tokenString">"Tokyo Ghoul"</code>, <code className="-tokenKeyConstant">2.0</code>),</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovel</code>(<code className="-tokenString">"KissXSis"</code>, <code className="-tokenKeyConstant">3.2</code>),</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovel</code>(<code className="-tokenString">"Dragon Ball"</code>, <code className="-tokenKeyConstant">5.2</code>),</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovel</code>(<code className="-tokenString">"Danielle"</code>, <code className="-tokenKeyConstant">3.2</code>),</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovel</code>(<code className="-tokenString">"Linus Torvalds"</code>, <code className="-tokenKeyConstant">4.2</code>)</code><br/>
                                                                     <code className="-nestedInnerCode">)</code></code><br/>
                                                                 );
                                                             </code>
                                                         </ul>
 
-                                                        <ul className="main-implementFullBlock--container">
-                                                        
-                                                            <p>- <code className="token_reservada">SEM</code> utilizar Streams temos que instânciar uma nova lista auxiliar, para ir adicionando elementos:</p>
-                                                            
+                                                        <p className="main-title--implementFullBlock">- <code className="token_reservada">SEM</code> utilizar Streams temos que instânciar uma nova lista auxiliar, para ir adicionando elementos:</p>
+                                                        <ul className="main-implementFullBlock--container">                         
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># 1 - Order LightNovels by title</span><br/>
-                                                                listOfLightNovels.<code className="-tokenMethod">sort</code>(<code className="-tokenClassEntity">Comparator</code><br/><code className="-nestedInnerCode">.<code className="-tokenMethod">comparing</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getTitle</code>));</code><br/><br/>
+                                                                listOfLightNovels.<code className="-tokenMethod">sort</code>(<code className="-tokenClassEntity">Comparator</code><br/><code className="-nestedInnerCode">.<code className="-tokenMethod">comparing</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getTitle</code>));</code><br/><br/>
                                                                 
                                                                 <span className="-tokenComment"># 2 - Retrieve the first 3 titles LightNovels with price less than &#60; 4.0</span><br/>
-                                                                <code className="-tokenClassEntity">List&#60;String&#62;</code> titlesList = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList&#60;&#62;</code>();<br/>
-                                                                <code className="-tokenKeyword">for</code> (<code className="-tokenClassEntity">LightNovelModel</code> novel : listOfLightNovels) &#123;<br/>
+                                                                <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">String</code>&#62; titlesList = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList</code>&#60;&#62;();<br/>
+                                                                <code className="-tokenKeyword">for</code> (<code className="-tokenClassEntity">LightNovel</code> novel : listOfLightNovels) &#123;<br/>
                                                                     <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code> (novel.<code className="-tokenMethod">getPrice</code>() &#60; <code className="-tokenKeyConstant">4</code>) &#123;</code><br/>
                                                                         <code className="-nestedInnerCode --2Identation">titlesList.<code className="-tokenMethod">add</code>(novel.<code className="-tokenMethod">getTitle</code>());</code><br/>
                                                                     <code className="-nestedInnerCode">&#125;</code><br/>
@@ -391,17 +387,15 @@ export default function ProjectsScreen() {
                                                             </code>
                                                         </ul>
 
-                                                        <ul className="main-implementFullBlock--container">
-                                                        
-                                                            <p>- <code className="token_reservada">UTILIZANDO</code> Streams, muito mais simples e coeso e sem precisar de listas auxiliares:</p>
-                                                            
+                                                        <p className="main-title--implementFullBlock">- <code className="token_reservada">UTILIZANDO</code> Streams, muito mais simples e coeso e sem precisar de listas auxiliares:</p>
+                                                        <ul className="main-implementFullBlock--container">                                                  
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># Equivale a toda operação anterior, porém em uma tacada</span><br/>
-                                                                <code className="-tokenClassEntity">List&#60;String&#62;</code> collectLightNovelsTitlesList = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
+                                                                <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">String</code>&#62; collectLightNovelsTitlesList = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(novel -&#62; novel.<code className="-tokenMethod">getPrice</code>() &#60; <code className="-tokenKeyConstant">4</code>)</code><br/>
-                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">sorted</code>(<code className="-tokenClassEntity">Comparator</code>.<code className="-tokenMethod">comparing</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getTitle</code>))</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">sorted</code>(<code className="-tokenClassEntity">Comparator</code>.<code className="-tokenMethod">comparing</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getTitle</code>))</code><br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">limit</code>(<code className="-tokenKeyConstant">3</code>)</code><br/>
-                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">map</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getTitle</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">map</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getTitle</code>)</code><br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod"><code className="-tokenMethod"></code>collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">toList</code>());</code><br/>
                                                                 <br/>
                                                                 <span className="-tokenComment"># Output `collectLightNovelsTitlesList`: [Danielle, KissXSis, Tokyo Ghoul]</span>    
@@ -410,13 +404,11 @@ export default function ProjectsScreen() {
                                                     </li>
                                                     <li>Operações de finding e matching (Busca por elementos): <code className="token_reservada">.findFirst()</code> que retorna o primeiro elemento do fluxo, ou seja, o head; <code className="token_reservada">.findAny()</code> que Retorna QUALQUER elemento da sequência (<code className="token_reservada">NÃO Determinístico</code>); <code className="token_reservada">.anyMatch(Predicate predicate)</code> Retorna true se PELOMENOS um elemento do fluxo atenda a condição imposta pelo predicado; <code className="token_reservada">.allMatch(Predicate predicate)</code> Retorna true se TODOS os elementos deste fluxo atenderem a condição imposta pelo predicado; <code className="token_reservada">.noneMatch(Predicate predicate)</code> Retorna true se NENHUM dos elementos do fluxo atenderem a condição imposta pelo predicado;
 
-                                                        <ul className="main-implementFullBlock--container">
-                                                            
-                                                            <p> - Fazendo match no fluxo que passar pela filtragem com retornos Optional (<code className="token_reservada">.findFirst()</code> e <code className="token_reservada">.findAny()</code>):</p>
-                                                            
+                                                        <p className="main-title--implementFullBlock"> - Fazendo match no fluxo que passar pela filtragem com retornos Optional (<code className="token_reservada">.findFirst()</code> e <code className="token_reservada">.findAny()</code>):</p>
+                                                        <ul className="main-implementFullBlock--container">                               
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># `findFirst()`: Retornando o primeiro elemento do fluxo (que passar pela filtragem)</span><br/>
-                                                                <code className="-tokenClassEntity">Optional&#60;Integer&#62;</code> firstEvenElement = <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">3</code>, <code className="-tokenKeyConstant">4</code>, <code className="-tokenKeyConstant">5</code>)<br/>
+                                                                <code className="-tokenClassEntity">Optional</code>&#60;<code className="-tokenClassEntity">Integer</code>&#62; firstEvenElement = <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">3</code>, <code className="-tokenKeyConstant">4</code>, <code className="-tokenKeyConstant">5</code>)<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(n -&#62; n % <code className="-tokenKeyConstant">2</code>)</code><br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">findFirst</code>();</code><br/>
                                                                     
@@ -429,7 +421,7 @@ export default function ProjectsScreen() {
                                                         <ul className="main-implementFullBlock--container">
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># `findAny()`: Retornando QUALQUER elemento (NÃO determinístico) do fluxo (que passar pela filtragem)</span><br/>
-                                                                <code className="-tokenClassEntity">Optional&#60;Integer&#62;</code> anyEvenElement = <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">3</code>, <code className="-tokenKeyConstant">4</code>, <code className="-tokenKeyConstant">5</code>)<br/>
+                                                                <code className="-tokenClassEntity">Optional</code>&#60;<code className="-tokenClassEntity">Integer</code>&#62; anyEvenElement = <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">3</code>, <code className="-tokenKeyConstant">4</code>, <code className="-tokenKeyConstant">5</code>)<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(n -&#62; n % <code className="-tokenKeyConstant">2</code>)</code><br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">findAny</code>();</code><br/>
                                                                     
@@ -440,10 +432,8 @@ export default function ProjectsScreen() {
                                                         </ul>
 
                                                         <br/>
-                                                        <ul className="main-implementFullBlock--container">
-                                                            
-                                                            <p> - Fazendo match no fluxo inteiro (Sem pré-filtragens) e com retornos booleanos (<code className="token_reservada">.anyMatch()</code>, <code className="token_reservada">.allMatch()</code>, e <code className="token_reservada">.noneMatch()</code>):</p>
-                                                            
+                                                        <p className="main-title--implementFullBlock"> - Fazendo match no fluxo inteiro (Sem pré-filtragens) e com retornos booleanos (<code className="token_reservada">.anyMatch()</code>, <code className="token_reservada">.allMatch()</code>, e <code className="token_reservada">.noneMatch()</code>):</p>
+                                                        <ul className="main-implementFullBlock--container">                       
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># `anyMatch()`: Retorna true se PELOMENOS UM elemento faz match no predicado</span><br/>
                                                                 <code className="-tokenKeyword">boolean</code> anyMatch_bool = <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"apple"</code>, <code className="-tokenString">"banana"</code>, <code className="-tokenString">"cherry"</code>, <code className="-tokenString">"date"</code>)<br/>
@@ -476,12 +466,11 @@ export default function ProjectsScreen() {
 
                                                     </li>
                                                     <li>Operações de redução com <code className="token_reservada">.reduce(BinaryOperator&#60;T&#62; accumulator)</code>: Aplicando regras que transformam o fluxo todo de elementos em apenas um elemento no final, utilizando operação associativa neles, operações associativas na matematica são operações nas quais os resultados devem ser os mesmos independentemente da ordem na qual esses dois elementos (Operandos) são processados, esse conceito é aplicado pelo Interface BinaryOperator&#60;T&#62; que é o parâmetro do método de redução em questão, esse conceito é importante pois a implementação em baixo nível dessa operação aplica as regras no elemento corrente e no elemento anterior, porisso essa ordem dita nas operações associativas é relevante, pois independentemente da ordem dos dois elementos (Operandos) em operação NÃO devem alterar resultado final, eles devem ser o mesmo (Estilo a famosa frase "A ordem dos fatores (Operandos) não altera o produto (Resultado)", NÃO levar ao pé da letra isso pois se aplicar em strings a ordem altera sim o produto rsrs), essas regras são aplicadas somente a operações de somas e multiplicações pois essas operações são associativas;
+                                                        
+                                                        <p className="main-title--implementFullBlock"> - Somando todos elementos entre si (acumulando a soma+=) <code className="-token_reservada">COM</code> a sobrecarga do <code className="token_reservada">identity</code> (Esse parâmetro indica o valor inicial que apartir dele será acumulado) e <code className="token_reservada">SEM</code>, a seguinte lista é utilizado em todas operações:</p>
                                                         <ul className="main-implementFullBlock--container">
-                                                            
-                                                            <p> - Somando todos elementos entre si (acumulando a soma+=) <code className="-token_reservada">COM</code> a sobrecarga do <code className="token_reservada">identity</code> (Esse parâmetro indica o valor inicial que apartir dele será acumulado) e <code className="token_reservada">SEM</code>, a seguinte lista é utilizado em todas operações:</p>
-                                                            
                                                             <code className="implementFullBlock">
-                                                                <code className="-tokenClassEntity">List&#60;Integer&#62;</code> numbersList = <code className="-tokenClassEntity">Arrays</code>.<code className="-tokenMethod">asList</code>(<code className="-tokenKeyConstant">1</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">3</code>, <code className="-tokenKeyConstant">4</code>, <code className="-tokenKeyConstant">5</code>);<br/>
+                                                                <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">Integer</code>&#62; numbersList = <code className="-tokenClassEntity">Arrays</code>.<code className="-tokenMethod">asList</code>(<code className="-tokenKeyConstant">1</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">3</code>, <code className="-tokenKeyConstant">4</code>, <code className="-tokenKeyConstant">5</code>);<br/>
                                                             </code>
                                                         </ul>
                                                         <ul className="main-implementFullBlock--container">
@@ -496,7 +485,7 @@ export default function ProjectsScreen() {
                                                         <ul className="main-implementFullBlock--container">
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># Com method reference e sem a sobrecarga do identity, o retorno será Optional do Wrapper</span><br/>
-                                                                <code className="-tokenClassEntity">Optional&#60;Integer&#62;</code> sum_opt_integer = numbersList.<code className="-tokenMethod">stream</code>()<br/>
+                                                                <code className="-tokenClassEntity">Optional</code>&#60;<code className="-tokenClassEntity">Integer</code>&#62; sum_opt_integer = numbersList.<code className="-tokenMethod">stream</code>()<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">reduce</code>(<code className="-tokenClassEntity">Integer</code>::<code className="-tokenMethod">sum</code>);</code><br/>
                                                                 <br/>
                                                                 <span className="-tokenComment"># Output `sum_opt_integer`: Optional[15]</span>
@@ -514,28 +503,25 @@ export default function ProjectsScreen() {
                                                     
                                                     </li>
                                                     <li>Streams especializados para trabalhar com tipos primitivos numéricos, evita <code className="token_reservada">problemas de boxing e unboxing dos Wrappers</code>, ganhando mais performance, utilizando a transformação com o método <code className="token_reservada">.mapToDouble(ClassEntity::getDoubleAttribute)</code> apartir da Stream genérica: Também abordamos o problema dos Wrappers dos Tipos primitivos sobre encapsular e desencapsular a cada iteração, alocando e re-alocando memória quando utilizado o Stream genérico (<code className="outputResult">Stream&#60;Double&#62;</code>), tornando esse processo computacionalmente custoso, então é utilizado as classes especializadas para trabalhar com fluxos de dados relacionados aos Tipos primitivos e Wrappers deles (Exemplo: <code className="outputResult">DoubleStream</code>) que evitam esse problema, sendo eles: <code className="token_reservada">IntStream</code>, <code className="token_reservada">DoubleStream</code>, e <code className="token_reservada">LongStream</code>;
-                                                         <ul className="main-implementFullBlock--container">
-                                                            
-                                                            <p> - Computacionalmente CUSTOSO: SEM o Stream especializado, que ocorre o problema dos Wrappers sobre boxing e unboxing: </p>
-                                                            
+                                                        
+                                                        <p className="main-title--implementFullBlock"> - Computacionalmente CUSTOSO: SEM o Stream especializado, que ocorre o problema dos Wrappers sobre boxing e unboxing: </p>
+                                                        <ul className="main-implementFullBlock--container">      
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># SEM Stream especializado o retorno será um Optional:</span><br/>
-                                                                <code className="-tokenClassEntity">Optional&#60;Double&#62;</code> sum_opt_double = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
+                                                                <code className="-tokenClassEntity">Optional</code>&#60;<code className="-tokenClassEntity">Double</code>&#62; sum_opt_double = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(novel -&#62; novel.<code className="-tokenMethod">getPrice</code>() &#62; <code className="-tokenKeyConstant">3</code>)</code><br/>
-                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">map</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getPrice</code>)<span className="-tokenComment">// Stream&#60;Double&#62; (Problema)</span></code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">map</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>)<span className="-tokenComment">// Stream&#60;Double&#62; (Problema)</span></code><br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">reduce</code>(<code className="-tokenClassEntity">Double</code>::<code className="-tokenMethod">sum</code>);</code><br/>
                                                                 <br/>
                                                                 <span className="-tokenComment"># Output `sum_opt_double`: Optional[15.8]</span>
                                                             </code>
                                                         </ul>
-                                                        <ul className="main-implementFullBlock--container">
-                                                            
-                                                            <p> - SOLUÇÃO: Stream especializado, evita problema de Boxing e Unboxing dos Wrappers: </p>
-                                                            
+                                                        <p className="main-title--implementFullBlock"> - SOLUÇÃO: Stream especializado, evita problema de Boxing e Unboxing dos Wrappers: </p>
+                                                        <ul className="main-implementFullBlock--container">                 
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># COM Stream especializado o retorno será o tipo primitivo comum:</span><br/>
                                                                 <code className="-tokenKeyword">double</code> sum_native_double = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
-                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">mapToDouble</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getPrice</code>)<span className="-tokenComment">// DoubleStream (Solução)</span></code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">mapToDouble</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>)<span className="-tokenComment">// DoubleStream (Solução)</span></code><br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(novel_price -&#62; novel_price &#62; <code className="-tokenKeyConstant">3</code>)<span className="-tokenComment">// descartou o obj, então não executamos .getPrice()</span></code><br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">sum</code>();<span className="-tokenComment">// já temos apenas o atributo price no fluxo, logo, não precisamos do `.reduce()`</span></code><br/>
                                                                 <br/>
@@ -544,14 +530,13 @@ export default function ProjectsScreen() {
                                                         </ul>                                                
                                                     </li>
                                                     <li>Sobre o ponto anterior, também é possível fazer o processo <code className="token_reservada">reverso/inverso</code> e re-encapsular o Stream especializado (<code className="outputResult">DoubleStream</code>) retornando uma Stream genérica do mesmo (<code className="outputResult">Stream&#60;Double&#62;</code>) utilizando o método <code className="token_reservada">.boxed()</code>, Util quando as próximas operações (métodos) do fluxo espera no contexto dele Objetos ao invés de primitivos comuns;
+                                                       
+                                                        <p className="main-title--implementFullBlock"> - Convertendo DoubleStream (Streams Especializados) para Stream&#60;Double&#62; (Genérico) quando o contexto seguinte do fluxo espera um Objeto Wrapper ao invés do primitivo, neste caso o passo <code className="token_reservada">.collect(Collector.toList())</code> espera receber Objetos ao invés de primitivos comuns: </p>
                                                         <ul className="main-implementFullBlock--container">
-                                                            
-                                                            <p> - Convertendo DoubleStream (Streams Especializados) para Stream&#60;Double&#62; (Genérico) quando o contexto seguinte do fluxo espera um Objeto Wrapper ao invés do primitivo, neste caso o passo <code className="token_reservada">.collect(Collector.toList())</code> espera receber Objetos ao invés de primitivos comuns: </p>
-                                                            
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># Exemplo: Para executar o coletor que retorna uma List (Espera-se objetos):</span><br/>
-                                                                <code className="-tokenClassEntity">List&#60;Double&#62;</code> listOfPricesGreatThan3 = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
-                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">mapToDouble</code>(<code className="-tokenClassEntity">LightNovelModel</code>::<code className="-tokenMethod">getPrice</code>)<span className="-tokenComment">// DoubleStream </span></code><br/>
+                                                                <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">Double</code>&#62; listOfPricesGreatThan3 = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">mapToDouble</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>)<span className="-tokenComment">// DoubleStream </span></code><br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">filter</code>(novel_price -&#62; novel_price &#62; <code className="-tokenKeyConstant">3</code>)<span className="-tokenComment">// descartou o obj, então não executamos .getPrice()</span></code><br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">boxed</code>();<span className="-tokenComment">// encapsula o primitivo em wrapper novamente</span></code><br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors.<code className="-tokenMethod">toList</code>()</code>);<span className="-tokenComment">// contexto que espera Objetos ao invés de primitivos</span></code><br/>
@@ -561,10 +546,9 @@ export default function ProjectsScreen() {
                                                         </ul>
                                                     </li>
                                                     <li>Gerando fluxos Streams apartir das classes Streams especializadas ditas anteriormente: Também é possivel realizar essa operação utilizando os Streams especializados com o método estático <code className="token_reservada">IntStream.range(inicio, final)</code>; Para gerar o alfabéto com Stream de chars, existe uma macete utilizando mapeamento da tabela ASCII relacionada ao Inteiro gerado apartir do mesmo método anterior, mais detalhes no módulo especifico com maiores detalhes; Para gerar Streams de qualquer outro Objeto <code className="token_reservada">Stream.of("Wellison","wesley", "Irineu", "InemEu")</code>; Para gerar Streams apartir de arrays nativos <code className="token_reservada">Arrays.stream(new int[]&#123;1, 2, 3, 4, 5&#125;)</code>; Para gerar Streams apartir de arquivos, lendo linha a linha, ou lendo palavra por palavra <code className="token_reservada">Stream&#60;String&#62; lines = Files.lines(Paths.get("/home"))</code>;
-                                                        <ul className="main-implementFullBlock--container">
-                                                            
-                                                            <p> - Gerando Streams de valores Inteiros: </p>
-                                                            
+                                                        
+                                                        <p className="main-title--implementFullBlock"> - Gerando Streams de valores Inteiros: </p>
+                                                        <ul className="main-implementFullBlock--container">                                                            
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment">#`.range()` considera do inicio até final - 1 (Ou seja, não incluí o número final do range):</span><br/>
                                                                 <code className="-tokenClassEntity">IntStream</code>.<code className="-tokenMethod">range</code>(<code className="-tokenKeyConstant">0</code>, <code className="-tokenKeyConstant">21</code>)<span className="-tokenComment">// de 0 a 20 </span><br/>
@@ -584,11 +568,8 @@ export default function ProjectsScreen() {
                                                                 <span className="-tokenComment"># Output: 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, &#60;- considerou o range até o final passado no argumento</span>
                                                             </code>
                                                         </ul>
-
-                                                        <ul className="main-implementFullBlock--container">
-                                                            
-                                                            <p> - Gerando Streams de valores Strings (Ou qualquer outro Objeto): </p>
-                                                            
+                                                        <p className="main-title--implementFullBlock"> - Gerando Streams de valores Strings (Ou qualquer outro Objeto): </p>
+                                                        <ul className="main-implementFullBlock--container">                                                            
                                                             <code className="implementFullBlock">
                                                                 <span className="-tokenComment"># Gerando Streams de qualquer Objeto</span><br/>
                                                                 <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"Wellison"</code>, <code className="-tokenString">"wesley"</code>, <code className="-tokenString">"Irineu"</code>, <code className="-tokenString">"InemEu"</code>);<br/>
@@ -605,26 +586,21 @@ export default function ProjectsScreen() {
                                                             </code>
                                                         </ul>
 
+                                                        <p className="main-title--implementFullBlock"> - Gerando Streams apartir de Arrays nativos: </p>
                                                         <ul className="main-implementFullBlock--container">
-                                                            
-                                                            <p> - Gerando Streams apartir de Arrays nativos: </p>
-                                                            
                                                             <code className="implementFullBlock">
                                                                 <code className="-tokenKeyword">int</code>[] numbersArrayNativo = &#123;<code className="-tokenKeyConstant">1</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">3</code>, <code className="-tokenKeyConstant">4</code>, <code className="-tokenKeyConstant">5</code>&#125;;<br/>
-                                                                <code className="-tokenClassEntity">Optional&#60;Double&#62;</code> avg_double_opt = <code className="-tokenClassEntity">Arrays</code>.<code className="-tokenMethod">stream</code>(numbersArrayNativo)<br/>
+                                                                <code className="-tokenClassEntity">Optional</code>&#60;<code className="-tokenClassEntity">Double</code>&#62; avg_double_opt = <code className="-tokenClassEntity">Arrays</code>.<code className="-tokenMethod">stream</code>(numbersArrayNativo)<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">average</code>();</code><br/>
                                                                 
                                                                 <br/>
                                                                 <span className="-tokenComment"># Output `avg_double_opt`: Optional[3.5]</span>
                                                             </code>
                                                         </ul>
-
-                                                        <ul className="main-implementFullBlock--container">
-                                                            
-                                                            <p> - Gerando Streams apartir de conteúdos de arquivos: </p>
-                                                            
+                                                        <p className="main-title--implementFullBlock"> - Gerando Streams apartir de conteúdos de arquivos: </p>
+                                                        <ul className="main-implementFullBlock--container">                                                            
                                                             <code className="implementFullBlock">
-                                                               <code className="-tokenKeyword">try</code>(<code className="-tokenClassEntity">Stream&#60;String&#62;</code> lines = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">lines</code>(<code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/arquivo.txt"</code>))) &#123;<br/>
+                                                               <code className="-tokenKeyword">try</code>(<code className="-tokenClassEntity">Stream</code>&#60;<code className="-tokenClassEntity">String</code>&#62; lines = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">lines</code>(<code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/arquivo.txt"</code>))) &#123;<br/>
                                                                     <code className="-nestedInnerCode">lines.<code className="-tokenMethod">filter</code>(line -&#62; line.<code className="-tokenMethod">startsWith</code>(<code className="-tokenString">"R"</code>))</code><br/>
                                                                         <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">forEach</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>);</code><br/>
                                                                 &#125; <code className="-tokenKeyword">catch</code> (<code className="-tokenClassEntity">IOException</code> ex) &#123;<br/>
@@ -640,10 +616,9 @@ export default function ProjectsScreen() {
                                                         </ul>
                                                     </li>
                                                     <li>Gerando fluxos Streams infinitos, em exemplo implementamos a sequência de Fibonacci, com <code className="token_reservada">Stream.iterate(new int[]&#123;0, 1&#125;, n -&#62; new int[]&#123;n[1], n[0] + n[1]&#125;).limit(10)</code>; Obs: Devemos utilizar o <code className="token_reservada">.limit(10)</code> pois se não iria ficar eternamente;
-                                                        <ul className="main-implementFullBlock--container">
-                                                            
-                                                            <p> - Gerando Streams infinitos, 10 primiros da sequência de Fibonacci: </p>
-                                                            
+                                                        
+                                                        <p className="main-title--implementFullBlock"> - Gerando Streams infinitos, 10 primiros da sequência de Fibonacci: </p>
+                                                        <ul className="main-implementFullBlock--container">                                                            
                                                             <code className="implementFullBlock">
                                                                 <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">iterate</code>(<code className="-tokenKeyword">new int</code>[]&#123;<code className="-tokenKeyConstant">0</code>, <code className="-tokenKeyConstant">1</code>&#125;, n -&#62; <code className="-tokenKeyword">new int</code>[]&#123;n[<code className="-tokenKeyConstant">1</code>], n[<code className="-tokenKeyConstant">0</code>] + n[<code className="-tokenKeyConstant">1</code>]&#125;)<br/>
                                                                     <code className="-nestedInnerCode">.<code className="-tokenMethod">limit</code>(<code className="-tokenKeyConstant">10</code>)</code><br/>
@@ -668,17 +643,423 @@ export default function ProjectsScreen() {
                                                     </li>
                                                     <br/>
                                                     <li>Operações finais com o Framework Collectors que define uma serie de métodos estáticos para coletar os elementos do fluxo Stream retornando eles em coleções, listas, mapas, além disto, ele também fornece métodos de Agrupamentos (Mesma lógica dos agrupamentos em DB SQL GROUP BY), aonde conseguimos agrupar elementos em mapas de acordo com algum critério e realizar também funções de agregação (Min, Max, AVG, Count, Sum) em cima dos grupos gerados, o retorno será um mapa aonde a chave é o critéro do agrupamento e o valor são os elementos que fazem match neste critério:</li>
-                                                    <li>Gerando resumos (Sumários) retornando em apenas um Objeto o resultado de todas funções de agregação de uma só vez com o método `listOfLightNovels.stream()<br/>.collect(Collectors.summarizingDouble(LightNovelModel::getPrice));`, neste contexto estamos gerando o resumo do atributo preço dos novels, o retorno será o Objeto `DoubleSummaryStatistics&#123;count=5, sum=17,800000, min=2,000000, average=3,560000, max=5,200000&#125;`, as informações retiradas aqui são: Existem 5 elementos ao total no fluxo; A soma total entre eles é igual a R$17,80; O novel mais barato custa R$2,00; A média entre todos os preços de todos elementos do fluxo é igual a R$3,56; O novel mais caro custa R$5,20;</li>
-                                                    <li>Obs sobre o ponto anterior summarizing: Podemos também realizar cada uma dessas funções de agregação isoladamente (Min, Max, AVG, Count, Sum), e para isto existem duas sintaxes diferentes que geram o mesmo resultado, uma utilizando o Framework Collectors e outra utilizando os métodos prontos dos próprios Streams: </li>
-                                                    <li>Aplicando a função de agregação `Min` (Minimo) em isolado: SEM Collectors: `listOfLightNovels.stream()<br/>.min(Comparator.comparing(LightNovelModel::getPrice))<br/>.ifPresent(System.out::println);`, COM Collectors: `listOfLightNovels.stream()<br/>.collect(Collectors.minBy(Comparator.comparing(LightNovelModel::getPrice)))<br/>.ifPresent(System.out::println);`, O Resultado gerado pelas duas operações será `LightNovelModel&#123;title='Tokyo Ghoul', price=2.0&#125;`;</li>
-                                                    <li>Aplicando a função de agregação `Max` (Máximo) em isolado: SEM Collectors: `listOfLightNovels.stream()<br/>.max(Comparator.comparing(LightNovelModel::getPrice))<br/>.ifPresent(System.out::println);`, COM Collectors: `listOfLightNovels.stream()<br/>.collect(Collectors.maxBy(Comparator.comparing(LightNovelModel::getPrice)))<br/>.ifPresent(System.out::println);`, O Resultado gerado pelas duas operações será `LightNovelModel&#123;title='Dragon Ball', price=5.2&#125;`;</li>
-                                                    <li>Aplicando a função de agregação `AVG (Average, Média)` em isolado: SEM Collectors: `listOfLightNovels.stream()<br/>.mapToDouble(LightNovelModel::getPrice).average()<br/>.ifPresent(System.out::println);`, COM Collectors: `listOfLightNovels.stream()<br/>.collect(Collectors.averagingDouble(LightNovelModel::getPrice));`, O Resultado gerado pelas duas operações será `3.56`; Obs: podemos notar que por se tratar de uma operação que será aplicada em um valor primitivo para cada elemento do fluxo, para assim gerar a média dos valores dos atributos Double deles, é utilizado o Stream especializado em valores Double gerado no passo `.mapToDouble(LightNovelModel::getPrice)` da primeira operação aqui descrita SEM Collectors, isto é feito para evitar o problema de boxing e unboxing dos Wrappers;</li>
-                                                    <li>Aplicando a função de agregação `Count` (Contagem de ocorrências) em isolado: SEM Collectors: `listOfLightNovels.stream().count();`, COM Collectors: `listOfLightNovels.stream()<br/>.collect(Collectors.counting());`, O Resultado gerado pelas duas operações será `5`;</li>
-                                                    <li>Aplicando a função de agregação `Sum` (Soma elemento a elemento) em isolado: SEM Collectors: `listOfLightNovels.stream()<br/>.mapToDouble(LightNovelModel::getPrice).sum();`, COM Collectors: `listOfLightNovels.stream()<br/>.collect(Collectors.summingDouble(LightNovelModel::getPrice));`, O Resultado gerado pelas duas operações seŕa `17.8`;</li>
+                                                    <li>Gerando resumos (Sumários) retornando em apenas um Objeto o resultado de todas funções de agregação de uma só vez com o método <code className="token_reservada">.collect(Collectors.{window.screen.width <= 425 ? <br/> : ""}summarizingDouble(Class::getDoubleAttribute))</code>, neste contexto estamos gerando o resumo do atributo preço dos novels, o retorno será o Objeto <code className="outputResult">DoubleSummaryStatistics&#123;count=5, sum=17,800000, min=2,000000, average=3,560000, max=5,200000&#125;</code>, as informações retiradas aqui são: Existem 5 elementos ao total no fluxo; A soma total entre eles é igual a R$17,80; O novel mais barato custa R$2,00; A média entre todos os preços de todos elementos do fluxo é igual a R$3,56; O novel mais caro custa R$5,20;
+                                                        
+                                                        <p className="main-title--implementFullBlock"> - Gerando resumos de LightNovels em um fluxo Stream com Collectors: </p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                                <code className="-tokenClassEntity">DoubleSummaryStatistics</code> sumario = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>                                                                    
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.{window.screen.width <= 425 ? <br/> : ""}<code className="-tokenMethod">summarizingDouble</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>));</code><br/>
+                                                                    
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output `sumario`: DoubleSummaryStatistics&#123;count=5, sum=17,800000, min=2,000000, average=3,560000, max=5,200000&#125;</span>
+                                                            </code>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Obs sobre o ponto anterior summarizing: Podemos também realizar cada uma dessas funções de agregação isoladamente (Min, Max, AVG, Count, Sum), e para isto existem duas sintaxes diferentes que geram o mesmo resultado (Para todos o retorno será encapsulado em um Objeto Optional), uma utilizando o Framework Collectors e outra utilizando os métodos prontos dos próprios Streams: </li>
+                                                    <li>Aplicando a função de agregação <code className="token_reservada">Min</code> (Minimo) em isolado: O Resultado gerado pelas duas operações abaixo será <code className="outputResult">LightNovel&#123;title='Tokyo Ghoul', price=2.0&#125;</code> encapsulado em um objeto Optional;
+                                                        
+                                                        <p className="main-title--implementFullBlock"> - Aplicando a função de agregação <code className="token_reservada">Min</code> no fluxo de LightNovels <code className="token_reservada">SEM</code> Collectors: </p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                                listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>                                                                    
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">min</code>(<code className="-tokenClassEntity">Comparator</code>.<code className="-tokenMethod">comparing</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>))</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">ifPresent</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>);</code><br/>
+
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output: LightNovel&#123;title='Tokyo Ghoul', price=2.0&#125;</span>
+                                                            </code>
+                                                        </ul>
+                                                        <p className="main-title--implementFullBlock"> - Aplicando a função de agregação <code className="token_reservada">Min</code> no fluxo de LightNovels <code className="token_reservada">COM</code> Collectors: </p>
+                                                        <ul className="main-implementFullBlock--container">                                                            
+                                                            <code className="implementFullBlock">
+                                                                listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>                                                                    
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">minBy</code>(<code className="-tokenClassEntity">Comparator</code>.{window.screen.width <= 425 ? <br/> : ""}<code className="-tokenMethod">comparing</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>)))</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">ifPresent</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>);</code><br/>
+
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output: LightNovel&#123;title='Tokyo Ghoul', price=2.0&#125;</span>
+                                                            </code>
+                                                        </ul>        
+                                                    </li>
+                                                    <li>Aplicando a função de agregação <code className="token_reservada">Max</code> (Máximo) em isolado: O Resultado gerado pelas duas operações abaixo será <code className="outputResult">LightNovel&#123;title='Dragon Ball', price=5.2&#125;</code> encapsulado em um objeto Optional;
+
+                                                        <p className="main-title--implementFullBlock"> - Aplicando a função de agregação <code className="token_reservada">Max</code> no fluxo de LightNovels <code className="token_reservada">SEM</code> Collectors: </p>
+                                                        <ul className="main-implementFullBlock--container">                              
+                                                            <code className="implementFullBlock">
+                                                                listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>                                                                    
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">max</code>(<code className="-tokenClassEntity">Comparator</code>.<code className="-tokenMethod">comparing</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>))</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">ifPresent</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>);</code><br/>
+
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output: LightNovel&#123;title='Dragon Ball', price=5.2&#125;</span>
+                                                            </code>
+                                                        </ul>
+                                                        <p className="main-title--implementFullBlock"> - Aplicando a função de agregação <code className="token_reservada">Max</code> no fluxo de LightNovels <code className="token_reservada">COM</code> Collectors: </p>
+                                                        <ul className="main-implementFullBlock--container">                                                                                       
+                                                            <code className="implementFullBlock">
+                                                                listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>                                                                    
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">maxBy</code>(<code className="-tokenClassEntity">Comparator</code>.{window.screen.width <= 425 ? <br/> : ""}<code className="-tokenMethod">comparing</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>)))</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">ifPresent</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>);</code><br/>
+
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output: LightNovel&#123;title='Dragon Ball', price=5.2&#125;</span>
+                                                            </code>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Aplicando a função de agregação <code className="token_reservada">AVG</code> (Average, Média) em isolado: 
+                                                      
+                                                        O Resultado gerado pelas duas operações abaixo será <code className="outputResult">3.56</code>, com a difereça de que SEM Collectors o retorno será encapsulado em um objeto Optional, e COM Collectors o retorno será o Wrapper comum; 
+                                                        Obs: podemos notar que por se tratar de uma operação que será aplicada em um valor primitivo para cada elemento do fluxo, para assim gerar a média dos valores dos atributos Double deles, é utilizado o Stream especializado em valores Double gerado no passo <code className="token_reservada">.mapToDouble(LightNovel::getPrice)</code> da primeira operação aqui descrita <code className="token_reservada">SEM</code> Collectors, isto é feito para evitar o <code className="token_reservada">problema de boxing e unboxing dos Wrappers</code>;
+                                                        
+                                                        <p className="main-title--implementFullBlock"> - Aplicando a função de agregação <code className="token_reservada">AVG</code> no fluxo de LightNovels <code className="token_reservada">SEM</code> Collectors (Retorno será encapsulado em um objeto Optional): </p>
+                                                        <ul className="main-implementFullBlock--container">                                         
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># O Retorno deste será encapsulado em um objeto Optional</span><br/>   
+                                                                listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">mapToDouble</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">average</code>()</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">ifPresent</code>(<code className="-tokenClassEntity">System</code>.out::<code className="-tokenMethod">println</code>);</code><br/>
+
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output: Optional[3.56]</span>
+                                                            </code>
+                                                        </ul>
+                                                        <p className="main-title--implementFullBlock"> - Aplicando a função de agregação <code className="token_reservada">AVG</code> no fluxo de LightNovels <code className="token_reservada">COM</code> Collectors (Retorno será um Wrapper comum, SEM encapsular no objeto Optional): </p>
+                                                        <ul className="main-implementFullBlock--container">                                                            
+                                                            <code className="implementFullBlock">
+                                                                <code className="-tokenClassEntity">Double</code> avgWithCollectors_wrapper = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>                                                                    
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.{window.screen.width <= 425 ? <br/> : ""}<code className="-tokenMethod">averagingDouble</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>));</code><br/>
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output `avgWithCollectors_wrapper`: Wrapper[3.56]</span>
+                                                            </code>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Aplicando a função de agregação <code className="token_reservada">Count</code> (Contagem de ocorrências) em isolado: 
+                                                        O Resultado gerado pelas duas operações abaixo será <code className="outputResult">5</code>, com a difereça de que SEM Collectors o retorno será do tipo primitivo nativo, e COM Collectors o retorno será o Wrapper;
+                                                        
+                                                        <p className="main-title--implementFullBlock"> - Aplicando a função de agregação <code className="token_reservada">Count</code> no fluxo de LightNovels <code className="token_reservada">SEM</code> Collectors (Retorno será do tipo primitivo nativo): </p>
+                                                        <ul className="main-implementFullBlock--container">   
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># O Retorno deste será do tipo primitivo nativo</span><br/>   
+                                                                <code className="-tokenKeyword">long</code> count_long_native = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">count</code>();</code><br/>
+                                                                
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output `count_long_native`: 5</span>
+                                                            </code>
+                                                        </ul>
+                                                        <p className="main-title--implementFullBlock"> - Aplicando a função de agregação <code className="token_reservada">Count</code> no fluxo de LightNovels <code className="token_reservada">COM</code> Collectors (Retorno será um Wrapper): </p>
+                                                        <ul className="main-implementFullBlock--container">          
+                                                            <code className="implementFullBlock">
+                                                                <code className="-tokenClassEntity">Long</code> count_long_wrapper = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>                                                                    
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">counting</code>());</code><br/>
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output `count_long_wrapper`: Wrapper[5]</span>
+                                                            </code>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Aplicando a função de agregação <code className="token_reservada">Sum</code> (Soma elemento a elemento) em isolado: 
+                                                        O Resultado gerado pelas duas operações abaixo seŕa <code className="outputResult">17.8</code>, com a difereça de que SEM Collectors o retorno será do tipo primitivo nativo, e devido ao mapeamento <code className="token_reservada">.mapToDouble()</code> que retorna um fluxo de Stream Especilizado <code className="token_reservada">evita problemas dos Wrappers sobre boxing e unboxing</code>, e COM Collectors o retorno será o Wrapper (Ocorrendo assim o problema descrito anteriormente);
+                                                        
+                                                        <p className="main-title--implementFullBlock"> - Aplicando a função de agregação <code className="token_reservada">Sum</code> no fluxo de LightNovels <code className="token_reservada">SEM</code> Collectors (Retorno será do tipo primitivo nativo): </p>
+                                                        <ul className="main-implementFullBlock--container">  
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># O Retorno deste será do tipo primitivo nativo.<br/># Pois utilizamos os Streams especializados, <br/>evitando problema de boxing e unboxing dos Wrappers</span><br/>   
+                                                                <code className="-tokenKeyword">double</code> sum_double_native = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">mapToDouble</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">sum</code>();</code><br/>
+                                                                
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output `sum_double_native`: 17.8</span>
+                                                            </code>
+                                                        </ul>
+                                                        <p className="main-title--implementFullBlock"> - Aplicando a função de agregação <code className="token_reservada">Sum</code> no fluxo de LightNovels <code className="token_reservada">COM</code> Collectors (Retorno será um Wrapper): </p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            
+                                                            
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># Menos performatico devido ao problema dos Wrappers (Boxing e Unboxing)</span><br/>
+                                                                <code className="-tokenClassEntity">Double</code> sum_double_wrapper = listOfLightNovels.<code className="-tokenMethod">stream</code>()<br/>                                                                    
+                                                                    <code className="-nestedInnerCode">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.{window.screen.width <= 425 ? <br/> : ""}<code className="-tokenMethod">summingDouble</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>));</code><br/>
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output `sum_double_wrapper`: Wrapper[17.8]</span>
+                                                            </code>
+                                                        </ul>
+                                                    
+                                                    </li>
                                                     <br/>
-                                                    <li>Agrupando elementos do fluxo de acordo com algum atributo do Objeto elemento (Enum), retornando um mapa aonde a chave é o Enumerador e o valor é uma lista de elementos que possuem esse Enumerador co-relacionados: <code className="token_reservada">listOfLightNovels.stream()<br/>.collect(Collectors.groupingBy(LightNovelModel::getCategory));</code>, <br/><br/>O Resultado gerado desta operação será: <br/><br/><code className="outputResult">`&#123;<code className="token_reservada">ADVENTURE</code>=[LightNovelModel&#123;title='Welzika', price=4.2, category=ADVENTURE&#125;], <br/><code className="token_reservada">FANTASY</code>=[LightNovelModel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;, LightNovelModel&#123;title='Dragon Ball', price=5.2, category=FANTASY&#125;], <br/><code className="token_reservada">ECCHI</code>=[LightNovelModel&#123;title='KissXSis', price=3.2, category=ECCHI&#125;], <br/><code className="token_reservada">DRAMA</code>=[LightNovelModel&#123;title='Danielle', price=3.2, category=DRAMA&#125;]&#125;`</code></li>
-                                                    <li>Agrupando elementos do fluxo de acordo com regras personalizadas na chamada, em exemplo iremos agrupar os novels de acordo com promoção ou não (Se o price dele for menor que 3.0 então `PromotionEnum.UNDER_PROMOTION`, se for maior então `PromotionEnum.NORMAL_PRICE`), Ou seja, o resultado gerado será <code className="outputResult">`Map&#60;PromotionEnum, List&#60;LightNovelModel&#62;&#62;`</code>: <code className="token_reservada">listOfLightNovels.stream()<br/>.collect(Collectors.groupingBy(novel -&#62; novel.getPrice() &#62; 3 ? PromotionEnum.UNDER_PROMOTION : PromotionEnum.NORMAL_PRICE));</code>, <br/><br/>O Resultado gerado desta operação será: <br/><br/><code className="outputResult">`&#123;<code className="token_reservada">UNDER_PROMOTION</code>=[LightNovelModel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;], <br/><code className="token_reservada">NORMAL_PRICE</code>=[LightNovelModel&#123;title='KissXKiss', price=3.2, category=ECCHI&#125;, LightNovelModel&#123;title='Dragon Ball', price=5.2, category=FANTASY&#125;, LightNovelModel&#123;title='Danielle', price=3.2, category=DRAMA&#125;, LightNovelModel&#123;title='Welzika', price=4.2, category=ADVENTURE&#125;]&#125;`</code></li>
-                                                    <li>Agrupamento mais complexo, agrupamentos aninhados, ou seja, agrupamentos de agrupamentos, neste contexto iremos realizar a junção dos dois agrupamentos anteriores, com a chave do mapa sendo a categoria e o valor é outro mapa aninhado contendo o mesmo agrupamento anteior (promoção), ou seja, agrupando os elementos do fluxo com regras personalizadas na chamada (Se o price dele for menor que 3.0 então `PromotionEnum.UNDER_PROMOTION`, se for maior então `PromotionEnum.NORMAL_PRICE`) e depois realiza outro agrupamento separando os elementos agrupados anteriormente por promoção, agora agrupa também por categoria, então por fim teremos os elementos agrupados por categoria e o valor é a lista de novels agrupados por promoções, Ou seja, o resultado gerado será <code className="outputResult">`Map&#60;CategoryEnum, Map&#60;PromotionEnum, List&#60;LightNovelModel&#62;&#62;`</code>: <code className="token_reservada">listOfLightNovels.stream()<br/>.collect(Collectors.groupingBy(LightNovelModel::getCategory, Collectors.groupingBy(novel -&#62; novel.getPrice() &#62; 3 ? PromotionEnum.UNDER_PROMOTION : PromotionEnum.NORMAL_PRICE)));</code>, <br/><br/>O Resultado gerado desta operação será: <br/><br/><code className="outputResult">`&#123;<code className="token_reservada">FANTASY</code>=&#123;UNDER_PROMOTION=[LightNovelModel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;], NORMAL_PRICE=[LightNovelModel&#123;title='Dragon Ball', price=5.2, category=FANTASY&#125;]&#125;, <br/><code className="token_reservada">DRAMA</code>=&#123;NORMAL_PRICE=[LightNovelModel&#123;title='Danielle', price=3.2, category=DRAMA&#125;]&#125;, <br/><code className="token_reservada">ECCHI</code>=&#123;NORMAL_PRICE=[LightNovelModel&#123;title='KissXKiss', price=3.2, category=ECCHI&#125;]&#125;, <br/><code className="token_reservada">ADVENTURE</code>=&#123;NORMAL_PRICE=[LightNovelModel&#123;title='Welzika', price=4.2, category=ADVENTURE&#125;]&#125;&#125;`</code></li>
+                                                    <li>Agrupando elementos do fluxo de acordo com algum atributo do Objeto elemento (Enum), retornando um mapa aonde a chave é o Enumerador e o valor é uma lista de elementos que possuem esse Enumerador co-relacionados: <code className="token_reservada">listOfLightNovels.stream()<br/>.collect(Collectors.groupingBy(LightNovel::getCategory));</code>, <br/><br/>O Resultado gerado desta operação será: <br/><br/><code className="outputResult">`&#123;<code className="token_reservada">ADVENTURE</code>=[LightNovel&#123;title='Linus Torvalds', price=4.2, category=ADVENTURE&#125;], <br/><code className="token_reservada">FANTASY</code>=[LightNovel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;, LightNovel&#123;title='Dragon Ball', price=5.2, category=FANTASY&#125;], <br/><code className="token_reservada">ECCHI</code>=[LightNovel&#123;title='KissXSis', price=3.2, category=ECCHI&#125;], <br/><code className="token_reservada">DRAMA</code>=[LightNovel&#123;title='Danielle', price=3.2, category=DRAMA&#125;]&#125;`</code>
+                                                        
+                                                        <p className="main-title--implementFullBlock">- Para todos os exemplos abaixo é essa mesma lista:</p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                                <code className="-tokenKeyword">private static</code> <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">LightNovel</code>&#62; listOfLightNovels = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList</code>&#60;&#62;(<br/>
+                                                                    <code className="-nestedInnerCode"><code className="-tokenClassEntity">List</code>.<code className="-tokenMethod">of</code>(<br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovel</code>(<code className="-tokenString">"Tokyo Ghoul"</code>, <code className="-tokenKeyConstant">2.0</code>, <code className="-tokenClassEntity">CategoryEnum</code>.<code className="-tokenKeyConstant">FANTASY</code>), </code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovel</code>(<code className="-tokenString">"KissXSis"</code>, <code className="-tokenKeyConstant">3.2</code>, <code className="-tokenClassEntity">CategoryEnum</code>.<code className="-tokenKeyConstant">ECCHI</code>),</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovel</code>(<code className="-tokenString">"Dragon Ball"</code>, <code className="-tokenKeyConstant">5.2</code>, <code className="-tokenClassEntity">CategoryEnum</code>.<code className="-tokenKeyConstant">FANTASY</code>),</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovel</code>(<code className="-tokenString">"Danielle"</code>, <code className="-tokenKeyConstant">3.2</code>, <code className="-tokenClassEntity">CategoryEnum</code>.<code className="-tokenKeyConstant">DRAMA</code>),</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">LightNovel</code>(<code className="-tokenString">"Linus Torvalds"</code>, <code className="-tokenKeyConstant">4.2</code>, <code className="-tokenClassEntity">CategoryEnum</code>.<code className="-tokenKeyConstant">ADVENTURE</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode">)</code></code><br/>
+                                                                );
+                                                            </code>
+                                                        </ul>
+
+                                                        <p className="main-title--implementFullBlock"> - Implementação <code className="token_reservada">ANTES</code> da API de Streams (Mais trabalhoso, necessita instânciar uma lista para cada Enumerador): </p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                
+                                                                <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">CategoryEnum</code>, <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">LightNovel</code>&#62;&#62; categoryLightNovelMap = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">HashMap</code>&#60;&#62;();<br/>
+
+                                                                <br/>
+                                                                <span className="-tokenComment"># Uma lista para cada CategoryEnum</span><br/>
+                                                                <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">LightNovel</code>&#62; fantasyList = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList</code>&#60;&#62;();<br/>
+                                                                <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">LightNovel</code>&#62; ecchiList = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList</code>&#60;&#62;();<br/>
+                                                                <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">LightNovel</code>&#62; dramaList = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList</code>&#60;&#62;();<br/>
+                                                                <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">LightNovel</code>&#62; adventureList = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList</code>&#60;&#62;();<br/>
+
+                                                                <br/>
+                                                                <code className="-tokenKeyword">for</code> (<code className="-tokenClassEntity">LightNovel</code> novel : listOfLightNovels) &#123;<br/>
+                                                                    <code className="-nestedInnerCode"><code className="-tokenKeyword">switch</code>(novel.<code className="-tokenMethod">getCategory</code>()) &#123;</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">case</code> <code className="-tokenKeyConstant">FANTASY</code>: fantasyList.<code className="-tokenMethod">add</code>(novel); <code className="-tokenKeyword">break</code>;</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">case</code> <code className="-tokenKeyConstant">ECCHI</code>: ecchiList.<code className="-tokenMethod">add</code>(novel); <code className="-tokenKeyword">break</code>;</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">case</code> <code className="-tokenKeyConstant">DRAMA</code>: dramaList.<code className="-tokenMethod">add</code>(novel); <code className="-tokenKeyword">break</code>;</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">case</code> <code className="-tokenKeyConstant">ADVENTURE</code>: adventureList.<code className="-tokenMethod">add</code>(novel); <code className="-tokenKeyword">break</code>;</code><br/>
+                                                                    <code className="-nestedInnerCode">&#125;</code><br/>
+                                                                &#125;<br/>
+
+                                                                <br/>
+                                                                categoryLightNovelMap.<code className="-tokenMethod">put</code>(<code className="-tokenClassEntity">CategoryEnum</code>.<code className="-tokenKeyConstant">FANTASY</code>, fantasyList);<br/>
+                                                                categoryLightNovelMap.<code className="-tokenMethod">put</code>(<code className="-tokenClassEntity">CategoryEnum</code>.<code className="-tokenKeyConstant">ECCHI</code>, ecchiList);<br/>
+                                                                categoryLightNovelMap.<code className="-tokenMethod">put</code>(<code className="-tokenClassEntity">CategoryEnum</code>.<code className="-tokenKeyConstant">DRAMA</code>, dramaList);<br/>
+                                                                categoryLightNovelMap.<code className="-tokenMethod">put</code>(<code className="-tokenClassEntity">CategoryEnum</code>.<code className="-tokenKeyConstant">ADVENTURE</code>, adventureList);<br/>
+
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `categoryLightNovelMap`:<br/><br/>&#123;<code className="token_reservada">ADVENTURE</code>=[LightNovel&#123;title='Linus Torvalds', price=4.2, category=ADVENTURE&#125;], <br/><code className="token_reservada">FANTASY</code>=[LightNovel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;, LightNovel&#123;title='Dragon Ball', price=5.2, category=FANTASY&#125;], <br/><code className="token_reservada">ECCHI</code>=[LightNovel&#123;title='KissXSis', price=3.2, category=ECCHI&#125;], <br/><code className="token_reservada">DRAMA</code>=[LightNovel&#123;title='Danielle', price=3.2, category=DRAMA&#125;]&#125;</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <p className="main-title--implementFullBlock"> - Implementação <code className="token_reservada">COM</code> a API de Streams (Menos trabalhoso, mais coeso e NÃO necessita de listas auxiliares): </p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                               
+                                                                <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">CategoryEnum</code>, <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">LightNovel</code>&#62;&#62; categoryLightNovelMap_withCollectors = <br/>
+                                                                    <code className="-nestedInnerCode">listOfLightNovels.<code className="-tokenMethod">stream</code>()</code><br/>
+                                                                    <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">groupingBy</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getCategory</code>));</code><br/>
+                                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `categoryLightNovelMap_withCollectors`:<br/><br/>&#123;<code className="token_reservada">ADVENTURE</code>=[LightNovel&#123;title='Linus Torvalds', price=4.2, category=ADVENTURE&#125;], <br/><code className="token_reservada">FANTASY</code>=[LightNovel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;, LightNovel&#123;title='Dragon Ball', price=5.2, category=FANTASY&#125;], <br/><code className="token_reservada">ECCHI</code>=[LightNovel&#123;title='KissXSis', price=3.2, category=ECCHI&#125;], <br/><code className="token_reservada">DRAMA</code>=[LightNovel&#123;title='Danielle', price=3.2, category=DRAMA&#125;]&#125;</span>
+                                                            </code>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Agrupando elementos do fluxo de acordo com regras personalizadas na chamada, em exemplo iremos agrupar os novels de acordo com promoção ou não (Se o price dele for menor que 3.0 então `PromotionEnum.UNDER_PROMOTION`, se for maior então `PromotionEnum.NORMAL_PRICE`), Ou seja, o resultado gerado será <code className="outputResult">`Map&#60;PromotionEnum, List&#60;LightNovel&#62;&#62;`</code>: <code className="token_reservada">listOfLightNovels.stream()<br/>.collect(Collectors.groupingBy(novel -&#62; novel.getPrice() &#62; 3 ? PromotionEnum.UNDER_PROMOTION : PromotionEnum.NORMAL_PRICE));</code>, <br/><br/>O Resultado gerado desta operação será: <br/><br/><code className="outputResult">`&#123;<code className="token_reservada">UNDER_PROMOTION</code>=[LightNovel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;], <br/><code className="token_reservada">NORMAL_PRICE</code>=[LightNovel&#123;title='KissXSis', price=3.2, category=ECCHI&#125;, LightNovel&#123;title='Dragon Ball', price=5.2, category=FANTASY&#125;, LightNovel&#123;title='Danielle', price=3.2, category=DRAMA&#125;, LightNovel&#123;title='Linus Torvalds', price=4.2, category=ADVENTURE&#125;]&#125;`</code>
+                                                        
+                                                        <p className="main-title--implementFullBlock"> - Implementação completa sobre personalizar regras na chamada, agrupamentos mais complexos: </p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                               
+                                                                <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">CategoryEnum</code>, <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">LightNovel</code>&#62;&#62; promotionOrNotMap = <br/>
+                                                                    <code className="-nestedInnerCode">listOfLightNovels.<code className="-tokenMethod">stream</code>()</code><br/>
+                                                                    <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">groupingBy</code>(novel -&#62;</code><br/>
+                                                                        <code className="-nestedInnerCode --3Identation">novel.<code className="-tokenMethod">getPrice</code>() &#60; <code className="-tokenKeyConstant">3</code> ?</code><br/>
+                                                                            <code className="-nestedInnerCode --4Identation"><code className="-tokenClassEntity">PromotionEnum</code>.<code className="-tokenKeyConstant">UNDER_PROMOTION</code> : <code className="-tokenClassEntity">PromotionEnum</code>.<code className="-tokenKeyConstant">NORMAL_PRICE</code></code><br/>
+                                                                    <code className="-nestedInnerCode --2Identation">));</code><br/>
+                                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `categoryLightNovelMap_withCollectors`:<br/><br/>&#123;<code className="token_reservada">UNDER_PROMOTION</code>=[LightNovel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;], <br/><code className="token_reservada">NORMAL_PRICE</code>=[LightNovel&#123;title='KissXSis', price=3.2, category=ECCHI&#125;, LightNovel&#123;title='Dragon Ball', price=5.2, category=FANTASY&#125;, LightNovel&#123;title='Danielle', price=3.2, category=DRAMA&#125;, LightNovel&#123;title='Linus Torvalds', price=4.2, category=ADVENTURE&#125;]&#125;</span>
+                                                            </code>
+                                                        </ul>
+                                                    </li>
+                                                    <li>Agrupamento mais complexo, agrupamentos aninhados, ou seja, agrupamentos de agrupamentos, neste contexto iremos realizar a junção dos dois agrupamentos anteriores, com a chave do mapa sendo a categoria e o valor é outro mapa aninhado contendo o mesmo agrupamento anteior (promoção), ou seja, agrupando os elementos do fluxo com regras personalizadas na chamada (Se o price dele for menor que 3.0 então `PromotionEnum.UNDER_PROMOTION`, se for maior então `PromotionEnum.NORMAL_PRICE`) e depois realiza outro agrupamento separando os elementos agrupados anteriormente por promoção, agora agrupa também por categoria, então por fim teremos os elementos agrupados por categoria e o valor é a lista de novels agrupados por promoções, Ou seja, o resultado gerado será <code className="outputResult">`Map&#60;CategoryEnum, Map&#60;PromotionEnum, List&#60;LightNovel&#62;&#62;&#62;`</code>: <code className="token_reservada">listOfLightNovels.stream()<br/>.collect(Collectors.groupingBy(LightNovel::getCategory, Collectors.groupingBy(novel -&#62; novel.getPrice() &#62; 3 ? PromotionEnum.UNDER_PROMOTION : PromotionEnum.NORMAL_PRICE)));</code>, <br/><br/>O Resultado gerado desta operação será: <br/><br/><code className="outputResult">`&#123;<code className="token_reservada">FANTASY</code>=&#123;UNDER_PROMOTION=[LightNovel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;], NORMAL_PRICE=[LightNovel&#123;title='Dragon Ball', price=5.2, category=FANTASY&#125;]&#125;, <br/><code className="token_reservada">DRAMA</code>=&#123;NORMAL_PRICE=[LightNovel&#123;title='Danielle', price=3.2, category=DRAMA&#125;]&#125;, <br/><code className="token_reservada">ECCHI</code>=&#123;NORMAL_PRICE=[LightNovel&#123;title='KissXSis', price=3.2, category=ECCHI&#125;]&#125;, <br/><code className="token_reservada">ADVENTURE</code>=&#123;NORMAL_PRICE=[LightNovel&#123;title='Linus Torvalds', price=4.2, category=ADVENTURE&#125;]&#125;&#125;`</code>
+                                                    
+                                                        <p className="main-title--implementFullBlock"> - Agrupamentos mais complexos: Agrupamentos de Agrupamentos (Mapas aninhados):</p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+                                                            
+                                                            <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">CategoryEnum</code>, <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">PromotionEnum</code>, <code className="-tokenClassEntity">List</code>&#60;<code className="-tokenClassEntity">LightNovel</code>&#62;&#62;&#62; promotionOrNotMap_withKeyCategory = <br/>
+                                                                    <code className="-nestedInnerCode">listOfLightNovels.<code className="-tokenMethod">stream</code>()</code><br/>
+                                                                    <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">groupingBy</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getCategory</code>, </code><br/>
+                                                                        <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">groupingBy</code>(novel -&#62;</code><br/>
+                                                                            <code className="-nestedInnerCode --4Identation">novel.<code className="-tokenMethod">getPrice</code>() &#60; <code className="-tokenKeyConstant">3</code> ?</code><br/>
+                                                                                <code className="-nestedInnerCode --5Identation"><code className="-tokenClassEntity">PromotionEnum</code>.<code className="-tokenKeyConstant">UNDER_PROMOTION</code> : <code className="-tokenClassEntity">PromotionEnum</code>.<code className="-tokenKeyConstant">NORMAL_PRICE</code></code><br/>
+                                                                    <code className="-nestedInnerCode --2Identation">)));</code><br/>
+                                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Output `categoryLightNovelMap_withCollectors`:<br/><br/>&#123;<code className="token_reservada">FANTASY</code>=&#123;UNDER_PROMOTION=[LightNovel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;], NORMAL_PRICE=[LightNovel&#123;title='Dragon Ball', price=5.2, category=FANTASY&#125;]&#125;, <br/><code className="token_reservada">DRAMA</code>=&#123;NORMAL_PRICE=[LightNovel&#123;title='Danielle', price=3.2, category=DRAMA&#125;]&#125;, <br/><code className="token_reservada">ECCHI</code>=&#123;NORMAL_PRICE=[LightNovel&#123;title='KissXSis', price=3.2, category=ECCHI&#125;]&#125;, <br/><code className="token_reservada">ADVENTURE</code>=&#123;NORMAL_PRICE=[LightNovel&#123;title='Linus Torvalds', price=4.2, category=ADVENTURE&#125;]&#125;&#125;</span>
+                                                            </code>
+                                                        </ul>
+                                                    </li>
+                                                    <br/>
+                                                    <li>Agrupamentos com funções de agregação (Min, Max, AVG, Count, Sum): Aplicando as funções de agregação nos grupos (Mesma operação GROUP BY dos bancos SQL);
+
+                                                        <p className="main-title--implementFullBlock"> - Aplicando todas as funções de agregação <code className="token_reservada">Summarizing</code> no fluxo de LightNovels <code className="token_reservada">Agrupados</code> por Categoria, ou seja, retornando resumos por categoria: </p>
+                                                        <ul className="main-implementFullBlock--container"> 
+                                                            <code className="implementFullBlock">
+                                                            <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">CategoryEnum</code>, <code className="-tokenClassEntity">DoubleSummaryStatistics</code>&#62; resumoPrice_gruppingByCategory =<br/>
+                                                                <code className="-nestedInnerCode">listOfLightNovels.<code className="-tokenMethod">stream</code>()</code><br/>
+                                                                    <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">groupingBy</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getCategory</code>, </code><br/>
+                                                                        <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">summarizingDouble</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code></code><br/>
+                                                                    <code className="-nestedInnerCode --2Identation">)));</code><br/>
+
+                                                                    <br/>
+                                                                    <span className="-tokenComment"># Output `resumoPrice_gruppingByCategory`: <br/><br/>	&#123;<code className="token_reservada">FANTASY</code>=DoubleSummaryStatistics&#123;count=2, sum=7,200000, min=2,000000, average=3,600000, max=5,200000&#125;,<br/>
+                                                                        <code className="token_reservada">ADVENTURE</code>=DoubleSummaryStatistics&#123;count=1, sum=4,200000, min=4,200000, average=4,200000, max=4,200000&#125;,<br/>
+                                                                        <code className="token_reservada">ECCHI</code>=DoubleSummaryStatistics&#123;count=1, sum=3,200000, min=3,200000, average=3,200000, max=3,200000&#125;,<br/>
+                                                                        <code className="token_reservada">DRAMA</code>=DoubleSummaryStatistics&#123;count=1, sum=3,200000, min=3,200000, average=3,200000, max=3,200000&#125;&#125;<br/>
+                                                                    </span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <p className="main-title--implementFullBlock"> - Aplicando apenas a função de agregação <code className="token_reservada">Min</code> no fluxo de LightNovels <code className="token_reservada">Agrupados</code> por Categoria, ou seja, retornando o novel mais barato por categoria, OBS: Mesma lógica serve para o <code className="token_reservada">Max</code>, basta trocar o <code className="token_reservada">.minBy()</code> por <code className="token_reservada">.maxBy()</code>: </p>
+                                                        <ul className="main-implementFullBlock--container"> 
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># Desta forma o retorno será encapsulado em um Optional</span><br/>
+                                                                <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">CategoryEnum</code>, <code className="-tokenClassEntity">Optional</code>&#60;<code className="-tokenClassEntity">LightNovel</code>&#62;&#62; minPrice_gruppingByCategory =<br/>
+                                                                    <code className="-nestedInnerCode">listOfLightNovels.<code className="-tokenMethod">stream</code>()</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">groupingBy</code>({window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getCategory</code>, </code><br/>
+                                                                            <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">minBy</code>(<code className="-tokenClassEntity">Comparator</code>.<code className="-tokenMethod">comparing</code>({window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code></code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">))));</code><br/>
+
+                                                                        <br/>
+                                                                        <span className="-tokenComment"># Output `minPrice_gruppingByCategory`: <br/><br/>	 &#123;<code className="token_reservada">DRAMA</code>=Optional[LightNovel&#123;title='Danielle', price=3.2, category=DRAMA&#125;],<br/>
+                                                                            <code className="token_reservada">FANTASY</code>=Optional[LightNovel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;],<br/>
+                                                                            <code className="token_reservada">ECCHI</code>=Optional[LightNovel&#123;title='KissXSis', price=3.2, category=ECCHI&#125;],<br/>
+                                                                            <code className="token_reservada">ADVENTURE</code>=Optional[LightNovel&#123;title='Linus Torvalds', price=4.2, category=ADVENTURE&#125;]&#125;<br/>
+                                                                        </span>
+                                                            </code>
+                                                        </ul>
+                                                        <ul className="main-implementFullBlock--container"> 
+                                                            <code className="implementFullBlock">
+                                                                <span className="-tokenComment"># Para já retornar desencapsulado, executamos `.get()`</span><br/>
+                                                                <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">CategoryEnum</code>, <code className="-tokenClassEntity">LightNovel</code>&#62; minPrice_notOptional_gruppingByCategory =<br/>
+                                                                    <code className="-nestedInnerCode">listOfLightNovels.<code className="-tokenMethod">stream</code>()</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">groupingBy</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getCategory</code>, </code><br/>
+                                                                            <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">collectingAndThen</code>(</code><br/>
+                                                                                <code className="-nestedInnerCode --4Identation"><code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">minBy</code>(<code className="-tokenClassEntity">Comparator</code>.<code className="-tokenMethod">comparing</code>({window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>)),</code><br/>
+                                                                                <code className="-nestedInnerCode --4Identation"><code className="-tokenClassEntity">Optional</code>::<code className="-tokenMethod">get</code>()</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">)));</code><br/>
+
+                                                                        <br/>
+                                                                        <span className="-tokenComment"># Output `minPrice_notOptional_gruppingByCategory`: <br/><br/>	 &#123;<code className="token_reservada">DRAMA</code>=LightNovel&#123;title='Danielle', price=3.2, category=DRAMA&#125;,<br/>
+                                                                            <code className="token_reservada">FANTASY</code>=LightNovel&#123;title='Tokyo Ghoul', price=2.0, category=FANTASY&#125;,<br/>
+                                                                            <code className="token_reservada">ECCHI</code>=LightNovel&#123;title='KissXSis', price=3.2, category=ECCHI&#125;,<br/>
+                                                                            <code className="token_reservada">ADVENTURE</code>=LightNovel&#123;title='Linus Torvalds', price=4.2, category=ADVENTURE&#125;&#125;<br/>
+                                                                        </span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <p className="main-title--implementFullBlock"> - Aplicando apenas a função de agregação <code className="token_reservada">AVG</code> no fluxo de LightNovels <code className="token_reservada">Agrupados</code> por Categoria, ou seja, retornando a média de preço dos novels por categoria: </p>
+                                                        <ul className="main-implementFullBlock--container"> 
+                                                            <code className="implementFullBlock">                                                                
+                                                            <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">CategoryEnum</code>, <code className="-tokenClassEntity">Double</code>&#62; avgPrices_gruppingByCategory =<br/>
+                                                                    <code className="-nestedInnerCode">listOfLightNovels.<code className="-tokenMethod">stream</code>()</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">groupingBy</code>({window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getCategory</code>, </code><br/>
+                                                                            <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">averagingDouble</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code></code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">)));</code><br/>
+
+                                                                        <br/>
+                                                                        <span className="-tokenComment"># Output `avgPrices_gruppingByCategory`: <br/><br/>&#123;<code className="token_reservada">DRAMA</code>=3.2, <code className="token_reservada">FANTASY</code>=3.6, <code className="token_reservada">ECCHI</code>=3.2, <code className="token_reservada">ADVENTURE</code>=4.2&#125;</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <p className="main-title--implementFullBlock"> - Aplicando apenas a função de agregação <code className="token_reservada">Count</code> no fluxo de LightNovels <code className="token_reservada">Agrupados</code> por Categoria, ou seja, retornando a quantidade (Ocorrências) de novels por categoria: </p>
+                                                        <ul className="main-implementFullBlock--container"> 
+                                                            <code className="implementFullBlock">                                                                
+                                                            <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">CategoryEnum</code>, <code className="-tokenClassEntity">Long</code>&#62; countQtdeOccurrence_gruppingByCategory =<br/>
+                                                                    <code className="-nestedInnerCode">listOfLightNovels.<code className="-tokenMethod">stream</code>()</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">groupingBy</code>({window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getCategory</code>, </code><br/>
+                                                                            <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">counting</code>()</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">));</code><br/>
+
+                                                                        <br/>
+                                                                        <span className="-tokenComment"># Output `countQtdeOccurrence_gruppingByCategory`: <br/><br/>&#123;<code className="token_reservada">FANTASY</code>=2, <code className="token_reservada">ADVENTURE</code>=1, <code className="token_reservada">ECCHI</code>=1, <code className="token_reservada">DRAMA</code>=1&#125;</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <p className="main-title--implementFullBlock"> - Aplicando apenas a função de agregação <code className="token_reservada">Sum</code> no fluxo de LightNovels <code className="token_reservada">Agrupados</code> por Categoria, ou seja, retornando a soma dos preços de novels por categoria: </p>
+                                                        <ul className="main-implementFullBlock--container"> 
+                                                            <code className="implementFullBlock">                                                                
+                                                            <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">CategoryEnum</code>, <code className="-tokenClassEntity">Double</code>&#62; sumPrices_gruppingByCategory =<br/>
+                                                                    <code className="-nestedInnerCode">listOfLightNovels.<code className="-tokenMethod">stream</code>()</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">collect</code>(<code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">groupingBy</code>({window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getCategory</code>, </code><br/>
+                                                                            <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">Collectors</code>.<code className="-tokenMethod">summingDouble</code>(<code className="-tokenClassEntity">LightNovel</code>::<code className="-tokenMethod">getPrice</code>)</code><br/>
+                                                                        <code className="-nestedInnerCode --2Identation">));</code><br/>
+
+                                                                        <br/>
+                                                                        <span className="-tokenComment"># Output `sumPrices_gruppingByCategory`: <br/><br/>&#123;<code className="token_reservada">DRAMA</code>=3.2, <code className="token_reservada">FANTASY</code>=7.2, <code className="token_reservada">ECCHI</code>=3.2, <code className="token_reservada">ADVENTURE</code>=4.2&#125;</span>
+                                                            </code>
+                                                        </ul>
+                                                    </li>
+                                                    <br/>
+                                                    <li>Utilizando paralelismo (MultiThreads) e dividindo a tarefa do fluxo Stream (Ganhando performance): Para que seja possível paralelisar tarefas, devemos indicar ao java o Inicio e Fim das iterações para que seja possível dividir as tarefas corretamente entre as threads, pois lidar com paralelismo em iterações podem existir dependências de iterações anteriores para que seja possível o processamento da iteração corrente no looping, esse é um dos maiores desafios em ambientes MultiThreads (Dependências de outros passos da iteração na iteração corrente), pois se vamos dividir uma tarefa, logo, diferentes threads iram conter os resultados anteriores para que seja possível o processamento da iteração corrente, porisso devemos informar o Inicio, meio, e fim.
+                                                        
+                                                        <p className="main-title--implementFullBlock"> - Utilizando <code className="token_reservada">Stream Genérico</code> e <code className="token_reservada">SEM Paralelisar</code> a tarefa para termos parâmetros de medição nos próximos: </p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+
+                                                            <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">iterate</code>(<code className="-tokenKeyConstant">1L</code>, n -&#62; n + <code className="-tokenKeyConstant">1</code>)<br/>
+                                                                <code className="-nestedInnerCode">.<code className="-tokenMethod">limit</code>(<code className="-tokenKeyConstant">10_000_000L</code>)</code><br/>
+                                                                <code className="-nestedInnerCode">.<code className="-tokenMethod">reduce</code>(<code className="-tokenClassEntity">Long</code>::<code className="-tokenMethod">sum</code>).<code className="-tokenMethod">get</code>();</code><br/>
+                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Tempo de processamento: 327ms</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <p className="main-title--implementFullBlock"> - Utilizando <code className="token_reservada">Stream Genérico</code> e paralelisando, aonde <code className="token_reservada">NÃO</code> indicamos o inicio e fim da iteração, logo, <code className="token_reservada">NÃO</code> temos ganhos na performance pois o Java não consegue definir e dividir corretamente as tarefas: </p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+
+                                                            <code className="-tokenClassEntity">Stream</code>.<code className="-tokenMethod">iterate</code>(<code className="-tokenKeyConstant">1L</code>, n -&#62; n + <code className="-tokenKeyConstant">1</code>)<br/>
+                                                                <code className="-nestedInnerCode">.<code className="-tokenMethod">parallel</code>()</code><span className="-tokenComment">// Flag para paralelisar</span><br/>
+                                                                <code className="-nestedInnerCode">.<code className="-tokenMethod">limit</code>(<code className="-tokenKeyConstant">10_000_000L</code>)</code><br/>
+                                                                <code className="-nestedInnerCode">.<code className="-tokenMethod">reduce</code>(<code className="-tokenClassEntity">Long</code>::<code className="-tokenMethod">sum</code>).<code className="-tokenMethod">get</code>();</code><br/>
+                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Tempo de processamento: 1469ms</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <p className="main-title--implementFullBlock"> - Utilizando <code className="token_reservada">Stream Especializada</code> porém <code className="token_reservada">SEM Paralelisar</code>, ou seja, teremos ganhos de performance pois Não vai ocorrer o problema dos Wrappers de boxing e unboxing, PORÉM ainda SEM paralelisar: </p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+
+                                                            <code className="-tokenClassEntity">LongStream</code>.<code className="-tokenMethod">rangeClosed</code>(<code className="-tokenKeyConstant">1L</code>, <code className="-tokenKeyConstant">10_000_000L</code>)<br/>
+                                                                <code className="-nestedInnerCode">.<code className="-tokenMethod">reduce</code>(<code className="-tokenKeyConstant">0</code>, <code className="-tokenClassEntity">Long</code>::<code className="-tokenMethod">sum</code>);</code><br/>
+                                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Tempo de processamento: 48ms</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <p className="main-title--implementFullBlock"> - Utilizando <code className="token_reservada">for nativo</code> e <code className="token_reservada">SEM Paralelisar</code>, <code className="token_reservada">MELHOR</code> performance de todos pois o for nativo é otimizado e gera instruções de baixo nível pensadas neste ganho: </p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+
+                                                                <code className="-tokenKeyword">long</code> result = <code className="-tokenKeyConstant">0</code>;<br/>
+                                                                <code className="-tokenKeyword">for</code> (<code className="-tokenKeyword">long</code> i = 1; i &#60;= <code className="-tokenKeyConstant">10_000_000L</code>; i++) &#123;<br/>
+                                                                    <code className="-nestedInnerCode">result += i;</code><br/>
+                                                                &#125;<br/>
+                                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Tempo de processamento: 17ms</span>
+                                                            </code>
+                                                        </ul>
+
+                                                        <p className="main-title--implementFullBlock"> - Finalmente utilizando <code className="token_reservada">Stream Especializado</code> e <code className="token_reservada">Paralelisando</code> a tarefa da maneira correta, na qual indicamos o Inicio e Fim da iteração (com o método <code className="token_reservada">.rangeClosed()</code>) e o Java consegue dividir as tarefas corretamente, ainda sim <code className="token_reservada">NÃO</code> é a <code className="token_reservada">MELHOR</code> performance de todos se comparado com o <code className="token_reservada">for nativo</code>.</p>
+                                                        <ul className="main-implementFullBlock--container">
+                                                            <code className="implementFullBlock">
+
+                                                            <code className="-tokenClassEntity">LongStream</code>.<code className="-tokenMethod">rangeClosed</code>(<code className="-tokenKeyConstant">1L</code>, <code className="-tokenKeyConstant">10_000_000L</code>)<br/>
+                                                                <code className="-nestedInnerCode">.<code className="-tokenMethod">parallel</code>()</code><br/>
+                                                                <code className="-nestedInnerCode">.<code className="-tokenMethod">reduce</code>(<code className="-tokenKeyConstant">0</code>, <code className="-tokenClassEntity">Long</code>::<code className="-tokenMethod">sum</code>);</code><br/>
+                                                                
+                                                                <br/>
+                                                                <span className="-tokenComment"># Tempo de processamento: 31ms</span>
+                                                            </code>
+                                                        </ul>
+                                                    </li>
                                                 </ul>
                                             </li>
                                             <li><code className="-main-moduleTitleLi token_reservada">Threads:</code> Aqui é abordado a maneira mais baixo nível de lidar criando e configurando MANUALMENTE todo o processo, porisso "baixo nível", em alguns casos não é necessário realizar toda essa configuração manual pois existem classes mais modernas que adicionam uma camada a mais de abstração tornando esse processo mais facil, como por exemplo a classe ExecutorService ou ScheduledExecutorService (Para agendamentos de tarefas que devem ser executadas de tempos em tempos), que além de facilitar na criação das threads e limitação na quantidade de threads que seram criadas no `pool de threads`, também facilita nos tratamentos de concorrência por recursos entre elas. Como criar por meio de herança extends na classe Thread (Não muito recomendado) ou implementando implements a Interface Runnable (Mais indicado). Estado das threads (state of threads) `New` para quando criamos mas não iniciamos ainda com o método `.start()`, `Runnable` para quando damos `.start()` nelas indicando que pretendemos essa execução (Não executa ainda pois quem decide isso é o Scheduler do Sistema Operacional), `Blocked` para quando uma thread aguarda o Lock de um recurso e ela espera para adquirir o monitor do objeto, ou seja, isso geralmente ocorre quando esse recurso já está sendo acessado por outra thread e a mesma está segurando o Lock, `Waiting` para quando uma thread está aguardando indefinidamente por notificações de outras para assim poder continuar sua execução, `Time Waiting` ou  também `Waiting Blocked` para quando uma thread está aguardando porém com um tempo limite definido (Como por exemplo quando uma thread aguarda resposta de rede, ela não fica esperando infinitamente, ela aguarda dar time out, se não iria ocorrer um `DeadLock` mais explicações no módulo X), e finalmente `Terminated` para quando uma tarefa é concluída ou interrompida por algum motivo. OBS: A Thread pode executar e parar, e depois voltar a executar apartir do ponto em que ela parou, várias vezes, quem decide quando e qual thread será executada é o Scheduler, podemos apenas definir níveis de prioridade maiores para algumas, porém mesmo assim quem decide é o Scheduler. Existem dois (2) tipos de Threads sendo elas as de usuário `User` que são criadas por nós desenvolvedores e as do sistema `Daemon` que são criadas pela JVM (Ou também podemos criar esse tipo definindo `.setDaemon(true)`, esse tipo é útil para execuções de limpesas ou liberação de recursos em geral, tarefas nas quais não exigem prioridade e as mesmas podem ser finalizadas a qualquer momento) como por exemplo o garbage collector que sai varrendo e limpando a memória, a principal diferença entre elas duas (Daemon e User) é que o programa só finaliza quando termina a execução das threads de usuário User, e quando isso ocorre o programa é finalizado mesmo se ainda existir threads do tipo `Daemon` em execução, além disto as Threads do tipo `User` também tem maior prioridade de execução na hora de ser escalonada pelo Scheduler do Sistema Operacional. Métodos que alteram o fluxo de execução das threads, como se unir a outras (Aguardar que outra thread finalize sua tarefa definida no método sobrescrito `.run()` com `objOutraThread.join()` nela, e após essa finalização ela (thread corrente que executou `objOutraThread.join()`) continua a executar apartir dali, Ou também parar (dar dicas que quer parar) a execução da thread corrente tornando ela `Runnable` para quando a thread corrente já finalizou sua tarefa e pode deixar outras serem executadas, com o método estático `Thread.yield()`.</li>
