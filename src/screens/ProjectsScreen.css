@@ -112,6 +112,7 @@
     font-family: var(--main-fontFamily);
     color: var(--main-textColor);
     list-style-type: none;
+    text-align: justify;
 }
 
 .projects-description--container ul {
@@ -277,9 +278,15 @@ code.implementFullBlock {
 
 p.main-title--implementFullBlock {
     margin-top: .5rem;
-    margin-left: 1rem;
+    margin-left: .5rem;
+    display: list-item;
+    list-style: disc;
+    list-style-position: inside;
 }
 
+p.main-title--implementFullBlock::marker {
+    color: red;
+}
 
 @media (max-width: 810px)
 {
@@ -426,6 +433,6 @@ p.main-title--implementFullBlock {
     }
 
     p.main-title--implementFullBlock {
-        margin-left: 0;
+        margin-left: 0rem;
     }
 }
