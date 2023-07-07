@@ -274,6 +274,7 @@ code.implementFullBlock {
     font-size: .9rem;
     text-shadow: 1px 1px 3px #000;
     line-height: 1rem;
+    text-align: left;
 }
 
 p.main-title--implementFullBlock {
@@ -282,10 +283,22 @@ p.main-title--implementFullBlock {
     display: list-item;
     list-style: disc;
     list-style-position: inside;
+    color: wheat;
 }
 
 p.main-title--implementFullBlock::marker {
     color: red;
+}
+
+span.outputResult--implementFullBlock {
+    background-color: black;
+    color: #11e8ff;
+    font-weight: bolder;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    border: 3px double #044910;
+    padding: 2px;
 }
 
 @media (max-width: 810px)

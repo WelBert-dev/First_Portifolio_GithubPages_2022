@@ -4,6 +4,8 @@ import './ProjectsScreen.css';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
+import { BiLogOut } from 'react-icons/bi';
+
 import amazonAmostra from '../resources/amazona.jpg';
 import netflixAmostra from '../resources/NetFlixCloneWeb.gif';
 import auauMiauNoFrameworkAmostra from '../resources/auauMiauNoFramework.png';
@@ -524,19 +526,21 @@ export default function ProjectsScreen() {
                                                         <code className="-tokenClassEntity">DateFormat</code> df = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getInstance</code>();<br/>
                                                        
                                                         <code className="-tokenClassEntity">String</code> dateFormated_maxValue_inHighLevel = df.<code className="-tokenMethod">format</code>({window.screen.width <= 425 ? <br/> : ""}<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">Date</code>(<code className="-tokenClassEntity">Long</code>.<code className="-tokenKeyConstant">MAX_VALUE</code>)); <span className="-tokenComment">// 17/08/292278994 04:12</span><br/>
-                                                        <br/>
                                                     </code>
                                                 </ul>
                                             </li>
                                             <li><code className="token_reservada">Calendar</code>: Devido ao problema inicial de Internacionalização é criado a classe <code className="token_reservada">Calendar</code> (Abstrata, ou seja, é necessário uso do método <code className="token_reservada">builder</code> estático para sua criação, o mesmo faz verificações de origem da JVM para obter datas corretas (Internacionalização), ou podemos alterar esse comportamento padrão passando na <code className="token_reservada">sobrecarga do construtor</code> um objeto <code className="token_reservada">Locale</code>), mais informações sobre <code className="token_reservada">Calendar</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula113Calendar.java" target="_blank">Clique AQUI!</a>
                                                 
-                                                <p className="main-title--implementFullBlock">Exemplo de implementação demosntrando as diferenças em relação a anterior:</p>
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando as diferenças em relação a anterior:</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
 
                                                         <span className="-tokenComment"># Pegando a data corrente do S.O: </span><br/>
                                                         <code className="-tokenClassEntity">Calendar</code> date_now_withCalendar = <code className="-tokenClassEntity">Calendar</code>.<code className="-tokenMethod">getInstance</code>();<span className="-tokenComment">// static, ou seja, Não utilizamos `new`</span><br/>
                                                         <br/>
+                                                        <span className="-tokenComment"># Saída do `.toString()` contém bastante informações, ele é mais completo que o Date: </span><br/><br/>
+                                                        <span className="-tokenComment">java.util.GregorianCalendar[time=1670439756293, areFieldsSet=true, areAllFieldsSet=true, lenient=true, zone=sun.util.calendar.ZoneInfo[id="America/Sao_Paulo", offset=-10800000, dstSavings=0, useDaylight=false, transitions=93, lastRule=null], firstDayOfWeek=1, minimalDaysInFirstWeek=1, ERA=1, YEAR=2022, MONTH=11, WEEK_OF_YEAR=50, WEEK_OF_MONTH=2, DAY_OF_MONTH=7, DAY_OF_YEAR=341, DAY_OF_WEEK=4, DAY_OF_WEEK_IN_MONTH=1, AM_PM=1, HOUR=4, HOUR_OF_DAY=16, MINUTE=2, SECOND=36, MILLISECOND=293, ZONE_OFFSET=-10800000, DST_OFFSET=0]</span>
+                                                        <br/><br/>
                                                         <span className="-tokenComment"># Indicando qual padrão da data de acordo com o Pais: </span><br/>
                                                         <code className="-tokenClassEntity">Calendar</code> date_now_canada = <code className="-tokenClassEntity">Calendar</code>.<code className="-tokenMethod">getInstance</code>(<code className="-tokenClassEntity">Locale</code>.<code className="-tokenKeyConstant">CANADA</code>);<br/>
 
@@ -562,9 +566,9 @@ export default function ProjectsScreen() {
                                                         <br/><br/>
                                                         <span className="-tokenComment"># Acrescentando dias na instância corrente: </span><br/>
                                                         date_now_withCalendar.<code className="-tokenMethod">add</code>(<code className="-tokenClassEntity">Calendar</code>.<code className="-tokenKeyConstant">DAY_OF_MONTH</code>, <code className="-tokenKeyConstant">2</code>);<br/>
-
-
                                                         <br/>
+                                                        <span className="-tokenComment"># Acrescentando horas na instância corrente: </span><br/>
+                                                        date_now_withCalendar.<code className="-tokenMethod">add</code>(<code className="-tokenClassEntity">Calendar</code>.<code className="-tokenKeyConstant">HOUR</code>, <code className="-tokenKeyConstant">2</code>);<br/>
                                                     </code>
                                                 </ul>
                                             </li>
@@ -572,35 +576,507 @@ export default function ProjectsScreen() {
                                             <li>É concretizada/implementada por 3 classes no Java 17: <code className="token_reservada">BuddhistCalendar</code>, <code className="token_reservada">GregorianCalendar</code> e <code className="token_reservada">JapaneseImperialCalendar</code>.</li>
                                             <br/>
                                             <li>Principais Classes <code className="token_reservada">Utilitárias</code> deste pacote <code className="token_reservada">legado</code>:</li>
-                                            <li><code className="token_reservada">DateFormat</code>: Surge devido a este tipo de representação em baixo nível utilizando <code className="token_reservada">long</code> ser inviável na visualização e compreensão humana, uma vez que as representações são números enormes que parecem não fazer sentido para quem não conhece, podemos utilizar a classe <code className="token_reservada">DateFormat</code> para melhorar na visibilidade humana formatando e adicionando uma camada de mais alto nível nesses milissegundos, e representando eles em <code className="token_reservada">Strings</code> com máscaras de Datas simples "22/12/1999" ou também máscaras escrito por extenso "quarta feira, 22 de dezembro de 1999" (equivalente do argumento <code className="token_reservada">`-h`</code> que significa "Human", ou também <code className="token_reservada">`--human-readable`</code> dos programas executados pelo terminal shell de Sistemas Operacionais Unix-Like, ou seja, melhora para a visualização humana tornando os resultados dos processamentos na saída do <code className="token_reservada">stdout</code> mais legível), mais informações sobre <code className="token_reservada">DateFormat</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula114DateFormat.java" target="_blank">Clique AQUI!</a></li>
+                                            <li><code className="token_reservada">DateFormat</code>: Surge devido a este tipo de representação em baixo nível utilizando <code className="token_reservada">long</code> ser inviável na visualização e compreensão humana, uma vez que as representações são números enormes que parecem não fazer sentido para quem não conhece, podemos utilizar a classe <code className="token_reservada">DateFormat</code> para melhorar na visibilidade humana formatando e adicionando uma camada de mais alto nível nesses milissegundos, e representando eles em <code className="token_reservada">Strings</code> com máscaras de Datas simples "22/12/1999" ou também máscaras escrito por extenso "quarta feira, 22 de dezembro de 1999" (equivalente do argumento <code className="token_reservada">`-h`</code> que significa "Human", ou também <code className="token_reservada">`--human-readable`</code> dos programas executados pelo terminal shell de Sistemas Operacionais Unix-Like, ou seja, melhora para a visualização humana tornando os resultados dos processamentos na saída do <code className="token_reservada">stdout</code> mais legível), mais informações sobre <code className="token_reservada">DateFormat</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula114DateFormat.java" target="_blank">Clique AQUI!</a>
+
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando os padrões de formatações/máscaras disponíveis:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+
+                                                        <span className="-tokenComment"># Existem 7 maneiras de criar uma instância de DateFormat: </span><br/>
+                                                        <span className="-tokenComment"># Sem uso de Locale, eles se baseiam na localização default do S.O corrente: </span><br/>
+                                                        <span className="-tokenComment"># Porém como meu S.O está em inglês, criei um Locale pt-BR para converter corretamente: </span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Com Calendar devemos utilizar `.getTime()` pois a entrada dele é Date (Os millisegundos): </span><br/>
+                                                        <code className="-tokenClassEntity">Calendar</code> birthday_withCalendar = <code className="-tokenClassEntity">Calendar</code>.<code className="-tokenMethod">getInstance</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">Locale</code>(<code className="-tokenString"></code>"pt", <code className="-tokenString">"BR"</code>));<br/>
+                                                        birthday_withCalendar.<code className="-tokenMethod">set</code>(<code className="-tokenKeyConstant">1999</code>, <code className="-tokenClassEntity">Calendar</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">22</code>, <code className="-tokenKeyConstant">12</code>, <code className="-tokenKeyConstant">42</code>, <code className="-tokenKeyConstant">13</code>);<br/>
+                                                        
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> df = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getInstance</code>();<br/>
+                                                        df.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// 22/12/1999 12:42 (dd/MM/yyyy HH:mm)</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> df = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateInstance</code>();<br/>
+                                                        df.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// 22 de dez. de 1999 (dd 'de' MMM 'de' yyyy)</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> df = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateTimeInstance</code>();<br/>
+                                                        df.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// 22 de dez. de 1999 12:42:13 (dd 'de' MMM 'de' yyyy HH:mm:ss)</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> df = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateInstance</code>(<code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenKeyConstant">SHORT</code>);<br/>
+                                                        df.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// 22/12/1999 (dd/MM/yyyy)</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> df = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateInstance</code>(<code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenKeyConstant">MEDIUM</code>);<br/>
+                                                        df.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// 22 de dez. de 1999 (dd 'de' MMM 'de' yyyy)</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> df = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateInstance</code>(<code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenKeyConstant">LONG</code>);<br/>
+                                                        df.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// 22 de dezembro de 1999 (dd 'de' MMMM 'de' yyyy)</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> df = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateInstance</code>(<code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenKeyConstant">FULL</code>);<br/>
+                                                        df.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        {/* <span className="outputResult--implementFullBlock"><span><BiLogOut/> Output:</span><span> quarta-feira, 22 de dezembro de 1999 (E, dd 'de' MMMM 'de' yyyy)</span></span><br/> */}
+                                                        <span className="-tokenComment">// quarta-feira, 22 de dezembro de 1999 (E, dd 'de' MMMM 'de' yyyy)</span>
+
+                                                    </code>
+                                                </ul>
+                                            
+                                            </li>
                                             <li>Para armazenar em <code className="token_reservada">banco de dados</code> podemos utilizar a mesma abordagem de cima, porém deve-se definir um padrão da máscara suportado pelo banco (Para o DB MySQL: "yyyy-mm-dd").</li>
                                             <li>As conversões do valor <code className="token_reservada">long</code> em baixo nível para <code className="token_reservada">Strings</code> em alto nível que converte e adiciona máscara de Datas melhorando na compreensão humana, seguem a mesma convenção sobre <code className="token_reservada">parsings</code> em geral para várias outras classes da <code className="token_reservada">API Nativa do Java</code>: Regra sobre <code className="token_reservada">.format()</code> que recebe um objeto e retorna/converte em uma <code className="token_reservada">String</code>, e <code className="token_reservada">.parse()</code> que recebe uma <code className="token_reservada">String</code> e retorna/converte em um objeto (Mais explicações sobre esses <code className="token_reservada">parsings</code> e <code className="token_reservada">formats</code> logo abaixo na classe <code className="token_reservada">DateTimeFormatter</code>).</li>
                                             <li><code className="token_reservada">DateFormat</code> em conjunto com <code className="token_reservada">Locale</code> para <code className="token_reservada">Internacionalização</code>: Podemos também polimorfisar as formatações dos objetos <code className="token_reservada">Temporal</code> utilizando uma instância do <code className="token_reservada">Locale</code> de acordo com a origem desejada, traduzindo assim as datas no padrão de máscara correspondentes aos formatos adotados pelos diferentes paises, ou também traduzir a máscara escrito por extenso "quarta feira, 22 de dezembro de 1999" para a linguagem equivalente ao <code className="token_reservada">Locale</code> (Exemplo de saída utilizando a formatação para a instância de <code className="token_reservada">Locale.JAPANESE</code>: "1999年12月22日水曜日"). A mesma regra serve para outras Classes que possuem representações de máscaras ou padrões diferentes entre os paises como valores de moedas e etc, mais informações sobre <code className="token_reservada">Internacionalização</code> na seção logo abaixo desta!</li>
                                             <br/>
                                             <li><code className="token_reservada">Locale</code>: é o objeto que representa a Origem/Localidade da JVM, ou seja, podemos utilizar o polimorfismo aqui para alterar diversos comportamentos de diversas Classes visando a <code className="token_reservada">Internacionalização</code>, mais informações sobre <code className="token_reservada">Locale</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula115Locale_Internacionalizacao.java" target="_blank">Clique AQUI!</a></li>
+                                            <li><code className="token_reservada">Internacionalização de Datas</code> com <code className="token_reservada">Locale</code>: Polimorfisando o sistema e alterando o formato da máscara e etc dos objetos <code className="token_reservada">Temporais</code> (Data-Hora) de acordo com o padrão dos paises com o <code className="token_reservada">Locale</code>, mais informações: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/C_formatacao/Aula115Locale_Internacionalizacao.java" target="_blank">Clique AQUI!</a>
+                                                
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando as adequações nos padrões de formatações/máscaras de acordo com Locale:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+
+                                                        <span className="-tokenComment"># Obs: Para pegar essa ISO, o cabeçalho HTTP envia ela.</span><br/>
+                                                        <code className="-tokenClassEntity">Locale</code> localeBrazil = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">Locale</code>(<code className="-tokenString">"pt"</code>, <code className="-tokenString">"BR"</code>);<br/>
+                                                        <code className="-tokenClassEntity">Locale</code> localeItaly = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">Locale</code>(<code className="-tokenString">"it"</code>, <code className="-tokenString">"IT"</code>);<br/>
+                                                        <code className="-tokenClassEntity">Locale</code> localeSuica = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">Locale</code>(<code className="-tokenString">"it"</code>, <code className="-tokenString">"CH"</code>);<br/>
+                                                        <code className="-tokenClassEntity">Locale</code> localeIndia = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">Locale</code>(<code className="-tokenString">"hi"</code>, <code className="-tokenString">"IN"</code>);<br/>
+                                                        <code className="-tokenClassEntity">Locale</code> localeJapones = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">Locale</code>(<code className="-tokenString">"ja"</code>, <code className="-tokenString">"JP"</code>);<br/>
+                                                        <code className="-tokenClassEntity">Locale</code> localeHolanda= <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">Locale</code>(<code className="-tokenString">"nl"</code>, <code className="-tokenString">"NL"</code>);<br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> dfBrazil = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateInstance</code>(<code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenKeyConstant">FULL</code>, localeBrazil);<br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> dfItaly = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateInstance</code>(<code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenKeyConstant">FULL</code>, localeItaly);<br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> dfSuica = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateInstance</code>(<code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenKeyConstant">FULL</code>, localeSuica);<br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> dfIndia = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateInstance</code>(<code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenKeyConstant">FULL</code>, localeIndia);<br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> dfJapones = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateInstance</code>(<code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenKeyConstant">FULL</code>, localeJapones);<br/>
+                                                        <code className="-tokenClassEntity">DateFormat</code> dfHolanda = <code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenMethod">getDateInstance</code>(<code className="-tokenClassEntity">DateFormat</code>.<code className="-tokenKeyConstant">FULL</code>, localeHolanda);<br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Utilizando a data com Locale pt-BR (22/12/1999 12:42:13) criada anteriormente.</span><br/>
+                                                        <span className="-tokenComment"># Para depois formatar e adequar em outras localizações essa mesma instância.</span><br/>
+                                                        <span className="-tokenComment"># Formata a data como se estivesse localizado nos paises (Retorna uma `String`).</span><br/>
+                                                        
+                                                        <br/>
+                                                        dfBrazil.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// Português Brasil: quarta-feira, 22 de dezembro de 1999 (Criado anteriormente)</span><br/>
+                                                        <br/>
+                                                       
+                                                        dfItaly.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// Italia: mercoledì 22 dicembre 1999</span><br/>
+                                                        <br/>
+                                                       
+                                                        dfSuica.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// Suiça: mercoledì, 22 dicembre 1999 (ela tem ",")</span><br/>
+                                                        <br/>
+
+                                                        dfIndia.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// India: बुधवार, 22 दिसंबर 1999</span><br/>
+                                                        <br/>
+                                                        
+                                                        dfJapones.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// Japão: 1999年12月22日水曜日</span><br/>
+                                                        <br/>
+                                                        
+                                                        dfHolanda.<code className="-tokenMethod">format</code>(birthday_withCalendar.<code className="-tokenMethod">getTime</code>());<br/>
+                                                        <span className="-tokenComment">// Holanda: woensdag 22 december 1999</span><br/>
+                                                    </code>
+                                                </ul>
+
+                                                <p className="main-title--implementFullBlock">Verifica de acordo com o Locale da instância de calendar (neste caso pt-BR), como é "traduzido" o nome de cada localização, ou seja, "Como é traduzido 'Itália' em português Brasil?"</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                       
+                                                        <span className="-tokenComment"># Como é traduzido 'Itália' em português Brasil?</span><br/>
+                                                        localeItaly.<code className="-tokenMethod">getDisplayCountry</code>();<br/>
+                                                        <span className="-tokenComment">// Itália</span><br/>
+                                                        <br/>
+                                                        
+                                                        <span className="-tokenComment"># Como é traduzido 'Suíça' em português Brasil?</span><br/>
+                                                        localeSuica.<code className="-tokenMethod">getDisplayCountry</code>();<br/>
+                                                        <span className="-tokenComment">// Suíça</span><br/>
+                                                        <br/>
+
+                                                        <span className="-tokenComment"># Como é traduzido 'Japão' em português Brasil?</span><br/>
+                                                        localeJapones.<code className="-tokenMethod">getDisplayCountry</code>();<br/>
+                                                        <span className="-tokenComment">// Japão</span><br/>
+                                                    </code>
+                                                </ul>
+
+                                                <p className="main-title--implementFullBlock">Faz a mesma função anterior, porém se baseia na instância de Locale do argumento (Exemplo: Como é traduzido "Itália" em Japonês?):</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        <span className="-tokenComment"># Como é traduzido 'Itália' em Japonês?</span><br/>
+                                                        localeItaly.<code className="-tokenMethod">getDisplayCountry</code>(localeJapones);<br/>
+                                                        <span className="-tokenComment">// イタリア (Itália em Japonês)</span><br/>
+                                                        <br/>
+
+                                                        <span className="-tokenComment"># Como é traduzido 'Suíça' em Indiano?</span><br/>
+                                                        localeSuica.<code className="-tokenMethod">getDisplayCountry</code>(localeIndia);<br/>
+                                                        <span className="-tokenComment">// स्विट्ज़रलैंड (Suíça em Indiano)</span><br/>
+                                                        <br/>
+
+                                                        <span className="-tokenComment"># Como é traduzido 'Japonês' em Italiano?</span><br/>
+                                                        localeJapones.<code className="-tokenMethod">getDisplayCountry</code>(localeItaly);<br/>
+                                                        <span className="-tokenComment">// Giappone (Japonês em Italiano)</span><br/>
+                                                    </code>
+                                                </ul>
+
+                                                <p className="main-title--implementFullBlock">Mesma função que as anteriores, porém aqui é em relação a LINGUAGEM em sí, ou seja, "Como se diz 'Itália' em Japonês?"</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                       
+                                                        <span className="-tokenComment"># Como se diz 'Itália' em Japonês?</span><br/>
+                                                        localeItaly.<code className="-tokenMethod">getDisplayLanguage</code>(localeJapones);<br/>
+                                                        <span className="-tokenComment">// イタリア語 (Itália em Japonês): ItariaGO</span><br/>
+                                                        <br/>
+                                                        
+                                                        <span className="-tokenComment"># Como se diz 'Suíça' em Indiano?</span><br/>
+                                                        localeSuica.<code className="-tokenMethod">getDisplayLanguage</code>(localeIndia);<br/>
+                                                        <span className="-tokenComment">// इतालवी (Suíça em Indiano)</span><br/>
+                                                        <br/>
+
+                                                        <span className="-tokenComment"># Como se diz 'Japonês' em Italiano?</span><br/>
+                                                        localeJapones.<code className="-tokenMethod">getDisplayLanguage</code>(localeItaly);<br/>
+                                                        <span className="-tokenComment">// giapponese (Japonês em Italiano)</span><br/>
+                                                    </code>
+                                                </ul>
+                                            </li>
                                             <br/>
-                                            <li><code className="token_reservada">Internacionalização de Datas</code> com <code className="token_reservada">Locale</code>: Polimorfisando o sistema e alterando o formato da máscara e etc dos objetos <code className="token_reservada">Temporais</code> (Data-Hora) de acordo com o padrão dos paises com o <code className="token_reservada">Locale</code>, mais informações: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/C_formatacao/Aula115Locale_Internacionalizacao.java" target="_blank">Clique AQUI!</a></li>
-                                            <li><code className="token_reservada">Internacionalização de Números</code> com <code className="token_reservada">Locale</code> e <code className="token_reservada">NumberFormat.getInstance(Locale.JAPAN)</code>: Polimorfisando o sistema e alterando o formato da máscara que representa os números aonde os separadores de milhares e etc é diferentes para cada pais ("1,200", "1.200,00"...), mais informações: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/C_formatacao/Aula116NumberFormat_Number_Locale.java" target="_blank">Clique AQUI!</a></li>
-                                            <li><code className="token_reservada">Internacionalização de Moedas</code> com <code className="token_reservada">Locale</code> e <code className="token_reservada">NumberFormat.getCurrencyInstance(Locale.ITALY)</code>: Polimorfisando o sistema e alterando o formato da máscara que representa as moedas aonde os separadores de milhares, simbolo da moeda e etc também são diferentes para cada pais ("$10,000.21", "￥10,000", "10.000,21 €"...), (Obs IMPORTANTE: A internacionalização das moedas utilizando esse processo aqui descrito NÃO faz conversões de câmbio (câmbio de moeda, ou também taxa de câmbio) entre elas, apenas adéqua a máscara (Separadores de milhares e etc ",", ".") e símbolos (R$, U$, ￥)), mais informações: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/C_formatacao/Aula117NumberFormat_Coin_Locale.java" target="_blank">Clique AQUI!</a></li>
+                                            <li><code className="token_reservada">Internacionalização de Números</code> com <code className="token_reservada">Locale</code> e <code className="token_reservada">NumberFormat.getInstance(Locale.JAPAN)</code>: Polimorfisando o sistema e alterando o formato da máscara que representa os números aonde os separadores de milhares e etc é diferentes para cada pais ("1,200", "1.200,00"...), mais informações: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/C_formatacao/Aula116NumberFormat_Number_Locale.java" target="_blank">Clique AQUI!</a>
+                                                <p className="main-title--implementFullBlock">Exemplos de implementações na seção especifica logo abaixo desta, sobre "Internacionalização"!!</p>
+                                            </li>
+                                            <li><code className="token_reservada">Internacionalização de Moedas</code> com <code className="token_reservada">Locale</code> e <code className="token_reservada">NumberFormat.getCurrencyInstance(Locale.ITALY)</code>: Polimorfisando o sistema e alterando o formato da máscara que representa as moedas aonde os separadores de milhares, simbolo da moeda e etc também são diferentes para cada pais ("$10,000.21", "￥10,000", "10.000,21 €"...), (Obs IMPORTANTE: A internacionalização das moedas utilizando esse processo aqui descrito NÃO faz conversões de câmbio (câmbio de moeda, ou também taxa de câmbio) entre elas, apenas adéqua a máscara (Separadores de milhares e etc ",", ".") e símbolos (R$, U$, ￥)), mais informações: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/C_formatacao/Aula117NumberFormat_Coin_Locale.java" target="_blank">Clique AQUI!</a>
+                                                <p className="main-title--implementFullBlock">Exemplos de implementações na seção especifica logo abaixo desta, sobre "Internacionalização"!!</p>
+                                            </li>
                                             <br/>
                                             <li><code className="token_reservada">SimpleDateFormat</code>: Mesmo contexto da <code className="token_reservada">DateFormat</code> porém podemos definir um padrão de máscara personalizado por nós (Mesma regra sobre <code className="token_reservada">.format()</code> que recebe um objeto e retorna/converte em uma <code className="token_reservada">String</code>, e <code className="token_reservada">.parse()</code> que recebe uma <code className="token_reservada">String</code> e retorna/converte em um objeto, mais explicações sobre esses <code className="token_reservada">parsings</code> e <code className="token_reservada">formats</code> logo abaixo na classe <code className="token_reservada">DateTimeFormatter</code>), mais informações sobre <code className="token_reservada">SimpleDateFormat</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula118SimpleDateFormat.java" target="_blank">Clique AQUI!</a></li>
-                                            <li>Porisso devemos nos atentar as possíveis lançadas de <code className="token_reservada">RuntimeExceptions</code> por criar um padrão de máscara e na hora de converter passar um padrão diferente deste criado anteriormente.</li>
+                                            <li>Porisso devemos nos atentar as possíveis lançadas de <code className="token_reservada">RuntimeExceptions</code> por criar um padrão de máscara e na hora de converter passar um padrão diferente deste criado anteriormente.
+                                                
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando os padrões de formatações/máscaras personalizados por nós:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+
+                                                        <code className="-tokenClassEntity">String</code> pattern = <code className="-tokenString">"yyyy.MM.dd G 'ás' HH:mm:ss z"</code>;<br/>
+                                                        <code className="-tokenClassEntity">SimpleDateFormat</code> sdf = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">SimpleDateFormat</code>(pattern);<br/>
+                                                        <code className="-tokenClassEntity">String</code> dateFormated = sdf.<code className="-tokenMethod">format</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">Date</code>());<br/>
+                                                        <span className="-tokenComment">// Output `dateFormated`: 2022.12.07 d.C. ás 22:17:23 BRT</span>
+
+                                                        <br/><br/>
+                                                        <code className="-tokenClassEntity">String</code> pattern2 = <code className="-tokenString">"'Brasil' dd 'de' MMMM 'de' yyyy"</code>;<br/>
+                                                        <code className="-tokenClassEntity">SimpleDateFormat</code> sdf2 = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">SimpleDateFormat</code>(pattern2);<br/>
+                                                        <code className="-tokenClassEntity">String</code> dateFormated2 = sdf2.<code className="-tokenMethod">format</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">Date</code>());<br/>
+                                                        <span className="-tokenComment">// Output `dateFormated2`: Brasil 07 de dezembro de 2022</span>
+
+                                                        <br/><br/>
+                                                        <span className="-tokenComment"># Obs: Segue a mesma lógica no metodo parsing, aonde devemos respeitar esse pattern/máscara:</span><br/>
+                                                        <code className="-tokenKeyword">try</code> &#123;<br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">String</code> dateFormated3_parserException = sdf2.<code className="-tokenMethod">parse</code>(<code className="-tokenString">"Brasil 07 de dezembro de 2022"</code>);</code><br/>
+                                                        &#125; <code className="-tokenKeyword">catch</code> (<code className="-tokenClassEntity">ParseException</code> ex) &#123;<br/>
+                                                            <code className="-nestedInnerCode">ex.<code className="-tokenMethod">printStackTrace</code>();</code><br/>
+                                                        &#125;
+                                                    </code>
+                                                </ul>
+                                            </li>
                                             <br/>
                                             <br/>
                                             <li><code className="token_reservada">Maneira Nova</code>: Com esses problemas de Limitações nas representações (<code className="token_reservada">long</code>) possíveis e problemas de Internacionalização apartir do Java 8 é adicionado um pacote completo especializado em datas <code className="token_reservada">java.time</code> (Criado por um Brasileiro e adotado pelo Java).</li>
                                             <li>Os novos objetos <code className="token_reservada">Temporais</code> descritos abaixo são <code className="token_reservada">Imutáveis</code> e também são representados em baixo nível pelos milissegundos, portanto também devemos formatar eles para melhorar na visualização humana, porém desta vez suportando até "+999999999-12-31" e "-999999999-01-01".</li>
                                             <br/>
                                             <li>Principais Classes <code className="token_reservada">Temporais</code> do novo pacote:</li>
-                                            <li><code className="token_reservada">LocalDate</code>: Utilizada para representar datas simples "22/12/1999" substituindo <code className="token_reservada">Date</code> e <code className="token_reservada">Calendar</code> (Saída do <code className="token_reservada">.toString()</code>: "1999-12-22"), mais informações sobre <code className="token_reservada">LocalDate</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula119LocalDate.java" target="_blank">Clique AQUI!</a></li>
-                                            <li><code className="token_reservada">LocalTime</code>: Utilizada para representar tempos "horas:minutos:segundos:milissegundos" (Saída do <code className="token_reservada">.toString()</code>: "08:30:00"), mais informações sobre <code className="token_reservada">LocalTime</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula120LocalTime.java" target="_blank">Clique AQUI!</a></li>
-                                            <li><code className="token_reservada">LocalDateTime</code>: Utilizada para representar as duas anteriores, mais completas compostas por data e tempo, contendo todas as funcionalidades das duas classes anteriores em uma, sendo assim "yyyy-MM-ddThoras:minutos:segundos.milissegundos" (Saída do <code className="token_reservada">.toString()</code>: "2022-12-07T23:39:20.813999247"), mais informações sobre <code className="token_reservada">LocalDateTime</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula121LocalDateTime.java" target="_blank">Clique AQUI!</a></li>
+                                            <li><code className="token_reservada">LocalDate</code>: Utilizada para representar datas simples "22/12/1999" substituindo <code className="token_reservada">Date</code> e <code className="token_reservada">Calendar</code> (Saída do <code className="token_reservada">.toString()</code>: "1999-12-22"), mais informações sobre <code className="token_reservada">LocalDate</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula119LocalDate.java" target="_blank">Clique AQUI!</a>
+                                                
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando maneiras de instânciar e alguns métodos utilitários:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+
+                                                        <span className="-tokenComment"># Pegando a data corrente do S.O: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> date_now = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>();<span className="-tokenComment">// static, ou seja, Não utilizamos `new`</span><br/>
+                                                        <br/>
+
+                                                        <span className="-tokenComment"># Criando de acordo com parâmetro: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> date_of = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1999</code>, <code className="-tokenClassEntity">Month</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">22</code>);<br/>
+                                                        <span className="-tokenComment">// `.toString()` dele já vem no formato do DB MySQL: 1999-12-22</span><br/>
+                                                        <br/>
+
+                                                        <span className="-tokenComment"># Métodos mais utilizados: </span><br/>
+                                                        
+                                                        <br/>
+                                                        date_of.<code className="-tokenMethod">getYear</code>();<br/>
+                                                        date_of.<code className="-tokenMethod">get</code>(<code className="-tokenClassEntity">ChronoField</code>.<code className="-tokenKeyConstant">YEAR</code>);<br/>
+                                                        <span className="-tokenComment">// 1999 (Duas maneiras diferentes que produzem o mesmo resultado)</span><br/>
+
+                                                        <br/>
+                                                        date_of.<code className="-tokenMethod">getMonth</code>();<br/>
+                                                        <span className="-tokenComment">// DECEMBER</span><br/>
+
+                                                        <br/>
+                                                        date_of.<code className="-tokenMethod">getMonthValue</code>();<br/>
+                                                        <span className="-tokenComment">// 12</span><br/>
+
+                                                        <br/>
+                                                        date_of.<code className="-tokenMethod">getDayOfMonth</code>();<br/>
+                                                        date_of.<code className="-tokenMethod">get</code>(<code className="-tokenClassEntity">ChronoField</code>.<code className="-tokenKeyConstant">DAY_OF_MONTH</code>);<br/>
+                                                        <span className="-tokenComment">// 22 (Duas maneiras diferentes que produzem o mesmo resultado)</span><br/>
+
+                                                        <br/>
+                                                        date_of.<code className="-tokenMethod">getDayOfWeek</code>();<br/>
+                                                        <span className="-tokenComment">// WEDNESDAY</span><br/>
+
+                                                        <br/>
+                                                        date_of.<code className="-tokenMethod">getDayOfYear</code>();<br/>
+                                                        <span className="-tokenComment">// 356</span><br/>
+
+                                                        <br/>
+                                                        date_of.<code className="-tokenMethod">lengthOfMonth</code>();<br/>
+                                                        <span className="-tokenComment">// 31 &#60;- ultimo dia do mês de dezembro</span><br/>
+                                                        
+                                                        <br/><br/>
+                                                        date_of.<code className="-tokenMethod">isLeapYear</code>();<br/>
+                                                        <span className="-tokenComment">// false &#60;- é ano bisexto?</span><br/>
+                                                        
+                                                        <br/><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenKeyConstant">MAX</code>;<br/>
+                                                        <span className="-tokenComment">// `.toString()` dele: +999999999-12-31</span><br/>
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenKeyConstant">MIN</code>;<br/>
+                                                        <span className="-tokenComment">// `.toString()` dele: -999999999-01-01</span>
+                                                    </code>
+                                                </ul>
+                                            
+                                            </li>
+                                            <li><code className="token_reservada">LocalTime</code>: Utilizada para representar tempos "horas:minutos:segundos:milissegundos" (Saída do <code className="token_reservada">.toString()</code>: "08:30:00"), mais informações sobre <code className="token_reservada">LocalTime</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula120LocalTime.java" target="_blank">Clique AQUI!</a>
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando maneiras de instânciar e alguns métodos utilitários:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+
+                                                        <span className="-tokenComment"># Pegando a hora corrente do S.O: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalTime</code> time_now = <code className="-tokenClassEntity">LocalTime</code>.<code className="-tokenMethod">now</code>();<span className="-tokenComment">// static, ou seja, Não utilizamos `new`</span><br/>
+                                                        <br/>
+
+                                                        <span className="-tokenComment"># Criando de acordo com parâmetro: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalTime</code> time_of = <code className="-tokenClassEntity">LocalTime</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">23</code>, <code className="-tokenKeyConstant">33</code>, <code className="-tokenKeyConstant">12</code>);<br/>
+                                                        <span className="-tokenComment">// `.toString()` dele: 23:33:12</span><br/>
+                                                        <br/>
+
+                                                        <span className="-tokenComment"># Métodos mais utilizados: </span><br/>
+                                                        
+                                                        <br/>
+                                                        time_of.<code className="-tokenMethod">getHour</code>();<br/>
+                                                        <span className="-tokenComment">// 23 </span><br/>
+                                                        time_of.<code className="-tokenMethod">get</code>(<code className="-tokenClassEntity">ChronoField</code>.<code className="-tokenKeyConstant">CLOCK_HOUR_OF_AMPM</code>);<br/>
+                                                        <span className="-tokenComment">// 11 </span><br/>
+
+                                                        <br/>
+                                                        time_of.<code className="-tokenMethod">getMinute</code>();<br/>
+                                                        <span className="-tokenComment">// 33</span><br/>
+
+                                                        <br/>
+                                                        time_of.<code className="-tokenMethod">getSecond</code>();<br/>
+                                                        <span className="-tokenComment">// 12</span><br/>
+
+                                                        <br/>
+                                                        time_of.<code className="-tokenMethod">getNano</code>();<br/>
+                                                        <span className="-tokenComment">// 00 (Na criação não passamos ele (menor unidade de tempo), porisso o default é 00)</span><br/>
+
+                                                
+                                                        <br/><br/>
+                                                        <code className="-tokenClassEntity">LocalTime</code>.<code className="-tokenKeyConstant">MAX</code>;<br/>
+                                                        <span className="-tokenComment">// `.toString()` dele: 23:59:59.999999999</span><br/>
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalTime</code>.<code className="-tokenKeyConstant">MIN</code>;<br/>
+                                                        <span className="-tokenComment">// `.toString()` dele: 00:00</span>
+                                                    </code>
+                                                </ul>
+                                            </li>
+                                            <li><code className="token_reservada">LocalDateTime</code>: Utilizada para representar as duas anteriores, mais completas compostas por data e tempo, contendo todas as funcionalidades das duas classes anteriores em uma, sendo assim "yyyy-MM-ddThoras:minutos:segundos.milissegundos" (Saída do <code className="token_reservada">.toString()</code>: "2022-12-07T23:39:20.813999247"), mais informações sobre <code className="token_reservada">LocalDateTime</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula121LocalDateTime.java" target="_blank">Clique AQUI!</a>
+                                                
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando maneiras de instânciar e alguns métodos utilitários:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+
+                                                        <span className="-tokenComment"># Possui a junção de todos os métodos presentes nas classes especializadas LocalDate e LocalTime;</span><br/><br/>
+                                                        
+                                                        <span className="-tokenComment"># Pegando a data e hora corrente do S.O: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalDateTime</code> dateTime_now = <code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">now</code>();<span className="-tokenComment">// static, ou seja, Não utilizamos `new`</span><br/>
+                                                        <br/>
+
+                                                        <span className="-tokenComment"># Podemos unir um LocalDate + LocalTime: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> date_of = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1999</code>, <code className="-tokenClassEntity">Month</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">22</code>);<br/>
+                                                        <code className="-tokenClassEntity">LocalTime</code> time_of = <code className="-tokenClassEntity">LocalTime</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">23</code>, <code className="-tokenKeyConstant">33</code>, <code className="-tokenKeyConstant">12</code>);<br/>
+                                                        <code className="-tokenClassEntity">LocalDateTime</code> dateTimeJoinner_of = date_of.atTime(time_of);<br/>
+                                                        <span className="-tokenComment">// 1999-12-22T23:33:12</span><br/>
+                                                    </code>
+                                                </ul>
+                                            </li>
                                             <li><code className="token_reservada">Instant</code>: Utilizada para representar nano segundos (de 01/01/1970 até 17/08/292278994 04:12), ou seja, a menor unidade/medida de tempo suportada pelo computador, representa um ponto instantâneo dentro de uma linha temporal. A Saída do <code className="token_reservada">.toString()</code> ("2022-12-09T00:20:37.073909679Z") dele é a mesma que do <code className="token_reservada">LocalDateTime</code> porém com um <code className="token_reservada">`Z`</code> no final de <code className="token_reservada">Zulu time (UTC)</code>, mais informações sobre <code className="token_reservada">Instant</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/B_time/Aula122Instant_NanoSeconds.java" target="_blank">Clique AQUI!</a></li>
                                             <li><code className="token_reservada">Zulu time (UTC)</code> é um fuso horário universal, ou seja, quando queremos o horário correto basta converter "Zulu time to brazil" e etc...</li>
-                                            <li><code className="token_reservada">Instant</code>: Utiliza 2 variáveis para representar <code className="token_reservada">Nano</code> e <code className="token_reservada">EpochSeconds</code>.</li>
+                                            <li><code className="token_reservada">Instant</code>: Utiliza 2 variáveis para representar <code className="token_reservada">Nano</code> e <code className="token_reservada">EpochSeconds</code>.
+
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando maneiras de instânciar e alguns métodos utilitários:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+
+                                                        <span className="-tokenComment"># Apesar de representar a menor unidade de tempo, ainda sim ele tem a junção das Temporais anteriores, porém ele possui Especialidade em nanossegundos;</span><br/><br/>
+                                                        
+                                                        <span className="-tokenComment"># Pegando o ponto instantâneo corrente do S.O: </span><br/>
+                                                        <code className="-tokenClassEntity">Instant</code> instant_now = <code className="-tokenClassEntity">Instant</code>.<code className="-tokenMethod">now</code>();<span className="-tokenComment">// static, ou seja, Não utilizamos `new`</span><br/>
+                                                        <span className="-tokenComment">// `.toString()` dele: 2022-12-09T00:20:37.073909679Z</span><br/>
+                                                        <span className="-tokenComment">// 'Z' no final significa "Zulu Time (UTC)"</span><br/>
+                                                        <br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Duas representações do Instant (Em baixo nível): </span><br/>
+                                                        <br/>
+                                                        instant_now.<code className="-tokenMethod">getEpochSecond</code>();<br/>
+                                                        <span className="-tokenComment">// 1670546135 (long) basicamente é os segundos</span><br/>
+                                                        instant_now.<code className="-tokenMethod">getNano</code>();<br/>
+                                                        <span className="-tokenComment">// 938357305 (int) 999.999.999 &#60;=&#62; 1 Epoch (basicamente é os nanossegundos)</span><br/>
+
+                                                        <br/><br/>
+                                                        <span className="-tokenComment"># Aqui explica na prática oq é o nano(milesimos e etc) e o epoch(segundo): </span><br/>
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">Instant</code>.<code className="-tokenMethod">ofEpochSecond</code>(<code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">999_999_999</code>).<code className="-tokenMethod">plusNanos</code>(<code className="-tokenKeyConstant">1</code>);<br/>
+                                                        <span className="-tokenComment">// 1970-01-01T00:00:0<code className="token_reservada">3</code>Z</span><br/>
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">Instant</code>.<code className="-tokenMethod">ofEpochSecond</code>(<code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">1_000_000_000</code>);<br/>
+                                                        <span className="-tokenComment">// 1970-01-01T00:00:0<code className="token_reservada">3</code>Z</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># <code className="token_reservada">Explicação</code>: passamos 2 segundos (EpochSecond) e depois somamos com + 1_000_000_000 (Nano) que equivale a 1 segundo (EpochSecond)</span><br/>
+                                                        <span className="-tokenComment">// Porisso que quando passamos 2 segundos (EpochSecond) e 999_999_999 (Nano) e realizamos a soma com `.plusNanos(1)` no final gera `3` segundos (1970-01-01T00:00:0<code className="token_reservada">3</code>Z) </span>
+                                                       
+                                                        <br/><br/>
+                                                        <span className="-tokenComment"># Mesma operação porém diminuindo com valores negativos:</span><br/>
+                                                        <code className="-tokenClassEntity">Instant</code>.<code className="-tokenMethod">ofEpochSecond</code>(<code className="-tokenKeyConstant">2</code>, -<code className="-tokenKeyConstant">1_000_000_000</code>);<br/>
+                                                        <span className="-tokenComment">// 1970-01-01T00:00:0<code className="token_reservada">1</code>Z</span><br/>
+                                                    </code>
+                                                </ul>
+                                            </li>
                                             <br/>
                                             <li>Principais Classes <code className="token_reservada">Utilitárias</code> do novo pacote:</li>
-                                            <li><code className="token_reservada">Duration</code>: Classe utilitária para pegar intervalos entre <code className="token_reservada">datas e horas ou APENAS horas</code>, NÃO sendo possível utilizar em datas simples "22/12/1999" (<code className="token_reservada">Compatível: Time or DateTime</code>). Exemplo de classes compatíveis: <code className="token_reservada">LocalDateTime</code>, <code className="token_reservada">LocalTime</code> e <code className="token_reservada">Instant</code>, mais informações sobre <code className="token_reservada">Duration</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/B_time/Aula123Duration_Intervalos_Utils.java" target="_blank">Clique AQUI!</a></li>
-                                            <li><code className="token_reservada">Period</code>: Classe utilitária com mesmo contexto da anterior, porém para pegar intervalos entre <code className="token_reservada">datas simples</code> "22/12/1999" solução para a limitação da anterior (<code className="token_reservada">Compatível: Date</code>). Exemplo de classes compatíveis: <code className="token_reservada">LocalDate</code>, mais informações sobre <code className="token_reservada">Period</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula124Period_IntervalosDate_Utils.java" target="_blank">Clique AQUI!</a></li>
+                                            <li><code className="token_reservada">Duration</code>: Classe utilitária para pegar intervalos entre <code className="token_reservada">datas e horas ou APENAS horas</code>, NÃO sendo possível utilizar em datas simples "22/12/1999" (<code className="token_reservada">Compatível: Time or DateTime</code>). Exemplo de classes compatíveis: <code className="token_reservada">LocalDateTime</code>, <code className="token_reservada">LocalTime</code> e <code className="token_reservada">Instant</code>, mais informações sobre <code className="token_reservada">Duration</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/B_time/Aula123Duration_Intervalos_Utils.java" target="_blank">Clique AQUI!</a>
+
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando maneiras de obter esses intervalos:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+ 
+                                                        <span className="-tokenComment"># Analisando diferanças entre anos: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalDateTime</code> dateTime_now = <code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">now</code>(<code className="-tokenClassEntity">ZoneId</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"America/Sao_Paulo"</code>));<br/>
+                                                        <code className="-tokenClassEntity">LocalDateTime</code> dateTime_nowAfterTwoYears = <code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">now</code>(<code className="-tokenClassEntity">ZoneId</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"America/Sao_Paulo"</code>))<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">plusYears</code>(<code className="-tokenKeyConstant">2</code>)</code>;<br/>
+
+                                                        <code className="-tokenClassEntity">Duration</code> d1 = <code className="-tokenClassEntity">Duration</code>.<code className="-tokenMethod">between</code>(dateTime_now, dateTime_nowAfterTwoYears);<br/>
+                                                        <span className="-tokenComment">// PT17544H0.000200349S (horas, e segundos)</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Analisando a diferença entre horas/minutos/segundos: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalTime</code> time_now = <code className="-tokenClassEntity">LocalTime</code>.<code className="-tokenMethod">now</code>(<code className="-tokenClassEntity">ZoneId</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"America/Sao_Paulo"</code>));<br/>
+                                                        <code className="-tokenClassEntity">LocalTime</code> time_nowMinus7Hours = <code className="-tokenClassEntity">LocalTime</code>.<code className="-tokenMethod">now</code>(<code className="-tokenClassEntity">ZoneId</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"America/Sao_Paulo"</code>))<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">minusHours</code>(<code className="-tokenKeyConstant">7</code>)</code>;<br/>
+
+                                                        <code className="-tokenClassEntity">Duration</code> d2 = <code className="-tokenClassEntity">Duration</code>.<code className="-tokenMethod">between</code>(time_now, time_nowMinus7Hours);<br/>
+                                                        <span className="-tokenComment">// PT-6H-59M-59.99997496S (horas, minutos e segundos)</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Analisando a diferença entre minutos e segundos: </span><br/>
+                                                        <code className="-tokenClassEntity">Duration</code> d2 = <code className="-tokenClassEntity">Duration</code>.<code className="-tokenMethod">between</code>(<code className="-tokenClassEntity">Instant</code>.<code className="-tokenMethod">now</code>(), <code className="-tokenClassEntity">Instant</code>.<code className="-tokenMethod">now</code>().<code className="-tokenMethod">plusSeconds</code>(<code className="-tokenKeyConstant">60</code>));<br/>
+                                                        <span className="-tokenComment">// PT1M0.000002428S (minutos, e segundos)</span><br/>
+
+                                                        <br/><br/>
+                                                        <span className="-tokenComment">#  Possibilita também converter dias em horas e etc: </span><br/>
+                                                        
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">Duration</code>.<code className="-tokenMethod">ofDays</code>(<code className="-tokenKeyConstant">20</code>);<br/>
+                                                        <code className="-tokenClassEntity">Duration</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">20</code>, <code className="-tokenClassEntity">ChronoUnit</code>.<code className="-tokenKeyConstant">DAYS</code>);<br/>
+                                                        <span className="-tokenComment">// 20 Days == PT480H (Duas maneiras diferentes que produzem o mesmo resultado)</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">Duration</code>.<code className="-tokenMethod">ofHours</code>(<code className="-tokenKeyConstant">20</code>);<br/>
+                                                        <code className="-tokenClassEntity">Duration</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">20</code>, <code className="-tokenClassEntity">ChronoUnit</code>.<code className="-tokenKeyConstant">HOURS</code>);<br/>
+                                                        <span className="-tokenComment">// 20 Hours == PT20H (Duas maneiras diferentes que produzem o mesmo resultado)</span>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">Duration</code>.<code className="-tokenMethod">ofMinutes</code>(<code className="-tokenKeyConstant">1000</code>);<br/>
+                                                        <code className="-tokenClassEntity">Duration</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1000</code>, <code className="-tokenClassEntity">ChronoUnit</code>.<code className="-tokenKeyConstant">MINUTES</code>);<br/>
+                                                        <span className="-tokenComment">// 1000 Minutes == PT16H40M (Duas maneiras diferentes que produzem o mesmo resultado)</span>
+                                                    </code>
+                                                </ul>
+
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação <code className="token_reservada">INVÁLIDA</code> (Utilizando Temporais que representam Datas simples e cruas (Sem horas) "dd/mm/yyyy") que lança <code className="token_reservada">UnsupportedTemporalTypeException</code>, a <code className="token_reservada">SOLUÇÃO</code> é utilizar próxima classe abaixo (<code className="token_reservada">Period</code>):</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+ 
+                                                        <span className="-tokenComment"># Analisando a diferença entre dias: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> date_now = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>();<br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> date_nowAfterTwoYears = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>()<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">plusYears</code>(<code className="-tokenKeyConstant">2</code>)</code>;<br/>
+
+                                                        <code className="-tokenClassEntity">Duration</code> d1Invalid_throwsEx = <code className="-tokenClassEntity">Duration</code>.<code className="-tokenMethod">between</code>(date_now, date_nowAfterTwoYears);<br/>
+                                                    </code>
+                                                </ul>    
+                                            </li>
+                                            <li><code className="token_reservada">Period</code>: Classe utilitária com mesmo contexto da anterior, porém para pegar intervalos entre <code className="token_reservada">datas simples</code> "22/12/1999" solução para a limitação da anterior (<code className="token_reservada">Compatível: Date</code>). Exemplo de classes compatíveis: <code className="token_reservada">LocalDate</code>, mais informações sobre <code className="token_reservada">Period</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula124Period_IntervalosDate_Utils.java" target="_blank">Clique AQUI!</a>
+                                                
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando maneiras de obter esses intervalos (Obs: Os retornos se baseiam em: Ano/Mes/Dia e não retorna SEMANAS!):</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+
+                                                        <code className="-tokenClassEntity">LocalDate</code> date_now = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>();<br/>
+
+                                                        <span className="-tokenComment"># Agora depois de 2 dias: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> date_nowAfter2Days = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>()<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">plusDays</code>(<code className="-tokenKeyConstant">2</code>)</code>;<br/>
+
+                                                        <code className="-tokenClassEntity">Period</code> period_nowAfter2Days = <code className="-tokenClassEntity">Period</code>.<code className="-tokenMethod">between</code>(date_now, date_nowAfter2Days);<br/>
+                                                        <span className="-tokenComment">// P2D</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Agora depois de 2 anos: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> date_nowAfter2Years = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>()<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">plusYears</code>(<code className="-tokenKeyConstant">2</code>)</code>;<br/>
+
+                                                        <code className="-tokenClassEntity">Period</code> period_nowAfter2Years = <code className="-tokenClassEntity">Period</code>.<code className="-tokenMethod">between</code>(date_now, date_nowAfter2Years);<br/>
+                                                        <span className="-tokenComment">// P2Y</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Agora depois de 2 anos e 7 dias: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> date_nowAfter2YearsAnd7Days = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>()<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">plusYears</code>(<code className="-tokenKeyConstant">2</code>).<code className="-tokenMethod">plusDays</code>(<code className="-tokenKeyConstant">7</code>) </code>;<br/>
+
+                                                        <code className="-tokenClassEntity">Period</code> period_nowAfter2YearsAnd7Days = <code className="-tokenClassEntity">Period</code>.<code className="-tokenMethod">between</code>(date_now, date_nowAfter2YearsAnd7Days);<br/>
+                                                        <span className="-tokenComment">// P2Y7D</span><br/>
+
+                                                        <br/><br/>
+                                                        <span className="-tokenComment"># Convertendo 58 semanas em dias: </span><br/>
+                                                        <code className="-tokenClassEntity">Period</code>.<code className="-tokenMethod">ofWeeks</code>(<code className="-tokenKeyConstant">58</code>);<br/>
+                                                        <span className="-tokenComment">// P406D</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Convertendo 58 meses: (Obs ele suporta meses então retornará o obvio)</span><br/>
+                                                        <code className="-tokenClassEntity">Period</code>.<code className="-tokenMethod">ofMonths</code>(<code className="-tokenKeyConstant">58</code>);<br/>
+                                                        <span className="-tokenComment">// P58M</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Periodo entre anos (Tomar cuidados): </span><br/>
+                                                        <span className="-tokenComment"># Parte que explica aonde <code className="token_reservada">NÃO possui suporte</code>: </span><br/>
+                                                        <span className="-tokenComment"># Tomar cuidados pois o método `.getMonths()` não retorna a Unidade Normalizada! (15 Months é != de 1 Year e 3 Months) </span><br/>
+                                                        <code className="-tokenClassEntity">Period</code>.<code className="-tokenMethod">between</code>(date_now, date_now.<code className="-tokenMethod">plusDays</code>(period_nowAfter2YearsAnd7Days.<code className="-tokenMethod">getDays</code>())).<code className="-tokenMethod">getMonths</code>());<br/>
+                                                        <span className="-tokenComment">// <code className="token_reservada">NÃO lança exceções</code>, mas retorna erros de lógica!! </span><br/> 
+                                                        <span className="-tokenComment">// <code className="token_reservada">SOLUÇÃO</code>: ChronoUnit</span><br/> 
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># <code className="token_reservada">Solução</code>: </span><br/>
+                                                        date_now.<code className="-tokenMethod">until</code>(date_now.<code className="-tokenMethod">plusDays</code>(period_nowAfter2YearsAnd7Days.<code className="-tokenMethod">getDays</code>()), <code className="-tokenClassEntity">ChronoUnit</code>.<code className="-tokenKeyConstant">YEARS</code>);
+                                                    </code>
+                                                </ul>
+                                            </li>
                                             <br/>
                                             <li><code className="token_reservada">ChronoUnit</code>: Tudo que é co-relacionado a datas, horas, minutos, segundos, milissegundos e nano segundos utiliza <code className="token_reservada">ChronoUnit</code>, que seria tipo a "tipagem" desses tempos, logo, bastante métodos deste contexto utilizam eles como parâmetro e também temos métodos utilitários para cada tipo dessas unidades de tempo. (Exemplo de uso: Periodo entre dias <code className="token_reservada">ChronoUnit.DAY.beetween(talDia, talDia);</code>, mais informações sobre <code className="token_reservada">ChronoUnit</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula125ChronoUnit_Utils.java" target="_blank">Clique AQUI!</a></li>
                                             <br/>
