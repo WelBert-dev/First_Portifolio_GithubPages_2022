@@ -55,7 +55,7 @@
     font-size: .9rem;
     background-color: #000;
     border-radius: 5px;
-    padding: 2px;
+    padding: 1px;
     margin: 2px auto 0 auto;
 }
 
@@ -181,7 +181,7 @@ a.-linkBoldYellowProjects {
 }
 
 ul.-nestedInnerUl {
-    margin: 0.5rem 1rem;
+    margin: .5rem 0 0 .5rem;
     list-style-type: disc;
 }
 
@@ -261,7 +261,7 @@ ul.main-implementFullBlock--container {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
-    margin-top: 0.5rem;
+    margin: .5rem 0 0 .5rem;
 }
 
 code.implementFullBlock {
@@ -275,6 +275,8 @@ code.implementFullBlock {
     text-shadow: 1px 1px 3px #000;
     line-height: 1rem;
     text-align: left;
+    width: 100%;
+    border: 3px double #000;
 }
 
 p.main-title--implementFullBlock {
@@ -299,6 +301,25 @@ span.outputResult--implementFullBlock {
     border-radius: 4px;
     border: 3px double #044910;
     padding: 2px;
+}
+
+ul.projects-frontend--container > li.-marginNone--inMobile > p {
+    margin-left: .5rem;
+    display: list-item;
+}
+
+ul.projects-frontend--container > li.-marginNone--inMobile > p.-listItem--inMobile {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+ul.projects-frontend--container > li.-marginNone--inMobile > p.-listItem--inMobile::marker {
+    color: #1877ff;
+    margin-right: 0;
+}
+
+ul.projects-frontend--container > li.-marginNone--inMobile {
+    display: inline-block;
 }
 
 @media (max-width: 810px)
@@ -335,7 +356,39 @@ span.outputResult--implementFullBlock {
     code.token_reservada {
         font-size: .7rem;
     }
+
+    ul.projects-description--container {
+        margin: 0;
+    }
+
+    ul.projects-description--container > li > h3 {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+
+    ul.projects-frontend--container > li {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
     
+    ul.projects-frontend--container > li.-marginNone--inMobile {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    ul.projects-frontend--container > li.-marginNone--inMobile > p {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+
+    ul.projects-frontend--container > li.-marginNone--inMobile > p.-listItem--inMobile {
+        margin-left: .5rem;
+        margin-right: .5rem;
+    }
+
+    ul.main-implementFullBlock--container {
+        margin: 0.5rem 0 0 0;
+    }
 }
 
 @media (max-width: 425px)
@@ -427,6 +480,7 @@ span.outputResult--implementFullBlock {
         font-size: .6rem;
         text-shadow: 1px 1px 3px #000;
         line-height: 1rem;
+        padding: 0.2rem 0 0.2rem 0.2rem;
     }
 
     code.outputResult {
