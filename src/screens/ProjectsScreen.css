@@ -332,6 +332,11 @@ ul.projects-frontend--container > li.-marginNone--inMobile {
     display: inline-block;
 }
 
+pre.pre-implementFullBlock {
+    display: inline-block;
+    font-size: .8rem;
+}
+
 @media (max-width: 810px)
 {
     .projects-title {
@@ -519,5 +524,9 @@ ul.projects-frontend--container > li.-marginNone--inMobile {
 
     p.main-title--implementFullBlock {
         margin-left: 0rem;
+    }
+
+    pre.pre-implementFullBlock {
+        font-size: .6rem;
     }
 }
