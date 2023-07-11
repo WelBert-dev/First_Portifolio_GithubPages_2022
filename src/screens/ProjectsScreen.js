@@ -32,7 +32,7 @@ export default function ProjectsScreen() {
                                 <span>Criei esse projeto no github durante meus estudos para servir como um "Dicionário" de consultas.</span>
                                 <span>Agora estou transferindo essas informações do github neste Portifólio como uma espécie de "Bíblia".</span>
                                 <span>A ideia é sempre ir atualizando o conhecimento aqui, e também irei implementar barra de pesquisa por palavras chaves.</span>
-                                <span>Depois de finalizado todos os Módulos (Com exemplos de códigos e tudo mais) irei "esconder" as seções e só será exibido ao clicar no botão.</span>
+                                <span>Depois de finalizado todos os Módulos (Com exemplos de códigos) irei "esconder" as seções e só será exibido ao clicar no botão.</span>
                                 <span>Curso mais completo do Youtube sobre desenvolvimento com Java do canal @DevDojoBrasil.</span>
                                 <span>Documentei o curso completo desde Fundamentos até a API Nativa, com Total de 285 Aulas.</span>
                                 <span>Porém eu não fiz o curso desde o inicio pois eu já estudei POO com a linguagem C# no IFSP.</span>
@@ -1133,69 +1133,398 @@ export default function ProjectsScreen() {
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
 
-                                                        <code className="-tokenClassEntity">LocalDateTime</code> birthday = <code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1999</code>, <code className="-tokenClassEntity">Month</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">22</code>);<br/>
+                                                        <code className="-tokenClassEntity">LocalDateTime</code> birthday = {window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1999</code>, <code className="-tokenClassEntity">Month</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">22</code>);<br/>
 
                                                         <br/>
                                                         <span className="-tokenComment"># Obs: A diferença entre o método `.with()` e `.plusDays()` dos objetos Temporais, é que o `.with()` altera a data SOBRESCREVENDO o valor, e o `.plusDays()` altera SOMANDO os valores.</span><br/>
+                                                        <br/>
                                                         <span className="-tokenComment"># Alterando a data sobrescrevendo ao invés de somar e etc...</span><br/>
                                                         
                                                         <br/> 
-                                                        <span className="-tokenComment"># EM DESENVOLVIMENTO!! Completo no Github! ;D</span>
+                                                        <span className="-tokenComment"># Re-atribuí na mesma variável de referência, pois as classes Temporais são IMUTÁVEIS!</span><br/>
+                                                        <span className="-tokenComment"># Obs: Esse Enumerador do ChronoField retornará um TemporalField NÃO um TemporalAdjuster, porém o método `.with()` possuí uma sobrecarga que recebe como parâmetro esse tipo, porisso é possível utiliza-lo também.</span><br/>
+                                                        birthday = birthday.<code className="-tokenMethod">with</code>(<code className="-tokenClassEntity">ChronoField</code>.<code className="-tokenKeyConstant">MONTH_OF_YEAR</code>, <code className="-tokenKeyConstant">10</code>);<br/>
+                                                        <span className="-tokenComment">// `.toString()` dele: 1999-10-22 (sobrescreveu o mês 12 (Definido inicialmente) pelo 10)</span><br/>
+                                                        
+                                                        <br/>
+                                                        <span className="-tokenComment"># Pegando o próximo dia da semana ou o atual (Exemplo: quando será a próxima terça?)</span><br/>
+                                                        <span className="-tokenComment"># Obs: As diferenças entre `.nextOrSame()` (Hoje, ou a próxima) e `.next()` é que a primeira (`.nextOrSame()`) retornará HOJE se corresponder com o argumento, ou a próxima que corresponder, já a segunda (`.next()`) só considera a próxima (Mesmo se o dia de hoje corresponder com o argumento).</span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> tuesday_nowOrNextWeek = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>()<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">with</code>(<code className="-tokenClassEntity">TemporalAdjusters</code>.<code className="-tokenMethod">nextOrSame</code>(<code className="-tokenClassEntity">DayOfWeek</code>.<code className="-tokenKeyConstant">TUESDAY</code>));</code><br/>
+                                                        <span className="-tokenComment">// Retornará HOJE se for Terça feira ou a próxima Terça feira se hoje não for.</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> tuesday_nextWeekOrNextWeek = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>()<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">with</code>(<code className="-tokenClassEntity">TemporalAdjusters</code>.<code className="-tokenMethod">next</code>(<code className="-tokenClassEntity">DayOfWeek</code>.<code className="-tokenKeyConstant">TUESDAY</code>));</code><br/>
+                                                        <span className="-tokenComment">// Sempre retornára a próxima Terça feira independentemente se for hoje, sempre a próxima.</span><br/>
+                                                        
+                                                        <br/>
+                                                        <span className="-tokenComment"># Pega o último dia do mês corrente com Calendar</span><br/>
+                                                        <code className="-tokenClassEntity">GregorianCalendar</code>.<code className="-tokenMethod">getInstance</code>()<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">getMaximum</code>(<code className="-tokenClassEntity">Calendar</code>.<code className="-tokenKeyConstant">DAY_OF_MONTH</code>);</code><br/>
+                                                        <span className="-tokenComment">// 31</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Ajusta a data setando o último dia do mês corrente na data corrente (com TemporalAdjusters)</span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> now_withLastDayOfMonth = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>()<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">with</code>(<code className="-tokenClassEntity">TemporalAdjusters</code>.<code className="-tokenMethod">lastDayOfMonth</code>());</code><br/>
+                                                        <span className="-tokenComment">// `.toString()` dele: 2022-12-31</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Ajusta a data setando o primeiro dia do mês corrente (com TemporalAdjusters)</span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> now_withFirstDayOfMonth = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>()<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">with</code>(<code className="-tokenClassEntity">TemporalAdjusters</code>.<code className="-tokenMethod">firstDayOfMonth</code>());</code><br/>
+                                                        <span className="-tokenComment">// `.toString()` dele: 2022-12-01</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Ajusta a data setando o primeiro ou último dia de um mês X (Basta escolher no `.of()`)</span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> dateOf_withFirstDayOfMonth = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">2022</code>, <code className="-tokenKeyConstant">10</code>, <code className="-tokenKeyConstant">22</code>)<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">with</code>(<code className="-tokenClassEntity">TemporalAdjusters</code>.<code className="-tokenMethod">firstDayOfMonth</code>());</code><br/>
+                                                        <span className="-tokenComment">// `.toString()` dele: 2022-10-01</span><br/>
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> dateOf_withLastDayOfMonth = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">2022</code>, <code className="-tokenKeyConstant">10</code>, <code className="-tokenKeyConstant">22</code>)<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">with</code>(<code className="-tokenClassEntity">TemporalAdjusters</code>.<code className="-tokenMethod">lastDayOfMonth</code>());</code><br/>
+                                                        <span className="-tokenComment">// `.toString()` dele: 2022-10-31</span><br/>
                                                     </code>
                                                 </ul>
                                             </li>
-                                            <li><code className="token_reservada">TemporalAdjusters (Interface)</code>: A Interface é polimorfica, utilizada como parâmetro de várias classes relacionadas ao tempo, podemos assim sobrecrever <code className="token_reservada">@Override</code> o método <code className="token_reservada">public Temporal adjustInto(Temporal temporal)</code> para personalizar regras de negócios, mais detalhes sobre as possibilidades de implementações em <code className="token_reservada">src</code> de treino no repositório git (Exemplo: Pegando o próximo dia útil, considerando de segunda até quinta): <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula127TemporalAdjuster_Impl_ExeComWith.java" target="_blank">Clique AQUI!</a></li>
-                                            <li><code className="token_reservada">TemporalAdjusters (Classe)</code>: Obs: A diferença entre <code className="token_reservada">.with()</code> e <code className="token_reservada">.plusDays()</code> é que o <code className="token_reservada">.with()</code> altera sobrescrevendo a data (Equivalente ao <code className="token_reservada">`=`</code>), já o <code className="token_reservada">.plusDays()</code> faz a adição nele (Equivalente ao <code className="token_reservada">`+=`</code>).</li>
+                                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">TemporalAdjuster (Interface)</code>: A Interface é polimorfica, utilizada como parâmetro de várias classes relacionadas ao tempo, podemos assim sobrecrever <code className="token_reservada">@Override</code> o método <code className="token_reservada">public Temporal adjustInto(Temporal temporal)</code> para personalizar regras de negócios, mais detalhes sobre as possibilidades de implementações em <code className="token_reservada">src</code> de treino no repositório git (Exemplo: Pegando o próximo dia útil, considerando de segunda até quinta): <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula127TemporalAdjuster_Impl_ExeComWith.java" target="_blank">Clique AQUI!</a></p>
+
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando o polimorfismo sobrescrevendo o método <code className="token_reservada">.adjustInto()</code> da interface TemporalAdjuster que é parâmetro de diversos métodos de instância das Classes Temporais, assim podemos personalizar regras de negócios utilizando o polimorfismo a nosso favor; Desafio proposto: Retornar o próximo dia útil (em uma semana que só vai até quinta), ou seja, se hoje for quinta, sexta, sabado, ou domingo, o próximo dia útil será segunda. Para outros dias (segunda, terça, e quarta) o próximo dia útil será o correspondente (Razão 1).</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                    
+                                                        <span className="-tokenComment"># 1o Primeiro - Implementamos a interface e sobrescrevemos o método `adjustInto()` com regras de negócios personalizadas: </span><br/>
+                                                        <code className="-tokenKeyword">class</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>  <code className="-tokenKeyword">implements</code> <code className="-tokenInterfaceEntity">TemporalAdjuster</code> &#123;<br/>
+                                                            <br/>
+                                                            <code className="-nestedInnerCode -tokenAnnotationsEntity">@Override</code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">public</code> <code className="-tokenInterfaceEntity">Temporal</code> <code className="-tokenMethod">adjustInto</code>(<code className="-tokenInterfaceEntity">Temporal</code> temporal) &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">DayOfWeek</code> currentDayOfWeek = <code className="-tokenClassEntity">DayOfWeek</code>.<code className="-tokenMethod">of</code>(temporal.<code className="-tokenMethod">get</code>(<code className="-tokenClassEntity">ChronoField</code>.<code className="-tokenKeyConstant">DAY_OF_WEEK</code>));</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">int</code> addDays;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">switch</code> (currentDayOfWeek) &#123;</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation"><code className="-tokenKeyword">case</code> <code className="-tokenKeyConstant">THURSDAY</code>: addDays = <code className="-tokenKeyConstant">4</code>; <code className="-tokenKeyword">break</code>;</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation"><code className="-tokenKeyword">case</code> <code className="-tokenKeyConstant">FRIDAY</code>: addDays = <code className="-tokenKeyConstant">3</code>; <code className="-tokenKeyword">break</code>;</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation"><code className="-tokenKeyword">case</code> <code className="-tokenKeyConstant">SATURDAY</code>: addDays = <code className="-tokenKeyConstant">2</code>; <code className="-tokenKeyword">break</code>;</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation"><code className="-tokenKeyword">default</code>: addDays = <code className="-tokenKeyConstant">1</code>; <code className="-tokenKeyword">break</code>;</code><br/>                                                            <code className="-nestedInnerCode --2Identation">&#125;</code><br/>
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">return</code> temporal.<code className="-tokenMethod">plus</code>(addDays, <code className="-tokenClassEntity">ChronoUnit</code>.<code className="-tokenKeyConstant">DAYS</code>);</code><br/>
+                                                        &#125;<br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># 2o Segundo - Realizamos as chamadas passando a implementação personalizada:</span><br/>
+                                                        <code className="-tokenKeyword">public class</code> <code className="-tokenClassEntity">Main</code>  &#123;<br/>
+                                                            <code className="-nestedInnerCode"> <code className="-tokenKeyword">public static</code> <code className="-tokenClassEntity">void</code> <code className="-tokenMethod">main</code>(<code className="-tokenClassEntity">String</code>[] args) &#123;</code><br/>
+                                                            
+                                                            <br/>
+                                                            <span className="-tokenComment -nestedInnerCode"># Obs: Ainda NÃO altera em memória, pois as Temporais são IMUTÁVEIS, então a regra só é aplicada no retorno</span><br/>
+                                                            
+                                                            <br/>
+                                                            <span className="-tokenComment -nestedInnerCode"># Próximo dia útil de segunda</span><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">LocalDate</code> dateOf_segunda = {window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">2022</code>, <code className="-tokenClassEntity">Month</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">19</code>);</code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"FROM "</code> + dateOf_segunda.<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">" next util day is: "</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_segunda.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()) + <code className="-tokenString">" ("</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_segunda.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()).<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">")"</code>);</code><br/>
+                                                            <span className="-tokenComment -nestedInnerCode">// FROM MONDAY next util day is: 2022-12-20 (TUESDAY)</span><br/>
+                                                            
+                                                            <br/>
+                                                            <span className="-tokenComment -nestedInnerCode"># Próximo dia útil de terça</span><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">LocalDate</code> dateOf_terca = {window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">2022</code>, <code className="-tokenClassEntity">Month</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">20</code>);</code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"FROM "</code> + dateOf_terca.<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">" next util day is: "</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_terca.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()) + <code className="-tokenString">" ("</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_terca.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()).<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">")"</code>);</code><br/>
+                                                            <span className="-tokenComment -nestedInnerCode">// FROM TUESDAY next util day is: 2022-12-21 (WEDNESDAY)</span><br/>
+
+                                                            <br/>
+                                                            <span className="-tokenComment -nestedInnerCode"># Próximo dia útil de quarta</span><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">LocalDate</code> dateOf_quarta = {window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">2022</code>, <code className="-tokenClassEntity">Month</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">21</code>);</code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"FROM "</code> + dateOf_quarta.<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">" next util day is: "</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_quarta.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()) + <code className="-tokenString">" ("</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_quarta.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()).<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">")"</code>);</code><br/>
+                                                            <span className="-tokenComment -nestedInnerCode">// FROM WEDNESDAY next util day is: 2022-12-22 (THURSDAY)</span><br/>
+
+                                                            <br/>
+                                                            <span className="-tokenComment -nestedInnerCode"># Próximo dia útil de quinta</span><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">LocalDate</code> dateOf_quinta = {window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">2022</code>, <code className="-tokenClassEntity">Month</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">22</code>);</code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"FROM "</code> + dateOf_quinta.<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">" next util day is: "</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_quinta.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()) + <code className="-tokenString">" ("</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_quinta.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()).<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">")"</code>);</code><br/>
+                                                            <span className="-tokenComment -nestedInnerCode">// FROM THURSDAY next util day is: 2022-12-26 (MONDAY)</span><br/>
+
+                                                            <br/>
+                                                            <span className="-tokenComment -nestedInnerCode"># Próximo dia útil de sexta</span><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">LocalDate</code> dateOf_sexta = {window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">2022</code>, <code className="-tokenClassEntity">Month</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">23</code>);</code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"FROM "</code> + dateOf_sexta.<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">" next util day is: "</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_sexta.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()) + <code className="-tokenString">" ("</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_sexta.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()).<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">")"</code>);</code><br/>
+                                                            <span className="-tokenComment -nestedInnerCode">// FROM FRIDAY next util day is: 2022-12-26 (MONDAY)</span><br/>
+                                                            
+                                                            <br/>
+                                                            <span className="-tokenComment -nestedInnerCode"># Próximo dia útil de sabado</span><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">LocalDate</code> dateOf_sabado = {window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">2022</code>, <code className="-tokenClassEntity">Month</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">24</code>);</code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"FROM "</code> + dateOf_sabado.<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">" next util day is: "</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_sabado.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()) + <code className="-tokenString">" ("</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_sabado.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()).<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">")"</code>);</code><br/>
+                                                            <span className="-tokenComment -nestedInnerCode">// FROM SATURDAY next util day is: 2022-12-26 (MONDAY)</span><br/>
+
+                                                            <br/>
+                                                            <span className="-tokenComment -nestedInnerCode"># Próximo dia útil de domingo</span><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">LocalDate</code> dateOf_domingo = {window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">2022</code>, <code className="-tokenClassEntity">Month</code>.<code className="-tokenKeyConstant">DECEMBER</code>, <code className="-tokenKeyConstant">25</code>);</code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"FROM "</code> + dateOf_domingo.<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">" next util day is: "</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_domingo.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()) + <code className="-tokenString">" ("</code> +</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">dateOf_domingo.<code className="-tokenMethod">with</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">GetLastUtilDayWithTemporalAdjuster</code>()).<code className="-tokenMethod">getDayOfWeek</code>() + <code className="-tokenString">")"</code>);</code><br/>
+                                                            <span className="-tokenComment -nestedInnerCode">// FROM SUNDAY next util day is: 2022-12-26 (MONDAY)</span><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+                                                        &#125;<br/>
+                                                    </code>
+                                                </ul>
+                                            </li>
+                                            <li><code className="token_reservada">Comportamento das Classes Temporais</code>: Obs: A diferença entre os métodos de instância <code className="token_reservada">.with()</code> e <code className="token_reservada">.plusDays()</code> das Classes Temporais é que o <code className="token_reservada">.with()</code> altera sobrescrevendo a data (Equivalente ao <code className="token_reservada">`=`</code>), já o <code className="token_reservada">.plusDays()</code> faz a adição nele (Equivalente ao <code className="token_reservada">`+=`</code>).</li>
                                             <br/>
-                                            <li><code className="token_reservada">Zone</code>: Representa as zonas suportadas pelo Java, essas zonas é as representações dos fuso horários (<code className="token_reservada">OffSet</code>), mais informações sobre essas <code className="token_reservada">Zonas</code>, <code className="token_reservada">OffSet</code>, <code className="token_reservada">ZonedId</code>, <code className="token_reservada">ZonedDateTime</code>, <code className="token_reservada">ZoneOffSet</code>, <code className="token_reservada">OffSetDateTime</code> e etc: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula128Zone_Utils.java" target="_blank">Clique AQUI!</a></li>
+                                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">Zone</code>: Representa as zonas suportadas pelo Java, essas zonas é as representações dos fuso horários (<code className="token_reservada">OffSet</code>), mais informações sobre essas <code className="token_reservada">Zonas</code>, <code className="token_reservada">OffSet</code>, <code className="token_reservada">ZonedId</code>, <code className="token_reservada">ZonedDateTime</code>, <code className="token_reservada">ZoneOffSet</code>, <code className="token_reservada">OffSetDateTime</code> e etc: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula128Zone_Utils.java" target="_blank">Clique AQUI!</a></p>
+                                            
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando essas zonas e como verificar diferenças entre os diversos fusos horários e etc...</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+
+                                                        <span className="-tokenComment"># Para obter a lista de zonas suportadas pelo Java:</span><br/>
+                                                        <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">String</code>, <code className="-tokenClassEntity">String</code>&#62; shortIds = <code className="-tokenClassEntity">ZoneId</code>.<code className="-tokenKeyConstant">SHORT_IDS</code>;<br/>
+                                                        <span className="-tokenComment">// A Lista de zonas suportadas está logo abaixo deste código aqui no portifólio! ^^</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Obtendo a zona padrão do sistema:</span><br/>
+                                                        <code className="-tokenClassEntity">ZoneId</code> zonedIdOfBrazil_withDefault = <code className="-tokenClassEntity">ZoneId</code>.<code className="-tokenMethod">systemDefault</code>();<br/>
+                                                        <span className="-tokenComment">// America/Sao_Paulo</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Obtendo a zona apartir de algum valor do Map:</span><br/>
+                                                        <code className="-tokenClassEntity">ZoneId</code> zonedIdOfTokyo = <code className="-tokenClassEntity">ZoneId</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"Asia/Tokyo"</code>);<br/>
+                                                        <span className="-tokenComment">// Asia/Tokyo</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Current sem alteração:</span><br/>
+                                                        <code className="-tokenClassEntity">LocalDateTime</code> now_inAmericaSP = <code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">now</code>();<br/>
+                                                        <span className="-tokenComment">// 2022-12-26T19:42:15.690664806</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Alterando a representação da data para outros paises:</span><br/>
+                                                        <code className="-tokenClassEntity">LocalDateTime</code> now_inAsiaTokyo = <code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">now</code>(zonedIdOfTokyo);<br/>
+                                                        <span className="-tokenComment">// 2022-12-27T07:42:15.690913888</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Verificando as diferenças de fuso horário entre dois paises/zonas:</span><br/>
+                                                        <code className="-tokenClassEntity">ZonedDateTime</code> now_difFuso_byAmericaSPFromAsiaTokyo = now_inAmericaSP.<code className="-tokenMethod">atZone</code>(zonedIdOfTokyo);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26T19:45:19.447985416+09:00[Asia/Tokyo]</span><br/>
+                                                        <span className="-tokenComment">// Ou seja as diferenças entre SP e Tokyo é de +9 Horas em relação a SP</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Mesma operação anterior porém com Instant que já trás convertido (devido a trabalhar com Zulu Time UTC):</span><br/>
+                                                        <code className="-tokenClassEntity">Instant</code> now_instant = <code className="-tokenClassEntity">Instant</code>.<code className="-tokenMethod">now</code>();<br/>
+                                                        <span className="-tokenComment">// 2022-12-26T22:56:11.628306908Z (Z de Zulu Time)</span><br/>
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">ZonedDateTime</code> now_zonedDateTimeOfTokyo = now_instant.<code className="-tokenMethod">atZone</code>(zonedIdOfTokyo);<br/>
+                                                        <span className="-tokenComment">// 2022-12-27T07:56:11.628306908+09:00[Asia/Tokyo]</span><br/>
+                                                        <span className="-tokenComment">// a diferença entre ZuluTime e Tokyo é de +9Horas em relação ao Zulu (Já trás formatado corretamente)</span><br/>
+                                                        <span className="-tokenComment">// A conversão está aqui: 2022-12-<code className="token_reservada">26</code>T<code className="token_reservada">22</code>:56:11.628306908Z (Esse é o Zulu sem conversão presente no `now_instant`)</span><br/>
+                                                        <span className="-tokenComment">// Esse é o resultado da operação `.atZone()` que faz a conversão: 2022-12-<code className="token_reservada">27</code>T<code className="token_reservada">07</code>:56:11.628306908+09:00[Asia/Tokyo]</span><br/>
+                                                        <span className="-tokenComment">// Ou seja, o dia fez roll de +9 horas e mudou o dia automaticamente (pois o Instant trabalha com ZuluTime que é universal, ou seja, sempre vai ser o mesmo calculo para obter horários corretos de acordo com cada zona)</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Mesma operação anterior porém trabalhando com o padrão do Sistema corrente:</span><br/>
+                                                        <code className="-tokenClassEntity">ZonedDateTime</code> now_zonedDateTimeOfSystemDefault = now_instant.<code className="-tokenMethod">atZone</code>(<code className="-tokenClassEntity">ZonedDateTime</code>.<code className="-tokenMethod">now</code>().<code className="-tokenMethod">getZone</code>());<br/>
+                                                        <span className="-tokenComment">// 2022-12-26T19:56:11.628306908-03:00[America/Sao_Paulo]</span><br/>
+                                                        <span className="-tokenComment">// a diferença entre ZuluTime e São Paulo é de -3Horas em relação ao Zulu (Já trás formatado corretamente)</span><br/>
+                                                        <span className="-tokenComment">// A conversão está aqui: 2022-12-26T<code className="token_reservada">22</code>:56:11.628306908Z (Esse é o Zulu sem conversão presente no `now_instant`)</span><br/>
+                                                        <span className="-tokenComment">// Esse é o resultado da operação `.atZone()` que faz a conversão: 2022-12-26T<code className="token_reservada">19</code>:56:11.628306908-03:00[America/Sao_Paulo]</span><br/>
+                                                        <span className="-tokenComment">// Ou seja, o dia fez rollback de -3 horas e mudou apenas o horário (de 22hrs para 19hrs)</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Fazendo a mesma coisa porém de uma forma mais "Facil"</span><br/>
+                                                        <span className="-tokenComment"># Quando não se sabe o ZoneID, porém sabe as diferenças entre os horários:</span><br/>
+
+                                                        <code className="-tokenClassEntity">ZoneOffset</code> ofSet_tokyo = <code className="-tokenClassEntity">ZoneOffset</code>.<code className="-tokenMethod">of</code>(<code className="-tokenString">"+09:00"</code>);<br/>
+                                                        <code className="-tokenClassEntity">OffsetDateTime</code> offsetDateTime_difFuso_byAmericaFromTokyo = now_inAmericaSP.<code className="-tokenMethod">atOffset</code>(ofSet_tokyo);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26T20:09:50.062410339+09:00</span><br/>
+                                                        <span className="-tokenComment">// Mesmo resultado anterior porém aqui NÃO contém o ZoneID no final "[Asia/Tokyo]"</span><br/>
+                                                        <span className="-tokenComment">// Ou seja, uma respresentação mais completa de uma data seria algo como "Data/Hora/MiliSeconds/OffSet/Zona"</span><br/>
+                                                    
+                                                        <br/>
+                                                        <span className="-tokenComment"># Mesma operação porém com outro método (Surte o mesmo efeito):</span><br/>
+                                                        <code className="-tokenClassEntity">OffsetDateTime</code> offsetDateTime_difFuso_byAmericaFromTokyo2 = <code className="-tokenClassEntity">OffsetDateTime</code>.<code className="-tokenMethod">of</code>(now_inAmericaSP, ofSet_tokyo);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26T20:09:50.062410339+09:00</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Mesma operação e utilizando Instant que já faz a conversão automaticamente:</span><br/>
+                                                        <code className="-tokenClassEntity">OffsetDateTime</code> offsetDateTime_difFuso_byZuluFromAmerica =  now_instant.<code className="-tokenMethod">atOffset</code>(<code className="-tokenClassEntity">ZonedDateTime</code>.<code className="-tokenMethod">now</code>().<code className="-tokenMethod">getOffset</code>());<br/>
+                                                        <span className="-tokenComment">// 2022-12-26T20:23:22.972477392-03:00</span><br/>
+
+                                                        <br/><br/>
+                                                        <span className="-tokenComment"># Trabalhando com eras (Japão) - Atualmente:</span><br/>
+                                                        <code className="-tokenClassEntity">JapaneseDate</code> japoneseDate = <code className="-tokenClassEntity">JapaneseDate</code>.<code className="-tokenMethod">from</code>(<code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>());<br/>
+                                                        <span className="-tokenComment">// Atual: Japanese Reiwa 4-12-26</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Trabalhando com eras (Japão) - Antigamente:</span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> meijiEraLocalDate = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">of</code>(<code className="-tokenKeyConstant">1900</code>, <code className="-tokenKeyConstant">2</code>, <code className="-tokenKeyConstant">1</code>);<br/>
+                                                        <code className="-tokenClassEntity">JapaneseDate</code> meijiEra = <code className="-tokenClassEntity">JapaneseDate</code>.<code className="-tokenMethod">from</code>(meijiEraLocalDate);<br/>
+                                                        <span className="-tokenComment">// Antigamente: Japanese Meiji 33-02-01</span><br/>
+                                                    </code>
+                                                </ul>
+                                            </li>
                                             <br/>
                                             <li><code className="token_reservada">ZonedId</code>: Com elá é possível retornar um mapa <code className="token_reservada">Map</code> com as zonas suportadas pelo Java.</li>
                                             <li>Saída do <code className="token_reservada">.toString()</code> do <code className="token_reservada">Map&lt;String, String&gt; shortIds = ZoneId.SHORT_IDS;</code> com as Zonas suportadas: </li>
-                                            <li><code className="token_reservada">EAT=Africa/Addis_Ababa</code></li>
-                                            <li><code className="token_reservada">EST=-05:00</code></li>
-                                            <li><code className="token_reservada">PNT=America/Phoenix</code></li>
-                                            <li><code className="token_reservada">PLT=Asia/Karachi</code></li>
-                                            <li><code className="token_reservada">CNT=America/St_Johns</code></li>
-                                            <li><code className="token_reservada">IET=America/Indiana/Indianapolis</code></li>
-                                            <li><code className="token_reservada">VST=Asia/Ho_Chi_Minh</code></li>
-                                            <li><code className="token_reservada">JST=Asia/Tokyo</code></li>
-                                            <li><code className="token_reservada">ART=Africa/Cairo</code></li>
-                                            <li><code className="token_reservada">PST=America/Los_Angeles</code></li>
-                                            <li><code className="token_reservada">BET=America/Sao_Paulo</code></li>
-                                            <li><code className="token_reservada">MIT=Pacific/Apia</code></li>
-                                            <li><code className="token_reservada">CAT=Africa/Harare</code></li>
-                                            <li><code className="token_reservada">AGT=America/Argentina/Buenos_Aires</code></li>
-                                            <li><code className="token_reservada">NET=Asia/Yerevan</code></li>
-                                            <li><code className="token_reservada">CST=America/Chicago</code></li>
-                                            <li><code className="token_reservada">IST=Asia/Kolkata </code></li>
-                                            <li><code className="token_reservada">AET=Australia/Sydney</code></li>
-                                            <li><code className="token_reservada">BST=Asia/Dhaka</code></li>
-                                            <li><code className="token_reservada">ACT=Australia/Darwin</code></li>
-                                            <li><code className="token_reservada">HST=-10:00</code></li>
-                                            <li><code className="token_reservada">NST=Pacific/Auckland</code></li>
-                                            <li><code className="token_reservada">AST=America/Anchorage</code></li>
-                                            <li><code className="token_reservada">MST=-07:00</code></li>
-                                            <li><code className="token_reservada">SST=Pacific/Guadalcanal</code></li>
-                                            <li><code className="token_reservada">CTT=Asia/Shanghai</code></li>
-                                            <li><code className="token_reservada">PRT=America/Puerto_Rico</code></li>
-                                            <li><code className="token_reservada">ECT=Europe/Paris</code></li>
+                                            <li><code className="outputResult">EAT=Africa/Addis_Ababa</code></li>
+                                            <li><code className="outputResult">EST=-05:00</code></li>
+                                            <li><code className="outputResult">PNT=America/Phoenix</code></li>
+                                            <li><code className="outputResult">PLT=Asia/Karachi</code></li>
+                                            <li><code className="outputResult">CNT=America/St_Johns</code></li>
+                                            <li><code className="outputResult">IET=America/Indiana/Indianapolis</code></li>
+                                            <li><code className="outputResult">VST=Asia/Ho_Chi_Minh</code></li>
+                                            <li><code className="outputResult">JST=Asia/Tokyo</code></li>
+                                            <li><code className="outputResult">ART=Africa/Cairo</code></li>
+                                            <li><code className="outputResult">PST=America/Los_Angeles</code></li>
+                                            <li><code className="outputResult">BET=America/Sao_Paulo</code></li>
+                                            <li><code className="outputResult">MIT=Pacific/Apia</code></li>
+                                            <li><code className="outputResult">CAT=Africa/Harare</code></li>
+                                            <li><code className="outputResult">AGT=America/Argentina/Buenos_Aires</code></li>
+                                            <li><code className="outputResult">NET=Asia/Yerevan</code></li>
+                                            <li><code className="outputResult">CST=America/Chicago</code></li>
+                                            <li><code className="outputResult">IST=Asia/Kolkata </code></li>
+                                            <li><code className="outputResult">AET=Australia/Sydney</code></li>
+                                            <li><code className="outputResult">BST=Asia/Dhaka</code></li>
+                                            <li><code className="outputResult">ACT=Australia/Darwin</code></li>
+                                            <li><code className="outputResult">HST=-10:00</code></li>
+                                            <li><code className="outputResult">NST=Pacific/Auckland</code></li>
+                                            <li><code className="outputResult">AST=America/Anchorage</code></li>
+                                            <li><code className="outputResult">MST=-07:00</code></li>
+                                            <li><code className="outputResult">SST=Pacific/Guadalcanal</code></li>
+                                            <li><code className="outputResult">CTT=Asia/Shanghai</code></li>
+                                            <li><code className="outputResult">PRT=America/Puerto_Rico</code></li>
+                                            <li><code className="outputResult">ECT=Europe/Paris</code></li>
                                             <br/>        
-                                            <li>Para o horário de brasília temos a seguinte opção: <code className="token_reservada">BET=America/Sao_Paulo</code>.</li>
+                                            <li>Para o horário de brasília temos a seguinte opção: <code className="outputResult">BET=America/Sao_Paulo</code>.</li>
                                             <li><code className="token_reservada">ZonedDateTime</code>: Com ela é possível visualizar as diferenças de horarios entre as zonas/locais (mostrando a <code className="token_reservada">ZoneId</code> tbm).</li>
                                             <li><code className="token_reservada">ZoneOffSet</code>: É aonde demonstra as diferenças de horários em sí (Encapsulando em apenas isto), ou seja, não demonstra a <code className="token_reservada">ZoneId</code>.</li>
                                             <li><code className="token_reservada">OffSetDateTime</code>: É a classe que faz o <code className="token_reservada">parsing</code> entre as diferenças e ai podemos visualizar em formato de data.</li>
                                             <br/>
-                                            <li>Em resumo uma representação de uma data completa seria composta por: <code className="token_reservada">Data/THora:Minuto:Segundo.Milissegundos/+OffSet/[Zona]</code> ("2022-12-26T19:45:19.447985416+09:00[Asia/Tokyo]").</li>
+                                            <li>Em resumo uma representação de uma data completa seria composta por: <code className="token_reservada">Data/THora:Minuto:Segundo.Milissegundos/+OffSet/[Zona]</code> (<code className="outputResult">"2022-12-26T19:45:19.447985416+09:00[Asia/Tokyo]"</code>).</li>
                                             <br/>
-                                            <li><code className="token_reservada">DateTimeFormatter</code>: Classe utilitária com o mesmo contexto da <code className="token_reservada">DateFormat</code> legada (do pacote <code className="token_reservada">java.util</code>) porém a diferença é que ela é mais moderna do novo pacote especializado para manipulação dos objetos <code className="token_reservada">Temporal</code> (<code className="token_reservada">java.time</code>) e <code className="token_reservada">Thread-Safe</code> para ambientes de paralelismo e concorrência <code className="token_reservada">concurrency</code>, diferente da <code className="token_reservada">DateFormat</code> do pacote legado que é <code className="token_reservada">Não Thread-Safe</code>. Utilizada como parâmetro nos métodos das classes de Data e Hora para formatar e alterar os padrões de representação delas (Podemos representar com números "dd/mm/yyyy", também podemos representar escrito por extenso "22 de dezembro de 1999", dentre outros...) além de outras formatações mais complexas com <code className="token_reservada">DateTimeFormatterBuilder</code>, mais informações sobre <code className="token_reservada">DateTimeFormatter</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula129DateTimeFormatter_Utils.java" target="_blank">Clique AQUI!</a></li>
+                                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">DateTimeFormatter</code>: Classe utilitária com o mesmo contexto da <code className="token_reservada">DateFormat</code> legada (do pacote <code className="token_reservada">java.util</code>) porém a diferença é que ela é mais moderna do novo pacote especializado para manipulação dos objetos <code className="token_reservada">Temporal</code> (<code className="token_reservada">java.time</code>) e <code className="token_reservada">Thread-Safe</code> para ambientes de paralelismo e concorrência <code className="token_reservada">concurrency</code>, diferente da <code className="token_reservada">DateFormat</code> do pacote legado que é <code className="token_reservada">Não Thread-Safe</code>. Utilizada como parâmetro nos métodos das classes de Data e Hora para formatar e alterar os padrões de representação delas (Podemos representar com números <code className="outputResult">"dd/mm/yyyy"</code>, também podemos representar escrito por extenso <code className="outputResult">"22 de dezembro de 1999"</code>, dentre outros...) além de outras formatações mais complexas com <code className="token_reservada">DateTimeFormatterBuilder</code>, mais informações sobre <code className="token_reservada">DateTimeFormatter</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/A_date/Aula129DateTimeFormatter_Utils.java" target="_blank">Clique AQUI!</a></p>
+                                                
+                                                <p className="main-title--implementFullBlock">Exemplo de implementação demonstrando os padrões de formatações/máscaras disponíveis:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+
+                                                        <span className="-tokenComment">## Operações aplicadas em Objetos do tipo LocalDate: </span><br/>
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> now_date = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>();<br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># ISOS Prontas (Transformando apartir de um Objeto em/para uma String):</span><br/>
+                                                        <code className="-tokenClassEntity">String</code> dateFormatedBasic_str = now_date.<code className="-tokenMethod">format</code>(<code className="-tokenClassEntity">DateTimeFormatter</code>.<code className="-tokenKeyConstant">BASIC_ISO_DATE</code>);<br/>
+                                                        <span className="-tokenComment">// 20221226</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">String</code> dateFormatedLikeSQL_str = now_date.<code className="-tokenMethod">format</code>(<code className="-tokenClassEntity">DateTimeFormatter</code>.<code className="-tokenKeyConstant">ISO_DATE</code>);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26 (Também suporta offset 2022-12-26+09:00)</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">String</code> dateFormatedDefault_str = now_date.<code className="-tokenMethod">format</code>(<code className="-tokenClassEntity">DateTimeFormatter</code>.<code className="-tokenKeyConstant">ISO_LOCAL_DATE</code>);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26 (ou seja quando chamamos o `.toString()` do LocalDate é ele)</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment">## Operações aplicadas em Objetos do tipo LocalDateTime: </span><br/>
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalDateTime</code> now_dateTime = <code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">now</code>();<br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">String</code> dateTimeFormatedDefault_str = now_dateTime.<code className="-tokenMethod">format</code>(<code className="-tokenClassEntity">DateTimeFormatter</code>.<code className="-tokenKeyConstant">ISO_DATE_TIME</code>);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26T21:25:47.897024374 (ou seja quando chamamos o `.toString()` do LocalDateTime é ele)</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment">## Operações INVERSAS, ou seja, Transformando uma String que representa o objeto Temporal em um Objeto Temporal: </span><br/>
+                                                        <span className="-tokenComment"># Obs: AQUI devemos nos atentar ao padrão de máscara utilizado que deve corresponder com a máscara corretamente durante os parsers!</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> dateParsedByIsoBasic_obj = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">parse</code>(<code className="-tokenString">"20221226"</code>, <code className="-tokenClassEntity">DateTimeFormatter</code>.<code className="-tokenKeyConstant">BASIC_ISO_DATE</code>);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> dateParsedByIsoDateSuportOffSet_obj = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">parse</code>(<code className="-tokenString">"2022-12-26+23:59"</code>, <code className="-tokenClassEntity">DateTimeFormatter</code>.<code className="-tokenKeyConstant">ISO_DATE</code>);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26</span><br/>
+                                                        <span className="-tokenComment">// Como o LocalDate n trabalha com Time então ele simplemente trunca o OffSet</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalDateTime</code> dateTimeParsedByIsoDateTime_obj = <code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">parse</code>(<code className="-tokenString">"2022-12-26T21:30:29.165451040"</code>, <code className="-tokenClassEntity">DateTimeFormatter</code>.<code className="-tokenKeyConstant">ISO_DATE_TIME</code>);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26T21:30:29.165451040</span><br/>
+                                                        
+                                                        <br/>
+                                                        <span className="-tokenComment">## Definindo padrões de máscaras personalizados ("Na unha"):</span><br/>
+                                                        <span className="-tokenComment"># Obs: AQUI TAMBÉM devemos nos atentar ao padrão de máscara personalizado que deve corresponder com a máscara corretamente durante os parsers!</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Padrão Brasileiro "dd/MM/yyyy":</span><br/>
+                                                        <code className="-tokenClassEntity">DateTimeFormatter</code> formatterPattern_ofBR = <code className="-tokenClassEntity">DateTimeFormatter</code>.<code className="-tokenMethod">ofPattern</code>(<code className="-tokenString">"dd/MM/yyyy"</code>);<br/>
+                                                        <code className="-tokenClassEntity">String</code> dateFormated_BR_str = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>().<code className="-tokenMethod">format</code>(formatterPattern_ofBR);<br/>
+                                                        <span className="-tokenComment">// 26/12/2022</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Padrão Japonês "yyyy/MM/dd":</span><br/>
+                                                        <code className="-tokenClassEntity">DateTimeFormatter</code> formatterPattern_ofJapan = <code className="-tokenClassEntity">DateTimeFormatter</code>.<code className="-tokenMethod">ofPattern</code>(<code className="-tokenString">"yyyy/MM/dd"</code>);<br/>
+                                                        <code className="-tokenClassEntity">String</code> dateFormated_Japan_str = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>().<code className="-tokenMethod">format</code>(formatterPattern_ofJapan);<br/>
+                                                        <span className="-tokenComment">// 2022/12/26</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Padrão Estados Unidos "MM/dd/yyyy":</span><br/>
+                                                        <code className="-tokenClassEntity">DateTimeFormatter</code> formatterPattern_ofEUA = <code className="-tokenClassEntity">DateTimeFormatter</code>.<code className="-tokenMethod">ofPattern</code>(<code className="-tokenString">"MM/dd/yyyy"</code>);<br/>
+                                                        <code className="-tokenClassEntity">String</code> dateFormated_EUA_str = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>().<code className="-tokenMethod">format</code>(formatterPattern_ofEUA);<br/>
+                                                        <span className="-tokenComment">// 12/26/2022</span><br/>
+                                                        
+                                                        <br/>
+                                                        <span className="-tokenComment">## Operações INVERSAS, ou seja, Transformando uma String que representa o objeto Temporal em um Objeto Temporal: </span><br/>
+                                                        <span className="-tokenComment"># Obs: AQUI devemos nos atentar ao padrão de máscara personalizado utilizado que deve corresponder com a máscara corretamente durante os parsers!</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> dateParsedByPatternBR_obj = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">parse</code>(<code className="-tokenString">"26/12/2022"</code>, formatterPattern_ofBR);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26</span><br/>
+                                                        <span className="-tokenComment">// A saída é essa pois está executando o `.toString()` e esse é o default do LocalDate</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> dateParsedByPatternJapan_obj = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">parse</code>(<code className="-tokenString">"2022/12/26"</code>, formatterPattern_ofJapan);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26</span><br/>
+                                                        <span className="-tokenComment">// A saída é essa pois está executando o `.toString()` e esse é o default do LocalDate</span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> dateParsedByPatternEUA_obj = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">parse</code>(<code className="-tokenString">"12/26/2022"</code>, formatterPattern_ofEUA);<br/>
+                                                        <span className="-tokenComment">// 2022-12-26</span><br/>
+                                                        <span className="-tokenComment">// A saída é essa pois está executando o `.toString()` e esse é o default do LocalDate</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment">## Definindo um padrão e pegando apartir de um Locale (Ou seja, faz a tradução): </span><br/>
+
+                                                        <br/>
+                                                        <code className="-tokenClassEntity">DateTimeFormatter</code> formatterPattern_byLocaleGR = <code className="-tokenClassEntity">DateTimeFormatter</code>.<code className="-tokenMethod">ofPattern</code>(<code className="-tokenString">"dd.MMMM.yyyy"</code>, <code className="-tokenClassEntity">Locale</code>.<code className="-tokenKeyConstant">GERMAN</code>);<br/>
+                                                        <code className="-tokenClassEntity">String</code> dateFormated_byLocaleGR_str = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">now</code>().<code className="-tokenMethod">format</code>(formatterPattern_byLocaleGR);<br/>
+                                                        <span className="-tokenComment">// 26.Dezember.2022</span><br/>
+                                                        <br/>
+                                                        <span className="-tokenComment"># MESMA REGRA SOBRE RESPEITAR A MÁSCARA DO PADRÃO NO PARSER: </span><br/>
+                                                        <code className="-tokenClassEntity">LocalDate</code> dateParsedByCustonPatternAndLocaleGR_obj = <code className="-tokenClassEntity">LocalDate</code>.<code className="-tokenMethod">parse</code>(<code className="-tokenString">"26.Dezember.2022"</code>, formatterPattern_byLocaleGR);<br/>
+                                                        <span className="-tokenComment">// 26.Dezember.2022</span><br/>
+                                                    </code>
+                                                </ul>
+                                            </li>
                                             <br/>
                                             <li>Regra sobre <code className="token_reservada">parsings</code> e <code className="token_reservada">formats</code> (Válido para várias classes do Java): Convertendo apartir de um objeto <code className="token_reservada">Temporal</code> de data ou tempo (Cuja representação em baixo nível é o <code className="token_reservada">long</code> dos milissegundos computacionalmente entendível, porém humanamente estranho) em uma <code className="token_reservada">String</code> que adiciona uma camada de mais alto nível de representação convertendo esses milissegundos do <code className="token_reservada">long</code> em datas e tempo humanamente entendível de acordo com a máscara de formatação desejada, e convertendo/retornando apartir desta mesma <code className="token_reservada">String</code> gerada anteriormente em um objeto <code className="token_reservada">Temporal</code> de data ou tempo, e vise versa: Devemos nos atentar ao utilizar esses dois métodos devido a representação em baixo nível ser o <code className="token_reservada">long</code> a JVM precisa saber qual é o padrão de máscara utilizado na representação em alto nível da <code className="token_reservada">String</code> que está sendo parseada para saber lidar e converter corretamente essa <code className="token_reservada">String</code> em um dos objetos <code className="token_reservada">Temporais</code>, ou seja, para conseguirmos realizar a operação de <code className="token_reservada">parsing</code> desta <code className="token_reservada">String</code> em um dos objetos <code className="token_reservada">Temporais</code> devemos utilizar o mesmo padrão de máscara que foi utilizado para dar origem a essa <code className="token_reservada">String</code> na sobrecarga do método estático <code className="token_reservada">.parse()</code> das classes <code className="token_reservada">Temporais</code>, se não um <code className="token_reservada">DateTimeParseException</code> será lançado.</li>
                                             <li>Exemplo no estilo <code className="token_reservada">Show me the code</code> para melhor entender o ponto acima: </li>
-                                            <li><code className="token_reservada">LocalDate nowLocalDate = LocalDate.now();</code> Cria o objeto temporal para datas simples "2023-06-23"</li>
-                                            <li><code className="token_reservada">String format = nowLocalDate.format(DateTimeFormatter.BASIC_ISO_DATE);</code> Formata ela adicionando a camada de mais alto nível "20230623"</li>
-                                            <li><code className="token_reservada">LocalDate parse = LocalDate.parse(format, DateTimeFormatter.BASIC_ISO_DATE);</code> Utiliza a mesma máscara do padrão que deu origem a String anteriormente "2023-06-23"</li>
-                                            <li>Observe que foi necessário utilizar a sobrecarga do método estático <code className="token_reservada">.parse()</code> indicando qual foi o padrão utilizado para dar origem a essa <code className="token_reservada">String</code> em questão pois se não o tivesse passado também como argumento a JVM iria aplicar a lógica utilizando a máscara padrão "2023-06-23" porém o valor real é <code className="token_reservada">BASIC_ISO_DATE</code> que remove os <code className="token_reservada">`-`</code> deixando assim no final "20230623".</li>
-                                            <li><code className="token_reservada">LEMBRANDO</code> que a saída no console para os objetos executa implicitamente o método <code className="token_reservada">.toString()</code> porisso temos a primeira representação "2023-06-23" para o <code className="token_reservada">LocalDate</code>, exatamente porisso ocorre a <code className="token_reservada">DateTimeParseException</code> se não passar na sobrecarga do método estático <code className="token_reservada">.parse()</code> o argumento informando o padrão de máscara que deu origem a <code className="token_reservada">String</code> em questão, pois ele iria utilizar o <code className="token_reservada">default</code> que é exatamente a mesma lógica de máscara aplicada no método <code className="token_reservada">.toString()</code>.</li>
+                                            <li><code className="token_reservada">LocalDate nowLocalDate = LocalDate.now();</code> Cria o objeto temporal para datas simples <code className="outputResult">"2023-06-23"</code></li>
+                                            <li><code className="token_reservada">String format = nowLocalDate.format(DateTimeFormatter.BASIC_ISO_DATE);</code> Formata ela adicionando a camada de mais alto nível <code className="outputResult">"20230623"</code></li>
+                                            <li><code className="token_reservada">LocalDate parse = LocalDate.parse(format, DateTimeFormatter.BASIC_ISO_DATE);</code> Utiliza a mesma máscara do padrão que deu origem a String anteriormente <code className="outputResult">"2023-06-23"</code></li>
+                                            <li>Observe que foi necessário utilizar a sobrecarga do método estático <code className="token_reservada">.parse()</code> indicando qual foi o padrão utilizado para dar origem a essa <code className="token_reservada">String</code> em questão pois se não o tivesse passado também como argumento a JVM iria aplicar a lógica utilizando a máscara padrão <code className="outputResult">"2023-06-23"</code> porém o valor real é <code className="token_reservada">BASIC_ISO_DATE</code> que remove os <code className="token_reservada">`-`</code> deixando assim no final <code className="outputResult">"20230623"</code>.</li>
+                                            <li><code className="token_reservada">LEMBRANDO</code> que a saída no console para os objetos executa implicitamente o método <code className="token_reservada">.toString()</code> porisso temos a primeira representação <code className="outputResult">"2023-06-23"</code> para o <code className="token_reservada">LocalDate</code>, exatamente porisso ocorre a <code className="token_reservada">DateTimeParseException</code> se não passar na sobrecarga do método estático <code className="token_reservada">.parse()</code> o argumento informando o padrão de máscara que deu origem a <code className="token_reservada">String</code> em questão, pois ele iria utilizar o <code className="token_reservada">default</code> que é exatamente a mesma lógica de máscara aplicada no método <code className="token_reservada">.toString()</code>.</li>
                                             <br/>
                                             <li>Também é possível definir um padrão personalizado por nós, utilizando o método estático <code className="token_reservada">DateTimeFormatter.ofPattern("dd/MM/yyyy");</code> e passá-lo no método <code className="token_reservada">.format()</code>.</li>
                                             <li>Sobre o ponto acima, segue a mesma regra sobre <code className="token_reservada">parsings</code> e <code className="token_reservada">formats</code>, aonde para o <code className="token_reservada">.parse()</code> funcionar basta passar essa mesma instância do padrão de máscara <code className="token_reservada">Pattern</code> personalizado dito acima como segundo argumento na sobrecarga do método estático, sendo assim: <code className="token_reservada">LocalDate.parse("22/12/1999", DateTimeFormatter.ofPattern("dd/MM/yyyy"));</code> Observe que ambas as máscaras estão linearmente consistentes entre sí.</li>

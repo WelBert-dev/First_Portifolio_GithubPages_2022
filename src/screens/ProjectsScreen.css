@@ -255,6 +255,16 @@ span.-tokenComment {
     font-weight: 400;
 }
 
+code.-tokenInterfaceEntity {
+    color: #4dff4d;
+    font-size: .8rem;
+}
+
+code.-tokenAnnotationsEntity {
+    color: #d7d01c;
+    font-size: .8rem;
+}
+
 ul.main-implementFullBlock--container {
     display: flex;
     flex-direction: column;
@@ -496,6 +506,14 @@ ul.projects-frontend--container > li.-marginNone--inMobile {
     }
 
     span.-tokenComment {
+        font-size: .6rem;
+    }
+
+    code.-tokenInterfaceEntity {
+        font-size: .6rem;
+    }
+
+    code.-tokenAnnotationsEntity {
         font-size: .6rem;
     }
 
