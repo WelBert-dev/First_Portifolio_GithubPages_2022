@@ -163,178 +163,15 @@
     text-shadow: 1px 1px 1px black;
 }
 
-code.token_reservada {
-    background-color: #c6c6c6;
-    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
-    color: red;
-    font-weight: bolder;
-    border-radius: 5px;
-    padding: 0 2px;
-    font-size: .8rem;
-    text-shadow: none;
-}
-
 a.-linkBoldYellowProjects {
     color: #ffd700;
     font-weight: bold;
     font-size: .7rem;
 }
 
-ul.-nestedInnerUl {
-    margin: .5rem 0 0 .5rem;
-    list-style-type: disc;
-}
-
-ul.-nestedInnerUl li::marker {
-    color: red;
-}
-
-li code.-main-moduleTitleLi {
+code.token_reservada.--dateOfImplementation {
     font-size: .9rem;
-}
-
-code.outputResult {
-    background-color: #200a1c;
-    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
-    color: #fff;
-    font-weight: bolder;
-    border-radius: 5px;
-    padding: 0 2px;
-    font-size: .8rem;
-    text-shadow: 1px 1px 3px #000;
-}
-
-.-nestedInnerCode {
-    margin: 0 0 0 1rem;
-    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
-}
-
-.-nestedInnerCode.--2Identation {
-    margin: 0 0 0 2rem;
-}
-
-.-nestedInnerCode.--3Identation {
-    margin: 0 0 0 3rem;
-}
-
-.-nestedInnerCode.--4Identation {
-    margin: 0 0 0 4rem;
-}
-
-.-nestedInnerCode.--5Identation {
-    margin: 0 0 0 5rem;
-}
-
-code.-tokenMethod {
-    color: #d2a8ff;
-    font-size: .8rem;
-}
-
-code.-tokenString {
-    color: #a5d6ff;
-    font-size: .8rem;
-}
-
-code.-tokenKeyword {
-    color: #ff7b72;
-    font-size: .8rem;
-}
-
-code.-tokenKeyConstant {
-    color: #79c0ff;
-    font-size: .8rem;
-}
-
-code.-tokenClassEntity {
-    color: #cdcdcd;
-    font-size: .8rem;
-}
-
-span.-tokenComment {
-    color: #00d000;
-    font-weight: 400;
-}
-
-code.-tokenInterfaceEntity {
-    color: #4dff4d;
-    font-size: .8rem;
-}
-
-code.-tokenAnnotationsEntity {
-    color: #d7d01c;
-    font-size: .8rem;
-}
-
-ul.main-implementFullBlock--container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    margin: .5rem 0 0 .5rem;
-}
-
-code.implementFullBlock {
-    background-color: #200a1c;
-    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
-    color: #fff;
-    font-weight: bolder;
-    border-radius: 5px;
-    padding: .5rem;
-    font-size: .9rem;
-    text-shadow: 1px 1px 3px #000;
-    line-height: 1rem;
-    text-align: left;
-    width: 100%;
-    border: 3px double #000;
-}
-
-p.main-title--implementFullBlock {
-    margin-top: .5rem;
-    margin-left: .5rem;
-    display: list-item;
-    list-style: disc;
-    list-style-position: inside;
-    color: wheat;
-}
-
-p.main-title--implementFullBlock::marker {
-    color: red;
-}
-
-span.outputResult--implementFullBlock {
-    background-color: black;
-    color: #11e8ff;
-    font-weight: bolder;
-    display: block;
-    text-align: center;
-    border-radius: 4px;
-    border: 3px double #044910;
-    padding: 2px;
-}
-
-ul.projects-frontend--container > li.-marginNone--inMobile > p {
-    margin-left: .5rem;
-    display: list-item;
-}
-
-ul.projects-frontend--container > li.-marginNone--inMobile > p.-listItem--inMobile {
-    margin-left: 0;
-    margin-right: 0;
-}
-
-ul.projects-frontend--container > li.-marginNone--inMobile > p.-listItem--inMobile::marker {
-    color: #1877ff;
-    margin-right: 0;
-}
-
-ul.projects-frontend--container > li.-marginNone--inMobile {
-    display: inline-block;
-}
-
-pre.pre-implementFullBlock {
-    display: inline-block;
-    font-size: .8rem;
+    margin: 3px 0;
 }
 
 @media (max-width: 810px)
@@ -366,43 +203,6 @@ pre.pre-implementFullBlock {
     .projects-right {
         max-width: 100%;
         margin: 0 auto;
-    }
-
-    code.token_reservada {
-        font-size: .7rem;
-    }
-
-    ul.projects-description--container {
-        margin: 0;
-    }
-
-    ul.projects-description--container > li > h3 {
-        margin-left: .5rem;
-        margin-right: .5rem;
-    }
-
-    ul.projects-frontend--container > li {
-        margin-left: .5rem;
-        margin-right: .5rem;
-    }
-    
-    ul.projects-frontend--container > li.-marginNone--inMobile {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    ul.projects-frontend--container > li.-marginNone--inMobile > p {
-        margin-left: .5rem;
-        margin-right: .5rem;
-    }
-
-    ul.projects-frontend--container > li.-marginNone--inMobile > p.-listItem--inMobile {
-        margin-left: .5rem;
-        margin-right: .5rem;
-    }
-
-    ul.main-implementFullBlock--container {
-        margin: 0.5rem 0 0 0;
     }
 }
 
@@ -436,15 +236,6 @@ pre.pre-implementFullBlock {
     .projects-title--container > span {
         font-size: .8rem;
     }
-    code.token_reservada {
-        font-size: .6rem;
-        padding: 0 1.5px;
-        border-radius: 4px;
-    }
-
-    /* .projects-right {
-        background-color: #46bd2e;;
-    } */
 
     a.-linkBoldYellowProjects {
         color: #ffd700;
@@ -456,77 +247,7 @@ pre.pre-implementFullBlock {
         padding-right: 0px;
     }
 
-    ul.-nestedInnerUl {
-        margin: 0.5rem 0;
-    }
-    
-    li code.-main-moduleTitleLi {
-        font-size: .6rem;
-    }
-
-    /* Área da caixa de exemplo de códigos */
-
-    code.-tokenMethod {
-        font-size: .6rem;
-    }
-    
-    code.-tokenString {
-        font-size: .6rem;
-    }
-    
-    code.-tokenKeyword {
-        font-size: .6rem;
-    }
-    
-    /* span.-tokenComment {
-        font-weight: 400;
-    } */
-    
-    /* ul.main-implementFullBlock--container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 0.5rem;
-        margin-top: 0.5rem;
-    } */
-    
-    code.implementFullBlock {
-        font-size: .6rem;
-        text-shadow: 1px 1px 3px #000;
-        line-height: 1rem;
-        padding: 0.2rem 0 0.2rem 0.2rem;
-    }
-
-    code.outputResult {
-        font-size: .6rem;
-    }
-
-    code.-tokenKeyConstant {
-        font-size: .6rem;
-    }
-    
-    code.-tokenClassEntity {
-        font-size: .6rem;
-    }
-
-    span.-tokenComment {
-        font-size: .6rem;
-    }
-
-    code.-tokenInterfaceEntity {
-        font-size: .6rem;
-    }
-
-    code.-tokenAnnotationsEntity {
-        font-size: .6rem;
-    }
-
-    p.main-title--implementFullBlock {
-        margin-left: 0rem;
-    }
-
-    pre.pre-implementFullBlock {
-        font-size: .6rem;
+    code.token_reservada.--dateOfImplementation {
+        font-size: .7rem;
     }
 }

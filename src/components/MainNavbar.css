@@ -59,14 +59,14 @@ header nav a:hover {
     text-align: left;
 }
 
-a.-btn-ancorToProjectsScreen {
+a.-btn-ancorToJavaBibleScreen {
     padding: 0 0 0 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-a.-btn-ancorToProjectsScreen > svg {
+a.-btn-ancorToJavaBibleScreen > svg {
     font-size: 2rem;
     color: red;
 }

@@ -49,7 +49,9 @@ export default function MainNavbar() {
     useEffect(()=>{
         console.log("Entrou no useEffect");
 
-        if(window.screen.width >= 810 && window.location.href.substring(1).split("/")[5] == 'projects' || window.screen.width >= 810 && window.location.href.substring(1).split("/")[5] == 'certificates'){
+        if(window.screen.width >= 810 && window.location.href.substring(1).split("/")[5] == 'projects' 
+        || window.screen.width >= 810 && window.location.href.substring(1).split("/")[5] == 'certificates' 
+        || window.screen.width >= 810 && window.location.href.substring(1).split("/")[5] == 'javaBible'){
             const navBarElement = document.getElementById("navbar-container");
             navBarElement.style.flexDirection = "column";
             navBarElement.style.width = "inherit"; 
@@ -60,6 +62,9 @@ export default function MainNavbar() {
             }else if(window.location.href.substring(1).split("/")[5] == 'certificates' && window.screen.width >= 810){
                 const sectionElement = document.getElementById("main-certificate--container");
                 sectionElement.style.padding = "2rem 0 1rem 10%";
+            }else if(window.location.href.substring(1).split("/")[5] == 'javaBible' && window.screen.width >= 810){
+                const sectionElement = document.getElementById("main-javaBible--container");
+                sectionElement.style.padding = "2rem 0 1rem 10%";
             }
             
         }else{
@@ -68,7 +73,7 @@ export default function MainNavbar() {
                 const navBarElement = document.getElementById("navbar-container");
                 navBarElement.style.flexDirection = "row";
                 navBarElement.style.width = "100%"; 
-                console.log("navRef responsiva cu: ", navRef.current.classList.contains("responsive_nav"));
+                console.log("navRef responsiva: ", navRef.current.classList.contains("responsive_nav"));
 
 
                 // // faz append do icone de balão indicando que existe um new projects no btn hamburger
@@ -86,11 +91,12 @@ export default function MainNavbar() {
                 <a href="/firstPortifolioGithubPages-2022">Home</a>
                 <a href="/firstPortifolioGithubPages-2022/#/aboutMe" onClick={() => setNavBarEmColumn(true)}>Sobre</a>
                 <a href="/firstPortifolioGithubPages-2022/#/skills" rel="Link Linguagens" onClick={() => setNavBarEmColumn(true)}>Skills</a>     
-                <a className={window.location.href.substring(1).split("/")[5] === 'projects' ? "" : "-btn-ancorToProjectsScreen"} href="/firstPortifolioGithubPages-2022/#/projects" rel="Link Projetos" onClick={() => setNavBarEmColumn(true)}>Projetos {window.location.href.substring(1).split("/")[5] === 'projects' ? "" : <MdFiberNew className="animaIconPisca"/>}</a>
+                <a href="/firstPortifolioGithubPages-2022/#/projects" rel="Link Projetos" onClick={() => setNavBarEmColumn(true)}>Projetos</a>
                 <a href="/firstPortifolioGithubPages-2022/#/certificates" rel="Link Certificados" onClick={() => setNavBarEmColumn(true)}>Certificados</a>   
-                <a href="/firstPortifolioGithubPages-2022/#/curriculumVitae" rel="Link Curriculo" onClick={() => setNavBarEmColumn(true)}>Currículo</a>        
+                <a href="/firstPortifolioGithubPages-2022/#/curriculumVitae" rel="Link Curriculo" onClick={() => setNavBarEmColumn(true)}>Currículo</a>     
+                <a className={window.location.href.substring(1).split("/")[5] === 'javaBible' ? "" : "-btn-ancorToJavaBibleScreen"} href="/firstPortifolioGithubPages-2022/#/javaBible" rel="Link Biblia do Java" onClick={() => setNavBarEmColumn(true)}>Bíblia do Java {window.location.href.substring(1).split("/")[5] === 'javaBible' ? "" : <MdFiberNew className="animaIconPisca"/>}</a>        
             </nav>
-            <button id="btn-hamburguer" className="nav-btn" onClick={showNavbar}><FaBars />{window.location.href.substring(1).split("/")[5] === 'projects' ? "" : <MdNotificationImportant className="animaIconPisca--alert"/>}</button>
+            <button id="btn-hamburguer" className="nav-btn" onClick={showNavbar}><FaBars />{window.location.href.substring(1).split("/")[5] === 'javaBible' ? "" : <MdNotificationImportant className="animaIconPisca--alert"/>}</button>
         </>
         
 
