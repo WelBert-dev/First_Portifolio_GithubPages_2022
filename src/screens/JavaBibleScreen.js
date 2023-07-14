@@ -2564,9 +2564,60 @@ export default function JavaBibleScreen() {
                                                     </code>
                                                 </ul>
                                             </li>
-                                             <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">BasicFileAttributes</code>: Interface mais genérica para representação dos atributos básicos de um Arquivo ou Diretório em um Sistema de Arquivos utilizada <code className="token_reservada">APENAS para OBTER informações</code> (NÃO podemos utilizar essa classe para MODIFICAR, para isto temos as equivalentes com final "View", ou seja, para realizar modificações utiliza-se a equivalente <code className="token_reservada">BasicFileAttributesView</code>), informações essas relacionadas aos meta dados dos Arquivos ou Diretórios, como <code className="outputResult">tamanho do arquivo em bytes</code>, <code className="outputResult">data de criação</code>, <code className="outputResult">data de última modificação</code>, <code className="outputResult">data de último acesso</code>, <code className="outputResult">é arquivo?</code>, <code className="outputResult">é diretório?</code>, <code className="outputResult">é link simbolico?</code> , <code className="outputResult">é outro?</code> (quando não é nenhum dos anteriores), <code className="outputResult">é somente leitura?</code>, <code className="outputResult">é oculto?</code>, <code className="outputResult">é arquivado?</code>. OBS: Para obter informações relacionaads as permissões dos usuários ou grupos utiliza-se as interfaces que extends desta, para ambientes like Posix (Linux e etc) utilizamos a <code className="token_reservada">PosixFileAttributes</code> e para ambientes like DOS (Windows e etc) utilizamos a <code className="token_reservada">DosFileAttributes</code>. OBS: Para informações sobre o <code className="outputResult">tipo MIME</code> do arquivo em manipulação utilizamos a facade <code className="token_reservada">Files.probeContentType()</code> (Quando não é possível obter essa informação pelo nome e extensão do arquivo).</p>
+                                             <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">BasicFileAttributes</code> e <code className="token_reservada">BasicFileAttributesView</code>: A Interface <code className="token_reservada">BasicFileAttributes</code> é a mais genérica para representação dos atributos básicos de um Arquivo ou Diretório em um Sistema de Arquivos utilizada <code className="token_reservada">APENAS para OBTER informações</code> (NÃO podemos utilizar as classes que implementam ela para MODIFICAR, para isto temos as equivalentes com final "View", ou seja, para realizar modificações utiliza-se a equivalente <code className="token_reservada">BasicFileAttributesView</code>), informações essas relacionadas aos meta dados dos Arquivos ou Diretórios, como <code className="outputResult">tamanho do arquivo em bytes</code>, <code className="outputResult">data de criação</code>, <code className="outputResult">data de última modificação</code>, <code className="outputResult">data de último acesso</code>, <code className="outputResult">é arquivo?</code>, <code className="outputResult">é diretório?</code>, <code className="outputResult">é link simbolico?</code> , <code className="outputResult">é outro?</code> (quando não é nenhum dos anteriores), <code className="outputResult">é somente leitura?</code>, <code className="outputResult">é oculto?</code>, <code className="outputResult">é arquivado?</code>. OBS: Para obter informações relacionaads as permissões dos usuários ou grupos utiliza-se as interfaces que extends desta, para ambientes like Posix (Linux e etc) utilizamos a <code className="token_reservada">PosixFileAttributes</code> e para ambientes like DOS (Windows e etc) utilizamos a <code className="token_reservada">DosFileAttributes</code>. OBS: Para informações sobre o <code className="outputResult">tipo MIME</code> do arquivo em manipulação utilizamos a facade <code className="token_reservada">Files.probeContentType()</code> (Quando não é possível obter essa informação pelo nome e extensão do arquivo).</p>
 
-                                                <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando a programação orientada a interface para execuções indenpendentemente do Sistema Operacional em execução (NÃO vai ter problemas, pois o objeto invocado é genérico e possuí apenas informações comuns entre os diferentes Sistemas Operacionais e Sistemas de Arquivos):</p>
+                                                <p className="main-title--implementFullBlock">SEM UTILIZAR BasicFileAttributes, MODIFICANDO informações com o pacote legado: Exemplo de Implementação demonstrando a maneira <code className="token_reservada">LEGADA</code> de se trabalhar com os atributos básicos dos Arquivos, no qual é possível moficiar a data de modificação setando ela para antes de criar o arquivo, rolando assim inconsistências (Como pode a data de modificação ser antes mesmo de o arquivo existir?) pois não rola verificações entes de modificar, lógico que esse cenário é exagerado pois o próprio desenvolvedor está setando isso, mas ainda sim é inconsistente. OBS: PROBLEMA AINDA OCORRENDO NO NOVO PACOTE TAMBÉM!</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>("/home/welbert/arq.txt");<br/>
+
+                                                        <br/>
+                                                        <code className="-tokenKeyword">if</code>(!file.<code className="-tokenMethod">exists</code>()) &#123;<br/>                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Hoje menos 10 dias</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">LocalDateTime</code> dateTimeNow_minus10Days = <code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">now</code>().<code className="-tokenMethod">minusDays</code>(<code className="-tokenKeyConstant">10</code>);</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">boolean</code> isCreatedFile = file.<code className="-tokenMethod">createNewFile</code>();</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Modifica a data de modificação com a data Inconsistente em relação a data de criação</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">boolean</code> isModifiedFile = file.<code className="-tokenMethod">setLastModified</code>(dateTimeNow_minus10Days</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">toInstant</code>(<code className="-tokenClassEntity">ZoneOffset</code>.<code className="-tokenKeyConstant">UTC</code>).<code className="-tokenMethod">toEpochMilli</code>());</code><br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// Não rola Exceptions! Ou seja, é possível setar datas inconsistentes pois não rola verificações</span></code><br/>   
+                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">## OBS: A DATA deve ser na zona ZuluTime UTC, porisso utilizamos `.toInstant(ZoneOffset.UTC)`, isso esta relacionado ao Polimorfismo de datas para Internacionalização (Mais informações sobre ZuluTime na seção "Manipulação de Data e Hora" novo pacote java.time no ponto sobre "zone")</span></code><br/> 
+    
+                                                        &#125;<br/>                                                                       
+                                                    </code>
+                                                </ul>
+
+                                                <p className="main-title--implementFullBlock">SEM UTILIZAR BasicFileAttributes, MODIFICANDO informações com o novo pacote: Exemplo de Implementação demonstrando a maneira <code className="token_reservada">NOVA</code> de se trabalhar com os atributos básicos dos Arquivos, no qual TAMBÉM é possível moficiar a data de modificação setando ela para antes de criar o arquivo, rolando assim inconsistências (Como pode a data de modificação ser antes mesmo de o arquivo existir?) pois não rola verificações entes de modificar, lógico que esse cenário é exagerado pois o próprio desenvolvedor está setando isso, mas ainda sim é inconsistente. OBS: PROBLEMA TAMBÉM OCORRE NO PACOTE LEGADO!</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        <code className="-tokenInterfaceEntity">Path</code> aqrv_path = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert/arq_path.txt");<br/>
+
+                                                        <br/>
+                                                        <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">notExists</code>(aqrv_path)) &#123;<br/>                                                        
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">createFile</code>(aqrv_path);</code><br/>
+                                                        &#125;<br/>                                            
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Hoje menos 10 dias</span><br/>
+                                                        <code className="-tokenClassEntity">LocalDateTime</code> dateTimeNow_minus10Days = <code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">now</code>().<code className="-tokenMethod">minusDays</code>(<code className="-tokenKeyConstant">10</code>);<br/>
+                                                        <br/>
+                                                        <span className="-tokenComment">## OBS: SEM utilizar BasicFileAttributesView também é possível modificar, que é este caso:</span><br/>
+                                                        <code className="-tokenClassEntity">FileTime</code> fileTime = <code className="-tokenClassEntity">FileTime</code>.<code className="-tokenMethod">from</code>(dateTimeNow_minus10Days.<code className="-tokenMethod">toInstant</code>(<code className="-tokenClassEntity">ZoneOffset</code>.<code className="-tokenKeyConstant">UTC</code>));<br/>
+                                                        <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">setLastModifiedTime</code>(aqrv_path, fileTime);<br/>
+                                                        <span className="-tokenComment">// Não rola Exceptions! Ou seja, é possível setar datas inconsistentes pois não rola verificações</span><br/>    
+
+                                                        <br/>
+                                                        <code className="-nestedInnerCode"><span className="-tokenComment">## OBS: A DATA deve ser na zona ZuluTime UTC, porisso utilizamos `.toInstant(ZoneOffset.UTC)`, isso esta relacionado ao Polimorfismo de datas para Internacionalização (Mais informações sobre ZuluTime na seção "Manipulação de Data e Hora" novo pacote java.time no ponto sobre "zone")</span></code><br/>
+                                                    </code>
+                                                </ul>
+
+                                                <p className="main-title--implementFullBlock">UTILIZANDO BasicFileAttributes para OBTER informações com o pacote novo: Exemplo de Implementação demonstrando a programação orientada a interface para execuções indenpendentemente do Sistema Operacional em execução (NÃO vai ter problemas, pois o objeto invocado é genérico e possuí apenas informações comuns entre os diferentes Sistemas Operacionais e Sistemas de Arquivos):</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
                                                         <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert/arq.txt");<br/>
@@ -2583,15 +2634,51 @@ export default function JavaBibleScreen() {
 
                                                             <br/>
                                                             <code className="-nestedInnerCode"><code className="-tokenClassEntity">FileTime</code> lastModifiedTime = attributes.<code className="-tokenMethod">lastModifiedTime</code>();</code><br/>
-                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// 2022-12-01T16:06:57.120342248Z</span></code><br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// 2022-11-21T16:06:57.120342248Z &#60;- Inconsistente, modificado no exemplo acima</span></code><br/>
 
                                                             <br/>
                                                             <code className="-nestedInnerCode"><code className="-tokenClassEntity">FileTime</code> lastAccessTime = attributes.<code className="-tokenMethod">lastAccessTime</code>();</code><br/>
                                                             <code className="-nestedInnerCode"><span className="-tokenComment">// 2022-12-01T16:06:57.120342248Z</span></code><br/>
 
-                                                        &#125;<br/>                                                        
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">## OBS: A DATA esta na zona ZuluTime UTC, porisso o `Z` no final, isso esta relacionado ao Polimorfismo de datas para Internacionalização (Mais informações sobre ZuluTime na seção "Manipulação de Data e Hora" novo pacote java.time no ponto sobre "zone")</span></code><br/>
 
-                                                             
+                                                        &#125;<br/>                                                               
+                                                    </code>
+                                                </ul>
+
+                                                <p className="main-title--implementFullBlock">UTILIZANDO BasicFileAttributesView para MODIFICAR informações com o pacote novo: Exemplo de Implementação demonstrando a programação orientada a interface para execuções indenpendentemente do Sistema Operacional em execução (NÃO vai ter problemas, pois o objeto invocado é genérico e possuí apenas informações comuns entre os diferentes Sistemas Operacionais e Sistemas de Arquivos):</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert/arq.txt");<br/>
+
+                                                        <br/>
+                                                        <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">exists</code>(path_file)) &#123;<br/>                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Obtém a instância delegando a responsabilidade da criação correta para a JVM calcular o S.O em execução.</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">BasicFileAttributesView</code> attributesView = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">getFileAttributeView</code>(path_file, <code className="-tokenInterfaceEntity">BasicFileAttributeView</code>.<code className="-tokenKeyword">class</code>);</code><br/>
+                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">FileTime</code> creationTime = attributesView.<code className="-tokenMethod">readAttributes</code>().<code className="-tokenMethod">creationTime</code>();</code><br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// 2022-12-01T16:06:57.120342248Z</span></code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">FileTime</code> lastModifiedTime = attributesView.<code className="-tokenMethod">readAttributes</code>().<code className="-tokenMethod">lastModifiedTime</code>();</code><br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// 2022-11-21T16:06:57.120342248Z &#60;- Continua inconsistente</span></code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">## Alvo que TAMBÉM será modificado inconsistentemente (TAMBÉM VAI FUNCIONAR!!)</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">FileTime</code> lastAccessTime = <code className="-tokenClassEntity">FileTime</code>.<code className="-tokenMethod">from</code>(<code className="-tokenClassEntity">LocalDateTime</code>.<code className="-tokenMethod">now</code>()</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">.<code className="-tokenMethod">minusDays</code>(<code className="-tokenKeyConstant">10</code>).<code className="-tokenMethod">toInstant</code>(<code className="-tokenClassEntity">ZoneOffset</code>.<code className="-tokenKeyConstant">UTC</code>));</code><br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// 2022-11-21T16:06:57.120342248Z &#60;- Agora inconsistente TAMBÉM</span></code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Finalmente setta as informações inconsistentes</span></code><br/>
+                                                            <code className="-nestedInnerCode">attributesView.<code className="-tokenMethod">setTimes</code>(lastModifiedTime, lastAccessTime, creationTime);</code><br/>
+                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">## OBS: A DATA deve ser na zona ZuluTime UTC (porisso utilizamos `.toInstant(ZoneOffset.UTC)`), esse é o significado do `Z` no final das Datas, isso esta relacionado ao Polimorfismo de datas para Internacionalização (Mais informações sobre ZuluTime na seção "Manipulação de Data e Hora" novo pacote java.time no ponto sobre "zone")</span></code><br/>
+                                                        &#125;<br/>                                                               
                                                     </code>
                                                 </ul>
                                             </li>
