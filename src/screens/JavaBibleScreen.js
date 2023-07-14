@@ -156,7 +156,7 @@ export default function JavaBibleScreen() {
                                                     <li>Ler informações e recuperá-las em formato de Objeto com a classe FileReader (Obs: Também precisamos de uma instância de File para criar ela, passando no construtor ele);</li>
                                                     <li>Devido as classes de leitura e escrita trabalharem em baixo nível de maneira não otimizada, temos as equivalentes BufferedWriter e BufferedReader que é mais performática, pois primeiro elas trabalham em memória RAM e só no final da operação é realizado a escritura ou leitura no HD (Obs: Mesmo assim ainda é necessário uma instância de FileReader ou FileWriter para essas criações também);</li>
                                                     <li>Visualizar e modificar meta informações como data de criação, ultimas modificações ou também ir além como modificar ou ler permissões dos usuários e grupos;</li>    
-                                                    <li>Navegar em diretórios e realizar algumas operações neles;</li>    
+                                                    <li>Trabalhando com Diretórios (Mkdir): Segue as mesmas lógicas sobre criações e modificações de Arquivos, a única diferença é que o Path agora aponta para o parent;</li>    
                                                     <li>Dentre outras informações mais completas na seção especifica dele (OBS: AINDA ESTÁ EM PROCESSO DE DESENVOLVIMENTO)...</li>
                                                 </ul>
                                             
@@ -196,7 +196,7 @@ export default function JavaBibleScreen() {
                                             <li><code className="-main-moduleTitleLi token_reservada">Collections (Estrutura de Dados):</code> 
                                                 <ul className="-nestedInnerUl">
                                                     <li>Maior parte dos estudos;</li>
-                                                    <li>Demonstra tabelas relacionadas ao calculo de complexidade Big-O para cada classe da API de coleções, esses calculos é relacionado as quantidades de iterações necessárias para alcansar diferentes objetivos como por exemplo quais as melhores estruturas de dados para inserção e remoção de elementos, quais as melhores para pegar valores get ou para verificar se contains algum elemento x;</li>
+                                                    <li>Demonstra tabelas relacionadas ao cálculo de complexidade Big-O para cada classe da API de coleções, esses cálculos é relacionado as quantidades de iterações necessárias para alcansar diferentes objetivos como por exemplo quais as melhores estruturas de dados para inserção e remoção de elementos, quais as melhores para pegar valores get ou para verificar se contains algum elemento x;</li>
                                                     <li>Explica a importância sobre a devida implementação dos métodos `.equals()` e `.hashCode()` presentes em todos Objetos (Pois são métodos definidos na raiz de todos o Object) que trabalham em conjunto e devem estar linearmente coesos entre sí, eles são necessários pois as listas e coleções utilizam esses métodos dos objetos para realizar comparações de igualdade e armazena-los corretamente. (Porém devem ser sobrescrito e modificado de acordo com as necessidades especificas de cada classe, necessidades essas que indicam quais campos devem ser considerados na comparação de igualdade `==` entre dois Objetos, ou seja, quais atributos desse objeto devem ser iguais para que os mesmos sejam considerados iguais? PORÉM devemos nos atentar sobre a escolha desses atributos, pois os mesmos NÃO devem ser dinâmicos, ou seja, esses campos não devem sofrer muitas mudanças no ciclo de vida da aplicação, pois se sofrerem mudanças o hash gerado seram diferentes durante esse ciclo de vida, logo, possiveis inconsistência vão ocorrer, por exemplo na hora de realizar buscas em coleções que utilizam o hash dos Objetos para indexar (melhorando assim a velocidade de busca por elementos) que é o caso do HashSet, ao tentar realizar buscas constantes por elementos durante o ciclo de vida da aplicação e os mesmos possuirem atributos dinâmicos, a comparação entre o mesmo Objeto vai mudar devido a isso);</li>
                                                     <li>Programação orientada a interface devido todas as classes relacionadas as coleções (Estrutura de dados) implementarem interfaces genéricas feitas para contextos especificos (List, Set, SortedSet, NavigableSet, Map (Não é bem uma coleção, mais detalhes no módulo));</li>
                                                     <li>Interfaces Comparable e Comparator utilizadas por métodos que precisam realizar comparações (&#60;, &#62;, &#60;=, &#62;=, ==) entre Objetos (Obs: Diferente de `.equals()`), elas são necessárias para definir a regra sobre como saber quando um Objeto é maios que outro e etc;</li>
@@ -1323,7 +1323,7 @@ export default function JavaBibleScreen() {
                                                         <span className="-tokenComment">// a diferença entre ZuluTime e Tokyo é de +9Horas em relação ao Zulu (Já trás formatado corretamente)</span><br/>
                                                         <span className="-tokenComment">// A conversão está aqui: 2022-12-<code className="token_reservada">26</code>T<code className="token_reservada">22</code>:56:11.628306908Z (Esse é o Zulu sem conversão presente no `now_instant`)</span><br/>
                                                         <span className="-tokenComment">// Esse é o resultado da operação `.atZone()` que faz a conversão: 2022-12-<code className="token_reservada">27</code>T<code className="token_reservada">07</code>:56:11.628306908+09:00[Asia/Tokyo]</span><br/>
-                                                        <span className="-tokenComment">// Ou seja, o dia fez roll de +9 horas e mudou o dia automaticamente (pois o Instant trabalha com ZuluTime que é universal, ou seja, sempre vai ser o mesmo calculo para obter horários corretos de acordo com cada zona)</span><br/>
+                                                        <span className="-tokenComment">// Ou seja, o dia fez roll de +9 horas e mudou o dia automaticamente (pois o Instant trabalha com ZuluTime que é universal, ou seja, sempre vai ser o mesmo cálculo para obter horários corretos de acordo com cada zona)</span><br/>
 
                                                         <br/>
                                                         <span className="-tokenComment"># Mesma operação anterior porém trabalhando com o padrão do Sistema corrente:</span><br/>
@@ -2171,11 +2171,6 @@ export default function JavaBibleScreen() {
                                     <li>
                                         <h3 class="projects-subtitle">I/O</h3>
                                         <ul className="projects-frontend--container">
-                                            <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
-                                            <br/>
-                                            <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/F_io" target="_blank">Clique AQUI!</a></li>
-                                            <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula138a143-io_oldVersionIO_manipulaArquivos" target="_blank">Clique AQUI!</a></li>
-                                            <br/>
                                             <li>Neste módulo é estudado a maneira Legada sobre como é tratado as operações de Entrada e Saída, como por exemplo Leituras em memórias secundárias como SSD's ou HD's ou também gravações nos mesmos, ou seja, operações que envolvem criações, modificações ou leituras de Aqruivos e/ou Diretórios em geral.</li>
                                             <li>Devido a esses operações devemos nos atentar sobre os diferentes tipos de Sistemas Operacionais e suas convenções próprias sobre variáveis de ambientes, diferentes tipos de Sistemas de Arquivos e etc entre eles, além dessas convenções também devemos nos atentar sobre as permissões do usuário que está executando a aplicação ao tentar modificar ou acessar arquivos que o usuário não tem permissões apropriadas, esses tratamentos devem ser feitos.</li>
                                             <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">File</code>: Representação de Arquivos e/ou Diretórios em forma de objetos e base para a criação de outras Classes que envolvem leituras ou escritas de Arquivos ou Diretórios, além desta representação também temos diversos métodos utilitários para obter ou modificar informações relacionadas a Arquivos ou Diretórios (Desde que não envolve leituras ou escritas, para essas operações existem outras Classes apropriadas descritas logo nos próximos pontos), porém é uma <code className="token_reservada">Classe legada</code> devendo ser substituída pelo <code className="token_reservada">Path</code> do novo pacote <code className="token_reservada">java.nio</code>, pois é basicamente o caminho path do arquivo que essa Classe representa, logo, o novo pacote trás maior coesão sobre, mais informações sobre <code className="token_reservada">File</code>: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/src/main/java/F_io/Aula138File_introduction_Utils.java" target="_blank">Clique AQUI!</a></p>
@@ -2183,7 +2178,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando a criação e as possibilidades sobre essa classe File que representa Arquivos ou Diretórios em forma de Objetos:</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/welbert/Documentos/github/MaratonaJava-DevDojo/file.txt"</code>); <span className="-tokenComment">// caminho absoluto ou parcial</span><br/>
+                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/welbert/documents/file.txt"</code>); <span className="-tokenComment">// caminho absoluto ou parcial</span><br/>
                                                         <br/>
                                                         <code className="-tokenKeyword">boolean</code> isDeleted;<br/>
 
@@ -2203,14 +2198,14 @@ export default function JavaBibleScreen() {
 
                                                             <br/>
                                                             <code className="-nestedInnerCode"><code className="-tokenClassEntity">String</code> absolutePath_str = file.<code className="-tokenMethod">getAbsolutePath</code>();</code><br/>
-                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// "/home/welbert/Documentos/github/MaratonaJava-DevDojo/file.txt"</span></code><br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// "/home/welbert/documents/file.txt"</span></code><br/>
                                                             <br/>
                                                             <code className="-nestedInnerCode"><code className="-tokenClassEntity">String</code> path_str = file.<code className="-tokenMethod">getPath</code>();</code><br/>
-                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// "/home/welbert/Documentos/github/MaratonaJava-DevDojo/file.txt"</span></code><br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// "/home/welbert/documents/file.txt"</span></code><br/>
 
                                                             <br/>
                                                             <code className="-nestedInnerCode"><code className="-tokenClassEntity">String</code> parent_str = file.<code className="-tokenMethod">getParent</code>();</code><br/>
-                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// "/home/welbert/Documentos/github/MaratonaJava-DevDojo"</span></code><br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// "/home/welbert/documents"</span></code><br/>
 
                                                             <br/>
                                                             <code className="-nestedInnerCode"><code className="-tokenKeyword">long</code> totalSpace_long = file.<code className="-tokenMethod">getTotalSpace</code>();</code><br/>
@@ -2242,7 +2237,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando a criação, escrita e por fim liberação de recursos (utilizando try-with-resources que o faz automaticamente, isso é possível pois o FileWriter implementa Closeable e AutoCloseable):</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/welbert/Documentos/github/MaratonaJava-DevDojo/file.txt"</code>); <span className="-tokenComment">// caminho absoluto ou parcial</span><br/>
+                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/welbert/documents/file.txt"</code>); <span className="-tokenComment">// caminho absoluto ou parcial</span><br/>
 
                                                         <br/>
                                                         <span className="-tokenComment"># Relembrando try-with-resources: O Java mesmo se encarrega de executar o `.close()` no final do bloco (liberando assim recursos)</span><br/>
@@ -2268,7 +2263,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando a criação, leitura caractere a caractere em looping (Não é possível carregar linha a linha com essa, para isto podemos utilizar a equivalente otimizada BufferedReader) e por fim liberação de recursos (utilizando try-with-resources que o faz automaticamente, isso é possível pois o FileReader também implementa Closeable e AutoCloseable):</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/welbert/Documentos/github/MaratonaJava-DevDojo/file.txt"</code>); <span className="-tokenComment">// caminho absoluto ou parcial</span><br/>
+                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/welbert/documents/file.txt"</code>); <span className="-tokenComment">// caminho absoluto ou parcial</span><br/>
 
                                                         <br/>
                                                         <span className="-tokenComment"># Relembrando try-with-resources: O Java mesmo se encarrega de executar o `.close()` no final do bloco (liberando assim recursos)</span><br/>
@@ -2307,7 +2302,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando a criação, escrita e por fim liberação de recursos (utilizando try-with-resources que o faz automaticamente, isso é possível pois o BufferedWriter também implementa Closeable e AutoCloseable):</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/welbert/Documentos/github/MaratonaJava-DevDojo/file.txt"</code>); <span className="-tokenComment">// caminho absoluto ou parcial</span><br/>
+                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/welbert/documents/file.txt"</code>); <span className="-tokenComment">// caminho absoluto ou parcial</span><br/>
 
                                                         <br/>
                                                         <span className="-tokenComment"># Relembrando try-with-resources: O Java mesmo se encarrega de executar o `.close()` no final do bloco (liberando assim recursos)</span><br/>
@@ -2340,7 +2335,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando a criação, leitura linha a linha em looping e por fim liberação de recursos (utilizando try-with-resources que o faz automaticamente, isso é possível pois o BufferedReader também implementa Closeable e AutoCloseable):</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/welbert/Documentos/github/MaratonaJava-DevDojo/file.txt"</code>); <span className="-tokenComment">// caminho absoluto ou parcial</span><br/>
+                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/welbert/documents/file.txt"</code>); <span className="-tokenComment">// caminho absoluto ou parcial</span><br/>
 
                                                         <br/>
                                                         <span className="-tokenComment"># Relembrando try-with-resources: O Java mesmo se encarrega de executar o `.close()` no final do bloco (liberando assim recursos)</span><br/>
@@ -2377,6 +2372,229 @@ export default function JavaBibleScreen() {
                                             <br/>
                                             <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/G_nio" target="_blank">Clique AQUI!</a></li>
                                             <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula144a158-nio_NewVersionIO_manipulaArquivos" target="_blank">Clique AQUI!</a></li>
+                                            <br/>
+                                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile">Nova maneira mais coesa de lidar com as mesmas operações anteriores, porém com maior coerência entre as classes, melhor performance e ajusta alguns erros que poderiam ocorrer se utilizar as legadas, problemas esses relacionados a Internacionalização de Sistemas Operacionais (Aonde cada um segue suas prórprias convenções gerais sobre variáveis de ambiente e etc, diferentes tipos de Sistemas de Arquivos, adicionando assim funcionalidades para normalizar e retirar esses caracteres especiais do caminho Path do Arquivo ou Diretório, tornando esse novo caminho absoluto melhor entendível para os diferentes S.O's.</p>
+                                                
+                                                <p className="main-title--implementFullBlock">Fluxograma trasendo um Overview geral sobre as novas classes que substituem as do pacote legado da seção acima, tornando melhor a compreensão sobre a coesão entre as novas classes:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        {window.screen.width <= 800 ? <><pre className="pre-implementFullBlock">                <span className="-tokenComment">Substitui File por Path</span></pre><br/></> : ""}
+                                                        {window.screen.width <= 800 ? <><pre className="pre-implementFullBlock">                           <span className="-tokenComment --fontSize1rem">⇣</span></pre><br/></> : ""}
+                                                        <pre className="pre-implementFullBlock">   [Class File] &#60;=&#62; [Interface Path] {window.screen.width > 800 ? <><span className="-tokenComment">-&#62; Substitui File por Path</span></> : ""}</pre><br/>
+                                                        <pre className="pre-implementFullBlock">        /\                 /\</pre><br/>
+                                                        <pre className="pre-implementFullBlock">        ||                 ||</pre><br/>
+                                                        <pre className="pre-implementFullBlock">        ||            [Class Paths] {window.screen.width > 800 ? <><span className="-tokenComment">-&#62; Fabrica de Path</span></> : ""}</pre><br/>
+                                                        {window.screen.width <= 800 ? <><pre className="pre-implementFullBlock">        ||                 <span className="-tokenComment --fontSize1rem">⇡</span></pre><br/></> : ""}
+                                                        {window.screen.width <= 800 ? <><pre className="pre-implementFullBlock">        ||           <span className="-tokenComment">Fabrica de Path</span></pre><br/></> : ""}
+                                                        <pre className="pre-implementFullBlock">        ||</pre><br/>
+                                                        <pre className="pre-implementFullBlock">[Class Util Files] {window.screen.width > 800 ? <><span className="-tokenComment">-&#62; Todos os métodos de File transferidos para Files (Agora são Estáticos)</span></> : ""}</pre><br/>
+                                                        {window.screen.width <= 800 ? <><pre className="pre-implementFullBlock">        <span className="-tokenComment --fontSize1rem">⇡</span></pre><br/></> : ""}
+                                                        {window.screen.width <= 800 ? <><pre className="pre-implementFullBlock"><span className="-tokenComment">Todos os métodos de File<br/>transferidos para Files<br/>(Agora são Estáticos)</span></pre><br/></> : ""}
+                                                    </code>
+                                                </ul>
+                                            </li>
+                                            <li><code className="token_reservada">Path</code>: Substitui a legada <code className="token_reservada">File</code> devido a coesão (Pois o <code className="token_reservada">File</code> na verdade representa o caminho path do Arquivo ou Diretório em sí, então faz mais sentido o nome ser <code className="token_reservada">Path</code> ao invés de <code className="token_reservada">File</code>). Além disto agora é utilizado programação orientada a interface devido ao polimorfismo de Sistemas Operacionais, assim utilizamos a referência em uma abstração genérica que é concretizada apartir da classe util <code className="token_reservada">Paths</code> servindo de fábrica de objetos do tipo <code className="token_reservada">Path</code> realizando cálculos de acordo com o Sistema Operacional em execução, assim é garantido que o Objeto real final seja compatível com o Sistema Operacional em execução evitando vários problemas (Tudo que é especializado é melhor do que soluções genéricas que é o caso do pacote I/O legado, porisso ocorriam vários problemas relacionados a Internacionalização de Sistemas Operacionais); Obs: NÃO é garantido que o caminho path realmente exista pois não é realizado nenhum tratamento neste sentido, ou seja, é apenas a representação em forma de Objeto, se o caminho realmente é válido ou não é responsabilidade do desenvolvedor (Isso pode ser verificado com o método estático <code className="token_reservada">Files.notExists(filePath)</code>).</li>
+                                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">Paths</code>: Classe final utilizada principalmente para gerar uma instância de <code className="token_reservada">Path</code> com o método estático <code className="token_reservada">Paths.get(caminho-do-arquivo)</code>; Obs: Por conta do parâmetro do método get dela ser um <code className="token_reservada">varargs (...)</code> podemos passar pasta a pasta do caminho utilizando "," <code className="token_reservada">Paths.get("C:", "pamonha", "arq.txt")</code> ou também <code className="token_reservada">Paths.get("/home/user/documents/", "arq.txt")</code>.</p>
+
+                                                <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando as várias maneiras de fabricar uma instância de Path com essa classe utilitária:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        
+                                                        <span className="-tokenComment"># Caminho absoluto</span><br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> pathAbsolute = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/user/arq.txt"</code>);<br/>
+                                                        
+                                                        <br/>
+                                                        <span className="-tokenComment"># Caminho relativo</span><br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> pathRelative = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"diretorio/subdiretorio/arq.txt"</code>);<br/>
+                                                        <span className="-tokenComment">// Para obter o caminho completo `pathRelativo.toAbsolutePath()`</span><br/>
+                                                        <span className="-tokenComment">// O Caminho absoluto será em relação ao arq.java em execução deste código</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Utilizando uma sequência de componentes do caminho</span><br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> pathComponents = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"diretorio", "subdiretorio", "arq.txt"</code>);<br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Utilizando URI absoluta</span><br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> pathUriAbsolute = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"file:///home/user/arq.txt"</code>);<br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Utilizando URI relativa</span><br/>
+                                                        <code className="-tokenClassEntity">URI</code> uriRelative = <code className="-tokenClassEntity">URI</code>.<code className="-tokenMethod">create</code>(<code className="-tokenString">"file://"</code> + <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"diretorio/subdiretorio/arq.txt"</code>)<br/>
+                                                            <code className="-nestedInnerCode">.<code className="-tokenMethod">toAbsolutePath</code>());</code><br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> pathUriRelative = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(uriRelative);<br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Obtendo o caminho atual (Current) aonde esta sendo executado .java</span><br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> pathCurrent = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">""</code>);<br/>
+                                                        <span className="-tokenComment">## Obs: Se colocar no `sout` apenas a variável de referência a saída do `.toString()` será empty, então deve-se executar `.toAbsolutePath()`</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Utilizando um objeto File</span><br/>
+                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/user/arq.txt"</code>);<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> pathFile = arquivo.<code className="-tokenMethod">toPath</code>();<br/>
+                                                        <span className="-tokenComment">## Obs: Também é possível o processo inverso com `path.toFile()`</span><br/>
+                                                    </code>
+                                                </ul>
+                                            </li>
+                                             <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">Files</code>: Classe 100% Estática (Ou seja, ela é uma classe utilitária) contendo todos os métodos de instância da legada <code className="token_reservada">File</code> (Porém agora Estáticos), ou seja, métodos para criação, escritas, leituras, navegações e etc, tudo que é relacionado a Arquivos e Diretórios neste sentido é nela que se encontra (Ou seja, ela é uma facade).</p>
+
+                                                <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando como criar Arquivos e Diretórios: </p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        
+                                                        <code className="-tokenKeyword">try</code> &#123;<br/>
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Criando diretorio único (Sem ser de maneira recursiva, com pastas e subpastas):</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity ">Path</code> directoryPath = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert", "pasta_nonExistent"</code>);</code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">notExists</code>(directoryPath)) &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">directoryPath = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">createDirectory</code>(directoryPath);</code><br/>
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Criando multiplos sub-diretorios de uma vez (Recursivamente):</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">Path</code> directoriesPath = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert", "pasta_nonExistent", "subpasta", "subsubpasta"</code>);</code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">notExists</code>(directoriesPath)) &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">directoriesPath = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">createDirectories</code>(directoriesPath);</code><br/>
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Criando arquivo dentro de um diretorio criado anteriormente:</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">Path</code> filePath = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(directoriesPath.<code className="-tokenMethod">toString</code>(), <code className="-tokenString">"arq_nonExistent.txt"</code>);</code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">notExists</code>(filePath)) &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">filePath = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">createFile</code>(filePath);</code><br/>
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Renomeando um arquivo criado anteriormente:</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">Path</code> source = filePath; <span className="-tokenComment">// Origem</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">Path</code> target = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(filePath.<code className="-tokenMethod">getParent</code>().<code className="-tokenMethod">toString</code>(), <code className="-tokenString">"arq_renamed.txt"</code>); <span className="-tokenComment">// Destino</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">copy</code>(source, target, <code className="-tokenClassEntity">StandardCopyOption</code>.<code className="-tokenKeyConstant">REPLACE_EXISTING</code>); <span className="-tokenComment">// Último argumento faz Override se já existir</span></code><br/>
+
+                                                        <br/>
+                                                        &#125; <code className="-tokenKeyword">catch</code> (<code className="-tokenClassEntity">IOException</code> ex) &#123;<br/>
+                                                        <code className="-nestedInnerCode">ex.<code className="-tokenMethod">printStackTrace</code>();</code><br/>
+                                                        &#125;<br/>
+                                                    </code>
+                                                </ul>
+                                            </li>
+                                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">Operações de objPath.normalize() dos paths</code>: Método que substitui os caracteres curingas de um <code className="token_reservada">Path</code> relacionadas as variáveis de ambientes e convenções gerais sobre, deixando o path "limpo" completo, sem esses caracteres, esse processo é importante para manter compatibilidade com diferentes tipos de Sistemas Operacionais ou Sistemas de arquivos. (Exemplo: Criamos um path <code className="outputResult">"/home/welbert/Documentos/../../arq.txt"</code> ao normalizar ele ficará assim: <code className="outputResult">"/home/arq.txt"</code>)</p>
+
+                                                <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando como narmalizar Paths, retirando assim caracteres curingas redundantes do caminho, deixando ele Absoluto, limpo e compatível para diferentes Sistemas Operacionais: </p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        <code className="-tokenClassEntity">String</code> projectDirectory = <code className="-tokenString">"/home/welbert/documents"</code>;<br/>
+                                                        <code className="-tokenClassEntity">String</code> txtArchive = <code className="-tokenString">"../../arquivo.txt"</code>;<br/>
+
+                                                        <br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_nonNormalized = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(projectDirectory, txtArchive);<br/>
+                                                        <pre className="pre-implementFullBlock"><span className="-tokenComment">//                    NÃO está resolvendo</span></pre><br/>
+                                                        <pre className="pre-implementFullBlock"><span className="-tokenComment">//                           <span className={window.screen.width <= 425 ? "--fontSize1rem" : "--fontSize1Dot5rem"}>⇣⇣</span></span></pre><br/>
+                                                        <pre className="pre-implementFullBlock"><span className="-tokenComment">// "/home/welbert/documents/../../arquivo.txt"</span></pre><br/>
+                                                        
+                                                        <br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_normalized = path_nonNormalized.<code className="-tokenMethod">normalize</code>();<br/>
+                                                        <span className="-tokenComment">// "/home/arquivo.txt" &#60;- Resolveu</span><br/>
+                                                    </code>
+                                                </ul>
+                                            </li>
+                                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">Operações de objPath_absolute.resolve(objPath_relative) dos paths</code>: Ele toma um <code className="token_reservada">caminho relativo</code> como entrada e o combina com o <code className="token_reservada">caminho atual</code> para produzir um <code className="outputResult">caminho absoluto</code>. Obs: Ele só resolve apartir de um absoluto para o relativo nunca ao contrário. (Exemplo: Caminho atual (<code className="outputResult">"/var/log"</code>) combinado com o Caminho relativo (<code className="outputResult">"messages"</code>) temos que o caminho absoluto será (<code className="outputResult">"/var/log/messages"</code>))</p>
+
+                                                <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando como resolver e combinar Paths, Obs: Se o caminho já estiver correto ele desconsidera e retorna sem mudanças e sem erros.</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+        
+                                                        <span className="-tokenComment"># Resolvendo de todas as maneiras possíveis (Inclusive maneiras INVÁLIDAS):</span><br/>
+                                                        <br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_absolute = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert");<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_relative = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("documents");<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("arq.txt");<br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Absoluto resolve relativo: (Correto)</span><br/>
+                                                        path_absolute.<code className="-tokenMethod">resolve</code>(path_relative);<br/>
+                                                        <span className="-tokenComment">// "/home/welbert/documents"</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Absoluto resolve file: (Correto)</span><br/>
+                                                        path_absolute.<code className="-tokenMethod">resolve</code>(path_file);<br/>
+                                                        <span className="-tokenComment">// "/home/welbert/arq.txt"</span><br/>
+                                                        
+                                                        <br/>
+                                                        <span className="-tokenComment"># Relativo resolve absoluto: (INCORRETO)</span><br/>
+                                                        path_relative.<code className="-tokenMethod">resolve</code>(path_absolute);<br/>
+                                                        <span className="-tokenComment">// "/home/welbert" (Fica exatamente como está definido o absoluto, erro de lógica)</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Relativo resolve file: (Correto se o arquivo está no dir relativo)</span><br/>
+                                                        path_relative.<code className="-tokenMethod">resolve</code>(path_file);<br/>
+                                                        <span className="-tokenComment">// "documents/arq.txt"</span><br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># File resolve absoluto: (INCORRETO)</span><br/>
+                                                        path_file.<code className="-tokenMethod">resolve</code>(path_absolute);<br/>
+                                                        <span className="-tokenComment">// "/home/welbert" (Fica exatamente como está definido o absoluto, erro de lógica)</span><br/>
+
+                                                        <br/>                                                        
+                                                        <span className="-tokenComment"># File resolve relativo: (INCORRETO)</span><br/>
+                                                        path_file.<code className="-tokenMethod">resolve</code>(path_relative));<br/>
+                                                        <span className="-tokenComment">// "arq.txt/documents" (Erro de lógica)</span><br/>
+                                                    </code>
+                                                </ul>
+                                            </li>
+                                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">Operações de objPath_source.relativize(objPath_target) dos paths</code>: Usado para calcular o caminho relativo entre dois caminhos. Ele leva dois caminhos como entrada e retorna um caminho relativo que represente a diferença entre eles. Por exemplo, suponha que temos os seguintes caminhos: objPath_source sendo <code className="outputResult">"/home/user/documents"</code> e objPath_target sendo <code className="outputResult">"/home/user/pictures"</code>, se relativisarmos apartir do source para o target o resultado seria o path <code className="outputResult">"../pictures"</code>. Esse caminho relativo pode ser usado para navegar do diretório "documents" para o diretório "pictures". Ou seja, é útil quando precisamos determinar como navegar de um diretório para outro. Obs: Essa operação só pode ser aplicada em dois <code className="token_reservada">caminhos ABSOLUTOS</code>, ou seja, o source e target devem ser caminhos completos pois só assim é possível ter parâmetros para realizar esse cálculo.</p>
+
+                                                <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando como relativizar e determinar como navegar de um path source para outro path target, retornando um path RELATIVO que representa essa diferença entre eles. (APENAS SE APLICA EM AMBOS CAMINHOS ABSOLUTOS):</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+
+                                                        <span className="-tokenComment">## Reforçando: Essa operação só pode ser aplicada em ambos caminhos ABSOLUTOS!</span><br/>
+                                                        <br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_source = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert");<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_target = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/pedro/documents");<br/>
+
+                                                        <br/>
+                                                        <span className="-tokenComment"># Navegando de `/home/welbert` para `/home/pedro/documents`</span><br/>
+                                                        path_source.<code className="-tokenMethod">relativize</code>(path_target);<br/>
+                                                        <span className="-tokenComment">// "../pedro/documents"</span><br/>
+                                                        
+                                                        <br/>
+                                                        <span className="-tokenComment"># Navegando de `/home/pedro/documents` para `/home/welbert`</span><br/>
+                                                        path_target.<code className="-tokenMethod">relativize</code>(path_source);<br/>
+                                                        <span className="-tokenComment">// "../../welbert"</span><br/>        
+                                                    </code>
+                                                </ul>
+                                            </li>
+                                             <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">BasicFileAttributes</code>: Interface mais genérica para representação dos atributos básicos de um Arquivo ou Diretório em um Sistema de Arquivos utilizada <code className="token_reservada">APENAS para OBTER informações</code> (NÃO podemos utilizar essa classe para MODIFICAR, para isto temos as equivalentes com final "View", ou seja, para realizar modificações utiliza-se a equivalente <code className="token_reservada">BasicFileAttributesView</code>), informações essas relacionadas aos meta dados dos Arquivos ou Diretórios, como <code className="outputResult">tamanho do arquivo em bytes</code>, <code className="outputResult">data de criação</code>, <code className="outputResult">data de última modificação</code>, <code className="outputResult">data de último acesso</code>, <code className="outputResult">é arquivo?</code>, <code className="outputResult">é diretório?</code>, <code className="outputResult">é link simbolico?</code> , <code className="outputResult">é outro?</code> (quando não é nenhum dos anteriores), <code className="outputResult">é somente leitura?</code>, <code className="outputResult">é oculto?</code>, <code className="outputResult">é arquivado?</code>. OBS: Para obter informações relacionaads as permissões dos usuários ou grupos utiliza-se as interfaces que extends desta, para ambientes like Posix (Linux e etc) utilizamos a <code className="token_reservada">PosixFileAttributes</code> e para ambientes like DOS (Windows e etc) utilizamos a <code className="token_reservada">DosFileAttributes</code>. OBS: Para informações sobre o <code className="outputResult">tipo MIME</code> do arquivo em manipulação utilizamos a facade <code className="token_reservada">Files.probeContentType()</code> (Quando não é possível obter essa informação pelo nome e extensão do arquivo).</p>
+
+                                                <p className="main-title--implementFullBlock">Exemplo de Implementação demonstrando a programação orientada a interface para execuções indenpendentemente do Sistema Operacional em execução (NÃO vai ter problemas, pois o objeto invocado é genérico e possuí apenas informações comuns entre os diferentes Sistemas Operacionais e Sistemas de Arquivos):</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert/arq.txt");<br/>
+
+                                                        <br/>
+                                                        <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">exists</code>(path_file)) &#123;<br/>                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Obtém a instância delegando a responsabilidade da criação correta para a JVM calcular o S.O em execução.</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">BasicFileAttributes</code> attributes = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">readAttributes</code>(path_file, <code className="-tokenInterfaceEntity">BasicFileAttributes</code>.<code className="-tokenKeyword">class</code>);</code><br/>
+                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">FileTime</code> creationTime = attributes.<code className="-tokenMethod">creationTime</code>();</code><br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// 2022-12-01T16:06:57.120342248Z</span></code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">FileTime</code> lastModifiedTime = attributes.<code className="-tokenMethod">lastModifiedTime</code>();</code><br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// 2022-12-01T16:06:57.120342248Z</span></code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenClassEntity">FileTime</code> lastAccessTime = attributes.<code className="-tokenMethod">lastAccessTime</code>();</code><br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">// 2022-12-01T16:06:57.120342248Z</span></code><br/>
+
+                                                        &#125;<br/>                                                        
+
+                                                             
+                                                    </code>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li>

@@ -145,6 +145,11 @@ span.outputResult--implementFullBlock {
 ul.projects-frontend--container > li.-marginNone--inMobile > p {
     margin-left: .5rem;
     display: list-item;
+    list-style-type: square;
+}
+
+ul.projects-frontend--container > li.-marginNone--inMobile > p:nth-child(even) {
+    list-style-type: disc;
 }
 
 ul.projects-frontend--container > li.-marginNone--inMobile > p.-listItem--inMobile {
@@ -158,7 +163,7 @@ ul.projects-frontend--container > li.-marginNone--inMobile > p.-listItem--inMobi
 }
 
 ul.projects-frontend--container > li.-marginNone--inMobile {
-    display: inline-block;
+    list-style-type: none;
 }
 
 pre.pre-implementFullBlock {
@@ -166,6 +171,14 @@ pre.pre-implementFullBlock {
     font-size: .8rem;
 }
 
+.--fontSize1rem {
+    font-size: 1rem !important;
+}
+
+.--fontSize1Dot5rem {
+    font-size: 1.5rem !important;
+}
+ 
 @media (max-width: 810px)
 {
     code.token_reservada {
