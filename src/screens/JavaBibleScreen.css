@@ -178,6 +178,21 @@ pre.pre-implementFullBlock {
 .--fontSize1Dot5rem {
     font-size: 1.5rem !important;
 }
+
+ul.javaBible-listOfTitle--container {
+    font-family: var(--main-fontFamily);
+    color: #7b83da;
+    font-weight: 500;
+    font-size: .8rem;
+    list-style-position: inside;
+    line-height: 1rem;
+    text-shadow: 1px 1px 3px black;
+    list-style-type: square;
+}
+
+ul.javaBible-listOfTitle--container li::marker {
+    color: white;
+}
  
 @media (max-width: 810px)
 {
