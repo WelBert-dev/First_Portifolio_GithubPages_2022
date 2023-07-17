@@ -2741,6 +2741,84 @@ export default function JavaBibleScreen() {
                                                     </code>
                                                 </ul>
                                             </li>
+                                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">DosFileAttributes</code> e <code className="token_reservada">DosFileAttributesView</code>, <code className="token_reservada">PosixFileAttributes</code> e <code className="token_reservada">PosixFileAttributesView</code>: As Interfaces <code className="token_reservada">DosFileAttributes</code> e <code className="token_reservada">PosixFileAttributes</code> são Interfaces que extends da anterior (<code className="token_reservada">BasicFileAttributes</code>), porém são Especializadas para ambientes DOS (Windows e etc) e a outra para ambientes Posix (GNU/Linux e etc), e são Interfaces também utilizadas para representação dos atributos de um Arquivo ou Diretório em um Sistema de Arquivos usada <code className="token_reservada">APENAS para OBTER informações</code> (NÃO podemos utilizar as classes que implementam elas para MODIFICAR, para isto temos as equivalentes com final "View", ou seja, para realizar modificações utiliza-se a equivalente <code className="token_reservada">DosFileAttributesView</code>) ou <code className="token_reservada">PosixFileAttributesView</code>), informações essas relacionadas aos meta dados dos Arquivos ou Diretórios, como <code className="outputResult">tamanho do arquivo em bytes</code>, <code className="outputResult">data de criação</code>, <code className="outputResult">data de última modificação</code>, <code className="outputResult">data de último acesso</code>, <code className="outputResult">é arquivo?</code>, <code className="outputResult">é diretório?</code>, <code className="outputResult">é link simbolico?</code> , <code className="outputResult">é outro?</code> (quando não é nenhum dos anteriores), <code className="outputResult">é somente leitura?</code>, <code className="outputResult">é oculto?</code>, <code className="outputResult">é arquivado?</code>. OBS: Ou seja mesmas operações anteriores porém agora também podemos realizar operações especificas do ambiente DOS como por exemplo obter informações relacionaads as permissões dos usuários. OBS: Para informações sobre o <code className="outputResult">tipo MIME</code> do arquivo em manipulação utilizamos a facade <code className="token_reservada">Files.probeContentType()</code> (Quando não é possível obter essa informação pelo nome e extensão do arquivo).</p>
+
+                                                <p className="main-title--implementFullBlock">UTILIZANDO DosFileAttributesView (Para ambientes Windows) para MODIFICAR informações com o pacote novo: Exemplo de Implementação demonstrando as modificações relacionadas as permissões de usuários:</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert/arq.txt");<br/>
+
+                                                        <br/>
+                                                        <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">exists</code>(path_file)) &#123;<br/>                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Obtém qual é o Sistema Operacional em execução runtime:</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">final</code> <code className="-tokenClassEntity">String</code> os = <code className="-tokenClassEntity">System</code>.<code className="-tokenMethod">getProperty</code>(<code className="-tokenString">"os.name"</code>);</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">## Se for ambiente DOS (Windows e etc):</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code> (os.<code className="-tokenMethod">contains</code>(<code className="-tokenString">"Windows"</code>)) &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><span className="-tokenComment"># Obtem o principal de usuário para o usuário corrente</span></code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenInterfaceEntity">UserPrincipal</code> user = path_file.<code className="-tokenMethod">getFileSystem</code>()</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">.<code className="-tokenMethod">getUserPrincipalLookupService</code>()</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">.<code className="-tokenMethod">lookupPrincipalByName</code>(<code className="-tokenClassEntity">System</code>.<code className="-tokenMethod">getProperty</code>(<code className="-tokenString">"user.name"</code>));</code><br/>                                                                    
+
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --2Identation"><span className="-tokenComment"># Define permissões de leitura e escrita para o usuário corrente</span></code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenInterfaceEntity">AclFileAttributeView</code> aclView = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">getFileAttributeView</code>(path_file, <code className="-tokenInterfaceEntity">AclFileAttributeView</code>.<code className="-tokenKeyword">class</code>);</code><br/>
+
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenInterfaceEntity">List</code>&#60;<code className="-tokenClassEntity">AclEntry</code>&#62; aclEntries = aclView.<code className="-tokenMethod">getAcl</code>();</code><br/>
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">AclEntry</code> entry = <code className="-tokenClassEntity">AclEntry</code>.<code className="-tokenMethod">newBuilder</code>()</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">.<code className="-tokenMethod">setType</code>(<code className="-tokenClassEntity">AclEntryType</code>.<code className="-tokenKeyConstant">ALLOW</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">.<code className="-tokenMethod">setPrincipal</code>(user)</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">.<code className="-tokenMethod">setPermissions</code>(<code className="-tokenClassEntity">AclEntryPermission</code>.<code className="-tokenKeyConstant">READ_DATA</code>, <code className="-tokenClassEntity">AclEntryPermission</code>.<code className="-tokenKeyConstant">WRITE_DATA</code>)</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">.<code className="-tokenMethod">build</code>();</code><br/>
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --2Identation">aclEntries.<code className="-tokenMethod">add</code>(entry);</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">aclView.<code className="-tokenMethod">setAcl</code>(aclEntries);</code><br/>
+
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">## Se for ambiente Posix (Gnu/Linux e etc):</span></code><br/>
+                                                            
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">else</code> &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><span className="-tokenComment"># Exemplo abaixo deste!</span></code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">...</code><br/>
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+                                                        &#125;<br/>                                                               
+                                                    </code>
+                                                </ul>
+
+                                                <p className="main-title--implementFullBlock">PosixFileAttributesView (Para ambientes GNU/Linux) para MODIFICAR informações com o pacote novo: Exemplo de Implementação demonstrando as modificações relacionadas as permissões de usuários e grupos (Mesmo exemplo anterior, porém para ambientes Unix-Like):</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert/arq.txt");<br/>
+
+                                                        <br/>
+                                                        <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">exists</code>(path_file)) &#123;<br/>                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Obtém qual é o Sistema Operacional em execução runtime:</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">final</code> <code className="-tokenClassEntity">String</code> os = <code className="-tokenClassEntity">System</code>.<code className="-tokenMethod">getProperty</code>(<code className="-tokenString">"os.name"</code>);</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">## Se for ambiente Unix (Linux):</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code> (os.<code className="-tokenMethod">contains</code>(<code className="-tokenString">"Linux"</code>)) &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><span className="-tokenComment"># Define permissões como rwxrw-rw- </span></code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenInterfaceEntity">Set</code>&#60;<code className="-tokenClassEntity">PosixFilePermission</code>&#62; permissions = <code className="-tokenClassEntity">PosixFilePermissions</code>.<code className="-tokenMethod">fromString</code>(<code className="-tokenString">"rwxrw-rw-"</code>);</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">setAttribute</code>(file_path, <code className="-tokenString">"posix:permissions"</code>, permissions);</code><br/>
+                                                                
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --2Identation"><span className="-tokenComment"># Verifica se as permissões foram aplicadas corretamente</span></code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">newPermissions =</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">(<code className="-tokenInterfaceEntity">Set</code>&#60;<code className="-tokenClassEntity">PosixFilePermission</code>&#62;) <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">getAttribute</code>(file_path, <code className="-tokenString">"posix:permissions"</code>);</code><br/>
+
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>({window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">PosixFilePermissions</code>.<code className="-tokenMethod">toString</code>(newPermissions));</code><br/>
+                                                            <code className="-nestedInnerCode">&#123;</code><br/>
+                                                        &#125;<br/>                                                               
+                                                    </code>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li>
