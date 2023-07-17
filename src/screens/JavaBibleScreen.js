@@ -2819,6 +2819,36 @@ export default function JavaBibleScreen() {
                                                     </code>
                                                 </ul>
                                             </li>
+                                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">DirectoryStream</code>: Navegando e Iterando sobre diretórios de maneira <code className="token_reservada">NÃO Recursiva</code> (Para navegar de maneira recursiva e executar lógicas durante essa navegação utiliza-se a próxima classe pontuada abaixo desta <code className="token_reservada">SimpleFileVisitor</code> (Com ela além de navegar de maneira recursiva na árvore hierárquia de diretórios, também é possível executar blocos de lógica <code className="outputResult">Antes</code>, <code className="outputResult">Durante</code>, <code className="outputResult">Se ocorrer algum erro</code>, e <code className="outputResult">Depois</code> de visitar um diretório, bastanto sobrescrever o método correspondente dessas ações, mais detalhes na pontuação abaixo)), ou seja com essa Interface <code className="token_reservada">DirectoryStream</code>, só é possível iterar em primeiro nível da árvore hierárquica de diretórios (Código implementado e executado em ambiente GNU/Linux Ubuntu, não sei se é válido também para DOS). Obs: O Retorno é <code className="token_reservada">Path</code>.</p>
+                                                
+                                                <p className="main-title--implementFullBlock">Exemplo de Implementação navegando e iterando lvl 1 da árvore hierárquica de diretórios e pegando arquivos com extensão <code className="outputResult">`.java`</code> no nome do arquivo (Obs: O Retorno é Path):</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("src/main/java/G_nio");<br/>
+
+                                                        <br/>
+                                                        <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">exists</code>(path_file)) &#123;<br/>                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Obtém qual é o Sistema Operacional em execução runtime:</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">final</code> <code className="-tokenClassEntity">String</code> os = <code className="-tokenClassEntity">System</code>.<code className="-tokenMethod">getProperty</code>(<code className="-tokenString">"os.name"</code>);</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment">## Se for ambiente Unix (Linux):</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code> (os.<code className="-tokenMethod">contains</code>(<code className="-tokenString">"Linux"</code>)) &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">try</code> (<code className="-tokenInterfaceEntity">DirectoryStream</code>&#60;<code className="-tokenInterfaceEntity">Path</code>&#62; directoryStream = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">newDirectoryStream</code>(file_path, <code className="-tokenString">"*.java"</code>)) &#123;</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation"><code className="-tokenKeyword">for</code> (<code className="-tokenInterfaceEntity">Path</code> path : directoryStream) &#123;</code><br/>
+                                                                        <code className="-nestedInnerCode --4Identation"><span className="-tokenComment"># Faz alguma coisa com os Paths que correspondem a arquivos `.java`</span></code><br/>
+                                                                        <code className="-nestedInnerCode --4Identation">...</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">&#125;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">&#125; <code className="-tokenKeyword">catch</code> (<code className="-tokenClassEntity">IOException</code> ex) &#123;</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">ex.<code className="-tokenMethod">printStackTrace</code>();</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">&#125;</code><br/>
+
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+                                                        &#125;<br/>                                                               
+                                                    </code>
+                                                </ul>
+                                            </li>
                                         </ul>
                                     </li>
                                     <li>
