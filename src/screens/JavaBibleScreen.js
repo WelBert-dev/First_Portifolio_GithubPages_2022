@@ -2564,9 +2564,9 @@ export default function JavaBibleScreen() {
         
                                                         <span className="-tokenComment"># Resolvendo de todas as maneiras possíveis (Inclusive maneiras INVÁLIDAS):</span><br/>
                                                         <br/>
-                                                        <code className="-tokenInterfaceEntity">Path</code> path_absolute = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert");<br/>
-                                                        <code className="-tokenInterfaceEntity">Path</code> path_relative = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("documents");<br/>
-                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("arq.txt");<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_absolute = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert"</code>);<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_relative = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"documents"</code>);<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"arq.txt"</code>);<br/>
 
                                                         <br/>
                                                         <span className="-tokenComment"># Absoluto resolve relativo: (Correto)</span><br/>
@@ -2608,8 +2608,8 @@ export default function JavaBibleScreen() {
 
                                                         <span className="-tokenComment">## Reforçando: Essa operação só pode ser aplicada em ambos caminhos ABSOLUTOS!</span><br/>
                                                         <br/>
-                                                        <code className="-tokenInterfaceEntity">Path</code> path_source = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert");<br/>
-                                                        <code className="-tokenInterfaceEntity">Path</code> path_target = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/pedro/documents");<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_source = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert"</code>);<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_target = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/pedro/documents"</code>);<br/>
 
                                                         <br/>
                                                         <span className="-tokenComment"># Navegando de `/home/welbert` para `/home/pedro/documents`</span><br/>
@@ -2628,7 +2628,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">SEM UTILIZAR BasicFileAttributes, MODIFICANDO informações com o pacote legado: Exemplo de Implementação demonstrando a maneira <code className="token_reservada">LEGADA</code> de se trabalhar com os atributos básicos dos Arquivos, no qual é possível moficiar a data de modificação setando ela para antes de criar o arquivo, rolando assim inconsistências (Como pode a data de modificação ser antes mesmo de o arquivo existir?) pois não rola verificações entes de modificar, lógico que esse cenário é exagerado pois o próprio desenvolvedor está setando isso, mas ainda sim é inconsistente. OBS: PROBLEMA AINDA OCORRENDO NO NOVO PACOTE TAMBÉM!</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>("/home/welbert/arq.txt");<br/>
+                                                        <code className="-tokenClassEntity">File</code> file = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">File</code>(<code className="-tokenString">"/home/welbert/arq.txt"</code>);<br/>
 
                                                         <br/>
                                                         <code className="-tokenKeyword">if</code>(!file.<code className="-tokenMethod">exists</code>()) &#123;<br/>                                                            
@@ -2655,7 +2655,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">SEM UTILIZAR BasicFileAttributes, MODIFICANDO informações com o novo pacote: Exemplo de Implementação demonstrando a maneira <code className="token_reservada">NOVA</code> de se trabalhar com os atributos básicos dos Arquivos, no qual TAMBÉM é possível moficiar a data de modificação setando ela para antes de criar o arquivo, rolando assim inconsistências (Como pode a data de modificação ser antes mesmo de o arquivo existir?) pois não rola verificações entes de modificar, lógico que esse cenário é exagerado pois o próprio desenvolvedor está setando isso, mas ainda sim é inconsistente. OBS: PROBLEMA TAMBÉM OCORRE NO PACOTE LEGADO!</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenInterfaceEntity">Path</code> aqrv_path = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert/arq_path.txt");<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> aqrv_path = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert/arq_path.txt"</code>);<br/>
 
                                                         <br/>
                                                         <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">notExists</code>(aqrv_path)) &#123;<br/>                                                        
@@ -2679,7 +2679,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">UTILIZANDO BasicFileAttributes para OBTER informações com o pacote novo: Exemplo de Implementação demonstrando a programação orientada a interface para execuções indenpendentemente do Sistema Operacional em execução (NÃO vai ter problemas, pois o objeto invocado é genérico e possuí apenas informações comuns entre os diferentes Sistemas Operacionais e Sistemas de Arquivos):</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert/arq.txt");<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert/arq.txt"</code>);<br/>
 
                                                         <br/>
                                                         <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">exists</code>(path_file)) &#123;<br/>                                                            
@@ -2709,7 +2709,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">UTILIZANDO BasicFileAttributesView para MODIFICAR informações com o pacote novo: Exemplo de Implementação demonstrando a programação orientada a interface para execuções indenpendentemente do Sistema Operacional em execução (NÃO vai ter problemas, pois o objeto invocado é genérico e possuí apenas informações comuns entre os diferentes Sistemas Operacionais e Sistemas de Arquivos):</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert/arq.txt");<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert/arq.txt"</code>);<br/>
 
                                                         <br/>
                                                         <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">exists</code>(path_file)) &#123;<br/>                                                            
@@ -2746,7 +2746,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">UTILIZANDO DosFileAttributesView (Para ambientes Windows) para MODIFICAR informações com o pacote novo: Exemplo de Implementação demonstrando as modificações relacionadas as permissões de usuários:</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert/arq.txt");<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert/arq.txt"</code>);<br/>
 
                                                         <br/>
                                                         <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">exists</code>(path_file)) &#123;<br/>                                                            
@@ -2792,7 +2792,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">PosixFileAttributesView (Para ambientes GNU/Linux) para MODIFICAR informações com o pacote novo: Exemplo de Implementação demonstrando as modificações relacionadas as permissões de usuários e grupos (Mesmo exemplo anterior, porém para ambientes Unix-Like):</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("/home/welbert/arq.txt");<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert/arq.txt"</code>);<br/>
 
                                                         <br/>
                                                         <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">exists</code>(path_file)) &#123;<br/>                                                            
@@ -2824,7 +2824,7 @@ export default function JavaBibleScreen() {
                                                 <p className="main-title--implementFullBlock">Exemplo de Implementação navegando e iterando lvl 1 da árvore hierárquica de diretórios e pegando arquivos com extensão <code className="outputResult">`.java`</code> no nome do arquivo (Obs: O Retorno é Path):</p>
                                                 <ul className="main-implementFullBlock--container">
                                                     <code className="implementFullBlock">
-                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>("src/main/java/G_nio");<br/>
+                                                        <code className="-tokenInterfaceEntity">Path</code> path_file = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"src/main/java/G_nio"</code>);<br/>
 
                                                         <br/>
                                                         <code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">exists</code>(path_file)) &#123;<br/>                                                            
@@ -2846,6 +2846,95 @@ export default function JavaBibleScreen() {
 
                                                             <code className="-nestedInnerCode">&#125;</code><br/>
                                                         &#125;<br/>                                                               
+                                                    </code>
+                                                </ul>
+                                            </li>
+                                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">SimpleFileVisitor</code>: Classe equivalente da anterior <code className="token_reservada">DirectoryStream</code>, porém mais poderosa podendo além de navegar e iterar de <code className="token_reservada">maneira recursiva</code> abaixo da árvore hierárquica de diretórios, também é possível executar blocos de lógica <code className="outputResult">Antes</code> (Sobrescrevendo o <code className="token_reservada">preVisitDirectory()</code>), <code className="outputResult">Durante</code> (Sobrescrevendo o <code className="token_reservada">visitFile()</code>), <code className="outputResult">Se ocorrer algum erro durante algum dos passos anteriores</code> (Sobrescrevendo o <code className="token_reservada">visitFileFailed()</code>), e <code className="outputResult">Depois</code> (Sobrescrevendo o <code className="token_reservada">postVisitDirectory()</code>) de visitar o diretório, bastando sobrescrever APENAS o método correspondente desejado.</p>
+                                                
+                                                <p className="main-title--implementFullBlock">Exemplo de Implementação navegando e iterando lvl ALL (Recursivamente) da árvore hierárquica de diretórios e pegando arquivos com extensão <code className="outputResult">`.java`</code> no nome do arquivo e tomando decisões durante as visitas nos diretórios (Obs: O Retorno é Path):</p>
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        <code className="-tokenKeyword">class</code> <code className="-tokenClassEntity">ListAllFiles_endsWithDotJava</code> <code className="-tokenKeyword">extends</code> <code className="-tokenClassEntity">SimpleFileVisitor</code>&#60;<code className="-tokenInterfaceEntity">Path</code>&#62; &#123;<br/>
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Executado antes de abrir e apontar o cursor para o novo diretório.</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenAnnotationsEntity">@Override</code></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">public</code> <code className="-tokenClassEntity">FileVisitResult</code> preVisitDirectory(<code className="-tokenInterfaceEntity">Path</code> dir, <code className="-tokenInterfaceEntity">BasicFileAttributes</code> attrs) <code className="-tokenKeyword">throws</code> <code className="-tokenClassEntity">IOException</code> &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"preVisit: "</code>+dir.<code className="-tokenMethod">getFileName</code>());</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">...</code><br/>
+
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">return</code> <code className="-tokenClassEntity">FileVisitResult</code>.<code className="-tokenKeyConstant">CONTINUE</code>;</code><br/>
+
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Executado após abrir e apontar o cursor para o diretório corrente.</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenAnnotationsEntity">@Override</code></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">public</code> <code className="-tokenClassEntity">FileVisitResult</code> visitFile(<code className="-tokenInterfaceEntity">Path</code> file, <code className="-tokenInterfaceEntity">BasicFileAttributes</code> attrs) <code className="-tokenKeyword">throws</code> <code className="-tokenClassEntity">IOException</code> &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"visitFile: "</code>+file.<code className="-tokenMethod">getFileName</code>());</code><br/>
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">if</code> (file.<code className="-tokenMethod">toString</code>().<code className="-tokenMethod">endsWith</code>(<code className="-tokenString">".java"</code>)) &#123;</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">...</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">&#125;</code><br/>
+                                                                
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">return</code> <code className="-tokenClassEntity">FileVisitResult</code>.<code className="-tokenKeyConstant">CONTINUE</code>;</code><br/>
+
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Executado em casos de errors em algum dos passos anteriores.</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenAnnotationsEntity">@Override</code></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">public</code> <code className="-tokenClassEntity">FileVisitResult</code> visitFileFailed(<code className="-tokenInterfaceEntity">Path</code> file, <code className="-tokenClassEntity">IOException</code> exc) <code className="-tokenKeyword">throws</code> <code className="-tokenClassEntity">IOException</code> &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"visitFileFailed: "</code>+file.<code className="-tokenMethod">getFileName</code>());</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">...</code><br/>
+
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">return</code> <code className="-tokenClassEntity">FileVisitResult</code>.<code className="-tokenKeyConstant">CONTINUE</code>;</code><br/>
+
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><span className="-tokenComment"># Executado após abrir e apontar o cursor para o diretório corrente retornando.</span></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenAnnotationsEntity">@Override</code></code><br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">public</code> <code className="-tokenClassEntity">FileVisitResult</code> postVisitDirectory(<code className="-tokenInterfaceEntity">Path</code> dir, <code className="-tokenClassEntity">IOException</code> exc) <code className="-tokenKeyword">throws</code> <code className="-tokenClassEntity">IOException</code> &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"postVisitDirectory: "</code>+dir.<code className="-tokenMethod">getFileName</code>());</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">...</code><br/>
+
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">return</code> <code className="-tokenClassEntity">FileVisitResult</code>.<code className="-tokenKeyConstant">CONTINUE</code>;</code><br/>
+
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>
+
+                                                        &#125;<br/>                                                 
+                                                    </code>
+                                                </ul>
+                                                <p className="main-title--implementFullBlock"><code className="token_reservada">FileVisitResult.CONTINUE;</code> Define que ira continuar a interação, ou seja próximo Path.</p>
+                                                <p className="main-title--implementFullBlock"><code className="token_reservada">FileVisitResult.TERMINATE;</code> Define que encontrou o Path desejado e Finaliza.</p>
+                                                <p className="main-title--implementFullBlock"><code className="token_reservada">FileVisitResult.SKIP_SUBTREE;</code> Define que é para sair da subpasta corrente.</p>
+                                                <p className="main-title--implementFullBlock"><code className="token_reservada">FileVisitResult.SKIP_SIBLINGS;</code> Continua interação pulando quem está no mesmo nível da arvore.</p>
+
+                                                <ul className="main-implementFullBlock--container">
+                                                    <code className="implementFullBlock">
+                                                        <code className="-tokenKeyword">public static</code> <code className="-tokenClassEntity">void</code> <code className="-tokenMethod">main</code>(<code className="-tokenClassEntity">String</code>[] args) &#123;<br/>
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">Path</code> path_root = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString"></code>".");</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">exists</code>(path_root)) &#123;</code><br/>                                                            
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">try</code> &#123;</code><br/>
+                                                                    <br/>
+                                                                    <code className="-nestedInnerCode --3Identation"><span className="-tokenComment"># Executa a navegação:</span></code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">walkFileTree</code>(path_root, <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ListAllFiles_endsWithDotJava</code>());</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">...</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">&#125; <code className="-tokenKeyword">catch</code> (<code className="-tokenClassEntity">IOException</code> ex) &#123;</code><br/>
+                                                                    <code className="-nestedInnerCode --3Identation">ex.<code className="-tokenMethod">printStackTrace</code>();</code><br/>
+                                                                <code className="-nestedInnerCode --2Identation">&#125;</code><br/>
+
+                                                            <code className="-nestedInnerCode">&#125;</code><br/>  
+
+                                                        &#125;<br/>                                                 
                                                     </code>
                                                 </ul>
                                             </li>
