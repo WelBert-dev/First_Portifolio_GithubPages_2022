@@ -101,7 +101,7 @@ export default function CurriculumVitaeScreen() {
                                          <div className="template__nameOccupation">
                                              <div className="template__name"><span>Wellison</span><span>Bertelli</span></div>
                                              <div className="template__occupation">
-                                                 <p>Desenvolvedor FullStack</p>
+                                                 <p>Desenvolvedor Web - FullStack (Full Cycle)</p>
                                              </div>
                                          </div>
                                          </section>
@@ -117,22 +117,21 @@ export default function CurriculumVitaeScreen() {
                                                 e atualmente curso CST em "Análise e Desenvolvimento de Sistemas" no CEUNSP - Salto, 
                                                 com o objetivo de, após a conclusão do curso, fazer Mestrado e Doutorado. <br/><br/>
 
-                                                Tenho me dedicado atualmente especialmente em Java avançado, e possuo 
+                                                Tenho me dedicado atualmente especialmente em Java avançado e o Ecossistema Spring, e possuo 
                                                 fortes conhecimentos em ReactJS e MySQL porém não estou mais focado nessas 
-                                                tecnologias pois por agora pretendo me aprofundar em backend com o Java, 
+                                                tecnologias pois por agora pretendo me aprofundar em Back-end com o Java, 
                                                 portanto tenho objetivos futuros de me tornar um desenvolvedor Fullstack 
                                                 na programação Web 2.0, com responsividade. <br/><br/>
                                                 
-                                                Também sou entusiasta do sistema operacional GNU/Linux, que utilizo em meu dia a dia. 
+                                                Também sou entusiasta do Sistema Operacional GNU/Linux, que utilizo em meu dia a dia. 
                                                 Após fazer o curso do Paulo Kretcheu de 36 vídeos, me apaixonei pelas 3 Liberdades GPL 
                                                 que garantem as liberdades do usuário, o que me permite personalizar e configurar o 
-                                                ambiente sem dificuldades ou problemas, diferente do ruindows que é uma caixa preta 
-                                                ditadora de regras. <br/><br/>
+                                                ambiente sem dificuldades ou problemas, diferente do windows que é uma caixa preta fechada.<br/><br/>
 
                                                 Além disso, este ano pretendo obter a certificação Java da Oracle e continuar estudando 
-                                                para aprimorar minhas habilidades em programação web. 
+                                                para aprimorar minhas habilidades em programação e desenvolvimento Web. 
                                                 Com senioridade na Web 2.0, pretendo explorar novas áreas, como Web 3.0 e Blockchain, 
-                                                e sempre buscar novas oportunidades para desenvolver meu potencial como desenvolvedor.
+                                                e sempre buscar novos desafios para desenvolver meu potencial como desenvolvedor.
                                                 </div>
                                              </div>
                                          </div>

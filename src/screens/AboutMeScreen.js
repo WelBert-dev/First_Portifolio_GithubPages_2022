@@ -34,18 +34,16 @@ export default function AboutMeScreen() {
                         (ReactJs) e estou atualmente aprofundando meus estudos em Backend com Java, buscando experiência 
                         em projetos reais e/ou em produção. <br/><br/>
 
-                        Vivo e respiro programação todos os dias, desde que decidi 
-                        seguir minha paixão há dois(2) anos e meio atrás. Acredito que a obsessão é mais importante do que o 
-                        talento natural e essa mentalidade me impulsiona a crescer cada dia mais.
+                        Vivo e respiro programação e desenvolvimento todos os dias, desde que decidi seguir minha paixão há dois(2) anos e meio 
+                        atrás. Gosto muito da frase "A obsessão ganha do talento, todas as vezes" pois essa mentalidade me impulsiona 
+                        a crescer cada dia mais.
                         Formado em "Técnico em Informática" pelo Instituto Federal de Educação, Ciência e Tecnologia de São Paulo 
                         (IFSP - Salto) desde o final de 2022 e atualmente curso CST em "Análise e Desenvolvimento de Sistemas" no CEUNSP - Salto, 
                         com o objetivo de, após a conclusão do curso, fazer Mestrado e Doutorado.<br/><br/>
 
                         Sou de uma família humilde, sonhador e determinado. Tenho certeza que no futuro conseguirei 
-                        proporcionar melhorias para aqueles que amo. Sigo a filosofia de "um leão por dia", acreditando 
-                        que a persistência e o esforço constante são o caminho para o sucesso. No momento, trabalho 
-                        como freelancer e estou sempre buscando novas oportunidades para me aprimorar e crescer na 
-                        minha carreira.
+                        proporcionar melhorias para aqueles que amo. Sigo a filosofia de "Um leão por dia", acreditando 
+                        que a persistência e o esforço constante são o caminho para o sucesso. Vamos trabalhar juntos?
                         </p>
                     </div>
                 </div>             
