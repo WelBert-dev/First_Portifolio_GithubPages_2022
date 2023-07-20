@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/firstPortifolioGithubPages-2022/static/css/main.9b61e771.css",
-    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.c399a82a.js",
+    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.5c310001.js",
     "static/media/NetFlixCloneWeb.gif": "/firstPortifolioGithubPages-2022/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Dragon Ball GT abertura em HD e tela inteira (320 kbps).mp3": "/firstPortifolioGithubPages-2022/static/media/Dragon Ball GT abertura em HD e tela inteira (320 kbps).c1faf1194450048f64e3.mp3",
     "static/media/diploma-tecnicoInformatica-ifsp.png": "/firstPortifolioGithubPages-2022/static/media/diploma-tecnicoInformatica-ifsp.815cb1c23452e39aa7ec.png",
@@ -81,10 +81,10 @@
     "index.html": "/firstPortifolioGithubPages-2022/index.html",
     "static/media/portariaNormativaCeic-parte02.png": "/firstPortifolioGithubPages-2022/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
     "main.9b61e771.css.map": "/firstPortifolioGithubPages-2022/static/css/main.9b61e771.css.map",
-    "main.c399a82a.js.map": "/firstPortifolioGithubPages-2022/static/js/main.c399a82a.js.map"
+    "main.5c310001.js.map": "/firstPortifolioGithubPages-2022/static/js/main.5c310001.js.map"
   },
   "entrypoints": [
     "static/css/main.9b61e771.css",
-    "static/js/main.c399a82a.js"
+    "static/js/main.5c310001.js"
   ]
 }
