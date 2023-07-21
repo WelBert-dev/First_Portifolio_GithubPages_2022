@@ -141,62 +141,66 @@ export default function MainNavbar() {
 
 
 
-    /* Player Music Area */
+    /*======================================== PLAYER MUSIC AREA ============================================*/
 
-    // const player = document.querySelector("#audioPlayer");
-
-    // const playerPlay = document.querySelector(".audioPlayer-control--play");
-    // const playerPause = document.querySelector(".audioPlayer-control--pause");
-
+    // Local Storage responsável por salvar o estado da musica corrente, guardando o index e o current Time dela
+    // Salva apenas em casos de Pause e Re-Loads da página.
     const getLocalStorage_stateOfMusic = () => JSON.parse(localStorage.getItem('db_stateOfMusic')) ?? {indexOfMusic: 0, stateOfTime: 0};
     const setLocalStorage_stateOfMusic = (dbStateOfMusic = {indexOfMusic: 0, stateOfTime: 0}) => localStorage.setItem("db_stateOfMusic", JSON.stringify(dbStateOfMusic));
 
-    const [listOfMusics, setListOfMusics] = useState([
-        {title:"Rick And Morty Intro - Primeira Temporada", artist:"Rick and Morty", genre:"Adventure", src:`${rickAndMortyMainIntro}`, totalDurationInSeconds: 32.256},
-        {title:"Fullmetal Alchemist Brotherhood Intro - Opeging 1", artist:"Fullmetal Alchemist BH", genre:"Adventure", src:`${fullmetalAlchemistBHMainIntro}`, totalDurationInSeconds: 92.64},
-        {title:"Yu Yu Hakusho (Português) Intro - Opening 1", artist:"froid", genre:"Classic", src:`${yuyuHakushoMainIntro}`, totalDurationInSeconds: 86.808},
-        {title:"Death Note Intro - Opening 1", artist:"froid", genre:"Mistery", src:`${deathNoteMainIntro}`, totalDurationInSeconds: 80.88},
-        {title:"Tokyo Ghoul - Opening 1 - Unravel", artist:"froid", genre:"Mistery", src:`${tokyoGhoulMainIntro}`, totalDurationInSeconds:  90}, 
-        {title:"Dragon Ball Z - Opening 1 - Chala Head Chala (Português)", artist:"froid", genre:"Mistery", src:`${dbzChalaHeChalaIntro}`, totalDurationInSeconds: 109.512},
-        {title:"Dragon Ball Z - Opening 2 - Posso pressentir o perigo e o caos (Português)", artist:"froid", genre:"Mistery", src:`${dbzPossoPressentirOPerigoEoCaos}`, totalDurationInSeconds: 107.904},
-        {title:"Dragon Ball GT - Opening 1 - Seu sorriso é tão resplandecente (Português)", artist:"froid", genre:"Mistery", src:`${dbzSeuSorrisoEhTaoResplandecente}`, totalDurationInSeconds: 147},
-        {title:"Dragon Ball Kai - Opening 1 - Voa vamos vem comigo, vamos juntos ao paraíso (Português)", artist:"froid", genre:"Mistery", src:`${dbzVoaVamosVemComigoVamosJuntosAoParaiso}`, totalDurationInSeconds: 85.128},
-        {title:"Dragon Ball Kai - Saga Boo (Português)", artist:"froid", genre:"Mistery", src:`${dbzSagaBoo}`, totalDurationInSeconds: 85.368},
-        {title:"Dragon Ball Super - Opening 1 (Português)", artist:"froid", genre:"Mistery", src:`${dbzSuperMainIntro}`, totalDurationInSeconds: 90.312},
-        {title:"Inuyasha - Opening 1 - Mudar O Mundo (Português)", artist:"froid", genre:"Mistery", src:`${inuyashaMainIntro}`, totalDurationInSeconds: 96.096},
-        {title:"Pokémon - Opening 1 - Temos que Pegar (Português)", artist:"froid", genre:"Mistery", src:`${pokemonMainIntro}`, totalDurationInSeconds: 61.704},
-        {title:"Digimon - Opening 1 (Português)", artist:"froid", genre:"Mistery", src:`${digimonMainIntro}`, totalDurationInSeconds: 94.152},
-        {title:"Os Cavaleiros Do Zodíaco - Opening 1 - PEGASUS FANTASY (Português)", artist:"froid", genre:"Mistery", src:`${cavaleirosDoZodiacoMainIntro}`, totalDurationInSeconds: 85.128},
-        {title:"Bleach - Opening 1", artist:"froid", genre:"Mistery", src:`${bleachMainIntro}`, totalDurationInSeconds: 89.832},
-        {title:"One Punch Man - Opening 1", artist:"froid", genre:"Mistery", src:`${onePunchManMainIntro}`, totalDurationInSeconds: 103.272},
-        {title:"Shingeki No Kyojin - Opening 1", artist:"froid", genre:"Mistery", src:`${attackOnTitanMainIntro}`, totalDurationInSeconds: 91.08},
-        {title:"Naruto Classic - Opening 1", artist:"froid", genre:"Mistery", src:`${narutoClassicoMainIntro}`, totalDurationInSeconds: 104.976},
-        {title:"Naruto Classic - Opening 2 - Haruka Kanata", artist:"froid", genre:"Mistery", src:`${narutoClassico2}`, totalDurationInSeconds: 103.944},
-        {title:"Naruto Shippuden - Opening 1", artist:"froid", genre:"Mistery", src:`${narutoShippudenMainIntro}`, totalDurationInSeconds: 104.256},
-        {title:"Naruto Shippuden - Opening 2 - Distance", artist:"froid", genre:"Mistery", src:`${narutoShippuden2}`, totalDurationInSeconds: 104.04},
-        {title:"Naruto Shippuden - Opening 3 - Blue Bird", artist:"froid", genre:"Mistery", src:`${narutoShippuden3}`, totalDurationInSeconds: 104.256},
-        {title:"Naruto Shippuden - Opening 4 - Closer", artist:"froid", genre:"Mistery", src:`${narutoShippuden4}`, totalDurationInSeconds: 104.112},
-        {title:"Naruto Shippuden - Opening 5 - Hotaru no Hikari", artist:"froid", genre:"Mistery", src:`${narutoShippuden5}`, totalDurationInSeconds: 103.992},
-        {title:"Naruto Shippuden - Opening 6 - Sign", artist:"froid", genre:"Mistery", src:`${narutoShippuden6}`, totalDurationInSeconds: 103.896},
-        {title:"Naruto Shippuden - Opening 7 - Toumei Datta Sekai", artist:"froid", genre:"Mistery", src:`${narutoShippuden7}`, totalDurationInSeconds: 103.896},
-        {title:"Naruto Shippuden - Opening 8 - Diver", artist:"froid", genre:"Mistery", src:`${narutoShippuden8}`, totalDurationInSeconds: 104.4},
-        {title:"Naruto Shippuden - Opening 9 - Lovers", artist:"froid", genre:"Mistery", src:`${narutoShippuden9}`, totalDurationInSeconds: 103.728},
-        {title:"Naruto Shippuden - Opening 10 - Newsong", artist:"froid", genre:"Mistery", src:`${narutoShippuden10}`, totalDurationInSeconds: 103.56},
-        {title:"Naruto Shippuden - Opening 11 - Totsugeki Rock", artist:"froid", genre:"Mistery", src:`${narutoShippuden11}`, totalDurationInSeconds: 104.112},
-        {title:"Naruto Shippuden - Opening 12 - Moshimo", artist:"froid", genre:"Mistery", src:`${narutoShippuden12}`, totalDurationInSeconds: 104.064},
-        {title:"Naruto Shippuden - Opening 13 - Niwaka Ame ni mo Makezu", artist:"froid", genre:"Mistery", src:`${narutoShippuden13}`, totalDurationInSeconds: 103.992},
-        {title:"Naruto Shippuden - Opening 14 - Tsuki no Ookisa", artist:"froid", genre:"Mistery", src:`${narutoShippuden14}`, totalDurationInSeconds: 104.424},
-        {title:"Naruto Shippuden - Opening 15 - Guren", artist:"froid", genre:"Mistery", src:`${narutoShippuden15}`, totalDurationInSeconds: 104.064},
-        {title:"Naruto Shippuden - Opening 16 - Silhouette", artist:"froid", genre:"Mistery", src:`${narutoShippuden16}`, totalDurationInSeconds: 103.896},
-        {title:"Naruto Shippuden - Opening 17 - Kaze", artist:"froid", genre:"Mistery", src:`${narutoShippuden17}`, totalDurationInSeconds: 104.064},
-        {title:"Naruto Shippuden - Opening 18 - LINE", artist:"froid", genre:"Mistery", src:`${narutoShippuden18}`, totalDurationInSeconds: 104.016},
-        {title:"Naruto Shippuden - Opening 19 - Blood Circulator", artist:"froid", genre:"Mistery", src:`${narutoShippuden19}`, totalDurationInSeconds: 103.56},
-        {title:"Naruto Shippuden - Opening 20 - Kara no Kokoro", artist:"froid", genre:"Mistery", src:`${narutoShippuden20}`, totalDurationInSeconds: 104.232}
-    ]);
-
+    // Local Storage responsável por salvar apenas o index da música em execução corrente ()
     const getLocalStorage_indexOfCurrentMusic = () => localStorage.getItem('db_indexOfCurrentMusic') ?? 0;
     const setLocalStorage_indexOfCurrentMusic = (dbIndexOfMusic) => localStorage.setItem("db_indexOfCurrentMusic", Number(dbIndexOfMusic));
 
+    // Harcoded, porém esta em testes ainda, pretendo retirar TODA a lógica deste arquivo.
+    const [listOfMusics, setListOfMusics] = useState([
+        {title:"Rick And Morty Intro - Primeira Temporada", src:`${rickAndMortyMainIntro}`, totalDurationInSeconds: 32.256},
+        {title:"Fullmetal Alchemist Brotherhood Intro - Opeging 1", src:`${fullmetalAlchemistBHMainIntro}`, totalDurationInSeconds: 92.64},
+        {title:"Yu Yu Hakusho (Português) Intro - Opening 1", src:`${yuyuHakushoMainIntro}`, totalDurationInSeconds: 86.808},
+        {title:"Death Note Intro - Opening 1", src:`${deathNoteMainIntro}`, totalDurationInSeconds: 80.88},
+        {title:"Tokyo Ghoul - Opening 1 - Unravel", src:`${tokyoGhoulMainIntro}`, totalDurationInSeconds:  90}, 
+        {title:"Dragon Ball Z - Opening 1 - Chala Head Chala (Português)", src:`${dbzChalaHeChalaIntro}`, totalDurationInSeconds: 109.512},
+        {title:"Dragon Ball Z - Opening 2 - Posso pressentir o perigo e o caos (Português)", src:`${dbzPossoPressentirOPerigoEoCaos}`, totalDurationInSeconds: 107.904},
+        {title:"Dragon Ball GT - Opening 1 - Seu sorriso é tão resplandecente (Português)", src:`${dbzSeuSorrisoEhTaoResplandecente}`, totalDurationInSeconds: 147},
+        {title:"Dragon Ball Kai - Opening 1 - Voa vamos vem comigo, vamos juntos ao paraíso (Português)", src:`${dbzVoaVamosVemComigoVamosJuntosAoParaiso}`, totalDurationInSeconds: 85.128},
+        {title:"Dragon Ball Kai - Saga Boo (Português)", src:`${dbzSagaBoo}`, totalDurationInSeconds: 85.368},
+        {title:"Dragon Ball Super - Opening 1 (Português)", src:`${dbzSuperMainIntro}`, totalDurationInSeconds: 90.312},
+        {title:"Inuyasha - Opening 1 - Mudar O Mundo (Português)", src:`${inuyashaMainIntro}`, totalDurationInSeconds: 96.096},
+        {title:"Pokémon - Opening 1 - Temos que Pegar (Português)", src:`${pokemonMainIntro}`, totalDurationInSeconds: 61.704},
+        {title:"Digimon - Opening 1 (Português)", src:`${digimonMainIntro}`, totalDurationInSeconds: 94.152},
+        {title:"Os Cavaleiros Do Zodíaco - Opening 1 - PEGASUS FANTASY (Português)", src:`${cavaleirosDoZodiacoMainIntro}`, totalDurationInSeconds: 85.128},
+        {title:"Bleach - Opening 1", src:`${bleachMainIntro}`, totalDurationInSeconds: 89.832},
+        {title:"One Punch Man - Opening 1", src:`${onePunchManMainIntro}`, totalDurationInSeconds: 103.272},
+        {title:"Shingeki No Kyojin - Opening 1", src:`${attackOnTitanMainIntro}`, totalDurationInSeconds: 91.08},
+        {title:"Naruto Classic - Opening 1", src:`${narutoClassicoMainIntro}`, totalDurationInSeconds: 104.976},
+        {title:"Naruto Classic - Opening 2 - Haruka Kanata", src:`${narutoClassico2}`, totalDurationInSeconds: 103.944},
+        {title:"Naruto Shippuden - Opening 1", src:`${narutoShippudenMainIntro}`, totalDurationInSeconds: 104.256},
+        {title:"Naruto Shippuden - Opening 2 - Distance", src:`${narutoShippuden2}`, totalDurationInSeconds: 104.04},
+        {title:"Naruto Shippuden - Opening 3 - Blue Bird", src:`${narutoShippuden3}`, totalDurationInSeconds: 104.256},
+        {title:"Naruto Shippuden - Opening 4 - Closer", src:`${narutoShippuden4}`, totalDurationInSeconds: 104.112},
+        {title:"Naruto Shippuden - Opening 5 - Hotaru no Hikari", src:`${narutoShippuden5}`, totalDurationInSeconds: 103.992},
+        {title:"Naruto Shippuden - Opening 6 - Sign", src:`${narutoShippuden6}`, totalDurationInSeconds: 103.896},
+        {title:"Naruto Shippuden - Opening 7 - Toumei Datta Sekai", src:`${narutoShippuden7}`, totalDurationInSeconds: 103.896},
+        {title:"Naruto Shippuden - Opening 8 - Diver", src:`${narutoShippuden8}`, totalDurationInSeconds: 104.4},
+        {title:"Naruto Shippuden - Opening 9 - Lovers", src:`${narutoShippuden9}`, totalDurationInSeconds: 103.728},
+        {title:"Naruto Shippuden - Opening 10 - Newsong", src:`${narutoShippuden10}`, totalDurationInSeconds: 103.56},
+        {title:"Naruto Shippuden - Opening 11 - Totsugeki Rock", src:`${narutoShippuden11}`, totalDurationInSeconds: 104.112},
+        {title:"Naruto Shippuden - Opening 12 - Moshimo", src:`${narutoShippuden12}`, totalDurationInSeconds: 104.064},
+        {title:"Naruto Shippuden - Opening 13 - Niwaka Ame ni mo Makezu", src:`${narutoShippuden13}`, totalDurationInSeconds: 103.992},
+        {title:"Naruto Shippuden - Opening 14 - Tsuki no Ookisa", src:`${narutoShippuden14}`, totalDurationInSeconds: 104.424},
+        {title:"Naruto Shippuden - Opening 15 - Guren", src:`${narutoShippuden15}`, totalDurationInSeconds: 104.064},
+        {title:"Naruto Shippuden - Opening 16 - Silhouette", src:`${narutoShippuden16}`, totalDurationInSeconds: 103.896},
+        {title:"Naruto Shippuden - Opening 17 - Kaze", src:`${narutoShippuden17}`, totalDurationInSeconds: 104.064},
+        {title:"Naruto Shippuden - Opening 18 - LINE", src:`${narutoShippuden18}`, totalDurationInSeconds: 104.016},
+        {title:"Naruto Shippuden - Opening 19 - Blood Circulator", src:`${narutoShippuden19}`, totalDurationInSeconds: 103.56},
+        {title:"Naruto Shippuden - Opening 20 - Kara no Kokoro", src:`${narutoShippuden20}`, totalDurationInSeconds: 104.232}
+    ]);
+
+
+    // Além de validar, também ajusta se o index ficar negativo ou maior do que a lista
+    // Criando assim efeito de rotação, ou seja, se o index passar do tamanho da lista
+    // quer dizer que chegou no final, então faz um rollback para o inicio.
+    // Se o index chegar negativo quer dizer que está voltando então faz rollback para o final.
     function validateIndexOfMusic(indexOfCurrentMusic) {
 
         if (Number(indexOfCurrentMusic) < 0 ) {
@@ -230,6 +234,7 @@ export default function MainNavbar() {
         
         
         /* Verifica se já tem musica salva no local storage, e atualiza barra de progresso de acordo com o estado */
+        // Pois a musica sempre fica salva no estado em que deu pause, ou mudou, até mesmo em re-loads é salvo o estado antes.
 
         if (Number(getLocalStorage_stateOfMusic().stateOfTime) > 0) {
             playerProgressBarsElements[0].value = (Number(getLocalStorage_stateOfMusic().stateOfTime) / Number(listOfMusics[Number(getLocalStorage_stateOfMusic().indexOfMusic)].totalDurationInSeconds));
@@ -237,105 +242,13 @@ export default function MainNavbar() {
         }
 
 
-
         /* 
             Eventos de Pausa e Play na musica Obs: Como existem dois containers devido a responsividade, aqui é
             duplicado os códigos para manter o mesmo estado nos dois containers.
         */
 
-        function handlePlayerPlayClick () {
-            if (Number(getLocalStorage_stateOfMusic().stateOfTime) > 0 && Number(getLocalStorage_stateOfMusic().stateOfTime) != player.duration) {
-                // ja existe um estado de musica salvo! reculpera qual musica e em qual parte parou:
-                let musicSelected = listOfMusics[Number(getLocalStorage_stateOfMusic().indexOfMusic)];
-                player.setAttribute("src", musicSelected.src)
-                player.currentTime = Number(getLocalStorage_stateOfMusic().stateOfTime);
-
-                player.muted = true;
-                player.play();
-                player.muted = false;
-
-                // coloca no titulo o nome da musica:
-                player.addEventListener("loadeddata", () => {
-                    document.title = musicSelected.title;
-                });
-
-            } else {
-                // primeira vez que deu play, ou acabou a musica toda anterior, carrega o index da musica corrente
-
-                musicRenderer(Number(getLocalStorage_indexOfCurrentMusic()));
-
-                player.muted = true;
-                player.play();
-                player.muted = false;
-                
-            }
-            
-
-            if (!playerPlaysElements[0].classList.contains("isActiv")) {
-                playerPlaysElements[0].classList.add("isActiv");
-
-                playerPausesElements[0].classList.remove("isActiv");
-            }
-            if (!playerPlaysElements[1].classList.contains("isActiv")) {
-                playerPlaysElements[1].classList.add("isActiv");
-
-                playerPausesElements[1].classList.remove("isActiv");
-            }
-        }
-        playerPlaysElements[0].children[0].addEventListener("click", () => handlePlayerPlayClick());
-        playerPlaysElements[1].children[0].addEventListener("click", () => handlePlayerPlayClick());
-
-
-        function handlePlayerPauseClick () {
-            setLocalStorage_stateOfMusic({indexOfMusic: Number(getLocalStorage_indexOfCurrentMusic()), stateOfTime: Number(player.currentTime)});
-
-            player.pause();
-            
-            if (!playerPausesElements[0].classList.contains("isActiv")) {
-                playerPausesElements[0].classList.add("isActiv");
-
-                playerPlaysElements[0].classList.remove("isActiv");
-            }
-            if (!playerPausesElements[1].classList.contains("isActiv")) {
-                playerPausesElements[1].classList.add("isActiv");
-
-                playerPlaysElements[1].classList.remove("isActiv");
-            }
-        }
-        playerPausesElements[0].children[0].addEventListener("click", () => handlePlayerPauseClick());
-        playerPausesElements[1].children[0].addEventListener("click", () => handlePlayerPauseClick());
-
-
-         /* Evento que atualiza a barra de progresso da musica */
-
-         // O Player é único para os dois containers que contém os controles play, pause, next, previous e progress bar
-         // em lugares diferentes de acordo com a responsividade.
-
-         player.addEventListener("timeupdate", () => {
-            if ((player.currentTime / player.duration) !== NaN && (player.currentTime / player.duration) > 0) {
-                playerProgressBarsElements[0].value = (player.currentTime / player.duration);
-                playerProgressBarsElements[1].value = (player.currentTime / player.duration);
-
-                // Musica chegou no final, altera para a próxima
-                if (player.currentTime == player.duration) {
-                    
-                    setLocalStorage_indexOfCurrentMusic(Number(getLocalStorage_indexOfCurrentMusic())+1);
-                    validateIndexOfMusic(Number(getLocalStorage_indexOfCurrentMusic()));
-                    var newMusic = listOfMusics[Number(getLocalStorage_indexOfCurrentMusic())];
-                    player.setAttribute("src", newMusic.src);
-                    player.play();
-
-                    // coloca no titulo o nome da musica:
-                    player.addEventListener("loadeddata", () => {
-                        document.title = newMusic.title;
-                    });
-                }
-            }
-         });
-
-
-         /* Mudando de musicas Next e Previous */
-
+        // Serve como se fosse um troca-fitas, ele recebe o index, prepara e da play na musica no objeto player
+        // player == elemento HTML <audio> único para os dois containers se não iria tocar duas musicas ao mesmo tempo
         const musicRenderer = (indexOfCurrentMusic) => {
 
             let musicSelected = listOfMusics[Number(indexOfCurrentMusic)];
@@ -347,15 +260,17 @@ export default function MainNavbar() {
 
             player.play();
         } 
-        
 
-        function handlePlayerSkipPreviousClick () {
-            setLocalStorage_indexOfCurrentMusic(Number(getLocalStorage_indexOfCurrentMusic())-1);
-
-            validateIndexOfMusic(Number(getLocalStorage_indexOfCurrentMusic()));
-
-            musicRenderer(Number(getLocalStorage_indexOfCurrentMusic()));
-
+        // Ajusta os icones visuais de acordo com o estado do Player, ou seja, 
+        // - Se a musica estiver rolando o icone de "pause" aparece, 
+        // - Se a musica for alterada para a próxima o ícone de "pause" aparece,
+        // - Se a musica for alterada para a anterior o ícone de "pause" aparece,
+        // Obs: if's duplicados alterando apenas a posição do elemento da lista
+        // pois existem dois (2) containers na tela que representam o player de musica
+        // devido a responsividade eles estão em lugares diferentes, então o estado
+        // dos dois sempre é o mesmo.
+        const adjustTheDisplayOfIconsPlayAndPause_pauseShowUp = () => {
+            
             if (!playerPlaysElements[0].classList.contains("isActiv")) {
                 playerPlaysElements[0].classList.add("isActiv");
 
@@ -367,35 +282,10 @@ export default function MainNavbar() {
                 playerPausesElements[1].classList.remove("isActiv");
             }
         }
-        playerSkipPreviousElements[0].children[0].addEventListener("click", () => handlePlayerSkipPreviousClick());
-        playerSkipPreviousElements[1].children[0].addEventListener("click", () => handlePlayerSkipPreviousClick());
-
-
-        function handlePlayerSkipNextClick () {
-            setLocalStorage_indexOfCurrentMusic(Number(getLocalStorage_indexOfCurrentMusic())+1);
-
-            validateIndexOfMusic(Number(getLocalStorage_indexOfCurrentMusic()));
-
-            musicRenderer(Number(getLocalStorage_indexOfCurrentMusic()));
-
-            if (!playerPlaysElements[0].classList.contains("isActiv")) {
-                playerPlaysElements[0].classList.add("isActiv");
-
-                playerPausesElements[0].classList.remove("isActiv");
-            }
-            if (!playerPlaysElements[1].classList.contains("isActiv")) {
-                playerPlaysElements[1].classList.add("isActiv");
-
-                playerPausesElements[1].classList.remove("isActiv");
-            }
-
-        }
-        playerSkipNextsElements[0].children[0].addEventListener("click", () => handlePlayerSkipNextClick());
-        playerSkipNextsElements[1].children[0].addEventListener("click", () => handlePlayerSkipNextClick());
 
 
 
-        // Evento disparado quando a página sofre re-load, salvando assim o estado da musica current em localstorage:
+        /* Evento disparado quando a página sofre re-loads, salvando assim o estado da musica corrente em localstorage: */
 
         window.onbeforeunload = () => {
             setLocalStorage_stateOfMusic({indexOfMusic: Number(getLocalStorage_indexOfCurrentMusic()), stateOfTime: Number(player.currentTime)});
@@ -421,7 +311,124 @@ export default function MainNavbar() {
             //       }, { once: true }); // O ouvinte será acionado apenas uma vez para evitar execuções múltiplas.
             // }
         }
-        
+
+
+
+        /* Evento que atualiza a barra de progresso da musica e se chegar no final altera para a próxima */
+
+         // O Player é único para os dois containers que contém os controles play, pause, next, previous e progress bar
+         // em lugares diferentes de acordo com a responsividade.
+
+        player.addEventListener("timeupdate", () => {
+            if ((player.currentTime / player.duration) !== NaN && (player.currentTime / player.duration) > 0) {
+                playerProgressBarsElements[0].value = (player.currentTime / player.duration);
+                playerProgressBarsElements[1].value = (player.currentTime / player.duration);
+
+                // Musica chegou no final, altera para a próxima
+                if (player.currentTime == player.duration) {
+                    
+                    setLocalStorage_indexOfCurrentMusic(Number(getLocalStorage_indexOfCurrentMusic())+1);
+                    validateIndexOfMusic(Number(getLocalStorage_indexOfCurrentMusic()));
+                    var newMusic = listOfMusics[Number(getLocalStorage_indexOfCurrentMusic())];
+                    player.setAttribute("src", newMusic.src);
+                    player.play();
+
+                    // coloca no titulo o nome da musica:
+                    player.addEventListener("loadeddata", () => {
+                        document.title = newMusic.title;
+                    });
+                }
+            }
+        });
+
+        function handlePlayerPlayClick () {
+            if (Number(getLocalStorage_stateOfMusic().stateOfTime) > 0 && Number(getLocalStorage_stateOfMusic().stateOfTime) != player.duration) {
+                // ja existe um estado de musica salvo! reculpera qual musica e em qual parte parou:
+                let musicSelected = listOfMusics[Number(getLocalStorage_stateOfMusic().indexOfMusic)];
+                player.setAttribute("src", musicSelected.src)
+                player.currentTime = Number(getLocalStorage_stateOfMusic().stateOfTime);
+
+                player.muted = true;
+                player.play();
+                player.muted = false;
+
+                // coloca no titulo o nome da musica:
+                player.addEventListener("loadeddata", () => {
+                    document.title = musicSelected.title;
+                });
+
+            } else {
+                // primeira vez que deu play, ou acabou a musica toda anterior, carrega c/ o index da musica corrente
+
+                musicRenderer(Number(getLocalStorage_indexOfCurrentMusic()));
+
+                player.muted = true;
+                player.play();
+                player.muted = false;
+                
+            }
+            
+            // Flagga que o Play está ativo, sumindo com o icon de Play e Aparecendo o icon de Pause
+            adjustTheDisplayOfIconsPlayAndPause_pauseShowUp();
+        }
+        playerPlaysElements[0].children[0].addEventListener("click", () => handlePlayerPlayClick());
+        playerPlaysElements[1].children[0].addEventListener("click", () => handlePlayerPlayClick());
+
+
+        function handlePlayerPauseClick () {
+            // salva o estado em que a música foi pausada em local storage
+            setLocalStorage_stateOfMusic({indexOfMusic: Number(getLocalStorage_indexOfCurrentMusic()), stateOfTime: Number(player.currentTime)});
+
+            player.pause();
+            
+            // Flagga que o Pause está ativo, sumindo com o icon de Pause e Aparecendo o icon de Play
+            // Obs: Não estraí em outro método pois essa lógica só é aplicada aqui, ela é exatamente
+            // a mesma lógica que o `adjustTheDisplayOfIconsPlayAndPause_pauseShowUp()` PORÉM invertido, ou seja, 
+            // O úncio momento em que o icon de play aparece é quando o pause é acionado, 
+            // o outro método é aplicado em 3 partes, pois o icon de pause aparece em 3 momentos:
+            // Quando da play em sí na musica, Quando vai para a próxima, e Quando vai para a anterior;
+            if (!playerPausesElements[0].classList.contains("isActiv")) {
+                playerPausesElements[0].classList.add("isActiv");
+
+                playerPlaysElements[0].classList.remove("isActiv");
+            }
+            if (!playerPausesElements[1].classList.contains("isActiv")) {
+                playerPausesElements[1].classList.add("isActiv");
+
+                playerPlaysElements[1].classList.remove("isActiv");
+            }
+        }
+        playerPausesElements[0].children[0].addEventListener("click", () => handlePlayerPauseClick());
+        playerPausesElements[1].children[0].addEventListener("click", () => handlePlayerPauseClick());
+
+
+         /* Mudando de musicas Next e Previous */
+
+        function handlePlayerSkipPreviousClick () {
+            setLocalStorage_indexOfCurrentMusic(Number(getLocalStorage_indexOfCurrentMusic())-1);
+
+            validateIndexOfMusic(Number(getLocalStorage_indexOfCurrentMusic()));
+
+            musicRenderer(Number(getLocalStorage_indexOfCurrentMusic()));
+
+            adjustTheDisplayOfIconsPlayAndPause_pauseShowUp();
+        }
+        playerSkipPreviousElements[0].children[0].addEventListener("click", () => handlePlayerSkipPreviousClick());
+        playerSkipPreviousElements[1].children[0].addEventListener("click", () => handlePlayerSkipPreviousClick());
+
+
+        function handlePlayerSkipNextClick () {
+            setLocalStorage_indexOfCurrentMusic(Number(getLocalStorage_indexOfCurrentMusic())+1);
+
+            validateIndexOfMusic(Number(getLocalStorage_indexOfCurrentMusic()));
+
+            musicRenderer(Number(getLocalStorage_indexOfCurrentMusic()));
+
+            adjustTheDisplayOfIconsPlayAndPause_pauseShowUp();
+        }
+        playerSkipNextsElements[0].children[0].addEventListener("click", () => handlePlayerSkipNextClick());
+        playerSkipNextsElements[1].children[0].addEventListener("click", () => handlePlayerSkipNextClick());
+
     }, []);
 
    
@@ -472,7 +479,5 @@ export default function MainNavbar() {
 
             </button>
         </>
-        
-
     )
 };
