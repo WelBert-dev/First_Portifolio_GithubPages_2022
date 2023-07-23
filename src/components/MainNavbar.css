@@ -167,6 +167,7 @@ ul#playlist-audioPlayer li a {
 .audioPlayer-progressBar--duration {
     width: 100%;
     max-width: 5rem;
+    margin-top: 1px;
 }
 
 /* .audioPlayer-progressBar--fillBar {
@@ -209,6 +210,10 @@ background-color: #000;
 .audioPlayer--controls i > svg {
     font-size: 1.5rem;
     cursor: pointer;
+    color: red;
+    background-color: black;
+    border-radius: 50%;
+    margin-right: 2px;
 }
 
 .audioPlayer--controls i > svg:hover {
@@ -222,6 +227,10 @@ background-color: #000;
 .audioPlayer--controls {
     text-align: center;
     font-size: 0;
+}
+
+.audioPlayer--container.--btnHamburguerResponsive > .audioPlayer-progressBar--duration{
+    margin-top: 2px;
 }
 
 @media (max-width: 810px)
@@ -291,6 +300,7 @@ background-color: #000;
         width: 100% !important;
         text-align: center;
         margin: 0 auto;
+        font-size: .9rem;
     }
 
     .ajustaTop-responsive{
@@ -315,9 +325,18 @@ background-color: #000;
 
     .audioPlayer-progressBar--fillBar {
         font-size: 0 !important;
+        margin-top: 2px;
     }
 
     /* .audioPlayer--container.--btnHamburguerResponsive {
         font-size: 0;
     } */
+}
+
+
+@media (max-width: 400px) 
+{
+    header nav a {
+        font-size: .8rem;
+    }
 }

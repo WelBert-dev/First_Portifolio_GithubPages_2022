@@ -43,7 +43,7 @@
     flex-direction: row;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    background-color: black;
+    background-color: #262626;
     padding: .5rem;
     color: white;
     justify-content: space-between;
@@ -54,12 +54,13 @@
 .main-sobre--shellHead i > svg{
     font-size: 2rem;
     max-width: fit-content;
-    background-color: #282828;
+    background-color: #404040;
     height: 2rem;
     border-radius: 5px;
     padding: .3rem;
     color: white;
     margin-right: .5rem;
+    border: 1px solid #1d1d1d;
 }
 
 .main-sobre--shellHeadWindowCommomIcons > i > svg{
