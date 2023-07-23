@@ -46,7 +46,7 @@ export default function CurriculumVitaeScreen() {
                                          </div>
                                      </div>
                                  </section>
-                                 <section data-section="skills" data-section-id="3ed40f89-7a4c-465d-b108-36934d401760" id="skills" className="-curriculo--textShadow padding-1rem">
+                                 <section data-section="skills" data-section-id="3ed40f89-7a4c-465d-b108-36934d401760" id="skills" className="padding-1rem">
                                      <p className="template__section__title"><span>Habilidades</span></p>
                                      <div className="template__section__container">
                                          <ul className="padding-1rem">
@@ -83,7 +83,7 @@ export default function CurriculumVitaeScreen() {
                                          </ul>
                                      </div>
                                  </section>
-                                 <section data-section="languages" data-section-id="eedbf15a-7f81-442c-8a4d-63a1223348b7" id="languages" className="-curriculo--textShadow padding-1rem">
+                                 <section data-section="languages" data-section-id="eedbf15a-7f81-442c-8a4d-63a1223348b7" id="languages" className="padding-1rem">
                                      <p className="template__section__title"><span>Idiomas</span></p>
                                      <div className="template__section__container">
                                          <div data-subsection-position="0" className="template__section__languages template__section__simple template__section__simple--fixed-font-size noValue">
@@ -140,7 +140,7 @@ export default function CurriculumVitaeScreen() {
                                  </div>
                                  <div className="template__main">
                                      <section data-section="work-experience" data-section-id="fd4905eb-e158-4281-944f-44e5d977a48d" id="work-experience" className="">
-                                         <p className="template__section__title"><span>Experiência</span></p>
+                                         <p className="template__section__title -mainBody"><span>Experiência</span></p>
                                          <div className="template__section__container">
                                          <div data-subsection-position="0" className="template__section template__section__experience template__section--border template__section--twoColumns">
                                              <div className="template__section__left">
@@ -166,7 +166,7 @@ export default function CurriculumVitaeScreen() {
                                          </div>
                                      </section>
                                      <section data-section="education" data-section-id="3eaaf201-7b4e-4ff4-a6eb-370f9ecfc0f4" id="education" className="">
-                                         <p className="template__section__title -spanFormacaoAcad--superior"><span className="-spanFormacaoAcad--superior">Formação Superior</span></p>
+                                         <p className="template__section__title -mainBody -spanFormacaoAcad--superior"><span className="-spanFormacaoAcad--superior">Formação Superior</span></p>
                                          <div className="template__section__container">
                                          <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns -superiorADS">
                                                 <div className="template__section__left">
@@ -184,7 +184,7 @@ export default function CurriculumVitaeScreen() {
                                                 </div>
                                             </div>
                                             <br/>
-                                            <p className="template__section__title -spanFormacaoAcad--tecnico"><span className="-spanFormacaoAcad--tecnico">Formação Técnica</span></p>
+                                            <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico"><span className="-spanFormacaoAcad--tecnico">Formação Técnica</span></p>
                                             <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
                                                 <div className="template__section__left">
                                                     <p className="template__section__location">Salto - SP, Brasil </p>
