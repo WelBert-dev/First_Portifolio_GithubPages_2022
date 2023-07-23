@@ -24,14 +24,14 @@
     background-color: rgba(52,53,65,var(--tw-bg-opacity));
 
     max-width: 80%;
-    border-left: 4px ridge var(--main-color);
-    border-right: 4px ridge var(--main-color);
+    border-left: 2px ridge lightgrey;
+    border-right: 2px ridge lightgrey;
 
 }
 
 .projects-title--container {
     background-color: #0d1117;
-    border: 4px ridge green;
+    border: 2px ridge lightgrey;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -64,8 +64,8 @@
     font-size: .9rem;
     font-family: 'press start 2p';
     text-align: center;
-    color: var(--main-titleColor);
-    text-shadow: 1px 2px 2px black;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
     margin: 0 auto;
     line-height: 1rem;
     

@@ -18,8 +18,8 @@
     --tw-bg-opacity: .5;
     background-color: rgba(52,53,65,var(--tw-bg-opacity));
 	border-radius: 10px;
-    border-left: 4px ridge var(--main-color);
-    border-right: 4px ridge var(--main-color);
+    border-left: 2px ridge lightgrey;
+    border-right: 2px ridge lightgrey;
 
 }
 
@@ -73,9 +73,9 @@ Article.-certificateLastChildArticle{
 }
 
 span.certificates-autenticCode--span {
-	color: yellow;
+	color: #fff;
 	font-weight: bold;
-    text-shadow: 1px 1px black;
+    text-shadow: 1px 1px 2px #000;
     font-size: .9rem;
 	flex-direction: column;
 	justify-content: center;
@@ -98,7 +98,7 @@ div.certificates-autenticCode--container {
 	max-width: max-content;
 	padding: 1px 3px;
 	border-radius: 5px;
-	background-color: #255325;
+	background-color: #e82323;
 	line-height: 1.3rem;
 }
 
@@ -148,6 +148,11 @@ hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
 	.certificate-single.-bolsaEnsinoCertficate > div {
 		max-width: none;
 	}
+
+	h1.main-title.-complementaryActivities {
+		font-size: .8rem;
+		line-height: 1rem;
+	}
 }
 
 @media (max-width: 425px)
@@ -166,6 +171,11 @@ hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
 
 	span.certificates-autenticCode--span {
 		font-size: .8rem;
+	}
+
+	h1.main-title.-complementaryActivities {
+		font-size: .6rem;
+		line-height: .8rem;
 	}
 	
 }
