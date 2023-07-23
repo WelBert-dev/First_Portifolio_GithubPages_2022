@@ -26,6 +26,10 @@
     max-width: 100%;
 }
 
+.-minWidthMaxContent {
+    min-width: max-content;
+}
+
 main {
     width: 100vw;
     min-height: 70vh;

@@ -5,25 +5,23 @@ header nav {
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     opacity: 1;
     gap: .8rem;
-    /* background: linear-gradient(to right, white 15%, #6a6767 85%); */
-    background-color: #226015;
+    background-color: var(--main-bgColorLightGrey);
     border: 4px double black;
 }
 
 header nav a {
     font-size: 1rem;
     font-weight: bold;
-    font-family: cursive;
-    border: 4px double var(--main-color);
+    font-family: var(--main-fontfamily-Press2PLight);
     border-radius: 10%;
     padding: .5rem;
     box-shadow: .1rem .1rem .2rem black;
-    background: linear-gradient(to right, #121212e0 15%, #040404ed 70%);
-    text-shadow: 0.15rem .09rem 0.009rem black;
+    background-color: #000;
     transition: all ease .3s;
     color: white;
     text-decoration: none;
@@ -37,10 +35,14 @@ header nav a:visited {
 header nav a:hover {
     box-shadow: 4px 3px 3px #000;
     text-shadow: none;
-    transform: scale(1.05);
-    background: var(--main-color);
-    border-color: black;
+    transform: scale(1.01);
+    background: #ff3030;
+    border: 2px solid #000;
     color: black;
+}
+
+header nav a:hover svg {
+    color: #000;
 }
 
 /* Mobile area */
@@ -230,10 +232,9 @@ background-color: #000;
     }
 
     #btn-hamburguer {
-        background-color: #226015;
+        background-color: var(--main-bgColorLightGrey);
         border: 4px double black;
         border-radius: 10px;
-        /* padding: .4rem .4rem 0 .4rem; */
         top: 0;
         left: 0;
     }
@@ -279,7 +280,7 @@ background-color: #000;
         gap: .5rem;
         transition: all ease 1s;
         transform: translateX(-150vw);
-        background-color: #464f43;
+        background-color: var(--main-bgColorLightGrey);
         border: 4px double black;
         width: inherit !important;
         padding: 0 1rem 1rem 1rem;

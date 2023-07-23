@@ -521,15 +521,15 @@ export default function MainNavbar() {
             <nav id="navbar-container" ref={navRef} >
                 <button id="nav-close-btn" className="nav-btn nav-close-btn" onClick={showNavbar}><FaTimes /></button>
                 <a href="/firstPortifolioGithubPages-2022">Home</a>
-                <a href="/firstPortifolioGithubPages-2022/#/aboutMe" onClick={() => setNavBarEmColumn(true)}>Sobre Mim</a>
+                <a className= "-minWidthMaxContent" href="/firstPortifolioGithubPages-2022/#/aboutMe" onClick={() => setNavBarEmColumn(true)}>Sobre Mim</a>
                 <a href="/firstPortifolioGithubPages-2022/#/skills" rel="Link Linguagens" onClick={() => setNavBarEmColumn(true)}>Habilidades</a>     
                 <a href="/firstPortifolioGithubPages-2022/#/projects" rel="Link Projetos" onClick={() => setNavBarEmColumn(true)}>Projetos</a>
                 <a href="/firstPortifolioGithubPages-2022/#/certificates" rel="Link Certificados" onClick={() => setNavBarEmColumn(true)}>Certificados</a>   
                 <a href="/firstPortifolioGithubPages-2022/#/curriculumVitae" rel="Link Curriculo" onClick={() => setNavBarEmColumn(true)}>Currículo</a>     
-                <a className={window.location.href.substring(1).split("/")[5] === 'javaBible' ? "" : "-btn-ancorToJavaBibleScreen"} href="/firstPortifolioGithubPages-2022/#/javaBible" rel="Link Biblia do Java" onClick={() => setNavBarEmColumn(true)}>Bíblia do Java {window.location.href.substring(1).split("/")[5] === 'javaBible' ? "" : <MdFiberNew className="animaIconPisca"/>}</a>        
+                <a className={window.location.href.substring(1).split("/")[5] === 'javaBible' ? "" : "-btn-ancorToJavaBibleScreen -minWidthMaxContent"} href="/firstPortifolioGithubPages-2022/#/javaBible" rel="Link Biblia do Java" onClick={() => setNavBarEmColumn(true)}>Bíblia do Java {window.location.href.substring(1).split("/")[5] === 'javaBible' ? "" : <MdFiberNew className="animaIconPisca"/>}</a>        
                 
                 <audio id="audioPlayer" src={rickAndMortyMainIntro}></audio>
-                <div className="audioPlayer--container --audioPlayer--container --navBar">
+                <div className="audioPlayer--container --audioPlayer--container --navBar -minWidthMaxContent">
                     <div className="audioPlayer--controls">
                         <i className="audioPlayer-control--skipPrevious"><IoPlaySkipBackCircle/></i>
                         <i className="audioPlayer-control--play"><IoPlayCircle/></i>

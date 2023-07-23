@@ -1,15 +1,14 @@
 footer {
     border: 4px double black;
     width: 100%;
-    background: #226015;
+    background: var(--main-bgColorLightGrey);
     border-radius: 5px;
     font-size: .9rem;
-    color: white;
-    font-family: var(--main-fontFamily);
+    color: #000;
+    font-family: var(--main-fontfamily-Press2PLight);
     font-weight: bold;
     text-align: center;
     line-height: 1rem;
-    text-shadow: 1px 1px black;
     min-height: 30vh;
     display: flex;
     align-items: center;
@@ -33,9 +32,7 @@ footer span {
 }
 
 footer h3 {
-    font-size: .7rem;
-    color: #08ff00;
-    text-shadow: 1px 1px black;
+    font-size: .8rem;
 }
 
 .footer-icons {
@@ -108,12 +105,6 @@ footer h3 {
 
     footer span {
         font-size: 1.2rem;
-    }
-    
-    footer h3 {
-        font-size: .7rem;
-        color: #08ff00;
-        text-shadow: 1px 1px black;
     }
 }
 
