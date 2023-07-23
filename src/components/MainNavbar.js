@@ -46,6 +46,48 @@ import narutoShippuden18 from '../resources/audios/Naruto Shippuden Opening 18 _
 import narutoShippuden19 from '../resources/audios/Naruto Shippuden Opening 19 _ Blood Circulator (HD) (320 kbps).mp3';
 import narutoShippuden20 from '../resources/audios/Naruto Shippuden Opening 20 _ Kara no Kokoro (HD) (320 kbps).mp3';
 
+import seteMinutoz_RapDoBrolyKyuubiLevi from '../resources/audios/Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 _ NERD HITS.mp3';
+import seteMinutoz_RapDoGai from '../resources/audios/Rap do Maito Gai (Naruto) - O NINJA MAIS FORTE _ NERD HITS.mp3';
+import seteMinutoz_RapDoItachi from '../resources/audios/Rap do Itachi (Naruto) - ESSA DOR QUE CAUSEI... _ NERD HITS.mp3';
+import seteMinutoz_RapDaAkatsuki from '../resources/audios/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3';
+import seteMinutoz_RapDosHokages from '../resources/audios/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.mp3';
+import tauz_RapDoZoro from '../resources/audios/Rap do Zoro (One Piece) _ Tauz RapTributo 17.mp3';
+import tauz_RapDoLuffy from '../resources/audios/Rap do Luffy (One Piece) _ Tauz RapTributo 10.mp3';
+import tauz_RapDoBarbaBranca from '../resources/audios/Rap do Barba Branca (One Piece) _ Tauz RapTributo 63.mp3';
+import tauz_RapDoFullmetalAlchemist from '../resources/audios/Rap do Edward Elric (FullMetal Alchemist) _ Tauz RapTributo 26.mp3';
+import tauz_RapDoZarakiKenpachi from '../resources/audios/Rap do Zaraki Kenpachi (Bleach) _ Tauz RapTributo 25.mp3';
+import tauz_RapDoSasukeII from '../resources/audios/Rap do Sasuke Pt II (Naruto) _ Tauz RapTributo 19.mp3'; 
+import tauz_RapDoNaruto from '../resources/audios/Rap do Naruto _ Tauz RapTributo 05.mp3';
+import tauz_RapDoBan from '../resources/audios/Rap do Ban (Nanatsu no Taizai) _ Tauz RapTributo 50.mp3';
+import tauz_RapDoDeadPool from '../resources/audios/Rap do Deadpool _ Tauz RapTributo 15.mp3';
+import tauz_RapDoKakashi from '../resources/audios/Rap do Kakashi (Naruto) _ Tauz RapTributo 09.mp3';
+import tauz_RapDoAssassinsCreed from '../resources/audios/Rap do Assassins Creed _ Tauz RapGame 19.mp3';
+import tauz_RapDoJiraiya from '../resources/audios/Rap do Jiraiya (Naruto) _ Tauz RapTributo 48.mp3';
+import tauz_RapDoItachi from '../resources/audios/Rap do Itachi (Naruto) _ Tauz RapTributo 18.mp3';
+import tauz_RapDoL from '../resources/audios/Rap do L (Death Note) _ Tauz RapTributo 28.mp3';
+import tauz_RapDoKillua from '../resources/audios/Rap do Killua (Hunter x Hunter) _ Tauz RapTributo 47.mp3';
+import tauz_RapDoSanji from '../resources/audios/Rap do Sanji (One Piece) _ Tauz RapTributo 37.mp3';
+import tauz_RapDoLevi from '../resources/audios/Rap do Levi (Attack on Titan) _ Tauz RapTributo 56.mp3';
+import tauz_RapDoAlucard from '../resources/audios/Rap do Alucard (Hellsing) _ Tauz RapTributo 64.mp3';
+import tauz_RapDoHisoka from '../resources/audios/Rap do Hisoka (Hunter x Hunter) _ Tauz RapTributo 69.mp3';
+
+import ghostBustersMainIntro from '../resources/audios/Ray Parker Jr. - Ghostbusters (Official Video).mp3';
+import umMalucoNoPedacoMainIntro from '../resources/audios/Abertura de - um maluco no pedaço (320 kbps).mp3';
+import casteloRaTimBumMainIntro from '../resources/audios/Abertura do Castelo Rá Tim Bum.mp3';
+import phineasEFerbMainIntro from '../resources/audios/Phineas e Ferb - Abertura PT-BR em HD (Clássica).mp3';
+import horaDeAventuraMainIntro from '../resources/audios/Abertura Hora de Aventura ( Português ).mp3';
+import baraberaCrazyFrogAxelF from '../resources/audios/Crazy Frog - Axel F (Official Video) (128 kbps).mp3';
+import maskaraMainIntro from '../resources/audios/Abertura O Maskara.mp3';
+import os7MonstrinhosMainIntro from '../resources/audios/Os Sete Monstrinhos - Abertura (TV Cultura).mp3';
+import euVoceEZoobomafu from '../resources/audios/Zoboomafoo Abertura HD (60 FPS) (128 kbps).mp3';
+import sitioDoPicaPauAmareloMainIntro from '../resources/audios/Gilberto Gil -  Sítio Do Picapau Amarelo.mp3';
+import cocoricoMainIntroAndEnd from '../resources/audios/Cocoricó - Abertura e Encerramento.mp3';
+import palavraCantadaRato from '../resources/audios/Palavra Cantada _ Rato.mp3';
+import ginasticaDaMaquina from '../resources/audios/Ginástica da máquina - pitagoras.mp3';
+import cateloRaTimBumRatoBanhoEhBom from '../resources/audios/Castelo Rá Tim Bum  Ratinho - Meu pé meu querido pé.mp3';
+import umMeninoMaluquinhoMainIntro from '../resources/audios/Abertura Um Menino Muito Maluquinho.mp3';
+import txutxuCaoFunk from '../resources/audios/Txutxucão funk.mp3';
+
 
 import { IoPlayCircle } from 'react-icons/io5';
 import { IoPlaySkipBackCircle } from 'react-icons/io5';
@@ -193,7 +235,47 @@ export default function MainNavbar() {
         {title:"Naruto Shippuden - Opening 17 - Kaze", src:`${narutoShippuden17}`, totalDurationInSeconds: 104.064},
         {title:"Naruto Shippuden - Opening 18 - LINE", src:`${narutoShippuden18}`, totalDurationInSeconds: 104.016},
         {title:"Naruto Shippuden - Opening 19 - Blood Circulator", src:`${narutoShippuden19}`, totalDurationInSeconds: 103.56},
-        {title:"Naruto Shippuden - Opening 20 - Kara no Kokoro", src:`${narutoShippuden20}`, totalDurationInSeconds: 104.232}
+        {title:"Naruto Shippuden - Opening 20 - Kara no Kokoro", src:`${narutoShippuden20}`, totalDurationInSeconds: 104.232}, 
+        {title:"7Minutoz - Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 (NERD HITS)", src:`${seteMinutoz_RapDoBrolyKyuubiLevi}`, totalDurationInSeconds: 175.777959},
+        {title:"7Minutoz - Rap do Maito Gai (Naruto) - O NINJA MAIS FORTE (NERD HITS)", src:`${seteMinutoz_RapDoGai}`, totalDurationInSeconds: 256.731429},
+        {title:"7Minutoz - Rap do Itachi (Naruto) - ESSA DOR QUE CAUSEI... (NERD HITS)", src:`${seteMinutoz_RapDoItachi}`, totalDurationInSeconds: 206.576327},
+        {title:"7Minutoz - Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO (NERD HITS)", src:`${seteMinutoz_RapDaAkatsuki}`, totalDurationInSeconds: 616.724898},
+        {title:"7Minutoz - Rap dos Hokages (Naruto) - A VONTADE DO FOGO (NERD HITS)", src:`${seteMinutoz_RapDosHokages}`, totalDurationInSeconds: 606.798367},
+        {title:"Player Tauz - Rap do Zoro (One Piece) - Tauz RapTributo 17", src:`${tauz_RapDoZoro}`, totalDurationInSeconds: 285.309388},
+        {title:"Player Tauz - Rap do Luffy (One Piece) - Tauz RapTributo 10", src:`${tauz_RapDoLuffy}`, totalDurationInSeconds: 264.602256},
+        {title:"Player Tauz - Rap do Barba Branca (One Piece) - Tauz RapTributo 63", src:`${tauz_RapDoBarbaBranca}`, totalDurationInSeconds: 200.803265},
+        {title:"Player Tauz - Rap do Edward Elric (FullMetal Alchemist) - Tauz RapTributo 26", src:`${tauz_RapDoFullmetalAlchemist}`, totalDurationInSeconds: 272.143673},
+        {title:"Player Tauz - Rap do Zaraki Kenpachi (Bleach) - Tauz RapTributo 25", src:`${tauz_RapDoZarakiKenpachi}`, totalDurationInSeconds: 278.177959},
+        {title:"Player Tauz - Rap do Sasuke Pt II (Naruto) - Tauz RapTributo 19", src:`${tauz_RapDoSasukeII}`, totalDurationInSeconds: 278.204082},
+        {title:"Player Tauz - Rap do Naruto - Tauz RapTributo 05", src:`${tauz_RapDoNaruto}`, totalDurationInSeconds: 309.498776},
+        {title:"Player Tauz - Rap do Ban (Nanatsu no Taizai) - Tauz RapTributo 50", src:`${tauz_RapDoBan}`, totalDurationInSeconds: 238.497959},
+        {title:"Player Tauz - Rap do Deadpool - Tauz RapTributo 15", src:`${tauz_RapDoDeadPool}`, totalDurationInSeconds: 273.606531},
+        {title:"Player Tauz - Rap do Kakashi (Naruto) - Tauz RapTributo 09", src:`${tauz_RapDoKakashi}`, totalDurationInSeconds: 310.961633},
+        {title:"Player Tauz - Rap do Assassins Creed - Tauz RapGame 19", src:`${tauz_RapDoAssassinsCreed}`, totalDurationInSeconds: 358.765714},
+        {title:"Player Tauz - Rap do Jiraiya (Naruto) - Tauz RapTributo 48", src:`${tauz_RapDoJiraiya}`, totalDurationInSeconds: 201.404082},
+        {title:"Player Tauz - Rap do Itachi (Naruto) - Tauz RapTributo 18", src:`${tauz_RapDoItachi}`, totalDurationInSeconds: 376.32},
+        {title:"Player Tauz - Rap do L (Death Note) - Tauz RapTributo 28", src:`${tauz_RapDoL}`, totalDurationInSeconds: 321.697959},
+        {title:"Player Tauz - Rap do Killua (Hunter x Hunter) - Tauz RapTributo 47", src:`${tauz_RapDoKillua}`, totalDurationInSeconds: 196.493061},
+        {title:"Player Tauz - Rap do Sanji (One Piece) - Tauz RapTributo 37", src:`${tauz_RapDoSanji}`, totalDurationInSeconds: 314.67102},
+        {title:"Player Tauz - Rap do Levi (Attack on Titan) - Tauz RapTributo 56", src:`${tauz_RapDoLevi}`, totalDurationInSeconds: 226.35102},
+        {title:"Player Tauz - Rap do Alucard (Hellsing) - Tauz RapTributo 64", src:`${tauz_RapDoAlucard}`, totalDurationInSeconds: 197.250612},
+        {title:"Player Tauz - Rap do Hisoka (Hunter x Hunter) - Tauz RapTributo 69", src:`${tauz_RapDoHisoka}`, totalDurationInSeconds: 231.967347},
+        {title:"Ray Parker Jr. - Ghostbusters (Official Video)", src:`${ghostBustersMainIntro}`, totalDurationInSeconds: 244.897959},
+        {title:"Um maluco no pedaço - Abertura", src:`${umMalucoNoPedacoMainIntro}`, totalDurationInSeconds: 110.471875},
+        {title:"Castelo Rá Tim Bum - Abertura", src:`${casteloRaTimBumMainIntro}`, totalDurationInSeconds: 54.151837},
+        {title:"Phineas e Ferb - Abertura PT-BR (Clássica)", src:`${phineasEFerbMainIntro}`, totalDurationInSeconds: 56.894694},
+        {title:"Hora de Aventura - Abertura PT-BR", src:`${horaDeAventuraMainIntro}`, totalDurationInSeconds: 24.711837},
+        {title:"Crazy Frog - Axel F (Official Video)", src:`${baraberaCrazyFrogAxelF}`, totalDurationInSeconds: 172.544688},
+        {title:"O Maskara - Abertura PT-BR", src:`${maskaraMainIntro}`, totalDurationInSeconds: 58.357551},
+        {title:"Os Sete Monstrinhos - Abertura (TV Cultura)", src:`${os7MonstrinhosMainIntro}`, totalDurationInSeconds: 60.577959},
+        {title:"Zoboomafoo - Abertura PT-BR (Clássica)", src:`${euVoceEZoobomafu}`, totalDurationInSeconds: 60.865375},
+        {title:"Gilberto Gil -  Sítio Do Picapau Amarelo (Abertura Clássica)", src:`${sitioDoPicaPauAmareloMainIntro}`, totalDurationInSeconds: 193.645714},
+        {title:"Cocoricó - Abertura e Encerramento", src:`${cocoricoMainIntroAndEnd}`, totalDurationInSeconds: 62.693878},
+        {title:"Palavra Cantada - Rato (Clássico da TV Cultura)", src:`${palavraCantadaRato}`, totalDurationInSeconds: 335.15102},
+        {title:"Ginástica da máquina - pitagoras (Clássico da TV Cultura)", src:`${ginasticaDaMaquina}`, totalDurationInSeconds: 63.216327},
+        {title:"Castelo Rá Tim Bum - Ratinho - Meu pé meu querido pé", src:`${cateloRaTimBumRatoBanhoEhBom}`, totalDurationInSeconds: 94.693878},
+        {title:"Um Menino Muito Maluquinho - Abertura PT-BR", src:`${umMeninoMaluquinhoMainIntro}`, totalDurationInSeconds: 51.069388},
+        {title:"Txutxucão funk (Clássico)", src:`${txutxuCaoFunk}`, totalDurationInSeconds: 64.496327},
     ]);
 
 
