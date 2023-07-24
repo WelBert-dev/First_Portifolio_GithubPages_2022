@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.31909f8d.css",
-    "main.js": "/static/js/main.78a56d13.js",
+    "main.css": "/static/css/main.44e1e924.css",
+    "main.js": "/static/js/main.c3557e29.js",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
     "static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.mp3": "/static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.06f832336e73e946e7a0.mp3",
@@ -120,11 +120,11 @@
     "static/media/wellisonPerfil.jpg": "/static/media/wellisonPerfil.5ad3be0ec95d8bb0cc3d.jpg",
     "index.html": "/index.html",
     "static/media/portariaNormativaCeic-parte02.png": "/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
-    "main.31909f8d.css.map": "/static/css/main.31909f8d.css.map",
-    "main.78a56d13.js.map": "/static/js/main.78a56d13.js.map"
+    "main.44e1e924.css.map": "/static/css/main.44e1e924.css.map",
+    "main.c3557e29.js.map": "/static/js/main.c3557e29.js.map"
   },
   "entrypoints": [
-    "static/css/main.31909f8d.css",
-    "static/js/main.78a56d13.js"
+    "static/css/main.44e1e924.css",
+    "static/js/main.c3557e29.js"
   ]
 }
