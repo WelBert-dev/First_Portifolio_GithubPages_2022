@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/firstPortifolioGithubPages-2022/static/css/main.5e57893a.css",
-    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.00633e7c.js",
+    "main.js": "/firstPortifolioGithubPages-2022/static/js/main.0fa70f3c.js",
     "static/media/NetFlixCloneWeb.gif": "/firstPortifolioGithubPages-2022/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/firstPortifolioGithubPages-2022/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
     "static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.mp3": "/firstPortifolioGithubPages-2022/static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.06f832336e73e946e7a0.mp3",
@@ -121,10 +121,10 @@
     "index.html": "/firstPortifolioGithubPages-2022/index.html",
     "static/media/portariaNormativaCeic-parte02.png": "/firstPortifolioGithubPages-2022/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
     "main.5e57893a.css.map": "/firstPortifolioGithubPages-2022/static/css/main.5e57893a.css.map",
-    "main.00633e7c.js.map": "/firstPortifolioGithubPages-2022/static/js/main.00633e7c.js.map"
+    "main.0fa70f3c.js.map": "/firstPortifolioGithubPages-2022/static/js/main.0fa70f3c.js.map"
   },
   "entrypoints": [
     "static/css/main.5e57893a.css",
-    "static/js/main.00633e7c.js"
+    "static/js/main.0fa70f3c.js"
   ]
 }
