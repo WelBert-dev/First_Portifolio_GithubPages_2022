@@ -146,7 +146,7 @@ a.-btn-ancorToJavaBibleScreen > svg {
     display: none;
 }
 
-div.audioPlayer--container{
+div.audioPlayer--container.--audioPlayer--container.--navBar {
     margin-left: auto;
 }
 
@@ -176,6 +176,10 @@ ul#playlist-audioPlayer li a {
 
 .audioPlayer-progressBar--fillBar progress[value] {
     height: 6px;
+    width: 100%;
+    background-color: whiteSmoke;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.5) inset;
 }
 
 .audioPlayer-progressBar--fillBar progress {
@@ -184,6 +188,8 @@ ul#playlist-audioPlayer li a {
   
     /* É necessário alterar o valor para none */
     -webkit-appearance: none;
+
+    border-radius: 3px;
   }
   
 /* Altera a cor de fundo em navegadores com webkit (Chrome, Safari etc) */
@@ -231,6 +237,10 @@ background-color: #000;
 
 .audioPlayer--container.--btnHamburguerResponsive > .audioPlayer-progressBar--duration{
     margin-top: 2px;
+}
+
+.audioPlayer--container.--btnHamburguerResponsive {
+    margin-left: auto;
 }
 
 @media (max-width: 810px)

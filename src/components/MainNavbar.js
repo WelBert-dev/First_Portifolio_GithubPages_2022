@@ -126,12 +126,17 @@ export default function MainNavbar() {
 
 
     /* Comom Area */
+
+    const [isAlterRouter, setIsAlterRouter] = useState(false);
     
     useEffect(()=>{
 
-        if(window.screen.width >= 810 && window.location.href.substring(1).split("/")[5] == 'projects' 
-        || window.screen.width >= 810 && window.location.href.substring(1).split("/")[5] == 'certificates' 
-        || window.screen.width >= 810 && window.location.href.substring(1).split("/")[5] == 'javaBible'){
+        console.log("USE EFFECT DO NAVBAR CHAMADOOO");
+
+        if(window.screen.width >= 810 && window.location.href.substring(1).split("/")[4] == 'projects' 
+        || window.screen.width >= 810 && window.location.href.substring(1).split("/")[4] == 'certificates' 
+        || window.screen.width >= 810 && window.location.href.substring(1).split("/")[4] == 'javaBible'){
+            console.log("ENTROU NO IFISÂO DOS PROJETOS< CERTIFICADOS E JAVA BIBLE");
             const navBarElement = document.getElementById("navbar-container");
             navBarElement.style.flexDirection = "column";
             navBarElement.style.width = "inherit"; 
@@ -144,23 +149,34 @@ export default function MainNavbar() {
             navBarElement.childNodes[6].style.width = "100%";
             navBarElement.childNodes[7].style.width = "100%";
 
-            if (!navBarElement.classList.contains("responsive_nav")) {
+            if (navBarElement.classList.contains("responsive_nav") && window.location.href.substring(1).split("/")[4] == 'projects' || window.location.href.substring(1).split("/")[4] == 'certificates' || window.location.href.substring(1).split("/")[4] == 'javaBible') {
+                navBarElement.childNodes[9].style.marginLeft = "auto";
+                console.log("ENTROU NO IF DO contains responsive e é uma das rotas projetos, certificados, ou java bible");
+            } else if (!navBarElement.classList.contains("responsive_nav") && window.location.href.substring(1).split("/")[4] == 'projects' || window.location.href.substring(1).split("/")[4] == 'certificates' || window.location.href.substring(1).split("/")[4] == 'javaBible') {
                 navBarElement.childNodes[9].style.marginLeft = "0px";
+                console.log("ENTROU NO IF DO NÃO contains responsive e é uma das rotas projetos, certificados, ou java bible");
             }
     
-            if (window.location.href.substring(1).split("/")[5] == 'projects' && window.screen.width >= 810){
+            if (window.location.href.substring(1).split("/")[4] == 'projects' && window.screen.width >= 810){
                 const sectionElement = document.getElementById("main-projects--container");
                 sectionElement.style.padding = "2rem 0 1rem 10%";
-            }else if(window.location.href.substring(1).split("/")[5] == 'certificates' && window.screen.width >= 810){
+                navBarElement.childNodes[9].style.margin = "auto";
+                console.log("ENTROU NO IF DO é a rota projetos e screen maior ou igual a 810px");
+            }else if(window.location.href.substring(1).split("/")[4] == 'certificates' && window.screen.width >= 810){
                 const sectionElement = document.getElementById("main-certificate--container");
                 sectionElement.style.padding = "2rem 0 1rem 10%";
-            }else if(window.location.href.substring(1).split("/")[5] == 'javaBible' && window.screen.width >= 810){
+                navBarElement.childNodes[9].style.margin = "auto";
+                console.log("ENTROU NO IF DO é a rota certificados e screen maior ou igual a 810px");
+            }else if(window.location.href.substring(1).split("/")[4] == 'javaBible' && window.screen.width >= 810){
                 const sectionElement = document.getElementById("main-javaBible--container");
                 sectionElement.style.padding = "2rem 0 1rem 10%";
+                navBarElement.childNodes[9].style.margin = "auto";
+                console.log("ENTROU NO IF DO é a rota java bible e screen maior ou igual a 810px");
             }
             
         }else{
             if(window.screen.width >= 810){
+                console.log("ENTROU NO ELSE IF é screen maior ou igual a 810px");
                 const navBarElement = document.getElementById("navbar-container");
                 navBarElement.style.flexDirection = "row";
                 navBarElement.style.width = "100%"; 
@@ -173,12 +189,14 @@ export default function MainNavbar() {
                 navBarElement.childNodes[6].style.width = "max-content";
                 navBarElement.childNodes[7].style.width = "max-content";
 
-                if (!navBarElement.classList.contains("responsive_nav")) {
-                    navBarElement.childNodes[9].style.marginLeft = "auto";
+                if (window.location.href.substring(1).split("/")[4] == '' || window.location.href.substring(1).split("/")[4] == 'aboutMe' || window.location.href.substring(1).split("/")[4] == 'skills' || window.location.href.substring(1).split("/")[4] == 'curriculumVitae') {
+                    navBarElement.childNodes[9].style.margin = "0 0 0 auto";
+                    console.log("ENTROU NO bloco do ELSE IF é screen maior ou igual a 810px, aonde verifica se NÃO contains responsive");
+                    console.log(navBarElement.childNodes[9]);
                 }
             }
         }
-    }, [navBarEmColumn, locationFlag]);
+    }, [navBarEmColumn, locationFlag.pathname]);
 
 
 
@@ -520,13 +538,13 @@ export default function MainNavbar() {
         <>
             <nav id="navbar-container" ref={navRef} >
                 <button id="nav-close-btn" className="nav-btn nav-close-btn" onClick={showNavbar}><FaTimes /></button>
-                <a href="/firstPortifolioGithubPages-2022">Home</a>
-                <a className= "-minWidthMaxContent" href="/firstPortifolioGithubPages-2022/#/aboutMe" onClick={() => setNavBarEmColumn(true)}>Sobre Mim</a>
-                <a href="/firstPortifolioGithubPages-2022/#/skills" rel="Link Linguagens" onClick={() => setNavBarEmColumn(true)}>Habilidades</a>     
-                <a href="/firstPortifolioGithubPages-2022/#/projects" rel="Link Projetos" onClick={() => setNavBarEmColumn(true)}>Projetos</a>
-                <a href="/firstPortifolioGithubPages-2022/#/certificates" rel="Link Certificados" onClick={() => setNavBarEmColumn(true)}>Certificados</a>   
-                <a href="/firstPortifolioGithubPages-2022/#/curriculumVitae" rel="Link Curriculo" onClick={() => setNavBarEmColumn(true)}>Currículo</a>     
-                <a className={window.location.href.substring(1).split("/")[5] === 'javaBible' ? "" : "-btn-ancorToJavaBibleScreen -minWidthMaxContent"} href="/firstPortifolioGithubPages-2022/#/javaBible" rel="Link Biblia do Java" onClick={() => setNavBarEmColumn(true)}>Bíblia do Java {window.location.href.substring(1).split("/")[5] === 'javaBible' ? "" : <MdFiberNew className="animaIconPisca"/>}</a>        
+                <a href="/">Home</a>
+                <a className= "-minWidthMaxContent" href="/#/aboutMe" onClick={() => setNavBarEmColumn(true)}>Sobre Mim</a>
+                <a href="/#/skills" rel="Link Linguagens" onClick={() => setNavBarEmColumn(true)}>Habilidades</a>     
+                <a href="/#/projects" rel="Link Projetos" onClick={() => setNavBarEmColumn(true)}>Projetos</a>
+                <a href="/#/certificates" rel="Link Certificados" onClick={() => setNavBarEmColumn(true)}>Certificados</a>   
+                <a href="/#/curriculumVitae" rel="Link Curriculo" onClick={() => setNavBarEmColumn(true)}>Currículo</a>     
+                <a className={window.location.href.substring(1).split("/")[4] === 'javaBible' ? "" : "-btn-ancorToJavaBibleScreen -minWidthMaxContent"} href="/#/javaBible" rel="Link Biblia do Java" onClick={() => setNavBarEmColumn(true)}>Bíblia do Java {window.location.href.substring(1).split("/")[4] === 'javaBible' ? "" : <MdFiberNew className="animaIconPisca"/>}</a>        
                 
                 <audio id="audioPlayer" src={rickAndMortyMainIntro}></audio>
                 <div className="audioPlayer--container --audioPlayer--container --navBar -minWidthMaxContent">
@@ -543,7 +561,7 @@ export default function MainNavbar() {
                     </div>
                 </div>
             </nav>
-            <button id="btn-hamburguer" className="nav-btn"><FaBars onClick={showNavbar}/>{window.location.href.substring(1).split("/")[5] === 'javaBible' ? "" : <MdNotificationImportant className="animaIconPisca--alert" onClick={showNavbar}/>}
+            <button id="btn-hamburguer" className="nav-btn"><FaBars onClick={showNavbar}/>{window.location.href.substring(1).split("/")[4] === 'javaBible' ? "" : <MdNotificationImportant className="animaIconPisca--alert" onClick={showNavbar}/>}
 
                 <div className="audioPlayer--container --btnHamburguerResponsive">
                     <div className="audioPlayer--controls">
