@@ -43,7 +43,7 @@ export default function AboutMeScreen() {
 
                         Sou de uma família humilde, sonhador e determinado. Tenho certeza que no futuro conseguirei 
                         proporcionar melhorias para aqueles que amo. Sigo a filosofia de "Um leão por dia", acreditando 
-                        que a persistência e o esforço constante são o caminho para o sucesso. Vamos trabalhar juntos?
+                        que a persistência e o esforço constante são o caminho para o sucesso. Vamos solucionar problemas juntos?
                         </p>
                     </div>
                 </div>             
