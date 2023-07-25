@@ -31,19 +31,14 @@
 }
 
 .projects-subdescription--container.-bolsaEnsinoCertficate {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.projects-subdescription--container.-bolsaEnsinoCertficate {
 	margin: 0;
 	border: 4px ridge #000;
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	padding-bottom: 1rem;
-	--tw-bg-opacity: .5;
-    background-color: rgba(52,53,65,var(--tw-bg-opacity));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .bolsaEnsinoImageWrapper {

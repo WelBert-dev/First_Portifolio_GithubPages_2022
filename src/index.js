@@ -1,17 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter, Route, Routes, HashRouter } from 'react-router-dom';
+import { Route, Routes, HashRouter } from 'react-router-dom';
 
 import './index.css';
 import App from './App';
 
-import HomeScreen from './screens/HomeScreen';
-import AboutMeScreen from './screens/AboutMeScreen';
-import SkillsScreen from './screens/SkillsScreen';
-import ProjectsScreen from './screens/ProjectsScreen';
-import CurriculumVitaeScreen from './screens/CurriculumVitaeScreen';
-import CertificatesScreen from './screens/CertificatesScreen';
-import JavaBibleScreen from './screens/JavaBibleScreen';
+import HomeScreen from './screens/home/HomeScreen';
+import AboutMeScreen from './screens/aboutMe/AboutMeScreen';
+import SkillsScreen from './screens/skills/SkillsScreen';
+import ProjectsScreen from './screens/projects/ProjectsScreen';
+import CurriculumVitaeScreen from './screens/curriculumVitae/CurriculumVitaeScreen';
+import CertificatesScreen from './screens/certificates/CertificatesScreen';
+import JavaBibleScreen from './screens/javaBible/JavaBibleScreen';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,7 +26,6 @@ root.render(
             <Route path="curriculumVitae" element={<CurriculumVitaeScreen />} />
             <Route path="certificates" element={<CertificatesScreen />} />
             <Route path="javaBible" element={<JavaBibleScreen />} />
-            {/*<Route path="interests" element={<InterestsScreen />} /> */}
           </Route>
         </Routes>
       </HashRouter>

@@ -1,7 +1,7 @@
-import { Outlet, useParams } from 'react-router-dom';
+import { Outlet } from 'react-router-dom';
 
-import MainNavbar from './components/MainNavbar';
-import MainFooter from './components/MainFooter';
+import MainNavbar from './components/mainNavbar/MainNavbar';
+import MainFooter from './components/mainFooter/MainFooter';
 
 import './App.css';
 

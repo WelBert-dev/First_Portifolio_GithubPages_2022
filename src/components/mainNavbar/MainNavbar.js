@@ -5,88 +5,88 @@ import { useLocation } from 'react-router-dom';
 import { MdFiberNew } from 'react-icons/md';
 import { MdNotificationImportant } from 'react-icons/md';
 
-import rickAndMortyMainIntro from '../resources/audios/Rick And Morty Intro (320 kbps).mp3';
-import fullmetalAlchemistBHMainIntro from '../resources/audios/Fullmetal Alchemist Brotherhood Creditless OP 1 1080p (320 kbps).mp3';
-import yuyuHakushoMainIntro from '../resources/audios/Yu Yu Hakusho (OP Português) 1° abertura (320 kbps).mp3';
-import deathNoteMainIntro from '../resources/audios/Death Note - Opening [4K] (320 kbps).mp3';
-import tokyoGhoulMainIntro from '../resources/audios/unravel (320 kbps).mp3';
-import dbzChalaHeChalaIntro from '../resources/audios/Dragon Ball Z  - Abertura 1° - Chala Head Chala em Portugues - BR (320 kbps).mp3';
-import dbzPossoPressentirOPerigoEoCaos from '../resources/audios/Dragon Ball Z - Abertura 2[HD](Melhor Qualidade) (320 kbps).mp3';
-import dbzSeuSorrisoEhTaoResplandecente from '../resources/audios/Dragon Ball GT abertura em HD e tela inteira (320 kbps).mp3';
-import dbzVoaVamosVemComigoVamosJuntosAoParaiso from '../resources/audios/Dragon Ball Kai - Opening PT-BR _ FULL HD (320 kbps).mp3';
-import dbzSagaBoo from '../resources/audios/Abertura Dragon ball Kai Saga Boo Dublado (320 kbps).mp3';
-import dbzSuperMainIntro from '../resources/audios/Dragon Ball Super _ Abertura 1 - Versão Brasileira (Oficial) (320 kbps).mp3';
-import inuyashaMainIntro from '../resources/audios/Inuyasha   Abertura 1 - Mudar O Mundo (320 kbps).mp3';
-import pokemonMainIntro from '../resources/audios/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).mp3';
-import digimonMainIntro from '../resources/audios/Digimon - Abertura (HD) (320 kbps).mp3';
-import cavaleirosDoZodiacoMainIntro from '../resources/audios/Abertura Os Cavaleiros Do Zodíaco - PEGASUS FANTASY (BR) [1080p] (320 kbps).mp3';
-import bleachMainIntro from '../resources/audios/Bleach abertura 1 HD (320 kbps).mp3';
-import onePunchManMainIntro from '../resources/audios/One Punch Man OP - Opening 1 (320 kbps).mp3';
-import attackOnTitanMainIntro from '../resources/audios/Shingeki No Kyojin Opening 1 [With Lyrics] (320 kbps).mp3';
-import narutoClassicoMainIntro from '../resources/audios/Naruto Opening 1 (HD) (320 kbps).mp3';
-import narutoClassico2 from '../resources/audios/Naruto Opening 2 _ Haruka Kanata (HD) (320 kbps).mp3';
-import narutoShippudenMainIntro from '../resources/audios/Naruto Shippuden Opening 1  (320 kbps).mp3';
-import narutoShippuden2 from '../resources/audios/Naruto Shippuden Opening 2 _ Distance (HD) (320 kbps).mp3';
-import narutoShippuden3 from '../resources/audios/Naruto Shippuden Opening 3 _ Blue Bird (HD) (320 kbps).mp3';
-import narutoShippuden4 from '../resources/audios/Naruto Shippuden Opening 4 _ Closer (HD) (320 kbps).mp3';
-import narutoShippuden5 from '../resources/audios/Naruto Shippuden Opening 5 _ Hotaru no Hikari (HD) (320 kbps).mp3';
-import narutoShippuden6 from '../resources/audios/Naruto Shippuden Opening 6 _ Sign (HD) (320 kbps).mp3';
-import narutoShippuden7 from '../resources/audios/Naruto Shippuden Opening 7 _ Toumei Datta Sekai (HD) (320 kbps).mp3';
-import narutoShippuden8 from '../resources/audios/Naruto Shippuden Opening 8 _ Diver (HD) (320 kbps).mp3';
-import narutoShippuden9 from '../resources/audios/Naruto Shippuden Opening 9 _ Lovers (HD) (320 kbps).mp3';
-import narutoShippuden10 from '../resources/audios/Naruto Shippuden Opening 10 _ Newsong (HD) (320 kbps).mp3';
-import narutoShippuden11 from '../resources/audios/Naruto Shippuden Opening 11 _ Totsugeki Rock (HD) (320 kbps).mp3';
-import narutoShippuden12 from '../resources/audios/Naruto Shippuden Opening 12 _ Moshimo (HD) (320 kbps).mp3';
-import narutoShippuden13 from '../resources/audios/Naruto Shippuden Opening 13 _ Niwaka Ame ni mo Makezu (HD) (320 kbps).mp3';
-import narutoShippuden14 from '../resources/audios/Naruto Shippuden Opening 14 _ Tsuki no Ookisa (HD) (320 kbps).mp3';
-import narutoShippuden15 from '../resources/audios/Naruto Shippuden Opening 15 _ Guren (HD) (320 kbps).mp3';
-import narutoShippuden16 from '../resources/audios/Naruto Shippuden Opening 16 _ Silhouette (HD) (320 kbps).mp3';
-import narutoShippuden17 from '../resources/audios/Naruto Shippuden Opening 17 _ Kaze (HD) (320 kbps).mp3';
-import narutoShippuden18 from '../resources/audios/Naruto Shippuden Opening 18 _ LINE (HD) (320 kbps).mp3';
-import narutoShippuden19 from '../resources/audios/Naruto Shippuden Opening 19 _ Blood Circulator (HD) (320 kbps).mp3';
-import narutoShippuden20 from '../resources/audios/Naruto Shippuden Opening 20 _ Kara no Kokoro (HD) (320 kbps).mp3';
+import rickAndMortyMainIntro from '../../resources/audios/Rick And Morty Intro (320 kbps).mp3';
+import fullmetalAlchemistBHMainIntro from '../../resources/audios/Fullmetal Alchemist Brotherhood Creditless OP 1 1080p (320 kbps).mp3';
+import yuyuHakushoMainIntro from '../../resources/audios/Yu Yu Hakusho (OP Português) 1° abertura (320 kbps).mp3';
+import deathNoteMainIntro from '../../resources/audios/Death Note - Opening [4K] (320 kbps).mp3';
+import tokyoGhoulMainIntro from '../../resources/audios/unravel (320 kbps).mp3';
+import dbzChalaHeChalaIntro from '../../resources/audios/Dragon Ball Z  - Abertura 1° - Chala Head Chala em Portugues - BR (320 kbps).mp3';
+import dbzPossoPressentirOPerigoEoCaos from '../../resources/audios/Dragon Ball Z - Abertura 2[HD](Melhor Qualidade) (320 kbps).mp3';
+import dbzSeuSorrisoEhTaoResplandecente from '../../resources/audios/Dragon Ball GT abertura em HD e tela inteira (320 kbps).mp3';
+import dbzVoaVamosVemComigoVamosJuntosAoParaiso from '../../resources/audios/Dragon Ball Kai - Opening PT-BR _ FULL HD (320 kbps).mp3';
+import dbzSagaBoo from '../../resources/audios/Abertura Dragon ball Kai Saga Boo Dublado (320 kbps).mp3';
+import dbzSuperMainIntro from '../../resources/audios/Dragon Ball Super _ Abertura 1 - Versão Brasileira (Oficial) (320 kbps).mp3';
+import inuyashaMainIntro from '../../resources/audios/Inuyasha   Abertura 1 - Mudar O Mundo (320 kbps).mp3';
+import pokemonMainIntro from '../../resources/audios/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).mp3';
+import digimonMainIntro from '../../resources/audios/Digimon - Abertura (HD) (320 kbps).mp3';
+import cavaleirosDoZodiacoMainIntro from '../../resources/audios/Abertura Os Cavaleiros Do Zodíaco - PEGASUS FANTASY (BR) [1080p] (320 kbps).mp3';
+import bleachMainIntro from '../../resources/audios/Bleach abertura 1 HD (320 kbps).mp3';
+import onePunchManMainIntro from '../../resources/audios/One Punch Man OP - Opening 1 (320 kbps).mp3';
+import attackOnTitanMainIntro from '../../resources/audios/Shingeki No Kyojin Opening 1 [With Lyrics] (320 kbps).mp3';
+import narutoClassicoMainIntro from '../../resources/audios/Naruto Opening 1 (HD) (320 kbps).mp3';
+import narutoClassico2 from '../../resources/audios/Naruto Opening 2 _ Haruka Kanata (HD) (320 kbps).mp3';
+import narutoShippudenMainIntro from '../../resources/audios/Naruto Shippuden Opening 1  (320 kbps).mp3';
+import narutoShippuden2 from '../../resources/audios/Naruto Shippuden Opening 2 _ Distance (HD) (320 kbps).mp3';
+import narutoShippuden3 from '../../resources/audios/Naruto Shippuden Opening 3 _ Blue Bird (HD) (320 kbps).mp3';
+import narutoShippuden4 from '../../resources/audios/Naruto Shippuden Opening 4 _ Closer (HD) (320 kbps).mp3';
+import narutoShippuden5 from '../../resources/audios/Naruto Shippuden Opening 5 _ Hotaru no Hikari (HD) (320 kbps).mp3';
+import narutoShippuden6 from '../../resources/audios/Naruto Shippuden Opening 6 _ Sign (HD) (320 kbps).mp3';
+import narutoShippuden7 from '../../resources/audios/Naruto Shippuden Opening 7 _ Toumei Datta Sekai (HD) (320 kbps).mp3';
+import narutoShippuden8 from '../../resources/audios/Naruto Shippuden Opening 8 _ Diver (HD) (320 kbps).mp3';
+import narutoShippuden9 from '../../resources/audios/Naruto Shippuden Opening 9 _ Lovers (HD) (320 kbps).mp3';
+import narutoShippuden10 from '../../resources/audios/Naruto Shippuden Opening 10 _ Newsong (HD) (320 kbps).mp3';
+import narutoShippuden11 from '../../resources/audios/Naruto Shippuden Opening 11 _ Totsugeki Rock (HD) (320 kbps).mp3';
+import narutoShippuden12 from '../../resources/audios/Naruto Shippuden Opening 12 _ Moshimo (HD) (320 kbps).mp3';
+import narutoShippuden13 from '../../resources/audios/Naruto Shippuden Opening 13 _ Niwaka Ame ni mo Makezu (HD) (320 kbps).mp3';
+import narutoShippuden14 from '../../resources/audios/Naruto Shippuden Opening 14 _ Tsuki no Ookisa (HD) (320 kbps).mp3';
+import narutoShippuden15 from '../../resources/audios/Naruto Shippuden Opening 15 _ Guren (HD) (320 kbps).mp3';
+import narutoShippuden16 from '../../resources/audios/Naruto Shippuden Opening 16 _ Silhouette (HD) (320 kbps).mp3';
+import narutoShippuden17 from '../../resources/audios/Naruto Shippuden Opening 17 _ Kaze (HD) (320 kbps).mp3';
+import narutoShippuden18 from '../../resources/audios/Naruto Shippuden Opening 18 _ LINE (HD) (320 kbps).mp3';
+import narutoShippuden19 from '../../resources/audios/Naruto Shippuden Opening 19 _ Blood Circulator (HD) (320 kbps).mp3';
+import narutoShippuden20 from '../../resources/audios/Naruto Shippuden Opening 20 _ Kara no Kokoro (HD) (320 kbps).mp3';
 
-import seteMinutoz_RapDoBrolyKyuubiLevi from '../resources/audios/Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 _ NERD HITS.mp3';
-import seteMinutoz_RapDoGai from '../resources/audios/Rap do Maito Gai (Naruto) - O NINJA MAIS FORTE _ NERD HITS.mp3';
-import seteMinutoz_RapDoItachi from '../resources/audios/Rap do Itachi (Naruto) - ESSA DOR QUE CAUSEI... _ NERD HITS.mp3';
-import seteMinutoz_RapDaAkatsuki from '../resources/audios/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3';
-import seteMinutoz_RapDosHokages from '../resources/audios/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.mp3';
-import tauz_RapDoZoro from '../resources/audios/Rap do Zoro (One Piece) _ Tauz RapTributo 17.mp3';
-import tauz_RapDoLuffy from '../resources/audios/Rap do Luffy (One Piece) _ Tauz RapTributo 10.mp3';
-import tauz_RapDoBarbaBranca from '../resources/audios/Rap do Barba Branca (One Piece) _ Tauz RapTributo 63.mp3';
-import tauz_RapDoFullmetalAlchemist from '../resources/audios/Rap do Edward Elric (FullMetal Alchemist) _ Tauz RapTributo 26.mp3';
-import tauz_RapDoZarakiKenpachi from '../resources/audios/Rap do Zaraki Kenpachi (Bleach) _ Tauz RapTributo 25.mp3';
-import tauz_RapDoSasukeII from '../resources/audios/Rap do Sasuke Pt II (Naruto) _ Tauz RapTributo 19.mp3'; 
-import tauz_RapDoNaruto from '../resources/audios/Rap do Naruto _ Tauz RapTributo 05.mp3';
-import tauz_RapDoBan from '../resources/audios/Rap do Ban (Nanatsu no Taizai) _ Tauz RapTributo 50.mp3';
-import tauz_RapDoDeadPool from '../resources/audios/Rap do Deadpool _ Tauz RapTributo 15.mp3';
-import tauz_RapDoKakashi from '../resources/audios/Rap do Kakashi (Naruto) _ Tauz RapTributo 09.mp3';
-import tauz_RapDoAssassinsCreed from '../resources/audios/Rap do Assassins Creed _ Tauz RapGame 19.mp3';
-import tauz_RapDoJiraiya from '../resources/audios/Rap do Jiraiya (Naruto) _ Tauz RapTributo 48.mp3';
-import tauz_RapDoItachi from '../resources/audios/Rap do Itachi (Naruto) _ Tauz RapTributo 18.mp3';
-import tauz_RapDoL from '../resources/audios/Rap do L (Death Note) _ Tauz RapTributo 28.mp3';
-import tauz_RapDoKillua from '../resources/audios/Rap do Killua (Hunter x Hunter) _ Tauz RapTributo 47.mp3';
-import tauz_RapDoSanji from '../resources/audios/Rap do Sanji (One Piece) _ Tauz RapTributo 37.mp3';
-import tauz_RapDoLevi from '../resources/audios/Rap do Levi (Attack on Titan) _ Tauz RapTributo 56.mp3';
-import tauz_RapDoAlucard from '../resources/audios/Rap do Alucard (Hellsing) _ Tauz RapTributo 64.mp3';
-import tauz_RapDoHisoka from '../resources/audios/Rap do Hisoka (Hunter x Hunter) _ Tauz RapTributo 69.mp3';
+import seteMinutoz_RapDoBrolyKyuubiLevi from '../../resources/audios/Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 _ NERD HITS.mp3';
+import seteMinutoz_RapDoGai from '../../resources/audios/Rap do Maito Gai (Naruto) - O NINJA MAIS FORTE _ NERD HITS.mp3';
+import seteMinutoz_RapDoItachi from '../../resources/audios/Rap do Itachi (Naruto) - ESSA DOR QUE CAUSEI... _ NERD HITS.mp3';
+import seteMinutoz_RapDaAkatsuki from '../../resources/audios/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3';
+import seteMinutoz_RapDosHokages from '../../resources/audios/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.mp3';
+import tauz_RapDoZoro from '../../resources/audios/Rap do Zoro (One Piece) _ Tauz RapTributo 17.mp3';
+import tauz_RapDoLuffy from '../../resources/audios/Rap do Luffy (One Piece) _ Tauz RapTributo 10.mp3';
+import tauz_RapDoBarbaBranca from '../../resources/audios/Rap do Barba Branca (One Piece) _ Tauz RapTributo 63.mp3';
+import tauz_RapDoFullmetalAlchemist from '../../resources/audios/Rap do Edward Elric (FullMetal Alchemist) _ Tauz RapTributo 26.mp3';
+import tauz_RapDoZarakiKenpachi from '../../resources/audios/Rap do Zaraki Kenpachi (Bleach) _ Tauz RapTributo 25.mp3';
+import tauz_RapDoSasukeII from '../../resources/audios/Rap do Sasuke Pt II (Naruto) _ Tauz RapTributo 19.mp3'; 
+import tauz_RapDoNaruto from '../../resources/audios/Rap do Naruto _ Tauz RapTributo 05.mp3';
+import tauz_RapDoBan from '../../resources/audios/Rap do Ban (Nanatsu no Taizai) _ Tauz RapTributo 50.mp3';
+import tauz_RapDoDeadPool from '../../resources/audios/Rap do Deadpool _ Tauz RapTributo 15.mp3';
+import tauz_RapDoKakashi from '../../resources/audios/Rap do Kakashi (Naruto) _ Tauz RapTributo 09.mp3';
+import tauz_RapDoAssassinsCreed from '../../resources/audios/Rap do Assassins Creed _ Tauz RapGame 19.mp3';
+import tauz_RapDoJiraiya from '../../resources/audios/Rap do Jiraiya (Naruto) _ Tauz RapTributo 48.mp3';
+import tauz_RapDoItachi from '../../resources/audios/Rap do Itachi (Naruto) _ Tauz RapTributo 18.mp3';
+import tauz_RapDoL from '../../resources/audios/Rap do L (Death Note) _ Tauz RapTributo 28.mp3';
+import tauz_RapDoKillua from '../../resources/audios/Rap do Killua (Hunter x Hunter) _ Tauz RapTributo 47.mp3';
+import tauz_RapDoSanji from '../../resources/audios/Rap do Sanji (One Piece) _ Tauz RapTributo 37.mp3';
+import tauz_RapDoLevi from '../../resources/audios/Rap do Levi (Attack on Titan) _ Tauz RapTributo 56.mp3';
+import tauz_RapDoAlucard from '../../resources/audios/Rap do Alucard (Hellsing) _ Tauz RapTributo 64.mp3';
+import tauz_RapDoHisoka from '../../resources/audios/Rap do Hisoka (Hunter x Hunter) _ Tauz RapTributo 69.mp3';
 
-import ghostBustersMainIntro from '../resources/audios/Ray Parker Jr. - Ghostbusters (Official Video).mp3';
-import umMalucoNoPedacoMainIntro from '../resources/audios/Abertura de - um maluco no pedaço (320 kbps).mp3';
-import casteloRaTimBumMainIntro from '../resources/audios/Abertura do Castelo Rá Tim Bum.mp3';
-import phineasEFerbMainIntro from '../resources/audios/Phineas e Ferb - Abertura PT-BR em HD (Clássica).mp3';
-import horaDeAventuraMainIntro from '../resources/audios/Abertura Hora de Aventura ( Português ).mp3';
-import baraberaCrazyFrogAxelF from '../resources/audios/Crazy Frog - Axel F (Official Video) (128 kbps).mp3';
-import maskaraMainIntro from '../resources/audios/Abertura O Maskara.mp3';
-import os7MonstrinhosMainIntro from '../resources/audios/Os Sete Monstrinhos - Abertura (TV Cultura).mp3';
-import euVoceEZoobomafu from '../resources/audios/Zoboomafoo Abertura HD (60 FPS) (128 kbps).mp3';
-import sitioDoPicaPauAmareloMainIntro from '../resources/audios/Gilberto Gil -  Sítio Do Picapau Amarelo.mp3';
-import cocoricoMainIntroAndEnd from '../resources/audios/Cocoricó - Abertura e Encerramento.mp3';
-import palavraCantadaRato from '../resources/audios/Palavra Cantada _ Rato.mp3';
-import ginasticaDaMaquina from '../resources/audios/Ginástica da máquina - pitagoras.mp3';
-import cateloRaTimBumRatoBanhoEhBom from '../resources/audios/Castelo Rá Tim Bum  Ratinho - Meu pé meu querido pé.mp3';
-import umMeninoMaluquinhoMainIntro from '../resources/audios/Abertura Um Menino Muito Maluquinho.mp3';
-import txutxuCaoFunk from '../resources/audios/Txutxucão funk.mp3';
+import ghostBustersMainIntro from '../../resources/audios/Ray Parker Jr. - Ghostbusters (Official Video).mp3';
+import umMalucoNoPedacoMainIntro from '../../resources/audios/Abertura de - um maluco no pedaço (320 kbps).mp3';
+import casteloRaTimBumMainIntro from '../../resources/audios/Abertura do Castelo Rá Tim Bum.mp3';
+import phineasEFerbMainIntro from '../../resources/audios/Phineas e Ferb - Abertura PT-BR em HD (Clássica).mp3';
+import horaDeAventuraMainIntro from '../../resources/audios/Abertura Hora de Aventura ( Português ).mp3';
+import baraberaCrazyFrogAxelF from '../../resources/audios/Crazy Frog - Axel F (Official Video) (128 kbps).mp3';
+import maskaraMainIntro from '../../resources/audios/Abertura O Maskara.mp3';
+import os7MonstrinhosMainIntro from '../../resources/audios/Os Sete Monstrinhos - Abertura (TV Cultura).mp3';
+import euVoceEZoobomafu from '../../resources/audios/Zoboomafoo Abertura HD (60 FPS) (128 kbps).mp3';
+import sitioDoPicaPauAmareloMainIntro from '../../resources/audios/Gilberto Gil -  Sítio Do Picapau Amarelo.mp3';
+import cocoricoMainIntroAndEnd from '../../resources/audios/Cocoricó - Abertura e Encerramento.mp3';
+import palavraCantadaRato from '../../resources/audios/Palavra Cantada _ Rato.mp3';
+import ginasticaDaMaquina from '../../resources/audios/Ginástica da máquina - pitagoras.mp3';
+import cateloRaTimBumRatoBanhoEhBom from '../../resources/audios/Castelo Rá Tim Bum  Ratinho - Meu pé meu querido pé.mp3';
+import umMeninoMaluquinhoMainIntro from '../../resources/audios/Abertura Um Menino Muito Maluquinho.mp3';
+import txutxuCaoFunk from '../../resources/audios/Txutxucão funk.mp3';
 
 
 import { IoPlayCircle } from 'react-icons/io5';
@@ -131,12 +131,12 @@ export default function MainNavbar() {
     
     useEffect(()=>{
 
-        console.log("USE EFFECT DO NAVBAR CHAMADOOO");
+        // console.log("USE EFFECT DO NAVBAR CHAMADOOO");
 
         if(window.screen.width >= 810 && window.location.href.substring(1).split("/")[4] == 'projects' 
         || window.screen.width >= 810 && window.location.href.substring(1).split("/")[4] == 'certificates' 
         || window.screen.width >= 810 && window.location.href.substring(1).split("/")[4] == 'javaBible'){
-            console.log("ENTROU NO IFISÂO DOS PROJETOS< CERTIFICADOS E JAVA BIBLE");
+            // console.log("ENTROU NO IFISÂO DOS PROJETOS< CERTIFICADOS E JAVA BIBLE");
             const navBarElement = document.getElementById("navbar-container");
             navBarElement.style.flexDirection = "column";
             navBarElement.style.width = "inherit"; 
@@ -151,32 +151,32 @@ export default function MainNavbar() {
 
             if (navBarElement.classList.contains("responsive_nav") && window.location.href.substring(1).split("/")[4] == 'projects' || window.location.href.substring(1).split("/")[4] == 'certificates' || window.location.href.substring(1).split("/")[4] == 'javaBible') {
                 navBarElement.childNodes[9].style.marginLeft = "auto";
-                console.log("ENTROU NO IF DO contains responsive e é uma das rotas projetos, certificados, ou java bible");
+                // console.log("ENTROU NO IF DO contains responsive e é uma das rotas projetos, certificados, ou java bible");
             } else if (!navBarElement.classList.contains("responsive_nav") && window.location.href.substring(1).split("/")[4] == 'projects' || window.location.href.substring(1).split("/")[4] == 'certificates' || window.location.href.substring(1).split("/")[4] == 'javaBible') {
                 navBarElement.childNodes[9].style.marginLeft = "0px";
-                console.log("ENTROU NO IF DO NÃO contains responsive e é uma das rotas projetos, certificados, ou java bible");
+                // console.log("ENTROU NO IF DO NÃO contains responsive e é uma das rotas projetos, certificados, ou java bible");
             }
     
             if (window.location.href.substring(1).split("/")[4] == 'projects' && window.screen.width >= 810){
                 const sectionElement = document.getElementById("main-projects--container");
                 sectionElement.style.padding = "2rem 0 1rem 10%";
                 navBarElement.childNodes[9].style.margin = "auto";
-                console.log("ENTROU NO IF DO é a rota projetos e screen maior ou igual a 810px");
+                // console.log("ENTROU NO IF DO é a rota projetos e screen maior ou igual a 810px");
             }else if(window.location.href.substring(1).split("/")[4] == 'certificates' && window.screen.width >= 810){
                 const sectionElement = document.getElementById("main-certificate--container");
                 sectionElement.style.padding = "2rem 0 1rem 10%";
                 navBarElement.childNodes[9].style.margin = "auto";
-                console.log("ENTROU NO IF DO é a rota certificados e screen maior ou igual a 810px");
+                // console.log("ENTROU NO IF DO é a rota certificados e screen maior ou igual a 810px");
             }else if(window.location.href.substring(1).split("/")[4] == 'javaBible' && window.screen.width >= 810){
                 const sectionElement = document.getElementById("main-javaBible--container");
                 sectionElement.style.padding = "2rem 0 1rem 10%";
                 navBarElement.childNodes[9].style.margin = "auto";
-                console.log("ENTROU NO IF DO é a rota java bible e screen maior ou igual a 810px");
+                // console.log("ENTROU NO IF DO é a rota java bible e screen maior ou igual a 810px");
             }
             
         }else{
             if(window.screen.width >= 810){
-                console.log("ENTROU NO ELSE IF é screen maior ou igual a 810px");
+                // console.log("ENTROU NO ELSE IF é screen maior ou igual a 810px");
                 const navBarElement = document.getElementById("navbar-container");
                 navBarElement.style.flexDirection = "row";
                 navBarElement.style.width = "100%"; 
@@ -191,8 +191,8 @@ export default function MainNavbar() {
 
                 if (window.location.href.substring(1).split("/")[4] == '' || window.location.href.substring(1).split("/")[4] == 'aboutMe' || window.location.href.substring(1).split("/")[4] == 'skills' || window.location.href.substring(1).split("/")[4] == 'curriculumVitae') {
                     navBarElement.childNodes[9].style.margin = "0 0 0 auto";
-                    console.log("ENTROU NO bloco do ELSE IF é screen maior ou igual a 810px, aonde verifica se NÃO contains responsive");
-                    console.log(navBarElement.childNodes[9]);
+                    // console.log("ENTROU NO bloco do ELSE IF é screen maior ou igual a 810px, aonde verifica se NÃO contains responsive");
+                    // console.log(navBarElement.childNodes[9]);
                 }
             }
         }
@@ -388,7 +388,10 @@ export default function MainNavbar() {
         /* Evento disparado quando a página sofre re-loads, salvando assim o estado da musica corrente em localstorage: */
 
         window.onbeforeunload = () => {
-            setLocalStorage_stateOfMusic({indexOfMusic: Number(getLocalStorage_indexOfCurrentMusic()), stateOfTime: Number(player.currentTime)});
+            if (!(player.currentTime == 0 && Number(getLocalStorage_stateOfMusic().stateOfTime) > 0)) {
+                setLocalStorage_stateOfMusic({indexOfMusic: Number(getLocalStorage_indexOfCurrentMusic()), stateOfTime: Number(player.currentTime)});
+            } 
+            
             
             // if (player.readyState >= 2) { //  Verifica se o recurso está pronto para ser reproduzido (readyState >= 2).
 
@@ -535,49 +538,49 @@ export default function MainNavbar() {
 
     
     return (
-        <>
-            <nav id="navbar-container" ref={navRef} >
-                <button id="nav-close-btn" className="nav-btn nav-close-btn" onClick={showNavbar}><FaTimes /></button>
-                <a href="/">Home</a>
-                <a className= "-minWidthMaxContent" href="/#/aboutMe" onClick={() => setNavBarEmColumn(true)}>Sobre Mim</a>
-                <a href="/#/skills" rel="Link Linguagens" onClick={() => setNavBarEmColumn(true)}>Habilidades</a>     
-                <a href="/#/projects" rel="Link Projetos" onClick={() => setNavBarEmColumn(true)}>Projetos</a>
-                <a href="/#/certificates" rel="Link Certificados" onClick={() => setNavBarEmColumn(true)}>Certificados</a>   
-                <a href="/#/curriculumVitae" rel="Link Curriculo" onClick={() => setNavBarEmColumn(true)}>Currículo</a>     
-                <a className={window.location.href.substring(1).split("/")[4] === 'javaBible' ? "" : "-btn-ancorToJavaBibleScreen -minWidthMaxContent"} href="/#/javaBible" rel="Link Biblia do Java" onClick={() => setNavBarEmColumn(true)}>Bíblia do Java {window.location.href.substring(1).split("/")[4] === 'javaBible' ? "" : <MdFiberNew className="animaIconPisca"/>}</a>        
-                
-                <audio id="audioPlayer" src={rickAndMortyMainIntro}></audio>
-                <div className="audioPlayer--container --audioPlayer--container --navBar -minWidthMaxContent">
-                    <div className="audioPlayer--controls">
-                        <i className="audioPlayer-control--skipPrevious"><IoPlaySkipBackCircle/></i>
-                        <i className="audioPlayer-control--play"><IoPlayCircle/></i>
-                        <i className="audioPlayer-control--pause isActiv"><IoPauseCircle/></i>
-                        <i className="audioPlayer-control--skipNext"><IoPlaySkipForwardCircle/></i>
-                    </div>
-                    <div className="audioPlayer-progressBar--duration">
-                        <div className="audioPlayer-progressBar--fillBar">
-                            <progress value="0" max="1"></progress>
-                        </div>
-                    </div>
+<>
+    <nav id="navbar-container" ref={navRef} >
+        <button id="nav-close-btn" className="nav-btn nav-close-btn" onClick={showNavbar}><FaTimes /></button>
+        <a href="/">Home</a>
+        <a className= "-minWidthMaxContent" href="/#/aboutMe" onClick={() => setNavBarEmColumn(true)}>Sobre Mim</a>
+        <a href="/#/skills" rel="Link Linguagens" onClick={() => setNavBarEmColumn(true)}>Habilidades</a>     
+        <a href="/#/projects" rel="Link Projetos" onClick={() => setNavBarEmColumn(true)}>Projetos</a>
+        <a href="/#/certificates" rel="Link Certificados" onClick={() => setNavBarEmColumn(true)}>Certificados</a>   
+        <a href="/#/curriculumVitae" rel="Link Curriculo" onClick={() => setNavBarEmColumn(true)}>Currículo</a>     
+        <a className={window.location.href.substring(1).split("/")[4] === 'javaBible' ? "" : "-btn-ancorToJavaBibleScreen -minWidthMaxContent"} href="/#/javaBible" rel="Link Biblia do Java" onClick={() => setNavBarEmColumn(true)}>Bíblia do Java {window.location.href.substring(1).split("/")[4] === 'javaBible' ? "" : <MdFiberNew className="animaIconPisca"/>}</a>        
+        
+        <audio id="audioPlayer" src={rickAndMortyMainIntro}></audio>
+        <div className="audioPlayer--container --audioPlayer--container --navBar -minWidthMaxContent">
+            <div className="audioPlayer--controls">
+                <i className="audioPlayer-control--skipPrevious"><IoPlaySkipBackCircle/></i>
+                <i className="audioPlayer-control--play"><IoPlayCircle/></i>
+                <i className="audioPlayer-control--pause isActiv"><IoPauseCircle/></i>
+                <i className="audioPlayer-control--skipNext"><IoPlaySkipForwardCircle/></i>
+            </div>
+            <div className="audioPlayer-progressBar--duration">
+                <div className="audioPlayer-progressBar--fillBar">
+                    <progress value="0" max="1"></progress>
                 </div>
-            </nav>
-            <button id="btn-hamburguer" className="nav-btn"><FaBars onClick={showNavbar}/>{window.location.href.substring(1).split("/")[4] === 'javaBible' ? "" : <MdNotificationImportant className="animaIconPisca--alert" onClick={showNavbar}/>}
+            </div>
+        </div>
+    </nav>
+    <button id="btn-hamburguer" className="nav-btn"><FaBars onClick={showNavbar}/>{window.location.href.substring(1).split("/")[4] === 'javaBible' ? "" : <MdNotificationImportant className="animaIconPisca--alert" onClick={showNavbar}/>}
 
-                <div className="audioPlayer--container --btnHamburguerResponsive">
-                    <div className="audioPlayer--controls">
-                        <i className="audioPlayer-control--skipPrevious"><IoPlaySkipBackCircle/></i>
-                        <i className="audioPlayer-control--play"><IoPlayCircle/></i>
-                        <i className="audioPlayer-control--pause isActiv"><IoPauseCircle/></i>
-                        <i className="audioPlayer-control--skipNext"><IoPlaySkipForwardCircle/></i>
-                    </div>
-                    <div className="audioPlayer-progressBar--duration">
-                        <div className="audioPlayer-progressBar--fillBar">
-                            <progress value="0" max="1"></progress>
-                        </div>
-                    </div>
+        <div className="audioPlayer--container --btnHamburguerResponsive">
+            <div className="audioPlayer--controls">
+                <i className="audioPlayer-control--skipPrevious"><IoPlaySkipBackCircle/></i>
+                <i className="audioPlayer-control--play"><IoPlayCircle/></i>
+                <i className="audioPlayer-control--pause isActiv"><IoPauseCircle/></i>
+                <i className="audioPlayer-control--skipNext"><IoPlaySkipForwardCircle/></i>
+            </div>
+            <div className="audioPlayer-progressBar--duration">
+                <div className="audioPlayer-progressBar--fillBar">
+                    <progress value="0" max="1"></progress>
                 </div>
+            </div>
+        </div>
 
-            </button>
-        </>
+    </button>
+</>
     )
 };
