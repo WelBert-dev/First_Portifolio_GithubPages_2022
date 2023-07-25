@@ -54,6 +54,9 @@ export default function CurriculumVitaeScreen() {
                                              <p>Java (Atualmente)</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Ecossistema Spring</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
                                              <p>C#</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="1">
