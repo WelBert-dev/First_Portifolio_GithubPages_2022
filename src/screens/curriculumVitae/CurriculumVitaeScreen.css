@@ -273,12 +273,13 @@ font-style: italic;
 margin-top: 3px;
 }
 .template__section__experience .template__section__endDate::before, .template__section__education .template__section__endDate::before {
-content: " - ";
+content: " Até ";
+font-size: .8rem;
 }
 .template__professional .template__section__right {
 width: calc(100% - 172px);
 padding-left: 16px;
-margin: -5.5px 0 5.5px;
+margin-top: -10px;
 }
 
 .color--blue.template__newyork .template__section__degree, .color--blue.template__newyork .template__section__position {
@@ -387,9 +388,28 @@ padding: .5rem 1rem 0 1rem;
 }
 
 .template__section.template__section__education.template__section--twoColumns.-superiorADS {
-    border-bottom: 1px solid #fff;
     padding-right: 2rem;
 }
+
+.template__section__right .template__section__description:last-child {
+    margin-bottom: .5rem;
+}
+
+section#education > div.template__section__container > div.template__section.template__section__education.template__section--twoColumns > .template__section__right {
+    border-bottom: 1px solid #fff;
+}
+
+.template__section.template__section__education.template__section--twoColumns.--lastOfsuperiorADS {
+    border-bottom: 1px solid #fff;
+}
+
+section.diferenceBeetweenGradeAndMatrizCurricular {
+    text-align: justify;
+}
+
+section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__description.--question {
+    color: #fff !important;
+} 
 
 @media (max-width: 810px)
 {
@@ -443,9 +463,9 @@ padding: .5rem 1rem 0 1rem;
         text-align: center;
     }
 
-    .template__professional .template__section__right {
+    /* .template__professional .template__section__right {
         margin: 0;
-    }
+    } */
 
     .template__section__position::before {
         background-color: white;
@@ -494,6 +514,7 @@ padding: .5rem 1rem 0 1rem;
     .template__professional .template__section__right {
         margin-bottom: 0;
         padding-bottom: .5rem;
+        margin-top: 0px;
     }
 
     #education span.-spanFormacaoAcad--superior::after { /* -spanFormacaoAcad--tecnica */
@@ -510,7 +531,7 @@ padding: .5rem 1rem 0 1rem;
     }
 
     #education .template__section__title.-spanFormacaoAcad--superior::after {
-        content: 'Fev 2023 - Atualmente';
+        content: 'Fev 2023 Até Atualmente';
         position: relative;
         display: block;
         color: #000;
@@ -518,6 +539,54 @@ padding: .5rem 1rem 0 1rem;
         font-size: 12px;
         padding: 0 .5rem;
         text-shadow: none;
+    }
+
+    #education span.-spanFormacaoAcad--superior.--gradeCurricularCurrentLastSemestre::after {
+        content: 'Salto - SP, Brasil';
+        position: relative;
+        display: block;
+        color: #000;
+        line-height: 1rem;
+        font-size: 12px;
+        padding-top: .5rem;
+        border-top: 3px double #000;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    #education .template__section__title.-spanFormacaoAcad--superior.--gradeCurricularCurrentLastSemestre::after {
+        content: 'Ago 2023 Até Dez 2023';
+        position: relative;
+        display: block;
+        color: #000;
+        line-height: .8rem;
+        font-size: 12px;
+        padding: 0 .5rem;
+        text-shadow: none;
+    }
+
+
+    #education span.-spanFormacaoAcad--superior.--gradeCurricular2SemestreEmDiante::after {
+        content: 'Salto - SP, Brasil';
+        position: relative;
+        display: block;
+        color: #000;
+        line-height: 1rem;
+        font-size: 12px;
+        padding-top: 0;
+        border-top: none;
+    }
+
+    #education .template__section__title.-spanFormacaoAcad--superior.--gradeCurricular1Semestre::after {
+        content: 'Fev 2023 Até Jul 2023';
+    }
+
+    #education .template__section__title.-spanFormacaoAcad--superior.--gradeCurricular3Semestre::after {
+        content: 'Fev 2024 Até Jul 2024';
+    }
+
+    #education .template__section__title.-spanFormacaoAcad--superior.--gradeCurricular4Semestre::after {
+        content: 'Ago 2024 Até Dez 2024';
     }
 
     #education span.-spanFormacaoAcad--tecnico::after { /* -spanFormacaoAcad--tecnica */
@@ -534,7 +603,7 @@ padding: .5rem 1rem 0 1rem;
     }
 
     #education .template__section__title.-spanFormacaoAcad--tecnico::after {
-        content: 'Fev 2021 - Dez 2022';
+        content: 'Fev 2021 Até Dez 2022';
         position: relative;
         display: block;
         color: #000;
@@ -543,6 +612,57 @@ padding: .5rem 1rem 0 1rem;
         padding: 0 .5rem;
         text-shadow: none;
     }
+
+    #education span.-spanFormacaoAcad--tecnico.--gradeCurricular4Semestre::after { /* -spanFormacaoAcad--tecnica */
+        content: 'Salto - SP, Brasil';
+        position: relative;
+        display: block;
+        color: #000;
+        line-height: 1rem;
+        font-size: 12px;
+        padding-top: .5rem;
+        border-top: 3px double #000;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    #education .template__section__title.-spanFormacaoAcad--tecnico.--gradeCurricular4Semestre::after {
+        content: 'Jul 2022 Até Dez 2022';
+        position: relative;
+        display: block;
+        color: #000;
+        line-height: .8rem;
+        font-size: 12px;
+        padding: 0 .5rem;
+        text-shadow: none;
+    }
+
+
+    #education span.-spanFormacaoAcad--tecnico.--gradeCurricular3SemestreEmDiante::after { /* -spanFormacaoAcad--tecnica */
+        content: 'Salto - SP, Brasil';
+        position: relative;
+        display: block;
+        color: #000;
+        line-height: 1rem;
+        font-size: 12px;
+        padding-top: 0;
+        border-top: none;
+    }
+
+    #education .template__section__title.-spanFormacaoAcad--tecnico.--gradeCurricular1Semestre::after {
+        content: 'Fev 2021 Até Jun 2021';
+    }
+
+    #education .template__section__title.-spanFormacaoAcad--tecnico.--gradeCurricular2Semestre::after {
+        content: 'Jul 2021 Até Dez 2021';
+    }
+
+    #education .template__section__title.-spanFormacaoAcad--tecnico.--gradeCurricular3Semestre::after {
+        content: 'Fev 2022 Até Jun 2022';
+    }
+    
+
+    
     
     .template__section__title {
         width: max-content;
@@ -569,7 +689,7 @@ padding: .5rem 1rem 0 1rem;
     }
 
     #work-experience .template__section__title::after {
-        content: 'Nov 2018 - Nov 2020';
+        content: 'Nov 2018 Até Nov 2020';
         position: relative;
         display: block;
         color: #000;

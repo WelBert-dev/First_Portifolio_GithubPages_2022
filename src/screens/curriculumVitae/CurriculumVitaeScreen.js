@@ -51,7 +51,7 @@ export default function CurriculumVitaeScreen() {
                                      <div className="template__section__container">
                                          <ul className="padding-1rem">
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Java (Atualmente)</p>
+                                             <p>Java</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
                                              <p>Ecossistema Spring</p>
@@ -121,13 +121,13 @@ export default function CurriculumVitaeScreen() {
                                                 com o objetivo de, após a conclusão do curso, fazer Mestrado e Doutorado. <br/><br/>
 
                                                 Tenho me dedicado atualmente especialmente em Java avançado e o Ecossistema Spring, e possuo 
-                                                fortes conhecimentos em ReactJS e MySQL porém não estou mais focado nessas 
-                                                tecnologias pois por agora pretendo me aprofundar em Back-end com o Java, 
-                                                portanto tenho objetivos futuros de me tornar um desenvolvedor Fullstack 
+                                                fortes conhecimentos em ReactJs e MySQL porém não estou mais focado nessas 
+                                                tecnologias pois por agora pretendo me aprofundar em Backend com o Java, 
+                                                portanto tenho objetivos futuros de me tornar um desenvolvedor Full Stack 
                                                 na programação Web 2.0, com responsividade. <br/><br/>
                                                 
                                                 Também sou entusiasta do Sistema Operacional GNU/Linux, que utilizo em meu dia a dia. 
-                                                Após fazer o curso do Paulo Kretcheu de 36 vídeos, me apaixonei pelas 3 Liberdades GPL 
+                                                Após concluír o curso do Paulo Kretcheu de 36 videoaulas, me apaixonei pelas 3 Liberdades GPL 
                                                 que garantem as liberdades do usuário, o que me permite personalizar e configurar o 
                                                 ambiente sem dificuldades ou problemas, diferente do windows que é uma caixa preta fechada.<br/><br/>
 
@@ -154,16 +154,15 @@ export default function CurriculumVitaeScreen() {
                                              <div className="template__section__right">
                                                  <p className="template__section__position">Almoxarife</p>
                                                  <p className="template__section__company">Clemont Equipamentos e Montagens Industriais LTDA</p>
-                                                 <p className="template__section__description">
-                                                     <div>- Recebimento e despache de materiais relacionados a mecatrônica.</div>
-                                                     <div>- Recebimento e despache de ferramentas para automação.</div>
-                                                     <div>- Armazenamento dos mesmos aqui citados.</div>
-                                                     <div>- Controle de estoque dos itens aqui citados e materiais de consumo.</div>
-                                                     <div>- Controle interno sobre o uso dos itens aqui mencionados, e avaliação de materiais "sobra" para uso em projetos futuros.</div>
-                                                     <div>- Confecção de romaneios contendo os itens que são levados as obras.</div>
-                                                     <div>- Com auxilo de planilha excel.</div>
-                                                     <div>- Dentre outras pequenas atividades (Empresa pequena, acabava fazendo um pouco de tudo).</div>
-                                                 </p>
+                                                 <p className="template__section__description">- Responsável por todas estratégias de logística interna de fábrica.</p>
+                                                 <p className="template__section__description">- Recebimento e despache de materiais relacionados a mecatrônica.</p>
+                                                 <p className="template__section__description">- Recebimento e despache de ferramentas para automação.</p>
+                                                 <p className="template__section__description">- Armazenamento dos mesmos aqui citados.</p>
+                                                 <p className="template__section__description">- Controle de estoque dos itens aqui citados e materiais de consumo.</p>
+                                                 <p className="template__section__description">- Controle interno sobre o uso dos itens aqui mencionados, e avaliação de materiais "sobra" para uso em projetos futuros.</p>
+                                                 <p className="template__section__description">- Confecção de romaneios contendo os itens que são levados as obras.</p>
+                                                 <p className="template__section__description">- Com auxilo de planilha excel.</p>
+                                                 <p className="template__section__description">- Dentre outras pequenas atividades (Empresa pequena, acabava fazendo um pouco de tudo).</p>
                                              </div>
                                          </div>
                                          </div>
@@ -183,9 +182,99 @@ export default function CurriculumVitaeScreen() {
                                                 <div className="template__section__right">
                                                     <p className="template__section__degree">Análise e Desenvolvimento de Sistemas</p>
                                                     <p className="template__section__college">Centro Universitário Nossa Senhora do Patrocínio (CEUNSP)</p>
-                                                    <p className="template__section__description">Curso superior técnólogo ADS especializado em desenvolvimento/programação de sistemas, estive em dúvidas entre esse curso ou o Bacharel em Ciências da Cumputação que é mais genérico e extenso, e foi esse critério que me fez optar pelo superior tecnólogo pois é mais especifico e próximo do meu contexto, devido ao meu nível de instrução genérico que já obtive no curso técnico.. Além disto também é mais rápido para concluir e alcansar meu objetivo de um dia me tornar Doutor em Tecnologia!</p>
+                                                    <p className="template__section__description">Curso superior técnólogo ADS especializado em desenvolvimento e programação de sistemas computacionais, estive em dúvidas entre este curso ou o Bacharel em Ciências da Cumputação que é mais genérico e extenso, e foi esse critério que me fez optar pelo superior tecnólogo ADS pois é mais específico e próximo do meu contexto, devido ao meu nível de instrução genérico que já obtive no curso técnico em Informática do IFSP.. Além disto também é mais rápido para concluir e alcansar meu objetivo de um dia me tornar Doutor em Tecnologia!</p>
                                                 </div>
                                             </div>
+                                            <br/>
+                                            <p className="template__section__title -mainBody -spanFormacaoAcad--superior --gradeCurricularCurrentLastSemestre"><span className="-spanFormacaoAcad--superior --gradeCurricularCurrentLastSemestre">Matriz Curricular</span></p>
+                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
+                                                <div className="template__section__left">
+                                                    <p className="template__section__location">Salto - SP, Brasil </p>
+                                                    <div className="template__section__date">
+                                                        <p className="template__section__startDate">Ago 2023</p>
+                                                        <p className="template__section__endDate">Dez 2023</p>
+                                                    </div>
+    
+                                                </div>
+                                                <div className="template__section__right">
+                                                <p className="template__section__degree">2º Semestre (Atual em andamento)</p>
+                                                    <p className="template__section__college">Disciplinas:</p>
+                                                    <p className="template__section__description">- Engenharia de Software.</p>
+                                                    <p className="template__section__description">- Itinerário Extensionista I .</p>
+                                                    <p className="template__section__description">- Programação Web.</p>
+                                                    <p className="template__section__description">- Sistemas Operacionais.</p>
+                                                    <p className="template__section__description">- Técnicas e Desenvolvimento de Algoritmo.</p>
+                                                    <p className="template__section__description">- Organização e Arquitetura de Computadores.</p>
+                                                    <p className="template__section__description">- Planejamento de Produção ("Opcional" que na verdade é obrigatória a realização, porém é uma das opções disponíveis (Porisso "Opcional"), todas as opções são fora do contexto de T.I de propósito pois é regras do MEC para introdução em contextos sociais diferentes, pelomenos foi o que falaram para nós.. rsrs). Obs: Essas disciplinas "Opcionais" que na verdade são apenas opcionais na escolha porém obrigatórias na realização não estão relacionadas aos "Temas Transversais".</p>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <p className="template__section__title -mainBody -spanFormacaoAcad--superior --gradeCurricular1Semestre"><span className="-spanFormacaoAcad--superior --gradeCurricular2SemestreEmDiante"></span></p>
+                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns --lastOfsuperiorADS">
+                                                <div className="template__section__left">
+                                                    <p className="template__section__location">Salto - SP, Brasil </p>
+                                                    <div className="template__section__date">
+                                                        <p className="template__section__startDate">Fev 2023</p>
+                                                        <p className="template__section__endDate">Jul 2023</p>
+                                                    </div>
+    
+                                                </div>
+                                                <div className="template__section__right">
+
+                                                    <p className="template__section__degree">1º Semestre</p>
+                                                    <p className="template__section__college">Disciplinas:</p>
+                                                    <p className="template__section__description">- Matemática Aplicada (EAD - Não Obrigatória).</p>
+                                                    <p className="template__section__description">- Português Aplicado (EAD - Não Obrigatória).</p>
+                                                    <p className="template__section__description">- Sociedade, Identidades e Territórios (EAD - Obrigatória).</p>
+                                                    <p className="template__section__description">- Gestão Estratégica de Negócios (EAD - Obrigatória).</p>
+                                                    <p className="template__section__description">- Empreendedorismo (EAD - Obrigatória).</p>
+                                                    <p className="template__section__description">- Organização e Arquitetura de Computadores.</p>
+                                                    <p className="template__section__description">- Aplicações para Internet.</p>
+                                                    <p className="template__section__description">- Modelagem de Negócios e Requisitos.</p>
+                                                    <p className="template__section__description">- Programação de Computadores.</p>
+                                                </div>
+                                            </div>
+                                            {/* <br/>
+                                            <p className="template__section__title -mainBody -spanFormacaoAcad--superior --gradeCurricular3Semestre"><span className="-spanFormacaoAcad--superior --gradeCurricular2SemestreEmDiante"></span></p>
+                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
+                                                <div className="template__section__left">
+                                                    <p className="template__section__location">Salto - SP, Brasil </p>
+                                                    <div className="template__section__date">
+                                                        <p className="template__section__startDate">Fev 2024</p>
+                                                        <p className="template__section__endDate">Jul 2024</p>
+                                                    </div>
+    
+                                                </div>
+                                                <div className="template__section__right">
+                                                    <p className="template__section__degree">3º Semestre (Período)</p>
+                                                    <p className="template__section__college">Disciplinas:</p>
+                                                    <p className="template__section__description">- Optativa IV.</p>
+                                                    <p className="template__section__description">- Jogos para Internet (EAD).</p>
+                                                    <p className="template__section__description">- Análise e Projeto de Sistemas II.</p>
+                                                    <p className="template__section__description">- Computação Paralela e Distribuída (EAD - Obrigatória).</p>
+                                                    <p className="template__section__description">- Big Data (EAD).</p>
+                                                    <p className="template__section__description">- Programação para Dispositivos Móveis.</p>
+                                                    <p className="template__section__description">- Itinerário Extensionista II.</p>
+                                                    <p className="template__section__description">- Redes de Computadores.</p>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <p className="template__section__title -mainBody -spanFormacaoAcad--superior --gradeCurricular4Semestre"><span className="-spanFormacaoAcad--superior --gradeCurricular2SemestreEmDiante"></span></p>
+                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns --lastOfsuperiorADS">
+                                                <div className="template__section__left">
+                                                    <p className="template__section__location">Salto - SP, Brasil </p>
+                                                    <div className="template__section__date">
+                                                        <p className="template__section__startDate">Ago 2024</p>
+                                                        <p className="template__section__endDate">Dez 2024</p>
+                                                    </div>
+    
+                                                </div>
+                                                <div className="template__section__right">
+                                                    <p className="template__section__degree">4º Semestre (Período)</p>
+                                                    <p className="template__section__college">Disciplinas:</p>
+                                                    <p className="template__section__description">- Aplicações para Internet.</p>
+                                                </div>
+                                            </div> */}
                                             <br/>
                                             <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico"><span className="-spanFormacaoAcad--tecnico">Formação Técnica</span></p>
                                             <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
@@ -200,10 +289,97 @@ export default function CurriculumVitaeScreen() {
                                                 <div className="template__section__right">
                                                     <p className="template__section__degree">Técnico em Informática</p>
                                                     <p className="template__section__college">Instituto Federal de Educação Ciências e Tecnologias de São Paulo (IFSP)</p>
-                                                    <p className="template__section__description">Curso voltado para programação e desenvolvimento web, sendo no primeiro ano voltado na stack backend e no segundo ano voltado nas tecnologias frontend, desde a parte de levantamento de requisitos (história de usuário), análise (modelagem caso de uso), Prototipação (baixa, média e alta fidelidade), Projeto (tecnologias), até a parte de desenvolvimento em sí, fora os estudos pessoais e também participo das ações da instituição, para agregar ainda mais conhecimento/valor.</p>
+                                                    <p className="template__section__description">Curso genérico pois além dos Fundamentos Computacionais, também foi abordado Segurança da Informação, Criptografias e Algoritmos de Hashing, Infraestrutura de redes e também seus protocolos, Sistemas Operacionais e como eles lídam em baixo nível, além disto também é estudado todo o ciclo de vida de uma aplicação computacional (Mais especificamente Web), sendo no primeiro ano focado na stack Backend e no segundo ano voltado nas tecnologias Frontend, desde a parte de levantamento de requisitos (História de usuário), análise (Modelagem Caso de Uso), prototipação (Baixa, Média e Alta Fidelidade), projeto (Tecnologias), até a parte de desenvolvimento em sí, fora os estudos pessoais e também participei das ações da Instituição, para agregar ainda mais conhecimento e valor (Mais detalhes e informações na página "Certificados").</p>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular4Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular4Semestre">Grade Curricular</span></p>
+                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
+                                                <div className="template__section__left">
+                                                    <p className="template__section__location">Salto - SP, Brasil </p>
+                                                    <div className="template__section__date">
+                                                        <p className="template__section__startDate">Jul 2022</p>
+                                                        <p className="template__section__endDate">Dez 2022</p>
+                                                    </div>
+                                                </div>
+                                                <div className="template__section__right">
+                                                    <p className="template__section__degree">4º Semestre</p>
+                                                    <p className="template__section__college">Disciplinas:</p>
+                                                    <p className="template__section__description">- Gerenciamento e Segurança de Dados.</p>
+                                                    <p className="template__section__description">- Implantação de Sistemas Operacionais.</p>
+                                                    <p className="template__section__description">- Linguagem e Técnica de Programação III.</p>
+                                                    <p className="template__section__description">- Projeto de Capacitação Profissional.</p>
+                                                    <p className="template__section__description">- Projeto de Sistemas II.</p>
+                                                    <p className="template__section__description">- Projeto de Redes de Computadores.</p>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular3Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular3SemestreEmDiante"></span></p>
+                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
+                                                <div className="template__section__left">
+                                                    <p className="template__section__location">Salto - SP, Brasil </p>
+                                                    <div className="template__section__date">
+                                                        <p className="template__section__startDate">Fev 2022</p>
+                                                        <p className="template__section__endDate">Jun 2022</p>
+                                                    </div>
+                                                </div>
+                                                <div className="template__section__right">
+                                                    <p className="template__section__degree">3º Semestre</p>
+                                                    <p className="template__section__college">Disciplinas:</p>
+                                                    <p className="template__section__description">- Análise e Modelagem de Sistemas II.</p>
+                                                    <p className="template__section__description">- Banco de Dados II.</p>
+                                                    <p className="template__section__description">- Linguagem e Técnica de Programação II.</p>
+                                                    <p className="template__section__description">- Projeto de Sistemas I.</p>
+                                                    <p className="template__section__description">- Redes de Computadores II.</p>
+                                                    <p className="template__section__description">- Sistemas Operacionais II.</p>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular2Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular3SemestreEmDiante"></span></p>
+                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
+                                                <div className="template__section__left">
+                                                    <p className="template__section__location">Salto - SP, Brasil </p>
+                                                    <div className="template__section__date">
+                                                        <p className="template__section__startDate">Jul 2021</p>
+                                                        <p className="template__section__endDate">Dez 2021</p>
+                                                    </div>
+                                                </div>
+                                                <div className="template__section__right">
+                                                    <p className="template__section__degree">2º Semestre</p>
+                                                    <p className="template__section__college">Disciplinas:</p>
+                                                    <p className="template__section__description">- Análise e Modelagem de Sistemas I.</p>
+                                                    <p className="template__section__description">- Banco de Dados I.</p>
+                                                    <p className="template__section__description">- Inglês Instrumental II.</p>
+                                                    <p className="template__section__description">- Linguagem e Técnica de Programação I.</p>
+                                                    <p className="template__section__description">- Redes de Computadores I.</p>
+                                                    <p className="template__section__description">- Sistemas Operacionais I.</p>
+                                                </div>
+                                            </div>
+                                            <br/>
+                                            <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular1Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular3SemestreEmDiante"></span></p>
+                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
+                                                <div className="template__section__left">
+                                                    <p className="template__section__location">Salto - SP, Brasil </p>
+                                                    <div className="template__section__date">
+                                                        <p className="template__section__startDate">Fev 2021</p>
+                                                        <p className="template__section__endDate">Jun 2021</p>
+                                                    </div>
+                                                </div>
+                                                <div className="template__section__right">
+                                                    <p className="template__section__degree">1º Semestre</p>
+                                                    <p className="template__section__college">Disciplinas:</p>
+                                                    <p className="template__section__description">- Administração e Empreendedorismo.</p>
+                                                    <p className="template__section__description">- Algortimos e Programação.</p>
+                                                    <p className="template__section__description">- Hardware.</p>
+                                                    <p className="template__section__description">- Inglês Instrumental I.</p>
+                                                    <p className="template__section__description">- Introdução a Informática.</p>
                                                 </div>
                                             </div>
                                          </div>
+                                     </section>
+                                     <section className="diferenceBeetweenGradeAndMatrizCurricular">
+                                        <p  className="template__section__description --question">Qual a diferença entre "Grade" e "Matriz" Curricular?</p>
+                                        <p  className="template__section__description">"Grade" é algo mais concreto, ou seja, como se trata de um curso já concluído podemos afirmar 100% de certeza que essas foram as disciplinas ofertadas e realizadas. Já "Matriz" serve como um "Norte", ou seja, como se trata de um curso em andamento não podemos afirmar 100% de certeza quais seram as disciplinas concretas no final, então temos que essas são as possíveis disciplinas ofertadas e que talvez seram realizadas (Não sabemos ainda com toda certeza quais seram optadas e demandadas ao concluir).</p>
                                      </section>
                                  </div>
                              </td>
