@@ -39,11 +39,6 @@ tr .template__professional__column, .template__newyork__main.template__professio
     text-align: justify;
 }
 
-.template__section.template__section__experience.template__section--border.template__section--twoColumns, .template__section__simple--border > .template__section__container
-{
-    padding-right: 2rem;
-}
-
 .template__header__info > p:nth-child(1){
     color: #f00;
 }
@@ -160,7 +155,6 @@ justify-content: space-between;
 }
 .template__professional .template__header, .template__professional .template__section__experience:last-child, .template__professional .template__section__education:last-child, .template__professional .template__section__custom:not(:last-child) {
 border-bottom: 1px solid white;
-padding-right: 2rem;
 }
 
 .template__professional .template__header {
@@ -201,6 +195,7 @@ line-height: 20px;
 font-size: 15.5px;
 color: var(--main-textColor);
 font-weight: 400;
+padding-right: .5rem;
 }
 .template__newyork__main .template__header .template__section__simple {
 padding-left: 0;
@@ -299,6 +294,7 @@ line-height: 20px;
 font-size: 15.5px;
 color: var(--main-textColor);
 font-weight: 400;
+padding-right: .5rem;
 }
 
 .template__section__description {
@@ -387,10 +383,6 @@ box-shadow: rgb(217, 221, 224) 0px 0px 34px 0px;
 padding: .5rem 1rem 0 1rem;
 }
 
-.template__section.template__section__education.template__section--twoColumns.-superiorADS {
-    padding-right: 2rem;
-}
-
 .template__section__right .template__section__description:last-child {
     margin-bottom: .5rem;
 }
@@ -419,16 +411,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
     .tableCurriculoVitae {
         padding: .5rem .5rem 0 .5rem;
     }
-
-    .template__professional .template__header, .template__professional .template__section__experience:last-child, .template__professional .template__section__education:last-child, .template__professional .template__section__custom:not(:last-child) {
-        padding-right: .5rem;
-    }
-
-    .template__section.template__section__education.template__section--twoColumns.-superiorADS {
-        padding-right: 1rem;
-    }
     
-
     .template__header.template__header--twoColumns, #education .template__section__right .template__section__descriptio {
         padding-left: .5rem;
     }
@@ -702,6 +685,10 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
     .template__section__title.-mainBody > span {
         color: #000 !important;
         text-shadow: none;
+    }
+
+    section.diferenceBeetweenGradeAndMatrizCurricular {
+        padding-left: .5rem;
     }
 }
 

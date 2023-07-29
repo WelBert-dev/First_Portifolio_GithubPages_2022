@@ -78,15 +78,8 @@ import phineasEFerbMainIntro from '../../resources/audios/Phineas e Ferb - Abert
 import horaDeAventuraMainIntro from '../../resources/audios/Abertura Hora de Aventura ( Português ).mp3';
 import baraberaCrazyFrogAxelF from '../../resources/audios/Crazy Frog - Axel F (Official Video) (128 kbps).mp3';
 import maskaraMainIntro from '../../resources/audios/Abertura O Maskara.mp3';
-import os7MonstrinhosMainIntro from '../../resources/audios/Os Sete Monstrinhos - Abertura (TV Cultura).mp3';
-import euVoceEZoobomafu from '../../resources/audios/Zoboomafoo Abertura HD (60 FPS) (128 kbps).mp3';
-import sitioDoPicaPauAmareloMainIntro from '../../resources/audios/Gilberto Gil -  Sítio Do Picapau Amarelo.mp3';
 import cocoricoMainIntroAndEnd from '../../resources/audios/Cocoricó - Abertura e Encerramento.mp3';
 import palavraCantadaRato from '../../resources/audios/Palavra Cantada _ Rato.mp3';
-import ginasticaDaMaquina from '../../resources/audios/Ginástica da máquina - pitagoras.mp3';
-import cateloRaTimBumRatoBanhoEhBom from '../../resources/audios/Castelo Rá Tim Bum  Ratinho - Meu pé meu querido pé.mp3';
-import umMeninoMaluquinhoMainIntro from '../../resources/audios/Abertura Um Menino Muito Maluquinho.mp3';
-import txutxuCaoFunk from '../../resources/audios/Txutxucão funk.mp3';
 
 
 import { IoPlayCircle } from 'react-icons/io5';
@@ -277,23 +270,17 @@ export default function MainNavbar() {
         {title:"Player Tauz - Rap do Sanji (One Piece) - Tauz RapTributo 37", src:`${tauz_RapDoSanji}`, totalDurationInSeconds: 314.67102},
         {title:"Player Tauz - Rap do Levi (Attack on Titan) - Tauz RapTributo 56", src:`${tauz_RapDoLevi}`, totalDurationInSeconds: 226.35102},
         {title:"Player Tauz - Rap do Alucard (Hellsing) - Tauz RapTributo 64", src:`${tauz_RapDoAlucard}`, totalDurationInSeconds: 197.250612},
-        {title:"Player Tauz - Rap do Hisoka (Hunter x Hunter) - Tauz RapTributo 69", src:`${tauz_RapDoHisoka}`, totalDurationInSeconds: 231.967347},
-        {title:"Ray Parker Jr. - Ghostbusters (Official Video)", src:`${ghostBustersMainIntro}`, totalDurationInSeconds: 244.897959},
-        {title:"Um maluco no pedaço - Abertura", src:`${umMalucoNoPedacoMainIntro}`, totalDurationInSeconds: 110.471875},
-        {title:"Castelo Rá Tim Bum - Abertura", src:`${casteloRaTimBumMainIntro}`, totalDurationInSeconds: 54.151837},
-        {title:"Phineas e Ferb - Abertura PT-BR (Clássica)", src:`${phineasEFerbMainIntro}`, totalDurationInSeconds: 56.894694},
-        {title:"Hora de Aventura - Abertura PT-BR", src:`${horaDeAventuraMainIntro}`, totalDurationInSeconds: 24.711837},
-        {title:"Crazy Frog - Axel F (Official Video)", src:`${baraberaCrazyFrogAxelF}`, totalDurationInSeconds: 172.544688},
-        {title:"O Maskara - Abertura PT-BR", src:`${maskaraMainIntro}`, totalDurationInSeconds: 58.357551},
-        {title:"Os Sete Monstrinhos - Abertura (TV Cultura)", src:`${os7MonstrinhosMainIntro}`, totalDurationInSeconds: 60.577959},
-        {title:"Zoboomafoo - Abertura PT-BR (Clássica)", src:`${euVoceEZoobomafu}`, totalDurationInSeconds: 60.865375},
-        {title:"Gilberto Gil -  Sítio Do Picapau Amarelo (Abertura Clássica)", src:`${sitioDoPicaPauAmareloMainIntro}`, totalDurationInSeconds: 193.645714},
-        {title:"Cocoricó - Abertura e Encerramento", src:`${cocoricoMainIntroAndEnd}`, totalDurationInSeconds: 62.693878},
-        {title:"Palavra Cantada - Rato (Clássico da TV Cultura)", src:`${palavraCantadaRato}`, totalDurationInSeconds: 335.15102},
-        {title:"Ginástica da máquina - pitagoras (Clássico da TV Cultura)", src:`${ginasticaDaMaquina}`, totalDurationInSeconds: 63.216327},
-        {title:"Castelo Rá Tim Bum - Ratinho - Meu pé meu querido pé", src:`${cateloRaTimBumRatoBanhoEhBom}`, totalDurationInSeconds: 94.693878},
-        {title:"Um Menino Muito Maluquinho - Abertura PT-BR", src:`${umMeninoMaluquinhoMainIntro}`, totalDurationInSeconds: 51.069388},
-        {title:"Txutxucão funk (Clássico)", src:`${txutxuCaoFunk}`, totalDurationInSeconds: 64.496327},
+        {title:"Player Tauz - Rap do Hisoka (Hunter x Hunter) - Tauz RapTributo 69", src:`${tauz_RapDoHisoka}`, totalDurationInSeconds: 231.967347}
+        // {title:"Ray Parker Jr. - Ghostbusters (Official Video)", src:`${ghostBustersMainIntro}`, totalDurationInSeconds: 244.897959},
+        // {title:"Um maluco no pedaço - Abertura", src:`${umMalucoNoPedacoMainIntro}`, totalDurationInSeconds: 110.471875},
+        // {title:"Castelo Rá Tim Bum - Abertura", src:`${casteloRaTimBumMainIntro}`, totalDurationInSeconds: 54.151837},
+        // {title:"Phineas e Ferb - Abertura PT-BR (Clássica)", src:`${phineasEFerbMainIntro}`, totalDurationInSeconds: 56.894694},
+        // {title:"Hora de Aventura - Abertura PT-BR", src:`${horaDeAventuraMainIntro}`, totalDurationInSeconds: 24.711837},
+        // {title:"Crazy Frog - Axel F (Official Video)", src:`${baraberaCrazyFrogAxelF}`, totalDurationInSeconds: 172.544688},
+        // {title:"O Maskara - Abertura PT-BR", src:`${maskaraMainIntro}`, totalDurationInSeconds: 58.357551},
+        // {title:"Cocoricó - Abertura e Encerramento", src:`${cocoricoMainIntroAndEnd}`, totalDurationInSeconds: 62.693878},
+        // {title:"Palavra Cantada - Rato (Clássico da TV Cultura)", src:`${palavraCantadaRato}`, totalDurationInSeconds: 335.15102}
+
     ]);
 
 
@@ -320,6 +307,13 @@ export default function MainNavbar() {
     useEffect(()=>{
 
         const player = document.querySelector("#audioPlayer");
+
+        // LIMPA O CACHE POIS EU REMOVI ALGUMAS MUSICAS SE NÃO BUGA PRA QUEM NÃO LIMPAR!!
+        if(Number(getLocalStorage_stateOfMusic().indexOfMusic) >= listOfMusics.length) {
+            setLocalStorage_stateOfMusic({indexOfMusic: 0, stateOfTime: Number(0)});
+            setLocalStorage_indexOfCurrentMusic(0);
+            alert("Ocorreram mudanças na playlist e foi detectado que já hávia um estado anterior salvo, porém a musica foi removida! então a playlist voltou ao início, grato e aproveite a navegação! ^^");
+        }
 
         // Plural pois existem dois containers com as mesmas tags em lugares diferentes, porém os dois devem estarem linear
         // ou seja, o estado dos dois devem ser os mesmos, pois a musica em execução é a mesma, só muda a disposição do layout
@@ -422,25 +416,28 @@ export default function MainNavbar() {
          // O Player é único para os dois containers que contém os controles play, pause, next, previous e progress bar
          // em lugares diferentes de acordo com a responsividade.
 
+
+
+         // Musica chegou no final, altera para a próxima
+         player.addEventListener("ended", () => {
+
+            setLocalStorage_indexOfCurrentMusic(Number(getLocalStorage_indexOfCurrentMusic())+1);
+            validateIndexOfMusic(Number(getLocalStorage_indexOfCurrentMusic()));
+            var newMusic = listOfMusics[Number(getLocalStorage_indexOfCurrentMusic())];
+            player.setAttribute("src", newMusic.src);
+            player.play();
+
+            // coloca no titulo o nome da musica:
+            player.addEventListener("loadeddata", () => {
+                document.title = newMusic.title;
+            });
+
+         });
+
         player.addEventListener("timeupdate", () => {
             if ((player.currentTime / player.duration) !== NaN && (player.currentTime / player.duration) > 0) {
                 playerProgressBarsElements[0].value = (player.currentTime / player.duration);
                 playerProgressBarsElements[1].value = (player.currentTime / player.duration);
-
-                // Musica chegou no final, altera para a próxima
-                if (player.currentTime == player.duration) {
-                    
-                    setLocalStorage_indexOfCurrentMusic(Number(getLocalStorage_indexOfCurrentMusic())+1);
-                    validateIndexOfMusic(Number(getLocalStorage_indexOfCurrentMusic()));
-                    var newMusic = listOfMusics[Number(getLocalStorage_indexOfCurrentMusic())];
-                    player.setAttribute("src", newMusic.src);
-                    player.play();
-
-                    // coloca no titulo o nome da musica:
-                    player.addEventListener("loadeddata", () => {
-                        document.title = newMusic.title;
-                    });
-                }
             }
         });
 
