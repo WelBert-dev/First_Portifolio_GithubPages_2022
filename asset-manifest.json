@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.dd92977f.css",
-    "main.js": "/static/js/main.abf7d90a.js",
+    "main.js": "/static/js/main.d7b17862.js",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
     "static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.mp3": "/static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.06f832336e73e946e7a0.mp3",
@@ -68,22 +68,15 @@
     "static/media/Rap do Killua (Hunter x Hunter) _ Tauz RapTributo 47.mp3": "/static/media/Rap do Killua (Hunter x Hunter) _ Tauz RapTributo 47.25f34eb58066b2d7f70d.mp3",
     "static/media/Rap do Alucard (Hellsing) _ Tauz RapTributo 64.mp3": "/static/media/Rap do Alucard (Hellsing) _ Tauz RapTributo 64.802507a209288bb7c479.mp3",
     "static/media/Death Note - Opening [4K] (320 kbps).mp3": "/static/media/Death Note - Opening [4K] (320 kbps).77f92c1e31d4d09bae7f.mp3",
-    "static/media/Gilberto Gil -  Sítio Do Picapau Amarelo.mp3": "/static/media/Gilberto Gil -  Sítio Do Picapau Amarelo.95c1dc4f3fbd5023c55e.mp3",
     "static/media/Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 _ NERD HITS.mp3": "/static/media/Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 _ NERD HITS.50b4ecc8f96a34bde69c.mp3",
     "static/media/Crazy Frog - Axel F (Official Video) (128 kbps).mp3": "/static/media/Crazy Frog - Axel F (Official Video) (128 kbps).2bfa332c767adc0a572b.mp3",
     "static/media/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).mp3": "/static/media/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).55c3b6f9038c0165e51c.mp3",
-    "static/media/Castelo Rá Tim Bum  Ratinho - Meu pé meu querido pé.mp3": "/static/media/Castelo Rá Tim Bum  Ratinho - Meu pé meu querido pé.c1b6c22b13d2404dff73.mp3",
-    "static/media/Os Sete Monstrinhos - Abertura (TV Cultura).mp3": "/static/media/Os Sete Monstrinhos - Abertura (TV Cultura).c660da2d25c3addebf3a.mp3",
     "static/media/relatorioNodeRed2021-parte04.png": "/static/media/relatorioNodeRed2021-parte04.c732c0b49e41f666f35f.png",
     "static/media/Rick And Morty Intro (320 kbps).mp3": "/static/media/Rick And Morty Intro (320 kbps).b48eba8762a2ecf1ce4f.mp3",
-    "static/media/Txutxucão funk.mp3": "/static/media/Txutxucão funk.761c6757bb72899e7471.mp3",
     "static/media/Cocoricó - Abertura e Encerramento.mp3": "/static/media/Cocoricó - Abertura e Encerramento.10bcf50a479eec9b3209.mp3",
-    "static/media/Ginástica da máquina - pitagoras.mp3": "/static/media/Ginástica da máquina - pitagoras.b8712457c71f5d5a6451.mp3",
     "static/media/Abertura do Castelo Rá Tim Bum.mp3": "/static/media/Abertura do Castelo Rá Tim Bum.d76003c7aeba5f927593.mp3",
     "static/media/Abertura O Maskara.mp3": "/static/media/Abertura O Maskara.41759938935cf59eea88.mp3",
     "static/media/Phineas e Ferb - Abertura PT-BR em HD (Clássica).mp3": "/static/media/Phineas e Ferb - Abertura PT-BR em HD (Clássica).eaf4778483fa94103af0.mp3",
-    "static/media/Zoboomafoo Abertura HD (60 FPS) (128 kbps).mp3": "/static/media/Zoboomafoo Abertura HD (60 FPS) (128 kbps).3cb282028a451948794d.mp3",
-    "static/media/Abertura Um Menino Muito Maluquinho.mp3": "/static/media/Abertura Um Menino Muito Maluquinho.27ad5aece2475d88e724.mp3",
     "static/media/restauranteIfspAmostra.png": "/static/media/restauranteIfspAmostra.03eae3aa8e7b8b0e62ac.png",
     "static/media/bolsaDeValores-ifciencia2021-29-10-2021.png": "/static/media/bolsaDeValores-ifciencia2021-29-10-2021.35091864f636a476f1c4.png",
     "static/media/nodeRed-IoT-ifciencia2021-28-10-2021.png": "/static/media/nodeRed-IoT-ifciencia2021-28-10-2021.b0eaaa93ca59ada1d76b.png",
@@ -121,10 +114,10 @@
     "index.html": "/index.html",
     "static/media/portariaNormativaCeic-parte02.png": "/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
     "main.dd92977f.css.map": "/static/css/main.dd92977f.css.map",
-    "main.abf7d90a.js.map": "/static/js/main.abf7d90a.js.map"
+    "main.d7b17862.js.map": "/static/js/main.d7b17862.js.map"
   },
   "entrypoints": [
     "static/css/main.dd92977f.css",
-    "static/js/main.abf7d90a.js"
+    "static/js/main.d7b17862.js"
   ]
 }
