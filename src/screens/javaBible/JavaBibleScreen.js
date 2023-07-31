@@ -39,7 +39,7 @@ export default function JavaBibleScreen() {
                                     <ul className="projects-frontend--container">
 
                                         <li>Criei esse projeto no github durante meus estudos para servir como um "Dicionário" de consultas.</li>
-                                        <li>Agora estou transferindo essas informações do github neste Portifólio como uma espécie de "Bíblia".</li>
+                                        <li>Agora estou transferindo essas informações do github neste Portfólio como uma espécie de "Bíblia".</li>
                                         <li>A ideia é sempre ir atualizando o conhecimento aqui, e também irei implementar barra de pesquisa por palavras chaves.</li>
                                         <li>Depois de finalizado todos os Módulos (Com exemplos de códigos) irei "esconder" as seções e só será exibido ao clicar no botão.</li>
                                         <li>Curso mais completo do Youtube sobre desenvolvimento com Java do canal @DevDojoBrasil.</li>
@@ -54,7 +54,7 @@ export default function JavaBibleScreen() {
                                         <li>Para cada Módulo um pacote separado em <code className="token_reservada">`src`</code>, e em <code className="token_reservada">`/anotacoes`</code> um arquivo txt com o Overview geral sobre.</li>
                                         <li>Devido a complexidade, aqui contém resumos e exemplos de códigos para cada tópico abordado em cada Módulo.</li>
                                         <li>Links amarelos para mais informações sobre cada tópico redirecionam para o repositório git (Lá está mais completo).</li>
-                                        <li>Na época em que eu comecei esse curso do <code className="token_reservada">@DevDojoBrasil</code> ainda não existia a interface web para a I.A GPT-3 (ChatGPT) apesar de a comunidade Dev já utilizar ele a bastante tempo antes do Hype deste ano, eu não utilizava, portanto para esses Módulos iniciais (OverView geral sobre POO, Errors, Exceptions, e RuntimeExceptions, Wrappers dos Tipos Primitivos, Strings) não existe informações complementares faltantes das vídeos aulas adicionado utilizando o ChatGPT iguais aos próximos.</li>
+                                        <li>Na época em que eu comecei esse curso do <code className="token_reservada">@DevDojoBrasil</code> ainda não existia a interface Web para a I.A GPT-3 (ChatGPT) apesar de a comunidade Dev já utilizar ele a bastante tempo antes do Hype deste ano, eu não utilizava, portanto para esses Módulos iniciais (OverView geral sobre POO, Errors, Exceptions, e RuntimeExceptions, Wrappers dos Tipos Primitivos, Strings) não existe informações complementares faltantes das vídeos aulas adicionado utilizando o ChatGPT iguais aos próximos.</li>
                                         <li>Também não existem pacotes em <code className="token_reservada">`src`</code> de estudos práticos para eles no repositório git do projeto devido ao meu nível de instrução técnica adquirido no IFSP, porisso para eles só existe o arquivo txt com o OverView geral em <code className="token_reservada">`/anotacoes`</code>.</li>
                                         <li>Portanto, esse projeto só será útil para quem já possuí a base sobre POO pois ele é de nível Intermediário até o Avançado sobre a linguagem.</li>
                                         <br/>
@@ -63,7 +63,7 @@ export default function JavaBibleScreen() {
                                         <li>Os estudos estão dividos em dois (2) pacotes no repositório git, portanto existem dois (2) tipos de links em amarelo: Sendo um para o <code className="token_reservada">`src`</code> de estudos práticos, ou seja, implementação/código .java em sí. Outro para o arquivo txt com Overview geral sobre o módulo que fica na raiz do projeto em <code className="token_reservada">`/anotacoes`</code>.</li>
                                         <br/><br/>
                                         <li>OBS: O conteúdo NÃO ACABA na seção "Módulos Abordados" abaixo, nesta seção contém RESUMO sobre cada Módulo e seus tópicos abordados, ou seja, para cada Módulo contém uma seção COMPLETA com explicações teóricas e exemplos de implementações (Códigos) para cada um dos tópicos, portanto tenha paciência e role a tela até a seção que deseja consultar! rsrs ;D (Por conta dessa necessidade de rolagens infinitas, quando tudo estiver finalizado irei implementar janelas que seram escondidas e só será exibido ao clicar no botão, para uma melhor UX). Dica: Utilize "CTRL + F" e procure por palavras chaves sobre o que desejas consultar (Por enquanto essa é a solução).</li>
-                                        <li>Essa Bíblia está em desenvolvimento, portanto existem bastante Módulos sem muitas informações, a solução para isto é ir no diretório do projeto correspondente no meu perfil do Github pois lá contém TODAS as informações completas (Estou transferindo essas informações de lá para este portifólio).</li>
+                                        <li>Essa Bíblia está em desenvolvimento, portanto existem bastante Módulos sem muitas informações, a solução para isto é ir no diretório do projeto correspondente no meu perfil do Github pois lá contém TODAS as informações completas (Estou transferindo essas informações de lá para este portfólio).</li>
                                     </ul>
                                 </li>
                                 <li>
@@ -1342,7 +1342,7 @@ export default function JavaBibleScreen() {
 
                                                     <span className="-tokenComment"># Para obter a lista de zonas suportadas pelo Java:</span><br/>
                                                     <code className="-tokenClassEntity">Map</code>&#60;<code className="-tokenClassEntity">String</code>, <code className="-tokenClassEntity">String</code>&#62; shortIds = <code className="-tokenClassEntity">ZoneId</code>.<code className="-tokenKeyConstant">SHORT_IDS</code>;<br/>
-                                                    <span className="-tokenComment">// A Lista de zonas suportadas está logo abaixo deste código aqui no portifólio! ^^</span><br/>
+                                                    <span className="-tokenComment">// A Lista de zonas suportadas está logo abaixo deste código aqui no portfólio! ^^</span><br/>
 
                                                     <br/>
                                                     <span className="-tokenComment"># Obtendo a zona padrão do sistema:</span><br/>

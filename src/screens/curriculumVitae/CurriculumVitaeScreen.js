@@ -129,7 +129,7 @@ export default function CurriculumVitaeScreen() {
                                                 Também sou entusiasta do Sistema Operacional GNU/Linux, que utilizo em meu dia a dia. 
                                                 Após concluír o curso do Paulo Kretcheu de 36 videoaulas, me apaixonei pelas 3 Liberdades GPL 
                                                 que garantem as liberdades do usuário, o que me permite personalizar e configurar o 
-                                                ambiente sem dificuldades ou problemas, diferente do windows que é uma caixa preta fechada.<br/><br/>
+                                                ambiente sem dificuldades ou problemas, diferente do Windows que é uma caixa preta fechada.<br/><br/>
 
                                                 Além disso, este ano pretendo obter a certificação Java da Oracle e continuar estudando 
                                                 para aprimorar minhas habilidades em programação e desenvolvimento Web. 
@@ -200,12 +200,12 @@ export default function CurriculumVitaeScreen() {
                                                 <p className="template__section__degree">2º Semestre (Atual em andamento)</p>
                                                     <p className="template__section__college">Disciplinas:</p>
                                                     <p className="template__section__description">- Engenharia de Software.</p>
-                                                    <p className="template__section__description">- Itinerário Extensionista I .</p>
+                                                    <p className="template__section__description">- Itinerário Extensionista I.</p>
                                                     <p className="template__section__description">- Programação Web.</p>
                                                     <p className="template__section__description">- Sistemas Operacionais.</p>
                                                     <p className="template__section__description">- Técnicas e Desenvolvimento de Algoritmo.</p>
-                                                    <p className="template__section__description">- Organização e Arquitetura de Computadores.</p>
-                                                    <p className="template__section__description">- Planejamento de Produção ("Opcional" que na verdade é obrigatória a realização, porém é uma das opções disponíveis (Porisso "Opcional"), todas as opções são fora do contexto de T.I de propósito pois é regras do MEC para introdução em contextos sociais diferentes, pelomenos foi o que falaram para nós.. rsrs). Obs: Essas disciplinas "Opcionais" que na verdade são apenas opcionais na escolha porém obrigatórias na realização não estão relacionadas aos "Temas Transversais".</p>
+                                                    <p className="template__section__description">- Organização e Arquitetura de Computadores II.</p>
+                                                    <p className="template__section__description">- Planejamento de Produção. ("Opcional" que na verdade é obrigatória a realização, porém é uma das opções disponíveis (Porisso "Opcional"), todas as opções são fora do contexto de T.I de propósito pois é regras do MEC para a introdução dos Alunos em contextos sociais diferentes, pelomenos foi o que falaram para nós.. rsrs). Obs: Essas disciplinas "Opcionais" que na verdade são apenas opcionais na escolha porém obrigatórias na realização não estão relacionadas aos "Temas Transversais".</p>
                                                 </div>
                                             </div>
                                             <br/>
