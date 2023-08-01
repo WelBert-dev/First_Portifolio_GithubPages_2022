@@ -482,7 +482,7 @@ export default function JavaBibleScreen() {
                                                 <code className="implementFullBlock">
 
                                                     <span className="-tokenComment"># Método que simula a != no processamento quando aumentado a entrada exponencialmente</span><br/>
-                                                    <code className="-tokenKeyword">private static void</code> <code className="-tokenMethod">concatString</code>(<code className="-tokenKeyword">int</code> tamanho) &#123;<br/>
+                                                    <code className="-tokenKeyword">private static</code> <code className="-tokenClassEntity">void</code> <code className="-tokenMethod">concatString</code>(<code className="-tokenKeyword">int</code> tamanho) &#123;<br/>
                                                         <code className="-nestedInnerCode"><code className="-tokenClassEntity">String</code> texto = <code className="-tokenString">""</code>;</code><br/>
                                                         <br/>
                                                         <code className="-nestedInnerCode"><code className="-tokenKeyword">for</code> (<code className="-tokenKeyword">int</code> i = 0; i &#60;= tamanho; i++) &#123;</code><br/>
@@ -509,7 +509,7 @@ export default function JavaBibleScreen() {
                                                 <code className="implementFullBlock">
 
                                                     <span className="-tokenComment"># Mesmo método anterior, porém trocando String por StringBuilder:</span><br/>
-                                                    <code className="-tokenKeyword">private static void</code> <code className="-tokenMethod">concatStringBuilder</code>(<code className="-tokenKeyword">int</code> tamanho) &#123;<br/>
+                                                    <code className="-tokenKeyword">private static</code> <code className="-tokenClassEntity">void</code> <code className="-tokenMethod">concatStringBuilder</code>(<code className="-tokenKeyword">int</code> tamanho) &#123;<br/>
                                                         <code className="-nestedInnerCode"><code className="-tokenClassEntity">StringBuilder</code> textoSB = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">StringBuilder</code>(tamanho);</code><br/>
                                                         <br/>
                                                         <code className="-nestedInnerCode"><code className="-tokenKeyword">for</code> (<code className="-tokenKeyword">int</code> i = 0; i &#60;= tamanho; i++) &#123;</code><br/>
@@ -537,7 +537,7 @@ export default function JavaBibleScreen() {
                                                 <code className="implementFullBlock">
 
                                                     <span className="-tokenComment"># Implementação idêntica ao anterior, porém mudando a instância:</span><br/>
-                                                    <code className="-tokenKeyword">private static void</code> <code className="-tokenMethod">concatStringBuffer</code>(<code className="-tokenKeyword">int</code> tamanho) &#123;<br/>
+                                                    <code className="-tokenKeyword">private static</code> <code className="-tokenClassEntity">void</code><code className="-tokenMethod">concatStringBuffer</code>(<code className="-tokenKeyword">int</code> tamanho) &#123;<br/>
                                                         <code className="-nestedInnerCode"><code className="-tokenClassEntity">StringBuffer</code> textoSBuff = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">StringBuffer</code>(tamanho);</code><br/>
                                                         <br/>
                                                         <code className="-nestedInnerCode"><code className="-tokenKeyword">for</code> (<code className="-tokenKeyword">int</code> i = 0; i &#60;= tamanho; i++) &#123;</code><br/>
@@ -2425,11 +2425,6 @@ export default function JavaBibleScreen() {
                                 <li>
                                     <h3 class="projects-subtitle">New I/O</h3>
                                     <ul className="projects-frontend--container">
-                                        <li>Em desenvolvimento... (Qualquer coisa o material está completo no meu perfil do Github.)</li>
-                                        <br/>
-                                        <li>Pacote completo <code className="token_reservada">src</code> de treinos, informações e etc sobre esse módulo no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/G_nio" target="_blank">Clique AQUI!</a></li>
-                                        <li>Arquivo <code className="token_reservada">txt</code> completo contendo o OverView geral sobre esse módulo em especifico, resumos, informações, em formato de <code className="token_reservada">Documentação</code> no meu repositório git: <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/blob/main/anotacoes/aula144a158-nio_NewVersionIO_manipulaArquivos" target="_blank">Clique AQUI!</a></li>
-                                        <br/>
                                         <li className="-marginNone--inMobile"><p className="-listItem--inMobile">Nova maneira mais coesa de lidar com as mesmas operações anteriores, porém com maior coerência entre as classes, melhor performance e ajusta alguns erros que poderiam ocorrer se utilizar as legadas, problemas esses relacionados a Internacionalização de Sistemas Operacionais (Aonde cada um segue suas prórprias convenções gerais sobre variáveis de ambiente e etc, diferentes tipos de Sistemas de Arquivos, adicionando assim funcionalidades para normalizar e retirar esses caracteres especiais do caminho Path do Arquivo ou Diretório, tornando esse novo caminho absoluto melhor entendível para os diferentes S.O's.</p>
                                             
                                             <p className="main-title--implementFullBlock">Fluxograma trasendo um Overview geral sobre as novas classes que substituem as do pacote legado da seção acima, tornando melhor a compreensão sobre a coesão entre as novas classes:</p>
@@ -2758,7 +2753,7 @@ export default function JavaBibleScreen() {
                                                             <code className="-nestedInnerCode --2Identation"><span className="-tokenComment"># Obtem o principal de usuário para o usuário corrente</span></code><br/>
                                                             <code className="-nestedInnerCode --2Identation"><code className="-tokenInterfaceEntity">UserPrincipal</code> user = path_file.<code className="-tokenMethod">getFileSystem</code>()</code><br/>
                                                                 <code className="-nestedInnerCode --3Identation">.<code className="-tokenMethod">getUserPrincipalLookupService</code>()</code><br/>
-                                                                <code className="-nestedInnerCode --3Identation">.<code className="-tokenMethod">lookupPrincipalByName</code>(<code className="-tokenClassEntity">System</code>.<code className="-tokenMethod">getProperty</code>(<code className="-tokenString">"user.name"</code>));</code><br/>                                                                    
+                                                                <code className="-nestedInnerCode --3Identation">.<code className="-tokenMethod">lookupPrincipalByName</code>({window.screen.width <= 425 ? <br/> : ""}<code className="-tokenClassEntity">System</code>.<code className="-tokenMethod">getProperty</code>(<code className="-tokenString">"user.name"</code>));</code><br/>                                                                    
 
                                                             <br/>
                                                             <code className="-nestedInnerCode --2Identation"><span className="-tokenComment"># Define permissões de leitura e escrita para o usuário corrente</span></code><br/>
@@ -2933,6 +2928,167 @@ export default function JavaBibleScreen() {
                                                         <code className="-nestedInnerCode">&#125;</code><br/>  
 
                                                     &#125;<br/>                                                 
+                                                </code>
+                                            </ul>
+                                        </li>
+                                        <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">PathMatcher</code>: Com ela é possível utilizar expressões regulares para definir quais paths iremos querer filtrar (Isso ajuda a evitar vários if's com <code className="token_reservada">.endsWith()</code> quando desejamos encontrar diversos padrões diferentes na mesma passada da iteração (navegação) pelos paths. Utilizamos expressões globs que são bem parecidas com regex porém mais simplificado, mas também é possível utilizar <code className="token_reservada">regex</code> quando o padrão é mais complexo. Devido ao polimorfismo de S.O's aonde cada um possuem seus próprios e diferentes Sistemas de Arquivos, para obter uma instância dele é necessário utilizar o método estático <code className="token_reservada">FileSystems.getDefault().getPathMatcher(sintaxeGlob);</code></p>
+                                            
+                                            <p className="main-title--implementFullBlock">Exemplo de Implementação navegando e iterando lvl All recursivo na árvore hierárquica de diretórios e pegando arquivos que começam com <code className="outputResult">"Aula"</code> e tenham a extensão <code className="outputResult">`.java`</code> ou <code className="outputResult">`.class`</code> no nome do arquivo (Obs: O Retorno é Path):</p>
+                                            <ul className="main-implementFullBlock--container">
+                                                <code className="implementFullBlock">                   
+                                                    <code className="-tokenKeyword">public static boolean</code> isMatcherInPathsWithGlob(<code className="-tokenInterfaceEntity">Path</code> path, <code className="-tokenClassEntity">String</code> globExpression) &#123;<br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">PathMatcher</code> pathMatcher = <code className="-tokenClassEntity">FileSystems</code>.<code className="-tokenMethod">getDefault</code>().<code className="-tokenMethod">getPathMatcher</code>(globExpression);</code><br/>
+                                                        <br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">return</code> pathMatcher.<code className="-tokenMethod">matches</code>(path);</code><br/>
+                                                    &#125;<br/>                                
+                                                </code>
+                                            </ul>
+
+                                            <ul className="main-implementFullBlock--container">
+                                                <code className="implementFullBlock">              
+                                                    <code className="-tokenKeyword">class</code> <code className="-tokenClassEntity">ListAllFiles_whenMatchesInGlobExpression</code> <code className="-tokenKeyword">extends</code> <code className="-tokenClassEntity">SimpleFileVisitor</code>&#60;<code className="-tokenInterfaceEntity">Path</code>&#62;&#123;<br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">private final</code> <code className="-tokenInterfaceEntity">Path</code> outputPath;</code><span className="-tokenComment">// Arq .txt que será append o nome dos arquivos que fez match na expressão.</span><br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">private final</code> <code className="-tokenClassEntity">String</code> globExpression;</code><br/>
+
+                                                        <br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">public</code> <code className="-tokenMethod">ListAllFiles_whenMatchesInGlobExpression</code>(<code className="-tokenInterfaceEntity">Path</code> saveOutputPath, <code className="-tokenClassEntity">String</code> globExpression) &#123;</code><br/>
+
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">super</code>();</code><br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">this</code>.outputPath = saveOutputPath;</code><br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">this</code>.globExpression = globExpression;</code><br/>
+
+                                                        <code className="-nestedInnerCode">&#125;</code><br/>
+
+                                                        <br/>
+                                                        <code className="-nestedInnerCode"><span className="-tokenComment"># Executado após abrir e apontar o cursor para o diretório corrente.</span></code><br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenAnnotationsEntity">@Override</code></code><br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">public</code> <code className="-tokenClassEntity">FileVisitResult</code> visitFile(<code className="-tokenInterfaceEntity">Path</code> file, <code className="-tokenInterfaceEntity">BasicFileAttributes</code> attrs) <code className="-tokenKeyword">throws</code> <code className="-tokenClassEntity">IOException</code> &#123;</code><br/>
+                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">if</code> (<code className="-tokenMethod">isMatcherInPathsWithGlob</code>(file, globExpression)) &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --3Identation">...</code><br/>
+                                                                <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">System</code>.out.<code className="-tokenMethod">println</code>(<code className="-tokenString">"path que deu match: "</code><br/>
+                                                                <code className="-nestedInnerCode --4Identation"></code>+file.<code className="-tokenMethod">getFileName</code>());</code><br/>
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">write</code>(outputPath,</code><br/>
+                                                                    <code className="-nestedInnerCode --4Identation">(file.<code className="-tokenMethod">getFileName</code>().<code className="-tokenMethod">toString</code>()+<code className="-tokenString">"\n"</code>).<code className="-tokenMethod">getBytes</code>(),</code><br/>
+
+                                                                    <code className="-nestedInnerCode --4Identation"><code className="-tokenClassEntity">StandardOpenOption</code>.<code className="-tokenKeyConstant">APPEND</code>);</code><br/>
+                                                            <code className="-nestedInnerCode --2Identation">&#125;</code><br/>
+                                                            
+                                                            <br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">return</code> <code className="-tokenClassEntity">FileVisitResult</code>.<code className="-tokenKeyConstant">CONTINUE</code>;</code><br/>
+
+                                                        <code className="-nestedInnerCode">&#125;</code><br/> 
+                                                    &#125;<br/>                                
+                                                </code>
+                                            </ul>
+
+                                            <ul className="main-implementFullBlock--container">
+                                                <code className="implementFullBlock">                   
+                                                    
+                                                    <code className="-tokenKeyword">try</code> &#123;<br/>
+
+                                                        <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">Path</code> pathInScan = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"."</code>);</code><br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">Path</code> pathOutputResult = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert/outputResult.txt"</code>);</code><br/>
+                                                        <br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code> (<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">notExists</code>(pathOutputResult)) &#123;</code><br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">createFile</code>(pathOutputResult);</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">String</code> globExpression = <code className="-tokenString">"glob:**/Aula*.&#123;java&#125;"</code>;</code><br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">walkFileTree</code>(pathInScan,</code><br/>
+                                                                <code className="-nestedInnerCode --3Identation"><code className="-tokenKeyword">new</code><code className="-tokenClassEntity"> ListAllFiles_whenMatchesInGlobExpression</code>(</code><br/>
+                                                                    <code className="-nestedInnerCode --4Identation">pathOutputResult, globExpression));</code><br/>
+                                                        <code className="-nestedInnerCode">&#125;</code><br/> 
+
+                                                    &#125; <code className="-tokenKeyword">catch</code> (<code className="-tokenClassEntity">IOException</code> ex) &#123;<br/>
+                                                        <code className="-nestedInnerCode">ex.<code className="-tokenMethod">printStackTrace</code>();</code><br/>
+                                                    &#125;                       
+                                                </code>
+                                            </ul>
+                                            <p className="main-title--implementFullBlock">BÔNUS: Carregando o arquivo gerado anteriormente em memória e organizando em ASC (Ordem alfabética), após salva em outro arquivo txt:</p>
+                                            <ul className="main-implementFullBlock--container">
+                                                <code className="implementFullBlock">                   
+                                                    
+                                                    <code className="-tokenKeyword">try</code> &#123;<br/>
+
+                                                        <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">Path</code> path_dotJavaAndDotClass_inAsc = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert/outputResult_inAsc.txt"</code>);</code><br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenInterfaceEntity">List</code>&#60;<code className="-tokenClassEntity">String</code>&#62; lines = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">readAllLines</code>(pathOutputResult);</code><br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenClassEntity">String</code>[] array = lines.<code className="-tokenMethod">toArray</code>(<code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">String</code>[lines.<code className="-tokenMethod">size</code>()]);</code><br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenClassEntity">Arrays</code>.<code className="-tokenMethod">sort</code>(array);</code><br/>
+                                                        <br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code> (<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">notExists</code>(path_dotJavaAndDotClass_inAsc)) &#123;</code><br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">createFile</code>(path_dotJavaAndDotClass_inAsc);</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">write</code>(path_dotJavaAndDotClass_inAsc, <code className="-tokenClassEntity">Arrays</code>.<code className="-tokenMethod">asList</code>(array));</code><br/>
+                                                        <code className="-nestedInnerCode">&#125;</code><br/> 
+                                                    
+                                                    &#125; <code className="-tokenKeyword">catch</code> (<code className="-tokenClassEntity">IOException</code> ex) &#123;<br/>
+                                                        <code className="-nestedInnerCode">ex.<code className="-tokenMethod">printStackTrace</code>();</code><br/>
+                                                    &#125;                       
+                                                </code>
+                                            </ul>
+                                        </li>
+                                        <li className="-marginNone--inMobile"><p className="-listItem--inMobile"><code className="token_reservada">ZipOutputStream</code>: Utilizada para zippar arquivos de acordo com os paths desejados, por se tratar de um Stream é uma classe low level que manipula fluxos de dados.</p>
+                                            
+                                            <p className="main-title--implementFullBlock">Exemplo de Implementação navegando e iterando lvl 1 na árvore de diretórios e zippando os arquivos que acabam com a extensão <code className="outputResult">.java</code>:</p>
+                                            
+                                            <ul className="main-implementFullBlock--container">
+                                                <code className="implementFullBlock">
+                                                    <span className="-tokenComment"># Define o método que faz a zippagem, abaixo está as regras sobre quais paths (Arquivos) seram zippados, porisso o parâmetro é uma List de paths.</span><br/>
+                                                   
+                                                    <code className="-tokenKeyword">public static</code> <code className="-tokenClassEntity">void</code> <code className="-tokenMethod">zip</code>(<code className="-tokenInterfaceEntity">Path</code> target_path, <code className="-tokenInterfaceEntity">List</code>&#60;<code className="-tokenInterfaceEntity">Path</code>&#62; archivesPathList) &#123;<br/>
+                                                        <br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">try</code> (<code className="-tokenClassEntity">ZipOutputStream</code> zipStream = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ZipOutputStream</code>(<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">newOutputStream</code>(target_path))) &#123;</code><br/>
+                                                            <br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">for</code> (<code className="-tokenInterfaceEntity">Path</code> path : archivesPathList) &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">ZipEntry</code> zipEntry = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ZipEntry</code>(path.<code className="-tokenMethod">getFileName</code>().<code className="-tokenMethod">toString</code>());</code><br/>
+                                                                <code className="-nestedInnerCode --3Identation">zipStream.<code className="-tokenMethod">putNextEntry</code>(zipEntry); <span className="-tokenComment">// prepara o arquivo, copiando apenas o nome dele</span></code><br/>
+                                                                <code className="-nestedInnerCode --3Identation"><code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">copy</code>(path, zipStream); <span className="-tokenComment">// copia o conteúdo</span></code><br/>
+                                                                <code className="-nestedInnerCode --3Identation">zipStream.<code className="-tokenMethod">closeEntry</code>(); <span className="-tokenComment">// fecha a entrada</span></code><br/>
+                                                            <code className="-nestedInnerCode --2Identation">&#125;</code><br/>
+                                                        
+                                                        <code className="-nestedInnerCode">&#125; <code className="-tokenKeyword">catch</code> (<code className="-tokenClassEntity">IOException</code> ex) &#123;</code><br/>
+                                                            <code className="-nestedInnerCode --2Identation">ex.<code className="-tokenMethod">printStackTrace</code>();</code><br/>
+                                                        <code className="-nestedInnerCode">&#125;</code><br/>
+                                                    &#125;<br/>      
+                                                </code>
+                                            </ul>
+                                            
+                                            <ul className="main-implementFullBlock--container">
+                                                <code className="implementFullBlock">
+                                                    <span className="-tokenComment"># Pega a lista de paths (Arquivos) que desejamos zippar de acordo com algum critério, e chama o método de cima que faz a zippagem: </span><br/>
+                                                    <code className="-tokenInterfaceEntity">Path</code> target_path_endsWithDotJava = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert/targetPath_endsWithDotJava.zip"</code>);<br/>
+                                                    <code className="-tokenInterfaceEntity">Path</code> source_dirPath = <code className="-tokenClassEntity">Paths</code>.<code className="-tokenMethod">get</code>(<code className="-tokenString">"/home/welbert/"</code>);<br/>
+                                                    
+                                                    <br/>
+                                                    <code className="-tokenKeyword">try</code> &#123;<br/>
+
+                                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code> (<code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">notExists</code>(target_path_endsWithDotJava)) &#123;</code><br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">createFile</code>(target_path_endsWithDotJava);</code><br/>
+
+                                                            <br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenInterfaceEntity">List</code>&#60;<code className="-tokenInterfaceEntity">Path</code>&#62; archivesPathList = <code className="-tokenKeyword">new</code> <code className="-tokenClassEntity">ArrayList</code>&#60;&#62;();</code><br/>
+                                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">try</code> (<code className="-tokenInterfaceEntity">DirectoryStream</code>&#60;<code className="-tokenInterfaceEntity">Path</code>&#62; directoryStream = <code className="-tokenClassEntity">Files</code>.<code className="-tokenMethod">newDirectoryStream</code>(source_dirPath, path -&#62;</code><br/>
+                                                                <code className="-nestedInnerCode --4Identation">path.<code className="-tokenMethod">toString</code>().<code className="-tokenMethod">endsWith</code>(<code className="-tokenString">".java"</code>))) &#123;</code><br/>
+                                                                <br/>
+                                                                <code className="-nestedInnerCode --3Identation"><code className="-tokenKeyword">for</code> (<code className="-tokenInterfaceEntity">Path</code> path : directoryStream) &#123;</code><br/>
+                                                                    <code className="-nestedInnerCode --4Identation">archivesPathList.<code className="-tokenMethod">add</code>(path);</code><br/>
+                                                                <code className="-nestedInnerCode --3Identation">&#125;</code><br/>
+                                                            <code className="-nestedInnerCode --2Identation">&#125; <code className="-tokenKeyword">catch</code> (<code className="-tokenClassEntity">IOException</code> ex) &#123;</code><br/>
+                                                                <code className="-nestedInnerCode --3Identation">ex.<code className="-tokenMethod">printStackTrace</code>();</code><br/>
+                                                            <code className="-nestedInnerCode --2Identation">&#125;</code><br/>
+                                                        <code className="-nestedInnerCode">&#125;</code><br/> 
+
+                                                        <br/>
+                                                        <code className="-nestedInnerCode"><span className="-tokenComment"># Finalmente faz a zippagem desses paths que acabam com `.java`</span></code><br/>
+                                                        <code className="-nestedInnerCode"><code className="-tokenMethod">zip</code>(target_path_endsWithDotJava, archivesPathList);</code><br/>           
+                                                        <br/>
+                                                    &#125; <code className="-tokenKeyword">catch</code> (<code className="-tokenClassEntity">IOException</code> ex) &#123;<br/>
+                                                        <code className="-nestedInnerCode">ex.<code className="-tokenMethod">printStackTrace</code>();</code><br/>
+                                                    &#125;<br/>
                                                 </code>
                                             </ul>
                                         </li>
