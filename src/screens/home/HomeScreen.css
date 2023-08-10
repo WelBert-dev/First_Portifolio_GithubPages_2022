@@ -17,10 +17,15 @@
 .main-header--left > h1 {
     color: white;
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: lighter;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
-    text-shadow: .18rem .18rem .2rem black;
+    text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 5px 1px 0px black;
+}
+
+.main-header--left > h1.--home-especializando {
+    font-size: 1rem;
+    color: #11e8ff; /* text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 3px 1px 0px black */
 }
 
 .main-header--right {
@@ -55,8 +60,13 @@
     }
     .main-header--left > h1 {
         font-size: 1.5rem;
-        text-shadow: 3px 3px 2px #000, -2px -2px 2px black;
+        text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 5px 1px 0px black;
     }
+
+    .main-header--left > h1.--home-especializando {
+        font-size: .9rem;
+        text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 5px 1px 0px black;
+    }    
     
     .main-header--right {
         order: 1;
@@ -81,8 +91,14 @@
     }
     .main-header--left > h1 {
      font-size: 1.3rem;
-     text-shadow: 3px 3px 2px #000, -2px -2px 2px black;
+     text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 5px 1px 0px black;
     }
+
+    .main-header--left > h1.--home-especializando {
+        font-size: .8rem;
+        text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 3px 1px 0px black;
+    }  
+
     section {
         top: 0;
     }

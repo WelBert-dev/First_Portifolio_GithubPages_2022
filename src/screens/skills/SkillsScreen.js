@@ -51,7 +51,7 @@ export default function SkillsScreen() {
                         <h3 className="title-skill">Redes (Internet)</h3>
                         <progress className="progress-bar --skills" max="100" value="75">75%</progress>
                         <span className="-OldStudy">06/2021 até 06/2022</span>
-                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/Redes-Study/tree/main/RedesI" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/Redes-Study/tree/main" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                     </div>
                 </article>
                 <article className="skill-tec">

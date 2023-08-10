@@ -544,8 +544,9 @@ export default function MainNavbar() {
         <a href="/#/projects" rel="Link Projetos" onClick={() => setNavBarEmColumn(true)}>Projetos</a>
         <a href="/#/certificates" rel="Link Certificados" onClick={() => setNavBarEmColumn(true)}>Certificados</a>   
         <a href="/#/curriculumVitae" rel="Link Curriculo" onClick={() => setNavBarEmColumn(true)}>Currículo</a>     
-        <a className={window.location.href.substring(1).split("/")[4] === 'javaBible' ? "" : "-btn-ancorToJavaBibleScreen -minWidthMaxContent"} href="/#/javaBible" rel="Link Biblia do Java" onClick={() => setNavBarEmColumn(true)}>Bíblia do Java {window.location.href.substring(1).split("/")[4] === 'javaBible' ? "" : <MdFiberNew className="animaIconPisca"/>}</a>        
-        
+        <a target="_blank" className="-btn-ancorToJavaBibleScreen -minWidthMaxContent" href="https://bibleofjava.wellisonbertelli.com.br/" rel="Link Biblia do Java" onClick={() => setNavBarEmColumn(true)}>Bíblia do Java <MdFiberNew className="animaIconPisca"/></a>        
+        {/* <a target="_blank" href="https://bibleofjava.wellisonbertelli.com.br/" rel="Link Curriculo" onClick={() => setNavBarEmColumn(true)}>Currículo</a>   */}
+
         <audio id="audioPlayer" src={rickAndMortyMainIntro}></audio>
         <div className="audioPlayer--container --audioPlayer--container --navBar -minWidthMaxContent">
             <div className="audioPlayer--controls">

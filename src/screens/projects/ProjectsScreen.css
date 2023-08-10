@@ -66,6 +66,7 @@
     text-align: center;
     color: #fff;
     text-shadow: 2px 2px 2px #000;
+    font-weight: lighter;
     margin: 0 auto;
     line-height: 1rem;
     
@@ -105,6 +106,7 @@
     font-size: .8rem;
     text-shadow: 1px 2px 2px black;
     padding: 1rem 1rem 1rem 0;
+    font-weight: lighter;
 }
 
 .projects-description--container {
@@ -209,7 +211,7 @@ code.token_reservada.--dateOfImplementation {
 @media (max-width: 425px)
 {
     .projects-title {
-        font-size: .7rem;     
+        font-size: .6rem;     
     }
     .projects-title--container div a {
         font-size: 1.3rem;
@@ -219,7 +221,7 @@ code.token_reservada.--dateOfImplementation {
     }
     
     .projects-subtitle {
-        font-size: .7rem;
+        font-size: .6rem;
     }
     
     .projects-description--container {
