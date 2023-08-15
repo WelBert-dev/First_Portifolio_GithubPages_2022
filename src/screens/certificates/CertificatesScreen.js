@@ -102,15 +102,15 @@ export default function CertificatesScreen() {
                             pois faz parte de uma fração da carga horária necessária para a conclusão do curso.
                             Optei pelos cursos da "Fundação Bradesco" pois além de gratuíto é bem reconhecido 
                             no mercado de T.I devido a qualidade e integridade do certificado de conclusão gerado.
-                            Confesso não ter sentido dificuldades na execução das atividades pois já estudo Java e 
+                            {/* Confesso não ter sentido dificuldades na execução das atividades pois já estudo Java e 
                             Orientação a Objetos a muito tempo então foi "sem novidades" no aprendizado. 
                             Não desconsiderando a qualidade do curso, que realmente é otima MÁS faltou contextualizar 
                             melhor a descrição e nome para o curso, pois o conteúdo não é de nível avançado,
                             e poderiam informar melhor na introdução dizendo que o conteúdo abordado é sobre "Java Desktop",
                             não sendo generalista mas talvez quem está procurando por "Java Avançado" espera-se aprender
                             sobre os utilitários da API NATIVA do Java 
-                            (<code className="token_reservada">Date-Time</code> (Legacy <code className="token_reservada">java.util</code> and New specialized package <code className="token_reservada">java.time</code>), <code className="token_reservada">Serialization</code>, <code className="token_reservada">I/O</code>, <code className="token_reservada">New I/O</code>, <code className="token_reservada">Collections</code>, <code className="token_reservada">Generics</code>, <code className="token_reservada">Nested Inner Class</code>, <code className="token_reservada">Lambdas</code>, <code className="token_reservada">Method Reference</code>, <code className="token_reservada">Optional</code> (Null Pointer Handling), <code className="token_reservada">Streams</code>, <code className="token_reservada">MultiThreads</code>, <code className="token_reservada">Parallelism</code>, <code className="token_reservada">Concurrency</code>, <code className="token_reservada">JDBC</code>, <code className="token_reservada">Reflection</code>...) 
-                            pois é oque da a entender para "Java Avançado", o mais ideal seria "Java Desktop - Intermediário".
+                            (<code className="token_reservada">Date-Time</code> (Legacy <code className="token_reservada">java.util</code> e o novo pacote completo e especializado nesses tratamentos temporais <code className="token_reservada">java.time</code>), <code className="token_reservada">Serialization</code>, <code className="token_reservada">I/O</code>, <code className="token_reservada">New I/O</code>, <code className="token_reservada">Collections</code>, <code className="token_reservada">Generics</code>, <code className="token_reservada">Nested Inner Class</code>, <code className="token_reservada">Lambdas</code>, <code className="token_reservada">Method Reference</code>, <code className="token_reservada">Optional</code> (Null Pointer Handling), <code className="token_reservada">Streams</code>, <code className="token_reservada">MultiThreads</code>, <code className="token_reservada">Parallelism</code>, <code className="token_reservada">Concurrency</code>, <code className="token_reservada">JDBC</code>, <code className="token_reservada">Reflection</code>...) 
+                            pois é oque da a entender para "Java Avançado", o mais ideal seria "Java Desktop - Intermediário". */}
                         </p>
 
                     </div>
