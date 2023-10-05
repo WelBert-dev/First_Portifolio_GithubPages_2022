@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.6707d825.css",
-    "main.js": "/static/js/main.3f8cbf99.js",
+    "main.js": "/static/js/main.e712c9e9.js",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
     "static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.mp3": "/static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.06f832336e73e946e7a0.mp3",
@@ -69,6 +69,7 @@
     "static/media/Rap do Alucard (Hellsing) _ Tauz RapTributo 64.mp3": "/static/media/Rap do Alucard (Hellsing) _ Tauz RapTributo 64.802507a209288bb7c479.mp3",
     "static/media/Death Note - Opening [4K] (320 kbps).mp3": "/static/media/Death Note - Opening [4K] (320 kbps).77f92c1e31d4d09bae7f.mp3",
     "static/media/Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 _ NERD HITS.mp3": "/static/media/Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 _ NERD HITS.50b4ecc8f96a34bde69c.mp3",
+    "static/media/wellisonPerfil.png": "/static/media/wellisonPerfil.5d224d5ff0af5e507d07.png",
     "static/media/Crazy Frog - Axel F (Official Video) (128 kbps).mp3": "/static/media/Crazy Frog - Axel F (Official Video) (128 kbps).2bfa332c767adc0a572b.mp3",
     "static/media/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).mp3": "/static/media/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).55c3b6f9038c0165e51c.mp3",
     "static/media/relatorioNodeRed2021-parte04.png": "/static/media/relatorioNodeRed2021-parte04.c732c0b49e41f666f35f.png",
@@ -110,14 +111,13 @@
     "static/media/ciscoModule02Amostra.png": "/static/media/ciscoModule02Amostra.c5b2997a7c6541666828.png",
     "static/media/logo-qrcodeGeneratorInC.png": "/static/media/logo-qrcodeGeneratorInC.a33757907b17df4a2989.png",
     "static/media/ciscoModule01Amostra.png": "/static/media/ciscoModule01Amostra.8a335ef13e07ca84b306.png",
-    "static/media/wellisonPerfil.jpg": "/static/media/wellisonPerfil.5ad3be0ec95d8bb0cc3d.jpg",
     "index.html": "/index.html",
     "static/media/portariaNormativaCeic-parte02.png": "/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
     "main.6707d825.css.map": "/static/css/main.6707d825.css.map",
-    "main.3f8cbf99.js.map": "/static/js/main.3f8cbf99.js.map"
+    "main.e712c9e9.js.map": "/static/js/main.e712c9e9.js.map"
   },
   "entrypoints": [
     "static/css/main.6707d825.css",
-    "static/js/main.3f8cbf99.js"
+    "static/js/main.e712c9e9.js"
   ]
 }
