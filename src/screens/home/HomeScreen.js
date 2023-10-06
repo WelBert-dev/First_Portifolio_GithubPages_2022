@@ -1,6 +1,6 @@
 import React from 'react';
 
-import WelbertBg from '../../resources/images/wellisonPerfil.jpg';
+import WelbertBg from '../../resources/images/wellisonPerfil.png';
 
 import './HomeScreen.css';
 
