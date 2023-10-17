@@ -35,7 +35,7 @@ export default function AboutMeScreen() {
                     (ReactJs) e estou atualmente aprofundando meus estudos em Backend com Java, buscando desafios 
                     em projetos reais e/ou em produção. <br/><br/>
 
-                    Vivo e respiro programação e desenvolvimento todos os dias, desde quando decidi seguir minha paixão há quase 3 anos 
+                    Vivo e respiro programação e desenvolvimento todos os dias, desde quando decidi seguir minha paixão há 3 anos 
                     atrás. Gosto muito da frase "A obsessão ganha do talento, todas as vezes" pois essa mentalidade me impulsiona 
                     a crescer cada dia mais.<br/><br/>
                     Formado em "Técnico em Informática" pelo Instituto Federal de Educação, Ciência e Tecnologia de São Paulo 
