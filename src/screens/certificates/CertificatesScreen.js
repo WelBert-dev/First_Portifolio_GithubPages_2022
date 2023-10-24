@@ -207,13 +207,13 @@ export default function CertificatesScreen() {
             </article>  
             <hr/>
 
-            <h1 className="main-title">&lsaquo;Certificados&rsaquo;</h1>
+            <h1 className="main-title">&lsaquo;Trabalho Voluntário - Comissão&rsaquo;</h1>
 
             <article className="certificate-single -bolsaEnsinoCertficate">
                     <div>
                         <div className="projects-title--container -certificateTitleContainer">
                             <div>
-                                <h3 className="projects-title -certificate--title">IFSP CEIC - Aluno representante do curso</h3>
+                                <h3 className="projects-title -certificate--title">IFSP CEIC - Membro</h3>
                                 <a href="https://suap.ifsp.edu.br/documento_eletronico/imprimir_documento_pdf/347883/carta/?hash=c70a71e451bbec4c4f11e9f0daf5df06ae0c02eb2d637901ffd435e78f4600a375e066ffb8b2d0ccbd9f11dd47ff6df6e763c69f0d94f82ec0bd3f48af1ce164" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                             </div>
                             <span className="-certificate--span">Portaria Normativa SLT nº0045/IFSP (18/05/2022)</span>
@@ -247,11 +247,14 @@ export default function CertificatesScreen() {
                     </div>
                 </article>  
                 <hr />
+                
+                <h1 className="main-title">&lsaquo;Programa Bolsa Ensino do IFSP&rsaquo;</h1> 
+
                 <article className="certificate-single -bolsaEnsinoCertficate">
                     <div>
                         <div className="projects-title--container -certificateTitleContainer">
                             <div>
-                                <h3 className="projects-title -certificate--title">IFSP Bolsa Ensino - Programação</h3>
+                                <h3 className="projects-title -certificate--title">Programação de Computadores</h3>
                                 <a href="https://drive.ifsp.edu.br/s/OjG9YuCEPhF3LJt" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                             </div>
                             <span className="-certificate--span">Edital 002/2022 - DRG/SLT (04/2022 até 06/2022)</span>
@@ -281,9 +284,7 @@ export default function CertificatesScreen() {
                     
                 </article>  
 
-
                 <hr/>
-
 
                 <h1 className="main-title -complementaryActivities">&lsaquo;Atividades Complementares para Técnico em Informática&rsaquo;</h1>
 
