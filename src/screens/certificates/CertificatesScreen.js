@@ -207,7 +207,7 @@ export default function CertificatesScreen() {
             </article>  
             <hr/>
 
-            <h1 className="main-title">&lsaquo;Trabalho Voluntário - Comissão&rsaquo;</h1>
+            <h1 className="main-title -complementaryActivities">&lsaquo;Comissão na Instituição Federal&rsaquo;</h1>
 
             <article className="certificate-single -bolsaEnsinoCertficate">
                     <div>
@@ -248,7 +248,7 @@ export default function CertificatesScreen() {
                 </article>  
                 <hr />
                 
-                <h1 className="main-title">&lsaquo;Programa Bolsa Ensino do IFSP&rsaquo;</h1> 
+                <h1 className="main-title -complementaryActivities">&lsaquo;Ganhei Bolsa Ensino na Instituição Federal&rsaquo;</h1> 
 
                 <article className="certificate-single -bolsaEnsinoCertficate">
                     <div>
