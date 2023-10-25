@@ -207,7 +207,7 @@ export default function CertificatesScreen() {
             </article>  
             <hr/>
 
-            <h1 className="main-title -complementaryActivities">&lsaquo;Comissão na Instituição Federal&rsaquo;</h1>
+            <h1 className="main-title -complementaryActivities">&lsaquo;Participei da Comissão na Instituição Federal&rsaquo;</h1>
 
             <article className="certificate-single -bolsaEnsinoCertficate">
                     <div>
