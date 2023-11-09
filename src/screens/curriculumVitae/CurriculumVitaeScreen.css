@@ -387,7 +387,7 @@ padding: .5rem 1rem 0 1rem;
     margin-bottom: .5rem;
 }
 
-section#education > div.template__section__container > div.template__section.template__section__education.template__section--twoColumns > .template__section__right {
+section#education > div.template__section__container > div.template__section.template__section__education.template__section--twoColumns {
     border-bottom: 1px solid #fff;
 }
 
@@ -401,7 +401,15 @@ section.diferenceBeetweenGradeAndMatrizCurricular {
 
 section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__description.--question {
     color: #fff !important;
-} 
+}
+
+.color-font-white-highlighted {
+    color: white !important;
+}
+
+.-marginBottomNone {
+    margin-bottom: 0px !important;
+}
 
 @media (max-width: 810px)
 {

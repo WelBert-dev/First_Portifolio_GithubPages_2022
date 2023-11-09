@@ -112,29 +112,31 @@ export default function CurriculumVitaeScreen() {
                                          <div className="template__section__container">
                                              <div className="template__section__simple">
                                                 <div>
+                                                <p className="color-font-white-highlighted">Conhecimento é a melhor ferramenta que existe.</p>
+                                                <br/>
                                                 Como desenvolvedor e entusiasta do mundo da programação e tecnologia, 
                                                 tenho me dedicado intensamente aos estudos, buscando aprimorar minhas 
-                                                habilidades em diferentes áreas. 
-                                                Sou formado em "Técnico em Informática" pelo Instituto Federal de Educação, 
-                                                Ciência e Tecnologia de São Paulo (IFSP - Salto) desde o final de 2022 
-                                                e atualmente curso CST em "Análise e Desenvolvimento de Sistemas" no CEUNSP - Salto, 
-                                                com o objetivo de, após a conclusão do curso, fazer Mestrado e Doutorado. <br/><br/>
-
-                                                Tenho me dedicado atualmente especialmente em Java avançado e o Ecossistema Spring, e possuo 
-                                                fortes conhecimentos em ReactJs e MySQL porém não estou mais focado nessas 
-                                                tecnologias pois por agora pretendo me aprofundar em Backend com o Java, 
-                                                portanto tenho objetivos futuros de me tornar um desenvolvedor Full Stack 
-                                                na programação Web 2.0, com responsividade. <br/><br/>
+                                                habilidades.<br/><br/>
                                                 
-                                                Também sou entusiasta do Sistema Operacional GNU/Linux, que utilizo em meu dia a dia. 
-                                                Após concluír o curso do Paulo Kretcheu de 36 videoaulas, me apaixonei pelas 3 Liberdades GPL 
-                                                que garantem as liberdades do usuário, o que me permite personalizar e configurar o 
-                                                ambiente sem dificuldades ou problemas, diferente do Windows que é uma caixa preta fechada.<br/><br/>
 
-                                                Além disso, este ano pretendo obter a certificação Java da Oracle e continuar estudando 
-                                                para aprimorar minhas habilidades em programação e desenvolvimento Web. 
-                                                Com senioridade na Web 2.0, pretendo explorar novas áreas, como Web 3.0 e Blockchain, 
-                                                e sempre buscar novos desafios para desenvolver meu potencial como desenvolvedor.
+                                                Formado em "Técnico em Informática" pelo Instituto Federal de Educação, 
+                                                Ciência e Tecnologia de São Paulo (IFSP - Salto) 
+                                                e atualmente cursando metade do curso CST em "Análise e Desenvolvimento de Sistemas" no CEUNSP - Salto, 
+                                                me tornei TOTALMENTE apaixonado por conhecimento e NÃO vou parar de estudar, nem após Mestrado e Doutorado. <br/><br/>
+
+                                                Tenho me dedicado atualmente especialmente em Testes de Software (QA) com JUnit em conjunto com o Ecossistema Spring, 
+                                                pois aprofundei o shape em "T" na linguagem Java (Core) que sou super apaixonado e desejo desenvolver códigos com 
+                                                maior qualidade e documentação "viva" para melhores feedbacks.<br/><br/>
+                                                
+                                                Além disto, possuo fortes conhecimentos em React.Js (Este site foi feito com ele) e MySQL, porém não estou mais focado nessas 
+                                                tecnologias pois por agora pretendo me aprofundar em Backend com Java.<br/><br/>
+                                                
+                                                Também sou entusiasta do Sistema Operacional GNU/Linux, que utilizo em meu dia a dia desde 2021. 
+                                                Após concluír o curso do Paulo Kretcheu de 36 videoaulas, me apaixonei pelas 3 Liberdades GPL 
+                                                que garantem as liberdades do usuário, o que me permite NÃO APENAS personalizar e configurar o 
+                                                ambiente sem dificuldades ou problemas, também facilita bastante na hora de rastrear erros com uso dos logs de sistema, 
+                                                diferente do Windows que ALÉM de ser uma caixa preta fechada, é totalmente BUROCRÁTICO 
+                                                tentar acessar os logs até mesmo para programas simples sem privilégios root.<br/><br/>
                                                 </div>
                                              </div>
                                          </div>
@@ -154,6 +156,7 @@ export default function CurriculumVitaeScreen() {
                                              <div className="template__section__right">
                                                  <p className="template__section__position">Almoxarife</p>
                                                  <p className="template__section__company">Clemont Equipamentos e Montagens Industriais LTDA</p>
+                                                 <br/>
                                                  <p className="template__section__description">- Responsável por todas estratégias de logística interna de fábrica.</p>
                                                  <p className="template__section__description">- Recebimento e despache de materiais relacionados a mecatrônica.</p>
                                                  <p className="template__section__description">- Recebimento e despache de ferramentas para automação.</p>
@@ -161,8 +164,36 @@ export default function CurriculumVitaeScreen() {
                                                  <p className="template__section__description">- Controle de estoque dos itens aqui citados e materiais de consumo.</p>
                                                  <p className="template__section__description">- Controle interno sobre o uso dos itens aqui mencionados, e avaliação de materiais "sobra" para uso em projetos futuros.</p>
                                                  <p className="template__section__description">- Confecção de romaneios contendo os itens que são levados as obras.</p>
-                                                 <p className="template__section__description">- Com auxilo de planilha excel.</p>
+                                                 <p className="template__section__description">- Com auxilo de planilha Excel.</p>
                                                  <p className="template__section__description">- Dentre outras pequenas atividades (Empresa pequena, acabava fazendo um pouco de tudo).</p>
+                                             </div>
+                                         </div>
+                                         </div>
+                                     </section>
+                                     <section data-section="work-experience" data-section-id="fd4905eb-e158-4281-944f-44e5d977a48d" id="work-experience" className="">
+                                         <p className="template__section__title -mainBody"><span>Trabalho Voluntário</span></p>
+                                         <div className="template__section__container">
+                                         <div data-subsection-position="0" className="template__section template__section__experience template__section--border template__section--twoColumns">
+                                             <div className="template__section__left">
+                                                 <p className="template__section__location">Salto - SP, Brasil</p>
+                                                 <p className="template__section__startDate">May 2022</p>
+                                                 <p className="template__section__endDate">Jun 2023 <br/>(1 ano de mandato)</p>
+                                             </div>
+                                             <div className="template__section__right">
+                                                 <p className="template__section__position">Comissão CEIC - Membro</p>
+                                                 <p className="template__section__company">Instituto Federal de Educação Ciências e Tecnologias de São Paulo (IFSP)</p>
+                                                 <br/>
+                                                 <p className="template__section__description">- Comissão de Elaboração e Implementação de Projetos Pedagógicos do Curso Técnico em Informática (CEIC).</p>
+                                                 <p className="template__section__description">- É uma comissão interna do IFSP responsável por discutir e definir a grade currícular do curso como um todo dentre outras atribuições.</p>
+                                                 <p className="template__section__description">- E para isto é necessário a opinião de um aluno para ajudar nas tomadas de decisões.</p>
+                                                 <p className="template__section__description">- O ano de 2022 foi bem importante pois foi tomada uma importante decisão e aprovada pelo MEC aonde a proposta é tornar os cursos mais atrativos devido a grande desistência em geral.</p>
+                                                 <p className="template__section__description">- No meu contexto de informática, iniciaram +40 alunos e apenas 7 concluíram.</p>
+                                                 <p className="template__section__description">- Portanto a decisão foi repaginar a grade currícular e diminuir a carga horária do curso para os próximos anos.</p>
+                                                 <p className="template__section__description">- Mudando assim o nome do curso "Técnico em informática" para "Informática para a Internet".</p>
+                                                 <p className="template__section__description">- E reduzindo assim a carga horária de 4 semestres (2 anos) para 3 semestres (1 ano e meio).</p>
+                                                 <p className="template__section__description">- Com início de vigência apartir de 2023.</p>
+                                                 <br/>
+                                                 <p className="template__section__description color-font-white-highlighted">- Documento oficial da Instituição Federal nomeando os membros contemplados: <a className="-linkBoldYellowProjects" href="https://suap.ifsp.edu.br/documento_eletronico/imprimir_documento_pdf/347883/carta/?hash=c70a71e451bbec4c4f11e9f0daf5df06ae0c02eb2d637901ffd435e78f4600a375e066ffb8b2d0ccbd9f11dd47ff6df6e763c69f0d94f82ec0bd3f48af1ce164" target="_blank">Clique AQUI!</a></p>
                                              </div>
                                          </div>
                                          </div>
@@ -182,11 +213,13 @@ export default function CurriculumVitaeScreen() {
                                                 <div className="template__section__right">
                                                     <p className="template__section__degree">Análise e Desenvolvimento de Sistemas</p>
                                                     <p className="template__section__college">Centro Universitário Nossa Senhora do Patrocínio (CEUNSP)</p>
-                                                    <p className="template__section__description">Curso superior técnólogo ADS especializado em desenvolvimento e programação de sistemas computacionais, estive em dúvidas entre este curso ou o Bacharel em Ciências da Cumputação que é mais genérico e extenso, e foi esse critério que me fez optar pelo superior tecnólogo ADS pois é mais específico e próximo do meu contexto, devido ao meu nível de instrução genérico que já obtive no curso técnico em Informática do IFSP.. Além disto também é mais rápido para concluir e alcansar meu objetivo de um dia me tornar Doutor em Tecnologia!</p>
+                                                    <br/>
+                                                    <p className="template__section__description">Curso Superior de Tecnologia (CST) ADS especializado em desenvolvimento e programação de software contemplando todo o ciclo de vida de uma aplicação computacional. <br/><br/>
+                                                    Estive em dúvidas entre este curso ou o Bacharel em Ciências da Cumputação que é mais genérico e extenso, e foi esse critério que me fez optar por este, pois é mais específico e próximo do meu contexto, por conta de que eu já obtive o nível de instrução genérico no curso Técnico em Informática do IFSP..</p>
                                                 </div>
                                             </div>
                                             <br/>
-                                            <p className="template__section__title -mainBody -spanFormacaoAcad--superior --gradeCurricularCurrentLastSemestre"><span className="-spanFormacaoAcad--superior --gradeCurricularCurrentLastSemestre">Matriz Curricular</span></p>
+                                            {/* <p className="template__section__title -mainBody -spanFormacaoAcad--superior --gradeCurricularCurrentLastSemestre"><span className="-spanFormacaoAcad--superior --gradeCurricularCurrentLastSemestre">Matriz Curricular</span></p>
                                             <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
                                                 <div className="template__section__left">
                                                     <p className="template__section__location">Salto - SP, Brasil </p>
@@ -205,7 +238,15 @@ export default function CurriculumVitaeScreen() {
                                                     <p className="template__section__description">- Sistemas Operacionais.</p>
                                                     <p className="template__section__description">- Técnicas e Desenvolvimento de Algoritmo.</p>
                                                     <p className="template__section__description">- Organização e Arquitetura de Computadores II.</p>
-                                                    <p className="template__section__description">- Tendências em Ciência da Computação. (A principal pauta é como as Inteligências Artificiais estão impactando o mundo e o mercado, por conta do hype nas I.A's gerados este ano com o lançamento da interface Web para o GPT da OpenAI, entre outras soluções como o Midjourney e etc, tentando assim discutir e prever o impacto no futuro próximo). "O que o homem consegue fazer que a Inteligência Artificial ainda não consegue? Qual é a linha que separa atividades humanas delas? O que é a Criatividade? e por que as I.A's não conseguem simular? Quais profissões ou atividades elas não conseguem resolver, e por que existe essa limitação?" Obs: Considerando não apenas modelos generativos NPL's, como qualquer outro conhecido ou em desenvolvimento.</p>
+                                                    <br/>
+                                                    <p className="template__section__description">- Tendências em Ciência da Computação. (A principal pauta é como as Inteligências Artificiais estão impactando o mundo e o mercado, por conta do hype nas I.A's gerados este ano com o lançamento da interface Web para o GPT da OpenAI, entre outras soluções como o Midjourney e etc, tentando assim discutir e prever o impacto no futuro próximo). 
+                                                    <br/><br/>"_O que o homem consegue fazer que a Inteligência Artificial ainda não consegue?" 
+                                                    <br/><br/>"_Qual é a linha que separa atividades humanas delas?" 
+                                                    <br/><br/>"_O que é a Criatividade? e por que as I.A's não conseguem simular?" 
+                                                    <br/><br/>"_Quais profissões ou atividades elas não conseguem resolver, e por que existe essa limitação?" 
+                                                    <br/><br/>Obs: Considerando não apenas modelos generativos NPL's, como qualquer outro conhecido ou em desenvolvimento.</p>
+                                                    <br/>
+                                                    <p className="template__section__description color-font-white-highlighted">- Acompanhe o desenvolvimento desta atividade, esta sendo bem interessante e eu fui elogiado pelo coordenador pelo nível de aprofundamento na ferramenta, segue link "Dissecando o GPT": <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/ceunsp/tree/main/ADS-2Semestre-2023/tendencias_em_ciencias_da_computacao_optativa" target="_blank">Clique AQUI!</a></p>
                                                 </div>
                                             </div>
                                             <br/>
@@ -233,7 +274,7 @@ export default function CurriculumVitaeScreen() {
                                                     <p className="template__section__description">- Modelagem de Negócios e Requisitos.</p>
                                                     <p className="template__section__description">- Programação de Computadores.</p>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                             {/* <br/>
                                             <p className="template__section__title -mainBody -spanFormacaoAcad--superior --gradeCurricular3Semestre"><span className="-spanFormacaoAcad--superior --gradeCurricular2SemestreEmDiante"></span></p>
                                             <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
@@ -289,11 +330,25 @@ export default function CurriculumVitaeScreen() {
                                                 <div className="template__section__right">
                                                     <p className="template__section__degree">Técnico em Informática</p>
                                                     <p className="template__section__college">Instituto Federal de Educação Ciências e Tecnologias de São Paulo (IFSP)</p>
-                                                    <p className="template__section__description">Curso genérico pois além dos Fundamentos Computacionais, também foi abordado Segurança da Informação, Criptografias e Algoritmos de Hashing, Infraestrutura de redes e também seus protocolos, Sistemas Operacionais e como eles lídam em baixo nível, além disto também é estudado todo o ciclo de vida de uma aplicação computacional (Mais especificamente Web), sendo no primeiro ano focado na stack Backend e no segundo ano voltado nas tecnologias Frontend, desde a parte de levantamento de requisitos (História de usuário), análise (Modelagem Caso de Uso), prototipação (Baixa, Média e Alta Fidelidade), projeto (Tecnologias), até a parte de desenvolvimento em sí, fora os estudos pessoais e também participei das ações da Instituição, para agregar ainda mais conhecimento e valor (Mais detalhes e informações na página "Certificados").</p>
+                                                    <br/>
+                                                    <p className="template__section__description">Curso genérico pois ALÉM dos FUNDAMENTOS Computacionais, também foi abordado:</p>
+                                                    <p className="template__section__description">- Segurança da Informação (Com base no curso da Cisco Systems pela plataforma NetAcad).</p>
+                                                    <p className="template__section__description">- Criptografias e Algoritmos de Hashing.</p>
+                                                    <p className="template__section__description">- Infraestrutura de redes e também seus protocolos (Camadas OSI).</p>
+                                                    <p className="template__section__description">- Sistemas Operacionais e como eles lídam em baixo nível (Scheduler e etc).</p>
+                                                    <p className="template__section__description">- Além disto, também é abordado todo o ciclo de vida de uma aplicação computacional (Mais especificamente Web).</p>
+                                                    <p className="template__section__description">- Sendo no primeiro ano focado na stack Backend e no segundo ano voltado nas tecnologias Frontend.</p>
+                                                    <p className="template__section__description">- Desde a parte de levantamento de requisitos (História de usuário).</p>
+                                                    <p className="template__section__description">- Análise (Modelagem Caso de Uso).</p>
+                                                    <p className="template__section__description">- Prototipação (Baixa, Média e Alta Fidelidade).</p>
+                                                    <p className="template__section__description">- Projeto (Tecnologias).</p>
+                                                    <p className="template__section__description">- Até a parte de desenvolvimento em sí.</p>
+                                                    <p className="template__section__description">- Fora os estudos pessoais e também participei das ações da Instituição para agregar ainda mais conhecimento e valor.</p>
+                                                    <p className="template__section__description">- Mais detalhes e informações na página "Certificados".</p>               
                                                 </div>
                                             </div>
-                                            <br/>
-                                            <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular4Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular4Semestre">Grade Curricular</span></p>
+                                            {/* <br/> */}
+                                            {/* <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular4Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular4Semestre">Grade Curricular</span></p>
                                             <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
                                                 <div className="template__section__left">
                                                     <p className="template__section__location">Salto - SP, Brasil </p>
@@ -312,9 +367,9 @@ export default function CurriculumVitaeScreen() {
                                                     <p className="template__section__description">- Projeto de Sistemas II.</p>
                                                     <p className="template__section__description">- Projeto de Redes de Computadores.</p>
                                                 </div>
-                                            </div>
-                                            <br/>
-                                            <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular3Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular3SemestreEmDiante"></span></p>
+                                            </div> */}
+                                            {/* <br/> */}
+                                            {/* <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular3Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular3SemestreEmDiante"></span></p>
                                             <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
                                                 <div className="template__section__left">
                                                     <p className="template__section__location">Salto - SP, Brasil </p>
@@ -354,9 +409,9 @@ export default function CurriculumVitaeScreen() {
                                                     <p className="template__section__description">- Redes de Computadores I.</p>
                                                     <p className="template__section__description">- Sistemas Operacionais I.</p>
                                                 </div>
-                                            </div>
-                                            <br/>
-                                            <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular1Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular3SemestreEmDiante"></span></p>
+                                            </div> */}
+                                            {/* <br/> */}
+                                            {/* <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular1Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular3SemestreEmDiante"></span></p>
                                             <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
                                                 <div className="template__section__left">
                                                     <p className="template__section__location">Salto - SP, Brasil </p>
@@ -374,13 +429,13 @@ export default function CurriculumVitaeScreen() {
                                                     <p className="template__section__description">- Inglês Instrumental I.</p>
                                                     <p className="template__section__description">- Introdução a Informática.</p>
                                                 </div>
-                                            </div>
+                                            </div> */}
                                          </div>
                                      </section>
-                                     <section className="diferenceBeetweenGradeAndMatrizCurricular">
+                                     {/* <section className="diferenceBeetweenGradeAndMatrizCurricular">
                                         <p  className="template__section__description --question">Qual a diferença entre "Grade" e "Matriz" Curricular?</p>
                                         <p  className="template__section__description">"Grade" é algo mais concreto, ou seja, como se trata de um curso já concluído podemos afirmar 100% de certeza que essas foram as disciplinas ofertadas e realizadas. Já "Matriz" serve como um "Norte", ou seja, como se trata de um curso em andamento não podemos afirmar 100% de certeza quais seram as disciplinas concretas no final, então temos que essas são as possíveis disciplinas ofertadas e que talvez seram realizadas (Não sabemos ainda com toda certeza quais seram optadas e demandadas ao concluir).</p>
-                                     </section>
+                                     </section> */}
                                  </div>
                              </td>
                              </tr>
