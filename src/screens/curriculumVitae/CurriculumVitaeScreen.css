@@ -532,7 +532,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         text-shadow: none;
     }
 
-    #education span.-spanFormacaoAcad--superior.--gradeCurricularCurrentLastSemestre::after {
+    /* #education span.-spanFormacaoAcad--superior.--gradeCurricularCurrentLastSemestre::after {
         content: 'Salto - SP, Brasil';
         position: relative;
         display: block;
@@ -578,7 +578,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
 
     #education .template__section__title.-spanFormacaoAcad--superior.--gradeCurricular4Semestre::after {
         content: 'Ago 2024 Até Dez 2024';
-    }
+    } */
 
     #education span.-spanFormacaoAcad--tecnico::after { /* -spanFormacaoAcad--tecnica */
         content: 'Salto - SP, Brasil';
@@ -604,7 +604,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         text-shadow: none;
     }
 
-    #education span.-spanFormacaoAcad--tecnico.--gradeCurricular4Semestre::after { /* -spanFormacaoAcad--tecnica */
+    /* #education span.-spanFormacaoAcad--tecnico.--gradeCurricular4Semestre::after {
         content: 'Salto - SP, Brasil';
         position: relative;
         display: block;
@@ -629,7 +629,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
     }
 
 
-    #education span.-spanFormacaoAcad--tecnico.--gradeCurricular3SemestreEmDiante::after { /* -spanFormacaoAcad--tecnica */
+    #education span.-spanFormacaoAcad--tecnico.--gradeCurricular3SemestreEmDiante::after {
         content: 'Salto - SP, Brasil';
         position: relative;
         display: block;
@@ -650,7 +650,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
 
     #education .template__section__title.-spanFormacaoAcad--tecnico.--gradeCurricular3Semestre::after {
         content: 'Fev 2022 Até Jun 2022';
-    }
+    } */
     
 
     
@@ -690,6 +690,30 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         text-shadow: none;
     }
 
+    #volunteer-work span::after {
+        content: 'Salto - SP, Brasil';
+        position: relative;
+        display: block;
+        color: #000;
+        line-height: 1rem;
+        font-size: 12px;
+        padding-top: .5rem;
+        border-top: 3px double #000;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    #volunteer-work .template__section__title::after {
+        content: 'Mai 2022 Até Jun 2023';
+        position: relative;
+        display: block;
+        color: #000;
+        line-height: .8rem;
+        font-size: 12px;
+        padding: 0 .5rem;
+        text-shadow: none;
+    }
+
     .template__section__title.-mainBody > span {
         color: #000 !important;
         text-shadow: none;
@@ -697,6 +721,10 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
 
     section.diferenceBeetweenGradeAndMatrizCurricular {
         padding-left: .5rem;
+    }
+
+    .-text-align-center-on-mobile {
+        text-align: center;
     }
 }
 

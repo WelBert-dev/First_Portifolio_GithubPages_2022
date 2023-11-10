@@ -104,7 +104,7 @@ export default function CurriculumVitaeScreen() {
                                          <div className="template__nameOccupation">
                                              <div className="template__name"><span>Wellison</span><span>Bertelli</span></div>
                                              <div className="template__occupation">
-                                                 <p>Desenvolvedor Web - FullStack (Full Cycle)</p>
+                                                 <p>Desenvolvedor Web - Full Stack (Full Cycle)</p>
                                              </div>
                                          </div>
                                          </section>
@@ -112,7 +112,7 @@ export default function CurriculumVitaeScreen() {
                                          <div className="template__section__container">
                                              <div className="template__section__simple">
                                                 <div>
-                                                <p className="color-font-white-highlighted">Conhecimento é a melhor ferramenta que existe.</p>
+                                                <p className="color-font-white-highlighted -text-align-center-on-mobile">Conhecimento é a melhor ferramenta que existe.</p>
                                                 <br/>
                                                 Como desenvolvedor e entusiasta do mundo da programação e tecnologia, 
                                                 tenho me dedicado intensamente aos estudos, buscando aprimorar minhas 
@@ -121,7 +121,7 @@ export default function CurriculumVitaeScreen() {
 
                                                 Formado em "Técnico em Informática" pelo Instituto Federal de Educação, 
                                                 Ciência e Tecnologia de São Paulo (IFSP - Salto) 
-                                                e atualmente cursando metade do curso CST em "Análise e Desenvolvimento de Sistemas" no CEUNSP - Salto, 
+                                                e atualmente cursando metade do superior CST em "Análise e Desenvolvimento de Sistemas" no CEUNSP - Salto, 
                                                 me tornei TOTALMENTE apaixonado por conhecimento e NÃO vou parar de estudar, nem após Mestrado e Doutorado. <br/><br/>
 
                                                 Tenho me dedicado atualmente especialmente em Testes de Software (QA) com JUnit em conjunto com o Ecossistema Spring, 
@@ -170,13 +170,13 @@ export default function CurriculumVitaeScreen() {
                                          </div>
                                          </div>
                                      </section>
-                                     <section data-section="work-experience" data-section-id="fd4905eb-e158-4281-944f-44e5d977a48d" id="work-experience" className="">
+                                     <section data-section="work-experience" data-section-id="fd4905eb-e158-4281-944f-44e5d977a48d" id="volunteer-work" className="">
                                          <p className="template__section__title -mainBody"><span>Trabalho Voluntário</span></p>
                                          <div className="template__section__container">
                                          <div data-subsection-position="0" className="template__section template__section__experience template__section--border template__section--twoColumns">
                                              <div className="template__section__left">
                                                  <p className="template__section__location">Salto - SP, Brasil</p>
-                                                 <p className="template__section__startDate">May 2022</p>
+                                                 <p className="template__section__startDate">Mai 2022</p>
                                                  <p className="template__section__endDate">Jun 2023 <br/>(1 ano de mandato)</p>
                                              </div>
                                              <div className="template__section__right">
