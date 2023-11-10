@@ -22,11 +22,11 @@ export default function CurriculumVitaeScreen() {
                                          </div>
                                          <div className="template__header__info template__header__info--mailAddress">
                                          <p className="template__section__subtitle">Endereço</p>
-                                         <p className="template__section__info__value">Rua Grécia, 544 - Jardim Celani Salto - Sp ~ 13326-130</p>
+                                         <p className="template__section__info__value">Brasil<br/>Salto, São Paulo<br/>13326-130</p>
                                          </div>
                                          <div className="template__header__info template__header__info--phone">
                                          <p className="template__section__subtitle">Celular</p>
-                                         <p className="template__section__info__value">(11)9 4298-9935</p>
+                                         <p className="template__section__info__value">+55 (11) 94298-9935</p>
                                          </div>
                                          <div className="template__header__info template__header__info--birthday">
                                          <p className="template__section__subtitle">Data de nascimento</p>
@@ -50,23 +50,110 @@ export default function CurriculumVitaeScreen() {
                                      <p className="template__section__title"><span>Habilidades</span></p>
                                      <div className="template__section__container">
                                          <ul className="padding-1rem">
+
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>GNU/Linux</p>
+                                         </li>
+
+                                         <br/>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Artificial Intelligence - GPT</p>
+                                         </li>
+                                         <br/>
+
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Java</p>
+                                             <p>Java Core:</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Ecossistema Spring</p>
+                                             <p>Exception and Error Handling</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>C#</p>
+                                             <p>Wrapper of Primitive Type</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Strings Constants Pool</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Date-Time API - Legacy</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Date-Time API - Joda-Time</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Internationalization - Polymorphism</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Regex - Regular Expression</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>IO API - Legacy</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>IO API - New</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>IO API - Serialization</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Collections API</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Generic Type</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Inner Class - Four Types</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Functional Prog. - Lambdas</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Functional Prog. - Method Reference</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Optional - Null Pointer Handling</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Functional Prog. - Streams API</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Threads - Low Level</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Multithreading - Synchronization</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Multithreading - Concurrency</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Concurrent API</p>
+                                         </li>
+                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Design Patterns - Gang Of Four</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>JDBC API</p>
+                                         </li>
+                                         <br/>
+
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>Spring Framework Ecosystem</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Software Testing (JUnit)</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>API RESTful</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Spring Security - Two Auth's</p>
+                                         </li>
+                                        <br/>
+
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="6">
+                                             <p>React.Js</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="1">
                                              <p>JavaScript</p>
-                                         </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
-                                             <p>Python</p>
-                                         </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="3">
-                                             <p>MySQL</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="4">
                                              <p>HTML5</p>
@@ -74,14 +161,79 @@ export default function CurriculumVitaeScreen() {
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="5">
                                              <p>CSS3</p>
                                          </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="6">
-                                             <p>ReactJs</p>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>AJAX</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Redux</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Storage Client-side</p>
+                                         </li>
+                                         <br/>
+
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Network Skills (2021-2022):</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>HTTP Methods</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Network - OSI Model 7 Layers</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Network - CSMA/CA & CSMA/CD</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Ethernet 10-100-1000 Base T/TX</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Network Protocols - RIP, OSPF</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Network Server - DHCP, DNS</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Network Topology Types</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                             <p>Ethernet MacAddress</p>
+                                         </li>
+                                         <br/>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
+                                             <p>Cyber Security Essentials:</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
+                                             <p>Five pillars of Cyber Security</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
+                                             <p>Cryptographic and Hashing Algorithm</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
+                                             <p>Some Cyber Attack Tools</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
+                                             <p>White, Gray and Black Hat</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
+                                             <p>XSS and CSRF Attack</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
+                                             <p>Some Firewall Bypass</p>
+                                         </li>
+                                         <br/>
+
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
+                                             <p>Python3</p>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                             <p>C#</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="7">
                                              <p>Asp.NetCoreMVC</p>
                                          </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>GNU/Linux</p>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="3">
+                                             <p>MySQL</p>
                                          </li>
                                          </ul>
                                      </div>
