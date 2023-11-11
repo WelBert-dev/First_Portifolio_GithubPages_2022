@@ -148,7 +148,10 @@ export default function CurriculumVitaeScreen() {
                                              <p>Spring Security - Two Auth's</p>
                                          </li>
                                         <br/>
-
+                                        <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="3">
+                                             <p>SGBD MySQL</p>
+                                         </li>
+                                        <br/>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="6">
                                              <p>React.Js</p>
                                          </li>
@@ -199,7 +202,7 @@ export default function CurriculumVitaeScreen() {
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
                                              <p>Ethernet MacAddress</p>
                                          </li>
-                                         <br/>
+                                         {/* <br/>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
                                              <p>Cyber Security Essentials:</p>
                                          </li>
@@ -220,21 +223,19 @@ export default function CurriculumVitaeScreen() {
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
                                              <p>Some Firewall Bypass</p>
-                                         </li>
+                                         </li> */}                            
+                                       
                                          <br/>
-
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
                                              <p>Python3</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>C#</p>
+                                             <p>C# (2021)</p>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="7">
-                                             <p>Asp.NetCoreMVC</p>
+                                             <p>Asp.NetCoreMVC (2021)</p>
                                          </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="3">
-                                             <p>MySQL</p>
-                                         </li>
+                                        
                                          </ul>
                                      </div>
                                  </section>
