@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.99aae229.css",
+    "main.css": "/static/css/main.a1b46c89.css",
     "main.js": "/static/js/main.75f883a7.js",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
@@ -113,11 +113,11 @@
     "static/media/ciscoModule01Amostra.png": "/static/media/ciscoModule01Amostra.8a335ef13e07ca84b306.png",
     "index.html": "/index.html",
     "static/media/portariaNormativaCeic-parte02.png": "/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
-    "main.99aae229.css.map": "/static/css/main.99aae229.css.map",
+    "main.a1b46c89.css.map": "/static/css/main.a1b46c89.css.map",
     "main.75f883a7.js.map": "/static/js/main.75f883a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.99aae229.css",
+    "static/css/main.a1b46c89.css",
     "static/js/main.75f883a7.js"
   ]
 }
