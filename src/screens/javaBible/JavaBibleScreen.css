@@ -1,12 +1,12 @@
 code.token_reservada {
-    background-color: #c6c6c6;
+    background-color: var(--main-bgColorLightGrey);
     font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
-    color: red;
+    color: #000;
     font-weight: bolder;
-    border-radius: 5px;
-    padding: 0 2px;
+    padding: 0 1px;
     font-size: .8rem;
-    text-shadow: none;
+    text-shadow: 1px 1px 2px white;
+    line-height: 1rem;
 }
 
 ul.-nestedInnerUl {
@@ -239,7 +239,6 @@ ul.javaBible-listOfTitle--container li::marker {
     code.token_reservada {
         font-size: .6rem;
         padding: 0 1.5px;
-        border-radius: 4px;
     }
 
     ul.-nestedInnerUl {

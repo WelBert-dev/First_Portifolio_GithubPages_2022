@@ -11,7 +11,7 @@
   --main-titleColor: #2f81f7 !important;
   --main-textColor: #d1d5db !important;
   --main-fontfamily-Press2PLight: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
-  --main-bgColorLightGrey: lightgrey;
+  --main-bgColorLightGrey: #a9d2d7;
 }
 
 a {

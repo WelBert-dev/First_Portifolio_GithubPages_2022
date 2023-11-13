@@ -49,14 +49,15 @@
 
 .projects-title--container > span {
     font-weight: bold;
-    /* color: #ffd700; */
-    color: #11e8ff;
-    text-shadow: 1px 1px black;
-    font-size: .9rem;
-    background-color: #000;
-    border-radius: 5px;
-    padding: 1px;
+    color: #000;
+    text-shadow: 1px 1px 2px white;
+    font-size: 1.1rem;
+    background-color: var(--main-bgColorLightGrey);
+    padding: 0 1px;
     margin: 2px auto 0 auto;
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
+    text-align: center;
+    line-height: 1rem;
 }
 
 .projects-title {
@@ -251,5 +252,6 @@ code.token_reservada.--dateOfImplementation {
 
     code.token_reservada.--dateOfImplementation {
         font-size: .7rem;
+        border-radius: 0;
     }
 }

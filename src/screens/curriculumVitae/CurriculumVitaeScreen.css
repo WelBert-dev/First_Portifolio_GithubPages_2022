@@ -89,7 +89,7 @@ border: medium none;
 }
 
 .color--blue .template__newyork__column {
-background-color: lightgrey;
+background-color: var(--main-bgColorLightGrey);
 border: 4px double black;
 font-family: var(--main-fontfamily-Press2PLight);
 }
@@ -154,7 +154,7 @@ display: flex;
 justify-content: space-between;
 }
 .template__professional .template__header, .template__professional .template__section__experience:last-child, .template__professional .template__section__education:last-child, .template__professional .template__section__custom:not(:last-child) {
-border-bottom: 1px solid white;
+border-bottom: 1px solid var(--main-bgColorLightGrey);
 }
 
 .template__professional .template__header {
@@ -220,7 +220,7 @@ min-height: 30px;
 }
 
 .template__professional .template__header, .template__professional .template__section__experience:last-child, .template__professional .template__section__education:last-child, .template__professional .template__section__custom:not(:last-child) {
-border-bottom: 1px solid white;
+border-bottom: 1px solid var(--main-bgColorLightGrey);
 }
 
 .template__professional .template__section__left {
@@ -230,12 +230,12 @@ padding-right: 16px;
 padding-bottom: 16px;
 }
 .template__professional .template__section__left {
-border-right: 1px solid white;
+border-right: 1px solid var(--main-bgColorLightGrey);
 height: auto;
 }
 .color--blue.template__newyork .template__section__left::before {
-color: white;
-background-color: white;
+color: var(--main-bgColorLightGrey);
+background-color: var(--main-bgColorLightGrey);
 }
 .template__newyork .template__section__left::before {
 font-family: 'Icons Templates';
@@ -338,7 +338,7 @@ margin-bottom: 16px;
 }
 
 .template__professional .template__header, .template__professional .template__section__experience:last-child, .template__professional .template__section__education:last-child, .template__professional .template__section__custom:not(:last-child) {
-border-bottom: 1px solid white;
+border-bottom: 1px solid var(--main-bgColorLightGrey);
 }
 
 .template * {
@@ -388,11 +388,11 @@ padding: .5rem 1rem 0 1rem;
 }
 
 section#education > div.template__section__container > div.template__section.template__section__education.template__section--twoColumns {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--main-bgColorLightGrey);
 }
 
 .template__section.template__section__education.template__section--twoColumns.--lastOfsuperiorADS {
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid var(--main-bgColorLightGrey);
 }
 
 section.diferenceBeetweenGradeAndMatrizCurricular {
@@ -409,6 +409,14 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
 
 .-marginBottomNone {
     margin-bottom: 0px !important;
+}
+
+#skills > div.template__section__container > ul > li > p {
+	background-color: #9b9bff;
+	line-height: 1rem;
+	max-width: fit-content;
+	margin-bottom: .5rem;
+    text-shadow: 1px 1px 2px rgb(5, 207, 207);
 }
 
 @media (max-width: 810px)
@@ -437,7 +445,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
     }
 
     .template__professional .template__section__right {
-        border-left: 1px solid white;
+        border-left: 1px solid var(--main-bgColorLightGrey);
     }
 
     .template__nameOccupation {
@@ -459,7 +467,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
     } */
 
     .template__section__position::before {
-        background-color: white;
+        background-color: var(--main-bgColorLightGrey);;
         color: white;
         font-size: 12px;
         content: '.';
@@ -473,7 +481,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
     } 
 
     .template__section__degree::before {
-        background-color: white;
+        background-color: var(--main-bgColorLightGrey);;
         color: white;
         font-size: 12px;
         content: '.';
@@ -513,6 +521,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
+        text-shadow: 1px 1px 2px #fff;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
@@ -526,10 +535,10 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
+        text-shadow: 1px 1px 2px #fff;
         line-height: .8rem;
         font-size: 12px;
         padding: 0 .5rem;
-        text-shadow: none;
     }
 
     /* #education span.-spanFormacaoAcad--superior.--gradeCurricularCurrentLastSemestre::after {
@@ -585,6 +594,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
+        text-shadow: 1px 1px 2px #fff;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
@@ -598,10 +608,10 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
+        text-shadow: 1px 1px 2px #fff;
         line-height: .8rem;
         font-size: 12px;
         padding: 0 .5rem;
-        text-shadow: none;
     }
 
     /* #education span.-spanFormacaoAcad--tecnico.--gradeCurricular4Semestre::after {
@@ -662,7 +672,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         border-radius: 5px;
         padding: .5rem 0;
         margin-bottom: .9rem;
-        background-color: white;
+        background-color: var(--main-bgColorLightGrey);
         font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
     }
 
@@ -671,6 +681,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
+        text-shadow: 1px 1px 2px #fff;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
@@ -684,10 +695,10 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
+        text-shadow: 1px 1px 2px #fff;
         line-height: .8rem;
         font-size: 12px;
         padding: 0 .5rem;
-        text-shadow: none;
     }
 
     #volunteer-work span::after {
@@ -695,6 +706,7 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
+        text-shadow: 1px 1px 2px #fff;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
@@ -708,15 +720,15 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
+        text-shadow: 1px 1px 2px #fff;
         line-height: .8rem;
         font-size: 12px;
         padding: 0 .5rem;
-        text-shadow: none;
     }
 
     .template__section__title.-mainBody > span {
         color: #000 !important;
-        text-shadow: none;
+        text-shadow: 1px 1px 2px #fff;
     }
 
     section.diferenceBeetweenGradeAndMatrizCurricular {

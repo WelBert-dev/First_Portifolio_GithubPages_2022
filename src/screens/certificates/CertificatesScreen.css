@@ -130,14 +130,14 @@ hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
 
 .projects-title--container > span.-certificate--span{
 	font-size: 1.1rem;
-	background-color: #c6c6c6;
-	border-radius: 5px;
-	padding: 0 2px;
+	background-color: var(--main-bgColorLightGrey);
+	padding: 0 1px;
 	text-align: center;
 	margin-bottom: 3px;
-	color: red;
+	color: #000;
 	font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
-	text-shadow: none;
+	text-shadow: 1px 1px 2px white;
+	line-height: 1rem;
 }
 
 

@@ -81,7 +81,10 @@
 progress:not(value) {
     /* Add your styles here. As part of this walkthrough we will focus only on determinate progress bars. */
 }
-  
+
+.progress-bar.--skills {
+    background-color: #11e8ff;
+}  
 /* Styling the determinate progress element */
   
 progress.progress-bar.--skills[value] {
@@ -160,7 +163,7 @@ progress[value]::-webkit-progress-value:after {
       -moz-linear-gradient( top,
                               rgba(255, 255, 255, .25),
                               rgba(0,0,0,.2)),
-       -moz-linear-gradient( left, rgb(0, 255, 85), rgb(60, 255, 0));
+       -moz-linear-gradient( left, rgb(0, 195, 255), rgb(0, 153, 255));
     
     background-size: 35px 20px, 100% 100%, 100% 100%;
     border-radius:3px;
@@ -232,7 +235,7 @@ p[data-value] {
       -webkit-linear-gradient( top,
                               rgba(255, 255, 255, .25),
                               rgba(0,0,0,.2)),
-       -webkit-linear-gradient( left, #09c, #ff0);
+       -webkit-linear-gradient( left, #09c, rgb(255, 0, 0));
 }
   
 .jquery::-webkit-progress-value,
@@ -248,7 +251,7 @@ p[data-value] {
       -webkit-linear-gradient( top,
                               rgba(255, 255, 255, .25),
                               rgba(0,0,0,.2)),
-       -webkit-linear-gradient( left, #09c, #690);
+       -webkit-linear-gradient( left, #09c, rgb(153, 0, 0));
 }
   
   /* Similarly, for Mozillaa. Unfortunately combining the styles for different browsers will break every other browser. Hence, we need a separate block. */
