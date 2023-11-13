@@ -210,9 +210,9 @@ export default function CertificatesScreen() {
                             <span className="-certificate--span">Instituto Federal de Educação, Ciências e Tecnologias de São Paulo - Campús Salto (IFSP)</span>
                             <span className="-certificate--span">Edital 002/2022 - DRG/SLT</span>
                             <div className="certificates-autenticCode--container">
-                                <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
+                                <span className="certificates-autenticCode--span">Verifique a autenticidade no botão acima</span>
                             </div>
-                            <p>Documento oficial clicando no botão a cima.</p>
+                            <p>Documento oficial clicando no botão acima.</p>
                         </div>
                         <div className="bolsaEnsinoImageWrapper">
                             <img src={bolsaEnsinoAmostra}></img>
@@ -243,7 +243,7 @@ export default function CertificatesScreen() {
                             <span className="-certificate--span">Cisco Systems</span>
                             <span className="-certificate--span">Plataforma NetAcad</span>
                             <div className="certificates-autenticCode--container">
-                                <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, DOWNLOAD do doc. oficial no botão a cima</span>
+                                <span className="certificates-autenticCode--span">Verifique a autenticidade no botão acima</span>
                             </div>
                             <p>DOWNLOAD da declaração oficial clicando no botão a cima.</p>
                         </div>
@@ -264,7 +264,7 @@ export default function CertificatesScreen() {
                             <span className="-certificate--span">Cisco Systems</span>
                             <span className="-certificate--span">Plataforma NetAcad</span>
                             <div className="certificates-autenticCode--container">
-                                <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, DOWNLOAD do doc. oficial a cima</span>
+                                <span className="certificates-autenticCode--span">Verifique a autenticidade no botão acima</span>
                             </div>
                             <p>DOWNLOAD da declaração oficial clicando no botão a cima.</p>
                         </div>
@@ -311,12 +311,12 @@ export default function CertificatesScreen() {
                                 <h3 className="projects-title -certificate--title">Descaracterização TVBOX</h3>
                                 <a href="https://sistemas.slt.ifsp.edu.br/certificado/?cod=d79ccad1" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                             </div>
+                            <span className="-certificate--span">Instituto Federal de Educação, Ciências e Tecnologias de São Paulo - Campús Salto (IFSP)</span>
                             <span className="-certificate--span">IFSP FLISoL 2022</span>
-                            <span className="-certificate--span">Palestra e Oficina</span>
                             <div className="certificates-autenticCode--container">
-                                <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
+                                <span className="certificates-autenticCode--span">Verifique a autenticidade no botão acima</span>
                             </div>
-                            <p>Documento oficial clicando no botão a cima.</p>
+                            <p>Documento oficial clicando no botão acima.</p>
                         </div>
                         <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                             <img src={workshopTvBoxFlisol}></img>
@@ -332,12 +332,12 @@ export default function CertificatesScreen() {
                                 <h3 className="projects-title -certificate--title">Introdução á Linguagem C</h3>
                                 <a href="https://sistemas.slt.ifsp.edu.br/certificado/?cod=6ddf3b8b14" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                             </div>
+                            <span className="-certificate--span">Instituto Federal de Educação, Ciências e Tecnologias de São Paulo - Campús Salto (IFSP)</span>
                             <span className="-certificate--span">IFSP FLISoL 2022</span>
-                            <span className="-certificate--span">Palestra e Oficina</span>
                             <div className="certificates-autenticCode--container">
-                                <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
+                                <span className="certificates-autenticCode--span">Verifique a autenticidade no botão acima</span>
                             </div>
-                            <p>Documento oficial clicando no botão a cima.</p>
+                            <p>Documento oficial clicando no botão acima.</p>
                         </div>
                         <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                             <img src={workshopLinguagemC}></img>
@@ -353,12 +353,12 @@ export default function CertificatesScreen() {
                                 <h3 className="projects-title -certificate--title">Automação industrial (Processos e Programação)</h3>
                                 <a href="https://suap.ifsp.edu.br/eventos/baixar_certificado/?hash=024eada9d26dc7e7" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                             </div>
+                            <span className="-certificate--span">Instituto Federal de Educação, Ciências e Tecnologias de São Paulo - Campús Salto (IFSP)</span>
                             <span className="-certificate--span">IFSP IFCiência 2022</span>
-                            <span className="-certificate--span">Palestra</span>
                             <div className="certificates-autenticCode--container">
-                                <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, DOWNLOAD do doc. oficial no botão a cima</span>
+                                <span className="certificates-autenticCode--span">Verifique a autenticidade no botão acima</span>
                             </div>
-                            <p>DOWNLOAD do documento oficial clicando no botão a cima.</p>
+                            <p>DOWNLOAD do Documento oficial clicando no botão acima.</p>
                         </div>
                         <div className="bolsaEnsinoImageWrapper">
                             <img src={workshopAutomacaoIndustrialP01}></img>
@@ -375,12 +375,12 @@ export default function CertificatesScreen() {
                                 <h3 className="projects-title -certificate--title">NodeRed: Uma Jornada IoT</h3>
                                 <a href="https://drive.google.com/file/d/154osECaHFdjOHc3wWM4VbnbU4lUDbdhq/view?usp=sharing" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                             </div>
+                            <span className="-certificate--span">Instituto Federal de Educação, Ciências e Tecnologias de São Paulo - Campús Salto (IFSP)</span>
                             <span className="-certificate--span">IFSP IFCiência 2021</span>
-                            <span className="-certificate--span">Palestra</span>
                             <div className="certificates-autenticCode--container">
-                                <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
+                                <span className="certificates-autenticCode--span">Verifique a autenticidade no botão acima</span>
                             </div>
-                            <p>Documento oficial clicando no botão a cima.</p>
+                            <p>Documento oficial clicando no botão acima.</p>
                         </div>
                         <div className="bolsaEnsinoImageWrapper">
                             <img src={workshopNodeRed}></img>
@@ -396,12 +396,12 @@ export default function CertificatesScreen() {
                                 <h3 className="projects-title -certificate--title">Bolsa de Valores B3</h3>
                                 <a href="https://drive.google.com/file/d/1sLqKc5vPhkTZzXWYyWarRrH2yg9lnsRh/view?usp=sharing" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                             </div>
+                            <span className="-certificate--span">Instituto Federal de Educação, Ciências e Tecnologias de São Paulo - Campús Salto (IFSP)</span>
                             <span className="-certificate--span">IFSP IFCiência 2021</span>
-                            <span className="-certificate--span">Palestra</span>
                             <div className="certificates-autenticCode--container">
-                                <span className="certificates-autenticCode--span">Não possuí cód. de autenticidade, doc oficial no botão a cima</span>
+                                <span className="certificates-autenticCode--span">Verifique a autenticidade no botão acima</span>
                             </div>
-                            <p>Documento oficial clicando no botão a cima.</p>
+                            <p>Documento oficial clicando no botão acima.</p>
                         </div>
                         <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                             <img src={workshopBolsaValores}></img>
