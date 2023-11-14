@@ -54,13 +54,11 @@ export default function CurriculumVitaeScreen() {
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
                                             <a href="https://drive.google.com/drive/folders/1igYf5NuYs8VA5A58EslDKrK9sUr2FHGQ?usp=sharing" target="_blank">GNU/Linux - Operating System</a>
                                          </li>
-
                                          <br/>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
                                             <a href="https://github.com/WelBert-dev/ceunsp/tree/main/ADS-2Semestre-2023/tendencias_em_ciencias_da_computacao_optativa" target="_blank">Artificial Intelligence - GPT</a>
                                          </li>
                                          <br/>
-
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
                                             <a href="https://bibleofjava.wellisonbertelli.com.br/" target="_blank">Java Core:</a>
                                          </li>
@@ -137,7 +135,6 @@ export default function CurriculumVitaeScreen() {
                                             <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/ZA_estruturaDados" target="_blank">Data Structures - Low-Level Impl.</a>
                                          </li>
                                          <br/>
-
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
                                             <a href="https://github.com/WelBert-dev/SpringBootEssentials2-Study" target="_blank">Spring Framework Ecosystem</a>
                                          </li>
@@ -177,7 +174,6 @@ export default function CurriculumVitaeScreen() {
                                             <a href="https://github.com/WelBert-dev/backupLg3Ecommerce-Springboot/tree/main/frontend" target="_blank">Client-side Storage - Non-Volatile Memory</a>
                                          </li>
                                          <br/>
-
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
                                             <a href="https://drive.google.com/drive/folders/1BF_r6-pTfeBzA3w0u0CdUrZte48O9kOq?usp=sharing" target="_blank">Network Skills (2021-2022):</a>
                                          </li>
@@ -231,32 +227,7 @@ export default function CurriculumVitaeScreen() {
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
                                             <a href="https://github.com/WelBert-dev/Redes-Study/blob/main/RedesII/04-resolucaoDeNome-DNS-Redes2.txt" target="_blank">Domain Name System (DNS)</a>
-                                         </li>
-                                        
-                        
-                                         {/* <br/>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
-                                             <p>Cyber Security Essentials:</p>
-                                         </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
-                                             <p>Five pillars of Cyber Security</p>
-                                         </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
-                                             <p>Cryptographic and Hashing Algorithm</p>
-                                         </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
-                                             <p>Some Cyber Attack Tools</p>
-                                         </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
-                                             <p>White, Gray and Black Hat</p>
-                                         </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
-                                             <p>XSS and CSRF Attack</p>
-                                         </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
-                                             <p>Some Firewall Bypass</p>
-                                         </li> */}                            
-                                       
+                                         </li>                                    
                                          <br/>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
                                             <a href="https://drive.google.com/drive/folders/14xScT9nHM9X-wwi2XncWkLGAIY0THfCc?usp=sharing" target="_blank">Python3 - Programming Logic</a>
@@ -393,7 +364,6 @@ export default function CurriculumVitaeScreen() {
                                                         <p className="template__section__startDate">Fev 2023</p>
                                                         <p className="template__section__endDate">Atualmente</p>
                                                     </div>
-    
                                                 </div>
                                                 <div className="template__section__right">
                                                     <p className="template__section__degree">Análise e Desenvolvimento de Sistemas</p>
@@ -404,104 +374,6 @@ export default function CurriculumVitaeScreen() {
                                                 </div>
                                             </div>
                                             <br/>
-                                            {/* <p className="template__section__title -mainBody -spanFormacaoAcad--superior --gradeCurricularCurrentLastSemestre"><span className="-spanFormacaoAcad--superior --gradeCurricularCurrentLastSemestre">Matriz Curricular</span></p>
-                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
-                                                <div className="template__section__left">
-                                                    <p className="template__section__location">Salto - SP, Brasil </p>
-                                                    <div className="template__section__date">
-                                                        <p className="template__section__startDate">Ago 2023</p>
-                                                        <p className="template__section__endDate">Dez 2023</p>
-                                                    </div>
-    
-                                                </div>
-                                                <div className="template__section__right">
-                                                <p className="template__section__degree">2º Semestre (Atual em andamento)</p>
-                                                    <p className="template__section__college">Disciplinas:</p>
-                                                    <p className="template__section__description">- Engenharia de Software.</p>
-                                                    <p className="template__section__description">- Itinerário Extensionista I.</p>
-                                                    <p className="template__section__description">- Programação Web.</p>
-                                                    <p className="template__section__description">- Sistemas Operacionais.</p>
-                                                    <p className="template__section__description">- Técnicas e Desenvolvimento de Algoritmo.</p>
-                                                    <p className="template__section__description">- Organização e Arquitetura de Computadores II.</p>
-                                                    <br/>
-                                                    <p className="template__section__description">- Tendências em Ciência da Computação. (A principal pauta é como as Inteligências Artificiais estão impactando o mundo e o mercado, por conta do hype nas I.A's gerados este ano com o lançamento da interface Web para o GPT da OpenAI, entre outras soluções como o Midjourney e etc, tentando assim discutir e prever o impacto no futuro próximo). 
-                                                    <br/><br/>"_O que o homem consegue fazer que a Inteligência Artificial ainda não consegue?" 
-                                                    <br/><br/>"_Qual é a linha que separa atividades humanas delas?" 
-                                                    <br/><br/>"_O que é a Criatividade? e por que as I.A's não conseguem simular?" 
-                                                    <br/><br/>"_Quais profissões ou atividades elas não conseguem resolver, e por que existe essa limitação?" 
-                                                    <br/><br/>Obs: Considerando não apenas modelos generativos NPL's, como qualquer outro conhecido ou em desenvolvimento.</p>
-                                                    <br/>
-                                                    <p className="template__section__description color-font-white-highlighted">- Acompanhe o desenvolvimento desta atividade, esta sendo bem interessante e eu fui elogiado pelo coordenador pelo nível de aprofundamento na ferramenta, segue link "Dissecando o GPT": <a className="-linkBoldYellowProjects" href="https://github.com/WelBert-dev/ceunsp/tree/main/ADS-2Semestre-2023/tendencias_em_ciencias_da_computacao_optativa" target="_blank">Clique AQUI!</a></p>
-                                                </div>
-                                            </div>
-                                            <br/>
-                                            <p className="template__section__title -mainBody -spanFormacaoAcad--superior --gradeCurricular1Semestre"><span className="-spanFormacaoAcad--superior --gradeCurricular2SemestreEmDiante"></span></p>
-                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns --lastOfsuperiorADS">
-                                                <div className="template__section__left">
-                                                    <p className="template__section__location">Salto - SP, Brasil </p>
-                                                    <div className="template__section__date">
-                                                        <p className="template__section__startDate">Fev 2023</p>
-                                                        <p className="template__section__endDate">Jul 2023</p>
-                                                    </div>
-    
-                                                </div>
-                                                <div className="template__section__right">
-
-                                                    <p className="template__section__degree">1º Semestre</p>
-                                                    <p className="template__section__college">Disciplinas:</p>
-                                                    <p className="template__section__description">- Matemática Aplicada (EAD - Não Obrigatória).</p>
-                                                    <p className="template__section__description">- Português Aplicado (EAD - Não Obrigatória).</p>
-                                                    <p className="template__section__description">- Sociedade, Identidades e Territórios (EAD - Obrigatória).</p>
-                                                    <p className="template__section__description">- Gestão Estratégica de Negócios (EAD - Obrigatória).</p>
-                                                    <p className="template__section__description">- Empreendedorismo (EAD - Obrigatória).</p>
-                                                    <p className="template__section__description">- Organização e Arquitetura de Computadores.</p>
-                                                    <p className="template__section__description">- Aplicações para Internet.</p>
-                                                    <p className="template__section__description">- Modelagem de Negócios e Requisitos.</p>
-                                                    <p className="template__section__description">- Programação de Computadores.</p>
-                                                </div>
-                                            </div> */}
-                                            {/* <br/>
-                                            <p className="template__section__title -mainBody -spanFormacaoAcad--superior --gradeCurricular3Semestre"><span className="-spanFormacaoAcad--superior --gradeCurricular2SemestreEmDiante"></span></p>
-                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
-                                                <div className="template__section__left">
-                                                    <p className="template__section__location">Salto - SP, Brasil </p>
-                                                    <div className="template__section__date">
-                                                        <p className="template__section__startDate">Fev 2024</p>
-                                                        <p className="template__section__endDate">Jul 2024</p>
-                                                    </div>
-    
-                                                </div>
-                                                <div className="template__section__right">
-                                                    <p className="template__section__degree">3º Semestre (Período)</p>
-                                                    <p className="template__section__college">Disciplinas:</p>
-                                                    <p className="template__section__description">- Optativa IV.</p>
-                                                    <p className="template__section__description">- Jogos para Internet (EAD).</p>
-                                                    <p className="template__section__description">- Análise e Projeto de Sistemas II.</p>
-                                                    <p className="template__section__description">- Computação Paralela e Distribuída (EAD - Obrigatória).</p>
-                                                    <p className="template__section__description">- Big Data (EAD).</p>
-                                                    <p className="template__section__description">- Programação para Dispositivos Móveis.</p>
-                                                    <p className="template__section__description">- Itinerário Extensionista II.</p>
-                                                    <p className="template__section__description">- Redes de Computadores.</p>
-                                                </div>
-                                            </div>
-                                            <br/>
-                                            <p className="template__section__title -mainBody -spanFormacaoAcad--superior --gradeCurricular4Semestre"><span className="-spanFormacaoAcad--superior --gradeCurricular2SemestreEmDiante"></span></p>
-                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns --lastOfsuperiorADS">
-                                                <div className="template__section__left">
-                                                    <p className="template__section__location">Salto - SP, Brasil </p>
-                                                    <div className="template__section__date">
-                                                        <p className="template__section__startDate">Ago 2024</p>
-                                                        <p className="template__section__endDate">Dez 2024</p>
-                                                    </div>
-    
-                                                </div>
-                                                <div className="template__section__right">
-                                                    <p className="template__section__degree">4º Semestre (Período)</p>
-                                                    <p className="template__section__college">Disciplinas:</p>
-                                                    <p className="template__section__description">- Aplicações para Internet.</p>
-                                                </div>
-                                            </div> */}
-                                            <br/>
                                             <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico"><span className="-spanFormacaoAcad--tecnico">Formação Técnica</span></p>
                                             <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
                                                 <div className="template__section__left">
@@ -510,7 +382,6 @@ export default function CurriculumVitaeScreen() {
                                                         <p className="template__section__startDate">Fev 2021</p>
                                                         <p className="template__section__endDate">Dez 2022 <br/>(2 anos)</p>
                                                     </div>
-    
                                                 </div>
                                                 <div className="template__section__right">
                                                     <p className="template__section__degree">Técnico em Informática</p>
@@ -532,95 +403,8 @@ export default function CurriculumVitaeScreen() {
                                                     <p className="template__section__description">- Mais detalhes e informações na página "Certificados".</p>               
                                                 </div>
                                             </div>
-                                            {/* <br/> */}
-                                            {/* <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular4Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular4Semestre">Grade Curricular</span></p>
-                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
-                                                <div className="template__section__left">
-                                                    <p className="template__section__location">Salto - SP, Brasil </p>
-                                                    <div className="template__section__date">
-                                                        <p className="template__section__startDate">Jul 2022</p>
-                                                        <p className="template__section__endDate">Dez 2022</p>
-                                                    </div>
-                                                </div>
-                                                <div className="template__section__right">
-                                                    <p className="template__section__degree">4º Semestre</p>
-                                                    <p className="template__section__college">Disciplinas:</p>
-                                                    <p className="template__section__description">- Gerenciamento e Segurança de Dados.</p>
-                                                    <p className="template__section__description">- Implantação de Sistemas Operacionais.</p>
-                                                    <p className="template__section__description">- Linguagem e Técnica de Programação III.</p>
-                                                    <p className="template__section__description">- Projeto de Capacitação Profissional.</p>
-                                                    <p className="template__section__description">- Projeto de Sistemas II.</p>
-                                                    <p className="template__section__description">- Projeto de Redes de Computadores.</p>
-                                                </div>
-                                            </div> */}
-                                            {/* <br/> */}
-                                            {/* <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular3Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular3SemestreEmDiante"></span></p>
-                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
-                                                <div className="template__section__left">
-                                                    <p className="template__section__location">Salto - SP, Brasil </p>
-                                                    <div className="template__section__date">
-                                                        <p className="template__section__startDate">Fev 2022</p>
-                                                        <p className="template__section__endDate">Jun 2022</p>
-                                                    </div>
-                                                </div>
-                                                <div className="template__section__right">
-                                                    <p className="template__section__degree">3º Semestre</p>
-                                                    <p className="template__section__college">Disciplinas:</p>
-                                                    <p className="template__section__description">- Análise e Modelagem de Sistemas II.</p>
-                                                    <p className="template__section__description">- Banco de Dados II.</p>
-                                                    <p className="template__section__description">- Linguagem e Técnica de Programação II.</p>
-                                                    <p className="template__section__description">- Projeto de Sistemas I.</p>
-                                                    <p className="template__section__description">- Redes de Computadores II.</p>
-                                                    <p className="template__section__description">- Sistemas Operacionais II.</p>
-                                                </div>
-                                            </div>
-                                            <br/>
-                                            <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular2Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular3SemestreEmDiante"></span></p>
-                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
-                                                <div className="template__section__left">
-                                                    <p className="template__section__location">Salto - SP, Brasil </p>
-                                                    <div className="template__section__date">
-                                                        <p className="template__section__startDate">Jul 2021</p>
-                                                        <p className="template__section__endDate">Dez 2021</p>
-                                                    </div>
-                                                </div>
-                                                <div className="template__section__right">
-                                                    <p className="template__section__degree">2º Semestre</p>
-                                                    <p className="template__section__college">Disciplinas:</p>
-                                                    <p className="template__section__description">- Análise e Modelagem de Sistemas I.</p>
-                                                    <p className="template__section__description">- Banco de Dados I.</p>
-                                                    <p className="template__section__description">- Inglês Instrumental II.</p>
-                                                    <p className="template__section__description">- Linguagem e Técnica de Programação I.</p>
-                                                    <p className="template__section__description">- Redes de Computadores I.</p>
-                                                    <p className="template__section__description">- Sistemas Operacionais I.</p>
-                                                </div>
-                                            </div> */}
-                                            {/* <br/> */}
-                                            {/* <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico --gradeCurricular1Semestre"><span className="-spanFormacaoAcad--tecnico --gradeCurricular3SemestreEmDiante"></span></p>
-                                            <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
-                                                <div className="template__section__left">
-                                                    <p className="template__section__location">Salto - SP, Brasil </p>
-                                                    <div className="template__section__date">
-                                                        <p className="template__section__startDate">Fev 2021</p>
-                                                        <p className="template__section__endDate">Jun 2021</p>
-                                                    </div>
-                                                </div>
-                                                <div className="template__section__right">
-                                                    <p className="template__section__degree">1º Semestre</p>
-                                                    <p className="template__section__college">Disciplinas:</p>
-                                                    <p className="template__section__description">- Administração e Empreendedorismo.</p>
-                                                    <p className="template__section__description">- Algortimos e Programação.</p>
-                                                    <p className="template__section__description">- Hardware.</p>
-                                                    <p className="template__section__description">- Inglês Instrumental I.</p>
-                                                    <p className="template__section__description">- Introdução a Informática.</p>
-                                                </div>
-                                            </div> */}
                                          </div>
                                      </section>
-                                     {/* <section className="diferenceBeetweenGradeAndMatrizCurricular">
-                                        <p  className="template__section__description --question">Qual a diferença entre "Grade" e "Matriz" Curricular?</p>
-                                        <p  className="template__section__description">"Grade" é algo mais concreto, ou seja, como se trata de um curso já concluído podemos afirmar 100% de certeza que essas foram as disciplinas ofertadas e realizadas. Já "Matriz" serve como um "Norte", ou seja, como se trata de um curso em andamento não podemos afirmar 100% de certeza quais seram as disciplinas concretas no final, então temos que essas são as possíveis disciplinas ofertadas e que talvez seram realizadas (Não sabemos ainda com toda certeza quais seram optadas e demandadas ao concluir).</p>
-                                     </section> */}
                                  </div>
                              </td>
                              </tr>
