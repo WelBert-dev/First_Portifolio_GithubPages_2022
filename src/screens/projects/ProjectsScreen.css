@@ -50,7 +50,7 @@
 .projects-title--container > span {
     font-weight: bold;
     color: #000;
-    text-shadow: 1px 1px 2px white;
+    text-shadow: 1px 1px 2px rgb(5, 207, 207);
     font-size: 1.1rem;
     background-color: var(--main-bgColorLightGrey);
     padding: 0 1px;
@@ -103,11 +103,14 @@
 
 .projects-subtitle {
     font-family: 'press start 2p';
-    color: var(--main-titleColor);
+    color: #000;
     font-size: .8rem;
-    text-shadow: 1px 2px 2px black;
-    padding: 1rem 1rem 1rem 0;
+    text-shadow: 1px 1px 2px rgb(5, 207, 207);
+    margin: 1rem 1rem 1rem 0;
     font-weight: lighter;
+    background-color: var(--main-bgColorLightGrey);
+    width: fit-content;
+    padding: 0 2px;
 }
 
 .projects-description--container {
@@ -125,7 +128,7 @@
 }
 
 .projects-description--container ul li::marker{
-    color: #1877ff;
+    color: rgb(5, 207, 207);
 }
 
 .projects-description--container ul li{
@@ -179,7 +182,7 @@ code.subtituloOfSingleProject {
     font-weight: bolder;
     padding: 0 1px;
     font-size: .8rem;
-    text-shadow: 1px 1px 2px white;
+    text-shadow: 1px 1px 2px rgb(5, 207, 207);
     line-height: 1rem;
 }
 
