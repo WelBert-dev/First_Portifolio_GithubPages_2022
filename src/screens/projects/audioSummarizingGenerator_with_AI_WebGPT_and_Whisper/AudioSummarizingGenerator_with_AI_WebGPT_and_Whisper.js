@@ -15,7 +15,7 @@ export default function AudioSummarizingGenerator_with_AI_WebGPT_and_Whisper() {
                     <a href="https://github.com/WelBert-dev/ExtractTranscriptFromVideoAndSummarizingGeneratorUsingGPT/tree/main" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                 </div>
                 <span>Ciência de Dados: Utilizando GPT e Whisper</span>
-                <code className="token_reservada --dateOfImplementation">Desenvolvido em 18/05/2023</code>
+                <code className="subtituloOfSingleProject --dateOfImplementation">Desenvolvido em 18/05/2023</code>
                 <p>Código do projeto clicando no botão acima</p>
             </div>
             <div>

@@ -14,7 +14,7 @@ export default function CloneNetflix_reactJs_consuming_API_TMDB_B7Web() {
                     <a href="https://github.com/WelBert-dev/netflixCloneWeb-NoE2E-react" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                 </div>
                 <span>WEB NoE2E</span>
-                <code className="token_reservada --dateOfImplementation">Desenvolvido em 08/07/2022</code>
+                <code className="subtituloOfSingleProject --dateOfImplementation">Desenvolvido em 08/07/2022</code>
                 <p>Código do projeto clicando no botão acima</p>
             </div>
             <div>

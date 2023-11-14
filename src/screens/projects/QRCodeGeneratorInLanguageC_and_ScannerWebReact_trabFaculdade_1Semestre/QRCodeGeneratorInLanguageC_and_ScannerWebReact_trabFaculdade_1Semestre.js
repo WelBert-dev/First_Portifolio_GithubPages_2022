@@ -14,7 +14,7 @@ export default function QRCodeGeneratorInLanguageC_and_ScannerWebReact_trabFacul
                     <a href="https://github.com/WelBert-dev/QRCodeReader_SummarizingInvoiceNotes" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                 </div>
                 <span>WEB E2E + Módulo QR Code Generator em linguagem C</span>
-                <code className="token_reservada --dateOfImplementation">Desenvolvido em 05/05/2023</code>
+                <code className="subtituloOfSingleProject --dateOfImplementation">Desenvolvido em 05/05/2023</code>
                 <p>Código do projeto clicando no botão acima</p>
             </div>
             <div>

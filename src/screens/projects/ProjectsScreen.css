@@ -172,10 +172,24 @@ a.-linkBoldYellowProjects {
     font-size: .7rem;
 }
 
-code.token_reservada.--dateOfImplementation {
+code.subtituloOfSingleProject {
+    background-color: var(--main-bgColorLightGrey);
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
+    color: #000;
+    font-weight: bolder;
+    padding: 0 1px;
+    font-size: .8rem;
+    text-shadow: 1px 1px 2px white;
+    line-height: 1rem;
+}
+
+code.subtituloOfSingleProject.--dateOfImplementation {
     font-size: .9rem;
     margin: 3px 0;
 }
+
+
+
 
 @media (max-width: 810px)
 {
@@ -206,6 +220,10 @@ code.token_reservada.--dateOfImplementation {
     .projects-right {
         max-width: 100%;
         margin: 0 auto;
+    }
+
+   code.subtituloOfSingleProject {
+        font-size: .7rem;
     }
 }
 
@@ -250,7 +268,7 @@ code.token_reservada.--dateOfImplementation {
         padding-right: 0px;
     }
 
-    code.token_reservada.--dateOfImplementation {
+    code.subtituloOfSingleProject.--dateOfImplementation {
         font-size: .7rem;
         border-radius: 0;
     }

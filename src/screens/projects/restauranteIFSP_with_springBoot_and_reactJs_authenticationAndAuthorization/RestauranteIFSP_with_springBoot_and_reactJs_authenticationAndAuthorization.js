@@ -14,7 +14,7 @@ export default function RestauranteIFSP_with_springBoot_and_reactJs_authenticati
                     <a href="https://github.com/WelBert-dev/backupLg3Ecommerce-Springboot" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                 </div>
                 <span>WEB E2E</span>
-                <code className="token_reservada --dateOfImplementation">Desenvolvido em 12/10/2022</code>
+                <code className="subtituloOfSingleProject --dateOfImplementation">Desenvolvido em 12/10/2022</code>
                 <p>Código do projeto clicando no botão acima</p>
             </div>
             <div>

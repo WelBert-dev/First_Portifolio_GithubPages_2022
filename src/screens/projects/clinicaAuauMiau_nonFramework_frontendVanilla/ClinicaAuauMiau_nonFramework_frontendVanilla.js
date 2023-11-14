@@ -14,7 +14,7 @@ export default function ClinicaAuauMiau_nonFramework_frontendVanilla() {
                     <a href="https://github.com/WelBert-dev/auauMiauWeb-NoFramework" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                 </div>
                 <span>WEB NoE2E (HTML5 + CSS3 + Js PURO)</span>
-                <code className="token_reservada --dateOfImplementation">Desenvolvido em 08/06/2022</code>
+                <code className="subtituloOfSingleProject --dateOfImplementation">Desenvolvido em 08/06/2022</code>
                 <p>Código do projeto clicando no botão acima</p>
             </div>
             <div>

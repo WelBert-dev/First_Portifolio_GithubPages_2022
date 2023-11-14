@@ -14,7 +14,7 @@ export default function CloneAmazon_with_reactJs_and_aspNetCore() {
                     <a href="https://github.com/welBert-dev/ecommerceWebApi-microServices-dotNetCoreMVC" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                 </div>
                 <span>WEB E2E</span>
-                <code className="token_reservada --dateOfImplementation">Desenvolvido em 15/08/2022</code>
+                <code className="subtituloOfSingleProject --dateOfImplementation">Desenvolvido em 15/08/2022</code>
                 <p>Código do projeto clicando no botão acima</p>
             </div>
             <div>
