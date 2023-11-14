@@ -4,6 +4,18 @@ import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
 import './SkillsScreen.css';
 
+import spring_framework_logo_icon from '../../resources/images/skills/spring_framework_icon.png';
+import gnu_linux_logo_icon from '../../resources/images/skills/gnu_linux_icon.jpeg';
+import mysql_sgbd_logo_icon from '../../resources/images/skills/sgbd_mysql_icon.webp';
+import network_generic_logo_icon from '../../resources/images/skills/network_generic_icon.png';
+import reactJs_framework_logo_icon from '../../resources/images/skills/reactJs_framework_icon.png';
+import git_version_control_logo_icon from '../../resources/images/skills/git_version_control_icon.png';
+import javascript_vanilla_logo_icon from '../../resources/images/skills/javascript_vanilla_icon.webp';
+import html5_markup_language_logo_icon from '../../resources/images/skills/html_5_markup_language_icon.png';
+import css3_style_language_logo_icon from '../../resources/images/skills/css_3_style_language_icon.png';
+import python3_logo_icon from '../../resources/images/skills/python3_icon.webp';
+
+
 export default function SkillsScreen() {
     return (
     <section id="main-skills--container">
@@ -20,7 +32,7 @@ export default function SkillsScreen() {
                     </div>
                 </article>
                 <article className="skill-tec">
-                    <img className="icon" src="https://img.icons8.com/?size=512&id=90519&format=png" alt="Logo do Spring" ></img>
+                    <img className="icon" src={spring_framework_logo_icon} alt="Logo do Spring" ></img>
                     <div className="right">
                         <h3 className="title-skill">Ecossistema Spring</h3>
                         <progress className="progress-bar --skills" max="100" value="75">75%</progress>
@@ -29,7 +41,7 @@ export default function SkillsScreen() {
                     </div>
                 </article>
                 <article className="skill-tec">
-                    <img className="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYv-yyBU4zGaGs3KHVHdWZqwDIZiIt164ysqLX67ejKpZDPGfcXrBFN9_yOgZuzwfgSDw&usqp=CAU" alt="Logo do GNU/Linux" ></img>
+                    <img className="icon" src={gnu_linux_logo_icon} alt="Logo do GNU/Linux" ></img>
                     <div className="right">
                         <h3 className="title-skill">GNU/Linux</h3>
                         <progress className="progress-bar --skills" max="100" value="90">90%</progress>
@@ -38,7 +50,7 @@ export default function SkillsScreen() {
                     </div>
                 </article> 
                 <article className="skill-tec">
-                    <img className="icon" src="https://cdn.iconscout.com/icon/free/png-256/mysql-3628940-3030165.png" alt="Logo do MySQL" ></img>
+                    <img className="icon" src={mysql_sgbd_logo_icon} alt="Logo do MySQL" ></img>
                     <div className="right">
                         <h3 className="title-skill">MySQL</h3>
                         <progress className="progress-bar --skills" max="100" value="70">70%</progress>
@@ -46,7 +58,7 @@ export default function SkillsScreen() {
                     </div>
                 </article>
                 <article className="skill-tec">
-                    <img className="icon" src="https://cdn-icons-png.flaticon.com/512/2452/2452573.png" alt="Logo Redes Internet" ></img>
+                    <img className="icon" src={network_generic_logo_icon} alt="Logo Redes Internet" ></img>
                     <div className="right">
                         <h3 className="title-skill">Redes (Internet)</h3>
                         <progress className="progress-bar --skills" max="100" value="75">75%</progress>
@@ -55,22 +67,22 @@ export default function SkillsScreen() {
                     </div>
                 </article>
                 <article className="skill-tec">
-                    <img className="icon" src="https://gitlab.com/uploads/-/system/project/avatar/14519101/react-256.png" alt="Logo do ReacJs" ></img>
+                    <img className="icon" src={reactJs_framework_logo_icon} alt="Logo do ReacJs" ></img>
                     <div className="right">
-                        <h3 className="title-skill">ReactJs</h3>
+                        <h3 className="title-skill">React.Js</h3>
                         <progress className="progress-bar --skills" max="100" value="75">75%</progress>
                         <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/firstPortifolioGithubPages-2022" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                     </div>
                 </article>  
                 <article className="skill-tec">
-                    <img className="icon" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTim1Q8F1L5j-MqUTl_J_dHHHHeSFmTSz102sZye0U3iNEUdvLMPevqIYCkLzrNk2KioG4&usqp=CAU" alt="Logo do Git" ></img>
+                    <img className="icon" src={git_version_control_logo_icon} alt="Logo do Git" ></img>
                     <div className="right">
                         <h3 className="title-skill">Git</h3>
                         <progress className="progress-bar --skills" max="100" value="70">70%</progress>
                     </div>
                 </article>                           
                 <article className="skill-tec">
-                    <img className="icon" src="https://cdn.iconscout.com/icon/free/png-256/javascript-2038874-1720087.png" alt="Logo do JavaScript" ></img>
+                    <img className="icon" src={javascript_vanilla_logo_icon} alt="Logo do JavaScript" ></img>
                     <div className="right">
                         <h3 className="title-skill">JavaScript</h3>
                         <progress className="progress-bar --skills" max="100" value="80">80%</progress>
@@ -78,7 +90,7 @@ export default function SkillsScreen() {
                     </div>
                 </article>
                 <article className="skill-tec">
-                    <img className="icon" src="https://cdn-icons-png.flaticon.com/512/919/919827.png" alt="Logo do HTML5" ></img>
+                    <img className="icon" src={html5_markup_language_logo_icon} alt="Logo do HTML5" ></img>
                     <div className="right">
                         <h3 className="title-skill">HTML5</h3>
                         <progress className="progress-bar --skills" max="100" value="90">90%</progress>
@@ -86,7 +98,7 @@ export default function SkillsScreen() {
                     </div>
                 </article>
                 <article className="skill-tec">
-                    <img className="icon" src="https://cdn-icons-png.flaticon.com/512/919/919826.png" alt="Logo do CSS3" ></img>
+                    <img className="icon" src={css3_style_language_logo_icon} alt="Logo do CSS3" ></img>
                     <div className="right">
                         <h3 className="title-skill">CSS3</h3>
                         <progress className="progress-bar --skills" max="100" value="70">70%</progress>
@@ -112,7 +124,7 @@ export default function SkillsScreen() {
                     </div>
                 </article>
                 <article className="skill-tec">
-                    <img className="icon" src="https://cdn.iconscout.com/icon/free/png-256/python-3521655-2945099.png" alt="Logo do Python" ></img>
+                    <img className="icon" src={python3_logo_icon} alt="Logo do Python" ></img>
                     <div className="right">
                         <h3 className="title-skill">Python</h3>
                         <progress className="progress-bar --skills" max="100" value="50">50%</progress>
