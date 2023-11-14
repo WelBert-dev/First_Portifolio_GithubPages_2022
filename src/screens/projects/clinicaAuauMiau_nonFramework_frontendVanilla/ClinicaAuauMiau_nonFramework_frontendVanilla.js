@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
-import auauMiauNoFrameworkAmostra from '../../../resources/images/auauMiauNoFramework.png';
+import auauMiauNoFrameworkAmostra from '../../../resources/images/projects/auauMiauNoFramework.png';
 
 export default function ClinicaAuauMiau_nonFramework_frontendVanilla() {
     return (    

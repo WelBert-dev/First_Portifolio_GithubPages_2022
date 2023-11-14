@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
-import amazonAmostra from '../../../resources/images/amazona.jpg';
+import amazonAmostra from '../../../resources/images/projects/amazona.jpg';
 
 export default function CloneAmazon_with_reactJs_and_aspNetCore() {
     return (    

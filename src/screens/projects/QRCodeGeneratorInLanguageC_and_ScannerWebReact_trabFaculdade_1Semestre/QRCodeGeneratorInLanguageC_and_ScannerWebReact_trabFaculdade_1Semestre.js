@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
-import logoQrCodeGenerator from '../../../resources/images/logo-qrcodeGeneratorInC.png';
+import logoQrCodeGenerator from '../../../resources/images/projects/logo-qrcodeGeneratorInC.png';
 
 export default function QRCodeGeneratorInLanguageC_and_ScannerWebReact_trabFaculdade_1Semestre() {
     return (

@@ -4,7 +4,7 @@ import './JavaBibleScreen.css';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
-import logoMaratonaJavaDevDojo from '../../resources/images/maratonaJavaDevDojoLogo.jpg';
+import logoMaratonaJavaDevDojo from '../../resources/images/projects/maratonaJavaDevDojoLogo.jpg';
 
 export default function JavaBibleScreen() {
 

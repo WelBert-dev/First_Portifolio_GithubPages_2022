@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
-import netflixAmostra from '../../../resources/images/NetFlixCloneWeb.gif';
+import netflixAmostra from '../../../resources/images/projects/NetFlixCloneWeb.gif';
 
 export default function CloneNetflix_reactJs_consuming_API_TMDB_B7Web() {
     return (    

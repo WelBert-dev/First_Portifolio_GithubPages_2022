@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
-import restauranteIfspAmostra from '../../../resources/images/restauranteIfspAmostra.png';
+import restauranteIfspAmostra from '../../../resources/images/projects/restauranteIfspAmostra.png';
 
 export default function RestauranteIFSP_with_springBoot_and_reactJs_authenticationAndAuthorization() {
     return (

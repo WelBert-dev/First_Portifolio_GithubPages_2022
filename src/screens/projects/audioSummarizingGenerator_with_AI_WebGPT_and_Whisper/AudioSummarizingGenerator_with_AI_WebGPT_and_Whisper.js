@@ -2,8 +2,8 @@ import React from 'react';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
-import logoVideoSummaryGeneratorWithGPT from '../../../resources/images/logo-videoSummaryGeneratorWithGPT.png';
-import logoVideoAkitaExemploCap07 from '../../../resources/images/logo-videoAkita-videoSummaryGeneratorWithGPT.png';
+import logoVideoSummaryGeneratorWithGPT from '../../../resources/images/projects/logo-videoSummaryGeneratorWithGPT.png';
+import logoVideoAkitaExemploCap07 from '../../../resources/images/projects/logo-videoAkita-videoSummaryGeneratorWithGPT.png';
 
 export default function AudioSummarizingGenerator_with_AI_WebGPT_and_Whisper() {
     return (

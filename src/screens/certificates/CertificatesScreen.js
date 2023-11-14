@@ -2,43 +2,33 @@ import React, { useEffect, useState } from 'react';
 
 import { BsFillFolderSymlinkFill } from 'react-icons/bs';
 
-import diplomaTecnicoInformaticaIFSP from '../../resources/images/diploma-tecnicoInformatica-ifsp.png';
+import diplomaTecnicoInformaticaIFSP from '../../resources/images/certificates/diploma-tecnicoInformatica-ifsp.png';
 
-import portariaNormativaCeicP01 from '../../resources/images/portariaNormativaCeic-parte01.png';
-import portariaNormativaCeicP02 from '../../resources/images/portariaNormativaCeic-parte02.png';
+import portariaNormativaCeicP01 from '../../resources/images/certificates/portariaNormativaCeic-parte01.png';
+import portariaNormativaCeicP02 from '../../resources/images/certificates/portariaNormativaCeic-parte02.png';
 
-import bolsaEnsinoAmostra from '../../resources/images/amostraBolsaEnsino.png';
-import bolsaEnsinoP02Amostra from '../../resources/images/bolsaEnsinoP02.png';
-import bolsaEnsinoP03Amostra from '../../resources/images/bolsaEnsinoP03.png';
-import bolsaEnsinoRelatorioP01 from '../../resources/images/relatorioMensal01-parte01.png';
-import bolsaEnsinoRelatorioP01P02 from '../../resources/images/relatorioMensal01-parte02.png';
-import bolsaEnsinoRelatorioP02P01 from '../../resources/images/relatorioMensal02-parte01.png';
-import bolsaEnsinoRelatorioP02P03 from '../../resources/images/relatorioMensal02-parte03.png';
-import bolsaEnsinoRelatorioP03P01 from '../../resources/images/relatorioMensal03-parte01.png';
-import bolsaEnsinoRelatorioP03P02 from '../../resources/images/relatorioMensal03-parte02.png';
+import bolsaEnsinoAmostra from '../../resources/images/certificates/amostraBolsaEnsino.png';
+import bolsaEnsinoP02Amostra from '../../resources/images/certificates/bolsaEnsinoP02.png';
+import bolsaEnsinoP03Amostra from '../../resources/images/certificates/bolsaEnsinoP03.png';
 
-import ciscoModule01Amostra from '../../resources/images/ciscoModule01Amostra.png';
-import ciscoModule02Amostra from '../../resources/images/ciscoModule02Amostra.png';
+import ciscoModule01Amostra from '../../resources/images/certificates/ciscoModule01Amostra.png';
+import ciscoModule02Amostra from '../../resources/images/certificates/ciscoModule02Amostra.png';
 
-import cursoEmVideoPython3Mundo01 from '../../resources/images/Python3Mundo1-40-Horas-Certificado-Curso-em-Video.png';
+import cursoEmVideoPython3Mundo01 from '../../resources/images/certificates/Python3Mundo1-40-Horas-Certificado-Curso-em-Video.png';
 
-import workshopTvBoxFlisol from '../../resources/images/flisolTVBox.png';
-import workshopLinguagemC from '../../resources/images/flisolLinguagemC.png';
+import workshopTvBoxFlisol from '../../resources/images/certificates/flisolTVBox.png';
+import workshopLinguagemC from '../../resources/images/certificates/flisolLinguagemC.png';
 
-import workshopAutomacaoIndustrialP01 from '../../resources/images/workshopAutomacaoIndustrial-IFCiencia.png';
-import workshopAutomacaoIndustrialP02 from '../../resources/images/workshopAutomacaoIndustrial-IFCiencia-parte02.png';
+import workshopAutomacaoIndustrialP01 from '../../resources/images/certificates/workshopAutomacaoIndustrial-IFCiencia.png';
+import workshopAutomacaoIndustrialP02 from '../../resources/images/certificates/workshopAutomacaoIndustrial-IFCiencia-parte02.png';
 
-import workshopNodeRed from '../../resources/images/nodeRed-IoT-ifciencia2021-28-10-2021.png';
-import relatorioNodeRedP01 from '../../resources/images/relatorioNodeRed2021-parte01.png';
-import relatorioNodeRedP02 from '../../resources/images/relatorioNodeRed2021-parte02.png';
-import relatorioNodeRedP03 from '../../resources/images/relatorioNodeRed2021-parte03.png';
-import relatorioNodeRedP04 from '../../resources/images/relatorioNodeRed2021-parte04.png';
+import workshopNodeRed from '../../resources/images/certificates/nodeRed-IoT-ifciencia2021-28-10-2021.png';
 
-import workshopBolsaValores from '../../resources/images/bolsaDeValores-ifciencia2021-29-10-2021.png';
+import workshopBolsaValores from '../../resources/images/certificates/bolsaDeValores-ifciencia2021-29-10-2021.png';
 
-import cursoFundacBradescJavaDesktop from '../../resources/images/cursoFundacBradesc-JavaDesktop-certificate.png';
-import cursoFundacBradescHTMLAvanc from '../../resources/images/cursoFundacBradesc-HTMLAvanc-certificate.png';
-import cursoFundacBradescCSS from '../../resources/images/cursoFundacBradesc-CSS3Inova-certificate.png';
+import cursoFundacBradescJavaDesktop from '../../resources/images/certificates/cursoFundacBradesc-JavaDesktop-certificate.png';
+import cursoFundacBradescHTMLAvanc from '../../resources/images/certificates/cursoFundacBradesc-HTMLAvanc-certificate.png';
+import cursoFundacBradescCSS from '../../resources/images/certificates/cursoFundacBradesc-CSS3Inova-certificate.png';
 
 import './CertificatesScreen.css';
 
@@ -136,13 +126,8 @@ export default function CertificatesScreen() {
                     </div>
                 </div>
             </article>
-
-
             <hr />
-
-            
             <h1 className="main-title -complementaryActivities">&lsaquo;Formação Acadêmica Nível Técnico&rsaquo;</h1>
-        
             <div>
             <article className="certificate-single -bolsaEnsinoCertficate">
                 <div>
@@ -166,9 +151,7 @@ export default function CertificatesScreen() {
                 </div>
             </article>  
             <hr/>
-
             <h1 className="main-title -complementaryActivities">&lsaquo;Participei da Comissão na Instituição Federal&rsaquo;</h1>
-
             <article className="certificate-single -bolsaEnsinoCertficate">
                     <div>
                         <div className="projects-title--container -certificateTitleContainer">
@@ -186,7 +169,6 @@ export default function CertificatesScreen() {
                                 <hr className="certificates-autenticCode--spanSeparator -widthSpanSeparator" />
                                 <span className="certificates-autenticCode--span">Código de Autenticidade: </span>
                                 <span className="certificates-autenticCode--span">c70a71e451</span>
-
                             </div>
                             <p>Validação automática clicando no botão a cima.</p>
                         </div>
@@ -197,9 +179,7 @@ export default function CertificatesScreen() {
                     </div>
                 </article>  
                 <hr />
-                
                 <h1 className="main-title -complementaryActivities">&lsaquo;Ganhei Bolsa Ensino na Instituição Federal&rsaquo;</h1> 
-
                 <article className="certificate-single -bolsaEnsinoCertficate">
                     <div>
                         <div className="projects-title--container -certificateTitleContainer">
@@ -218,21 +198,11 @@ export default function CertificatesScreen() {
                             <img src={bolsaEnsinoAmostra}></img>
                             <img src={bolsaEnsinoP02Amostra}></img>
                             <img src={bolsaEnsinoP03Amostra}></img>
-                            <img src={bolsaEnsinoRelatorioP01}></img>
-                            <img src={bolsaEnsinoRelatorioP01P02}></img>
-                            <img src={bolsaEnsinoRelatorioP02P01}></img>
-                            <img src={bolsaEnsinoRelatorioP02P03}></img>
-                            <img src={bolsaEnsinoRelatorioP03P01}></img>
-                            <img src={bolsaEnsinoRelatorioP03P02}></img>
                         </div>
                     </div>
-                    
                 </article>  
-
                 <hr/>
-
                 <h1 className="main-title -complementaryActivities">&lsaquo;Atividades Complementares para Técnico em Informática&rsaquo;</h1>
-
                 <article className="certificate-single -bolsaEnsinoCertficate">
                     <div>
                         <div className="projects-title--container -certificateTitleContainer">
@@ -251,7 +221,6 @@ export default function CertificatesScreen() {
                             <img src={ciscoModule01Amostra}></img>
                         </div>
                     </div>
-                
                 </article>  
                 <hr />
                 <article className="certificate-single -bolsaEnsinoCertficate">
@@ -272,7 +241,6 @@ export default function CertificatesScreen() {
                             <img src={ciscoModule02Amostra}></img>
                         </div>
                     </div>
-                
                 </article>  
                 <hr />
                 <article className="certificate-single -bolsaEnsinoCertficate">
@@ -296,14 +264,9 @@ export default function CertificatesScreen() {
                             <img src={cursoEmVideoPython3Mundo01}></img>
                         </div>
                     </div>
-                
                 </article>  
-
                 <hr />
-
-
                 <h1 className="main-title">&lsaquo;WorkShops&rsaquo;</h1>
-
                 <article className="certificate-single -bolsaEnsinoCertficate">
                     <div>
                         <div className="projects-title--container -certificateTitleContainer">
@@ -322,7 +285,6 @@ export default function CertificatesScreen() {
                             <img src={workshopTvBoxFlisol}></img>
                         </div>
                     </div>
-                
                 </article>  
                 <hr/>
                 <article className="certificate-single -bolsaEnsinoCertficate">
@@ -343,7 +305,6 @@ export default function CertificatesScreen() {
                             <img src={workshopLinguagemC}></img>
                         </div>
                     </div>
-                
                 </article> 
                 <hr/>
                 <article className="certificate-single -bolsaEnsinoCertficate">
@@ -365,7 +326,6 @@ export default function CertificatesScreen() {
                             <img src={workshopAutomacaoIndustrialP02}></img>
                         </div>
                     </div>
-                
                 </article> 
                 <hr/>
                 <article className="certificate-single -bolsaEnsinoCertficate">
@@ -382,11 +342,10 @@ export default function CertificatesScreen() {
                             </div>
                             <p>Documento oficial clicando no botão acima.</p>
                         </div>
-                        <div className="bolsaEnsinoImageWrapper">
+                        <div className="bolsaEnsinoImageWrapper -maxHeigthNone">
                             <img src={workshopNodeRed}></img>
                         </div>
                     </div>
-                
                 </article> 
                 <hr/>
                 <article className="certificate-single -bolsaEnsinoCertficate -certificateLastChildArticle">
@@ -407,7 +366,6 @@ export default function CertificatesScreen() {
                             <img src={workshopBolsaValores}></img>
                         </div>
                     </div>
-                
                 </article> 
             </div>             
         </div>
