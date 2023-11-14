@@ -42,7 +42,7 @@ export default function SkillsScreen() {
                     <div className="right">
                         <h3 className="title-skill">MySQL</h3>
                         <progress className="progress-bar --skills" max="100" value="70">70%</progress>
-                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/MySQL-Study/blob/main/DQL/Agrupamentos/index.sql" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/MySQL-Study/blob/main/DQL" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                     </div>
                 </article>
                 <article className="skill-tec">
@@ -51,7 +51,7 @@ export default function SkillsScreen() {
                         <h3 className="title-skill">Redes (Internet)</h3>
                         <progress className="progress-bar --skills" max="100" value="75">75%</progress>
                         <span className="-OldStudy">06/2021 até 06/2022</span>
-                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/Redes-Study/tree/main" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        <span><a className="-linkBoldYellow" href="https://drive.google.com/drive/folders/1BF_r6-pTfeBzA3w0u0CdUrZte48O9kOq?usp=sharing" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                     </div>
                 </article>
                 <article className="skill-tec">
@@ -59,7 +59,7 @@ export default function SkillsScreen() {
                     <div className="right">
                         <h3 className="title-skill">ReactJs</h3>
                         <progress className="progress-bar --skills" max="100" value="75">75%</progress>
-                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/backupLg3Ecommerce-Springboot/blob/main/managerPermissionsOfUsers-react.txt" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/firstPortifolioGithubPages-2022" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                     </div>
                 </article>  
                 <article className="skill-tec">
@@ -74,7 +74,7 @@ export default function SkillsScreen() {
                     <div className="right">
                         <h3 className="title-skill">JavaScript</h3>
                         <progress className="progress-bar --skills" max="100" value="80">80%</progress>
-                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/auauMiauWeb-NoFramework/blob/main/js/manterClienteView.js" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/firstPortifolioGithubPages-2022" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                     </div>
                 </article>
                 <article className="skill-tec">
@@ -82,7 +82,7 @@ export default function SkillsScreen() {
                     <div className="right">
                         <h3 className="title-skill">HTML5</h3>
                         <progress className="progress-bar --skills" max="100" value="90">90%</progress>
-                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/auauMiauWeb-NoFramework/tree/main/pages" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/firstPortifolioGithubPages-2022" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                     </div>
                 </article>
                 <article className="skill-tec">
@@ -90,16 +90,16 @@ export default function SkillsScreen() {
                     <div className="right">
                         <h3 className="title-skill">CSS3</h3>
                         <progress className="progress-bar --skills" max="100" value="70">70%</progress>
-                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/auauMiauWeb-NoFramework/tree/main/components" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/firstPortifolioGithubPages-2022" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                     </div>
                 </article>
                 <article className="skill-tec">
                     <img className="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAkFBMVEVtQpxcLZH///9iNZVsQJvy8vL9/P5iL5ZVHY7h2upYJo+EZqrk3uxkM5eGaqtODom5rM1pPJr18/hxS55MBYj4+fbPxN1gK5VXIo/s5/JjMJZRFou/sdFaKZBoOJrXzuN9WabHuteYfrjy7/azocqOc7F/XKd5U6Srl8SfiLvTyeCchrq5qM7o5eurmMLWz99qRIb1AAAQaElEQVR4nNWdaaOiIBSGuUbZZkWLmpbtZfv//3eDGq6gaGjM++HOzK071yfgcM7hAECpXdPlZjd5Xffnywyg1l8LgdnlvL++JvpmOa3/14M6//PDZnLftrpz2+6aZn+9/iNar/um2bXtebe1vU82hzofoi7Cg+5u7fm4i8H+8oRRu+O5vXX1ujDrIDzs9si2zX4uWlJ90x639rs6KEUTdm5XMLfN/IZjNKdpz8H91hH8REIJO/rJHleii1F2T7pQSIGE+si2y/RMlvoepLjHEkXYu3eF4BFI010KejIxhCswN4XhBTLnl5WQZxNAeHjZ9jdjj6W+bb8EGNevCYd7u1sDXqCuvR/+mHA4Et49kzLnoy8ZvyIcjsbirAtL/fF3jF8QLkfz+vl8xvnoC8NambBzHdfbP+Myx9fKXkBVwpVZn32hqWtWnTuqEfaA3SifJxv0miO8zuuY/4q0nl8bIrytm+2gkbrrWxOE+580YKD1fF87Ya/VnAWlyWyVHY0lCV8/bMBA6/mrRsLprHkTmpV9KZWhK0O4KZV6qU99c1MP4XH+a7RQ82MNhJ2BDD2UaDzg9uJ4CafgtzY0LRPwDkZOwqEkQzBS3+SMqfgIb+NfTxJZrcd8Dg4X4UQeGxPXnCvc4CF8yAmIESdiCCWaJdLimTWKCY9q69cgbHG4cIWERwOA/xqxiPCBAeVGfHxHuPIB5UYssKj5hLsPoNyIu+qEGwOC/wExN9TII1xaICaJEe28hHEO4RRC8H8grtc5bngO4RYB8J8g9mdVCE8OSEteRHNQnvBhZQBlRhwz/TcW4cagAMqMyDSoDMKpA6mEEiN2GSviDMKMlZEfkWVt6IQvjQUoMaLt8hP26INQdkT6UKQRdgBjEEqOuP6jpRhphPvsTPh/IJp7PsJbbh+VGnFOqYejEKL8Pioz4rrPQ3gt6qMyI5r3YsJ8Oyo94jizgJohvDDn+v8CcQ2LCFc5c/1/gWin0zYpwg6PmZEb0ezkErpcZkZqxK6bR7hUSzShrIjjQw7hntfMyIxontiEQ86ZQnLE+ZBJeCrbhHIi9gcswqFaHlBKxMS0Hyes0oRSIiYaMUa4LByFMJTkiPGRGCMsNKQQOUTJt9IQza6vTI1Kv5svM/nzXMr+khON8KAVzYVWT+kESgfJWcTuzn+vchinvj8h/wdD06Dqw9YL3heTMs2sw4+XFMJjoTujRgN4igo6qv2JRdO/vFtUXNAJCnfsMrWyWUIzKieOCAubME6o6Cm7m0b8MeHfOEu4Kw4q4oTKKDVqU4i/JoxCjJDwXDxVJAgzwzaJ+GvCdZgfJoQ8DluCUJmkl24SiL8m/JuThyWEPNmZJGG21eOIhYRDhnqBLe2uMq8Q87jM/gylMDTM2BBC1kpMDmHWQ4ghFhKi+Zgu8sb09+dn8slmfpJa+dpNEuq01UIWIQmijxnjFCEWEs7KVjv2R5+fHPAVgpIn+BByBYaEMKzRmWUavpX+/39HSN4fEHaKJ8M4IcksUzKPBPH3hH/2NEaoc2XYCOHuQhqRYp9a8hDqMUK+7AUh3NikCqkDs23fkoXw4377hB0eSxoR9iyNGBvaKk5LEsK/bick3PBY0ohwqKI96ae0qLklCWFQCO4TcmZJI0JgEJdjSvvRlhyEQYDhE174sqQhoYWjfdKIO3rdjQyEa0AID5xJxFgbAicMwAY0K9WSgfBvfvgQcgROGUJgEBduadF6gCkDYXf1IeTNdCcIYRiePGgfkCYDoZ/99gizzhcHIXDCFRDaMJaCcN0KCA98c0WaEBgkZUeLLaUg9BdpAK/LliWEW9KIlNlGDkLP3oESa4YpQqCFQUa2xEgOQtP1CQe8a4ZpQmCQlbpsraYchP2tT8i9KpohROH6QKaMSg5CL6kIOJYrmITAIkFGOkMsC+F8iQlv3NUXWUKokiL5XSpDHBKmcighIbCpSxBs7kqE9g0TPriLE7KEAIVLICnnLSRM7XwLCadUdU7Mx69E2D1iQv61ewohUElGI+W8hYRGMo9alC8VTIi9GsCT7M4hhIgEw0nnLUaYQGyYcD3DhAXlsgWEwAlr5RLOW5wwjtgw4Z+mgCl/mReVEBik9jiReUsQxhCbJrSnYMlfnkAnhOHiTtw5ShJGiE0Tjpdg820bxoKMWIdPEYaIIeGSqsNIdBvewI6/ko1BGAXDMectTUgQi9Yt2E9fkXAHJt8TojBDHDlvGcIPYsM+zV/3AYqX7wsJgUa2VUWbibKEAWLThKYLXP4yISYhMMjaXph5oxD6iI0TXsFdBCEia3uh80Yj9BCbJuyfwIi/opRNCCxSGECW96mEGLFpwvUZnIUQRkHGx3mjE4JW44QXsBVCGAsyAueNQQj6DRP+zcCFGzCXMAoygldZhM6qYUIAeJOlRYTAIUGG77yxCLWmCUtVlBYQhkGG96FJQ9gSRxgFGZ7zpt0kIfwTSBgFGXdHpjYUNg5jQUbHgdpOEkIkzJZ6CoMMXSU28+eEUNR86CsKMkbqRBLCmSCfhjw/CTIO5rGA8FL2EL/KPg33qgUPYRRkPPYFhGetGcIzYKZLs8VAHIRRkFFICEtuYqgcWzDiQ0dD0EoFxxyEUZCxLCQsuU+jcnxIj/GN6wE/5DX5eDyE0EjujWMSbnEfaZWxNpVjfOqyBWmJZLEMDyFAIz7Ci4MQ+jMpYgBUztPQcm1RUVciA8BFGAUZ+YQdfyGGtjizoh+IXjnXRsuXWmG5cyJfzEcItCkPIVs7+nG+lfOltJy3EW0WjndTTsKoB0hAOF5S1y1ihBXaMCrrk4DQnlLXnqJeOqxCCGH0Cf2aUKOvH0ZJl315SwPiZX2/JvTXD2lODfEvk0eakaYtXq4Kgwx2nqYZwv6JtY5v7XvTaW+frAeDs48KXVmIZoz3QjCjCLXiYj1u8C7Ez/dZx6fXYiDLcax061L3yNIR6ftpE6/E1VpHYj5u0esU+bUYrHoaHhBxqmkvsV9Pw18TVavqQRyXq2urV3Ugfurayp1nUp9qQPSq9cvUl9Yt8Yif+lLuGuHaJRzR27TuZXH5a4bqlmDEtaaUq9VvQGIRw1p93v0WTUgoYnf3IeSvoW1AIhHnyw8h94aLRiQOcY0UQngVOxAh+Mp2CUMMNqyX2X/II+RYnsOOLMup/LGJQrSj/Yece0g5+NTz4/1sYz3fk1FlAyYIMbaHVNB8AdV9b7Fof7RYPCt3DSGI8X3Ayk1EN0Vws/DJAr5F+1DpZC1hiIm93CK6Kdo+Mdvi7W6hqoHBVW+3qxOKQAw6aakzFfIBL17LDQdq8GEhZJUp7KwBkZwVVeZcjDxBhA3M4qbGPin4XVT2LWLqXAzl2xhRvS3aC90Q6Tp8iWgqScIvw2B0wmPwyZ4eoGOpqmpp8e1RQZ7KPyIteptmWRoxCl8hhmdhEcIvfVNtiPsodVe3/+DW4PEePp+93V4L3wPP5/MFQu0+Wb3g523bl/5+68ftZ//NN4jhoXTROVHfdDA0wk3InHK0wfszTS4WwxNpaANPKDt1NsR/LHzHGIGbN8d4E40O0ZeI67AspMxZX2xpOzwKWRktyw2mSf/x2wtyK4GB/75CeIbB3/f8WDRoB3je1+fsy1aknPXFcV4bWyo2pKxzCzTXnyavg+3A7Xl/vTsh4URfLN67XRvzoK0/27inkTvE1L1Ph6iKaCtZwhJF+2lBhJ+ckdCCA6/l7gbCdsUx/OYM2gcTtvXF82xo3tiE/kh+GQ5CjuH1CBLvVEM0XQph8bmJbMILfiTG/G708JOHg0994XcGA8LwR6Z/VQj+xY73gvvZJG5g2mdqK0o5Uc9NVEpU7acJcTstXlRCzwYtog2mUMUP3/bDR49wsfp0Rujgfv4mUGgfH9YVEE3q2ZdfTBg+Bp3Qt0GxfXvOFf/b9xF9QhIq+0zhWTcQ4ZeiUVMekXF+adUzaPMJcZu94zsyIenQHmHYFZ0VHqCmo33UfZK+XAmRdQZtxXOEvcc+48emrkNC6HXF+CsGfnjfKHm2NLRO2hvjrkJNcJ+Nr/qVRGSeI1y5ESFYxJ42KcyR8AitXowwPMUff/czZS7IxJkogymFyD4Lusp53oFww0Q9TgQh1jvxiZVBzDnPu3KYqN3aLJ+mnRqhbMLheRRXyo3kR8w7k730ufpE6L7wgsPsC75VTNwo4Y3DlZMm9MehieJKPwk34niZQ1g1iPKnM2psYeFH78Vt6Sw2W8QIsS1diLmEKf9uhHL3W8TkuH58mP1h54EfPVay4/kugduWIPTnw6IzVPkQC+63UFYV0xmerVm8E1lgGDhki5izggmfMa8tIoTogD+h2BihftI8iEV3lJS4ZyapT2iwJRUqEGmaX37s97/XJ70Bfac69LxjI9Rv6wnJgiDDpcarxYjF98xUnvadkx/9rc6qhZ0SFQ0muE08KO3pB4KagxwL6otE9BQRQst7mz6zHMfRrNObEZEXIs57hYSc9z3REIMI9vnWd7ehlxj2CQGaHTBWe3e8HnX85+L4GQdJQi8Axt9o3x6vie6FxYycQwEiz31PfHd20YRmN5LvDr5+vBIE3gsS4y/a1/AIptQ84pyfJBeAv7xZvyUXke/OLp571+iC1kAPHZPnahCaEes6DL552M3CHqKmPVbkTA4fn00/UQ/yK0TkvHet+O48prB5Gdzdl3s/ATVuV5F6OV3d/ciKzyeqYSR/EXTwT1+v+4Gm5Zk7NmLKm2ETFt1/mCeIvPxn1iPxvs/R/enuDCci//2H3Hev/UoMRP47LPPvIZVBVMQy95By3SPwU1EQy90ly74PWBZlEc1y9wGz7nSWR2nEsnc6M+7llklJxPL3clPvVpdLccQqd6vn3VwtiSJElpUpIMyc9iidCOK6P2Vj5BBWz582pg/ieJhDkUcov0ENEJlmtJhQ2f0PiPP8jUb5hMpKfsR5wSl+BYTKQ3ZE9VFAUESoHOVGNJgzPTeh3IjFgByEMndUo6iL8hFiiyrn1A+N4u2afISSThrQoOSdKhIqG3bq62eC2pvr2fkIlSWSzQ1HaFn82CUIlelFrmDKueQ425UIlc5IppDYOtESh98RehOjLIMRckyDVQiVTfVNIkKFnNxg4gtC5bCVIY+qbRlZNQGEivL6eU8t1UMrECo98Fub6oDMEqhgQkW5/rAZoZFdARVPqGx+1owOKGNiqhMqivuTYxigSl96qYNQGW4bd1Shtc3LqIkmxOEGanTtBjpoV/xQQgmVjqs2N/8j1eX20oQR4vl/bzTDiIx9qTleGCEejqcG2hGpp2oDUAQhdgBGRq2rGxAZo7JTvFhC3I57qzabAx1r/1X7CSHE49G1vtlRxObTLPeL8SeQEGt3VkV3Vkc9V50fkhJDiDvrVdOEQUJkIZczDVMoUYRY+skSAelVpu5vxb+OVwIJFWWq753v7A5uPWevV57daRJKiNXZuBejWlPixjMu15tQPEU8oafDbj+zNJ5CvQjO0azZXRdgOjOqg9DT4fYaaIZFqVJMsyHHMrSBWwudp7oIfR02j/sZaKrXoF5RJfTLOvFX6P0TN5uqgfP9sakLzlethIGmy42+Orr30Xl7mWHC2WV7Ht3d40rfLHkT11/oHza15EmN58T5AAAAAElFTkSuQmCC" alt="Logo do AspNetCore" ></img>
                     <div className="right">
-                        <h3 className="title-skill">Asp.NetCore</h3>
+                        <h3 className="title-skill">Windows Forms</h3>
                         <progress className="progress-bar --skills" max="100" value="30">30%</progress>
                         <span className="-OldStudy">08/2021 até 12/2021</span>
-                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/webApiAlunos-dotNetCoreMVC/tree/main" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        <span><a className="-linkBoldYellow" href="https://drive.google.com/drive/folders/1PGhOgWuOP1Clq6MlCTppBIYI0OZsEZv_?usp=sharing" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                     </div>
                 </article>
                 <article className="skill-tec">
@@ -108,7 +108,7 @@ export default function SkillsScreen() {
                         <h3 className="title-skill">C#</h3>
                         <progress className="progress-bar --skills" max="100" value="60">60%</progress>
                         <span className="-OldStudy">06/2021 até 12/2021</span>
-                        <span><a className="-linkBoldYellow" href="https://github.com/WelBert-dev/auauMiauWindowsForms-dotNetFramework/blob/main/F_Cliente.cs" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        <span><a className="-linkBoldYellow" href="https://drive.google.com/drive/folders/1PGhOgWuOP1Clq6MlCTppBIYI0OZsEZv_?usp=sharing" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                     </div>
                 </article>
                 <article className="skill-tec">
@@ -117,7 +117,7 @@ export default function SkillsScreen() {
                         <h3 className="title-skill">Python</h3>
                         <progress className="progress-bar --skills" max="100" value="50">50%</progress>
                         <span className="-OldStudy">01/2021 até 06/2021</span>
-                        <span><a className="-linkBoldYellow" href="https://drive.google.com/drive/folders/1T5XoQtEMf5zXosCcIMy2AxAtrCHoGICw?usp=sharing" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
+                        <span><a className="-linkBoldYellow" href="https://drive.google.com/drive/folders/14xScT9nHM9X-wwi2XncWkLGAIY0THfCc?usp=sharing" target="_blank">Repo. de Estudos <i><BsFillFolderSymlinkFill /></i></a></span>
                     </div>
                 </article>
             </div>
