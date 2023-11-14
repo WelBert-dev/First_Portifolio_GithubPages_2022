@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.245d9050.css",
-    "main.js": "/static/js/main.5949f55c.js",
+    "main.css": "/static/css/main.367ea2be.css",
+    "main.js": "/static/js/main.8ef6d2d9.js",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
     "static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.mp3": "/static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.06f832336e73e946e7a0.mp3",
@@ -72,7 +72,6 @@
     "static/media/Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 _ NERD HITS.mp3": "/static/media/Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 _ NERD HITS.50b4ecc8f96a34bde69c.mp3",
     "static/media/Crazy Frog - Axel F (Official Video) (128 kbps).mp3": "/static/media/Crazy Frog - Axel F (Official Video) (128 kbps).2bfa332c767adc0a572b.mp3",
     "static/media/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).mp3": "/static/media/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).55c3b6f9038c0165e51c.mp3",
-    "static/media/relatorioNodeRed2021-parte04.png": "/static/media/relatorioNodeRed2021-parte04.c732c0b49e41f666f35f.png",
     "static/media/Rick And Morty Intro (320 kbps).mp3": "/static/media/Rick And Morty Intro (320 kbps).b48eba8762a2ecf1ce4f.mp3",
     "static/media/Cocoricó - Abertura e Encerramento.mp3": "/static/media/Cocoricó - Abertura e Encerramento.10bcf50a479eec9b3209.mp3",
     "static/media/Abertura do Castelo Rá Tim Bum.mp3": "/static/media/Abertura do Castelo Rá Tim Bum.d76003c7aeba5f927593.mp3",
@@ -91,33 +90,24 @@
     "static/media/cursoFundacBradesc-HTMLAvanc-certificate.png": "/static/media/cursoFundacBradesc-HTMLAvanc-certificate.3af7fc2898e5e15d967d.png",
     "static/media/cursoFundacBradesc-CSS3Inova-certificate.png": "/static/media/cursoFundacBradesc-CSS3Inova-certificate.a44c2d92dd44106bac99.png",
     "static/media/workshopAutomacaoIndustrial-IFCiencia-parte02.png": "/static/media/workshopAutomacaoIndustrial-IFCiencia-parte02.e0293d2db389333d828c.png",
-    "static/media/relatorioMensal02-parte01.png": "/static/media/relatorioMensal02-parte01.4da855855d7252bc049c.png",
     "static/media/logo-videoSummaryGeneratorWithGPT.png": "/static/media/logo-videoSummaryGeneratorWithGPT.8730a71b1d0e1584c2af.png",
-    "static/media/relatorioMensal01-parte01.png": "/static/media/relatorioMensal01-parte01.b5ae8e19e76e12fb05a8.png",
     "static/media/Python3Mundo1-40-Horas-Certificado-Curso-em-Video.png": "/static/media/Python3Mundo1-40-Horas-Certificado-Curso-em-Video.9fb8dfafd841ec02802e.png",
-    "static/media/relatorioMensal03-parte01.png": "/static/media/relatorioMensal03-parte01.56a5fb44ca15c862c7ea.png",
-    "static/media/relatorioNodeRed2021-parte01.png": "/static/media/relatorioNodeRed2021-parte01.5cee9a0c955b7c4f882d.png",
-    "static/media/relatorioMensal01-parte02.png": "/static/media/relatorioMensal01-parte02.3645c161de3a925b0793.png",
     "static/media/bolsaEnsinoP03.png": "/static/media/bolsaEnsinoP03.1b59c2857aafa663e194.png",
-    "static/media/relatorioMensal02-parte03.png": "/static/media/relatorioMensal02-parte03.8227433c55d47e0bb138.png",
     "static/media/maratonaJavaDevDojoLogo.jpg": "/static/media/maratonaJavaDevDojoLogo.a73b27454d611a434feb.jpg",
-    "static/media/relatorioMensal03-parte02.png": "/static/media/relatorioMensal03-parte02.7056053632d75a01db75.png",
-    "static/media/relatorioNodeRed2021-parte02.png": "/static/media/relatorioNodeRed2021-parte02.f9610147b5a5906eda58.png",
     "static/media/amostraBolsaEnsino.png": "/static/media/amostraBolsaEnsino.e3b801db59e7280fbef1.png",
     "static/media/auauMiauNoFramework.png": "/static/media/auauMiauNoFramework.42a6d9cacaf38ed93a9b.png",
     "static/media/bolsaEnsinoP02.png": "/static/media/bolsaEnsinoP02.496099689918026cc564.png",
-    "static/media/relatorioNodeRed2021-parte03.png": "/static/media/relatorioNodeRed2021-parte03.6f01d9260dcb4579c6a7.png",
     "static/media/portariaNormativaCeic-parte01.png": "/static/media/portariaNormativaCeic-parte01.509d58570009fb84ef14.png",
     "static/media/ciscoModule02Amostra.png": "/static/media/ciscoModule02Amostra.c5b2997a7c6541666828.png",
     "static/media/logo-qrcodeGeneratorInC.png": "/static/media/logo-qrcodeGeneratorInC.a33757907b17df4a2989.png",
     "static/media/ciscoModule01Amostra.png": "/static/media/ciscoModule01Amostra.8a335ef13e07ca84b306.png",
     "index.html": "/index.html",
     "static/media/portariaNormativaCeic-parte02.png": "/static/media/portariaNormativaCeic-parte02.7981f887a45473a2c701.png",
-    "main.245d9050.css.map": "/static/css/main.245d9050.css.map",
-    "main.5949f55c.js.map": "/static/js/main.5949f55c.js.map"
+    "main.367ea2be.css.map": "/static/css/main.367ea2be.css.map",
+    "main.8ef6d2d9.js.map": "/static/js/main.8ef6d2d9.js.map"
   },
   "entrypoints": [
-    "static/css/main.245d9050.css",
-    "static/js/main.5949f55c.js"
+    "static/css/main.367ea2be.css",
+    "static/js/main.8ef6d2d9.js"
   ]
 }
