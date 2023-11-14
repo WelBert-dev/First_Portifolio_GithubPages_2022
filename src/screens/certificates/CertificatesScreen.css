@@ -136,7 +136,7 @@ hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
 	margin-bottom: 3px;
 	color: #000;
 	font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
-	text-shadow: 1px 1px 2px white;
+	text-shadow: 1px 1px 2px rgb(5, 207, 207);
 	line-height: 1rem;
 }
 
