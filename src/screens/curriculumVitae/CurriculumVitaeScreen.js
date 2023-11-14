@@ -49,159 +49,191 @@ export default function CurriculumVitaeScreen() {
                                  <section data-section="skills" data-section-id="3ed40f89-7a4c-465d-b108-36934d401760" id="skills" className="padding-1rem">
                                      <p className="template__section__title"><span>Habilidades</span></p>
                                      <div className="template__section__container">
-                                         <ul className="padding-1rem">
+                                         <ul className="paddingOfSkillsUl-1rem">
 
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>GNU/Linux</p>
+                                            <a href="https://drive.google.com/drive/folders/1igYf5NuYs8VA5A58EslDKrK9sUr2FHGQ?usp=sharing" target="_blank">GNU/Linux - Operating System</a>
                                          </li>
 
                                          <br/>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Artificial Intelligence - GPT</p>
+                                            <a href="https://github.com/WelBert-dev/ceunsp/tree/main/ADS-2Semestre-2023/tendencias_em_ciencias_da_computacao_optativa" target="_blank">Artificial Intelligence - GPT</a>
                                          </li>
                                          <br/>
 
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Java Core:</p>
+                                            <a href="https://bibleofjava.wellisonbertelli.com.br/" target="_blank">Java Core:</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Exception and Error Handling</p>
+                                            <a href="https://bibleofjava.wellisonbertelli.com.br/#/exceptionsRuntimeExceptionsAndErrors" target="_blank">Exception and Error Handling</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Wrapper of Primitive Type</p>
+                                            <a href="https://bibleofjava.wellisonbertelli.com.br/#/wrappersOfPrimitiveTypes" target="_blank">Wrapper of Primitive Type</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Strings Constants Pool</p>
+                                            <a href="https://bibleofjava.wellisonbertelli.com.br/#/stringsAndStringConstantPool" target="_blank">Strings Constants Pool</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Date-Time API - Legacy</p>
+                                            <a href="https://bibleofjava.wellisonbertelli.com.br/#/dateTimeAPI" target="_blank">Date-Time API - Legacy</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Date-Time API - Joda-Time</p>
+                                            <a href="https://bibleofjava.wellisonbertelli.com.br/#/dateTimeAPI" target="_blank">Date-Time API - Joda-Time</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Internationalization - Polymorphism</p>
+                                            <a href="https://bibleofjava.wellisonbertelli.com.br/#/internationalization" target="_blank">Internationalization - Polymorphism</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Regex - Regular Expression</p>
+                                            <a href="https://bibleofjava.wellisonbertelli.com.br/#/regexOrRegexp" target="_blank">Regex - Regular Expression</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>IO API - Legacy</p>
+                                            <a href="https://bibleofjava.wellisonbertelli.com.br/#/inputOutputLegacyAPI" target="_blank">IO API Legacy - File and Dir Operations</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>IO API - New</p>
+                                            <a href="https://bibleofjava.wellisonbertelli.com.br/#/newInputOutputAPI" target="_blank">IO API New - File and Dir Operations</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>IO API - Serialization</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/H_serializacao" target="_blank">Serialization and Deserialization API</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Collections API</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/I_collections" target="_blank">Collections API - Data Structures</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Generic Type</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/J_generics" target="_blank">Generics Type - Replaces Object Context</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Inner Class - Four Types</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/K_classesInternas" target="_blank">Inner Class - Four Types</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Functional Prog. - Lambdas</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/M_lambdas" target="_blank">Func. Prog. Lambdas - Anonymous Functions</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Functional Prog. - Method Reference</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/N_methodReference" target="_blank">Functional Programming - Method Reference</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Optional - Null Pointer Handling</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/O_optional" target="_blank">Optional Class - Null Pointer Handling</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Functional Prog. - Streams API</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/P_streams" target="_blank">Streams API - Simplifying Data Processing</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Threads - Low Level</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/Q_threads" target="_blank">Threads - Low-Level Operations</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Multithreading - Synchronization</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/Q_threads/sincronismo" target="_blank">Multithreading - Synchronization</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Multithreading - Concurrency</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/R_concurrent" target="_blank">Multithreading - Concurrency</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Concurrent API</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/R_concurrent" target="_blank">Concurrent API - Concurrency Handling</a>
                                          </li>
                                           <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Design Patterns - Gang Of Four</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/S_designPatterns" target="_blank">Design Patterns - Gang Of Four (GoF)</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>JDBC API</p>
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/T_jdbc" target="_blank">JDBC API - Database Driver and Plugger</a>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                            <a href="https://github.com/WelBert-dev/MaratonaJava-DevDojo/tree/main/src/main/java/ZA_estruturaDados" target="_blank">Data Structures - Low-Level Impl.</a>
                                          </li>
                                          <br/>
 
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>Spring Framework Ecosystem</p>
+                                            <a href="https://github.com/WelBert-dev/SpringBootEssentials2-Study" target="_blank">Spring Framework Ecosystem</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Software Testing (JUnit)</p>
+                                            <a href="https://github.com/WelBert-dev/SpringBootEssentials2-Study/tree/main/src/test/java/academy/devdojo/springboot2" target="_blank">Automated Software Testing (JUnit) - QA</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>API RESTful</p>
+                                            <a href="https://github.com/WelBert-dev/SpringBootEssentials2-Study/tree/main/src/main/java/academy/devdojo/springboot2" target="_blank">API RESTful - Best Practices</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Spring Security - Two Auth's</p>
+                                            <a href="https://github.com/WelBert-dev/backupLg3Ecommerce-Springboot/tree/main/demo/src/main/java/com/example/demo/security" target="_blank">Spring Security - Two Auth's</a>
                                          </li>
                                         <br/>
                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="3">
-                                             <p>SGBD MySQL</p>
+                                            <a href="https://github.com/WelBert-dev/MySQL-Study/blob/main/DQL" target="_blank">SGBD MySQL - Relational Database</a>
                                          </li>
                                         <br/>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="6">
-                                             <p>React.Js</p>
+                                            <a href="https://github.com/WelBert-dev/firstPortifolioGithubPages-2022" target="_blank">React.Js Framework Client-Side Rendering</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="1">
-                                             <p>JavaScript</p>
+                                            <a href="https://github.com/WelBert-dev/firstPortifolioGithubPages-2022" target="_blank">JavaScript Vanilla</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="4">
-                                             <p>HTML5</p>
+                                            <a href="https://github.com/WelBert-dev/firstPortifolioGithubPages-2022" target="_blank">HTML5 - Markup Language</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="5">
-                                             <p>CSS3</p>
+                                            <a href="https://github.com/WelBert-dev/firstPortifolioGithubPages-2022" target="_blank">CSS3 - Style Sheets Language</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>AJAX</p>
+                                            <a href="https://www.youtube.com/playlist?list=PLXik_5Br-zO9hDBdGmzX5XJ9LT6IcHPiG" target="_blank">AJAX - Avoiding Client-side Page Reload</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Redux</p>
+                                            <a href="https://github.com/WelBert-dev/redux-Study-AlgaShopping-react/tree/main" target="_blank">Redux - Client-side State Management</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Storage Client-side</p>
+                                            <a href="https://github.com/WelBert-dev/backupLg3Ecommerce-Springboot/tree/main/frontend" target="_blank">Client-side Storage - Non-Volatile Memory</a>
                                          </li>
                                          <br/>
 
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Network Skills (2021-2022):</p>
+                                            <a href="https://drive.google.com/drive/folders/1BF_r6-pTfeBzA3w0u0CdUrZte48O9kOq?usp=sharing" target="_blank">Network Skills (2021-2022):</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>HTTP Methods</p>
+                                            <a href="https://github.com/WelBert-dev/Redes-Study/tree/main/" target="_blank">HTTP Methods - HTTP/1.1 Semantics</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Network - OSI Model 7 Layers</p>
+                                            <a href="https://github.com/WelBert-dev/Redes-Study/tree/main/" target="_blank">HTTP Status Code - Best Practices</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Network - CSMA/CA & CSMA/CD</p>
+                                            <a href="https://docs.google.com/document/d/1cHegRFD3SiNG5ow9JWvtpVZRpt1FTzP9/edit?usp=sharing&ouid=114676812416023393208&rtpof=true&sd=true" target="_blank">Types of Transmission - Broadcast, Multicast, and Unicast</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Ethernet 10-100-1000 Base T/TX</p>
+                                            <a href="https://docs.google.com/document/d/1cHegRFD3SiNG5ow9JWvtpVZRpt1FTzP9/edit?usp=sharing&ouid=114676812416023393208&rtpof=true&sd=true" target="_blank">Transmission Modes - Simplex, Half-duplex, Full-duplex</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Network Protocols - RIP, OSPF</p>
+                                            <a href="https://docs.google.com/document/d/1TGlJiNngMPivQqYZAAXiNUSiI1OHuBjY/edit?usp=sharing&ouid=114676812416023393208&rtpof=true&sd=true" target="_blank">Network - DoD Model 4 Layers</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Network Server - DHCP, DNS</p>
+                                            <a href="https://docs.google.com/document/d/1TGlJiNngMPivQqYZAAXiNUSiI1OHuBjY/edit?usp=sharing&ouid=114676812416023393208&rtpof=true&sd=true" target="_blank">Network - OSI Model 7 Layers (TCP/IP)</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Network Topology Types</p>
+                                            <a href="https://docs.google.com/document/d/1smADT7aBokPECZxzBNJfOOz1-SKoeK9t/edit?usp=sharing&ouid=114676812416023393208&rtpof=true&sd=true" target="_blank">Network - Topology Types</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
-                                             <p>Ethernet MacAddress</p>
+                                            <a href="https://docs.google.com/document/d/19A3ZwY7HP9rtjHE-4Oz6tZ9mE9Uawzk4/edit?usp=sharing&ouid=114676812416023393208&rtpof=true&sd=true" target="_blank">Ethernet IEEE 802 - Concepts</a>
                                          </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                            <a href="https://docs.google.com/document/d/1NcSKQtJTYogoNOk0djOok8qopACF3HEM/edit?usp=sharing&ouid=114676812416023393208&rtpof=true&sd=true" target="_blank">LAN - Ethernet 10Base2</a>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                            <a href="https://docs.google.com/document/d/1ysBowXMrbS9cGUfebVDFe5oh3uuaF3sx/edit?usp=sharing&ouid=114676812416023393208&rtpof=true&sd=true" target="_blank">LAN - Ethernet 10Base5</a>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                            <a href="https://docs.google.com/document/d/1rXj6RFRddB-9RvtWh3tZJnMbe1g4sXE9/edit?usp=sharing&ouid=114676812416023393208&rtpof=true&sd=true" target="_blank">LAN - Ethernet 10, 100, and 1000BaseT/TX</a>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                            <a href="https://docs.google.com/document/d/1UhWbmS1cbjncDxt8R3yw3WmSgR4xStBO/edit?usp=sharing&ouid=114676812416023393208&rtpof=true&sd=true" target="_blank">Ethernet MacAddress - Concepts</a>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                            <a href="https://docs.google.com/document/d/1e45vVuj-WoRvii6-HwfdrhbETvZoup-E/edit?usp=sharing&ouid=114676812416023393208&rtpof=true&sd=true" target="_blank">CSMA/CD & CSMA/CA - Colision Detection</a>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                            <a href="https://github.com/WelBert-dev/Redes-Study/blob/main/RedesII/01-protocolo-RIP-Redes2.txt" target="_blank">Routing Information Protocol (RIP)</a>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                            <a href="https://github.com/WelBert-dev/Redes-Study/blob/main/RedesII/02-protocolo-OSPF-Redes2.txt" target="_blank">Open Shortest Path First (OSPF)</a>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                            <a href="https://github.com/WelBert-dev/Redes-Study/blob/main/RedesII/03-servidor-DHCP-Redes2.txt" target="_blank">Dynamic Host Config. Protocol (DHCP)</a>
+                                         </li>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="8">
+                                            <a href="https://github.com/WelBert-dev/Redes-Study/blob/main/RedesII/04-resolucaoDeNome-DNS-Redes2.txt" target="_blank">Domain Name System (DNS)</a>
+                                         </li>
+                                        
+                        
                                          {/* <br/>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
                                              <p>Cyber Security Essentials:</p>
@@ -227,15 +259,15 @@ export default function CurriculumVitaeScreen() {
                                        
                                          <br/>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="2">
-                                             <p>Python3</p>
+                                            <a href="https://drive.google.com/drive/folders/14xScT9nHM9X-wwi2XncWkLGAIY0THfCc?usp=sharing" target="_blank">Python3 - Programming Logic</a>
+                                         </li>
+                                         <br/>
+                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
+                                            <a href="https://drive.google.com/drive/folders/1PGhOgWuOP1Clq6MlCTppBIYI0OZsEZv_?usp=sharing" target="_blank">C# - Object-Oriented Programming (2021)</a>
                                          </li>
                                          <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="0">
-                                             <p>C# (2021)</p>
+                                            <a href="https://drive.google.com/drive/folders/1PGhOgWuOP1Clq6MlCTppBIYI0OZsEZv_?usp=sharing" target="_blank">C# - Windows Forms (2021)</a>
                                          </li>
-                                         <li className="template__section__simple template__section__simple--fixed-font-size" data-subsection-position="7">
-                                             <p>Asp.NetCoreMVC (2021)</p>
-                                         </li>
-                                        
                                          </ul>
                                      </div>
                                  </section>

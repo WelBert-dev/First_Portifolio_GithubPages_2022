@@ -104,7 +104,7 @@ color: #58e70e;
 
 .template__professional__column {
 display: table-cell;
-width: 350px;
+width: 360px;
 vertical-align: top;
 }
 .template__newyork__column .template__section__title {
@@ -380,7 +380,11 @@ box-shadow: rgb(217, 221, 224) 0px 0px 34px 0px;
 }
 
 .padding-1rem {
-padding: .5rem 1rem 0 1rem;
+    padding: .5rem .5rem .5rem .5rem;
+}
+
+.paddingOfSkillsUl-1rem {
+    padding: .5rem 0 .5rem .5rem;
 }
 
 .template__section__right .template__section__description:last-child {
@@ -411,12 +415,21 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
     margin-bottom: 0px !important;
 }
 
-#skills > div.template__section__container > ul > li > p {
+#skills > div.template__section__container > ul > li > a {
 	background-color: #9b9bff;
 	line-height: 1rem;
 	max-width: fit-content;
 	margin-bottom: .5rem;
     text-shadow: 1px 1px 2px rgb(5, 207, 207);
+    color:#000;
+    padding: 0 2px;
+    transition: all ease 0.3s;
+}
+
+#skills > div.template__section__container > ul > li > a:hover {
+    background-color: #000;
+    color:#11e8ff;
+    text-shadow: none;
 }
 
 @media (max-width: 810px)
