@@ -56,7 +56,7 @@
 }
 
 .right {
-    margin: 0 .5rem;
+    margin: 0 0 0 .5rem;
     font-size: .8rem;
     font-weight: bold;
     font-family: cursive;
@@ -313,6 +313,10 @@ p[data-value] {
     color: #11e8ff;
 }
 
+.main-title.--java_core_skills {
+    margin-top: 2rem;
+}
+
 .skill-tec > .right > span.-OldStudy {
     color: red;
     background-color: #fff;
@@ -332,9 +336,7 @@ p[data-value] {
     }
 
     .right {
-        margin-left: .8rem;
         font-size: .8rem;
-        align-items: center;
     }
     
     .skill-tec div progress {
@@ -368,6 +370,7 @@ p[data-value] {
 
     .right {
         font-size: .7rem;
+        margin: 0 0 0 .3rem;
     }
     
     .skill-tec div progress {
@@ -376,10 +379,16 @@ p[data-value] {
     }
     .skill-tec > .right > span{
         font-size: .5rem;
+        margin: 0 0 3px 0;
     }
 
     progress.progress-bar.--skills[value] {
         width: 5rem;
         height: .6rem;
+    }
+
+    .wrapper-skills {
+        max-width: none;
+        margin: .2rem;
     }
 }
