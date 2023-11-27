@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Genshin Impact Font Family';
+  src: url('/home/welbert/Documentos/github/firstPortifolioGithubPages-2022/src/resources/fonts/zh-cn.ttf');
+}
+
 :root {
   --main-color: rgb(13 159 13) !important;
   --second-color: black !important;
@@ -12,6 +17,7 @@
   --main-textColor: #d1d5db !important;
   --main-fontfamily-Press2PLight: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace!important;
   --main-bgColorLightGrey: #a9d2d7;
+  --main-fontFamily-navbar-and-copyright: 'Genshin Impact Font Family';
 }
 
 a {

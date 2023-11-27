@@ -32,7 +32,8 @@ footer span {
 }
 
 footer h3 {
-    font-size: .8rem;
+    font-size: .7rem;
+    font-family: var(--main-fontFamily-navbar-and-copyright);
 }
 
 .footer-icons {
@@ -111,7 +112,7 @@ footer h3 {
     }
 
     footer h3 {
-        font-size: .8rem;
+        font-size: .65rem;
     }
 }
 
@@ -133,6 +134,6 @@ footer h3 {
     }
 
     footer h3 {
-        font-size: .7rem;
+        font-size: .64rem;
     }
 }

@@ -15,9 +15,9 @@ header nav {
 }
 
 header nav a {
-    font-size: 1rem;
-    font-weight: bold;
-    font-family: var(--main-fontfamily-Press2PLight);
+    font-size: .83rem;
+    font-weight: normal;
+    font-family: var(--main-fontFamily-navbar-and-copyright);
     border-radius: 10%;
     padding: .5rem;
     box-shadow: .1rem .1rem .2rem black;
@@ -310,7 +310,7 @@ background-color: #000;
         width: 100% !important;
         text-align: center;
         margin: 0 auto;
-        font-size: .9rem;
+        font-size: .75rem;
     }
 
     .ajustaTop-responsive{
@@ -347,6 +347,6 @@ background-color: #000;
 @media (max-width: 400px) 
 {
     header nav a {
-        font-size: .8rem;
+        font-size: .7rem;
     }
 }

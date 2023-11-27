@@ -57,9 +57,9 @@
 
 .right {
     margin: 0 0 0 .5rem;
-    font-size: .8rem;
-    font-weight: bold;
-    font-family: cursive;
+    font-size: .75rem;
+    font-weight: normal;
+    font-family: var(--main-fontFamily-navbar-and-copyright);
     text-shadow: .1rem .1rem 0.08rem black;
     color: white;
     display: flex;

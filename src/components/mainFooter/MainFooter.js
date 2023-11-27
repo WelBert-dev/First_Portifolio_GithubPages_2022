@@ -13,7 +13,7 @@ export default function MainFooter() {
     return (
         <div>
         <div className='footer-description'>
-          <p>Site desenvolvido pelo Wellison Bertelli, código open source completo no github! ;D</p>
+          <p>Site desenvolvido pelo Wellison Bertelli, código completo no github! ;D</p>
           <p>Redes sociais abaixo, apenas clique no Icon <span>✓</span></p>
         </div>
         <div className='footer-icons'>
@@ -26,8 +26,8 @@ export default function MainFooter() {
           </div>
         </div>
         <div className='footer-copyright'>
-            <h3>Copyright ©2022</h3>
-            <h3>Licença: GPL v3.0</h3>
+            <h3>Copyright ©2022-present.</h3>
+            <h3>by: Wellison Bertelli.</h3>
         </div>
       </div>
     )
