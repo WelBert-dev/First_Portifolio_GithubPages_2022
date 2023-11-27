@@ -1,10 +1,11 @@
 {
   "files": {
-    "main.css": "/static/css/main.5c899ad8.css",
-    "main.js": "/static/js/main.1f5e90de.js",
+    "main.css": "/static/css/main.555a5360.css",
+    "main.js": "/static/js/main.6a0693de.js",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
     "static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.mp3": "/static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.06f832336e73e946e7a0.mp3",
+    "static/media/zh-cn.ttf": "/static/media/zh-cn.54a8212866e6ec1b1003.ttf",
     "static/media/wellisonPerfil.png": "/static/media/wellisonPerfil.0bfd9fb602092eada810.png",
     "static/media/Rap do Itachi (Naruto) _ Tauz RapTributo 18.mp3": "/static/media/Rap do Itachi (Naruto) _ Tauz RapTributo 18.692d028d8c34df232c45.mp3",
     "static/media/Rap do Assassins Creed _ Tauz RapGame 19.mp3": "/static/media/Rap do Assassins Creed _ Tauz RapGame 19.ba48d85ac4d7fe5b456a.mp3",
@@ -137,11 +138,11 @@
     "static/media/javascript_vanilla_icon.webp": "/static/media/javascript_vanilla_icon.bb41b35e77975f0c88b0.webp",
     "static/media/python3_icon.webp": "/static/media/python3_icon.7abe0af8da3a7c657823.webp",
     "static/media/redux_state_management_logo_icon.svg": "/static/media/redux_state_management_logo_icon.0d451f4a96daa541b83b419534633d6e.svg",
-    "main.5c899ad8.css.map": "/static/css/main.5c899ad8.css.map",
-    "main.1f5e90de.js.map": "/static/js/main.1f5e90de.js.map"
+    "main.555a5360.css.map": "/static/css/main.555a5360.css.map",
+    "main.6a0693de.js.map": "/static/js/main.6a0693de.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c899ad8.css",
-    "static/js/main.1f5e90de.js"
+    "static/css/main.555a5360.css",
+    "static/js/main.6a0693de.js"
   ]
 }
