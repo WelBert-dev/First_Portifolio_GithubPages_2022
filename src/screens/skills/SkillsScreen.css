@@ -66,6 +66,10 @@
     flex-direction: column;
 }
 
+.title-skill {
+    font-size: 0.7rem;
+}
+
 .skill-tec > .right > span{
     color: #ffd700;
     font-size: .7rem;
@@ -338,14 +342,14 @@ p[data-value] {
     .right {
         font-size: .8rem;
     }
+
+    .title-skill {
+        font-size: 0.65rem;
+    }
     
     .skill-tec div progress {
         width: 6rem;
         height: .8rem;
-    }
-    
-    .right {
-        font-size: .8rem;
     }
 
     .skill-tec > .right > span{
@@ -356,6 +360,7 @@ p[data-value] {
         width: 6rem;
         height: .8rem;
     }
+    
 }
 
 @media (max-width: 425px)
@@ -372,6 +377,11 @@ p[data-value] {
         font-size: .7rem;
         margin: 0 0 0 .3rem;
     }
+
+    .title-skill {
+        font-size: 0.54rem;
+    }
+    
     
     .skill-tec div progress {
         width: 5rem;
