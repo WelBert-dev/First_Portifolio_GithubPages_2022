@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.555a5360.css",
-    "main.js": "/static/js/main.6a0693de.js",
+    "main.css": "/static/css/main.e5c22d0f.css",
+    "main.js": "/static/js/main.190066b6.js",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
     "static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.mp3": "/static/media/Rap dos Hokages (Naruto) - A VONTADE DO FOGO _ NERD HITS.06f832336e73e946e7a0.mp3",
@@ -55,6 +55,7 @@
     "static/media/Rap do Levi (Attack on Titan) _ Tauz RapTributo 56.mp3": "/static/media/Rap do Levi (Attack on Titan) _ Tauz RapTributo 56.ba477838ae697145383a.mp3",
     "static/media/Inuyasha   Abertura 1 - Mudar O Mundo (320 kbps).mp3": "/static/media/Inuyasha   Abertura 1 - Mudar O Mundo (320 kbps).ff4c2489e30c894f9708.mp3",
     "static/media/Digimon - Abertura (HD) (320 kbps).mp3": "/static/media/Digimon - Abertura (HD) (320 kbps).45a1958bccdf8c3eca80.mp3",
+    "static/media/naruto_shippuden_upscale.mp4": "/static/media/naruto_shippuden_upscale.6258262eadc5107bdc03.mp4",
     "static/media/Fullmetal Alchemist Brotherhood Creditless OP 1 1080p (320 kbps).mp3": "/static/media/Fullmetal Alchemist Brotherhood Creditless OP 1 1080p (320 kbps).beeababa8e6d3e899ce9.mp3",
     "static/media/Shingeki No Kyojin Opening 1 [With Lyrics] (320 kbps).mp3": "/static/media/Shingeki No Kyojin Opening 1 [With Lyrics] (320 kbps).b7a24888706caedf7bca.mp3",
     "static/media/Dragon Ball Super _ Abertura 1 - Versão Brasileira (Oficial) (320 kbps).mp3": "/static/media/Dragon Ball Super _ Abertura 1 - Versão Brasileira (Oficial) (320 kbps).a3fd4a15e92a84ac5109.mp3",
@@ -72,6 +73,7 @@
     "static/media/Death Note - Opening [4K] (320 kbps).mp3": "/static/media/Death Note - Opening [4K] (320 kbps).77f92c1e31d4d09bae7f.mp3",
     "static/media/Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 _ NERD HITS.mp3": "/static/media/Rap do Broly, Kyuubi e Levi - O PODER DA MINHA IRA 2 _ NERD HITS.50b4ecc8f96a34bde69c.mp3",
     "static/media/Crazy Frog - Axel F (Official Video) (128 kbps).mp3": "/static/media/Crazy Frog - Axel F (Official Video) (128 kbps).2bfa332c767adc0a572b.mp3",
+    "static/media/one_piece_upscale_depois.mp4": "/static/media/one_piece_upscale_depois.3af8b38ad37873d4ed2a.mp4",
     "static/media/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).mp3": "/static/media/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).55c3b6f9038c0165e51c.mp3",
     "static/media/Rick And Morty Intro (320 kbps).mp3": "/static/media/Rick And Morty Intro (320 kbps).b48eba8762a2ecf1ce4f.mp3",
     "static/media/Cocoricó - Abertura e Encerramento.mp3": "/static/media/Cocoricó - Abertura e Encerramento.10bcf50a479eec9b3209.mp3",
@@ -82,6 +84,7 @@
     "static/media/bolsaDeValores-ifciencia2021-29-10-2021.png": "/static/media/bolsaDeValores-ifciencia2021-29-10-2021.35091864f636a476f1c4.png",
     "static/media/nodeRed-IoT-ifciencia2021-28-10-2021.png": "/static/media/nodeRed-IoT-ifciencia2021-28-10-2021.b0eaaa93ca59ada1d76b.png",
     "static/media/Abertura Hora de Aventura ( Português ).mp3": "/static/media/Abertura Hora de Aventura ( Português ).9915d2c37f2cacd0d716.mp3",
+    "static/media/one_piece_upscale_antes.mp4": "/static/media/one_piece_upscale_antes.a3d52daf166b9b857e45.mp4",
     "static/media/flisolTVBox.png": "/static/media/flisolTVBox.796529c4450e45bad940.png",
     "static/media/flisolLinguagemC.png": "/static/media/flisolLinguagemC.1d28ec434c625f9bef76.png",
     "static/media/amazona.jpg": "/static/media/amazona.b448ccd7966c0efe9adc.jpg",
@@ -138,11 +141,11 @@
     "static/media/javascript_vanilla_icon.webp": "/static/media/javascript_vanilla_icon.bb41b35e77975f0c88b0.webp",
     "static/media/python3_icon.webp": "/static/media/python3_icon.7abe0af8da3a7c657823.webp",
     "static/media/redux_state_management_logo_icon.svg": "/static/media/redux_state_management_logo_icon.0d451f4a96daa541b83b419534633d6e.svg",
-    "main.555a5360.css.map": "/static/css/main.555a5360.css.map",
-    "main.6a0693de.js.map": "/static/js/main.6a0693de.js.map"
+    "main.e5c22d0f.css.map": "/static/css/main.e5c22d0f.css.map",
+    "main.190066b6.js.map": "/static/js/main.190066b6.js.map"
   },
   "entrypoints": [
-    "static/css/main.555a5360.css",
-    "static/js/main.6a0693de.js"
+    "static/css/main.e5c22d0f.css",
+    "static/js/main.190066b6.js"
   ]
 }
