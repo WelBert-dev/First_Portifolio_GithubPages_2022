@@ -110,7 +110,7 @@
     font-weight: lighter;
     background-color: var(--main-bgColorLightGrey);
     width: fit-content;
-    padding: 0 2px;
+    padding: 1px 2px;
 }
 
 .projects-description--container {

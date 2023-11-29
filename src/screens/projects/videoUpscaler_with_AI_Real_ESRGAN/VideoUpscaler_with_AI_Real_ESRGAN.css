@@ -1,0 +1,24 @@
+.video-one-piece-demo-upscale-container {
+    display: flex;
+    width: 100%;
+}
+
+.video-one-piece-demo-upscale-container > div {
+    flex-grow: 1;
+}
+
+.video-one-piece-demo-upscale-container > div > h3 {
+    margin: 1rem 0.5rem;
+}
+
+.video-one-piece-demo-upscale-container > div > video, .video-naruto_shippuden_beforeAndAfter-demo-upscale{
+    width: 100%;
+    border: 4px ridge #000;
+}
+
+@media (max-width: 810px)
+{
+    .video-one-piece-demo-upscale-container {
+        flex-direction: column;
+    }
+}

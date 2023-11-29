@@ -2,6 +2,7 @@ import React from 'react';
 
 import './ProjectsScreen.css';
 
+import VideoUpscaler_with_AI_Real_ESRGAN from './videoUpscaler_with_AI_Real_ESRGAN/VideoUpscaler_with_AI_Real_ESRGAN';
 import AudioSummarizingGenerator_with_AI_WebGPT_and_Whisper from './audioSummarizingGenerator_with_AI_WebGPT_and_Whisper/AudioSummarizingGenerator_with_AI_WebGPT_and_Whisper';
 import QRCodeGeneratorInLanguageC_and_ScannerWebReact_trabFaculdade_1Semestre from './QRCodeGeneratorInLanguageC_and_ScannerWebReact_trabFaculdade_1Semestre/QRCodeGeneratorInLanguageC_and_ScannerWebReact_trabFaculdade_1Semestre';
 import RestauranteIFSP_with_springBoot_and_reactJs_authenticationAndAuthorization from './restauranteIFSP_with_springBoot_and_reactJs_authenticationAndAuthorization/RestauranteIFSP_with_springBoot_and_reactJs_authenticationAndAuthorization';
@@ -17,6 +18,9 @@ export default function ProjectsScreen() {
         <div>
             <h1 className="main-title">&lsaquo;Projetos&rsaquo;</h1>
             <div className="wrapper-projects">
+
+                <VideoUpscaler_with_AI_Real_ESRGAN/>
+                <hr />
 
                 {/* 
                     Primeiro projeto com IA (OpenAI) GPT (Pelo prompt Web) e Whisper (Extrator de áudio em texto "Transcript") 
