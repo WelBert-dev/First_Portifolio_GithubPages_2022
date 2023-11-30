@@ -18,7 +18,6 @@ export default function VideoUpscaler_with_AI_Real_ESRGAN() {
                     <a href="https://colab.research.google.com/github/yuvraj108c/4k-video-upscaler-colab/blob/main/4k_Video_Upscaler_Colab_(Real_ESRGAN).ipynb" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                 </div>
                 <span>O CÓDIGO NÃO É DE MINHA AUTORIA, NÃO É NECESSÁRIO REINVENTAR A RODA.</span>
-                <code className="subtituloOfSingleProject --dateOfImplementation">Compartilhando pois é útil para melhorar entretenimentos, até mesmo sprites de games clássicos.</code>
                 <p>CÓDIGO DO PROJETO NÃO É DE MINHA AUTORIA, POIS JÁ É PROBLEMA RESOLVIDO.</p>
             </div>
             <video className="video-naruto_shippuden_beforeAndAfter-demo-upscale" src={video_naruto_shippuden_beforeAndAfter} type="video/mp4" preload="true" controls></video>

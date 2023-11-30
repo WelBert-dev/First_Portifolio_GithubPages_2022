@@ -2,6 +2,7 @@ import React from 'react';
 
 import './ProjectsScreen.css';
 
+import DissecandoGPT_trabalho_CEUNSP_tendenciasEmCienciasDaComputacao from './dissecandoGPT_trabalho_CEUNSP_tendenciasEmCienciasDaComputacao/DissecandoGPT_trabalho_CEUNSP_tendenciasEmCienciasDaComputacao';
 import VideoUpscaler_with_AI_Real_ESRGAN from './videoUpscaler_with_AI_Real_ESRGAN/VideoUpscaler_with_AI_Real_ESRGAN';
 import AudioSummarizingGenerator_with_AI_WebGPT_and_Whisper from './audioSummarizingGenerator_with_AI_WebGPT_and_Whisper/AudioSummarizingGenerator_with_AI_WebGPT_and_Whisper';
 import QRCodeGeneratorInLanguageC_and_ScannerWebReact_trabFaculdade_1Semestre from './QRCodeGeneratorInLanguageC_and_ScannerWebReact_trabFaculdade_1Semestre/QRCodeGeneratorInLanguageC_and_ScannerWebReact_trabFaculdade_1Semestre';
@@ -18,7 +19,23 @@ export default function ProjectsScreen() {
         <div>
             <h1 className="main-title">&lsaquo;Projetos&rsaquo;</h1>
             <div className="wrapper-projects">
-
+                 {/* 
+                    Trabalho da faculdade (ADS) de conclusão da disciplina Tendências em Ciências da Computação, 
+                    focado em Inteligência Artificial Generativa, mais especificamente no GPT. 
+                    Não apenas "prompts mágicos", mas indo além e entendendo como as respostas são geradas 
+                    em baixo nível. O trabalho é dividido em duas (2) partes: 
+                    uma criar um artefato em formato ABNT sem utilizar o GPT. 
+                    E depois outro artefato, porém utilizando o GPT para melhorar o documento original, 
+                    mencionado anteriormente. 
+                    Trabalho desenvolvido em 29/09/2023 até 28/11/2023.
+                */}
+                <DissecandoGPT_trabalho_CEUNSP_tendenciasEmCienciasDaComputacao/>
+                <hr />
+                
+                {/* 
+                    NÃO AUTORAL, resolvi compartilhar pois é bem útil para melhorar entretenimentos. 
+                    Problema já resolvido, não é necessário reinventar a roda.
+                */}                
                 <VideoUpscaler_with_AI_Real_ESRGAN/>
                 <hr />
 

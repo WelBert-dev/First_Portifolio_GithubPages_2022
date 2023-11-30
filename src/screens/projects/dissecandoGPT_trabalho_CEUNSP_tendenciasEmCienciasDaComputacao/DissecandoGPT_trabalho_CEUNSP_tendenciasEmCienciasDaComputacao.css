@@ -1,0 +1,22 @@
+.video-sobre-ia-feito-com-ia--container {
+    display: flex;
+    justify-content: center;
+}
+
+.video-sobre-ia-feito-com-ia {
+    width: 30%;
+}
+
+@media (max-width: 810px)
+{
+    .video-sobre-ia-feito-com-ia {
+        width: 50%;
+    }
+}
+
+@media (max-width: 425px)
+{
+    .video-sobre-ia-feito-com-ia {
+        width: 100%;
+    }
+}
