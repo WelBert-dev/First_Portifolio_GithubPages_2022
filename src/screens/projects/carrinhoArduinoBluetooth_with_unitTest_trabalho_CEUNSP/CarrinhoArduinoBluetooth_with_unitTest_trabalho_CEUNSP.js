@@ -44,7 +44,15 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                             <li>Carrinho controlado via GamePad Module do aplicativo android Dabble.</li>
                             <li>Bateria de testes unitários disparados e monitorados via Terminal Module do mesmo aplicativo, mencionado acima.</li>
                         </ul>
-                    </li>      
+                    </li>
+                    <li>
+                        <h3 class="projects-subtitle">Primeiros bugs:</h3>
+                        <ul className="projects-frontend--container">
+                            <li>Lógica não condiz com esquema elétrico apresentado, conexões dos motores das rodas NÃO correspondem ao código fornecido pelo projeto base do makerhero.</li>
+                            <li>Direções estavam trocadas, a funcionalidade "para frente" indo "para esquerda", e para os lados também incorretos.</li>
+                            <li>SOLUÇÃO: Bastanto extraír o bloco "para esquerda" e plugar no bloco "para frente" e assim por diante, já foi possível resolver.</li>
+                        </ul>
+                    </li>     
                 </ul>
             </div>
         </div>
