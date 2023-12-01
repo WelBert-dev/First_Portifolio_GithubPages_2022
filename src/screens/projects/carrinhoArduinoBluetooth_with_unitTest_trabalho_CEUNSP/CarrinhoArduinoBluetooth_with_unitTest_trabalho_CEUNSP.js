@@ -229,6 +229,19 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                                 </ul>
                             </li>  
                         </ul>
+                    </li>
+
+                    <li>
+                        <h3 class="projects-subtitle">Ajuste fino no ArduinoUnit:</h3>
+                        <ul className="projects-frontend--container">
+                            <li>Após finalizar toda a bateria de testes unitários, variáveis de controles internas da biblioteca ArduinoUnit são definidas como "Já executado".</li>
+                            <li>Isso implica que a bateria de testes só poderá ser executada UMA única vez, a cada compilação das instruções no arduíno.</li>
+                            <li>Isso ocorre para não ficar executando o mesmo metodo de teste repetidas vezes, MAS isso também ocorre quando os parâmetros dos testes são diferentes.</li>
+                            <li>E isso é ruím, pois e se quisermos executar a mesma função, porém com diferentes parâmetros?</li>
+                            <li>Na versão LTS da main instalado via gerenciador de dependências do ArduinoIDE isso não é possível, então deve-se instalar o seguinte commit:  <a className="-linkBoldYellowProjects" href="https://github.com/mmurdoch/arduinounit/commit/c96d03d405dea4be713768287070e64fa676ccbb" target="_blank">Clique AQUI!</a></li>
+                            <li>Após a execução por completo dos testes <code className="-efeitoMarcaTexto">Test:run()</code> deve-se executar o resetter <code className="-efeitoMarcaTexto">resetDoneTests()</code> para limpar as variáveis internas de controle do ArduinoUnit.</li>
+                            <li>Desta forma, podemos enviar o comando "t" várias vezes pelo aplicativo android Dabble que os testes serão executados quantas vezes quisermos.</li>
+                        </ul>
                     </li>      
                 </ul>
             </div>
