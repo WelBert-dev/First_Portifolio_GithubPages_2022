@@ -78,7 +78,64 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                             <li>Após definir os métodos de testes, deve-se executar a chamada para o método estático <code className="-efeitoMarcaTexto">Test::run();</code></li>
                             <li>Que inicia a bateria de testes para TODOS os métodos de <code className="-efeitoMarcaTexto">test(ok | bad...)&#123;...&#125;</code> definidos.</li>                        
                         </ul>
-                    </li>     
+                    </li>
+
+                    <li>
+                        <h3 class="projects-subtitle">Terminal Module Dabble:</h3>
+                        <ul className="projects-frontend--container">
+                            <li>Documentação oficial: <a className="-linkBoldYellowProjects" href="https://ai.thestempedia.com/docs/dabble-app/terminal-module/" target="_blank">Clique AQUI!</a></li>
+                            <li>Pelo Terminal Module do aplicativo android Dabble é possível realizar trocas de mensagem texto entre o celular e o arduíno via bluetooth.</li>
+                            <li>E de acordo com essas mensagens podemos realizar diversas ações no arduíno.</li>
+                            <li>Neste caso, quando enviado um "t" a bateria de testes unitários é iniciada.</li>
+                            <li>A utilização é bem simples, basta instalar a biblioteca do Dabble pelo gerenciador de dependências da IDE.</li>
+                            <li>Depois, é só realizar o include do <code className="-efeitoMarcaTexto">#include &#60;Dabble.h&#62;</code> e <code className="-efeitoMarcaTexto">#define INCLUDE_TERMINAL_MODULE</code></li>
+                        
+                            <li className="-marginNone--inMobile"><p className="-listItem--inMobile --newThemeBWMCiano">Após configurações de ambiente finalizadas, basta utilizar blocos switch-case ou similar para aplicar lógicas quando "t" for recebido.</p>
+                                <p className="main-title--implementFullBlock">Exemplo de utilização do Terminal Module, quando receber "t" bateria de testes unitários é iniciada:</p>
+                                <ul className="main-implementFullBlock--container">
+                                <code className="implementFullBlock"> 
+                                    <code className="-tokenClassEntity">String</code> serialdata = <code className="-tokenString">""</code>;<br/>
+                                    <code className="-tokenKeyword">bool</code> dataflag = <code className="-tokenKeyConstant">0</code>;<br/>
+                                    <br/>
+                                    <code className="-tokenKeyword">void</code> <code className="-tokenMethod">loop</code>() &#123;<br/>  
+                                        <code className="-nestedInnerCode"><code className="-tokenClassEntity">Dabble</code>.<code className="-tokenMethod">processInput</code>();</code><br/>
+                                        <br/>
+                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">while</code> (<code className="-tokenClassEntity">Serial</code>.<code className="-tokenMethod">available</code>() != <code className="-tokenKeyConstant">0</code>) &#123;</code><br/>
+                                            <code className="-nestedInnerCode --2Identation">serialdata = <code className="-tokenClassEntity">String</code>(serialdata + <code className="-tokenKeyword">char</code>(<code className="-tokenClassEntity">Serial</code>.<code className="-tokenMethod">read</code>()));</code><br/>
+                                            <code className="-nestedInnerCode --2Identation">dataflag = <code className="-tokenKeyConstant">1</code>;</code><br/>
+                                        <code className="-nestedInnerCode">&#125;</code><br/>
+
+                                        <br/>
+                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code>(dataflag == <code className="-tokenKeyConstant">1</code>) &#123;</code><br/>
+                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenClassEntity">Terminal</code>.<code className="-tokenMethod">print</code>(serialdata);</code><br/>
+                                            <code className="-nestedInnerCode --2Identation">serialdata = <code className="-tokenString">""</code>;</code><br/>
+                                            <code className="-nestedInnerCode --2Identation">dataflag = <code className="-tokenKeyConstant">0</code>;</code><br/>
+                                        <code className="-nestedInnerCode">&#125;</code><br/>
+
+                                        <br/>
+                                        <code className="-nestedInnerCode"><code className="-tokenKeyword">if</code>(<code className="-tokenClassEntity">Terminal</code>.<code className="-tokenMethod">available</code>()) &#123;</code><br/>
+                                            <code className="-nestedInnerCode --2Identation"><code className="-tokenKeyword">while</code> (<code className="-tokenClassEntity">Terminal</code>.<code className="-tokenMethod">available</code>() != <code className="-tokenKeyConstant">0</code>) &#123;</code><br/>
+                                                <code className="-nestedInnerCode --3Identation"><code className="-tokenKeyword">char</code> command = (<code className="-tokenKeyword">char</code>) <code className="-tokenClassEntity">Terminal</code>.<code className="-tokenMethod">read</code>();</code><br/>
+                                                
+                                                <br/>
+                                                <code className="-nestedInnerCode --3Identation"><code className="-tokenKeyword">switch</code> ((<code className="-tokenKeyword">char</code>)command) &#123;</code><br/>
+                                                    <code className="-nestedInnerCode --4Identation"><code className="-tokenKeyword">case</code> <code className="-tokenString">'t'</code>:</code><br/>
+                                                        <code className="-nestedInnerCode --5Identation"><code className="-tokenMethod">run_all_unit_test</code>();</code><br/>
+                                                        <code className="-nestedInnerCode --5Identation"><code className="-tokenKeyword">break</code>;</code><br/>
+
+                                                    <code className="-nestedInnerCode --4Identation"><code className="-tokenKeyword">default</code>:</code><br/>   
+                                                        <code className="-nestedInnerCode --5Identation"><code className="-tokenMethod">stop</code>();</code><br/>
+                                                        <code className="-nestedInnerCode --5Identation"><code className="-tokenKeyword">break</code>;</code><br/>
+                                                                                   
+                                                <code className="-nestedInnerCode --3Identation">&#125;</code><br/>
+                                            <code className="-nestedInnerCode --2Identation">&#125;</code><br/>
+                                        <code className="-nestedInnerCode">&#125;</code><br/>
+                                    &#125;  
+                                </code>                                    
+                                </ul>
+                            </li>   
+                        </ul>
+                    </li>      
                 </ul>
             </div>
         </div>
