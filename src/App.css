@@ -26,6 +26,17 @@
     max-width: 100%;
 }
 
+.-efeitoMarcaTexto {
+    background-color: #c6c6c6;
+    border-radius: 5px;
+    color: red;
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
+    font-size: .8rem;
+    font-weight: bolder;
+    padding: 0 2px;
+    text-shadow: none;
+}
+
 .-minWidthMaxContent {
     min-width: max-content;
 }
@@ -58,6 +69,10 @@ section div {
     section {
         padding: 1rem 2px;
     }
+
+    .-efeitoMarcaTexto {
+        font-size: .7rem;
+    }
 }
 
 @media (max-width: 425px)
@@ -68,5 +83,10 @@ section div {
 
     .main-title {
         font-size: .9rem;
+    }
+
+    .-efeitoMarcaTexto {
+        font-size: .6rem;
+        padding: 0 1.5px;
     }
 }
