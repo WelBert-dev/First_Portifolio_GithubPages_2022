@@ -33,6 +33,20 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                     <iframe class="video-carrinho-arduino-bluetooth" src={video_testes_unitarios_no_carrinho_arduino_bluetooth} frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
+            <div className="subContainer-bottom">
+                <ul className="projects-description--container">
+                    <li>
+                        <h3 class="projects-subtitle">Overview:</h3>
+                        <ul className="projects-frontend--container">
+                            <li>Trabalho Final de conclusão do 2o Semestre de ADS no CEUNSP, entre disciplinas compartilhadas.</li>
+                            <li>Utilizando o aplicativo android Dabble como interface de comunicação Homen-Máquina.</li>
+                            <li>Apesar de utilizarmos como base o seguinte projeto do makerhero, muitas mudanças foram necessárias para funcionar corretamente: <a className="-linkBoldYellowProjects" href="https://www.makerhero.com/blog/como-fazer-um-carrinho-de-controle-remoto-simples-com-bluetooth" target="_blank">Clique AQUI!</a></li>
+                            <li>Carrinho controlado via GamePad Module do aplicativo android Dabble.</li>
+                            <li>Bateria de testes unitários disparados e monitorados via Terminal Module do mesmo aplicativo, mencionado acima.</li>
+                        </ul>
+                    </li>      
+                </ul>
+            </div>
         </div>
     </article>
     )
