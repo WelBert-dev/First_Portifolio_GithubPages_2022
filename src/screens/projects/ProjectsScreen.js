@@ -2,6 +2,7 @@ import React from 'react';
 
 import './ProjectsScreen.css';
 
+import CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP from './carrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP/CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP';
 import DissecandoGPT_trabalho_CEUNSP_tendenciasEmCienciasDaComputacao from './dissecandoGPT_trabalho_CEUNSP_tendenciasEmCienciasDaComputacao/DissecandoGPT_trabalho_CEUNSP_tendenciasEmCienciasDaComputacao';
 import VideoUpscaler_with_AI_Real_ESRGAN from './videoUpscaler_with_AI_Real_ESRGAN/VideoUpscaler_with_AI_Real_ESRGAN';
 import AudioSummarizingGenerator_with_AI_WebGPT_and_Whisper from './audioSummarizingGenerator_with_AI_WebGPT_and_Whisper/AudioSummarizingGenerator_with_AI_WebGPT_and_Whisper';
@@ -19,6 +20,31 @@ export default function ProjectsScreen() {
         <div>
             <h1 className="main-title">&lsaquo;Projetos&rsaquo;</h1>
             <div className="wrapper-projects">
+
+                {/* 
+                    Trabalho da faculdade (ADS) de conclusão para disciplinas compartilhadas, 
+                    focado em desenvolver um carrinho com arduíno controlado via gamepad. 
+                    
+                    Mas como eu estava estudando Testes Unitários de Software com JUnit (Java),
+                    resolvi me desafiar e implementei baterias de testes unitários nas direções do 
+                    carrinho com a biblioteca ArduinoUnit.
+                    
+                    Resolvi ir além, e me desafiar ainda mais.
+                    
+                    Para debbugar e monitorar as execuções e feedbacks dos testes é necessário
+                    manter o arduíno conectado no computador via USB, e utilizar o monitor serial
+                    "Janela serial do ArduinoIDE" para visualizar as impressões `Serial.print()`.
+                    
+                    Estando com uma conexão Bluetooth estabelecida entre o carrinho e o celular,
+                    é possível redirecionar com uso de polimorfismo todas as saídas stdout `Serial.print...()`,
+                    para outros modulos do projeto, neste caso eu redireciono para o Terminal Module, 
+                    que é outra funcionalidade do aplicativo android Dabble.
+                     
+                    Trabalho desenvolvido em 26/10/2023.
+                */}
+                <CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP/>
+                <hr />
+                
                  {/* 
                     Trabalho da faculdade (ADS) de conclusão da disciplina Tendências em Ciências da Computação, 
                     focado em Inteligência Artificial Generativa, mais especificamente no GPT. 
