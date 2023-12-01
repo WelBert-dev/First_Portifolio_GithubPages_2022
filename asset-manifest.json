@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.834e30b2.css",
-    "main.js": "/static/js/main.206412dd.js",
+    "main.css": "/static/css/main.6bf131c4.css",
+    "main.js": "/static/js/main.72e325a2.js",
     "static/media/inteligncia-artificial.mp4": "/static/media/inteligncia-artificial.c8013da89f9c6e3a9385.mp4",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
@@ -76,6 +76,7 @@
     "static/media/Crazy Frog - Axel F (Official Video) (128 kbps).mp3": "/static/media/Crazy Frog - Axel F (Official Video) (128 kbps).2bfa332c767adc0a572b.mp3",
     "static/media/one_piece_upscale_depois.mp4": "/static/media/one_piece_upscale_depois.3af8b38ad37873d4ed2a.mp4",
     "static/media/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).mp3": "/static/media/Pokémon Abertura 1 PT-BR - Temos que Pegar (320 kbps).55c3b6f9038c0165e51c.mp3",
+    "static/media/carrinho_arduino_bluetooth.mp4": "/static/media/carrinho_arduino_bluetooth.77d47969255c74d93af9.mp4",
     "static/media/Rick And Morty Intro (320 kbps).mp3": "/static/media/Rick And Morty Intro (320 kbps).b48eba8762a2ecf1ce4f.mp3",
     "static/media/Cocoricó - Abertura e Encerramento.mp3": "/static/media/Cocoricó - Abertura e Encerramento.10bcf50a479eec9b3209.mp3",
     "static/media/Abertura do Castelo Rá Tim Bum.mp3": "/static/media/Abertura do Castelo Rá Tim Bum.d76003c7aeba5f927593.mp3",
@@ -142,11 +143,11 @@
     "static/media/javascript_vanilla_icon.webp": "/static/media/javascript_vanilla_icon.bb41b35e77975f0c88b0.webp",
     "static/media/python3_icon.webp": "/static/media/python3_icon.7abe0af8da3a7c657823.webp",
     "static/media/redux_state_management_logo_icon.svg": "/static/media/redux_state_management_logo_icon.0d451f4a96daa541b83b419534633d6e.svg",
-    "main.834e30b2.css.map": "/static/css/main.834e30b2.css.map",
-    "main.206412dd.js.map": "/static/js/main.206412dd.js.map"
+    "main.6bf131c4.css.map": "/static/css/main.6bf131c4.css.map",
+    "main.72e325a2.js.map": "/static/js/main.72e325a2.js.map"
   },
   "entrypoints": [
-    "static/css/main.834e30b2.css",
-    "static/js/main.206412dd.js"
+    "static/css/main.6bf131c4.css",
+    "static/js/main.72e325a2.js"
   ]
 }
