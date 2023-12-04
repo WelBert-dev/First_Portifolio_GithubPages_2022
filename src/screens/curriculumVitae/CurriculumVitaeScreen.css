@@ -21,7 +21,8 @@ tr .template__professional__column, .template__newyork__main.template__professio
 
 .template__newyork .template__section__college, .template__section__right .template__section__company, .template__nameOccupation > .template__occupation > p{
     color: #11e8ff;
-    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
+    font-family: var(--main-fontFamily-secondTitle) !important;
+    font-size: .85rem;
 
 }
 
@@ -41,6 +42,8 @@ tr .template__professional__column, .template__newyork__main.template__professio
 
 .template__header__info > p:nth-child(1){
     color: #f00;
+    font-family: var(--main-fontFamily-secondTitle);
+    font-size: .85rem;
 }
 
 .template__professional__column.template__newyork__column > section > .template__section__title {
@@ -120,9 +123,10 @@ padding-bottom: 8px;
 page-break-after: avoid;
 }
 .template__professional .template__section__title {
-font-size: 16px;
+font-size: 15px;
 margin-bottom: 16px;
 color: #f00;
+font-family: var(--main-fontFamily-secondTitle);
 }
 .template__section__subtitle, .template__section__position, .template__section__degree, .template__occupation {
 font-weight: 700;
@@ -131,6 +135,11 @@ font-size: 1rem;
 .template__newyork .template__section__info__value {
 word-break: break-word;
 word-wrap: break-word;
+text-shadow: 1px 1px 2px rgb(5, 207, 207);
+}
+
+.template__section__languages.template__section__simple {
+    text-shadow: 1px 1px 2px rgb(5, 207, 207);
 }
 
 .template__professional .template__header__info {
@@ -178,6 +187,7 @@ line-height: 17px;
 
 .template__professional .template__name > span {
     color: white !important;
+    font-family: var(--main-fontFamily-secondTitle);
 }
 
 .template__professional .template__header__column {
@@ -279,6 +289,8 @@ margin-top: -10px;
 
 .color--blue.template__newyork .template__section__degree, .color--blue.template__newyork .template__section__position {
 color: white;
+font-family: var(--main-fontFamily-secondTitle);
+font-size: 15px;
 }
 .template__newyork .template__section__position, .template__newyork .template__section__degree {
 font-size: 16px;
@@ -534,13 +546,14 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
-        text-shadow: 1px 1px 2px #fff;
+        text-shadow: 1px 1px 2px #05cfcf;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
         border-top: 3px double #000;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
     }
 
     #education .template__section__title.-spanFormacaoAcad--superior::after {
@@ -548,10 +561,11 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
-        text-shadow: 1px 1px 2px #fff;
+        text-shadow: 1px 1px 2px #05cfcf;
         line-height: .8rem;
         font-size: 12px;
         padding: 0 .5rem;
+        font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
     }
 
     /* #education span.-spanFormacaoAcad--superior.--gradeCurricularCurrentLastSemestre::after {
@@ -607,13 +621,14 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
-        text-shadow: 1px 1px 2px #fff;
+        text-shadow: 1px 1px 2px #05cfcf;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
         border-top: 3px double #000;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
     }
 
     #education .template__section__title.-spanFormacaoAcad--tecnico::after {
@@ -621,10 +636,11 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
-        text-shadow: 1px 1px 2px #fff;
+        text-shadow: 1px 1px 2px #05cfcf;
         line-height: .8rem;
         font-size: 12px;
         padding: 0 .5rem;
+        font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
     }
 
     /* #education span.-spanFormacaoAcad--tecnico.--gradeCurricular4Semestre::after {
@@ -694,13 +710,14 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
-        text-shadow: 1px 1px 2px #fff;
+        text-shadow: 1px 1px 2px #05cfcf;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
         border-top: 3px double #000;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
     }
 
     #work-experience .template__section__title::after {
@@ -708,10 +725,11 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
-        text-shadow: 1px 1px 2px #fff;
+        text-shadow: 1px 1px 2px #05cfcf;
         line-height: .8rem;
         font-size: 12px;
         padding: 0 .5rem;
+        font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
     }
 
     #volunteer-work span::after {
@@ -719,13 +737,14 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
-        text-shadow: 1px 1px 2px #fff;
+        text-shadow: 1px 1px 2px #05cfcf;
         line-height: 1rem;
         font-size: 12px;
         padding-top: .5rem;
         border-top: 3px double #000;
         border-top-left-radius: 5px;
         border-top-right-radius: 5px;
+        font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
     }
 
     #volunteer-work .template__section__title::after {
@@ -733,15 +752,19 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
         position: relative;
         display: block;
         color: #000;
-        text-shadow: 1px 1px 2px #fff;
+        text-shadow: 1px 1px 2px #05cfcf;
         line-height: .8rem;
         font-size: 12px;
         padding: 0 .5rem;
+        font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
     }
 
     .template__section__title.-mainBody > span {
         color: #000 !important;
-        text-shadow: 1px 1px 2px #fff;
+        text-shadow: 1px 1px 2px #05cfcf;
+        font-family: var(--main-fontFamily-secondTitle);
+        font-size: .75rem;
+
     }
 
     section.diferenceBeetweenGradeAndMatrizCurricular {
@@ -750,6 +773,14 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
 
     .-text-align-center-on-mobile {
         text-align: center;
+    }
+
+    .template__professional .template__name > span {
+        font-size: .9rem;
+    }
+
+    .template__newyork .template__section__college, .template__section__right .template__section__company, .template__nameOccupation > .template__occupation > p {
+        font-size: .8rem !important;
     }
 }
 
@@ -804,5 +835,21 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
 
     .template__section__degree {
         line-height: .9rem;
+    }
+
+    .template__professional .template__name > span {
+        font-size: .85rem;
+    }
+
+    .template__nameOccupation > .template__occupation > p {
+        font-size: .7rem !important;
+    }
+
+    .template__newyork .template__section__college, .template__section__right .template__section__company {
+        font-size: .65rem !important;
+    }
+
+    .color--blue.template__newyork .template__section__degree, .color--blue.template__newyork .template__section__position {
+        font-size: .7rem;
     }
 }
