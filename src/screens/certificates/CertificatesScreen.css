@@ -129,15 +129,15 @@ hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
 } 
 
 .projects-title--container > span.-certificate--span{
-	font-size: 1.1rem;
+	font-size: .8rem;
 	background-color: var(--main-bgColorLightGrey);
 	padding: 0 1px;
 	text-align: center;
 	margin-bottom: 3px;
 	color: #000;
-	font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
-	text-shadow: 1px 1px 2px rgb(5, 207, 207);
-	line-height: 1rem;
+	font-family: var(--main-fontFamily-secondTitle) !important;
+	text-shadow: 1px 1px 2px #05cfcf;
+	
 }
 
 
@@ -150,6 +150,10 @@ hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
 	h1.main-title.-complementaryActivities {
 		font-size: .8rem;
 		line-height: 1rem;
+	}
+
+	.projects-title--container > span {
+		font-size: .7rem;
 	}
 }
 
@@ -164,7 +168,7 @@ hr.certificates-autenticCode--spanSeparator.-widthSpanSeparator {
 	}
 
 	.projects-title--container > span.-certificate--span{
-		font-size: .7rem;
+		font-size: .64rem;
 	}
 
 	span.certificates-autenticCode--span {
