@@ -305,9 +305,17 @@ export default function CurriculumVitaeScreen() {
                                          <div className="template__section__container">
                                          <div data-subsection-position="0" className="template__section template__section__experience template__section--border template__section--twoColumns">
                                              <div className="template__section__left">
-                                                 <p className="template__section__location">Salto - SP, Brasil</p>
-                                                 <p className="template__section__startDate">Nov 2018</p>
-                                                 <p className="template__section__endDate">Nov 2020 <br/>(2 anos)</p>
+                                                <div>
+                                                   <p className="template__section__location">Salto - SP, Brasil</p>
+                                                   <p className="template__section__startDate">Nov 2018</p>
+                                                   <p className="template__section__endDate">Nov 2020 <br/>(2 anos)</p>
+                                                </div>
+                                                 <div className="template__section__coordinator">
+                                                   <p class="template__section__coordinato_position">CEO:</p>
+                                                   <p class="template__section__coordinator_name">Luciana Iorio</p>
+                                                   <p class="template__section__coordinator_email">clemont@clemont.com.br</p>
+                                                   <p class="template__section__coordinator_phone">(11) 4021-5463</p>
+                                                </div>
                                              </div>
                                              <div className="template__section__right">
                                                  <p className="template__section__position">Almoxarife</p>
@@ -331,9 +339,17 @@ export default function CurriculumVitaeScreen() {
                                          <div className="template__section__container">
                                          <div data-subsection-position="0" className="template__section template__section__experience template__section--border template__section--twoColumns">
                                              <div className="template__section__left">
-                                                 <p className="template__section__location">Salto - SP, Brasil</p>
-                                                 <p className="template__section__startDate">Mai 2022</p>
-                                                 <p className="template__section__endDate">Jun 2023 <br/>(1 ano de mandato)</p>
+                                                <div>
+                                                   <p className="template__section__location">Salto - SP, Brasil</p>
+                                                   <p className="template__section__startDate">Mai 2022</p>
+                                                   <p className="template__section__endDate">Jun 2023 <br/>(1 ano de mandato)</p>
+                                                </div>
+                                                <div className="template__section__coordinator">
+                                                   <p class="template__section__coordinato_position">Coordenador</p>
+                                                   <p class="template__section__coordinator_name">Francisco Diego Garrido</p>
+                                                   <p class="template__section__coordinator_email">diego@ifsp.edu.br</p>
+                                                   <p class="template__section__coordinator_phone">(11) 4602-9196</p>
+                                                </div>
                                              </div>
                                              <div className="template__section__right">
                                                  <p className="template__section__position">Comissão CEIC - Membro</p>
@@ -358,12 +374,18 @@ export default function CurriculumVitaeScreen() {
                                          <p className="template__section__title -mainBody -spanFormacaoAcad--superior"><span className="-spanFormacaoAcad--superior">Formação Superior</span></p>
                                          <div className="template__section__container">
                                          <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns -superiorADS">
-                                                <div className="template__section__left">
-                                                    <p className="template__section__location">Salto - SP, Brasil </p>
+                                                <div className="template__section__left">        
                                                     <div className="template__section__date">
-                                                        <p className="template__section__startDate">Fev 2023</p>
-                                                        <p className="template__section__endDate">Atualmente</p>
+                                                      <p className="template__section__location">Salto - SP, Brasil </p>
+                                                      <p className="template__section__startDate">Fev 2023</p>
+                                                      <p className="template__section__endDate">Atualmente</p>
                                                     </div>
+                                                    <div className="template__section__coordinator">
+                                                      <p class="template__section__coordinato_position">Coordenador</p>
+                                                      <p class="template__section__coordinator_name">Luis R. Albano Bueno</p>
+                                                      <p class="template__section__coordinator_email">luis.silva@ceunsp.edu.br</p>
+                                                      <p class="template__section__coordinator_phone">(15) 98161-0694</p>
+                                                   </div>
                                                 </div>
                                                 <div className="template__section__right">
                                                     <p className="template__section__degree">Análise e Desenvolvimento de Sistemas</p>
@@ -377,11 +399,21 @@ export default function CurriculumVitaeScreen() {
                                             <p className="template__section__title -mainBody -spanFormacaoAcad--tecnico"><span className="-spanFormacaoAcad--tecnico">Formação Técnica</span></p>
                                             <div data-subsection-position="0" className="template__section template__section__education template__section--twoColumns">
                                                 <div className="template__section__left">
-                                                    <p className="template__section__location">Salto - SP, Brasil </p>
                                                     <div className="template__section__date">
+                                                        <p className="template__section__location">Salto - SP, Brasil </p>
                                                         <p className="template__section__startDate">Fev 2021</p>
                                                         <p className="template__section__endDate">Dez 2022 <br/>(2 anos)</p>
                                                     </div>
+                                                    <div className="template__section__coordinator">
+                                                      <p class="template__section__coordinato_position">Coordenador no final</p>
+                                                      <p class="template__section__coordinator_name">Francisco Diego Garrido</p>
+                                                      <p class="template__section__coordinator_email">diego@ifsp.edu.br</p>
+                                                      <p class="template__section__coordinator_phone">(11) 4602-9196</p>
+                                                      <p class="template__section__coordinato_position">Coordenador no começo</p>
+                                                      <p class="template__section__coordinator_name">Reinaldo do Valle Junior</p>
+                                                      <p class="template__section__coordinator_email">rvallejr@ifsp.edu.br</p>
+                                                      <p class="template__section__coordinator_phone">(11) 4602-9191</p>
+                                                   </div>
                                                 </div>
                                                 <div className="template__section__right">
                                                     <p className="template__section__degree">Técnico em Informática</p>

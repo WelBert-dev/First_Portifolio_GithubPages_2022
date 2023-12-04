@@ -238,6 +238,9 @@ position: relative;
 width: 172px;
 padding-right: 16px;
 padding-bottom: 16px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
 }
 .template__professional .template__section__left {
 border-right: 1px solid var(--main-bgColorLightGrey);
@@ -443,6 +446,25 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
     color:#11e8ff;
     text-shadow: none;
 }
+
+.template__section__coordinator {
+    height: unset;
+    width: unset;
+}
+
+.template__section__coordinato_position  {
+    color: white;
+    font-family: var(--main-fontFamily-secondTitle);
+    font-size: 12.5px;
+}
+
+.template__section__coordinator_name, .template__section__coordinator_email, .template__section__coordinator_phone {
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
+    font-style: italic;
+    font-size: 12.5px;
+}
+
+
 
 @media (max-width: 810px)
 {
