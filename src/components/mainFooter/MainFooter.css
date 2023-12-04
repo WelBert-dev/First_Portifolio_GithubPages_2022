@@ -33,7 +33,7 @@ footer span {
 
 footer h3 {
     font-size: .7rem;
-    font-family: var(--main-fontFamily-navbar-and-copyright);
+    font-family: var(--main-fontFamily-secondTitle);
 }
 
 .footer-icons {

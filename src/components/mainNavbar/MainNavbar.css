@@ -17,7 +17,7 @@ header nav {
 header nav a {
     font-size: .83rem;
     font-weight: normal;
-    font-family: var(--main-fontFamily-navbar-and-copyright);
+    font-family: var(--main-fontFamily-secondTitle);
     border-radius: 10%;
     padding: .5rem;
     box-shadow: .1rem .1rem .2rem black;

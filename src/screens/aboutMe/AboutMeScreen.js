@@ -32,13 +32,13 @@ export default function AboutMeScreen() {
                     <p>
                     <span className="main-sobre--shellUser">root@r2d2</span>:<span className="main-sobre--shellDir">/home/welbert/aboutMe</span># \ <br/>&rsaquo;
                     <br/><br/>
-                    <span className="main-sobre--shellDir">ADENDO: </span><br/><br/>
+                    <span className="main-sobre--shellDir">ADENDO</span><br/><br/>
                     Aqui eu descrevo minhas convicções e hobbies, sobre os aprofundamentos técnicos estão nas páginas Habilidades e Currículo!<br/><br/>
 
                     Fiz isso pois se não o site só iria conter "CONHEÇO ISSO E AQUILO, ESTUDEI ISSO E AQUILO, ESTOU ESTUDANDO ISSO E AQUILO", quem é de tecnolgia 
                     vai entender rsrsrs...<br/><br/>
 
-                    <span className="main-sobre--shellDir">CONVICÇÕES: </span><br/><br/>
+                    <span className="main-sobre--shellDir">CONVICÇÕES</span><br/><br/>
 
                     Vivo e respiro programação e desenvolvimento todos os dias, desde quando decidi seguir minha paixão há 3 anos 
                     atrás.<br/><br/>
@@ -52,7 +52,7 @@ export default function AboutMeScreen() {
                     Sigo a filosofia de "Um leão por dia", acreditando que a persistência e o esforço constante 
                     são o caminho para o sucesso.<br/><br/>
 
-                    <span className="main-sobre--shellDir">HOBBIES:</span><br/><br/>
+                    <span className="main-sobre--shellDir">HOBBIES</span><br/><br/>
 
                     Atualmente estou procurando hobbies fora do mundo da tecnologia, pois meus hobbies envolvem 
                     mexer com meu Site, a Bíblia do Java, estudar as utilidades, possibilidades, e usabilidades  

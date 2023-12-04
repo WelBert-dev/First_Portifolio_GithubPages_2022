@@ -28,6 +28,10 @@
     line-height: 1.3rem;
 }
 
+#main-sobre--container > div p span{
+    font-size: .9rem;
+}
+
 /* #main-sobre--container div ul {
     max-width: max-content;
     font-size: 1rem;
@@ -75,8 +79,9 @@
 
 .main-sobre--shellHead > span > h3{
     max-width: fit-content;
-    font-weight: bold;
-    font-size: .9rem;
+    font-weight: normal;
+    font-size: .8rem;
+    font-family: var(--main-fontFamily-secondTitle);
 }
 
 .main-sobre--shellHeadWindowCommomIcons > i > svg {
@@ -85,16 +90,10 @@
 }
 
 
-.main-sobre--shellDir {
+.main-sobre--shellDir, .main-sobre--shellUser  {
     color: #11e8ff;
-    font-family: var(--main-fontFamily);
-    font-weight: 800;
-}
-
-.main-sobre--shellUser {
-    color: #11e8ff;
-    font-family: var(--main-fontFamily);
-    font-weight: 800;
+    font-family: var(--main-fontFamily-secondTitle);
+    font-weight: normal;
 }
 
 @media (max-width: 810px)
@@ -119,6 +118,13 @@
 
     .main-sobre--shellHead > span {
         margin-left: 0;
+    }
+    .main-sobre--shellHead > span > h3{
+        font-size: .75rem;
+    }
+
+    #main-sobre--container > div p span{
+        font-size: .875rem;
     }
     
 }
@@ -151,5 +157,9 @@
 
     .main-sobre--shellHead > span{
         display: none;
+    }
+
+    #main-sobre--container > div p span{
+        font-size: .85rem;
     }
 }

@@ -55,7 +55,7 @@
     background-color: var(--main-bgColorLightGrey);
     padding: 0 1px;
     margin: 2px auto 0 auto;
-    font-family: var(--main-fontFamily-navbar-and-copyright) !important;
+    font-family: var(--main-fontFamily-secondTitle) !important;
     text-align: center;
 }
 
