@@ -16,9 +16,9 @@ export default function DissecandoGPT_trabalho_CEUNSP_tendenciasEmCienciasDaComp
                     <a href="
 https://github.com/WelBert-dev/ceunsp/tree/main/ADS-2Semestre-2023/tendencias_em_ciencias_da_computacao_optativa" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                 </div>
-                <span>Trabalho ADS CEUNSP - Tendências em Ciências da Computação.</span>
+                <span>Trabalho ADS CEUNSP - Tendências em Ciências da Computação</span>
                 <code className="subtituloOfSingleProject --dateOfImplementation">Desenvolvido em 29/09/2023 até 28/11/2023</code>
-                <p>Artefatos, rascunhos e documentos em formato ABNT no botão acima.</p>
+                <p>Artefatos, rascunhos e documentos em formato ABNT no botão acima</p>
             </div>
             <ul className="projects-description--container">
                 <li>
@@ -31,7 +31,7 @@ https://github.com/WelBert-dev/ceunsp/tree/main/ADS-2Semestre-2023/tendencias_em
             <div className="subContainer-bottom">
                 <ul className="projects-description--container">
                     <li>
-                        <h3 class="projects-subtitle">Overview:</h3>
+                        <h3 class="projects-subtitle">Overview</h3>
                         <ul className="projects-frontend--container">
                             <li>Apesar de ser trabalho da faculdade, eu já conhecia há muito tempo.</li>
                             <li>Antes do hype gerado pela interface web, o GPT já era bastante conhecido e utilizado pela bolha Dev.</li>
@@ -44,7 +44,7 @@ https://github.com/WelBert-dev/ceunsp/tree/main/ADS-2Semestre-2023/tendencias_em
                         </ul>
                     </li>
                     <li>
-                        <h3 class="projects-subtitle">Tópicos abordados:</h3>
+                        <h3 class="projects-subtitle">Tópicos abordados</h3>
                         <ul className="projects-frontend--container">
                             <li>O que é o GPT e como ele gera as respostas na sua implementação em baixo nível.</li>
                             <li>Cadeias de Markov, que é o algoritmo "Pai" dessas generativas mais modernas.</li>
@@ -86,7 +86,7 @@ https://github.com/WelBert-dev/ceunsp/tree/main/ADS-2Semestre-2023/tendencias_em
                         </ul>
                     </li>
                     <li>
-                        <h3 class="projects-subtitle">Inteligências Artificiais úteis:</h3>
+                        <h3 class="projects-subtitle">Inteligências Artificiais úteis</h3>
                         <ul className="projects-frontend--container">
                             <li>Otimizar imagens (Macete possibilita aplicar em Vídeos): Real-ESRGAN.</li>
                             <li>Criador de Mapa Mental com I.A (Roadmap): X Mind Copilot.</li>

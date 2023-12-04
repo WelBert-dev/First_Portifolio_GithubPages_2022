@@ -16,7 +16,7 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                     <h3 className="projects-title">Carrinho Arduíno Bluetooth<br/>Bônus: Testes Unitários de Software</h3>
                     <a href="https://github.com/WelBert-dev/ceunsp/tree/main/ADS-2Semestre-2023/testes_unitarios_carrinho_arduino_bluetooth_trabalho_final" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                 </div>
-                <span>Trabalho ADS CEUNSP - Disciplinas compartilhadas</span>
+                <span className="highlight-text">Trabalho ADS CEUNSP - Disciplinas compartilhadas</span>
                 <code className="subtituloOfSingleProject --dateOfImplementation">Desenvolvido em 26/10/2023</code>
                 <p>Código do projeto clicando no botão acima</p>
             </div>        
@@ -36,7 +36,7 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
             <div className="subContainer-bottom">
                 <ul className="projects-description--container">
                     <li>
-                        <h3 class="projects-subtitle">Overview:</h3>
+                        <h3 class="projects-subtitle">Overview</h3>
                         <ul className="projects-frontend--container">
                             <li>Trabalho Final de conclusão do 2o Semestre de ADS no CEUNSP, entre disciplinas compartilhadas.</li>
                             <li>Utilizando o aplicativo android Dabble como interface de comunicação Homen-Máquina.</li>
@@ -46,7 +46,7 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                         </ul>
                     </li>
                     <li>
-                        <h3 class="projects-subtitle">Primeiros bugs:</h3>
+                        <h3 class="projects-subtitle">Primeiros bugs</h3>
                         <ul className="projects-frontend--container">
                             <li>Lógica não condiz com esquema elétrico apresentado, conexões dos motores das rodas NÃO correspondem ao código fornecido pelo projeto base do makerhero.</li>
                             <li>Direções estavam trocadas, a funcionalidade "para frente" indo "para esquerda", e para os lados também incorretos.</li>
@@ -54,7 +54,7 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                         </ul>
                     </li>
                     <li>
-                        <h3 class="projects-subtitle">Lib ArduinoUnit:</h3>
+                        <h3 class="projects-subtitle">Lib ArduinoUnit</h3>
                         <ul className="projects-frontend--container">
                             <li>Documentação oficial: <a className="-linkBoldYellowProjects" href="https://github.com/mmurdoch/arduinounit" target="_blank">Clique AQUI!</a></li>
                             <li>Biblioteca do arduíno especializada em testes unitários (bem similar ao JUnit do Java), por meio dos Assertions.</li>
@@ -81,7 +81,7 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                     </li>
 
                     <li>
-                        <h3 class="projects-subtitle">Terminal Module Dabble:</h3>
+                        <h3 class="projects-subtitle">Terminal Module Dabble</h3>
                         <ul className="projects-frontend--container">
                             <li>Documentação oficial: <a className="-linkBoldYellowProjects" href="https://ai.thestempedia.com/docs/dabble-app/terminal-module/" target="_blank">Clique AQUI!</a></li>
                             <li>Pelo Terminal Module do aplicativo android Dabble é possível realizar trocas de mensagem texto entre o celular e o arduíno via bluetooth.</li>
@@ -138,7 +138,7 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                     </li>
 
                     <li>
-                        <h3 class="projects-subtitle">ArduinoUnit e Polimorfismo:</h3>
+                        <h3 class="projects-subtitle">ArduinoUnit e Polimorfismo</h3>
                         <ul className="projects-frontend--container">
                             <li>A saída padrão dos resultados dos testes para monitoramentos e feedbacks sobre eles, é por meio do stdout <code className="-efeitoMarcaTexto">Serial.print...()</code> nativo do arduíno.</li>
                             <li>Ou seja, para debbugar e verificar esses resultados, deve-se estar com o arduíno conectado no computador via cabo USB.</li>
@@ -232,7 +232,7 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                     </li>
 
                     <li>
-                        <h3 class="projects-subtitle">Ajuste fino no ArduinoUnit:</h3>
+                        <h3 class="projects-subtitle">Ajuste fino no ArduinoUnit</h3>
                         <ul className="projects-frontend--container">
                             <li>Após finalizar toda a bateria de testes unitários, variáveis de controles internas da biblioteca ArduinoUnit são definidas como "Já executado".</li>
                             <li>Isso implica que a bateria de testes só poderá ser executada UMA única vez, a cada compilação das instruções no arduíno.</li>

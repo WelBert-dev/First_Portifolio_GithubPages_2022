@@ -48,16 +48,15 @@
 }
 
 .projects-title--container > span {
-    font-weight: bold;
+    font-weight: normal;
     color: #000;
     text-shadow: 1px 1px 2px rgb(5, 207, 207);
-    font-size: 1.1rem;
+    font-size: .8rem;
     background-color: var(--main-bgColorLightGrey);
     padding: 0 1px;
     margin: 2px auto 0 auto;
-    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
+    font-family: var(--main-fontFamily-navbar-and-copyright) !important;
     text-align: center;
-    line-height: 1rem;
 }
 
 .projects-title {
@@ -202,11 +201,12 @@ code.subtituloOfSingleProject.--dateOfImplementation {
     .projects-title--container p {
         font-size: .7rem;
     }
-    
+    .projects-title--container > span {
+        font-size: .7rem;
+    }
     .projects-subtitle {
         font-size: .8rem;
     }
-    
     .projects-description--container {
         font-size: .7rem;
     }
@@ -258,7 +258,7 @@ code.subtituloOfSingleProject.--dateOfImplementation {
         font-size: .8rem;
     }
     .projects-title--container > span {
-        font-size: .8rem;
+        font-size: .64rem;
     }
 
     a.-linkBoldYellowProjects {
@@ -272,8 +272,9 @@ code.subtituloOfSingleProject.--dateOfImplementation {
     }
 
     code.subtituloOfSingleProject.--dateOfImplementation {
-        font-size: .7rem;
+        font-size: .65rem;
         border-radius: 0;
+        line-height: .7rem;
     }
 
     .projects-description--container h3.projects-subtitle {

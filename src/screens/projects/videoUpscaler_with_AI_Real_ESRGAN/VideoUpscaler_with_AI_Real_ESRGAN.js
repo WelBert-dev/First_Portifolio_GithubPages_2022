@@ -17,8 +17,8 @@ export default function VideoUpscaler_with_AI_Real_ESRGAN() {
                     <h3 className="projects-title">Otimizador de Vídeos com Inteligência Artificial</h3>
                     <a href="https://colab.research.google.com/github/yuvraj108c/4k-video-upscaler-colab/blob/main/4k_Video_Upscaler_Colab_(Real_ESRGAN).ipynb" target="_blank"><i><BsFillFolderSymlinkFill /></i></a>
                 </div>
-                <span>O CÓDIGO NÃO É DE MINHA AUTORIA, NÃO É NECESSÁRIO REINVENTAR A RODA.</span>
-                <p>CÓDIGO DO PROJETO NÃO É DE MINHA AUTORIA, POIS JÁ É PROBLEMA RESOLVIDO.</p>
+                <span>O CÓDIGO NÃO É DE MINHA AUTORIA, NÃO É NECESSÁRIO REINVENTAR A RODA</span>
+                <p>CÓDIGO DO PROJETO NÃO É DE MINHA AUTORIA, POIS JÁ É PROBLEMA RESOLVIDO</p>
             </div>
             <video className="video-naruto_shippuden_beforeAndAfter-demo-upscale" src={video_naruto_shippuden_beforeAndAfter} type="video/mp4" preload="true" controls></video>
             <div className="video-one-piece-demo-upscale-container">
@@ -34,7 +34,7 @@ export default function VideoUpscaler_with_AI_Real_ESRGAN() {
             <div className="subContainer-bottom">
                 <ul className="projects-description--container">
                     <li>
-                        <h3 class="projects-subtitle">Overview:</h3>
+                        <h3 class="projects-subtitle">Overview</h3>
                         <ul className="projects-frontend--container">
                             <li>ATENÇÃO: Parece complicado, mas tudo isso já está feito. Basta adequar o código fornecido abaixo para as suas necessidades.</li>
                             <li>Não existe uma ferramenta específica para otimizar vídeos, mas existe um macete.</li>
@@ -47,7 +47,7 @@ export default function VideoUpscaler_with_AI_Real_ESRGAN() {
                         </ul>
                     </li>
                     <li>
-                        <h3 class="projects-subtitle">Adendo:</h3>
+                        <h3 class="projects-subtitle">Adendo</h3>
                         <ul className="projects-frontend--container">
                             <li>Vale lembrar que ele apenas aumenta a escala, ou seja, NÃO adiciona objetos que não existem no quadro.</li>
                             <li>Caso queira preencher esse espaço com detalhes ou objetos a mais, deve-se utilizar outra Inteligência Artificial, como o DALL-E, Midjourney ou Seaart.</li>
@@ -55,7 +55,7 @@ export default function VideoUpscaler_with_AI_Real_ESRGAN() {
                         </ul>
                     </li>
                     <li>
-                        <h3 class="projects-subtitle">Tutorial Mastigado:</h3>
+                        <h3 class="projects-subtitle">Tutorial Mastigado</h3>
                         <ul className="projects-frontend--container">
                             <li>Open Source, ou seja, podemos instalar e executar em ambiente local.</li>
                             <li>Apesar disto, executar em ambiente local exige boa capacidade de hardware.</li>
