@@ -39,9 +39,9 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                         <h3 class="projects-subtitle">Overview</h3>
                         <ul className="projects-frontend--container">
                             <li>Trabalho Final de conclusão do 2o Semestre de ADS no CEUNSP, entre disciplinas compartilhadas.</li>
-                            <li>Utilizando o aplicativo android Dabble como interface de comunicação Homen-Máquina.</li>
+                            <li>Utilizando o aplicativo Android Dabble como interface de comunicação Homen-Máquina.</li>
                             <li>Apesar de utilizarmos como base o seguinte projeto do makerhero, muitas mudanças foram necessárias para funcionar corretamente: <a className="-linkBoldYellowProjects" href="https://www.makerhero.com/blog/como-fazer-um-carrinho-de-controle-remoto-simples-com-bluetooth" target="_blank">Clique AQUI!</a></li>
-                            <li>Carrinho controlado via GamePad Module do aplicativo android Dabble.</li>
+                            <li>Carrinho controlado via GamePad Module do aplicativo Android Dabble.</li>
                             <li>Bateria de testes unitários disparados e monitorados via Terminal Module do mesmo aplicativo, mencionado acima.</li>
                         </ul>
                     </li>
@@ -50,14 +50,14 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                         <ul className="projects-frontend--container">
                             <li>Lógica não condiz com esquema elétrico apresentado, conexões dos motores das rodas NÃO correspondem ao código fornecido pelo projeto base do makerhero.</li>
                             <li>Direções estavam trocadas, a funcionalidade "para frente" indo "para esquerda", e para os lados também incorretos.</li>
-                            <li>SOLUÇÃO: Bastanto extraír o bloco "para esquerda" e plugar no bloco "para frente" e assim por diante, já foi possível resolver.</li>
+                            <li>SOLUÇÃO: Bastando extrair o bloco "para esquerda" e plugar no bloco "para frente" e assim por diante, já foi possível resolver.</li>
                         </ul>
                     </li>
                     <li>
                         <h3 class="projects-subtitle">Lib ArduinoUnit</h3>
                         <ul className="projects-frontend--container">
                             <li>Documentação oficial: <a className="-linkBoldYellowProjects" href="https://github.com/mmurdoch/arduinounit" target="_blank">Clique AQUI!</a></li>
-                            <li>Biblioteca do arduíno especializada em testes unitários (bem similar ao JUnit do Java), por meio dos Assertions.</li>
+                            <li>Biblioteca do Arduíno especializada em testes unitários (bem similar ao JUnit do Java), por meio dos Assertions.</li>
 
                             <li className="-marginNone--inMobile"><p className="-listItem--inMobile --newThemeBWMCiano">Primeiro devemos definir os métodos de testes, passando como parâmetro qual é o tipo de Assertion que estamos realizando.</p>
                                 <p className="main-title--implementFullBlock">Exemplo de teste unitário para o cenário simples "When forward is successful then returns OK":</p>
@@ -84,8 +84,8 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                         <h3 class="projects-subtitle">Terminal Module Dabble</h3>
                         <ul className="projects-frontend--container">
                             <li>Documentação oficial: <a className="-linkBoldYellowProjects" href="https://ai.thestempedia.com/docs/dabble-app/terminal-module/" target="_blank">Clique AQUI!</a></li>
-                            <li>Pelo Terminal Module do aplicativo android Dabble é possível realizar trocas de mensagem texto entre o celular e o arduíno via bluetooth.</li>
-                            <li>E de acordo com essas mensagens podemos realizar diversas ações no arduíno.</li>
+                            <li>Pelo Terminal Module do aplicativo Android Dabble é possível realizar trocas de mensagem texto entre o celular e o Arduíno via Bluetooth.</li>
+                            <li>E de acordo com essas mensagens podemos realizar diversas ações no Arduíno.</li>
                             <li>Neste caso, quando enviado um "t" a bateria de testes unitários é iniciada.</li>
                             <li>A utilização é bem simples, basta instalar a biblioteca do Dabble pelo gerenciador de dependências da IDE.</li>
                             <li>Depois, é só realizar o include do <code className="-efeitoMarcaTexto">#include &#60;Dabble.h&#62;</code> e <code className="-efeitoMarcaTexto">#define INCLUDE_TERMINAL_MODULE</code></li>
@@ -140,12 +140,12 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                     <li>
                         <h3 class="projects-subtitle">ArduinoUnit e Polimorfismo</h3>
                         <ul className="projects-frontend--container">
-                            <li>A saída padrão dos resultados dos testes para monitoramentos e feedbacks sobre eles, é por meio do stdout <code className="-efeitoMarcaTexto">Serial.print...()</code> nativo do arduíno.</li>
-                            <li>Ou seja, para debbugar e verificar esses resultados, deve-se estar com o arduíno conectado no computador via cabo USB.</li>
+                            <li>A saída padrão dos resultados dos testes para monitoramentos e feedbacks sobre eles, é por meio do stdout <code className="-efeitoMarcaTexto">Serial.print...()</code> nativo do Arduíno.</li>
+                            <li>Ou seja, para debbugar e verificar esses resultados, deve-se estar com o Arduíno conectado no computador via cabo USB.</li>
                             <li>E visualizar por meio da janela serial do ArduínoIDE.</li>
                             <li>Porém isso é bem chato e desgastante, então resolvi me desafiar ainda mais.</li>
                             <li>Estamos com uma conexão Bluetooth estabelecida entre o celular e o carrinho.</li>
-                            <li>Então podemos utilizar o mesmo ambiente como interface de comunicação homen-máquina, para monitoramento dos testes: Aplicativo Android Dabble - Terminal Module.</li>
+                            <li>Então podemos utilizar o mesmo ambiente como interface de comunicação homem-máquina, para monitoramento dos testes: Aplicativo Android Dabble - Terminal Module.</li>
                             <li>Com uso do polimorfismo, podemos implementar uma classe compatível com <code className="-efeitoMarcaTexto">Print</code> herdando dele.</li>
                             <li>Pois "por debaixo dos panos" a biblioteca ArduinoUnit utiliza os métodos dele para realizar impressões print, uma vez que ele é a super classe do <code className="-efeitoMarcaTexto">Serial</code></li>
                             <li className="-marginNone--inMobile"><p className="-listItem--inMobile --newThemeBWMCiano">Então basta sobrescrever o método <code className="-efeitoMarcaTexto">write()</code> do <code className="-efeitoMarcaTexto">Print</code>, pois ele é executado por todos os métodos de impressões do <code className="-efeitoMarcaTexto">Serial.print...()</code></p>
@@ -196,7 +196,7 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                             </li>  
 
                             <li>Desta forma, podemos personalizar as regras de saída serial, redirecionando todas as impressões para outros módulos do projeto.</li>
-                            <li>Neste caso, redirecionamos para o Terminal Module, que é outra funcionalidade do aplicativo android Dabble.</li>
+                            <li>Neste caso, redirecionamos para o Terminal Module, que é outra funcionalidade do aplicativo Android Dabble.</li>
 
                             <li className="-marginNone--inMobile"><p className="-listItem--inMobile --newThemeBWMCiano">Executamos essa ação após finalizar toda a bateria de testes unitários, enviando o buffer acumulado.</p>
                                 <p className="main-title--implementFullBlock">Exemplo de chamada para execução da bateria de testes, e após finalizado, envia o feedback dos testes acumulados no buffer:</p>
@@ -235,12 +235,12 @@ export default function CarrinhoArduinoBluetooth_with_unitTest_trabalho_CEUNSP()
                         <h3 class="projects-subtitle">Ajuste fino no ArduinoUnit</h3>
                         <ul className="projects-frontend--container">
                             <li>Após finalizar toda a bateria de testes unitários, variáveis de controles internas da biblioteca ArduinoUnit são definidas como "Já executado".</li>
-                            <li>Isso implica que a bateria de testes só poderá ser executada UMA única vez, a cada compilação das instruções no arduíno.</li>
+                            <li>Isso implica que a bateria de testes só poderá ser executada UMA única vez, a cada compilação das instruções no Arduíno.</li>
                             <li>Isso ocorre para não ficar executando o mesmo metodo de teste repetidas vezes, MAS isso também ocorre quando os parâmetros dos testes são diferentes.</li>
                             <li>E isso é ruím, pois e se quisermos executar a mesma função, porém com diferentes parâmetros?</li>
                             <li>Na versão LTS da main instalado via gerenciador de dependências do ArduinoIDE isso não é possível, então deve-se instalar o seguinte commit:  <a className="-linkBoldYellowProjects" href="https://github.com/mmurdoch/arduinounit/commit/c96d03d405dea4be713768287070e64fa676ccbb" target="_blank">Clique AQUI!</a></li>
                             <li>Após a execução por completo dos testes <code className="-efeitoMarcaTexto">Test:run()</code> deve-se executar o resetter <code className="-efeitoMarcaTexto">resetDoneTests()</code> para limpar as variáveis internas de controle do ArduinoUnit.</li>
-                            <li>Desta forma, podemos enviar o comando "t" várias vezes pelo aplicativo android Dabble que os testes serão executados quantas vezes quisermos.</li>
+                            <li>Desta forma, podemos enviar o comando "t" várias vezes pelo aplicativo Android Dabble que os testes serão executados quantas vezes quisermos.</li>
                         </ul>
                     </li>      
                 </ul>
