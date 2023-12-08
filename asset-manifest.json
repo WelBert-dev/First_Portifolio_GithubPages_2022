@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0bfdd039.css",
-    "main.js": "/static/js/main.cdcb8bb7.js",
+    "main.js": "/static/js/main.493c48cf.js",
     "static/media/inteligncia-artificial.mp4": "/static/media/inteligncia-artificial.c8013da89f9c6e3a9385.mp4",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
@@ -145,10 +145,10 @@
     "static/media/python3_icon.webp": "/static/media/python3_icon.7abe0af8da3a7c657823.webp",
     "static/media/redux_state_management_logo_icon.svg": "/static/media/redux_state_management_logo_icon.0d451f4a96daa541b83b419534633d6e.svg",
     "main.0bfdd039.css.map": "/static/css/main.0bfdd039.css.map",
-    "main.cdcb8bb7.js.map": "/static/js/main.cdcb8bb7.js.map"
+    "main.493c48cf.js.map": "/static/js/main.493c48cf.js.map"
   },
   "entrypoints": [
     "static/css/main.0bfdd039.css",
-    "static/js/main.cdcb8bb7.js"
+    "static/js/main.493c48cf.js"
   ]
 }
