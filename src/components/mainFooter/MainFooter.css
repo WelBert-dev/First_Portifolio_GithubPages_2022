@@ -93,6 +93,22 @@ footer h3 {
     font-size: .7rem;
 } */
 
+.footer-icon--email {
+    padding-top: 4px;
+}
+
+.footer-icon--email svg {
+    font-size: 1rem;
+    margin-right: 3px;
+}
+
+.footer-icon-email--container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: .3rem;
+}
+
 
 @media (max-width: 810px)
 {
@@ -135,5 +151,8 @@ footer h3 {
 
     footer h3 {
         font-size: .64rem;
+    }
+    .footer-icon-email--container {
+        margin-top: .2rem;
     }
 }
