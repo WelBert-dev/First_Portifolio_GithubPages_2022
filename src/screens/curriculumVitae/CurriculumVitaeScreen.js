@@ -18,7 +18,7 @@ export default function CurriculumVitaeScreen() {
                                      <div className="template__header__info__container">
                                          <div className="template__header__info template__header__info--email">
                                          <p className="template__section__subtitle">E-mail</p>
-                                         <p className="template__section__info__value">wellison.bertelli@hotmail.com</p>
+                                         <p className="template__section__info__value">contato@wellisonbertelli.com.br</p>
                                          </div>
                                          <div className="template__header__info template__header__info--mailAddress">
                                          <p className="template__section__subtitle">Endereço</p>
