@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.606f9773.css",
-    "main.js": "/static/js/main.d4593205.js",
+    "main.css": "/static/css/main.c6db322e.css",
+    "main.js": "/static/js/main.bd192b33.js",
     "static/media/inteligncia-artificial.mp4": "/static/media/inteligncia-artificial.c8013da89f9c6e3a9385.mp4",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
@@ -105,6 +105,7 @@
     "static/media/auauMiauNoFramework.png": "/static/media/auauMiauNoFramework.42a6d9cacaf38ed93a9b.png",
     "static/media/bolsaEnsinoP02.png": "/static/media/bolsaEnsinoP02.496099689918026cc564.png",
     "static/media/dom_javascript_icon.jpeg": "/static/media/dom_javascript_icon.0a47aa9d0120650228e2.jpeg",
+    "static/media/Jonathan Hetegral.otf": "/static/media/Jonathan Hetegral.5acd95b91f2a1105f5e7.otf",
     "static/media/portariaNormativaCeic-parte01.png": "/static/media/portariaNormativaCeic-parte01.509d58570009fb84ef14.png",
     "static/media/ciscoModule02Amostra.png": "/static/media/ciscoModule02Amostra.c5b2997a7c6541666828.png",
     "static/media/logo-qrcodeGeneratorInC.png": "/static/media/logo-qrcodeGeneratorInC.a33757907b17df4a2989.png",
@@ -144,11 +145,11 @@
     "static/media/javascript_vanilla_icon.webp": "/static/media/javascript_vanilla_icon.bb41b35e77975f0c88b0.webp",
     "static/media/python3_icon.webp": "/static/media/python3_icon.7abe0af8da3a7c657823.webp",
     "static/media/redux_state_management_logo_icon.svg": "/static/media/redux_state_management_logo_icon.0d451f4a96daa541b83b419534633d6e.svg",
-    "main.606f9773.css.map": "/static/css/main.606f9773.css.map",
-    "main.d4593205.js.map": "/static/js/main.d4593205.js.map"
+    "main.c6db322e.css.map": "/static/css/main.c6db322e.css.map",
+    "main.bd192b33.js.map": "/static/js/main.bd192b33.js.map"
   },
   "entrypoints": [
-    "static/css/main.606f9773.css",
-    "static/js/main.d4593205.js"
+    "static/css/main.c6db322e.css",
+    "static/js/main.bd192b33.js"
   ]
 }
