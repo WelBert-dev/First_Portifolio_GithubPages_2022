@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.c6db322e.css",
+    "main.css": "/static/css/main.6a047b2b.css",
     "main.js": "/static/js/main.bd192b33.js",
     "static/media/inteligncia-artificial.mp4": "/static/media/inteligncia-artificial.c8013da89f9c6e3a9385.mp4",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
@@ -145,11 +145,11 @@
     "static/media/javascript_vanilla_icon.webp": "/static/media/javascript_vanilla_icon.bb41b35e77975f0c88b0.webp",
     "static/media/python3_icon.webp": "/static/media/python3_icon.7abe0af8da3a7c657823.webp",
     "static/media/redux_state_management_logo_icon.svg": "/static/media/redux_state_management_logo_icon.0d451f4a96daa541b83b419534633d6e.svg",
-    "main.c6db322e.css.map": "/static/css/main.c6db322e.css.map",
+    "main.6a047b2b.css.map": "/static/css/main.6a047b2b.css.map",
     "main.bd192b33.js.map": "/static/js/main.bd192b33.js.map"
   },
   "entrypoints": [
-    "static/css/main.c6db322e.css",
+    "static/css/main.6a047b2b.css",
     "static/js/main.bd192b33.js"
   ]
 }
