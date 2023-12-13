@@ -12,6 +12,10 @@
     justify-content: center;
     align-items: center;
     line-height: 2rem;
+
+    /* Margin para centralizar melhor o texto, pois a imagem de perfil é menor do que o container dela, logo quebra um pouco o flex ajuste */
+    margin-left: 12%;
+
 }
 
 .main-header--left > h1 {
@@ -20,12 +24,13 @@
     font-weight: lighter;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
-    text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 5px 1px 0px black;
+    text-shadow: 0px 0px 3px #f00;
 }
 
 .main-header--left > h1.--home-especializando {
     font-size: 1rem;
-    color: #11e8ff; /* text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 3px 1px 0px black */
+    color: #f00;
+    text-shadow: none;
 }
 
 .main-header--right {
@@ -40,6 +45,27 @@
     object-fit: contain;
     max-height: 70vh;
     padding-top: 3rem;
+}
+
+/* Rubrica com fonte personalizada */
+
+/* Obs: Não coloca em variaveis no index.js pois só é utilizado aqui essa fonte. */
+
+@font-face {
+    font-family: 'Rubrica Upper Case Font Family';
+    src: url('./../../resources/fonts/Jonathan Hetegral.otf');
+}
+
+.main-header--container > .main-header--left > h1.--home-rubrica {
+    font-family: 'Rubrica Upper Case Font Family';
+    font-size: 4rem;
+    line-height: 3rem;
+    z-index: -1;
+    transform: translateY(-67%);
+    color: #000;
+
+    /* Margin para com pensar o tamanho da fonte da assinatura que está por trás do especializando */
+    margin-bottom: -5rem;
 }
 
 @media (max-width: 810px)
