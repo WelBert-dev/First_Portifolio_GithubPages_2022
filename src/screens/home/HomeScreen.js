@@ -17,8 +17,12 @@ export default function HomeScreen() {
             <h1 className="--home-rubrica">Wellison Bertelli</h1>
         </div>
         <div className='main-header--right'>
-            <img className="--perfil-InDesktop" src={WelbertBg} alt="Amostra AuauMiau NoFamework"></img>
-            <img className="--perfil-InMobile" src={WelbertBg_inMobile} alt="Amostra AuauMiau NoFamework"></img>
+            <div class="moldura-um">
+                <div class="moldura-dois">
+                    <img className="--perfil-InDesktop" src={WelbertBg} alt="Amostra AuauMiau NoFamework"></img>
+                    <img className="--perfil-InMobile" src={WelbertBg_inMobile} alt="Amostra AuauMiau NoFamework"></img>
+                </div>
+            </div>
         </div>
     </div>
     )

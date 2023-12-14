@@ -12,10 +12,6 @@
     justify-content: center;
     align-items: center;
     line-height: 2rem;
-
-    /* Margin para centralizar melhor o texto, pois a imagem de perfil é menor do que o container dela, logo quebra um pouco o flex ajuste */
-    margin-left: 12%;
-
 }
 
 .main-header--left > h1 {
@@ -38,14 +34,15 @@
     flex-grow: 1;
     height: 100%;
     text-align: end;
+    margin-top: 10vh;
+    width: 0vw;
 }
 
 .main-header--right img{
     height: 100%;
     overflow: hidden;
     object-fit: contain;
-    max-height: 70vh;
-    padding-top: 3rem;
+    width: 100%;
 }
 
 img.--perfil-InMobile {
@@ -63,12 +60,26 @@ img.--perfil-InMobile {
 
 .main-header--container > .main-header--left > h1.--home-rubrica {
     font-family: 'Rubrica Upper Case Font Family';
-    font-size: 4rem;
-    line-height: 3rem;
-    color: #000;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+    color: #fff;
 
-    text-shadow: 2px 0px 5px #f00;
+    text-shadow: none;
+
+    margin-bottom: -3.5rem;
 }
+
+.moldura-dois {
+	border:8px inset #5f6632;
+	padding:15px;
+	background: #b1b1c3;
+	}
+
+.moldura-um {
+	border:20px inset #5d738b;
+	padding:25px;
+	background: transparent url('../../resources/images/home/moldura_azul_granulado_bg-um.gif');
+	}
 
 @media (max-width: 810px)
 {
@@ -94,16 +105,8 @@ img.--perfil-InMobile {
         top: 0;
     }
 
-    .main-header--right img{
-        height: 100%;
-        overflow: hidden;
-        max-height: 50vh;
-        padding-top: 4rem;
-        border-radius: 50%;
-    }
-
     .main-header--left {
-        margin-left: 0px;
+        padding: 1rem 0;
     }
 
     .main-header--left > h1 {
@@ -116,7 +119,7 @@ img.--perfil-InMobile {
     }  
 
     .main-header--container > .main-header--left > h1.--home-rubrica {
-        font-size: 3.75rem;
+        font-size: 3.25rem;
         margin-bottom: 0px;
     }
 }
@@ -126,27 +129,22 @@ img.--perfil-InMobile {
     .main-header--right {
         order: 1;
         width: 100%;
+        margin-top: 3rem;
     }
+
     .main-header--left > h1 {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
+        line-height: 1.5rem;
     }
 
     .main-header--left > h1.--home-especializando {
         font-size: .8rem;
+        line-height: .9rem;
     }  
 
     section {
         top: 0;
     }
-
-    .main-header--right img{
-        overflow: hidden;
-        object-fit: contain;
-        border-radius: 50%;
-        padding-top: 4rem;
-        width: 100%;
-    }
-
 
     img.--perfil-InMobile { 
         display: inherit;
@@ -158,14 +156,13 @@ img.--perfil-InMobile {
 
 
     .main-header--left {
-        margin-left: 0px;
         padding: 1rem 0;
     }
 
     .main-header--container > .main-header--left > h1.--home-rubrica {
         margin-bottom: 0px;
-        font-size: 2.5rem;
-        line-height: 1.5rem;
+        font-size: 2.25rem;
+        line-height: 2.75rem;
     }
 
     .main-header--left {
