@@ -1,11 +1,12 @@
 import React from 'react';
 
 import WelbertBg from '../../resources/images/home/wellisonPerfil.jpg';
+import WelbertBg_inMobile from '../../resources/images/home/wellisonPerfil_inMobile.jpg';
 
 import './HomeScreen.css';
 
 export default function HomeScreen() {
-    
+
     return (
     <div className="main-header--container">
         <div className="main-header--left">
@@ -16,7 +17,8 @@ export default function HomeScreen() {
             <h1 className="--home-rubrica">Wellison Bertelli</h1>
         </div>
         <div className='main-header--right'>
-            <img src={WelbertBg} alt="Amostra AuauMiau NoFamework"></img>
+            <img className="--perfil-InDesktop" src={WelbertBg} alt="Amostra AuauMiau NoFamework"></img>
+            <img className="--perfil-InMobile" src={WelbertBg_inMobile} alt="Amostra AuauMiau NoFamework"></img>
         </div>
     </div>
     )

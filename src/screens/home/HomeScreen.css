@@ -24,13 +24,14 @@
     font-weight: lighter;
     font-family: 'Press Start 2P', cursive;
     text-align: center;
-    text-shadow: 0px 0px 3px #f00;
+    text-shadow: 0px 0px 10px #f00;
 }
 
 .main-header--left > h1.--home-especializando {
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: #f00;
     text-shadow: none;
+    min-width: max-content;
 }
 
 .main-header--right {
@@ -47,6 +48,10 @@
     padding-top: 3rem;
 }
 
+img.--perfil-InMobile {
+    display: none;
+}
+
 /* Rubrica com fonte personalizada */
 
 /* Obs: Não coloca em variaveis no index.js pois só é utilizado aqui essa fonte. */
@@ -60,12 +65,9 @@
     font-family: 'Rubrica Upper Case Font Family';
     font-size: 4rem;
     line-height: 3rem;
-    z-index: -1;
-    transform: translateY(-67%);
     color: #000;
 
-    /* Margin para com pensar o tamanho da fonte da assinatura que está por trás do especializando */
-    margin-bottom: -5rem;
+    text-shadow: 2px 0px 5px #f00;
 }
 
 @media (max-width: 810px)
@@ -76,36 +78,46 @@
         align-items: center;
         justify-content: end;
     }
+
     .main-header--left {
         order: 2;
         flex-grow: 3;
-        position: absolute;
-    }
-    .main-header--left div {
-
-    }
-    .main-header--left > h1 {
-        font-size: 1.5rem;
-        text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 5px 1px 0px black;
-    }
-
-    .main-header--left > h1.--home-especializando {
-        font-size: .9rem;
-        text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 5px 1px 0px black;
-    }    
+    } 
     
     .main-header--right {
         order: 1;
         width: 100vw;
         text-align: center;
     }
-
-    .main-header--right img{
-        width: 100%;
-    }
     
     section {
         top: 0;
+    }
+
+    .main-header--right img{
+        height: 100%;
+        overflow: hidden;
+        max-height: 50vh;
+        padding-top: 4rem;
+        border-radius: 50%;
+    }
+
+    .main-header--left {
+        margin-left: 0px;
+    }
+
+    .main-header--left > h1 {
+        font-size: 1.75rem;
+    }
+   
+    .main-header--left > h1.--home-especializando {
+        min-width: fit-content;
+        font-size: 1.15rem;
+    }  
+
+    .main-header--container > .main-header--left > h1.--home-rubrica {
+        font-size: 3.75rem;
+        margin-bottom: 0px;
     }
 }
 
@@ -116,13 +128,11 @@
         width: 100%;
     }
     .main-header--left > h1 {
-     font-size: 1.3rem;
-     text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 5px 1px 0px black;
+        font-size: 1.5rem;
     }
 
     .main-header--left > h1.--home-especializando {
         font-size: .8rem;
-        text-shadow: 0px 2px 0px #000, -2px -1px 0px black, 3px 1px 0px black;
     }  
 
     section {
@@ -131,10 +141,35 @@
 
     .main-header--right img{
         overflow: hidden;
-        object-fit: cover;
+        object-fit: contain;
+        border-radius: 50%;
+        padding-top: 4rem;
+        width: 100%;
     }
+
+
+    img.--perfil-InMobile { 
+        display: inherit;
+    }
+
+    img.--perfil-InDesktop { 
+        display: none;
+    }
+
+
     .main-header--left {
-        position: absolute;
-        margin-top: 5rem;
+        margin-left: 0px;
+        padding: 1rem 0;
     }
+
+    .main-header--container > .main-header--left > h1.--home-rubrica {
+        margin-bottom: 0px;
+        font-size: 2.5rem;
+        line-height: 1.5rem;
+    }
+
+    .main-header--left {
+        padding: 1rem 0;
+    }
+    
 }
