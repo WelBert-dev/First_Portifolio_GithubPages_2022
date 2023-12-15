@@ -321,7 +321,7 @@ export default function CurriculumVitaeScreen() {
                                                  <p className="template__section__position">Almoxarife</p>
                                                  <p className="template__section__company">Clemont Equipamentos e Montagens Industriais LTDA</p>
                                                  <br/>
-                                                 <p className="template__section__description">- Responsável por todas estratégias de logística interna de fábrica.</p>
+                                                 <p className="template__section__description">- Responsável por todas estratégias de logística interna de fábrica, armazenamento e supply chain.</p>
                                                  <p className="template__section__description">- Recebimento e despache de materiais relacionados a mecatrônica.</p>
                                                  <p className="template__section__description">- Recebimento e despache de ferramentas para automação.</p>
                                                  <p className="template__section__description">- Armazenamento dos mesmos aqui citados.</p>
