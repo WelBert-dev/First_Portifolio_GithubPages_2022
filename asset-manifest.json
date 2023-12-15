@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e92f3df2.css",
-    "main.js": "/static/js/main.a4426085.js",
+    "main.js": "/static/js/main.00b92e91.js",
     "static/media/inteligncia-artificial.mp4": "/static/media/inteligncia-artificial.c8013da89f9c6e3a9385.mp4",
     "static/media/NetFlixCloneWeb.gif": "/static/media/NetFlixCloneWeb.df26209225c156f900f9.gif",
     "static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.mp3": "/static/media/Rap da Akatsuki (Naruto) - OS NINJAS MAIS PROCURADOS DO MUNDO _ NERD HITS.9a64b4ab0bb787a692a6.mp3",
@@ -85,7 +85,7 @@
     "static/media/Abertura O Maskara.mp3": "/static/media/Abertura O Maskara.41759938935cf59eea88.mp3",
     "static/media/Phineas e Ferb - Abertura PT-BR em HD (Clássica).mp3": "/static/media/Phineas e Ferb - Abertura PT-BR em HD (Clássica).eaf4778483fa94103af0.mp3",
     "static/media/restauranteIfspAmostra.png": "/static/media/restauranteIfspAmostra.03eae3aa8e7b8b0e62ac.png",
-    "static/media/CYMERA_20231211_163014.jpg": "/static/media/CYMERA_20231211_163014.a0eb1b7aa301e1e39c39.jpg",
+    "static/media/CYMERA_20231211_163014.jpg": "/static/media/CYMERA_20231211_163014.5e28417918bf98ab3b42.jpg",
     "static/media/bolsaDeValores-ifciencia2021-29-10-2021.png": "/static/media/bolsaDeValores-ifciencia2021-29-10-2021.35091864f636a476f1c4.png",
     "static/media/nodeRed-IoT-ifciencia2021-28-10-2021.png": "/static/media/nodeRed-IoT-ifciencia2021-28-10-2021.b0eaaa93ca59ada1d76b.png",
     "static/media/Abertura Hora de Aventura ( Português ).mp3": "/static/media/Abertura Hora de Aventura ( Português ).9915d2c37f2cacd0d716.mp3",
@@ -148,10 +148,10 @@
     "static/media/python3_icon.webp": "/static/media/python3_icon.7abe0af8da3a7c657823.webp",
     "static/media/redux_state_management_logo_icon.svg": "/static/media/redux_state_management_logo_icon.0d451f4a96daa541b83b419534633d6e.svg",
     "main.e92f3df2.css.map": "/static/css/main.e92f3df2.css.map",
-    "main.a4426085.js.map": "/static/js/main.a4426085.js.map"
+    "main.00b92e91.js.map": "/static/js/main.00b92e91.js.map"
   },
   "entrypoints": [
     "static/css/main.e92f3df2.css",
-    "static/js/main.a4426085.js"
+    "static/js/main.00b92e91.js"
   ]
 }
