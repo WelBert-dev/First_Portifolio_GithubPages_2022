@@ -465,6 +465,36 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
 }
 
 
+@font-face {
+    font-family: 'Top Secret Stamp Font Family';
+    src: url('./../../resources/fonts/Top Secret Stamp.ttf');
+}
+
+
+.template__section__description.color-font-white-highlighted.--dangerAttention-with-top-secret-stamp-font-family {
+    color: red !important;
+    font-weight: bold;
+    font-family: 'Top Secret Stamp Font Family';
+    font-size: 1.5rem !important;
+}
+
+.template__section__description.color-font-white-highlighted > code.--flag-string-for-search {
+    font-weight: bold;
+    color: #000;
+    text-shadow: 1px 1px 2px rgb(5, 207, 207);
+    font-size: .8rem;
+    background-color: #fff;
+    padding: 0 1px;
+    margin: 2px auto 0 1rem;
+    text-align: center;
+    font-family: Söhne Mono,Monaco,Andale Mono,Ubuntu Mono,monospace !important;
+}
+
+.template__section__description.color-font-white-highlighted > code.-efeitoMarcaTexto {
+    padding: 0 2px;
+    font-size: 1rem;
+}
+
 
 @media (max-width: 810px)
 {
@@ -804,6 +834,21 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
     .template__newyork .template__section__college, .template__section__right .template__section__company, .template__nameOccupation > .template__occupation > p {
         font-size: .8rem !important;
     }
+
+
+    .template__section__description.color-font-white-highlighted.--dangerAttention-with-top-secret-stamp-font-family {
+        font-size: 1.25rem !important;
+    }
+    
+    .template__section__description.color-font-white-highlighted > code.--flag-string-for-search {
+        font-size: .7rem;
+        padding: 0 2px;
+    }
+    
+    .template__section__description.color-font-white-highlighted > code.-efeitoMarcaTexto {
+        font-size: 0.9rem;
+    }
+    
 }
 
 @media (max-width: 425px)
@@ -872,6 +917,10 @@ section.diferenceBeetweenGradeAndMatrizCurricular > .template__section__descript
     }
 
     .color--blue.template__newyork .template__section__degree, .color--blue.template__newyork .template__section__position {
-        font-size: .7rem;
+        font-size: .7rem !important;
+    }
+
+    .template__section__description.color-font-white-highlighted > code.-efeitoMarcaTexto {
+        font-size: 0.7rem !important;
     }
 }

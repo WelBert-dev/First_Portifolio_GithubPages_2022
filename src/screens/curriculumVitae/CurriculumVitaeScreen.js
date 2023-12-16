@@ -365,7 +365,14 @@ export default function CurriculumVitaeScreen() {
                                                  <p className="template__section__description">- E reduzindo assim a carga horária de 4 semestres (2 anos) para 3 semestres (1 ano e meio).</p>
                                                  <p className="template__section__description">- Com início de vigência apartir de 2023.</p>
                                                  <br/>
-                                                 <p className="template__section__description color-font-white-highlighted">- Documento oficial da Instituição Federal nomeando os membros contemplados: <a className="-linkBoldYellowProjects" href="https://suap.ifsp.edu.br/documento_eletronico/imprimir_documento_pdf/347883/carta/?hash=c70a71e451bbec4c4f11e9f0daf5df06ae0c02eb2d637901ffd435e78f4600a375e066ffb8b2d0ccbd9f11dd47ff6df6e763c69f0d94f82ec0bd3f48af1ce164" target="_blank">Clique AQUI!</a></p>
+                                                 <p className="template__section__description color-font-white-highlighted --dangerAttention-with-top-secret-stamp-font-family">ATENÇÃO:</p>
+                                                 <br/>
+                                                 <p className="template__section__description color-font-white-highlighted">O antigo sistema da Instituição Federal que armazenava o documento oficial nomeando os membros contemplados ALTEROU, mas eu já consegui encontrar o novo portal:</p>
+                                                 <br/>
+                                                 <p className="template__section__description color-font-white-highlighted">- Nome do arquivo para procurar mais fácil com <code className="-efeitoMarcaTexto">CTRL + F</code>:</p>
+                                                 <p className="template__section__description color-font-white-highlighted"><code className="--flag-string-for-search">Portaria 0045_Revoga SLT 0100.2021 e Designa CEIC Informática Concomitante_Subsequente</code></p>
+                                                 <p className="template__section__description color-font-white-highlighted">- Novo portal: <a className="-linkBoldYellowProjects" href="https://nextcloud.slt.ifsp.edu.br/nextcloud/index.php/s/wDJb7kHZbEYywtP?dir=undefined&path=%2F&openfile=1471" target="_blank">Clique AQUI!</a></p>
+
                                              </div>
                                          </div>
                                          </div>
