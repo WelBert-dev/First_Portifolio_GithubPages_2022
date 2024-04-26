@@ -40,7 +40,7 @@ export default function AboutMeScreen() {
 
                     <span className="main-sobre--shellDir">CONVICÇÕES</span><br/><br/>
 
-                    Vivo e respiro programação e desenvolvimento todos os dias, desde quando decidi seguir minha paixão há 3 anos 
+                    Vivo e respiro programação e desenvolvimento todos os dias, desde quando decidi seguir minha paixão há 4 anos 
                     atrás.<br/><br/>
                     
                     Gosto muito da frase "A obsessão ganha do talento, todas as vezes" pois essa mentalidade me impulsiona 

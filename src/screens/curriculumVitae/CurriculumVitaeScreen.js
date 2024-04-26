@@ -30,7 +30,7 @@ export default function CurriculumVitaeScreen() {
                                          </div>
                                          <div className="template__header__info template__header__info--birthday">
                                          <p className="template__section__subtitle">Data de nascimento</p>
-                                         <p className="template__section__info__value">22 Dez, 1999 - 23 Anos</p>
+                                         <p className="template__section__info__value">22 Dez, 1999</p>
                                          </div>
                                          <div className="template__header__info template__header__info--nationality">
                                          <p className="template__section__subtitle">Nacionalidade</p>
@@ -369,9 +369,7 @@ export default function CurriculumVitaeScreen() {
                                                  <br/>
                                                  <p className="template__section__description color-font-white-highlighted">O antigo sistema da Instituição Federal que armazenava o documento oficial nomeando os membros contemplados ALTEROU, mas eu já consegui encontrar o novo portal:</p>
                                                  <br/>
-                                                 <p className="template__section__description color-font-white-highlighted">- Nome do arquivo para procurar mais fácil com <code className="-efeitoMarcaTexto">CTRL + F</code>:</p>
-                                                 <p className="template__section__description color-font-white-highlighted"><code className="--flag-string-for-search">Portaria 0045_Revoga SLT 0100.2021 e Designa CEIC Informática Concomitante_Subsequente</code></p>
-                                                 <p className="template__section__description color-font-white-highlighted">- Novo portal: <a className="-linkBoldYellowProjects" href="https://nextcloud.slt.ifsp.edu.br/nextcloud/index.php/s/wDJb7kHZbEYywtP?dir=undefined&path=%2F&openfile=1471" target="_blank">Clique AQUI!</a></p>
+                                                 <p className="template__section__description color-font-white-highlighted">- Novo portal: <a className="-linkBoldYellowProjects" href="https://suap.ifsp.edu.br/documento_eletronico/imprimir_documento_pdf/347883/carta/?hash=c70a71e451bbec4c4f11e9f0daf5df06ae0c02eb2d637901ffd435e78f4600a375e066ffb8b2d0ccbd9f11dd47ff6df6e763c69f0d94f82ec0bd3f48af1ce164" target="_blank">Clique AQUI!</a></p>
 
                                              </div>
                                          </div>
